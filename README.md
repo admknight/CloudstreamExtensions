@@ -7,6 +7,7 @@ This repository contains various extensions for [Cloudstream 3](https://github.c
 | Sr. # | Name | Description |
 | :--- | :--- | :--- |
 | 1 | [Archive Movies](ArchiveMovies/) | Public domain movies from [Archive.org](https://archive.org). |
+| 2 | [Cinevood](Cinevood/) | High quality movies and series in Hindi and English. |
 
 ## Installation
 
