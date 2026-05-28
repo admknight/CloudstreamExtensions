@@ -1,58 +1,55 @@
-**⚠️ This is currently under development, dont use it yet if you're not comfortable with constantly merging new changes**
+# Cloudstream Extensions - Adam Knight
 
-# `Cloudstream3 Plugin Repo Template`
+This repository contains various extensions for [Cloudstream 3](https://github.com/recloudstream/cloudstream), maintained by **Adam Knight** (`admknight`).
 
-Template for a [Cloudstream3](https://github.com/recloudstream) plugin repo
+## Extensions
 
-**⚠️ Make sure you check "Include all branches" when using this template**
+### 1. Archive Movies
+A provider for public domain movies from [Archive.org](https://archive.org).
+- **Language:** English
+- **Content Type:** Movie
+- **Source:** [Archive.org](https://archive.org)
 
- 
-## Getting started with writing your first plugin
+## Installation
 
-This template includes 1 example plugin.
+To add these extensions to Cloudstream, follow these steps:
 
-1. Open the root build.gradle.kts, read the comments and replace all the placeholders
-2. Familiarize yourself with the project structure. Most files are commented
-3. Build or deploy your first plugin using:
-   - Windows: `.\gradlew.bat ExampleProvider:make` or `.\gradlew.bat ExampleProvider:deployWithAdb`
-   - Linux & Mac: `./gradlew ExampleProvider:make` or `./gradlew ExampleProvider:deployWithAdb`
+1. Open Cloudstream and go to **Settings** -> **Extensions**.
+2. Tap on **Add Repository**.
+3. Enter the following URL:
+   ```
+   https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/plugins.json
+   ```
+   *(Note: This repository contains all plugins listed above. If you are using a different branch, replace `master` with your branch name, e.g., `main`.)*
 
+## Development
+
+### Building the plugins
+
+To build a specific plugin (e.g., Archive Movies):
+- Windows: `.\gradlew.bat ArchiveMovies:make`
+- Linux & Mac: `./gradlew ArchiveMovies:make`
+
+### Building all plugins
+- Windows: `.\gradlew.bat makePluginsJson`
+- Linux & Mac: `./gradlew makePluginsJson`
+
+### Deploying for testing
+
+1. Connect your device via ADB.
+2. Run the following command:
+   - Windows: `.\gradlew.bat ArchiveMovies:deployWithAdb`
+   - Linux & Mac: `./gradlew ArchiveMovies:deployWithAdb`
 
 ## Granting All Files Access on Newer Android Devices
 
-For local plugin testing, you need to grant the app "All Files Access" on newer Android devices (Android 11 and above). Here’s how to do it:
+For local plugin testing, you need to grant the app "All Files Access" on newer Android devices (Android 11 and above).
 
 ### Using ADB
 
 * `adb shell appops set --uid PACKAGE_NAME MANAGE_EXTERNAL_STORAGE allow`
-* Replace `PACKAGE_NAME` with the name of the package for the Cloudstream3 version you are using:
-   - debug: `com.lagradost.cloudstream3.prerelease.debug`
-   - prerelease: `com.lagradost.cloudstream3.prerelease`
-   - stable: `com.lagradost.cloudstream3`
-
-### Manually
-
-1. **Open Settings**: Go to your device’s Settings menu.
-
-2. **Navigate to Special Access**:
-   - Tap on "Apps & notifications" or "Apps".
-   - Select "Special app access" or "Special access".
-
-3. **Select All Files Access**:
-   - Tap on "All files access".
-   - It may be under the three vertical dots menu towards the top of the screen.
-
-4. **Grant Access to the App**: Find the app in the list and tap on it to toggle it, if it is not already enabled.
-
-6. **Restart the App**: Close and reopen the app to apply the changes.
-
+* Replace `PACKAGE_NAME` with the name of the package for the Cloudstream 3 version you are using (e.g., `com.lagradost.cloudstream3`).
 
 ## License
 
-Everything in this repo is released into the public domain. You may use it however you want with no conditions whatsoever
-
-
-## Attribution
-
-This template as well as the gradle plugin and the whole plugin system is **heavily** based on [Aliucord](https://github.com/Aliucord).
-*Go use it, it's a great mobile discord client mod!*
+Everything in this repo is released into the public domain.
