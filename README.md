@@ -2,13 +2,11 @@
 
 This repository contains various extensions for [Cloudstream 3](https://github.com/recloudstream/cloudstream), maintained by **Adam Knight** (`admknight`).
 
-## Extensions
+## Available Plugins
 
-### 1. Archive Movies
-A provider for public domain movies from [Archive.org](https://archive.org).
-- **Language:** English
-- **Content Type:** Movie
-- **Source:** [Archive.org](https://archive.org)
+| Sr. # | Name | Description |
+| :--- | :--- | :--- |
+| 1 | [Archive Movies](ArchiveMovies/) | Public domain movies from [Archive.org](https://archive.org). |
 
 ## Installation
 
@@ -24,18 +22,17 @@ To add these extensions to Cloudstream, follow these steps:
 
 ## Development
 
-### Building the plugins
-
+### Building a specific plugin
 To build a specific plugin (e.g., Archive Movies):
 - Windows: `.\gradlew.bat ArchiveMovies:make`
 - Linux & Mac: `./gradlew ArchiveMovies:make`
 
 ### Building all plugins
+To generate `plugins.json` and build all plugins:
 - Windows: `.\gradlew.bat makePluginsJson`
 - Linux & Mac: `./gradlew makePluginsJson`
 
 ### Deploying for testing
-
 1. Connect your device via ADB.
 2. Run the following command:
    - Windows: `.\gradlew.bat ArchiveMovies:deployWithAdb`
@@ -46,7 +43,6 @@ To build a specific plugin (e.g., Archive Movies):
 For local plugin testing, you need to grant the app "All Files Access" on newer Android devices (Android 11 and above).
 
 ### Using ADB
-
 * `adb shell appops set --uid PACKAGE_NAME MANAGE_EXTERNAL_STORAGE allow`
 * Replace `PACKAGE_NAME` with the name of the package for the Cloudstream 3 version you are using (e.g., `com.lagradost.cloudstream3`).
 
