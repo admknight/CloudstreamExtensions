@@ -1,0 +1,109 @@
+[
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/BingedReview/icon.png",
+        "fileHash": "sha256-83d893260b336bd0c1a4576575ebf0ea09d7d571a9e45687c3a87d2cfbbeb342",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 17057,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 3,
+        "internalName": "BingedReview",
+        "description": "Data about streaming and reviews",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/BingedReview.cs3",
+        "name": "BingedReview"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Cinevood/icon.png",
+        "fileHash": "sha256-421b5ef17137ec525ec6d762301959d479b9f8f0090f2eb971b9fe5de0bc5b8a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 23279,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama",
+            "Anime"
+        ],
+        "version": 11,
+        "internalName": "Cinevood",
+        "description": "Regional content from Cinevood",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Cinevood.cs3",
+        "name": "Cinevood"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Mp4Moviez/icon.png",
+        "fileHash": "sha256-fd95c8c65717d35588c065b6ba6502504a9e724a837bc4a78ea00b1d441cfef7",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 13515,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "Mp4Moviez",
+        "description": "Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez.",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Mp4Moviez.cs3",
+        "name": "Mp4Moviez"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/SkymoviesHD/icon.png",
+        "fileHash": "sha256-4e7d3f9c5df9bba7333cded8eaac098e3ad212f1f3c582b2fb62a0aff7e5eaf0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 23524,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "SkymoviesHD",
+        "description": "SkymoviesHD Provider for various HD content",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/SkymoviesHD.cs3",
+        "name": "SkymoviesHD"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tamilblasters/icon.png",
+        "fileHash": "sha256-b1385412c22221b29565b00b5988aa8db8617f272e758f578e634fd63c81a3fb",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 13984,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 3,
+        "internalName": "Tamilblasters",
+        "description": "Latest Tamil movies and series",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Tamilblasters.cs3",
+        "name": "Tamilblasters"
+    }
+]
