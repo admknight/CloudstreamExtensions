@@ -6,12 +6,11 @@ This repository contains various extensions for [Cloudstream 3](https://github.c
 
 | Sr. # | Name | Description |
 | :--- | :--- | :--- |
-| 1 | [Archive Movies](ArchiveMovies/) | Public domain movies from [Archive.org](https://archive.org). |
-| 2 | [Cinevood](Cinevood/) | High quality movies and series in Hindi and English. |
-| 3 | [BingedReview](BingedReview/) | Movie reviews and streaming info. |
-| 4 | [Mp4Moviez](Mp4Moviez/) | Latest Bollywood and Hollywood movies. |
-| 5 | [SkymoviesHD](SkymoviesHD/) | South Indian and Bollywood movies in HD. |
-| 6 | [Tamilblasters](Tamilblasters/) | Latest Tamil movies and series. |
+| 1 | [Cinevood](Cinevood/) | High quality movies and series in Hindi and English. |
+| 2 | [BingedReview](BingedReview/) | Movie reviews and streaming info. |
+| 3 | [Mp4Moviez](Mp4Moviez/) | Latest Bollywood and Hollywood movies. |
+| 4 | [SkymoviesHD](SkymoviesHD/) | South Indian and Bollywood movies in HD. |
+| 5 | [Tamilblasters](Tamilblasters/) | Latest Tamil movies and series. |
 
 ## Installation
 
