@@ -22,3 +22,7 @@ fun File.eachDir(block: (File) -> Unit) {
 // include("PluginName")
 include(":ArchiveMovies")
 include(":Cinevood")
+include(":BingedReview")
+include(":Mp4Moviez")
+include(":SkymoviesHD")
+include(":Tamilblasters")
