@@ -94,6 +94,24 @@ subprojects {
     }
 }
 
+task("make") {
+    group = "cloudstream"
+    subprojects.forEach { sub ->
+        if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+            dependsOn(sub.tasks.named("make"))
+        }
+    }
+}
+
+task("makePluginsJson") {
+    group = "cloudstream"
+    subprojects.forEach { sub ->
+        if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+            dependsOn(sub.tasks.named("makePluginsJson"))
+        }
+    }
+}
+
 task<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
