@@ -1,5 +1,5 @@
 # Adam Knight's ULTRA-STRICT Mega-Repo Sync & Validation Script
-# This script ensures that ONLY 100% working plugins are kept.
+# Ensures that ONLY 100% working plugins are kept and NO duplicates exist.
 
 $sources = @(
     "https://github.com/Hexated/CloudStream-Extensions.git",
@@ -11,7 +11,7 @@ $sources = @(
     "https://github.com/Sushan64/NetMirror-Extension.git"
 )
 
-# Core plugins that we NEVER delete
+# Mandatory plugins that we should be careful with
 $corePlugins = @("Cinevood", "BingedReview", "Mp4Moviez", "SkymoviesHD", "Tamilblasters")
 
 Write-Host "--- Starting Ultra-Sync & Validation ---" -ForegroundColor Cyan
@@ -28,9 +28,19 @@ foreach ($repo in $sources) {
 
     foreach ($file in $gradleFiles) {
         $pluginName = $file.Directory.Name
-        if ($corePlugins -contains $pluginName) { continue }
 
         Write-Host "Processing $pluginName..." -NoNewline
+
+        # --- VERSION CHECK ---
+        if (Test-Path "$pluginName/build.gradle.kts") {
+            $newVer = Select-String -Path $file.FullName -Pattern "^version\s*=\s*([0-9]+)" | ForEach-Object { $_.Matches.Groups[1].Value }
+            $oldVer = Select-String -Path "$pluginName/build.gradle.kts" -Pattern "^version\s*=\s*([0-9]+)" | ForEach-Object { $_.Matches.Groups[1].Value }
+
+            if ($newVer -and $oldVer -and ([int]$newVer -le [int]$oldVer)) {
+                Write-Host " [ALREADY UP TO DATE]" -ForegroundColor Gray
+                continue
+            }
+        }
 
         # Isolated Copy for testing
         $testDir = "temp_validation_$pluginName"
@@ -38,42 +48,29 @@ foreach ($repo in $sources) {
         New-Item -ItemType Directory -Path $testDir | Out-Null
         Copy-Item -Path "$($file.Directory.FullName)\*" -Destination $testDir -Recurse -Force
 
-        # --- PRE-FIXING COMMON ERRORS ---
-
-        # 1. Fix Manifest Package Error (Move package to build.gradle.kts as namespace)
+        # --- PRE-FIXING ERRORS ---
         $manifestPath = "$testDir/src/main/AndroidManifest.xml"
         if (Test-Path $manifestPath) {
             $manifestContent = Get-Content $manifestPath -Raw
             if ($manifestContent -match 'package="([^"]+)"') {
-                $pkg = $Matches[1]
                 $manifestContent = $manifestContent -replace 'package="[^"]+"', ''
                 Set-Content $manifestPath $manifestContent
             }
         }
 
-        # 2. Fix build.gradle.kts
         $gradlePath = "$testDir/build.gradle.kts"
         $gradleContent = Get-Content $gradlePath -Raw
-
-        # Branding
         $gradleContent = $gradleContent -replace 'authors = listOf\(.*\)', 'authors = listOf("Adam Knight")'
         $gradleContent = $gradleContent -replace 'iconUrl = ".*"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$pluginName/icon.png`""
-
-        # Neutralize private keys
         $gradleContent = $gradleContent -replace '(?s)val properties = Properties\(\).*?properties\.load\(.*?\)', ''
         $gradleContent = $gradleContent -replace '(?m)^\s*\.inputStream\(\)\)\s*$', ''
         $gradleContent = $gradleContent -replace 'properties\.getProperty\(.*?\)', '""'
-
-        # Ensure buildConfig is enabled
         if ($gradleContent -notmatch "buildConfig = true") {
             $gradleContent = $gradleContent -replace 'buildFeatures \{', "buildFeatures {`n        buildConfig = true"
         }
-
         Set-Content $gradlePath $gradleContent
 
-        # 3. Isolated Build Test
-        # We try to build it as part of the project
-        # First, add it to settings.gradle.kts temporarily
+        # --- ISOLATED BUILD TEST ---
         $settingsFile = "settings.gradle.kts"
         $settingsContent = Get-Content $settingsFile -Raw
         $tempInclude = "`ninclude(`":$pluginName`")`nproject(`":$pluginName`").projectDir = file(`"$testDir`")"
@@ -81,22 +78,20 @@ foreach ($repo in $sources) {
 
         .\gradlew.bat ":$($pluginName):assembleDebug" --quiet 2>$null
         $buildSuccess = $LASTEXITCODE -eq 0
-
-        # Remove from settings.gradle.kts
         $settingsContent | Set-Content $settingsFile
 
         if ($buildSuccess) {
             Write-Host " [PASSED]" -ForegroundColor Green
-            # Move validated plugin to main folder
-            if (Test-Path "$pluginName") { Remove-Item -Recurse -Force "$pluginName" }
-            Move-Item -Path $testDir -Destination "$pluginName"
+            # CLEAN DELETE OLD SRC TO PREVENT DUPLICATES
+            if (Test-Path "$pluginName/src") { Remove-Item -Recurse -Force "$pluginName/src" }
+            if (-not (Test-Path "$pluginName")) { New-Item -ItemType Directory -Path "$pluginName" | Out-Null }
+            Copy-Item -Path "$testDir\*" -Destination "$pluginName" -Recurse -Force
         } else {
             Write-Host " [FAILED]" -ForegroundColor Red
-            Remove-Item -Recurse -Force $testDir
         }
+        Remove-Item -Recurse -Force $testDir
     }
 }
 
 Remove-Item -Recurse -Force "temp_sources"
 Write-Host "`n--- Sync & Validation Complete! ---" -ForegroundColor Cyan
-Write-Host "You can now push the working plugins to GitHub." -ForegroundColor Green
