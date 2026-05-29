@@ -7,7 +7,7 @@ $sources = @(
     "https://github.com/rockhero1234/cinephile.git",
     "https://github.com/SaurabhKaperwan/CSX.git",
     "https://github.com/Sushan64/NetMirror-Extension.git",
-    "https://codeberg.org/Stormunblessed/storm-ext.git"
+    "https://github.com/Stormunblessed/storm-ext.git"
 )
 
 # Mandatory plugins that we should be careful with
