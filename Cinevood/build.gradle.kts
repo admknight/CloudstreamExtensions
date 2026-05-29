@@ -4,7 +4,7 @@ cloudstream {
     language = "hi"
     description = "Regional content from Cinevood"
     authors = listOf("Adam Knight")
-    iconUrl = "https://i.ibb.co/nMdxZgkR/8-CM3-5q-ARZYELDWg6-Erqfg-NYpo-Sdh-Yw-HRB5-CMhf-Vgg-Ygn-PMHCVYWQf-EEJMt9gwd6-EFP5t-LYgd-LAm-Zerm-KCX.png"
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Cinevood/icon.png"
     version = 11
 
     status = 1

@@ -4,7 +4,7 @@ cloudstream {
     language = "en"
     description = "SkymoviesHD Provider for various HD content"
     authors = listOf("Adam Knight")
-    iconUrl = "https://skymovieshd.mba/images/logo2.png"
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/SkymoviesHD/icon.png"
     version = 1
 
     status = 1

@@ -4,7 +4,7 @@ cloudstream {
     language = "ta"
     description = "Latest Tamil movies and series"
     authors = listOf("Adam Knight")
-    iconUrl = "https://i.postimg.cc/FRwFFtyT/logo.png"
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tamilblasters/icon.png"
     version = 3
 
     status = 1

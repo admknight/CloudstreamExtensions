@@ -1,55 +1,75 @@
-# Cloudstream Extensions - Adam Knight
+# 🎯 Adam Knight Cloudstream Extensions
 
-This repository contains various extensions for [Cloudstream 3](https://github.com/recloudstream/cloudstream), maintained by **Adam Knight** (`admknight`).
+This repository contains a curated collection of extensions for [Cloudstream 3](https://github.com/recloudstream/cloudstream), maintained and automatically synchronized by **Adam Knight**.
 
-## Available Plugins
+![Build Status](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg)
+![Sync Status](https://github.com/admknight/CloudstreamExtensions/actions/workflows/sync.yml/badge.svg)
 
-| Sr. # | Name | Description |
-| :--- | :--- | :--- |
-| 1 | [Cinevood](Cinevood/) | High quality movies and series in Hindi and English. |
-| 2 | [BingedReview](BingedReview/) | Movie reviews and streaming info. |
-| 3 | [Mp4Moviez](Mp4Moviez/) | Latest Bollywood and Hollywood movies. |
-| 4 | [SkymoviesHD](SkymoviesHD/) | South Indian and Bollywood movies in HD. |
-| 5 | [Tamilblasters](Tamilblasters/) | Latest Tamil movies and series. |
+---
 
-## Installation
+## 🌐 Installation
 
-To add these extensions to Cloudstream, follow these steps:
+To add these extensions to your Cloudstream app:
 
-1. Open Cloudstream and go to **Settings** -> **Extensions**.
+1. Open **Cloudstream** and navigate to **Settings** (⚙️) -> **Extensions**.
 2. Tap on **Add Repository**.
 3. Enter the following URL:
+   ```text
+   https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json
    ```
-   https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/plugins.json
-   ```
-   *(Note: This repository contains all plugins listed above. If you are using a different branch, replace `master` with your branch name, e.g., `main`.)*
+4. Tap **Add Repository** and you are ready to go!
 
-## Development
+---
 
-### Building a specific plugin
-To build a specific plugin (e.g., Archive Movies):
-- Windows: `.\gradlew.bat ArchiveMovies:make`
-- Linux & Mac: `./gradlew ArchiveMovies:make`
+## ✨ Featured Plugins
 
-### Building all plugins
-To generate `plugins.json` and build all plugins:
-- Windows: `.\gradlew.bat makePluginsJson`
-- Linux & Mac: `./gradlew makePluginsJson`
+This repository hosts over **50+ plugins**, including:
 
-### Deploying for testing
-1. Connect your device via ADB.
-2. Run the following command:
-   - Windows: `.\gradlew.bat ArchiveMovies:deployWithAdb`
-   - Linux & Mac: `./gradlew ArchiveMovies:deployWithAdb`
+*   **🎬 Bollywood & Regional**: Cinevood, Mp4Moviez, Tamilblasters, SkymoviesHD, HDhub4u, Vegamovies.
+*   **🌍 International**: ShowBox, Goojara, Cinemacity, Kisskh.
+*   **🎌 Anime & Cartoons**: AnimePahe, AllWish, AnimeDekho, DoraBash.
+*   **📺 Live TV & Tools**: IPTVPlayer, Jellyfin, BingedReview.
 
-## Granting All Files Access on Newer Android Devices
+*The list is updated automatically every 24 hours to ensure you have the latest working versions.*
 
-For local plugin testing, you need to grant the app "All Files Access" on newer Android devices (Android 11 and above).
+---
 
-### Using ADB
-* `adb shell appops set --uid PACKAGE_NAME MANAGE_EXTERNAL_STORAGE allow`
-* Replace `PACKAGE_NAME` with the name of the package for the Cloudstream 3 version you are using (e.g., `com.lagradost.cloudstream3`).
+## 🔄 Automation & Sync
 
-## License
+This repository uses a custom **Auto-Sync Engine** that pulls the latest code from various community sources.
 
-Everything in this repo is released into the public domain.
+*   **Branded Content**: All plugins are automatically built with the **Adam Knight** author tag.
+*   **Self-Hosted Icons**: Icons are mirrored locally to ensure they never break.
+*   **Daily Updates**: The sync runs every midnight to pull in new features and fixes.
+
+---
+
+## 🛠️ Development
+
+If you want to build or test these plugins yourself:
+
+### 🔨 Building a Plugin
+- **Windows**: `.\gradlew.bat <PluginName>:make`
+- **Linux/Mac**: `./gradlew <PluginName>:make`
+
+### 🚀 Deploying for Testing (ADB)
+1. Connect your device.
+2. Run: `.\gradlew.bat <PluginName>:deployWithAdb`
+
+---
+
+## ⚖️ DMCA & Disclaimer
+
+* **No Hosting**: This repository does not host any video files, movies, or media content. 
+* **Browser-like Functionality**: These extensions act as a specialized web browser that fetches links from third-party websites. 
+* **Responsibility**: The developer of this repository is not responsible for any content viewed via these extensions. 
+* **Copyright**: If you have issues with copyrighted material, please contact the third-party file hosts directly.
+
+---
+
+## 📜 License
+
+Everything in this repo is released into the **Public Domain**. You are free to use, modify, and distribute it however you like.
+
+---
+*Maintained with ❤️ by [Adam Knight](https://github.com/admknight)*

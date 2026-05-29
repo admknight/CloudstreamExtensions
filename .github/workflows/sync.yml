@@ -1,0 +1,82 @@
+name: Sync Plugins
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync from Sources
+        run: |
+          # Configure Git
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+
+          # Sources to sync from
+          SOURCES=(
+            "https://github.com/rockhero1234/cinephile.git"
+            "https://github.com/phisher98/cloudstream-extensions-phisher.git"
+          )
+
+          mkdir -p temp_sources
+
+          for REPO_URL in "${SOURCES[@]}"; do
+            REPO_NAME=$(basename "$REPO_URL" .git)
+            echo "Cloning $REPO_NAME..."
+            git clone "$REPO_URL" "temp_sources/$REPO_NAME"
+            
+            # Find all directories that contain a build.gradle.kts (excluding root and common non-plugin dirs)
+            # We look for directories that have a 'src' folder as well to be sure it's a plugin
+            find "temp_sources/$REPO_NAME" -maxdepth 2 -name "build.gradle.kts" | while read -r GRADLE_FILE; do
+              PLUGIN_DIR=$(dirname "$GRADLE_FILE")
+              PLUGIN_NAME=$(basename "$PLUGIN_DIR")
+              
+              # Skip the root directory of the cloned repo
+              if [ "$PLUGIN_DIR" == "temp_sources/$REPO_NAME" ]; then continue; fi
+              # Skip known non-plugin directories
+              if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
+
+              echo "Syncing $PLUGIN_NAME from $REPO_NAME..."
+              mkdir -p "$PLUGIN_NAME"
+              
+              # Copy files (avoiding .git folders)
+              cp -r "$PLUGIN_DIR"/* "$PLUGIN_NAME/"
+              
+              # --- BRANDING & INDEPENDENCE ---
+              
+              # 1. Force Author to Adam Knight
+              # Handles both double and single quotes
+              sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$PLUGIN_NAME/build.gradle.kts"
+              
+              # 2. Handle Icon Replication
+              # Extract the existing iconUrl
+              OLD_ICON_URL=$(grep "iconUrl =" "$PLUGIN_NAME/build.gradle.kts" | sed -E 's/.*iconUrl = ["'\'']([^"'\'']+)["'\''].*/\1/')
+              
+              if [ ! -z "$OLD_ICON_URL" ]; then
+                echo "Downloading icon for $PLUGIN_NAME from $OLD_ICON_URL"
+                # Download the icon locally. If it fails, we keep any existing icon.png
+                curl -L -s -o "$PLUGIN_NAME/icon.png" "$OLD_ICON_URL" || echo "Failed to download icon for $PLUGIN_NAME"
+              fi
+              
+              # 3. Update build.gradle.kts to use the locally hosted icon
+              sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$PLUGIN_NAME/icon.png\"|" "$PLUGIN_NAME/build.gradle.kts"
+              sed -i "s|iconUrl = '.*'|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$PLUGIN_NAME/icon.png\"|" "$PLUGIN_NAME/build.gradle.kts"
+
+            done
+          done
+
+          # Clean up
+          rm -rf temp_sources
+
+          # Commit and Push
+          git add .
+          git commit -m "Auto-sync plugins, download icons, and apply Adam Knight branding" || echo "No changes to commit"
+          git push
