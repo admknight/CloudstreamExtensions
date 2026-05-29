@@ -6,7 +6,7 @@ version = 5
 
 android {
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "Su_sports", "\"${""}\"")
         buildConfigField("String", "PirateIPTV", "\"${""}\"")
@@ -37,4 +37,5 @@ cloudstream {
 
     isCrossPlatform = true
 }
+
 

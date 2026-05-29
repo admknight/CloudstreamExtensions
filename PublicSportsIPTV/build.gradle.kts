@@ -6,7 +6,7 @@ version = 2
 
 android {
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "FanCode_API", "\"${""}\"")
 
@@ -38,4 +38,5 @@ cloudstream {
 
     isCrossPlatform = true
 }
+
 

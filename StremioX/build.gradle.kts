@@ -9,7 +9,7 @@ android {
         viewBinding = true
     }
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "TMDB_API", "\"${""}\"")
     }
@@ -41,4 +41,5 @@ cloudstream {
     requiresResources = true
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/StremioX/icon.png"
 }
+
 

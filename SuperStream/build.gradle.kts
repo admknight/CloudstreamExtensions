@@ -10,7 +10,7 @@ android {
         viewBinding = true
     }
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "TMDB_API", "\"${""}\"")
         buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"${""}\"")
@@ -58,4 +58,5 @@ dependencies {
     implementation("androidx.leanback:leanback:1.2.0")
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
+
 

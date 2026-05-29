@@ -9,7 +9,7 @@ android {
         viewBinding = true
     }
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
     }
 }
@@ -47,4 +47,5 @@ dependencies {
     val cloudstream by configurations
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
+
 

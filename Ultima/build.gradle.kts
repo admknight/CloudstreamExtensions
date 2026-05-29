@@ -44,7 +44,7 @@ android {
     }
 
     defaultConfig {
-        .inputStream())
+
         buildConfigField("String", "KAISVA", "\"${""}\"")
         buildConfigField("String", "SIMKL_API", "\"${""}\"")
         buildConfigField("String", "MAL_API", "\"${""}\"")
@@ -53,3 +53,4 @@ android {
 
     }
 }
+

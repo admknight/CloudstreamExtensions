@@ -47,8 +47,9 @@ foreach ($repo in $sources) {
         $gradleContent = $gradleContent -replace 'iconUrl = ".*"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$pluginName/icon.png`""
 
         # Remove dependencies on local.properties keys which crash CI builds
-        $gradleContent = $gradleContent -replace '(?s)val properties = Properties\(\).*?properties.load\(.*?\)', ''
-        $gradleContent = $gradleContent -replace 'properties.getProperty\(.*?\)', '""'
+        $gradleContent = $gradleContent -replace '(?s)val properties = Properties\(\).*?properties\.load\(.*?\)', ''
+        $gradleContent = $gradleContent -replace '(?m)^\s*\.inputStream\(\)\)\s*$', ''
+        $gradleContent = $gradleContent -replace 'properties\.getProperty\(.*?\)', '""'
 
         $gradleContent | Set-Content "$pluginName/build.gradle.kts"
 

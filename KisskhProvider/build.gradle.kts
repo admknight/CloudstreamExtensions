@@ -5,7 +5,7 @@ version = 18
 
 android {
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "KissKh", "\"${""}\"")
         buildConfigField("String", "KisskhSub", "\"${""}\"")
@@ -40,3 +40,4 @@ cloudstream {
 
     isCrossPlatform = true
 }
+

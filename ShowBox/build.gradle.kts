@@ -9,7 +9,7 @@ android {
         viewBinding = true
     }
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"${""}\"")
         buildConfigField("String", "SUPERSTREAM_SECOND_API", "\"${""}\"")
@@ -55,4 +55,5 @@ cloudstream {
 
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/ShowBox/icon.png"
 }
+
 

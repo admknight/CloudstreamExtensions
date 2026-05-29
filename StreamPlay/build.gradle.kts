@@ -10,7 +10,7 @@ android {
         viewBinding = true
     }
     defaultConfig {
-        .inputStream())
+
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "TMDB_API", "\"${""}\"")
         buildConfigField("String", "ZSHOW_API", "\"${""}\"")
@@ -77,4 +77,5 @@ dependencies {
     implementation("androidx.browser:browser:1.10.0")
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
+
 
