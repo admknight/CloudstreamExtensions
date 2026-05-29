@@ -22,13 +22,14 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
 
-          # Sources to sync from
+          # Sources to sync from (ordered by priority if versions match)
           SOURCES=(
-            "https://github.com/rockhero1234/cinephile.git"
-            "https://github.com/phisher98/cloudstream-extensions-phisher.git"
             "https://github.com/Hexated/CloudStream-Extensions.git"
+            "https://github.com/phisher98/cloudstream-extensions-phisher.git"
             "https://github.com/Rowdy-Avocado/CloudStream-Extensions.git"
+            "https://github.com/rockhero1234/cinephile.git"
             "https://github.com/MegixS/Megix-Repo.git"
+            "https://github.com/Stormun/CloudStream-Extensions.git"
           )
 
           mkdir -p temp_sources
@@ -38,43 +39,36 @@ jobs:
             echo "Cloning $REPO_NAME..."
             git clone "$REPO_URL" "temp_sources/$REPO_NAME"
             
-            # Find all directories that contain a build.gradle.kts (excluding root and common non-plugin dirs)
-            # We look for directories that have a 'src' folder as well to be sure it's a plugin
             find "temp_sources/$REPO_NAME" -maxdepth 2 -name "build.gradle.kts" | while read -r GRADLE_FILE; do
               PLUGIN_DIR=$(dirname "$GRADLE_FILE")
               PLUGIN_NAME=$(basename "$PLUGIN_DIR")
               
-              # Skip the root directory of the cloned repo
               if [ "$PLUGIN_DIR" == "temp_sources/$REPO_NAME" ]; then continue; fi
-              # Skip known non-plugin directories
               if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
 
-              echo "Syncing $PLUGIN_NAME from $REPO_NAME..."
-              mkdir -p "$PLUGIN_NAME"
+              # --- SMART VERSION CONTROL ---
+              NEW_VERSION=$(grep -E "^version\s*=" "$GRADLE_FILE" | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
+              OLD_VERSION=$(grep -E "^version\s*=" "$PLUGIN_NAME/build.gradle.kts" 2>/dev/null | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
               
-              # Copy files (avoiding .git folders)
+              if [ ! -z "$NEW_VERSION" ] && [ ! -z "$OLD_VERSION" ] && [ "$NEW_VERSION" -le "$OLD_VERSION" ]; then
+                echo "Skipping $PLUGIN_NAME from $REPO_NAME (Local version $OLD_VERSION >= Source version $NEW_VERSION)"
+                continue
+              fi
+
+              echo "Updating $PLUGIN_NAME from $REPO_NAME (v$OLD_VERSION -> v$NEW_VERSION)..."
+              mkdir -p "$PLUGIN_NAME"
               cp -r "$PLUGIN_DIR"/* "$PLUGIN_NAME/"
               
               # --- BRANDING & INDEPENDENCE ---
-              
-              # 1. Force Author to Adam Knight
-              # Handles both double and single quotes
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$PLUGIN_NAME/build.gradle.kts"
               
-              # 2. Handle Icon Replication
-              # Extract the existing iconUrl
               OLD_ICON_URL=$(grep "iconUrl =" "$PLUGIN_NAME/build.gradle.kts" | sed -E 's/.*iconUrl = ["'\'']([^"'\'']+)["'\''].*/\1/')
-              
               if [ ! -z "$OLD_ICON_URL" ]; then
-                echo "Downloading icon for $PLUGIN_NAME from $OLD_ICON_URL"
-                # Download the icon locally. If it fails, we keep any existing icon.png
                 curl -L -s -o "$PLUGIN_NAME/icon.png" "$OLD_ICON_URL" || echo "Failed to download icon for $PLUGIN_NAME"
               fi
               
-              # 3. Update build.gradle.kts to use the locally hosted icon
               sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$PLUGIN_NAME/icon.png\"|" "$PLUGIN_NAME/build.gradle.kts"
               sed -i "s|iconUrl = '.*'|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$PLUGIN_NAME/icon.png\"|" "$PLUGIN_NAME/build.gradle.kts"
-
             done
           done
 
