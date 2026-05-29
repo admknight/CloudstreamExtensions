@@ -77,25 +77,22 @@ subprojects {
     }
 }
 
-task("make") {
+// Global Tasks
+val makeAll = tasks.register("make") {
     group = "cloudstream"
+    description = "Build all plugins"
 }
 
-task("makePluginsJson") {
+val makePluginsJsonAll = tasks.register("makePluginsJson") {
     group = "cloudstream"
+    description = "Generate plugins.json for all plugins"
 }
 
-// Map subproject tasks to root tasks
 subprojects {
     afterEvaluate {
         if (plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-            println("Registering tasks for plugin: ${project.name}")
-            rootProject.tasks.named("make") {
-                dependsOn(project.tasks.named("make"))
-            }
-            rootProject.tasks.named("makePluginsJson") {
-                dependsOn(project.tasks.named("makePluginsJson"))
-            }
+            makeAll.configure { dependsOn(tasks.named("make")) }
+            makePluginsJsonAll.configure { dependsOn(tasks.named("makePluginsJson")) }
         }
     }
 }
