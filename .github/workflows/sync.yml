@@ -44,23 +44,23 @@ jobs:
               PLUGIN_DIR=$(dirname "$GRADLE_FILE")
               PLUGIN_NAME=$(basename "$PLUGIN_DIR")
               
-              if [ -d "$PLUGIN_NAME" ] && [ ! -d "temp_sources/$REPO_NAME/$PLUGIN_NAME" ]; then
-                # If we already have this plugin from a higher priority repo, and this repo's version
-                # isn't actually inside the repo (safety check), skip it.
-                echo "Plugin $PLUGIN_NAME already exists, skipping from $REPO_NAME"
-                continue
-              fi
+              if [ "$PLUGIN_DIR" == "temp_sources/$REPO_NAME" ]; then continue; fi
+              if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
 
               # --- SMART VERSION CONTROL ---
+              # Extract version number (e.g., version = 5 -> 5)
               NEW_VERSION=$(grep -E "^version\s*=" "$GRADLE_FILE" | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
               OLD_VERSION=$(grep -E "^version\s*=" "$PLUGIN_NAME/build.gradle.kts" 2>/dev/null | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
               
-              if [ ! -z "$NEW_VERSION" ] && [ ! -z "$OLD_VERSION" ] && [ "$NEW_VERSION" -le "$OLD_VERSION" ]; then
-                echo "Skipping $PLUGIN_NAME from $REPO_NAME (Local version $OLD_VERSION >= Source version $NEW_VERSION)"
-                continue
+              # If we have an old version, and the new version is NOT higher, skip it.
+              if [ ! -z "$OLD_VERSION" ] && [ ! -z "$NEW_VERSION" ]; then
+                  if [ "$NEW_VERSION" -le "$OLD_VERSION" ]; then
+                      echo "Skipping $PLUGIN_NAME from $REPO_NAME (Local v$OLD_VERSION >= Source v$NEW_VERSION)"
+                      continue
+                  fi
               fi
 
-              echo "Updating $PLUGIN_NAME from $REPO_NAME (v$OLD_VERSION -> v$NEW_VERSION)..."
+              echo "Updating $PLUGIN_NAME from $REPO_NAME (v${OLD_VERSION:-0} -> v$NEW_VERSION)..."
               mkdir -p "$PLUGIN_NAME"
               cp -r "$PLUGIN_DIR"/* "$PLUGIN_NAME/"
               
