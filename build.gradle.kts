@@ -7,13 +7,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        // Shitpack repo which contains our tools and dependencies
         maven("https://jitpack.io")
     }
 
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
-        // Cloudstream gradle plugin which makes everything work and builds plugins
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20")
     }
@@ -28,7 +26,6 @@ allprojects {
 }
 
 fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) = extensions.getByName<CloudstreamExtension>("cloudstream").configuration()
-
 fun Project.android(configuration: BaseExtension.() -> Unit) = extensions.getByName<BaseExtension>("android").configuration()
 
 subprojects {
@@ -43,7 +40,6 @@ subprojects {
     android {
         namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
 
-        // Ensure local.properties exists for CI builds
         val localPropertiesFile = rootProject.file("local.properties")
         if (!localPropertiesFile.exists()) {
             localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk")
@@ -63,11 +59,7 @@ subprojects {
         tasks.withType<KotlinJvmCompile> {
             compilerOptions {
                 jvmTarget.set(JvmTarget.JVM_1_8)
-                freeCompilerArgs.addAll(
-                    "-Xno-call-assertions",
-                    "-Xno-param-assertions",
-                    "-Xno-receiver-assertions"
-                )
+                freeCompilerArgs.addAll("-Xno-call-assertions", "-Xno-param-assertions", "-Xno-receiver-assertions")
             }
         }
     }
@@ -75,38 +67,34 @@ subprojects {
     dependencies {
         val cloudstream by configurations
         val implementation by configurations
-
         cloudstream("com.lagradost:cloudstream3:pre-release")
-
         implementation(kotlin("stdlib"))
         implementation("com.github.Blatzar:NiceHttp:0.4.11")
         implementation("org.jsoup:jsoup:1.18.3")
         implementation("com.google.code.gson:gson:2.10.1")
         implementation("org.json:json:20240303")
-        // IMPORTANT: Do not bump Jackson above 2.13.1
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     }
 }
 
 task("make") {
     group = "cloudstream"
-    subprojects {
-        val sub = this
-        afterEvaluate {
-            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                this@task.dependsOn(sub.tasks.named("make"))
-            }
-        }
-    }
 }
 
 task("makePluginsJson") {
     group = "cloudstream"
-    subprojects {
-        val sub = this
-        afterEvaluate {
-            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                this@task.dependsOn(sub.tasks.named("makePluginsJson"))
+}
+
+// Map subproject tasks to root tasks
+subprojects {
+    afterEvaluate {
+        if (plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+            println("Registering tasks for plugin: ${project.name}")
+            rootProject.tasks.named("make") {
+                dependsOn(project.tasks.named("make"))
+            }
+            rootProject.tasks.named("makePluginsJson") {
+                dependsOn(project.tasks.named("makePluginsJson"))
             }
         }
     }
