@@ -1,6 +1,5 @@
 import com.android.build.gradle.BaseExtension
 import com.lagradost.cloudstream3.gradle.CloudstreamExtension
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 buildscript {
@@ -58,7 +57,7 @@ subprojects {
 
         tasks.withType<KotlinJvmCompile> {
             compilerOptions {
-                jvmTarget.set(JvmTarget.JVM_1_8)
+                jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
                 freeCompilerArgs.addAll("-Xno-call-assertions", "-Xno-param-assertions", "-Xno-receiver-assertions")
             }
         }
@@ -71,28 +70,31 @@ subprojects {
         implementation(kotlin("stdlib"))
         implementation("com.github.Blatzar:NiceHttp:0.4.11")
         implementation("org.jsoup:jsoup:1.18.3")
-        implementation("com.google.code.gson:gson:2.10.1")
+        implementation("com.google.code.gson:gson:2.14.0")
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     }
 }
 
-// Global Tasks
-val makeAll = tasks.register("make") {
+// Global Aggregator Tasks
+tasks.register("buildAll") {
     group = "cloudstream"
-    description = "Build all plugins"
+    subprojects.forEach { sub ->
+        afterEvaluate {
+            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+                dependsOn(sub.tasks.named("make"))
+            }
+        }
+    }
 }
 
-val makePluginsJsonAll = tasks.register("makePluginsJson") {
+tasks.register("generatePluginsJson") {
     group = "cloudstream"
-    description = "Generate plugins.json for all plugins"
-}
-
-subprojects {
-    afterEvaluate {
-        if (plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-            makeAll.configure { dependsOn(tasks.named("make")) }
-            makePluginsJsonAll.configure { dependsOn(tasks.named("makePluginsJson")) }
+    subprojects.forEach { sub ->
+        afterEvaluate {
+            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+                dependsOn(sub.tasks.named("makePluginsJson"))
+            }
         }
     }
 }

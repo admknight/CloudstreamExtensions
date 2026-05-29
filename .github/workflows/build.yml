@@ -62,13 +62,14 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/src
           chmod +x gradlew
-          ./gradlew clean make makePluginsJson --stacktrace
+          # Run the new aggregator tasks
+          ./gradlew clean buildAll generatePluginsJson --stacktrace
           
-          echo "Build finished. Copying files..."
-          # Use find to locate all .cs3 files and copy them to the builds directory
-          find . -type f -name "*.cs3" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
-          # Copy the generated plugins.json (it should be in the root build directory)
-          find . -type f -name "plugins.json" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
+          echo "Build finished. Harvesting files..."
+          # Copy every single built plugin found in any subdirectory
+          find . -name "*.cs3" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
+          # Grab the final aggregate plugins.json from the build directory
+          cp -v build/plugins.json $GITHUB_WORKSPACE/builds/ || find . -name "plugins.json" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
           # Copy repo.json
           cp -v repo.json $GITHUB_WORKSPACE/builds/ || true
 
