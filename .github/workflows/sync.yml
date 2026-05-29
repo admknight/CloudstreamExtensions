@@ -30,6 +30,7 @@ jobs:
             "https://github.com/rockhero1234/cinephile.git"
             "https://github.com/MegixS/Megix-Repo.git"
             "https://github.com/Stormun/CloudStream-Extensions.git"
+            "https://github.com/Sushan64/NetMirror-Extension.git"
           )
 
           mkdir -p temp_sources
