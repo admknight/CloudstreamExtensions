@@ -5,11 +5,10 @@ version = 18
 
 android {
     defaultConfig {
-        val properties = Properties()
-        properties.load(project.rootProject.file("local.properties").inputStream())
+        .inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "KissKh", "\"${properties.getProperty("KissKh")}\"")
-        buildConfigField("String", "KisskhSub", "\"${properties.getProperty("KisskhSub")}\"")
+        buildConfigField("String", "KissKh", "\"${""}\"")
+        buildConfigField("String", "KisskhSub", "\"${""}\"")
 
     }
 }

@@ -10,29 +10,28 @@ android {
         viewBinding = true
     }
     defaultConfig {
-        val properties = Properties()
-        properties.load(project.rootProject.file("local.properties").inputStream())
+        .inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "TMDB_API", "\"${properties.getProperty("TMDB_API")}\"")
-        buildConfigField("String", "ZSHOW_API", "\"${properties.getProperty("ZSHOW_API")}\"")
-        buildConfigField("String", "ANICHI_API", "\"${properties.getProperty("ANICHI_API")}\"")
-        buildConfigField("String", "KissKh", "\"${properties.getProperty("KissKh")}\"")
-        buildConfigField("String", "KisskhSub", "\"${properties.getProperty("KisskhSub")}\"")
-        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"${properties.getProperty("SUPERSTREAM_THIRD_API")}\"")
-        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"${properties.getProperty("SUPERSTREAM_FOURTH_API")}\"")
-        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"${properties.getProperty("SUPERSTREAM_FIRST_API")}\"")
-        buildConfigField("String", "PROXYAPI", "\"${properties.getProperty("PROXYAPI")}\"")
-        buildConfigField("String", "KAISVA", "\"${properties.getProperty("KAISVA")}\"")
-        buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\"${properties.getProperty("MOVIEBOX_SECRET_KEY_ALT")}\"")
-        buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\"${properties.getProperty("MOVIEBOX_SECRET_KEY_DEFAULT")}\"")
-        buildConfigField("String", "KAIMEG", "\"${properties.getProperty("KAIMEG")}\"")
-        buildConfigField("String", "KAIDEC", "\"${properties.getProperty("KAIDEC")}\"")
-        buildConfigField("String", "KAIENC", "\"${properties.getProperty("KAIENC")}\"")
-        buildConfigField("String", "VideasyDEC", "\"${properties.getProperty("VideasyDEC")}\"")
-        buildConfigField("String", "YFXENC", "\"${properties.getProperty("YFXENC")}\"")
-        buildConfigField("String", "YFXDEC", "\"${properties.getProperty("YFXDEC")}\"")
-        buildConfigField("String", "NuvFeb", "\"${properties.getProperty("NuvFeb")}\"")
-        buildConfigField("String", "ANICHI_APP", "\"${properties.getProperty("ANICHI_APP")}\"")
+        buildConfigField("String", "TMDB_API", "\"${""}\"")
+        buildConfigField("String", "ZSHOW_API", "\"${""}\"")
+        buildConfigField("String", "ANICHI_API", "\"${""}\"")
+        buildConfigField("String", "KissKh", "\"${""}\"")
+        buildConfigField("String", "KisskhSub", "\"${""}\"")
+        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"${""}\"")
+        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"${""}\"")
+        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"${""}\"")
+        buildConfigField("String", "PROXYAPI", "\"${""}\"")
+        buildConfigField("String", "KAISVA", "\"${""}\"")
+        buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\"${""}\"")
+        buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\"${""}\"")
+        buildConfigField("String", "KAIMEG", "\"${""}\"")
+        buildConfigField("String", "KAIDEC", "\"${""}\"")
+        buildConfigField("String", "KAIENC", "\"${""}\"")
+        buildConfigField("String", "VideasyDEC", "\"${""}\"")
+        buildConfigField("String", "YFXENC", "\"${""}\"")
+        buildConfigField("String", "YFXDEC", "\"${""}\"")
+        buildConfigField("String", "NuvFeb", "\"${""}\"")
+        buildConfigField("String", "ANICHI_APP", "\"${""}\"")
     }
 }
 
@@ -78,3 +77,4 @@ dependencies {
     implementation("androidx.browser:browser:1.10.0")
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
+

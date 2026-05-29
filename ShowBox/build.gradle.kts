@@ -9,14 +9,13 @@ android {
         viewBinding = true
     }
     defaultConfig {
-        val properties = Properties()
-        properties.load(project.rootProject.file("local.properties").inputStream())
+        .inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"${properties.getProperty("SUPERSTREAM_FIRST_API")}\"")
-        buildConfigField("String", "SUPERSTREAM_SECOND_API", "\"${properties.getProperty("SUPERSTREAM_SECOND_API")}\"")
-        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"${properties.getProperty("SUPERSTREAM_THIRD_API")}\"")
-        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"${properties.getProperty("SUPERSTREAM_FOURTH_API")}\"")
-        buildConfigField("String", "SuperToken", "\"${properties.getProperty("SuperToken")}\"")
+        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"${""}\"")
+        buildConfigField("String", "SUPERSTREAM_SECOND_API", "\"${""}\"")
+        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"${""}\"")
+        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"${""}\"")
+        buildConfigField("String", "SuperToken", "\"${""}\"")
 
     }
 }
@@ -56,3 +55,4 @@ cloudstream {
 
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/ShowBox/icon.png"
 }
+
