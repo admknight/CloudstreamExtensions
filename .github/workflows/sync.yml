@@ -22,22 +22,21 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
 
-          # Sources to sync from
+          # Sources to sync from (ordered by priority if versions match)
           SOURCES=(
             "https://github.com/Hexated/CloudStream-Extensions.git"
             "https://github.com/phisher98/cloudstream-extensions-phisher.git"
-            "https://github.com/Rowdy-Avocado/CloudStream-Extensions.git"
             "https://github.com/rockhero1234/cinephile.git"
             "https://github.com/MegixS/Megix-Repo.git"
-            "https://github.com/Stormun/CloudStream-Extensions.git"
             "https://github.com/Sushan64/NetMirror-Extension.git"
+            "https://codeberg.org/Stormunblessed/storm-ext.git"
           )
 
           mkdir -p temp_sources
 
           for REPO_URL in "${SOURCES[@]}"; do
-            # Create a unique name for the temp folder using owner and repo name
-            REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://github.com/([^/]+)/([^/]+)\.git|\1_\2|')
+            # Create a unique name for the temp folder
+            REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://[^/]+/([^/]+)/([^/]+)(\.git)?|\1_\2|' | sed 's|\.git||')
             echo "Cloning $REPO_NAME..."
             git clone --depth 1 "$REPO_URL" "temp_sources/$REPO_NAME"
             

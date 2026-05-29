@@ -4,11 +4,10 @@
 $sources = @(
     "https://github.com/Hexated/CloudStream-Extensions.git",
     "https://github.com/phisher98/cloudstream-extensions-phisher.git",
-    "https://github.com/Rowdy-Avocado/CloudStream-Extensions.git",
     "https://github.com/rockhero1234/cinephile.git",
     "https://github.com/MegixS/Megix-Repo.git",
-    "https://github.com/Stormun/CloudStream-Extensions.git",
-    "https://github.com/Sushan64/NetMirror-Extension.git"
+    "https://github.com/Sushan64/NetMirror-Extension.git",
+    "https://codeberg.org/Stormunblessed/storm-ext.git"
 )
 
 # Mandatory plugins that we should be careful with
@@ -21,7 +20,7 @@ New-Item -ItemType Directory -Path "temp_sources" | Out-Null
 
 foreach ($repo in $sources) {
     # Create a unique name for the temp folder
-    $repoName = $repo -replace 'https://github.com/', '' -replace '\.git', '' -replace '/', '_'
+    $repoName = $repo -replace 'https://[^/]+/', '' -replace '\.git', '' -replace '/', '_'
     Write-Host "`nCloning $repoName..." -ForegroundColor Yellow
     git clone --depth 1 $repo "temp_sources/$repoName" 2>$null | Out-Null
 
