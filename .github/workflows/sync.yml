@@ -22,7 +22,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
 
-          # Sources to sync from (ordered by priority if versions match)
+          # Sources to sync from
           SOURCES=(
             "https://github.com/Hexated/CloudStream-Extensions.git"
             "https://github.com/phisher98/cloudstream-extensions-phisher.git"
@@ -32,10 +32,15 @@ jobs:
             "https://github.com/Stormunblessed/storm-ext.git"
           )
 
+          # Category Regex Patterns
+          ANIME_REGEX="Anichi|AllWish|AnimePahe|Animeav1|AnimeCloud|AnimeDekho|Animedubhindi|Animekhor|Animexin|Gogo|NineAnime|Crunchyroll|Tokusatsu|TokuZilla|Animekisa|Kawaiifu|Aniflix|DubbedAnime|AsiaFlix|KimCartoon|Topcartoon|Toon|OnePace|Donghua|DoraBash|Latanime|Tenshi|Wco|Zoro"
+          HINDI_REGEX="Netmirror|Cinevood|Mp4Moviez|Tamil|Skymovies|Bolly|Vega|Moviesmod|CineStream|AllMovieLand|Hindmovie|HDhub4u|FourKHDHub|MovieBlast|Fivemovierulz|Movierulzhd|Cinefreak|Bangla|OnlineMoviesHindi|MoviesDrive|Desicinemas|UHDmovies"
+          TOOLS_REGEX="Ultima|Stremio|Jellyfin|BingedReview|RingZ|GDIndex"
+          LIVE_REGEX="IPTV|QuickIPTV|Sports|EjaTv|Tvtwofourseven"
+
           mkdir -p temp_sources
 
           for REPO_URL in "${SOURCES[@]}"; do
-            # Create a unique name for the temp folder
             REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://[^/]+/([^/]+)/([^/]+)(\.git)?|\1_\2|' | sed 's|\.git||')
             echo "Cloning $REPO_NAME..."
             git clone --depth 1 "$REPO_URL" "temp_sources/$REPO_NAME"
@@ -47,53 +52,54 @@ jobs:
               if [ "$PLUGIN_DIR" == "temp_sources/$REPO_NAME" ]; then continue; fi
               if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
 
-              # --- VERSION CHECK ---
+              # Determine Category
+              CATEGORY="International"
+              if [[ "$PLUGIN_NAME" =~ $ANIME_REGEX ]]; then CATEGORY="Anime"; fi
+              if [[ "$PLUGIN_NAME" =~ $HINDI_REGEX ]]; then CATEGORY="Bollywood"; fi
+              if [[ "$PLUGIN_NAME" =~ $TOOLS_REGEX ]]; then CATEGORY="Tools"; fi
+              if [[ "$PLUGIN_NAME" =~ $LIVE_REGEX ]]; then CATEGORY="LiveTV"; fi
+
+              TARGET_DIR="$CATEGORY/$PLUGIN_NAME"
+
+              # Version Check
               NEW_VERSION=$(grep -E "^version\s*=" "$GRADLE_FILE" | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
-              OLD_VERSION=$(grep -E "^version\s*=" "$PLUGIN_NAME/build.gradle.kts" 2>/dev/null | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
+              OLD_VERSION=$(grep -E "^version\s*=" "$TARGET_DIR/build.gradle.kts" 2>/dev/null | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
               
               if [ ! -z "$OLD_VERSION" ] && [ ! -z "$NEW_VERSION" ] && [ "$NEW_VERSION" -le "$OLD_VERSION" ]; then
                 echo "Skipping $PLUGIN_NAME (v$OLD_VERSION >= v$NEW_VERSION)"
                 continue
               fi
 
-              echo "Syncing $PLUGIN_NAME (v${OLD_VERSION:-0} -> v$NEW_VERSION)..."
+              echo "Syncing [$CATEGORY] $PLUGIN_NAME (v${OLD_VERSION:-0} -> v$NEW_VERSION)..."
               
-              # CLEAN UP OLD DATA TO PREVENT DUPLICATES
-              if [ -d "$PLUGIN_NAME/src" ]; then rm -rf "$PLUGIN_NAME/src"; fi
-              mkdir -p "$PLUGIN_NAME"
-              cp -r "$PLUGIN_DIR"/* "$PLUGIN_NAME/"
+              # CLEAN UP OLD DATA
+              if [ -d "$TARGET_DIR/src" ]; then rm -rf "$TARGET_DIR/src"; fi
+              mkdir -p "$TARGET_DIR"
+              cp -r "$PLUGIN_DIR"/* "$TARGET_DIR/"
               
               # --- SURGERY & BRANDING ---
+              MANIFEST="$TARGET_DIR/src/main/AndroidManifest.xml"
+              if [ -f "$MANIFEST" ]; then sed -i 's/package="[^"]*"//g' "$MANIFEST"; fi
+
+              sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
+              sed -i 's/val properties = Properties().*properties.load(.*)//g' "$TARGET_DIR/build.gradle.kts"
+              sed -i 's/properties.getProperty(.*)/""/g' "$TARGET_DIR/build.gradle.kts"
               
-              # 1. Manifest Surgery (Fixes package errors)
-              MANIFEST="$PLUGIN_NAME/src/main/AndroidManifest.xml"
-              if [ -f "$MANIFEST" ]; then
-                sed -i 's/package="[^"]*"//g' "$MANIFEST"
+              if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
+                sed -i 's/buildFeatures {/buildFeatures {\n        buildConfig = true/g' "$TARGET_DIR/build.gradle.kts"
               fi
 
-              # 2. Key Neutralizer & BuildConfig Force
-              sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$PLUGIN_NAME/build.gradle.kts"
-              sed -i 's/val properties = Properties().*properties.load(.*)//g' "$PLUGIN_NAME/build.gradle.kts"
-              sed -i 's/properties.getProperty(.*)/""/g' "$PLUGIN_NAME/build.gradle.kts"
-              
-              if ! grep -q "buildConfig = true" "$PLUGIN_NAME/build.gradle.kts"; then
-                sed -i 's/buildFeatures {/buildFeatures {\n        buildConfig = true/g' "$PLUGIN_NAME/build.gradle.kts"
-              fi
-
-              # 3. Icon Replication
-              OLD_ICON_URL=$(grep "iconUrl =" "$PLUGIN_NAME/build.gradle.kts" | sed -E 's/.*iconUrl = ["'\'']([^"'\'']+)["'\''].*/\1/')
+              # Icon Replication
+              OLD_ICON_URL=$(grep "iconUrl =" "$TARGET_DIR/build.gradle.kts" | sed -E 's/.*iconUrl = ["'\'']([^"'\'']+)["'\''].*/\1/')
               if [ ! -z "$OLD_ICON_URL" ]; then
-                curl -L -s -o "$PLUGIN_NAME/icon.png" "$OLD_ICON_URL" || echo "Icon fail"
+                curl -L -s -o "$TARGET_DIR/icon.png" "$OLD_ICON_URL" || echo "Icon fail"
               fi
-              sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$PLUGIN_NAME/icon.png\"|" "$PLUGIN_NAME/build.gradle.kts"
+              sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$CATEGORY/$PLUGIN_NAME/icon.png\"|" "$TARGET_DIR/build.gradle.kts"
 
             done
           done
 
-          # Clean up
           rm -rf temp_sources
-
-          # Commit and Push
           git add .
-          git commit -m "Auto-sync plugins with Mega-Repo surgery logic" || echo "No changes"
+          git commit -m "Auto-sync: Categorized plugins and applied Adam Knight branding" || echo "No changes"
           git push origin master
