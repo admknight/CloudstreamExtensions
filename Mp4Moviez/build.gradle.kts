@@ -1,12 +1,28 @@
+// use an integer for version numbers
 version = 1
 
 cloudstream {
-    language = "hi"
-    description = "Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez."
+    description = "Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez. Mp4moviez is number one entertainment hollywood bollywood website and provide free Mp4moviez full movie download facility"
     authors = listOf("Adam Knight")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Mp4Moviez/icon.png"
-    version = 1
 
-    status = 1
-    tvTypes = listOf("Movie", "TvSeries", "NSFW")
+    /**
+    * Status int as the following:
+    * 0: Down
+    * 1: Ok
+    * 2: Slow
+    * 3: Beta only
+    * */
+    status = 1 // will be 3 if unspecified
+
+    // List of video source types. Users are able to filter for extensions in a given category.
+    // You can find a list of available types here:
+    // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
+    tvTypes = listOf(
+        "Movie",
+        "TvSeries",
+		"NSFW"
+    )
+    language = "hi"
+
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Mp4Moviez/icon.png"
 }
