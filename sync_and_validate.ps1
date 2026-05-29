@@ -20,7 +20,8 @@ if (Test-Path "temp_sources") { Remove-Item -Recurse -Force "temp_sources" }
 New-Item -ItemType Directory -Path "temp_sources" | Out-Null
 
 foreach ($repo in $sources) {
-    $repoName = [System.IO.Path]::GetFileNameWithoutExtension($repo)
+    # Create a unique name for the temp folder
+    $repoName = $repo -replace 'https://github.com/', '' -replace '\.git', '' -replace '/', '_'
     Write-Host "`nCloning $repoName..." -ForegroundColor Yellow
     git clone --depth 1 $repo "temp_sources/$repoName" 2>$null | Out-Null
 

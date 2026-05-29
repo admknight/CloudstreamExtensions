@@ -36,7 +36,8 @@ jobs:
           mkdir -p temp_sources
 
           for REPO_URL in "${SOURCES[@]}"; do
-            REPO_NAME=$(basename "$REPO_URL" .git)
+            # Create a unique name for the temp folder using owner and repo name
+            REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://github.com/([^/]+)/([^/]+)\.git|\1_\2|')
             echo "Cloning $REPO_NAME..."
             git clone --depth 1 "$REPO_URL" "temp_sources/$REPO_NAME"
             
