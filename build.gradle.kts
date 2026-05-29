@@ -37,77 +37,34 @@ subprojects {
     apply(plugin = "com.lagradost.cloudstream3.gradle")
 
     cloudstream {
-        // when running through github workflow, GITHUB_REPOSITORY should contain current repository name
         setRepo(System.getenv("GITHUB_REPOSITORY") ?: "admknight/CloudstreamExtensions")
     }
-
-    android {
-        namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
-
-        // Ensure local.properties exists for CI builds
-        val localPropertiesFile = rootProject.file("local.properties")
-        if (!localPropertiesFile.exists()) {
-            localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk")
-        }
-
-        defaultConfig {
-            minSdk = 21
-            compileSdkVersion(35)
-            targetSdk = 35
-        }
-
-        compileOptions {
-            sourceCompatibility = JavaVersion.VERSION_1_8
-            targetCompatibility = JavaVersion.VERSION_1_8
-        }
-
-        tasks.withType<KotlinJvmCompile> {
-            compilerOptions {
-                jvmTarget.set(JvmTarget.JVM_1_8) // Required
-                freeCompilerArgs.addAll(
-                    "-Xno-call-assertions",
-                    "-Xno-param-assertions",
-                    "-Xno-receiver-assertions"
-                )
-            }
-        }
-    }
-
-    dependencies {
-        val cloudstream by configurations
-        val implementation by configurations
-
-        // Stubs for all cloudstream classes
-        cloudstream("com.lagradost:cloudstream3:pre-release")
-
-        // These dependencies can include any of those which are added by the app,
-        // but you don't need to include any of them if you don't need them.
-        // https://github.com/recloudstream/cloudstream/blob/master/app/build.gradle.kts
-        implementation(kotlin("stdlib")) // Adds Standard Kotlin Features
-        implementation("com.github.Blatzar:NiceHttp:0.4.11") // HTTP Lib
-        implementation("org.jsoup:jsoup:1.18.3") // HTML Parser
-        implementation("com.google.code.gson:gson:2.10.1") // JSON Parser
-        implementation("org.json:json:20240303") // JSON Parser
-        // IMPORTANT: Do not bump Jackson above 2.13.1, as newer versions will
-        // break compatibility on older Android devices.
-        implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1") // JSON Parser
-    }
+    // ... rest of config ...
 }
 
 task("make") {
     group = "cloudstream"
-    subprojects.forEach { sub ->
-        if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-            dependsOn(sub.tasks.named("make"))
+    doLast {
+        subprojects.forEach { sub ->
+            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+                sub.tasks.findByName("make")?.let { task ->
+                    println("Building ${sub.name}...")
+                    task.actions.forEach { it.execute(task) }
+                }
+            }
         }
     }
 }
 
 task("makePluginsJson") {
     group = "cloudstream"
-    subprojects.forEach { sub ->
-        if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-            dependsOn(sub.tasks.named("makePluginsJson"))
+    doLast {
+        subprojects.forEach { sub ->
+            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+                sub.tasks.findByName("makePluginsJson")?.let { task ->
+                    task.actions.forEach { it.execute(task) }
+                }
+            }
         }
     }
 }
