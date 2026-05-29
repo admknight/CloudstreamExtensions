@@ -76,27 +76,19 @@ subprojects {
     }
 }
 
-// Global Aggregator Tasks
+// Global Aggregator Tasks using standard Gradle dependency management
 tasks.register("buildAll") {
     group = "cloudstream"
-    subprojects.forEach { sub ->
-        afterEvaluate {
-            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                dependsOn(sub.tasks.named("make"))
-            }
-        }
-    }
+    description = "Build all plugins"
+    // Depend on every subproject's 'make' task if it exists
+    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })
 }
 
 tasks.register("generatePluginsJson") {
     group = "cloudstream"
-    subprojects.forEach { sub ->
-        afterEvaluate {
-            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                dependsOn(sub.tasks.named("makePluginsJson"))
-            }
-        }
-    }
+    description = "Generate plugins.json for all plugins"
+    // Depend on every subproject's 'makePluginsJson' task if it exists
+    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "makePluginsJson" } })
 }
 
 task<Delete>("clean") {
