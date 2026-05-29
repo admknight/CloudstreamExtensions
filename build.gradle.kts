@@ -90,13 +90,11 @@ subprojects {
 
 task("make") {
     group = "cloudstream"
-    doLast {
-        subprojects.forEach { sub ->
+    subprojects {
+        val sub = this
+        afterEvaluate {
             if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                sub.tasks.findByName("make")?.let { task ->
-                    println("Building ${sub.name}...")
-                    task.actions.forEach { it.execute(task) }
-                }
+                this@task.dependsOn(sub.tasks.named("make"))
             }
         }
     }
@@ -104,12 +102,11 @@ task("make") {
 
 task("makePluginsJson") {
     group = "cloudstream"
-    doLast {
-        subprojects.forEach { sub ->
+    subprojects {
+        val sub = this
+        afterEvaluate {
             if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                sub.tasks.findByName("makePluginsJson")?.let { task ->
-                    task.actions.forEach { it.execute(task) }
-                }
+                this@task.dependsOn(sub.tasks.named("makePluginsJson"))
             }
         }
     }
