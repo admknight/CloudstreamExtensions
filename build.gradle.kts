@@ -44,6 +44,12 @@ subprojects {
     android {
         namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
 
+        // Ensure local.properties exists for CI builds
+        val localPropertiesFile = rootProject.file("local.properties")
+        if (!localPropertiesFile.exists()) {
+            localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk")
+        }
+
         defaultConfig {
             minSdk = 21
             compileSdkVersion(35)
