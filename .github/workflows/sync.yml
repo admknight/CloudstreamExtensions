@@ -44,8 +44,12 @@ jobs:
               PLUGIN_DIR=$(dirname "$GRADLE_FILE")
               PLUGIN_NAME=$(basename "$PLUGIN_DIR")
               
-              if [ "$PLUGIN_DIR" == "temp_sources/$REPO_NAME" ]; then continue; fi
-              if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
+              if [ -d "$PLUGIN_NAME" ] && [ ! -d "temp_sources/$REPO_NAME/$PLUGIN_NAME" ]; then
+                # If we already have this plugin from a higher priority repo, and this repo's version
+                # isn't actually inside the repo (safety check), skip it.
+                echo "Plugin $PLUGIN_NAME already exists, skipping from $REPO_NAME"
+                continue
+              fi
 
               # --- SMART VERSION CONTROL ---
               NEW_VERSION=$(grep -E "^version\s*=" "$GRADLE_FILE" | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
