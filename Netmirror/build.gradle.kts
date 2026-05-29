@@ -35,3 +35,4 @@ cloudstream {
 
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Netmirror/icon.png"
 }
+

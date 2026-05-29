@@ -25,3 +25,4 @@ cloudstream {
 
     isCrossPlatform = true
 }
+
