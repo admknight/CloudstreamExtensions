@@ -1,12 +1,182 @@
 [
     {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/AllMovieLandProvider/icon.png",
+        "jarFileSize": 140716,
+        "fileHash": "sha256-e4400c69b925f8e3189b24f714dc803c6f48a481120dcd09a0554c50177396f9",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 33857,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Cartoon"
+        ],
+        "version": 18,
+        "internalName": "AllMovieLandProvider",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AllMovieLandProvider.jar",
+        "description": "Indian MultiLanguage Provider (Mostly Hindi)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AllMovieLandProvider.cs3",
+        "name": "AllMovieLandProvider",
+        "jarHash": "sha256-ffb8ebee95ecd8e2bb4bc62a8b5e9ef6707f44a0620a52eb1fd7bcb655500584"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/AnimeDekhoProvider/icon.png",
+        "jarFileSize": 254498,
+        "fileHash": "sha256-4e42364fcbf2e77f90b2ae430fd194d9acb827c1d1cf0b20985c66cb87710fd0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 52910,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 62,
+        "internalName": "AnimeDekhoProvider",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimeDekhoProvider.jar",
+        "description": "Includes AnimeDekho,OnePace(DUB,SUB) and HindiSubAnime",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimeDekhoProvider.cs3",
+        "name": "AnimeDekhoProvider",
+        "jarHash": "sha256-edf854f21946add6ad09c2680e5b8fd08922d34412c439f06817d2bc69f4eeb8"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animedubhindi.me&sz=%size%",
+        "fileHash": "sha256-0a740660aaded902b20440c2d25d74ab88a4237468a80a5c446978f0cf70d7c0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 44092,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 1,
+        "internalName": "Animedubhindi",
+        "description": "Anime in Multi Lang",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animedubhindi.cs3",
+        "name": "Animedubhindi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animekhor.org&sz=%size%",
+        "jarFileSize": 91128,
+        "fileHash": "sha256-81e8c2cad7126c41aff408ba2973e2c1713fef5c2126ba756563f568312606dd",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 23674,
+        "status": 1,
+        "language": "zh",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime"
+        ],
+        "version": 9,
+        "internalName": "Animekhor",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animekhor.jar",
+        "description": "Anime and Movies includes (Donghuaword)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animekhor.cs3",
+        "name": "Animekhor",
+        "jarHash": "sha256-d2aad93f087493e81f3b9d63eb37e2a253e7fd1e47e0fdccb742aa7021ca814d"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animenosub.to&sz=%size%",
+        "jarFileSize": 78937,
+        "fileHash": "sha256-0e02f9f6ed4ddfd62fdcc08c52b7d5433c98ad4f7a2a2075fe44d35f89b583de",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 18024,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 7,
+        "internalName": "Animenosub",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animenosub.jar",
+        "description": "Anime and Movies",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animenosub.cs3",
+        "name": "Animenosub",
+        "jarHash": "sha256-ce5acaac1b360e41cb02cdedbcf5c63d9722c66c880c9259a2e89a8528249fc9"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animesalt.ac&sz=%size%",
+        "jarFileSize": 166719,
+        "fileHash": "sha256-e6b5f2c02e7d11b9e77e5822ec77d4ce36f1ce611d8c7dbc4182583e9ce29e21",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 42257,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 7,
+        "internalName": "Animesalt",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animesalt.jar",
+        "description": "Anime/Cartoon in Hindi",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animesalt.cs3",
+        "name": "Animesalt",
+        "jarHash": "sha256-45807030f71d1f06567fcaf653dbe8dd1f0040a4bcf933f158e3bb2769cf909f"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animexin.dev&sz=%size%",
+        "jarFileSize": 56650,
+        "fileHash": "sha256-a81b3dff0013a4cd0aa98b087e1e6f8d245f4455caa9e253a8ae8f133873df74",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 14582,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 9,
+        "internalName": "Animexin",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animexin.jar",
+        "description": "Anime and Movies",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animexin.cs3",
+        "name": "Animexin",
+        "jarHash": "sha256-8d9122b12c1c95cfdab0dce0aa9b51e3e911e1560907654f5b0112a67f63f4ff"
+    },
+    {
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/BingedReview/icon.png",
         "fileHash": "sha256-83d893260b336bd0c1a4576575ebf0ea09d7d571a9e45687c3a87d2cfbbeb342",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "fileSize": 17057,
         "status": 1,
-        "language": "en",
         "authors": [
             "Adam Knight"
         ],
@@ -15,9 +185,30 @@
         ],
         "version": 3,
         "internalName": "BingedReview",
-        "description": "Data about streaming and reviews",
+        "description": "Data about streaming and review",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/BingedReview.cs3",
         "name": "BingedReview"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=cinemacity.cc&sz=%size%",
+        "fileHash": "sha256-5ade8c2d890215e7babaeb767a52546bd668d9c43971f834e8b590799b4a6b03",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 45881,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 8,
+        "internalName": "Cinemacity",
+        "description": "Watch Movies & TvSeries (Multi-Lang/Audio)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Cinemacity.cs3",
+        "name": "Cinemacity"
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Cinevood/icon.png",
@@ -32,15 +223,288 @@
         ],
         "tvTypes": [
             "Movie",
-            "TvSeries",
-            "AsianDrama",
-            "Anime"
+            "TvSeries"
         ],
         "version": 11,
         "internalName": "Cinevood",
-        "description": "Regional content from Cinevood",
+        "description": "unstable right now but good regional content",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Cinevood.cs3",
         "name": "Cinevood"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Coflix/icon.png",
+        "jarFileSize": 125717,
+        "fileHash": "sha256-9b64bf729b3ae3b922d7fd6cd09d47a8691a36ad11b1c3cf51e0cd455982a99d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 28844,
+        "status": 1,
+        "language": "fr",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 13,
+        "internalName": "Coflix",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Coflix.jar",
+        "description": "Movies,Series and Anime French Extension ",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Coflix.cs3",
+        "name": "Coflix",
+        "jarHash": "sha256-97e9269d4b548b8fe8793b2a96008d591d78dea657265713e3dbb7744785007c"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/Kohi-den/extensions-source/927f9c68fd64ce52f6212ae633d0f0585eca3545/src/en/donghuastream/res/mipmap-xxxhdpi/ic_launcher.png",
+        "jarFileSize": 187271,
+        "fileHash": "sha256-ba8823efc4e81080cb70ba1e651da21a3e9fd6f5fad58928658f9644893c4bb4",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 37314,
+        "status": 1,
+        "language": "zh",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Anime"
+        ],
+        "version": 16,
+        "internalName": "Donghuastream",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Donghuastream.jar",
+        "description": "Contains SeaTV (Chinese)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Donghuastream.cs3",
+        "name": "Donghuastream",
+        "jarHash": "sha256-3c5fe096b16c4d191acebc164e2e9ca8eb82d32f55ee2f653356fd3ac3dcd2b3"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Fivemovierulz/icon.png",
+        "jarFileSize": 39623,
+        "fileHash": "sha256-bdf661b5867697a2178b8588b1d9aba128e71639eac89008a51338ecde9caf96",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 11598,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 4,
+        "internalName": "Fivemovierulz",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Fivemovierulz.jar",
+        "description": "Movies & Series",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Fivemovierulz.cs3",
+        "name": "Fivemovierulz",
+        "jarHash": "sha256-bd08850dbc4a2abd10c5b8ed974521e956b7718df902c6e329f32f372a917525"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/IPTVPlayer/icon.png",
+        "jarFileSize": 70082,
+        "fileHash": "sha256-bcf288cf35f83b884703df9840e75434396e8b1088ef03289aaab80d75d8f308",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 18085,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 6,
+        "internalName": "IPTVPlayer",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/IPTVPlayer.jar",
+        "description": "IPTV Player",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/IPTVPlayer.cs3",
+        "name": "IPTVPlayer",
+        "jarHash": "sha256-44a51c3af9759c07d8e49e3d29e724bf2a4d668f037e144a51f9a341a6e542b7"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/KayiFamilyTv/icon.png",
+        "fileHash": "sha256-e0d3863ed361fe4114b7f74b04c02bc624ff3a99722998d2bb50da2d08aea9d1",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 31975,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Documentary"
+        ],
+        "version": 2,
+        "internalName": "KayiFamilyTv",
+        "description": "KayiFamilyTv has Turkish Drama and Documentaries with English / Spanish Subtitles.",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/KayiFamilyTv.cs3",
+        "name": "KayiFamilyTv"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Kickassanime/icon.png",
+        "jarFileSize": 228155,
+        "fileHash": "sha256-5e18951d5f8159305f743d6f881ee82c6ef2c61d7fd0648921f2fd1454c4f00f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 51007,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "OVA"
+        ],
+        "version": 21,
+        "internalName": "Kickassanime",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Kickassanime.jar",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Kickassanime.cs3",
+        "name": "Kickassanime",
+        "jarHash": "sha256-66f3ca87e50cc59bdd817dcdc177a8d5f99b636704acf73248fea84b8fbfb5a8"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Latanime/icon.png",
+        "fileHash": "sha256-c48f47efdb07dfa7cc66b3288aec268d576bb8712aaf75c2cace89f3e27396f7",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 13761,
+        "status": 1,
+        "language": "mx",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "Anime",
+            "AnimeMovie"
+        ],
+        "version": 2,
+        "internalName": "Latanime",
+        "description": "(Mexican) Anime Extension",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Latanime.cs3",
+        "name": "Latanime"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LayarKacaProvider/icon.png",
+        "jarFileSize": 83830,
+        "fileHash": "sha256-c11b7ffa5c2965763e6acc7bd715254a305a2964263a9f0cfbc64df91f52e79c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 20691,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 6,
+        "internalName": "LayarKacaProvider",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/LayarKacaProvider.jar",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/LayarKacaProvider.cs3",
+        "name": "LayarKacaProvider",
+        "jarHash": "sha256-2b84c0358b5c39599a404ac6a3f36e1a7c97a55646809add81f5d07c12ee3367"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/MassTamilanProvider/icon.png",
+        "jarFileSize": 52359,
+        "fileHash": "sha256-d7c318d1be1a2e1000cb88cff2fef214a34ea13c2079710119c64632c1c1f1a4",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 15509,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Music",
+            "Movie"
+        ],
+        "version": 6,
+        "internalName": "MassTamilanProvider",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MassTamilanProvider.jar",
+        "description": "Indian Multi-language Music Provider",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MassTamilanProvider.cs3",
+        "name": "MassTamilanProvider",
+        "jarHash": "sha256-db97bcd539829cdf550e27dd7fc36873eeb18b9ce9dc0d1b069fdf8ab0ee6502"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Megakino/icon.png",
+        "jarFileSize": 69190,
+        "fileHash": "sha256-d8db332d5ce0c00ad8cc2bde17067e91118795a33f4fe872e55708659d212170",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 17899,
+        "status": 1,
+        "language": "de",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie,Anime,Cartoon"
+        ],
+        "version": 2,
+        "internalName": "Megakino",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Megakino.jar",
+        "description": "Movies,Series and Anime German Extension ",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Megakino.cs3",
+        "name": "Megakino",
+        "jarHash": "sha256-7a5108579d3d53f609ea849b6f731eba80173ca35e20a22168b1054ba7155e0d"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/movieblast.png",
+        "fileHash": "sha256-299da3c143d7369c48f63037f032b7718b0dfc6850d9342c6088c172fd5a46f7",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 30614,
+        "status": 1,
+        "language": "te",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 2,
+        "internalName": "MovieBlast",
+        "description": "MovieBlast App",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MovieBlast.cs3",
+        "name": "MovieBlast"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/MovieBoxProvider/icon.png",
+        "fileHash": "sha256-3a1fb679732fb7e9a151b19988b1f40d7a4e92b4a505ef7f21041805692e4278",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 68637,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 21,
+        "internalName": "MovieBoxProvider",
+        "description": "Multi Language Movies and Series Provider",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MovieBoxProvider.cs3",
+        "name": "MovieBoxProvider"
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Mp4Moviez/icon.png",
@@ -60,9 +524,197 @@
         ],
         "version": 1,
         "internalName": "Mp4Moviez",
-        "description": "Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez.",
+        "description": "Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez. Mp4moviez is number one entertainment hollywood bollywood website and provide free Mp4moviez full movie download facility",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Mp4Moviez.cs3",
         "name": "Mp4Moviez"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/MPlayerProvider/icon.png",
+        "jarFileSize": 495565,
+        "fileHash": "sha256-874b347e9d1cc9fda094c8594a408860c46e49729a02b1358f48c11004bacd87",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 92508,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 6,
+        "internalName": "MPlayerProvider",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MPlayerProvider.jar",
+        "description": "Indian Movies/Series/Kdrama(Hindi Dubbed)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MPlayerProvider.cs3",
+        "name": "MPlayerProvider",
+        "jarHash": "sha256-5ddc080ba459e2b0b988c444d0bb504c90096aec3c28d0bc16022cdcc76d1572"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Netcinez/icon.png",
+        "jarFileSize": 53549,
+        "fileHash": "sha256-5f4cb70f5aa66537fe04a80392c5b331c2400c7c736a81b2800b070981d4bd3d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 15740,
+        "status": 1,
+        "language": "pt-br",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "Netcinez",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Netcinez.jar",
+        "description": "Movies,Series and Anime Portuguese Extension ",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Netcinez.cs3",
+        "name": "Netcinez",
+        "jarHash": "sha256-e6e6a11cd66bb2041bc28fd15b1ae690f0db7b0f5a29b2031ff1416d31db90cb"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Netmirror/icon.png",
+        "fileHash": "sha256-6dc6c15fc605fe872f1b71887e41a0f1006b7fc2c5cbb7c2b7d03d18c37ab726",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 52428,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 43,
+        "internalName": "Netmirror",
+        "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Netmirror.cs3",
+        "name": "Netmirror"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/OHLI24/icon.png",
+        "fileHash": "sha256-8f7caa5ab404a74297f373eb904a2a53222b9ff0cd1f219fc372230e417a3a28",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 18834,
+        "status": 1,
+        "language": "ko",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 3,
+        "internalName": "OHLI24",
+        "description": "Anime and movies with Korean subtitles only (no Korean audio)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/OHLI24.cs3",
+        "name": "OHLI24"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/OnePace/icon.png",
+        "jarFileSize": 140567,
+        "fileHash": "sha256-002e85004ec7b5315859149898c16c22e0c19702fcfa7533eaa0685c48bc0cab",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 33441,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Anime"
+        ],
+        "version": 17,
+        "internalName": "OnePace",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/OnePace.jar",
+        "description": "One Pace",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/OnePace.cs3",
+        "name": "OnePace",
+        "jarHash": "sha256-387e418a5f1c7a95ec71a8cc3462f6973a2cb62b895cbca67ee834a9c619a546"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Pencurimovie/icon.png",
+        "jarFileSize": 49733,
+        "fileHash": "sha256-cb184d89bffae3b5bd9dc014149b6eb8b6b54c6d29e666fa21357b1665db033f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 13507,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 4,
+        "internalName": "Pencurimovie",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Pencurimovie.jar",
+        "description": "Pencurimovie ",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Pencurimovie.cs3",
+        "name": "Pencurimovie",
+        "jarHash": "sha256-7bd850ffc9f9bc0318ac3ff951f69a08a6902761ad833e765c6ab5fa5ef7b0fe"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Pinoymoviepedia/icon.png",
+        "jarFileSize": 85383,
+        "fileHash": "sha256-790e81a22283ed3b497ae686788b1b4fcd0ea6139abddb164a2a6cc670093672",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 19441,
+        "status": 1,
+        "language": "fil",
+        "authors": [
+            "Phisher98"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 2,
+        "internalName": "Pinoymoviepedia",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Pinoymoviepedia.jar",
+        "description": "Contains Bluray7",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Pinoymoviepedia.cs3",
+        "name": "Pinoymoviepedia",
+        "jarHash": "sha256-c6b3d0323907816b28f9f200d86f0320aa3261ae3f9a3f3e6e0ec7a1f2e784ed"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Piratexplay/icon.png",
+        "jarFileSize": 129076,
+        "fileHash": "sha256-83dd624fc960bbefd5efeb70d04f1aa0e5e8d03c89f6eb9b86280649fd3c94b5",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 33647,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 1,
+        "internalName": "Piratexplay",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Piratexplay.jar",
+        "description": "Anime/Cartoon in Hindi",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Piratexplay.cs3",
+        "name": "Piratexplay",
+        "jarHash": "sha256-a3a37385b65c37d6a23f3e5e808ba9211200c87b41f7d7e1538f087be4127f55"
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/SkymoviesHD/icon.png",
@@ -77,17 +729,18 @@
         ],
         "tvTypes": [
             "Movie",
-            "TvSeries"
+            "TvSeries",
+            "NSFW"
         ],
         "version": 1,
         "internalName": "SkymoviesHD",
-        "description": "SkymoviesHD Provider for various HD content",
+        "description": "just testing",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/SkymoviesHD.cs3",
         "name": "SkymoviesHD"
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tamilblasters/icon.png",
-        "fileHash": "sha256-b1385412c22221b29565b00b5988aa8db8617f272e758f578e634fd63c81a3fb",
+        "fileHash": "sha256-24529259755a725b8079f5713545fd99ddc6096c2ee957e7afca5dbcec1a6f14",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "fileSize": 13984,
@@ -100,10 +753,168 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 3,
+        "version": 6,
         "internalName": "Tamilblasters",
-        "description": "Latest Tamil movies and series",
+        "description": "Movies & Series",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Tamilblasters.cs3",
         "name": "Tamilblasters"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tamilian/icon.png",
+        "fileHash": "sha256-96bf4e4177d3dd58726a4579f0890b93f6ba337e11f3608fd6c730bb3beeac19",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 13656,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movies"
+        ],
+        "version": 2,
+        "internalName": "Tamilian",
+        "description": "Movies (Tamil)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Tamilian.cs3",
+        "name": "Tamilian"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/TokusatsuUltimate/icon.png",
+        "fileHash": "sha256-dfe1b23fd3148cb65356c60ab094b72f7dc9866cf34c0471428abfac525a0a13",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 27401,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "TokusatsuUltimate",
+        "description": "Stream tokusatsu content including Kamen Rider, Super Sentai, Metal Heroes, and other Japanese special effect series with English subs",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/TokusatsuUltimate.cs3",
+        "name": "TokusatsuUltimate"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/TokuZilla/icon.png",
+        "fileHash": "sha256-91de42716b4cfea483cb9a05c14d9fa9a9d1f8e0f26fad005f0ed5f2566b08e9",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 18277,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "TokuZilla",
+        "description": "Stream tokusatsu content including Power Ranger, Kamen Rider, Super Sentai, Metal Heroes, and other Japanese special effect series with English subs",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/TokuZilla.cs3",
+        "name": "TokuZilla"
+    },
+    {
+        "iconUrl": "https://www.toontales.net/wp-content/themes/toontales/images/logo.png",
+        "jarFileSize": 33668,
+        "fileHash": "sha256-57ba8683501da04f5986d840a5f353533d640801b249e90b35094fe920d8ae0c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 9767,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Cartoon"
+        ],
+        "version": 2,
+        "internalName": "ToonTales",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/ToonTales.jar",
+        "description": "ToonTales",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/ToonTales.cs3",
+        "name": "ToonTales",
+        "jarHash": "sha256-ae6f3ed49786f048596f70560a0edc033838d6e659c7596efd91994b11133d87"
+    },
+    {
+        "iconUrl": "https://www.topcartoons.tv/wp-content/uploads/logo.png",
+        "jarFileSize": 34642,
+        "fileHash": "sha256-80d0d67c1bcc530be17e8466af592f20f3d5a2b237cac86e94b533673bde6b91",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 9887,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Cartoon"
+        ],
+        "version": 2,
+        "internalName": "Topcartoons",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Topcartoons.jar",
+        "description": "Top Cartoon",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Topcartoons.cs3",
+        "name": "Topcartoons",
+        "jarHash": "sha256-e26e500af5e35bf19e02335d0b69806f262b44a2ad8560c86922c49bbf696bb6"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Topstreamfilm/icon.png",
+        "jarFileSize": 71919,
+        "fileHash": "sha256-bd148a524310aae6880bfd88e42197aa0dfac8266396e49ed09f39a0e536f5e4",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 17312,
+        "status": 1,
+        "language": "de",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 6,
+        "internalName": "Topstreamfilm",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Topstreamfilm.jar",
+        "description": "Filme  and Serien (German)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Topstreamfilm.cs3",
+        "name": "Topstreamfilm",
+        "jarHash": "sha256-bae3fa5b808b82b61552b9e331d9010ca271b31c4bf749f72c97a6d45b14f4cb"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/YTS/icon.png",
+        "jarFileSize": 75710,
+        "fileHash": "sha256-0f8d3a5d5feb9bfb58366b26fdc8cf363409f42452aae835b49b8ec461e0347a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 16223,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "Torrent"
+        ],
+        "version": 8,
+        "internalName": "YTS",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/YTS.jar",
+        "description": "YTS Movies 4K Support (Torrent)",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/YTS.cs3",
+        "name": "YTS",
+        "jarHash": "sha256-1c205bd8318b0cfa0a32b926270eb206e5add7ebfbcb017500b95596282fedc6"
     }
 ]
