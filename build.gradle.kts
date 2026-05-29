@@ -42,7 +42,7 @@ subprojects {
     }
 
     android {
-        namespace = "com.admknight.${project.name.lowercase()}"
+        namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
 
         defaultConfig {
             minSdk = 21
