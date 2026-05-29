@@ -41,10 +41,16 @@ foreach ($repo in $sources) {
         if (-not (Test-Path "$pluginName")) { New-Item -ItemType Directory -Path "$pluginName" | Out-Null }
         Copy-Item -Path "$($file.Directory.FullName)\*" -Destination "$pluginName" -Recurse -Force
 
-        # Apply Branding
-        $gradleContent = Get-Content "$pluginName/build.gradle.kts"
+        # Apply Branding and Fix BuildConfig errors
+        $gradleContent = Get-Content "$pluginName/build.gradle.kts" -Raw
         $gradleContent = $gradleContent -replace 'authors = listOf\(.*\)', 'authors = listOf("Adam Knight")'
-        $gradleContent -replace 'iconUrl = ".*"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$pluginName/icon.png`"" | Set-Content "$pluginName/build.gradle.kts"
+        $gradleContent = $gradleContent -replace 'iconUrl = ".*"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$pluginName/icon.png`""
+
+        # Remove dependencies on local.properties keys which crash CI builds
+        $gradleContent = $gradleContent -replace '(?s)val properties = Properties\(\).*?properties.load\(.*?\)', ''
+        $gradleContent = $gradleContent -replace 'properties.getProperty\(.*?\)', '""'
+
+        $gradleContent | Set-Content "$pluginName/build.gradle.kts"
 
         # Validate Build
         Write-Host "  Validating $pluginName..." -ForegroundColor Magenta
