@@ -1,5 +1,17 @@
+
+import org.jetbrains.kotlin.konan.properties.Properties
 // use an integer for version numbers
-version = 2
+version = 18
+
+android {
+    defaultConfig {
+
+        android.buildFeatures.buildConfig=true
+        buildConfigField("String", "KissKh", "\"${""}\"")
+        buildConfigField("String", "KisskhSub", "\"${""}\"")
+
+    }
+}
 
 
 cloudstream {
@@ -25,4 +37,6 @@ cloudstream {
     )
 
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/KisskhProvider/icon.png"
+
+    isCrossPlatform = true
 }

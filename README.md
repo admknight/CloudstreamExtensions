@@ -27,7 +27,7 @@ All plugins are branded by **Adam Knight** and verified for stability.
 
 ### 🎬 Bollywood & Indian Regional
 *High-quality sources for Hindi, Tamil, Telugu, and more.*
-> **Cinevood**, **Mp4Moviez**, **Tamilblasters**, **SkymoviesHD**, **Bollyflix**, **VegaMovies**, **Moviesmod**, **CineStream**, **AllMovieLand**, **Hindmoviez**, **HDhub4u**, **FourKHDHub**, **Tamilian**, **MovieBlast**.
+> **Netmirror** (Netflix/Hotstar/Prime), **Cinevood**, **Mp4Moviez**, **Tamilblasters**, **SkymoviesHD**, **Bollyflix**, **VegaMovies**, **Moviesmod**, **CineStream**, **AllMovieLand**, **Hindmoviez**, **HDhub4u**, **FourKHDHub**, **Tamilian**, **MovieBlast**.
 
 ### 🎌 Anime & Tokusatsu
 *The ultimate collection for Anime lovers (Sub & Dub).*
@@ -43,7 +43,7 @@ All plugins are branded by **Adam Knight** and verified for stability.
 
 ### 💎 Specialized & Tools
 *Mirrors for OTT platforms and library management.*
-> **Netmirror** (Netflix/Hotstar/Prime), **Ultima** (Sync), **StremioAddon**, **StremioX**, **Jellyfin**, **BingedReview**.
+> **Ultima** (Sync), **StremioAddon**, **StremioX**, **Jellyfin**, **BingedReview**.
 
 ---
 
@@ -60,14 +60,15 @@ This repository is powered by a custom **Auto-Sync Engine** that pulls the lates
 
 ## ⚖️ DMCA & Disclaimer
 
-* **No Hosting**: This repository does not host any video files, movies, or media content. 
-* **Browser-like Functionality**: These extensions act as a specialized web browser that fetches links from third-party websites. 
-* **Responsibility**: The developer is not responsible for any content viewed via these extensions. 
+*   **No Content Hosting**: This repository **does not host or store any media content**, including but not limited to movies, TV shows, or live streams. All content is fetched from third-party websites.
+*   **Code-Only Repository**: This repository only contains the **source code** for extensions that act as a specialized web browser. It does not provide, encourage, or facilitate the illegal distribution of copyrighted material.
+*   **User Responsibility**: The maintainer of this repository is not responsible for how users utilize these extensions. Use of these extensions is at the user's own risk.
+*   **Takedown Requests**: If you are a copyright owner and believe that any extension in this repository provides access to your content illegally, please contact the third-party website hosting the content directly. As no content is hosted here, removing this repository would not remove the content from the internet.
+*   **Icons**: Icons used in this repository are for identification purposes only and belong to their respective owners.
 
 ---
 
 ## 📜 License
-
 Everything in this repo is released into the **Public Domain**.
 
 ---
