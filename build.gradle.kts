@@ -70,25 +70,35 @@ subprojects {
         implementation(kotlin("stdlib"))
         implementation("com.github.Blatzar:NiceHttp:0.4.11")
         implementation("org.jsoup:jsoup:1.18.3")
-        implementation("com.google.code.gson:gson:2.14.0")
+        implementation("com.google.code.gson:gson:2.10.1")
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     }
 }
 
-// Global Aggregator Tasks using standard Gradle dependency management
-tasks.register("buildAll") {
+// Unique root task names to avoid DuplicateTaskException
+val buildAllPlugins = tasks.register("buildAll") {
     group = "cloudstream"
-    description = "Build all plugins"
-    // Depend on every subproject's 'make' task if it exists
-    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })
+    subprojects {
+        val sub = this
+        afterEvaluate {
+            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+                this@register.dependsOn(sub.tasks.named("make"))
+            }
+        }
+    }
 }
 
-tasks.register("generatePluginsJson") {
+val generateAllPluginsJson = tasks.register("generatePluginsJson") {
     group = "cloudstream"
-    description = "Generate plugins.json for all plugins"
-    // Depend on every subproject's 'makePluginsJson' task if it exists
-    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "makePluginsJson" } })
+    subprojects {
+        val sub = this
+        afterEvaluate {
+            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+                this@register.dependsOn(sub.tasks.named("makePluginsJson"))
+            }
+        }
+    }
 }
 
 task<Delete>("clean") {
