@@ -10,3 +10,6 @@
 .cxx
 local.properties
 .vscode
+temp_sources/
+*.cs3
+plugins.json

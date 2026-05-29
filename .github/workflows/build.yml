@@ -29,9 +29,19 @@ jobs:
 
       - name: Checkout builds
         uses: actions/checkout@v4
+        continue-on-error: true
         with:
           ref: "builds"
           path: "builds"
+
+      - name: Create builds directory if checkout failed
+        run: |
+          if [ ! -d "$GITHUB_WORKSPACE/builds" ]; then
+            mkdir -p $GITHUB_WORKSPACE/builds
+            cd $GITHUB_WORKSPACE/builds
+            git init
+            git checkout -b builds
+          fi
       
       - name: Clean old builds
         run: rm -f $GITHUB_WORKSPACE/builds/*.cs3
@@ -45,6 +55,10 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4
+
+      - name: Prepare Local Properties
+        run: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > $GITHUB_WORKSPACE/src/local.properties
 
       - name: Build Plugins
         run: |
@@ -61,5 +75,5 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add .
-          git commit --amend -m "Build $GITHUB_SHA" || exit 0   # do not error if nothing to commit
-          git push --force
+          git commit -m "Build $GITHUB_SHA" || echo "No changes to commit"
+          git push origin builds

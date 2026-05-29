@@ -83,4 +83,4 @@ jobs:
           # Commit and Push
           git add .
           git commit -m "Auto-sync plugins, download icons, and apply Adam Knight branding" || echo "No changes to commit"
-          git push
+          git push origin master
