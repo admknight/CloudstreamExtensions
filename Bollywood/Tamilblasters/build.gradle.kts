@@ -1,5 +1,5 @@
 // use an integer for version numbers
-version = 3
+version = 6
 
 cloudstream {
     // All of these properties are optional, you can safely remove them
@@ -22,4 +22,3 @@ cloudstream {
     tvTypes = listOf("Movie","TvSeries")
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Tamilblasters/icon.png"
 }
-
