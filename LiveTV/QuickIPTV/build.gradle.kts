@@ -6,12 +6,13 @@ version = 5
 
 android {
     defaultConfig {
-
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "Su_sports", "\"${""}\"")
-        buildConfigField("String", "PirateIPTV", "\"${""}\"")
-        buildConfigField("String", "SonyIPTV", "\"${""}\"")
-        buildConfigField("String", "JapanIPTV", "\"${""}\"")
+        buildConfigField("String", "Su_sports", "\""}\"")
+        buildConfigField("String", "PirateIPTV", "\""}\"")
+        buildConfigField("String", "SonyIPTV", "\""}\"")
+        buildConfigField("String", "JapanIPTV", "\""}\"")
     }
 }
 
@@ -33,8 +34,7 @@ cloudstream {
         "Live",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/QuickIPTV/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=github.com&sz=%size%"
 
     isCrossPlatform = true
 }
-

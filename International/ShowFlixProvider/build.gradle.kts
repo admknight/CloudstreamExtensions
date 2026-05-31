@@ -25,8 +25,7 @@ cloudstream {
         "TvSeries",
         "Movie",
     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/ShowFlixProvider/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/ShowFlixProvider/icon.png"
 
     isCrossPlatform = true
 }
-

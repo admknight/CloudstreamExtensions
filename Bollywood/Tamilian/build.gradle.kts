@@ -18,7 +18,7 @@ cloudstream {
         "Movies",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Tamilian/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=tamilian.io&sz=%size%"
 
     isCrossPlatform = false
 

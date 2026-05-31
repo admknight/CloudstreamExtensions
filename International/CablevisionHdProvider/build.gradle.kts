@@ -21,5 +21,5 @@ cloudstream {
         "Live",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/CablevisionHdProvider/icon.png"
+    iconUrl = "https://www.cablevisionhd.com/imge/cablevisionhd.png"
 }

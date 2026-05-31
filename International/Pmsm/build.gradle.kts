@@ -10,7 +10,6 @@ cloudstream {
         "TvSeries",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Pmsm/icon.png"
+    iconUrl = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ww192.pencurimoviesubmalay.motorcycles&size=%size%"
     isCrossPlatform = false
 }
-

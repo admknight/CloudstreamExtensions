@@ -22,5 +22,5 @@ cloudstream {
         "Anime",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AnimeJlProvider/icon.png"
+    iconUrl = "https://www.anime-jl.net/favicon.ico"
 }

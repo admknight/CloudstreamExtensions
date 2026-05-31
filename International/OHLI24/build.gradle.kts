@@ -23,8 +23,7 @@ cloudstream {
 
     language = "ko"
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/OHLI24/icon.png"
+    iconUrl = "https://ani.ohli24.com/img/logo@2x.png"
 
     isCrossPlatform = false
 }
-

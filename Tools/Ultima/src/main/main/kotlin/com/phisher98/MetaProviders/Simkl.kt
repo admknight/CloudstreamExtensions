@@ -49,7 +49,7 @@ class Simkl(val plugin: UltimaPlugin) : MainAPI() {
 
     private fun SimklMediaObject.toSearchResponse(): SearchResponse {
         val poster = getPosterUrl(poster ?: "")
-        return newMovieSearchResponse(title, "$mainUrl/shows/${ids?.simkl}") {
+        return newnewMovieSearchResponse(title, "$mainUrl/shows/${ids?.simkl}") {
             this.posterUrl = poster
         }
     }
@@ -61,7 +61,7 @@ class Simkl(val plugin: UltimaPlugin) : MainAPI() {
         val res =
             app.get(this.data + page).parsedSafe<Array<SimklMediaObject>>() ?: return emptyData
         return res.map {
-            newMovieSearchResponse("${it.title}", "$mainUrl/shows/${it.ids?.simkl2}") {
+            newnewMovieSearchResponse("${it.title}", "$mainUrl/shows/${it.ids?.simkl2}") {
                 this.posterUrl = getPosterUrl(it.poster.toString())
             }
         } to res.size.equals(mediaLimit)

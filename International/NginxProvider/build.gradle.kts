@@ -30,4 +30,3 @@ cloudstream {
     )
     requiresResources = true
 }
-

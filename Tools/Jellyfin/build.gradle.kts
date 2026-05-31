@@ -32,7 +32,7 @@ cloudstream {
         "AnimeMovie"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/Jellyfin/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/jellyfin.png"
 
     requiresResources = true
     isCrossPlatform = false
@@ -45,4 +45,3 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
-

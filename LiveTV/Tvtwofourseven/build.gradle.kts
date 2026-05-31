@@ -18,5 +18,5 @@ cloudstream {
      * */
     status = 1 // will be 3 if unspecified
     tvTypes = listOf("Live")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/Tvtwofourseven/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=tv247.us&sz=%size%"
 }

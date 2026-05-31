@@ -22,4 +22,3 @@ cloudstream {
         "Movie",
     )
 }
-

@@ -21,6 +21,5 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/OnlineMoviesHinditProvider/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/master/OnlineMoviesHinditProvider/icon.png"
 }
-

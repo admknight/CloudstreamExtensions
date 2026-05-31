@@ -18,6 +18,5 @@ cloudstream {
      * */
     status = 0 // will be 3 if unspecified
     tvTypes = listOf("AnimeMovie", "Anime", "OVA")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Crunchyroll/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=crunchyroll.com&sz=%size%"
 }
-

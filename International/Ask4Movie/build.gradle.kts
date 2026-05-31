@@ -23,5 +23,5 @@ cloudstream {
         "AnimeMovie"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Ask4Movie/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=ask4movie.mx&sz=%size%"
 }

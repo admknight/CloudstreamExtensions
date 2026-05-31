@@ -21,8 +21,7 @@ cloudstream {
         "Movie"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Fivemovierulz/icon.png"
+    iconUrl = "https://i.ibb.co/SwQRhsn/20241016-074942.jpg"
 
     isCrossPlatform = true
 }
-

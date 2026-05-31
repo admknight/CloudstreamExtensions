@@ -10,14 +10,15 @@ android {
         viewBinding = true
     }
     defaultConfig {
-
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "TMDB_API", "\"${""}\"")
-        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"${""}\"")
-        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"${""}\"")
-        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"${""}\"")
-        buildConfigField("String", "CatflixAPI", "\"${""}\"")
-        buildConfigField("String", "NuvFeb", "\"${""}\"")
+        buildConfigField("String", "TMDB_API", "\""}\"")
+        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\""}\"")
+        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\""}\"")
+        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\""}\"")
+        buildConfigField("String", "CatflixAPI", "\""}\"")
+        buildConfigField("String", "NuvFeb", "\""}\"")
     }
 }
 
@@ -44,7 +45,7 @@ cloudstream {
         "AnimeMovie"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/SuperStream/icon.png"
+    iconUrl = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.showbox.media/&size=256"
 
     requiresResources = true
     isCrossPlatform = false
@@ -58,4 +59,3 @@ dependencies {
     implementation("androidx.leanback:leanback:1.2.0")
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
-

@@ -5,10 +5,11 @@ version = 18
 
 android {
     defaultConfig {
-
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "KissKh", "\"${""}\"")
-        buildConfigField("String", "KisskhSub", "\"${""}\"")
+        buildConfigField("String", "KissKh", "\""}\"")
+        buildConfigField("String", "KisskhSub", "\""}\"")
 
     }
 }
@@ -36,7 +37,7 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/KisskhProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=kisskh.co&sz=%size%"
 
     isCrossPlatform = true
 }

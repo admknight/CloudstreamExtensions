@@ -23,8 +23,7 @@ cloudstream {
     )
     language = "de"
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Topstreamfilm/icon.png"
+    iconUrl = "https://www.topstreamfilm.live/templates/topstreamfilm/images/logo-1.png"
 
     isCrossPlatform = true
 }
-

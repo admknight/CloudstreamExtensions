@@ -22,8 +22,7 @@ cloudstream {
     // You can find a list of available types here:
     // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
     tvTypes = listOf("Movie","TvSeries")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Goojara/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=goojara.to/&sz=%size%"
 
     isCrossPlatform = true
 }
-

@@ -26,6 +26,5 @@ cloudstream {
     )
     language = "en"
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/SkymoviesHD/icon.png"
+    iconUrl = "https://skymovieshd.mba/images/logo2.png"
 }
-

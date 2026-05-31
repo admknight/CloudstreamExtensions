@@ -21,7 +21,6 @@ cloudstream {
         "TvSeries",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/GDIndex/icon.png"
+    iconUrl = "https://github.com/SaurabhKaperwan/CSX/raw/refs/heads/master/GDIndex/icon.ico"
 
 }
-

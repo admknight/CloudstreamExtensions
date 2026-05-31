@@ -24,6 +24,5 @@ cloudstream {
         "AnimeMovie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/SflixProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=www.2embed.to&sz=%size%"
 }
-

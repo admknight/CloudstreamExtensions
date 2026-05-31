@@ -24,7 +24,7 @@ cloudstream {
         "Movie",
         "TvSeries",
     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/UHDmoviesProvider/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/UHDmoviesProvider/icon.png"
 
     isCrossPlatform = false
 }
@@ -34,4 +34,3 @@ dependencies {
     val cloudstream by configurations
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
-

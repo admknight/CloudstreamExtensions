@@ -22,10 +22,9 @@ cloudstream {
     // You can find a list of available types here:
     // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
     tvTypes = listOf("AnimeMovie","Anime","Cartoon")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Animexin/icon.png"
+    iconUrl = "https://animexin.dev/wp-content/uploads/2020/06/animexinv1.png"
     iconUrl= "https://www.google.com/s2/favicons?domain=animexin.dev&sz=%size%"
 
 
     isCrossPlatform = true
 }
-

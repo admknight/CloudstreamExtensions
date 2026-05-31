@@ -22,8 +22,7 @@ cloudstream {
         "Cartoon"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Piratexplay/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=piratexplay.cc&sz=%size%"
 
     isCrossPlatform = true
 }
-

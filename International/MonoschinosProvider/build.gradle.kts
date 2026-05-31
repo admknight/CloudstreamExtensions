@@ -22,5 +22,5 @@ cloudstream {
         "OVA",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/MonoschinosProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=monoschinos2.com&sz=%size%"
 }

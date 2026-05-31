@@ -24,5 +24,5 @@ cloudstream {
         "TvSeries",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/WatchCartoonOnlineProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=www.wcostream.com&sz=%size%"
 }

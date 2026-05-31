@@ -78,7 +78,7 @@ class AniList(val plugin: UltimaPlugin) : MainAPI() {
         val title = this.title.english ?: this.title.romaji ?: ""
         val url = "$mainUrl/anime/${this.id}"
         val posterUrl = this.coverImage.large
-        return newAnimeSearchResponse(title, url, TvType.Anime) { this.posterUrl = posterUrl }
+        return newnewAnimeSearchResponse(title, url, TvType.Anime) { this.posterUrl = posterUrl }
     }
 
     private suspend fun MainPageRequest.toSearchResponseList(
@@ -233,7 +233,7 @@ class AniList(val plugin: UltimaPlugin) : MainAPI() {
                             ?: recommendation.title?.romaji
                             ?: "Unknown"
                         val recommendationUrl = "$mainUrl/anime/${recommendation.id}"
-                        newAnimeSearchResponse(title, recommendationUrl, TvType.Anime).apply {
+                        newnewAnimeSearchResponse(title, recommendationUrl, TvType.Anime).apply {
                             this.posterUrl = recommendation.coverImage?.large
                         }
                     }

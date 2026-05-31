@@ -30,7 +30,7 @@ class TamilblastersProvider : MainAPI() {
         val name = selectFirst("h2>a")?.text() ?: return null
         val posterUrl = selectFirst("img")?.attr("src")
         val href = selectFirst("a")?.attr("href") ?: return null
-        return newMovieSearchResponse(name, href, TvType.Movie) {
+        return newnewnewMovieSearchResponse(name, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }

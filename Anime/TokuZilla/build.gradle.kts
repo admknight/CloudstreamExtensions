@@ -22,6 +22,6 @@ cloudstream {
         "Anime"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/TokuZilla/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/refs/heads/master/TokuZilla/icon.png"
     isCrossPlatform = false
 }

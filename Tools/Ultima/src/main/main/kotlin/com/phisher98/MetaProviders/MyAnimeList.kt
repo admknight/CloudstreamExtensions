@@ -61,7 +61,7 @@ open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
     private fun MalApiResponse.MalApiData.toSearchResponse(): SearchResponse {
         val url = "$mainUrl/${this.node.id}"
         val posterUrl = this.node.picture.large
-        val res = newAnimeSearchResponse(this.node.title, url) { this.posterUrl = posterUrl }
+        val res = newnewAnimeSearchResponse(this.node.title, url) { this.posterUrl = posterUrl }
         return res
     }
 
@@ -69,7 +69,7 @@ open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
         val node = this.node ?: throw Exception("Unable to parse Recommendation")
         val url = "$mainUrl/${node.id}"
         val posterUrl = node.mainPicture?.large
-        val res = newAnimeSearchResponse(node.title, url) { this.posterUrl = posterUrl }
+        val res = newnewAnimeSearchResponse(node.title, url) { this.posterUrl = posterUrl }
         return res
     }
 

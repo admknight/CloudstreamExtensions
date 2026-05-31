@@ -22,5 +22,5 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/TheFlixToProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=theflix.to&sz=%size%"
 }

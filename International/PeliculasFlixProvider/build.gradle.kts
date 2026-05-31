@@ -21,5 +21,5 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/PeliculasFlixProvider/icon.png"
+    iconUrl = "https://peliculasflix.co/img/logo.png"
 }

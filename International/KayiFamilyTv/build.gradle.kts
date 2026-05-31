@@ -18,8 +18,7 @@ cloudstream {
     status = 1 // will be 3 if unspecified
     tvTypes = listOf("Movie", "TvSeries", "Documentary")
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/KayiFamilyTv/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/refs/heads/master/KayiFamilyTv/icon.png"
 
     isCrossPlatform = false
 }
-

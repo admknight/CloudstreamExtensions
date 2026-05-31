@@ -20,5 +20,5 @@ cloudstream {
     status = 1 // will be 3 if unspecified
     tvTypes = listOf("Others")
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=www.stremio.com&sz=%size%"
 }

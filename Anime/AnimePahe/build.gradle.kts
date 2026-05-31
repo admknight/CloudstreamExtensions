@@ -1,5 +1,5 @@
 // use an integer for version numbers
-version = 22
+version = 24
 
 android {
     buildFeatures {
@@ -32,9 +32,8 @@ cloudstream {
         "Anime",
         "OVA",
     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AnimePahe/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/animepahe.png"
 
     requiresResources = true
     isCrossPlatform = false
 }
-

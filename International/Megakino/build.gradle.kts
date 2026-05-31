@@ -22,8 +22,7 @@ cloudstream {
     // You can find a list of available types here:
     // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
     tvTypes = listOf("Movie,Anime,Cartoon")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Megakino/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Megakino.jpg"
 
     isCrossPlatform = true
 }
-

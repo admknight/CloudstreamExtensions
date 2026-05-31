@@ -23,5 +23,5 @@ cloudstream {
         "AnimeMovie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/MundoDonghuaProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=mundodonghua.com&sz=%size%"
 }

@@ -24,5 +24,5 @@ cloudstream {
         "Cartoon",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/SoloLatinoProvider/icon.png"
+    iconUrl = "https://sololatino.net/wp-content/uploads/2020/10/cropped-logo-final-192x192.png"
 }

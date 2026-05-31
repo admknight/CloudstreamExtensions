@@ -19,8 +19,7 @@ cloudstream {
     tvTypes = listOf(
         "Anime"
     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/OnePace/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/onepace.png"
 
     isCrossPlatform = true
 }
-

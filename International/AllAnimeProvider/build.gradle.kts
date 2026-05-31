@@ -22,5 +22,5 @@ cloudstream {
         "Anime",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AllAnimeProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=allanime.site&sz=%size%"
 }

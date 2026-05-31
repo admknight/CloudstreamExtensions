@@ -22,5 +22,5 @@ cloudstream {
         "OVA",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AniwaveProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=aniwave.to&sz=%size%"
 }

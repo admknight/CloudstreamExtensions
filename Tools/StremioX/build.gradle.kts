@@ -9,9 +9,10 @@ android {
         viewBinding = true
     }
     defaultConfig {
-
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "TMDB_API", "\"${""}\"")
+        buildConfigField("String", "TMDB_API", "\""}\"")
     }
 }
 
@@ -39,6 +40,5 @@ cloudstream {
         "Movie",
     )
     requiresResources = true
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioX/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/StremioX/icon.png"
 }
-

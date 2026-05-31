@@ -20,8 +20,7 @@ cloudstream {
         "TvSeries",
     )
     language = "hi"
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Hindmoviez/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/hindmoviez.png"
 
     isCrossPlatform = false
 }
-

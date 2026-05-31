@@ -8,9 +8,10 @@ android {
         viewBinding = true
     }
     defaultConfig {
-
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "TMDB_API", "\"${""}\"")
+        buildConfigField("String", "TMDB_API", "\""}\"")
     }
 }
 
@@ -34,7 +35,7 @@ cloudstream {
         "Torrent"
     )
     requiresResources = true
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioAddon/icon.png"
+    iconUrl = "https://files.catbox.moe/ol63rm.png"
 }
 
 dependencies {
@@ -43,4 +44,3 @@ dependencies {
     val cloudstream by configurations
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
-

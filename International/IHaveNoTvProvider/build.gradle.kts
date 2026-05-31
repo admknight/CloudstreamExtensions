@@ -23,5 +23,5 @@ cloudstream {
         "Documentary",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/IHaveNoTvProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=ihavenotv.com&sz=%size%"
 }

@@ -26,8 +26,7 @@ cloudstream {
         "TvSeries",
         "Cartoon"
     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/AllMovieLandProvider/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/AllMovieLandProvider/icon.png"
 
     isCrossPlatform = true
 }
-

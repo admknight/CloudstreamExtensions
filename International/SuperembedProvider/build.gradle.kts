@@ -22,5 +22,5 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/SuperembedProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=www.superembed.stream&sz=%size%"
 }

@@ -9,13 +9,14 @@ android {
         viewBinding = true
     }
     defaultConfig {
-
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"${""}\"")
-        buildConfigField("String", "SUPERSTREAM_SECOND_API", "\"${""}\"")
-        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"${""}\"")
-        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"${""}\"")
-        buildConfigField("String", "SuperToken", "\"${""}\"")
+        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\""}\"")
+        buildConfigField("String", "SUPERSTREAM_SECOND_API", "\""}\"")
+        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\""}\"")
+        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\""}\"")
+        buildConfigField("String", "SuperToken", "\""}\"")
 
     }
 }
@@ -53,6 +54,5 @@ cloudstream {
     requiresResources = true
     isCrossPlatform = false
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/ShowBox/icon.png"
+    iconUrl = "https://miro.medium.com/v2/1*DyU8bmnyyEiJbFROEXO2VA.png"
 }
-

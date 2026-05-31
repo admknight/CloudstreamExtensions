@@ -21,8 +21,7 @@ cloudstream {
         "TvSeries"
 
     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Fibwatch/icon.png"
+    iconUrl = "https://f.pondit.xyz/fibwatch-logo.png"
 
     isCrossPlatform = false
 }
-

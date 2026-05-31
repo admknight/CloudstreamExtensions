@@ -22,8 +22,7 @@ cloudstream {
     language = "en"
 
     // random cc logo i found
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AllWish/icon.png"
+    iconUrl = "https://all-wish.me/assets/logo.png"
 
     isCrossPlatform = true
 }
-

@@ -20,8 +20,7 @@ cloudstream {
         "Anime"
     )
     language = "hi"
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Zinkmovies/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/zing.jpg"
 
     isCrossPlatform = true
 }
-

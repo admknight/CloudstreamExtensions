@@ -21,8 +21,7 @@ cloudstream {
         "TvSeries"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Desicinemas/icon.png"
+    iconUrl = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://desicinemas.to&size=%size%"
 
     isCrossPlatform = true
 }
-

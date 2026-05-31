@@ -9,7 +9,8 @@ android {
         viewBinding = true
     }
     defaultConfig {
-
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
     }
 }
@@ -35,7 +36,7 @@ cloudstream {
     // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
     tvTypes = listOf("Movie","Torrent","AsianDrama","TvSeries","Anime")
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/TorraStream/icon.png"
+    iconUrl = "https://torrentio.strem.fun/images/logo_v1.png"
     requiresResources = true
     isCrossPlatform = false
 }
@@ -47,4 +48,3 @@ dependencies {
     val cloudstream by configurations
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
-

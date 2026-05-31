@@ -23,5 +23,5 @@ cloudstream {
         "OVA",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AnimekisaProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=animekisa.in&sz=%size%"
 }

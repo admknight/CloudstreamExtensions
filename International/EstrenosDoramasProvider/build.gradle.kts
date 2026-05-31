@@ -21,5 +21,5 @@ cloudstream {
         "AsianDrama",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/EstrenosDoramasProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=estrenosdoramas.net&sz=%size%"
 }

@@ -21,5 +21,5 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/PlayhubProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=playhublite.com&sz=%size%"
 }

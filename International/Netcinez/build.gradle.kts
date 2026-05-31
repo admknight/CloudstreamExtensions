@@ -22,8 +22,7 @@ cloudstream {
     // You can find a list of available types here:
     // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
     tvTypes = listOf("Movie","TvSeries")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Netcinez/icon.png"
+    iconUrl = "https://cdn.bcdn.zip/wp-content/uploads/2017/04/nc-header-responsive.png"
 
     isCrossPlatform = true
 }
-

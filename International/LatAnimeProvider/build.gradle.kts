@@ -22,5 +22,5 @@ cloudstream {
         "OVA",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/LatAnimeProvider/icon.png"
+    iconUrl = "https://latanime.org/public/img/logito.png"
 }

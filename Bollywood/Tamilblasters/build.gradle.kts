@@ -1,5 +1,5 @@
 // use an integer for version numbers
-version = 6
+version = 3
 
 cloudstream {
     // All of these properties are optional, you can safely remove them
@@ -20,5 +20,5 @@ cloudstream {
     // You can find a list of available types here:
     // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
     tvTypes = listOf("Movie","TvSeries")
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Tamilblasters/icon.png"
+    iconUrl = "https://i.postimg.cc/FRwFFtyT/logo.png"
 }

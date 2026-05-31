@@ -22,8 +22,7 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/MPlayerProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=www.mxplayer.in&sz=%size%"
 
     isCrossPlatform = true
 }
-

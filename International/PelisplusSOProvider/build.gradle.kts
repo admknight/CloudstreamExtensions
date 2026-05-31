@@ -22,5 +22,5 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/PelisplusSOProvider/icon.png"
+    iconUrl = "https://pelisplusgo.vip/favicon.png"
 }

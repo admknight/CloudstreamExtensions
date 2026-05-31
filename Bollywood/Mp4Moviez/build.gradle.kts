@@ -24,6 +24,5 @@ cloudstream {
     )
     language = "hi"
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Mp4Moviez/icon.png"
+    iconUrl = "https://i.ibb.co/v4VNd4bf/mp4moviez-2025.png"
 }
-

@@ -18,8 +18,7 @@ cloudstream {
         "Cartoon"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AnimeDekhoProvider/icon.png"
+    iconUrl = "https://animedekho.app/wp-content/uploads/2023/07/AnimeDekho-Logo-300x-1.png"
 
     isCrossPlatform = true
 }
-

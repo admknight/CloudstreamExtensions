@@ -26,5 +26,5 @@ cloudstream {
     )
 
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/TrailersTwoProvider/icon.png"
+    iconUrl = "https://www.google.com/s2/favicons?domain=trailers.to&sz=%size%"
 }

@@ -33,6 +33,5 @@ cloudstream {
         "TvSeries"
     )
 
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Netmirror/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/refs/heads/master/Netmirror/logo.jpeg"
 }
-
