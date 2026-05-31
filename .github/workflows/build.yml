@@ -5,10 +5,16 @@ on:
     branches: [ master, main ]
     paths-ignore: [ 'README.md' ]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Sync Plugins"]
+    types:
+      - completed
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Only run if triggered by push/manual OR if the sync workflow actually succeeded
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
@@ -41,6 +47,7 @@ jobs:
           cd src
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          # Build all plugins. --continue ensures one failure doesn't stop the rest.
           ./gradlew buildAll --continue --stacktrace || true
 
       - name: Harvesting, plugins.json & Builds README Generation
@@ -132,5 +139,6 @@ jobs:
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" || true
           git checkout -b builds || git checkout builds
           git add .
+          git status
           git commit -m "Dashboard Update: ${GITHUB_SHA::8}" || echo "No changes"
           git push origin builds
