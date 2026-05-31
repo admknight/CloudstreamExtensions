@@ -41,55 +41,44 @@ jobs:
           cd src
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          # Build all plugins. --continue ensures one failure doesn't stop the rest.
           ./gradlew buildAll --continue --stacktrace || true
 
-      - name: Harvesting & Master plugins.json Generation
+      - name: Harvesting, plugins.json & Builds README Generation
         run: |
-          # Clean old artifacts from the builds folder
           rm -f $GITHUB_WORKSPACE/builds/*.cs3
-          
-          # 1. Copy all successfully built plugins
           find src -name "*.cs3" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
           
-          # 2. Run Python Stitcher to generate master plugins.json
-          # This script looks at every .cs3 file we just copied and builds the index.
           python3 << 'EOF'
           import os
           import json
-          import base64
+          from datetime import datetime
           
           builds_dir = os.path.join(os.environ['GITHUB_WORKSPACE'], 'builds')
           src_dir = os.path.join(os.environ['GITHUB_WORKSPACE'], 'src')
           plugins = []
+          categories_summary = {}
           
-          # Categories to search
           categories = ['Anime', 'Bollywood', 'International', 'LiveTV', 'Tools']
           
           for cat in categories:
               cat_path = os.path.join(src_dir, cat)
               if not os.path.exists(cat_path): continue
+              categories_summary[cat] = []
               
-              for plugin_name in os.listdir(cat_path):
+              for plugin_name in sorted(os.listdir(cat_path)):
                   plugin_dir = os.path.join(cat_path, plugin_name)
                   if not os.path.isdir(plugin_dir): continue
                   
-                  # Check if the .cs3 file was actually built
                   cs3_file = f"{plugin_name}.cs3"
                   if not os.path.exists(os.path.join(builds_dir, cs3_file)): continue
                   
-                  # Get metadata from the plugin's gradle file
                   gradle_file = os.path.join(plugin_dir, 'build.gradle.kts')
-                  if not os.path.exists(gradle_file): continue
-                  
-                  with open(gradle_file, 'r') as f:
-                      content = f.read()
-                      
-                  # Extract basic info (Version, Description, etc)
                   version = "1"
-                  for line in content.split('\n'):
-                      if 'version =' in line:
-                          version = line.split('=')[1].strip().replace('"', '')
+                  if os.path.exists(gradle_file):
+                      with open(gradle_file, 'r') as f:
+                          for line in f:
+                              if 'version =' in line:
+                                  version = line.split('=')[1].strip().replace('"', '')
                   
                   plugin_data = {
                       "name": plugin_name,
@@ -97,18 +86,41 @@ jobs:
                       "url": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/builds/{cs3_file}",
                       "authors": ["Adam Knight"],
                       "repository": os.environ['GITHUB_REPOSITORY'],
-                      "description": f"Adam Knight curate source for {plugin_name}",
+                      "description": f"Adam Knight curated source for {plugin_name}",
                       "category": cat,
                       "iconUrl": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/master/{cat}/{plugin_name}/icon.png"
                   }
                   plugins.append(plugin_data)
+                  categories_summary[cat].append(plugin_name)
           
+          # Write plugins.json
           with open(os.path.join(builds_dir, 'plugins.json'), 'w') as f:
               json.dump(plugins, f, indent=4)
-          print(f"Successfully generated master plugins.json with {len(plugins)} plugins.")
+          
+          # Generate Dashboard README.md
+          now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+          header = "# 🚀 Adam Knight Mega-Repo Dashboard (Builds)\n\n"
+          header += "This branch contains the compiled `.cs3` files and the live index.\n\n"
+          header += "### 📊 Status\n"
+          header += f"* **Total Plugins Live:** `{len(plugins)}` / 155\n"
+          header += f"* **Last Update:** `{now}` UTC\n"
+          header += f"* **Repo URL:** `https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/builds/plugins.json` \n\n"
+          header += "---\n\n### 📂 Available Plugins by Category\n\n"
+          
+          body = ""
+          for cat, p_list in categories_summary.items():
+              if p_list:
+                  body += f"#### 📁 {cat} ({len(p_list)})\n"
+                  body += ", ".join([f"`{p}`" for p in p_list]) + "\n\n"
+          
+          footer = "\n---\n*Maintained by Adam Knight*"
+          
+          with open(os.path.join(builds_dir, 'README.md'), 'w') as f:
+              f.write(header + body + footer)
+              
+          print(f"Generated Dashboard with {len(plugins)} plugins.")
           EOF
 
-          # 3. Copy repo.json
           cp src/repo.json $GITHUB_WORKSPACE/builds/ || true
 
       - name: Push to Builds Branch
@@ -120,5 +132,5 @@ jobs:
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" || true
           git checkout -b builds || git checkout builds
           git add .
-          git commit -m "Build $GITHUB_SHA - Integrated 72+ plugins" || echo "No changes"
+          git commit -m "Dashboard Update: ${GITHUB_SHA::8}" || echo "No changes"
           git push origin builds
