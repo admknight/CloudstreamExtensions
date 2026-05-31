@@ -13,7 +13,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Only run if triggered by push/manual OR if the sync workflow actually succeeded
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -48,9 +47,10 @@ jobs:
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
           # Build all plugins. --continue ensures one failure doesn't stop the rest.
-          ./gradlew buildAll --continue --stacktrace || true
+          ./gradlew buildAll --continue --stacktrace
 
       - name: Harvesting, plugins.json & Builds README Generation
+        if: always()
         run: |
           rm -f $GITHUB_WORKSPACE/builds/*.cs3
           find src -name "*.cs3" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
@@ -131,6 +131,7 @@ jobs:
           cp src/repo.json $GITHUB_WORKSPACE/builds/ || true
 
       - name: Push to Builds Branch
+        if: always()
         run: |
           cd $GITHUB_WORKSPACE/builds
           git init || true
@@ -139,6 +140,5 @@ jobs:
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" || true
           git checkout -b builds || git checkout builds
           git add .
-          git status
           git commit -m "Dashboard Update: ${GITHUB_SHA::8}" || echo "No changes"
           git push origin builds
