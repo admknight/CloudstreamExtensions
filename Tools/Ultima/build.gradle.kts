@@ -10,7 +10,7 @@ dependencies {
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
 // use an integer for version numbers
-version = 42
+version = 46
 
 cloudstream {
     // All of these properties are optional, you can safely remove them
@@ -44,12 +44,13 @@ android {
     }
 
     defaultConfig {
-
-        buildConfigField("String", "KAISVA", "\"${""}\"")
-        buildConfigField("String", "SIMKL_API", "\"${""}\"")
-        buildConfigField("String", "MAL_API", "\"${""}\"")
-        buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\"${""}\"")
-        buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\"${""}\"")
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
+        buildConfigField("String", "KAISVA", "\"${""
+        buildConfigField("String", "SIMKL_API", "\"${""
+        buildConfigField("String", "MAL_API", "\"${""
+        buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\"${""
+        buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\"${""
 
     }
 }
