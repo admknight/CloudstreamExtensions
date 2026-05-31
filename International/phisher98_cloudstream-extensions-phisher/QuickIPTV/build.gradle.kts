@@ -9,10 +9,10 @@ android {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "Su_sports", "\"${properties.getProperty("Su_sports")}\"")
-        buildConfigField("String", "PirateIPTV", "\"${properties.getProperty("PirateIPTV")}\"")
-        buildConfigField("String", "SonyIPTV", "\"${properties.getProperty("SonyIPTV")}\"")
-        buildConfigField("String", "JapanIPTV", "\"${properties.getProperty("JapanIPTV")}\"")
+        buildConfigField("String", "Su_sports", "\"\"")}\"")
+        buildConfigField("String", "PirateIPTV", "\"\"")}\"")
+        buildConfigField("String", "SonyIPTV", "\"\"")}\"")
+        buildConfigField("String", "JapanIPTV", "\"\"")}\"")
     }
 }
 
@@ -38,3 +38,4 @@ cloudstream {
 
     isCrossPlatform = true
 }
+

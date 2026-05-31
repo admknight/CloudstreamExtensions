@@ -8,8 +8,8 @@ android {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "KissKh", "\""}\"")
-        buildConfigField("String", "KisskhSub", "\""}\"")
+        buildConfigField("String", "KissKh", "\"\"")
+        buildConfigField("String", "KisskhSub", "\"\"")
 
     }
 }

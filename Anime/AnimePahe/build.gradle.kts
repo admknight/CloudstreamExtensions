@@ -37,3 +37,4 @@ cloudstream {
     requiresResources = true
     isCrossPlatform = false
 }
+

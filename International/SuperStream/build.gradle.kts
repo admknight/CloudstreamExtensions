@@ -13,12 +13,12 @@ android {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "TMDB_API", "\""}\"")
-        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\""}\"")
-        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\""}\"")
-        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\""}\"")
-        buildConfigField("String", "CatflixAPI", "\""}\"")
-        buildConfigField("String", "NuvFeb", "\""}\"")
+        buildConfigField("String", "TMDB_API", "\"\"")
+        buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"\"")
+        buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"\"")
+        buildConfigField("String", "SUPERSTREAM_FIRST_API", "\"\"")
+        buildConfigField("String", "CatflixAPI", "\"\"")
+        buildConfigField("String", "NuvFeb", "\"\"")
     }
 }
 
@@ -59,3 +59,4 @@ dependencies {
     implementation("androidx.leanback:leanback:1.2.0")
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
+

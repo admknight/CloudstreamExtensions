@@ -11,7 +11,7 @@ android {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "TMDB_API", "\""}\"")
+        buildConfigField("String", "TMDB_API", "\"\"")
     }
 }
 
@@ -44,3 +44,4 @@ dependencies {
     val cloudstream by configurations
     cloudstream("com.lagradost:cloudstream3:pre-release")
 }
+

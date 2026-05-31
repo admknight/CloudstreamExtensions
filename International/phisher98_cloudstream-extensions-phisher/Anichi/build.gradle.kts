@@ -11,10 +11,10 @@ android {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
 
-        buildConfigField("String", "ANICHI_API", "\"${properties.getProperty("ANICHI_API")}\"")
-        buildConfigField("String", "ANICHI_SERVER", "\"${properties.getProperty("ANICHI_SERVER")}\"")
-        buildConfigField("String", "ANICHI_ENDPOINT", "\"${properties.getProperty("ANICHI_ENDPOINT")}\"")
-        buildConfigField("String", "ANICHI_APP", "\"${properties.getProperty("ANICHI_APP")}\"")
+        buildConfigField("String", "ANICHI_API", "\"\"")}\"")
+        buildConfigField("String", "ANICHI_SERVER", "\"\"")}\"")
+        buildConfigField("String", "ANICHI_ENDPOINT", "\"\"")}\"")
+        buildConfigField("String", "ANICHI_APP", "\"\"")}\"")
     }
 }
 

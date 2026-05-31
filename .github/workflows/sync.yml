@@ -63,21 +63,23 @@ jobs:
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/TvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/AnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
 
-              # Clean up Gradle
+              # Clean up Gradle - Brand to Adam Knight
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/val properties = Properties().*properties.load(.*)//g' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/properties.getProperty("[^"]*")/""/g' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/properties.getProperty([^)]*)/""/g' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/"${""/""/g' "$TARGET_DIR/build.gradle.kts"
-
-              # Ensure correct plugin block and remove local path dependencies
-              sed -i 's/apply(from = .*/\/\/ Removed local apply/g' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/rootProject.file(.*)//g' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/project(":.*")//g' "$TARGET_DIR/build.gradle.kts"
+              
+              # SAFE STRIPPING OF PRIVATE KEYS
+              # This finds buildConfigField lines and forces them to have an empty string value ""
+              sed -i -E 's/buildConfigField\("String", "([^"]+)", .*\)/buildConfigField("String", "\1", "\\"\\"")/g' "$TARGET_DIR/build.gradle.kts"
+              
+              # Remove the property loading block entirely
+              sed -i '/val properties = Properties()/d' "$TARGET_DIR/build.gradle.kts"
+              sed -i '/properties.load(/d' "$TARGET_DIR/build.gradle.kts"
 
               if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
                 sed -i 's/buildFeatures {/buildFeatures {\n        buildConfig = true/g' "$TARGET_DIR/build.gradle.kts"
               fi
+
+              # Icon Mirror
+              sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$CATEGORY/$PLUGIN_NAME/icon.png\"|" "$TARGET_DIR/build.gradle.kts"
 
               # Fix Manifest
               MANIFEST="$TARGET_DIR/src/main/AndroidManifest.xml"

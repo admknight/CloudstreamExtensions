@@ -46,11 +46,11 @@ android {
     defaultConfig {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
-        buildConfigField("String", "KAISVA", "\""}\"")
-        buildConfigField("String", "SIMKL_API", "\""}\"")
-        buildConfigField("String", "MAL_API", "\""}\"")
-        buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\""}\"")
-        buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\""}\"")
+        buildConfigField("String", "KAISVA", "\"\"")
+        buildConfigField("String", "SIMKL_API", "\"\"")
+        buildConfigField("String", "MAL_API", "\"\"")
+        buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\"\"")
+        buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\"\"")
 
     }
 }

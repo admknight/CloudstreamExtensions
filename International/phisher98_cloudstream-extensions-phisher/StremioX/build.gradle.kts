@@ -12,7 +12,7 @@ android {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
         android.buildFeatures.buildConfig=true
-        buildConfigField("String", "TMDB_API", "\"${properties.getProperty("TMDB_API")}\"")
+        buildConfigField("String", "TMDB_API", "\"\"")}\"")
     }
 }
 
@@ -42,3 +42,4 @@ cloudstream {
     requiresResources = true
     iconUrl = "https://raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/StremioX/icon.png"
 }
+

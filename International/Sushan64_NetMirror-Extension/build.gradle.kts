@@ -66,13 +66,13 @@ subprojects {
             targetSdk = 35
 
             // Inject secrets into BuildConfig
-            buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\"${getSecret("MOVIEBOX_SECRET_KEY_DEFAULT")}\"")
-            buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\"${getSecret("MOVIEBOX_SECRET_KEY_ALT")}\"")
-            buildConfigField("String", "CASTLE_SUFFIX", "\"${getSecret("CASTLE_SUFFIX")}\"")
-            buildConfigField("String", "SIMKL_API", "\"${getSecret("SIMKL_API")}\"")
-            buildConfigField("String", "MAL_API", "\"${getSecret("MAL_API")}\"")
-            buildConfigField("String", "LIBRARY_PACKAGE_NAME", "\"com.cncverse\"")
-            buildConfigField("String", "CRICIFY_PROVIDER_SECRET", "\"${getSecret("CRICIFY_PROVIDER_SECRET")}\"")
+            buildConfigField("String", "MOVIEBOX_SECRET_KEY_DEFAULT", "\"\"")}\"")
+            buildConfigField("String", "MOVIEBOX_SECRET_KEY_ALT", "\"\"")}\"")
+            buildConfigField("String", "CASTLE_SUFFIX", "\"\"")}\"")
+            buildConfigField("String", "SIMKL_API", "\"\"")}\"")
+            buildConfigField("String", "MAL_API", "\"\"")}\"")
+            buildConfigField("String", "LIBRARY_PACKAGE_NAME", "\"\"")
+            buildConfigField("String", "CRICIFY_PROVIDER_SECRET", "\"\"")}\"")
         }
 
         compileOptions {
@@ -113,3 +113,4 @@ subprojects {
 task<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
+

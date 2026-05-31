@@ -1,4 +1,4 @@
-# Mega-Repo Surgical Sync & Sanitization Script v2
+# Mega-Repo Surgical Sync & Sanitization Script v3
 # This script organizes, brands, AND REPAIRS 151+ plugins for Adam Knight.
 
 $Sources = @(
@@ -39,58 +39,38 @@ foreach ($URL in $Sources) {
         $Target = Join-Path $Category $PluginName
         if (-not (Test-Path $Target)) { New-Item -ItemType Directory $Target -Force | Out-Null }
 
-        # Copy and Organize into 'src'
         Copy-Item -Path (Join-Path $PluginDir.FullName "*") -Destination $Target -Recurse -Force -ErrorAction SilentlyContinue
-        if (Test-Path (Join-Path $Target "main")) {
-            $SrcDir = Join-Path $Target "src"
-            if (-not (Test-Path $SrcDir)) { mkdir $SrcDir | Out-Null }
-            Move-Item (Join-Path $Target "main") (Join-Path $SrcDir "main") -Force -ErrorAction SilentlyContinue
-        }
 
-        # --- CODE SURGERY & REPAIR ---
+        # --- CODE SURGERY ---
         Get-ChildItem -Path $Target -Filter "*.kt" -Recurse | ForEach-Object {
             $Code = Get-Content $_.FullName -Raw
-
-            # 1. Fix .apmap failures (Replace with .map which is safer in this repo context)
             $Code = $Code -replace '\.apmap', '.map'
-
-            # 2. Fix Unresolved 'mozilla' by ensuring correct rhino package if needed
-            # (Handled mostly by root build.gradle.kts now)
-
-            # 3. Fix regex group access issues for Kotlin 2.x/1.9 compatibility
-            # This is hard via regex, but we handle it by downgrading Kotlin in build.gradle.kts
-
-            # 4. Patch deprecated Search Response constructors (Common killer)
-            # MovieSearchResponse(...) -> newMovieSearchResponse(...)
             $Code = $Code -replace 'MovieSearchResponse\(', 'newMovieSearchResponse('
             $Code = $Code -replace 'TvSeriesSearchResponse\(', 'newTvSeriesSearchResponse('
             $Code = $Code -replace 'AnimeSearchResponse\(', 'newAnimeSearchResponse('
-
             Set-Content $_.FullName $Code
         }
 
-        # --- GRADLE SANITIZATION ---
+        # --- GRADLE SURGERY ---
         $GradleFile = Join-Path $Target "build.gradle.kts"
         if (Test-Path $GradleFile) {
             $Content = Get-Content $GradleFile
             $Content = $Content -replace 'authors\s*=\s*listOf\(.*\)', 'authors = listOf("Adam Knight")'
+
+            # SAFE buildConfigField Stripping
+            $Content = [regex]::Replace($Content, 'buildConfigField\s*\(\s*"String"\s*,\s*"([^"]+)"\s*,.*?\)', 'buildConfigField("String", "$1", "\"\"")')
+
             $Content = $Content -replace 'val properties = Properties\(\).*properties\.load\(.*\)', ''
-            $Content = $Content -replace 'properties\.getProperty\("[^"]*"\)', '""'
-            $Content = $Content -replace 'properties\.getProperty\([^)]*\)', '""'
-            $Content = $Content -replace '\"\$\{""', '""' # Fix syntax errors
 
             if ($Content -notmatch "buildConfig = true") {
                 $Content = $Content -replace 'buildFeatures \{', "buildFeatures {`n        buildConfig = true"
             }
 
-            # Icon Mirroring
-            $IconMatch = [regex]::Match($Content, 'iconUrl\s*=\s*"([^"]+)"')
-            if ($IconMatch.Success) {
-                $Content = $Content -replace 'iconUrl\s*=\s*"[^"]+"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$Category/$PluginName/icon.png`""
-            }
+            $Content = $Content -replace 'iconUrl\s*=\s*"[^"]+"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$Category/$PluginName/icon.png`""
+
             $Content | Set-Content $GradleFile
         }
 
-        Write-Host "Repaired & Branded: [$Category] $PluginName" -ForegroundColor Green
+        Write-Host "Repaired: [$Category] $PluginName" -ForegroundColor Green
     }
 }
