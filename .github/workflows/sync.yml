@@ -2,8 +2,8 @@ name: Sync Plugins
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight
-  workflow_dispatch: # Allows manual trigger
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -18,11 +18,9 @@ jobs:
 
       - name: Sync from Sources
         run: |
-          # Configure Git
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
 
-          # Sources to sync from
           SOURCES=(
             "https://github.com/Hexated/CloudStream-Extensions.git"
             "https://github.com/phisher98/cloudstream-extensions-phisher.git"
@@ -32,7 +30,6 @@ jobs:
             "https://github.com/Stormunblessed/storm-ext.git"
           )
 
-          # Category Regex Patterns
           ANIME_REGEX="Anichi|AllWish|AnimePahe|Animeav1|AnimeCloud|AnimeDekho|Animedubhindi|Animekhor|Animexin|Gogo|NineAnime|Crunchyroll|Tokusatsu|TokuZilla|Animekisa|Kawaiifu|Aniflix|DubbedAnime|AsiaFlix|KimCartoon|Topcartoon|Toon|OnePace|Donghua|DoraBash|Latanime|Tenshi|Wco|Zoro"
           HINDI_REGEX="Netmirror|Cinevood|Mp4Moviez|Tamil|Skymovies|Bolly|Vega|Moviesmod|CineStream|AllMovieLand|Hindmovie|HDhub4u|FourKHDHub|MovieBlast|Fivemovierulz|Movierulzhd|Cinefreak|Bangla|OnlineMoviesHindi|MoviesDrive|Desicinemas|UHDmovies"
           TOOLS_REGEX="Ultima|Stremio|Jellyfin|BingedReview|RingZ|GDIndex"
@@ -42,17 +39,13 @@ jobs:
 
           for REPO_URL in "${SOURCES[@]}"; do
             REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://[^/]+/([^/]+)/([^/]+)(\.git)?|\1_\2|' | sed 's|\.git||')
-            echo "Cloning $REPO_NAME..."
             git clone --depth 1 "$REPO_URL" "temp_sources/$REPO_NAME"
             
-            find "temp_sources/$REPO_NAME" -maxdepth 2 -name "build.gradle.kts" | while read -r GRADLE_FILE; do
+            find "temp_sources/$REPO_NAME" -name "build.gradle.kts" | while read -r GRADLE_FILE; do
               PLUGIN_DIR=$(dirname "$GRADLE_FILE")
               PLUGIN_NAME=$(basename "$PLUGIN_DIR")
-              
-              if [ "$PLUGIN_DIR" == "temp_sources/$REPO_NAME" ]; then continue; fi
               if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
 
-              # Determine Category
               CATEGORY="International"
               if [[ "$PLUGIN_NAME" =~ $ANIME_REGEX ]]; then CATEGORY="Anime"; fi
               if [[ "$PLUGIN_NAME" =~ $HINDI_REGEX ]]; then CATEGORY="Bollywood"; fi
@@ -60,46 +53,39 @@ jobs:
               if [[ "$PLUGIN_NAME" =~ $LIVE_REGEX ]]; then CATEGORY="LiveTV"; fi
 
               TARGET_DIR="$CATEGORY/$PLUGIN_NAME"
-
-              # Version Check
-              NEW_VERSION=$(grep -E "^version\s*=" "$GRADLE_FILE" | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
-              OLD_VERSION=$(grep -E "^version\s*=" "$TARGET_DIR/build.gradle.kts" 2>/dev/null | sed -E 's/.*=[[:space:]]*"?([0-9]+)"?.*/\1/')
-              
-              if [ ! -z "$OLD_VERSION" ] && [ ! -z "$NEW_VERSION" ] && [ "$NEW_VERSION" -le "$OLD_VERSION" ]; then
-                echo "Skipping $PLUGIN_NAME (v$OLD_VERSION >= v$NEW_VERSION)"
-                continue
-              fi
-
-              echo "Syncing [$CATEGORY] $PLUGIN_NAME (v${OLD_VERSION:-0} -> v$NEW_VERSION)..."
-              
-              # CLEAN UP OLD DATA
-              if [ -d "$TARGET_DIR/src" ]; then rm -rf "$TARGET_DIR/src"; fi
               mkdir -p "$TARGET_DIR"
               cp -r "$PLUGIN_DIR"/* "$TARGET_DIR/"
               
-              # --- SURGERY & BRANDING ---
-              MANIFEST="$TARGET_DIR/src/main/AndroidManifest.xml"
-              if [ -f "$MANIFEST" ]; then sed -i 's/package="[^"]*"//g' "$MANIFEST"; fi
-
+              # --- CLEANER SURGERY ---
+              # Brand
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/val properties = Properties().*properties.load(.*)//g' "$TARGET_DIR/build.gradle.kts"
-              sed -i 's/properties.getProperty(.*)/""/g' "$TARGET_DIR/build.gradle.kts"
               
+              # Strip private keys safely - targeting common property access patterns
+              sed -i 's/val properties = Properties().*properties.load(.*)//g' "$TARGET_DIR/build.gradle.kts"
+              sed -i 's/properties.getProperty("[^"]*")/""/g' "$TARGET_DIR/build.gradle.kts"
+              sed -i 's/properties.getProperty([^)]*)/""/g' "$TARGET_DIR/build.gradle.kts"
+              
+              # Fix broken strings caused by previous bad logic
+              sed -i 's/"${""/""/g' "$TARGET_DIR/build.gradle.kts"
+
               if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
                 sed -i 's/buildFeatures {/buildFeatures {\n        buildConfig = true/g' "$TARGET_DIR/build.gradle.kts"
               fi
 
-              # Icon Replication
-              OLD_ICON_URL=$(grep "iconUrl =" "$TARGET_DIR/build.gradle.kts" | sed -E 's/.*iconUrl = ["'\'']([^"'\'']+)["'\''].*/\1/')
-              if [ ! -z "$OLD_ICON_URL" ]; then
-                curl -L -s -o "$TARGET_DIR/icon.png" "$OLD_ICON_URL" || echo "Icon fail"
+              # Icon Mirror
+              ICON_URL=$(grep "iconUrl =" "$TARGET_DIR/build.gradle.kts" | sed -E 's/.*iconUrl = "([^"]+)".*/\1/')
+              if [ ! -z "$ICON_URL" ]; then
+                curl -L -s -o "$TARGET_DIR/icon.png" "$ICON_URL" || true
               fi
               sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$CATEGORY/$PLUGIN_NAME/icon.png\"|" "$TARGET_DIR/build.gradle.kts"
 
+              # Fix Manifest
+              MANIFEST="$TARGET_DIR/src/main/AndroidManifest.xml"
+              if [ -f "$MANIFEST" ]; then sed -i 's/package="[^"]*"//g' "$MANIFEST"; fi
             done
           done
 
           rm -rf temp_sources
           git add .
-          git commit -m "Auto-sync: Categorized plugins and applied Adam Knight branding" || echo "No changes"
+          git commit -m "Auto-sync: Safe sanitization and categorization" || echo "No changes"
           git push origin master

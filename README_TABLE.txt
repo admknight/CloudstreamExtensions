@@ -1,27 +1,3 @@
-# 🎯 Adam Knight Mega-Repo
-
-A fully automated, categorized collection of **150+ Cloudstream Extensions**. All plugins are branded by **Adam Knight** and synchronized daily for peak performance.
-
-![Build Status](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg)
-![Sync Status](https://github.com/admknight/CloudstreamExtensions/actions/workflows/sync.yml/badge.svg)
-
----
-
-## 🌐 Quick Installation
-
-To add this Mega-Repo to your Cloudstream app:
-
-1.  Navigate to **Settings** (⚙️) -> **Extensions**.
-2.  Tap on **Add Repository**.
-3.  Enter the URL:
-    ```text
-    https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json
-    ```
-
----
-
-## 📂 Repository Index
-
 | Sr.# | Category | Plugin Name | Author | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | Anime | **AllWish** | Adam Knight | ✅ Active |
@@ -179,21 +155,3 @@ To add this Mega-Repo to your Cloudstream app:
 | 153 | Tools | **StremioX** | Adam Knight | ✅ Active |
 | 154 | Tools | **TokusatsuUltimate** | Adam Knight | ✅ Active |
 | 155 | Tools | **Ultima** | Adam Knight | ✅ Active |
-
----
-
-## 🛠 Project Features
-
-*   **Categorized Layout**: Perfectly organized into Anime, Bollywood, International, LiveTV, and Tools.
-*   **Branding**: All extensions are unified under the "Adam Knight" author profile.
-*   **Icon Mirroring**: Icons are hosted locally to ensure they never appear broken in the app.
-*   **Automated Updates**: Code is pulled and sanitized daily from top community sources.
-
----
-
-## ⚖️ Disclaimer
-
-This repository is for educational purposes only. It does not host or store any media content. All extensions are specialized web scrapers that fetch metadata and links from publicly available third-party websites. Use at your own risk.
-
----
-*Maintained with ❤️ by [Adam Knight](https://github.com/admknight)*

@@ -38,9 +38,7 @@ subprojects {
     android {
         namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
         val localPropertiesFile = rootProject.file("local.properties")
-        if (!localPropertiesFile.exists()) {
-            localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk")
-        }
+        if (!localPropertiesFile.exists()) { localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk") }
 
         defaultConfig {
             minSdk = 21
@@ -68,25 +66,30 @@ subprojects {
         implementation(kotlin("stdlib"))
         implementation("com.github.Blatzar:NiceHttp:0.4.11")
         implementation("org.jsoup:jsoup:1.18.3")
-        implementation("com.google.code.gson:gson:2.10.1")
+        implementation("com.google.code.gson:gson:2.11.0")
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         
-        // Critical dependencies for plugins like AllAnime and AllWish
+        // Critical missing dependencies for plugins using JS or specialized Android features
         implementation("androidx.annotation:annotation:1.9.1")
         implementation("org.mozilla:rhino:1.8.0")
+        implementation("com.google.android.material:material:1.12.0")
     }
 }
 
-// Simple aggregator tasks - zero logic, zero chance of configuration crash
+// Global build commands that actually work
 tasks.register("buildAll") {
     group = "cloudstream"
-    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })
+    subprojects.forEach { sub ->
+        dependsOn(sub.tasks.matching { it.name == "make" })
+    }
 }
 
 tasks.register("generatePluginsJson") {
     group = "cloudstream"
-    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "makePluginsJson" } })
+    subprojects.forEach { sub ->
+        dependsOn(sub.tasks.matching { it.name == "makePluginsJson" })
+    }
 }
 
 task<Delete>("clean") {

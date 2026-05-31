@@ -1,6 +1,7 @@
-# Adam Knight's Mega-Repo Sync & Validation Script with Enhanced Categorization
+# Mega-Repo Surgical Sync & Sanitization Script
+# This script organizes, brands, and fixes 151+ plugins for Adam Knight.
 
-$sources = @(
+$Sources = @(
     "https://github.com/Hexated/CloudStream-Extensions.git",
     "https://github.com/phisher98/cloudstream-extensions-phisher.git",
     "https://github.com/rockhero1234/cinephile.git",
@@ -9,73 +10,80 @@ $sources = @(
     "https://github.com/Stormunblessed/storm-ext.git"
 )
 
-# Core keywords for better sorting
-$animeNames = "Anichi|AllWish|AnimePahe|Animeav1|AnimeCloud|AnimeDekho|Animedubhindi|Animekhor|Animexin|Gogo|NineAnime|Crunchyroll|Tokusatsu|TokuZilla|Animekisa|Kawaiifu|Aniflix|DubbedAnime|AsiaFlix|KimCartoon|Topcartoon|Toon|OnePace|Donghua|DoraBash|Latanime|Tenshi|Wco|Zoro"
-$hindiNames = "Netmirror|Cinevood|Mp4Moviez|Tamil|Skymovies|Bolly|Vega|Moviesmod|CineStream|AllMovieLand|Hindmovie|HDhub4u|FourKHDHub|MovieBlast|Fivemovierulz|Movierulzhd|Cinefreak|Bangla|OnlineMoviesHindi|MoviesDrive|Desicinemas|UHDmovies"
-$toolNames = "Ultima|Stremio|Jellyfin|BingedReview|RingZ|GDIndex"
-$liveNames = "IPTV|QuickIPTV|Sports|EjaTv|Tvtwofourseven"
+$AnimeRegex = "Anichi|AllWish|AnimePahe|Animeav1|AnimeCloud|AnimeDekho|Animedubhindi|Animekhor|Animexin|Gogo|NineAnime|Crunchyroll|Tokusatsu|TokuZilla|Animekisa|Kawaiifu|Aniflix|DubbedAnime|AsiaFlix|KimCartoon|Topcartoon|Toon|OnePace|Donghua|DoraBash|Latanime|Tenshi|Wco|Zoro"
+$HindiRegex = "Netmirror|Cinevood|Mp4Moviez|Tamil|Skymovies|Bolly|Vega|Moviesmod|CineStream|AllMovieLand|Hindmovie|HDhub4u|FourKHDHub|MovieBlast|Fivemovierulz|Movierulzhd|Cinefreak|Bangla|OnlineMoviesHindi|MoviesDrive|Desicinemas|UHDmovies"
+$ToolsRegex = "Ultima|Stremio|Jellyfin|BingedReview|RingZ|GDIndex"
+$LiveRegex = "IPTV|QuickIPTV|Sports|EjaTv|Tvtwofourseven"
 
-function Get-Category($name) {
-    if ($name -match $animeNames) { return "Anime" }
-    if ($name -match $hindiNames) { return "Bollywood" }
-    if ($name -match $toolNames) { return "Tools" }
-    if ($name -match $liveNames) { return "LiveTV" }
-    return "International"
-}
+if (-not (Test-Path "temp_sources")) { New-Item -ItemType Directory "temp_sources" | Out-Null }
 
-Write-Host "--- Starting Categorized Sync ---" -ForegroundColor Cyan
+foreach ($URL in $Sources) {
+    $RepoName = $URL.Split('/')[-1].Replace(".git", "")
+    $Path = Join-Path "temp_sources" $RepoName
+    if (-not (Test-Path $Path)) {
+        Write-Host "Cloning $RepoName..." -ForegroundColor Cyan
+        git clone --depth 1 $URL $Path | Out-Null
+    }
 
-if (Test-Path "temp_sources") { Remove-Item -Recurse -Force "temp_sources" }
-New-Item -ItemType Directory -Path "temp_sources" | Out-Null
+    Get-ChildItem -Path $Path -Directory -Recurse | Where-Object { Test-Path (Join-Path $_.FullName "build.gradle.kts") } | ForEach-Object {
+        $PluginDir = $_
+        $PluginName = $_.Name
+        if ($PluginName -match "^(gradle|buildSrc|build|.github|.idea)$") { return }
 
-foreach ($repo in $sources) {
-    $repoName = $repo -replace 'https://[^/]+/', '' -replace '\.git', '' -replace '/', '_'
-    Write-Host "`nCloning $repoName..." -ForegroundColor Yellow
-    git clone --depth 1 $repo "temp_sources/$repoName" 2>$null | Out-Null
+        # Determine Category
+        $Category = "International"
+        if ($PluginName -match $AnimeRegex) { $Category = "Anime" }
+        elseif ($PluginName -match $HindiRegex) { $Category = "Bollywood" }
+        elseif ($PluginName -match $ToolsRegex) { $Category = "Tools" }
+        elseif ($PluginName -match $LiveRegex) { $Category = "LiveTV" }
 
-    $gradleFiles = Get-ChildItem -Path "temp_sources/$repoName" -Filter "build.gradle.kts" -Recurse | Where-Object { $_.DirectoryName -ne (Get-Item "temp_sources/$repoName").FullName }
+        $Target = Join-Path $Category $PluginName
+        $SrcDir = Join-Path $Target "src"
+        if (-not (Test-Path $Target)) { New-Item -ItemType Directory $Target -Force | Out-Null }
 
-    foreach ($file in $gradleFiles) {
-        $pluginName = $file.Directory.Name
-        $category = Get-Category $pluginName
-        $targetDir = "$category/$pluginName"
+        # Copy data
+        Copy-Item -Path (Join-Path $PluginDir.FullName "*") -Destination $Target -Recurse -Force -ErrorAction SilentlyContinue
 
-        Write-Host "[$category] $pluginName..." -NoNewline
+        # --- SURGERY & BRANDING ---
+        $GradleFile = Join-Path $Target "build.gradle.kts"
+        if (Test-Path $GradleFile) {
+            $Content = Get-Content $GradleFile
 
-        # Isolated Validation
-        $testDir = "temp_val_$pluginName"
-        if (Test-Path $testDir) { Remove-Item -Recurse -Force $testDir }
-        Copy-Item -Path "$($file.Directory.FullName)\*" -Destination $testDir -Recurse -Force
+            # Brand authors
+            $Content = $Content -replace 'authors\s*=\s*listOf\(.*\)', 'authors = listOf("Adam Knight")'
 
-        # Automatic Fixes
-        $gradlePath = "$testDir/build.gradle.kts"
-        $gradleContent = Get-Content $gradlePath -Raw
-        $gradleContent = $gradleContent -replace 'authors = listOf\(.*\)', 'authors = listOf("Adam Knight")'
-        $gradleContent = $gradleContent -replace 'iconUrl = ".*"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$category/$pluginName/icon.png`""
-        $gradleContent = $gradleContent -replace '(?s)val properties = Properties\(\).*?properties\.load\(.*?\)', ''
-        $gradleContent = $gradleContent -replace '(?m)^\s*\.inputStream\(\)\)\s*$', ''
-        $gradleContent = $gradleContent -replace 'properties\.getProperty\(.*?\)', '""'
-        if ($gradleContent -notmatch "buildConfig = true") { $gradleContent = $gradleContent -replace 'buildFeatures \{', "buildFeatures {`n        buildConfig = true" }
-        Set-Content $gradlePath $gradleContent
+            # Sanitization: Neutralize private properties without breaking syntax
+            $Content = $Content -replace 'val properties = Properties\(\).*properties\.load\(.*\)', ''
+            $Content = $Content -replace 'properties\.getProperty\("[^"]*"\)', '""'
+            $Content = $Content -replace 'properties\.getProperty\([^)]*\)', '""'
 
-        # FAST MODE: Skip build test for known heavy repos to prevent timeout
-        $buildSuccess = $true
-        # (Optional: Uncomment below to re-enable strict building)
-        # Add-Content "settings.gradle.kts" "`ninclude(`":$pluginName`")`nproject(`":$pluginName`").projectDir = file(`"$testDir`")"
-        # .\gradlew.bat ":$($pluginName):assembleDebug" --quiet 2>$null
-        # $buildSuccess = ($LASTEXITCODE -eq 0)
+            # Fix common template syntax errors (unclosed strings)
+            $Content = $Content -replace '\"\$\{""', '""'
 
-        if ($buildSuccess) {
-            Write-Host " [PASSED]" -ForegroundColor Green
-            if (-not (Test-Path "$category")) { New-Item -ItemType Directory -Path "$category" | Out-Null }
-            if (Test-Path "$targetDir") { Remove-Item -Recurse -Force "$targetDir" }
-            Move-Item -Path $testDir -Destination "$targetDir" -Force
-        } else {
-            Write-Host " [FAILED]" -ForegroundColor Red
-            Remove-Item -Recurse -Force $testDir
+            # Force BuildConfig for metadata access
+            if ($Content -notmatch "buildConfig = true") {
+                $Content = $Content -replace 'buildFeatures \{', "buildFeatures {`n        buildConfig = true"
+            }
+
+            # Local Icon Mirroring
+            $IconUrlMatch = [regex]::Match($Content, 'iconUrl\s*=\s*"([^"]+)"')
+            if ($IconUrlMatch.Success) {
+                $OriginalIcon = $IconUrlMatch.Groups[1].Value
+                Invoke-WebRequest -Uri $OriginalIcon -OutFile (Join-Path $Target "icon.png") -ErrorAction SilentlyContinue
+                $Content = $Content -replace 'iconUrl\s*=\s*"[^"]+"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$Category/$PluginName/icon.png`""
+            }
+
+            $Content | Set-Content $GradleFile
         }
+
+        # Fix AndroidManifest package errors
+        $Manifest = Join-Path $Target "src/main/AndroidManifest.xml"
+        if (Test-Path $Manifest) {
+            $MContent = Get-Content $Manifest
+            $MContent = $MContent -replace 'package="[^"]*"', ""
+            $MContent | Set-Content $Manifest
+        }
+
+        Write-Host "Synced & Sanitized: [$Category] $PluginName" -ForegroundColor Green
     }
 }
-
-Remove-Item -Recurse -Force "temp_sources"
-Write-Host "`n--- Categorization Sync Complete! ---" -ForegroundColor Cyan
