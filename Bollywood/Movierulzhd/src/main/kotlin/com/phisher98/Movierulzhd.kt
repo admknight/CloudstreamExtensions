@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.movierulzhd
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -118,7 +118,7 @@ open class Movierulzhd : MainAPI() {
         }
         val quality = getSearchQuality(this.select("span.quality").text())
         val score = this.select("div.rating").text()
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = quality
             this.score = Score.from10(score)
@@ -133,7 +133,7 @@ open class Movierulzhd : MainAPI() {
                 it.selectFirst("div.title > a")!!.text().replace(Regex("\\(\\d{4}\\)"), "").trim()
             val href = getProperLink(it.selectFirst("div.title > a")!!.attr("href"))
             val posterUrl = it.selectFirst("img")!!.attr("src")
-            newnewMovieSearchResponse(title, href, TvType.TvSeries) {
+            newMovieSearchResponse(title, href, TvType.TvSeries) {
                 this.posterUrl = posterUrl
             }
         }
@@ -176,7 +176,7 @@ open class Movierulzhd : MainAPI() {
             val recName = it.selectFirst("a")!!.attr("href").removeSuffix("/").split("/").last()
             val recHref = it.selectFirst("a")!!.attr("href")
             val recPosterUrl = it.selectFirst("img")?.getImageAttr()
-            newnewTvSeriesSearchResponse(recName, recHref, TvType.TvSeries) {
+            newTvSeriesSearchResponse(recName, recHref, TvType.TvSeries) {
                 this.posterUrl = recPosterUrl
             }
         }
@@ -483,3 +483,7 @@ open class Movierulzhd : MainAPI() {
         @param:JsonProperty("type") val type: String?,
     )
 }
+
+
+
+

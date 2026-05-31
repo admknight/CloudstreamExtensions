@@ -1,10 +1,10 @@
-package com.phisher98
+package com.admknight.ultima
 
-// import com.phisher98.UltimaUtils.Provider
+// import com.admknight.ultima.UltimaUtils.Provider
 
-import com.phisher98.UltimaUtils.ExtensionInfo
-import com.phisher98.UltimaUtils.MediaProviderState
-import com.phisher98.UltimaUtils.SectionInfo
+import com.admknight.ultima.UltimaUtils.ExtensionInfo
+import com.admknight.ultima.UltimaUtils.MediaProviderState
+import com.admknight.ultima.UltimaUtils.SectionInfo
 import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
 import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
 
@@ -162,3 +162,7 @@ object UltimaStorageManager {
     }
 
 }
+
+
+
+

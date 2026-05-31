@@ -1,4 +1,4 @@
-package com.RingZ
+package com.admknight.ringz
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,3 +9,6 @@ class RingZProvider: BasePlugin() {
         registerMainAPI(RingZ())
     }
 }
+
+
+

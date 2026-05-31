@@ -1,8 +1,8 @@
-package com.lagradost
+package com.admknight.nineanime
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.lagradost.NineAnimeProvider.Companion.cipher
-import com.lagradost.NineAnimeProvider.Companion.encrypt
+import com.admknight.nineanime.cipher
+import com.admknight.nineanime.encrypt
 import com.lagradost.cloudstream3.ErrorLoadingException
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.ExtractorApi
@@ -131,3 +131,7 @@ open class WcoStream : ExtractorApi() {
 
     }
 }
+
+
+
+

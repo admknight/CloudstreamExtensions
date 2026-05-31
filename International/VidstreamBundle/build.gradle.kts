@@ -1,28 +1,6 @@
-// use an integer for version numbers
-version = 1
-
-
 cloudstream {
     language = "en"
-    // All of these properties are optional, you can safely remove them
-
-    description = "Includes many providers with the same layout as Vidstream"
-    // authors = listOf("Adam Knight")
-
-    /**
-     * Status int as the following:
-     * 0: Down
-     * 1: Ok
-     * 2: Slow
-     * 3: Beta only
-     * */
-    status = 1 // will be 3 if unspecified
-    tvTypes = listOf(
-        "Anime",
-        "Movie",
-        "AnimeMovie",
-        "TvSeries",
-    )
-
-
-    }
+    authors = listOf("Adam Knight")
+    status = 1
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/VidstreamBundle/icon.png"
+}

@@ -1,4 +1,4 @@
-package com.hindmoviez
+package com.admknight.hindmoviez
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
@@ -56,3 +56,6 @@ class Gdshine : ExtractorApi() {
         val copyUrl: String
     )
 }
+
+
+

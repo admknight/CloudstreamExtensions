@@ -1,4 +1,4 @@
-package com.MovieBlast
+package com.admknight.movieblast
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Actor
@@ -104,7 +104,7 @@ class MovieBlast : MainAPI() {
             val path = if (isSeries) "series/show" else "media/detail"
             val href = "$mainUrl/api/$path/${item.id}/$token"
 
-            newnewMovieSearchResponse(
+            newMovieSearchResponse(
                 item.name,
                 href,
                 if (isSeries) TvType.TvSeries else TvType.Movie
@@ -125,7 +125,7 @@ class MovieBlast : MainAPI() {
         val path = if (isSeries) "series/show" else "media/detail"
         val tvType = if (isSeries) TvType.TvSeries else TvType.Movie
 
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             title,
             "$mainUrl/api/$path/$id/$token",
             tvType
@@ -314,5 +314,9 @@ class MovieBlast : MainAPI() {
     }
 
 }
+
+
+
+
 
 

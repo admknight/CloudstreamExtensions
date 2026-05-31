@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.vegamovies
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -75,7 +75,7 @@ open class VegaMoviesProvider : MainAPI() {
         var posterUrl = this.select("img").attr("src")
         if(!posterUrl.contains("https:")) posterUrl =  this.select("img").attr("data-src")
 
-        return newnewMovieSearchResponse(title, URI(href).path, TvType.Movie) {
+        return newMovieSearchResponse(title, URI(href).path, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -85,7 +85,7 @@ open class VegaMoviesProvider : MainAPI() {
         val response = tryParseJson<VegaSearchResponse>(json) ?: return null
         val results = response.hits.map { hit ->
             val doc = hit.document
-            newnewMovieSearchResponse(doc.post_title.replace("Download ", ""), doc.permalink, TvType.Movie) {
+            newMovieSearchResponse(doc.post_title.replace("Download ", ""), doc.permalink, TvType.Movie) {
                 this.posterUrl = doc.post_thumbnail
             }
         }
@@ -315,3 +315,7 @@ open class VegaMoviesProvider : MainAPI() {
         val post_thumbnail: String
     )
 }
+
+
+
+

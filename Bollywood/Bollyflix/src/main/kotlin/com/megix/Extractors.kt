@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.bollyflix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -233,3 +233,7 @@ open class GDFlix : ExtractorApi() {
         }
     }
 }
+
+
+
+

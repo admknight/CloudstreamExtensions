@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.showflix
 
 import com.lagradost.cloudstream3.extractors.StreamWishExtractor
 import com.lagradost.cloudstream3.extractors.VidHidePro3
@@ -19,3 +19,7 @@ class ShowFlixProviderPlugin: BasePlugin() {
         registerExtractorAPI(Showflixarchives())
     }
 }
+
+
+
+

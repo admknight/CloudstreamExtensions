@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.vegamovies
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -75,7 +75,7 @@ class LuxMoviesProvider : VegaMoviesProvider() { // all providers must be an ins
             posterUrl =  this.select("img").attr("src")
         }
 
-        return newnewMovieSearchResponse(title, URI(href).path, TvType.Movie) {
+        return newMovieSearchResponse(title, URI(href).path, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -227,3 +227,7 @@ class LuxMoviesProvider : VegaMoviesProvider() { // all providers must be an ins
         }
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.Donghuastream
+package com.admknight.donghuastream
 
 import com.lagradost.cloudstream3.SearchResponse
 import com.lagradost.cloudstream3.SubtitleFile
@@ -87,3 +87,6 @@ open class SeaTV : Donghuastream() {
         return true
     }
 }
+
+
+

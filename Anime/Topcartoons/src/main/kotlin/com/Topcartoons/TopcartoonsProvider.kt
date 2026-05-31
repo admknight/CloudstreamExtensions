@@ -1,4 +1,4 @@
-package com.Topcartoons
+package com.admknight.topcartoons
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,3 +9,6 @@ class TopcartoonsProvider: BasePlugin() {
         registerMainAPI(Topcartoons())
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.nginx
 
 
 import com.lagradost.cloudstream3.TvType
@@ -358,7 +358,7 @@ class NginxProvider : MainAPI() {
                                 val nfoPath = if (nfoFilename != null) {
                                     mediaRootUrl + nfoFilename // metadata must exist
                                 } else {
-                                    return@mapNotNull newnewMovieSearchResponse(
+                                    return@mapNotNull newMovieSearchResponse(
                                         linkToElement,
                                         mediaRootUrl,
                                         TvType.Movie,
@@ -373,7 +373,7 @@ class NginxProvider : MainAPI() {
 
                                     val posterUrl = mediaRootUrl + "poster.jpg"  // poster.jpg in the same folder
 
-                                    newnewTvSeriesSearchResponse(
+                                    newTvSeriesSearchResponse(
                                         serieName,
                                         nfoPath,
                                         TvType.TvSeries,
@@ -384,7 +384,7 @@ class NginxProvider : MainAPI() {
                                     val movieName = nfoContent.select("title").text() ?: linkToElement
                                     val posterUrl = nfoContent.selectFirst("thumb[aspect=poster]")?.text() // poster should be stored in the same folder
                                     // val fanartUrl = mediaRootUrl + "fanart.jpg" // backdrop should be stored in the same folder
-                                    return@mapNotNull newnewMovieSearchResponse(
+                                    return@mapNotNull newMovieSearchResponse(
                                         movieName,
                                         nfoPath,
                                         TvType.Movie,
@@ -399,7 +399,7 @@ class NginxProvider : MainAPI() {
                                      ├── Eternals.2021.MULTi.WiTH.TRUEFRENCH.iMAX.1080p.DSNP.WEB-DL.DDP5.1.H264-FRATERNiTY.mkv  // the media root folder
                                      ├── Juste la fin du monde (2016) VOF 1080p mHD x264 AC3-SANTACRUZ.mkv
                                 */
-                                return@mapNotNull newnewMovieSearchResponse(
+                                return@mapNotNull newMovieSearchResponse(
                                     linkToElement,
                                     mediaRootUrl,
                                     TvType.Movie,
@@ -423,4 +423,8 @@ class NginxProvider : MainAPI() {
         return HomePageResponse(returnList)
     }
 }
+
+
+
+
 

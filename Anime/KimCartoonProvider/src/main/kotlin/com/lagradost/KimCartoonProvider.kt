@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.kimcartoon
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -150,3 +150,6 @@ class KimCartoonProvider : MainAPI() {
         return true
     }
 }
+
+
+

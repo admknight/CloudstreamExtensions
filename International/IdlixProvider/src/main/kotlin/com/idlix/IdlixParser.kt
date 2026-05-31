@@ -1,4 +1,4 @@
-package com.idlix
+package com.admknight.idlix
 
 data class ApiResponse(
     val data: List<ApiItem> = emptyList(),
@@ -175,3 +175,6 @@ data class LoadData(
     val id: String,
     val type: String // "movie" or "episode"
 )
+
+
+

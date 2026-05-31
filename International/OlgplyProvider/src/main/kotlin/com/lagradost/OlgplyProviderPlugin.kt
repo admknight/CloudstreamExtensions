@@ -1,5 +1,5 @@
 
-package com.lagradost
+package com.admknight.olgply
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,3 +12,6 @@ class OlgplyProviderPlugin: Plugin() {
         registerMainAPI(OlgplyProvider())
     }
 }
+
+
+

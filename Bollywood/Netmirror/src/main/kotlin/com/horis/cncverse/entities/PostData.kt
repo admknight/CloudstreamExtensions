@@ -1,10 +1,10 @@
-package com.horis.cncverse.entities
+package com.admknight.netmirror
 
 data class PostData(
     val desc: String?,
     val director: String?,
     val ua: String?,
-    val episodes: List<Episode?>,
+    val episodes: List<NetmirrorEpisode?>,
     val genre: String?,
     val nextPage: Int?,
     val nextPageSeason: String?,
@@ -16,3 +16,7 @@ data class PostData(
     val match: String?,
     val runtime: String?,
 )
+
+
+
+

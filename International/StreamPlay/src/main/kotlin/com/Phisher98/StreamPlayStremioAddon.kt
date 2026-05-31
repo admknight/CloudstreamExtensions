@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.content.SharedPreferences
 import com.google.gson.annotations.SerializedName
@@ -236,3 +236,7 @@ data class StreamPlayStremioStream(
     @SerializedName("behaviorHints") val behaviorHints: StreamPlayStremioBehaviorHints? = null,
     @SerializedName("subtitles") val subtitles: List<StreamPlayStremioSubtitle> = emptyList()
 )
+
+
+
+

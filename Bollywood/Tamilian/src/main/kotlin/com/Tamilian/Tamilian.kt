@@ -1,4 +1,4 @@
-package com.Tamilian
+package com.admknight.tamilian
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.SubtitleFile
@@ -115,3 +115,6 @@ class Tamilian : TmdbProvider() {
     )
 
 }
+
+
+

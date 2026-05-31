@@ -1,4 +1,4 @@
-package com.layarKacaProvider
+package com.admknight.layarkaca
 
 import com.lagradost.cloudstream3.extractors.EmturbovidExtractor
 import com.lagradost.cloudstream3.extractors.VidHidePro6
@@ -20,3 +20,6 @@ class LayarKacaProviderPlugin: BasePlugin() {
         registerExtractorAPI(Co4nxtrl())
     }
 }
+
+
+

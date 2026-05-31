@@ -1,4 +1,4 @@
-package com.horis.cncverse
+package com.admknight.netmirror
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -225,3 +225,6 @@ data class NewTvPlayerResponse(
     val video_link: String? = null,
     val referer: String? = null
 )
+
+
+

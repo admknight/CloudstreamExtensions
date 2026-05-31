@@ -1,4 +1,4 @@
-package com.RingZ
+package com.admknight.ringz
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.APIHolder.capitalize
@@ -146,7 +146,7 @@ class RingZ : MainAPI() {
                 ) continue
 
                 val loadUrl = item.toLoadURL(type)
-                list += newnewMovieSearchResponse(item.optString("mn"), loadUrl.toJson(), tvType) {
+                list += newMovieSearchResponse(item.optString("mn"), loadUrl.toJson(), tvType) {
                     this.posterUrl = item.optString("IH")
                     if (type == "Movies") this.quality =
                         getQualityFromString(item.optString("qlty").takeIf { it.isNotEmpty() })
@@ -276,7 +276,7 @@ class RingZ : MainAPI() {
 
                 val loadUrl = item.toLoadURL(type, fallbackUrl = "$fallback")
 
-                list += newnewMovieSearchResponse(name, loadUrl.toJson(), tvType) {
+                list += newMovieSearchResponse(name, loadUrl.toJson(), tvType) {
                     this.posterUrl = item.optString("IH")
                     if (tvType == TvType.Movie) this.quality =
                         getQualityFromString(item.optString("qlty").takeIf { it.isNotEmpty() })
@@ -554,5 +554,9 @@ class RingZ : MainAPI() {
         return Qualities.Unknown.value
     }
 }
+
+
+
+
 
 

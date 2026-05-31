@@ -1,4 +1,4 @@
-package com.piratexplay
+package com.admknight.piratexplay
 
 import com.lagradost.cloudstream3.HomePageResponse
 import com.lagradost.cloudstream3.LoadResponse
@@ -59,7 +59,7 @@ class Piratexplay : MainAPI() {
         val href = fixUrl(this.selectFirst("a")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("img")?.getImageAttr())
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
+        return newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
     }
 
     override suspend fun search(query: String,page: Int): SearchResponseList {
@@ -147,3 +147,7 @@ class Piratexplay : MainAPI() {
     }
 
 }
+
+
+
+

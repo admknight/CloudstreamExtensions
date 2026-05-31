@@ -1,4 +1,4 @@
-package com.lagradost.cloudstream3.movieproviders
+package com.admknight.entrepeliculasyseries
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.network.CloudflareKiller
@@ -34,15 +34,10 @@ class EntrepeliculasyseriesProvider : MainAPI() {
         val home = soup.select("ul.post-lst article").map {
             val title = it.selectFirst(".title")!!.text()
             val link = it.selectFirst("a")!!.attr("href")
-            newTvSeriesSearchResponse(
-                title,
-                link,
-                this.name,
-                if (link.contains("/pelicula/")) TvType.Movie else TvType.TvSeries,
-                it.selectFirst("img")!!.attr("src"),
-                null,
-                null,
-            )
+            val typeinfo = if (link.contains("/pelicula/")) TvType.Movie else TvType.TvSeries
+            newTvSeriesSearchResponse(title, link, typeinfo) {
+                this.posterUrl = it.selectFirst("img")!!.attr("src")
+            }
         }
 
         return newHomePageResponse(request.name, home)
@@ -83,24 +78,13 @@ class EntrepeliculasyseriesProvider : MainAPI() {
             val isMovie = href.contains("/pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    null
-                )
+                newMovieSearchResponse(title, href, TvType.Movie) {
+                    this.posterUrl = image
+                }
             } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                    this.posterUrl = image
+                }
             }
         }.toList()
     }
@@ -122,26 +106,23 @@ class EntrepeliculasyseriesProvider : MainAPI() {
             val isValid = seasonid.size == 2
             val episode = if (isValid) seasonid.getOrNull(1) else null
             val season = if (isValid) seasonid.getOrNull(0) else null
-            Episode(
-                href,
-                null,
-                season,
-                episode,
-                fixUrl(epThumb)
-            )
+            newEpisode(href) {
+                this.season = season
+                this.episode = episode
+                this.posterUrl = fixUrl(epThumb)
+            }
         }
         return when (val tvType =
             if (url.contains("/pelicula/")) TvType.Movie else TvType.TvSeries) {
             TvType.TvSeries -> {
-                newTvSeriesLoadResponse(title,
-                    url, tvType, episodes,){
+                newTvSeriesLoadResponse(title, url, tvType, episodes) {
                     this.posterUrl = poster
                     this.backgroundPosterUrl = backgroundposter
                     this.plot = description
                 }
             }
             TvType.Movie -> {
-                newMovieLoadResponse(title, url, tvType, url){
+                newMovieLoadResponse(title, url, tvType, url) {
                     this.posterUrl = poster
                     this.backgroundPosterUrl = backgroundposter
                     this.plot = description
@@ -175,3 +156,7 @@ class EntrepeliculasyseriesProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

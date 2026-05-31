@@ -1,4 +1,4 @@
-package com.Animenosub
+package com.admknight.animenosub
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
@@ -40,7 +40,7 @@ class Animenosub : MainAPI() {
         val title     = this.select("div.bsx > a").attr("title")
         val href      = fixUrl(this.select("div.bsx > a").attr("href"))
         val posterUrl = fixUrlNull(this.select("div.bsx > a img").attr("src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -123,3 +123,7 @@ class Animenosub : MainAPI() {
         return true
     }
 }
+
+
+
+

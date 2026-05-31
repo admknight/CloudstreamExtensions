@@ -1,4 +1,4 @@
-package com.zinkmovies
+package com.admknight.zinkmovies
 
 import com.lagradost.cloudstream3.extractors.StreamTape
 import com.lagradost.cloudstream3.plugins.BasePlugin
@@ -41,3 +41,6 @@ class ZinkmoviesPlugin: BasePlugin() {
         )
     }
 }
+
+
+

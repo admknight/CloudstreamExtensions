@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animesalt
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.Gson
@@ -354,3 +354,6 @@ class AnimesaltMulti : ExtractorApi() {
     }
 
 }
+
+
+

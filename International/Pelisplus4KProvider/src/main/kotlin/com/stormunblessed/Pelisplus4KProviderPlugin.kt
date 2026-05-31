@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.pelisplus4k
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -11,3 +11,6 @@ class Pelisplus4KProviderPlugin: Plugin() {
         registerMainAPI(Pelisplus4KProvider())
     }
 }
+
+
+

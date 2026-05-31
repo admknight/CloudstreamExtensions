@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.movierulzhd
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -142,3 +142,7 @@ open class Hdmovie2 : Movierulzhd() {
     )
 
 }
+
+
+
+

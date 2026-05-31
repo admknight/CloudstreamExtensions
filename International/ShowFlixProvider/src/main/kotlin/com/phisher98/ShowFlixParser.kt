@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.showflix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -41,3 +41,6 @@ data class Loadlinks(
     val goFile: String?,
     val hubCloudLink: String?
 )
+
+
+

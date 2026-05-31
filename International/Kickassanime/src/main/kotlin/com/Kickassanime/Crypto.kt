@@ -1,4 +1,4 @@
-package com.kickassanime
+package com.admknight.kickassanime
 /*
  * Copyright (C) The Tachiyomi Open Source Project
  *
@@ -218,3 +218,6 @@ object CryptoAES {
             .toByteArray()
     }
 }
+
+
+

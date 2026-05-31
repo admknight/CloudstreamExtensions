@@ -1,4 +1,4 @@
-package com.Tamilian
+package com.admknight.tamilian
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,3 +9,7 @@ class HiAnimeProviderPlugin : BasePlugin() {
         registerMainAPI(Tamilian())
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.playhub
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -132,7 +132,7 @@ class PlayhubProvider:MainAPI() {
             val id = it.id
             val href = "$mainUrl/movies/$id"
             search.add(
-                newnewMovieSearchResponse(title, href, TvType.Movie){
+                newMovieSearchResponse(title, href, TvType.Movie){
                     this.posterUrl = poster
                 })
         }
@@ -144,7 +144,7 @@ class PlayhubProvider:MainAPI() {
             val id = it.id
             val href = "$mainUrl/series/$id"
             search.add(
-                newnewTvSeriesSearchResponse(title,href, TvType.TvSeries) {
+                newTvSeriesSearchResponse(title,href, TvType.TvSeries) {
                     this.posterUrl = poster
                 })
         }
@@ -263,7 +263,7 @@ class PlayhubProvider:MainAPI() {
                 val recposterinfo = it.posterPath
                 val recposter = getImageUrl(recposterinfo)
                 recs.add(
-                    newnewMovieSearchResponse(rectitle, "$mainUrl/movies/$recid", type) {
+                    newMovieSearchResponse(rectitle, "$mainUrl/movies/$recid", type) {
                         this.posterUrl = recposter
                     })
             }
@@ -336,3 +336,6 @@ class PlayhubProvider:MainAPI() {
         return true
     }
 }
+
+
+

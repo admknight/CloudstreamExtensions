@@ -1,4 +1,4 @@
-package com.horis.cncverse
+package com.admknight.netmirror
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -33,3 +33,6 @@ object NetflixMirrorStorage {
         editor.apply()
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.superembed
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.metaproviders.TmdbLink
@@ -81,3 +81,7 @@ class SuperembedProvider : TmdbProvider() {
         }
     }
 }
+
+
+
+

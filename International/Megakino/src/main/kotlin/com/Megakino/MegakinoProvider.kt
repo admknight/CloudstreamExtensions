@@ -1,4 +1,4 @@
-package com.Megakino
+package com.admknight.megakino
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -12,3 +12,6 @@ class MegakinoProvider: BasePlugin() {
         registerExtractorAPI(Gxplayer())
     }
 }
+
+
+

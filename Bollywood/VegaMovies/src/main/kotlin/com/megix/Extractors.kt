@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.vegamovies
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -154,3 +154,7 @@ open class VCloud : ExtractorApi() {
         }
     }
 }
+
+
+
+

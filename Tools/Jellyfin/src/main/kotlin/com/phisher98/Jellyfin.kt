@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.jellyfin
 
 import android.content.SharedPreferences
 import com.lagradost.api.Log
@@ -125,7 +125,7 @@ open class Jellyfin(sharedPref: SharedPreferences? = null) : MainAPI() {
             "movies", "movie" -> TvType.Movie
             else -> TvType.Movie
         }
-        return newnewMovieSearchResponse(name, LoadData(name, poster, type, id, userId).toJson(), type) {
+        return newMovieSearchResponse(name, LoadData(name, poster, type, id, userId).toJson(), type) {
             this.posterUrl = poster
         }
     }
@@ -298,3 +298,7 @@ open class Jellyfin(sharedPref: SharedPreferences? = null) : MainAPI() {
         }
     }
 }
+
+
+
+

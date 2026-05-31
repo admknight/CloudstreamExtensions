@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.cinestream
 
 
 // Cloudstream Core & Utils
@@ -29,8 +29,8 @@ import kotlinx.coroutines.coroutineScope
 // JSON Parsing
 import org.json.JSONObject
 
-import com.megix.CineStreamExtractors.invokeAllSources
-import com.megix.CineStreamExtractors.invokeAllAnimeSources
+import com.admknight.cinestream.CineStreamExtractors.invokeAllSources
+import com.admknight.cinestream.CineStreamExtractors.invokeAllAnimeSources
 
 class CineSimklProvider: MainAPI() {
     override var name = "CineSimkl"
@@ -166,7 +166,7 @@ class CineSimklProvider: MainAPI() {
                     val allratings = it.ratings
                     val score = allratings?.mal?.rating ?: allratings?.imdb?.rating
                     val title = it.title_en ?: it.title ?: return@mapNotNull null
-                    newnewMovieSearchResponse(title, "${mainUrl}${it.url}") {
+                    newMovieSearchResponse(title, "${mainUrl}${it.url}") {
                         posterUrl = getPosterUrl(it.poster, "poster")
                         this.score = Score.from10(score)
                     }
@@ -224,7 +224,7 @@ class CineSimklProvider: MainAPI() {
                     val allratings = it.ratings
                     val score = allratings?.mal?.rating ?: allratings?.imdb?.rating
                     val title = it.title ?: return@mapNotNull null
-                    newnewMovieSearchResponse(title, "${mainUrl}${it.url?.replace("movie", "movies")}") {
+                    newMovieSearchResponse(title, "${mainUrl}${it.url?.replace("movie", "movies")}") {
                         this.posterUrl = getPosterUrl(it.poster, "poster")
                         this.score = Score.from10(score)
                     }
@@ -315,13 +315,13 @@ class CineSimklProvider: MainAPI() {
             json.relations?.forEach {
                 val prefix = it.relation_type?.replaceFirstChar { c -> c.uppercase() }?.let { "($it) " } ?: ""
 
-                add(newnewMovieSearchResponse("${prefix} ${it.en_title ?: it.title}", "$mainUrl/$tvType/${it.ids.simkl}/${it.ids.slug}") {
+                add(newMovieSearchResponse("${prefix} ${it.en_title ?: it.title}", "$mainUrl/$tvType/${it.ids.simkl}/${it.ids.slug}") {
                     this.posterUrl = getPosterUrl(it.poster, "poster")
                 })
             }
 
             json.users_recommendations?.forEach {
-                add(newnewMovieSearchResponse(it.en_title ?: it.title ?: "", "$mainUrl/$tvType/${it.ids.simkl}/${it.ids.slug}") {
+                add(newMovieSearchResponse(it.en_title ?: it.title ?: "", "$mainUrl/$tvType/${it.ids.simkl}/${it.ids.slug}") {
                     this.posterUrl = getPosterUrl(it.poster, "poster")
                 })
             }
@@ -622,3 +622,7 @@ class CineSimklProvider: MainAPI() {
         val imdbEpisode : Int?    = null,
     )
 }
+
+
+
+

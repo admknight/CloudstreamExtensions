@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.torrastream
 
 import android.content.SharedPreferences
 import android.util.Base64
@@ -128,7 +128,7 @@ class TorraStream(private val sharedPref: SharedPreferences) : TmdbProvider() {
     }
 
     private fun Media.toSearchResponse(type: String? = null): SearchResponse? {
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             title ?: name ?: originalTitle ?: return null,
             Data(id = id, type = mediaType ?: type).toJson(),
             TvType.Movie,
@@ -587,4 +587,8 @@ suspend fun generateMagnetLink(
             }
     }
 }
+
+
+
+
 

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animepahe
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -117,3 +117,7 @@ class BottomFragment(private val plugin: AnimePaheProviderPlugin) : BottomSheetD
         }
     }
 }
+
+
+
+

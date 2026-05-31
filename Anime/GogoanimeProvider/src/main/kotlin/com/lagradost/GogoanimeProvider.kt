@@ -1,13 +1,15 @@
-package com.lagradost
+package com.admknight.gogoanime
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.mvvm.normalSafeApiCall
+import com.lagradost.cloudstream3.mvvm.safe
 import com.lagradost.cloudstream3.mvvm.safeApiCall
 import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import java.net.URI
@@ -37,7 +39,7 @@ class GogoanimeProvider : MainAPI() {
          * @return the encryption key
          * */
         private fun getKey(id: String): String? {
-            return normalSafeApiCall {
+            return safe {
                 id.map {
                     it.code.toString(16)
                 }.joinToString("").substring(0, 32)
@@ -139,22 +141,20 @@ class GogoanimeProvider : MainAPI() {
             val datadecrypted = cryptoHandler(dataencrypted, foundIv, foundDecryptKey, false)
             val sources = AppUtils.parseJson<GogoSources>(datadecrypted)
 
-            fun invokeGogoSource(
+            suspend fun invokeGogoSource(
                 source: GogoSource,
                 sourceCallback: (ExtractorLink) -> Unit
             ) {
                 sourceCallback.invoke(
-                    ExtractorLink(
+                    newExtractorLink(
                         mainApiName,
                         mainApiName,
                         source.file,
-                        mainUrl,
-                        getQualityFromName(source.label),
-                        isM3u8 = source.type == "hls" || source.label?.contains(
-                            "auto",
-                            ignoreCase = true
-                        ) == true
-                    )
+                        INFER_TYPE
+                    ) {
+                        this.referer = mainUrl
+                        this.quality = getQualityFromName(source.label)
+                    }
                 )
             }
 
@@ -214,7 +214,7 @@ class GogoanimeProvider : MainAPI() {
 
         val home = parseRegex.findAll(html.text).map {
             val (link, epNum, title, poster) = it.destructured
-            newnewAnimeSearchResponse(title, link) {
+            newAnimeSearchResponse(title, link) {
                 this.posterUrl = poster
                 addDubStatus(!isSub, epNum.toIntOrNull())
             }
@@ -229,20 +229,11 @@ class GogoanimeProvider : MainAPI() {
         val doc = Jsoup.parse(html)
 
         val episodes = doc.select(""".last_episodes li""").mapNotNull {
-            newAnimeSearchResponse(
-                it.selectFirst(".name")?.text()?.replace(" (Dub)", "") ?: return@mapNotNull null,
-                fixUrl(it.selectFirst(".name > a")?.attr("href") ?: return@mapNotNull null),
-                this.name,
-                TvType.Anime,
-                it.selectFirst("img")?.attr("src"),
-                it.selectFirst(".released")?.text()?.split(":")?.getOrNull(1)?.trim()
-                    ?.toIntOrNull(),
-                if (it.selectFirst(".name")?.text()
-                        ?.contains("Dub") == true
-                ) EnumSet.of(DubStatus.Dubbed) else EnumSet.of(
-                    DubStatus.Subbed
-                ),
-            )
+            newAnimeSearchResponse(it.selectFirst(".name")?.text()?.replace(" (Dub)", "") ?: return@mapNotNull null, fixUrl(it.selectFirst(".name > a")?.attr("href") ?: return@mapNotNull null), TvType.Anime) {
+                this.posterUrl = it.selectFirst("img")?.attr("src")
+                this.year = it.selectFirst(".released")?.text()?.split(":")?.getOrNull(1)?.trim()?.toIntOrNull()
+                addDubStatus(it.selectFirst(".name")?.text()?.contains("Dub") == true)
+            }
         }
 
         return ArrayList(episodes)
@@ -301,10 +292,9 @@ class GogoanimeProvider : MainAPI() {
         val params = mapOf("ep_start" to "0", "ep_end" to "2000", "id" to animeId)
 
         val episodes = app.get(episodeloadApi, params = params).document.select("a").map {
-            Episode(
-                fixUrl(it.attr("href").trim()),
-                "Episode " + it.selectFirst(".name")?.text()?.replace("EP", "")?.trim()
-            )
+            newEpisode(fixUrl(it.attr("href").trim())) {
+                this.name = "Episode " + it.selectFirst(".name")?.text()?.replace("EP", "")?.trim()
+            }
         }.reversed()
 
         return newAnimeLoadResponse(title, link, getType(type.toString())) {
@@ -344,26 +334,27 @@ class GogoanimeProvider : MainAPI() {
 
         val iframe = fixUrlNull(doc.selectFirst("div.play-video > iframe")?.attr("src")) ?: return
 
-        argamap(
+        runAllAsync(
             {
                 val link = iframe.replace("streaming.php", "download")
                 val page = app.get(link, headers = mapOf("Referer" to iframe))
 
-                page.document.select(".dowload > a").map {
+                page.document.select(".dowload > a").amap {
                     if (it.hasAttr("download")) {
                         val qual = if (it.text()
                                 .contains("HDP")
                         ) "1080" else qualityRegex.find(it.text())?.destructured?.component1()
                             .toString()
                         callback(
-                            ExtractorLink(
+                            newExtractorLink(
                                 "Gogoanime",
                                 "Gogoanime",
                                 it.attr("href"),
-                                page.url,
-                                getQualityFromName(qual),
-                                it.attr("href").contains(".m3u8")
-                            )
+                                INFER_TYPE
+                            ) {
+                                this.referer = page.url
+                                this.quality = getQualityFromName(qual)
+                            }
                         )
                     } else {
                         val url = it.attr("href")
@@ -373,12 +364,12 @@ class GogoanimeProvider : MainAPI() {
             }, {
                 val streamingResponse = app.get(iframe, headers = mapOf("Referer" to iframe))
                 val streamingDocument = streamingResponse.document
-                argamap({
+                runAllAsync({
                     streamingDocument.select(".list-server-items > .linkserver")
-                        .forEach { element ->
-                            val status = element.attr("data-status") ?: return@forEach
-                            if (status != "1") return@forEach
-                            val data = element.attr("data-video") ?: return@forEach
+                        .amap { element ->
+                            val status = element.attr("data-status") ?: return@amap
+                            if (status != "1") return@amap
+                            val data = element.attr("data-video") ?: return@amap
                             loadExtractor(data, streamingResponse.url, subtitleCallback, callback)
                         }
                 }, {
@@ -410,3 +401,7 @@ class GogoanimeProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

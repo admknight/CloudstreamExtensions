@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.superstream
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
@@ -43,9 +43,9 @@ import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.INFER_TYPE
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.phisher98.SuperStreamExtractor.invokeSubtitleAPI
-import com.phisher98.SuperStreamExtractor.invokeSuperstream
-import com.phisher98.SuperStreamExtractor.invokeSuperstreamFeb
+import com.admknight.superstream.SuperStreamExtractor.invokeSubtitleAPI
+import com.admknight.superstream.SuperStreamExtractor.invokeSuperstream
+import com.admknight.superstream.SuperStreamExtractor.invokeSuperstreamFeb
 import kotlinx.coroutines.withTimeoutOrNull
 import org.json.JSONObject
 import org.jsoup.Jsoup
@@ -228,7 +228,7 @@ open class SuperStream(sharedPref: SharedPreferences? = null) : TmdbProvider() {
 
 
     private fun Media.toSearchResponse(type: String? = null): SearchResponse? {
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             title ?: name ?: originalTitle ?: return null,
             Data(id = id, type = mediaType ?: type).toJson(),
             TvType.Movie,
@@ -264,12 +264,12 @@ open class SuperStream(sharedPref: SharedPreferences? = null) : TmdbProvider() {
         val finalPoster = posterRes?.file?.thumb_big ?: posterRes?.file?.thumb ?: posterRes?.file?.thumb_small ?: poster
 
         return if (isDir) {
-            newnewTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+            newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                 this.posterUrl = finalPoster.ifEmpty { "https://www.febbox.com/static/index_img/file_type/dir_icon2.png" }
             }
         } else
         {
-            newnewMovieSearchResponse(title, href, TvType.Movie) {
+            newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = finalPoster.ifEmpty { "https://www.febbox.com/static/index_img/file_type/dir_icon2.png" }
             }
         }
@@ -850,3 +850,7 @@ val malId: Int? = null,
     }
 
 }
+
+
+
+

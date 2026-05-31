@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animedekho
 
 import com.google.gson.Gson
 import com.lagradost.api.Log
@@ -56,7 +56,7 @@ open class AnimeDekhoProvider : MainAPI() {
         {
             posterUrl=this.selectFirst("div figure img")?.attr("data-lazy-src")
         }
-        return newnewAnimeSearchResponse(title, Media(href, posterUrl).toJson(), TvType.Anime, false) {
+        return newAnimeSearchResponse(title, Media(href, posterUrl).toJson(), TvType.Anime, false) {
             this.posterUrl = posterUrl
         }
     }
@@ -114,7 +114,7 @@ open class AnimeDekhoProvider : MainAPI() {
                     mediaType = 0 // You can adjust this
                 )
                 val mediaJson = Gson().toJson(mediadata)
-                newnewTvSeriesSearchResponse(recName, mediaJson, TvType.TvSeries) {
+                newTvSeriesSearchResponse(recName, mediaJson, TvType.TvSeries) {
                     this.posterUrl = mediadata.poster
                 }
             }
@@ -195,3 +195,7 @@ open class AnimeDekhoProvider : MainAPI() {
     data class Media(val url: String, val poster: String? = null, val mediaType: Int? = null)
 
 }
+
+
+
+

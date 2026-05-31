@@ -1,4 +1,4 @@
-package com.Toonstream
+package com.admknight.toonstream
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.app
@@ -49,3 +49,6 @@ class ToonstreamProvider: BasePlugin() {
         )
     }
 }
+
+
+

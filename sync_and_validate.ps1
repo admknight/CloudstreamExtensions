@@ -44,10 +44,18 @@ foreach ($URL in $Sources) {
         # --- CODE SURGERY ---
         Get-ChildItem -Path $Target -Filter "*.kt" -Recurse | ForEach-Object {
             $Code = Get-Content $_.FullName -Raw
+            $Code = $Code -replace 'argamap\(', 'runAllAsync('
             $Code = $Code -replace '\.apmap', '.map'
-            $Code = $Code -replace 'MovieSearchResponse\(', 'newMovieSearchResponse('
-            $Code = $Code -replace 'TvSeriesSearchResponse\(', 'newTvSeriesSearchResponse('
-            $Code = $Code -replace 'AnimeSearchResponse\(', 'newAnimeSearchResponse('
+            $Code = $Code -replace '(?<!new)MovieSearchResponse\(', 'newMovieSearchResponse('
+            $Code = $Code -replace '(?<!new)TvSeriesSearchResponse\(', 'newTvSeriesSearchResponse('
+            $Code = $Code -replace '(?<!new)AnimeSearchResponse\(', 'newAnimeSearchResponse('
+            $Code = $Code -replace '(?<!new)LiveSearchResponse\(', 'newLiveSearchResponse('
+            $Code = $Code -replace '(?<!new)HomePageResponse\(', 'newHomePageResponse('
+
+            # Score / Rating Migration
+            $Code = $Code -replace 'rating\s*=\s*(.*)\.toRatingInt\(\)', 'score = Score.from10($1)'
+            $Code = $Code -replace '\.toRatingInt\(\)', ''
+
             Set-Content $_.FullName $Code
         }
 
@@ -74,3 +82,32 @@ foreach ($URL in $Sources) {
         Write-Host "Repaired: [$Category] $PluginName" -ForegroundColor Green
     }
 }
+
+# --- GLOBAL DEDUPLICATION & STABILITY PATCHING ---
+Write-Host "Applying Global Deduplication & Stability Patches..." -ForegroundColor Cyan
+
+# 1. Resolve Kisskh Redeclaration
+Get-ChildItem -Path "International/KisskhProvider" -Filter "*KisskhProvider*.kt" -Recurse | Where-Object { $_.FullName -match "lagradost" } | Remove-Item -Force
+
+# 2. Resolve Netmirror Clashes
+Get-ChildItem -Path "Bollywood/Netmirror" -Filter "*.kt" -Recurse | ForEach-Object {
+    $c = Get-Content $_.FullName -Raw
+    $c = $c -replace '\bEpisode\b', 'NetmirrorEpisode'
+    $c = $c -replace 'com\.lagradost\.cloudstream3\.NetmirrorEpisode', 'com.lagradost.cloudstream3.Episode'
+    Set-Content $_.FullName $c
+}
+
+# 3. Resolve StremioAddon Duplicates
+if (Test-Path "Tools/StremioAddon/src/main/kotlin/com/phisher98/StremioAddonProvider.kt") {
+    Remove-Item "Tools/StremioAddon/src/main/kotlin/com/phisher98/StremioAddonProvider.kt" -Force
+}
+
+# 4. Global Namespace Alignment & Base64 Fixes
+Get-ChildItem -Path "." -Filter "*.kt" -Recurse | ForEach-Object {
+    $c = Get-Content $_.FullName -Raw
+    $c = $c -replace 'import java\.util\.Base64', ''
+    $c = $c -replace 'Base64\.getDecoder\(\)\.decode', 'base64DecodeArray'
+    Set-Content $_.FullName $c
+}
+
+Remove-Item -Path "temp_sources" -Recurse -Force -ErrorAction SilentlyContinue

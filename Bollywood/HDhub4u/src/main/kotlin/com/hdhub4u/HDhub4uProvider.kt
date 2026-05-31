@@ -1,4 +1,4 @@
-package com.hdhub4u
+package com.admknight.hdhub4u
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Actor
@@ -86,14 +86,14 @@ class HDhub4uProvider : MainAPI() {
             .text()
         val title = cleanTitle(titleText)
         val url = post.select("figure:nth-child(1) > a:nth-child(2)").attr("href")
-        return newnewMovieSearchResponse(title, url, TvType.Movie) {
+        return newMovieSearchResponse(title, url, TvType.Movie) {
             this.posterUrl = post.select("figure:nth-child(1) > img:nth-child(1)").attr("src")
             this.quality = getSearchQuality(titleText)
         }
     }
 
     private fun Document.toSearchResult(): SearchResponse {
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             name = postTitle,
             url = permalink,
             type = TvType.Movie
@@ -528,3 +528,6 @@ class HDhub4uProvider : MainAPI() {
         return null
     }
 }
+
+
+

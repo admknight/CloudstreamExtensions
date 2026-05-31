@@ -1,4 +1,4 @@
-package com.tamilblasters
+package com.admknight.tamilblasters
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -30,7 +30,7 @@ class TamilblastersProvider : MainAPI() {
         val name = selectFirst("h2>a")?.text() ?: return null
         val posterUrl = selectFirst("img")?.attr("src")
         val href = selectFirst("a")?.attr("href") ?: return null
-        return newnewMovieSearchResponse(name, href, TvType.Movie) {
+        return newMovieSearchResponse(name, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -115,3 +115,7 @@ class TamilblastersProvider : MainAPI() {
         }
     }
 }
+
+
+
+

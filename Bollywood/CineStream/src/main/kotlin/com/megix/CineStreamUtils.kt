@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.cinestream
 
 // Cloudstream & NiceHttp
 import com.lagradost.api.Log
@@ -53,7 +53,7 @@ import javax.crypto.spec.SecretKeySpec
 import java.math.BigInteger
 
 // Settings
-import com.megix.settings.Settings
+import com.admknight.cinestream.Settings
 
 
 class SpecOption(searchTerms: List<String>, val label: String) {
@@ -1661,3 +1661,7 @@ fun parseQualityDivs(html: String): List<VideoQuality> {
             VideoQuality(url = url.replace("\\/", "/"), quality = quality)
         }.toList()
 }
+
+
+
+

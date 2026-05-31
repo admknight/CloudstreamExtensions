@@ -1,4 +1,4 @@
-package com.Cinemacity
+package com.admknight.cinemacity
 
 import android.util.Log
 import com.google.gson.Gson
@@ -119,7 +119,7 @@ class Cinemacity : MainAPI() {
 
         val type = if (href.contains("/tv-series/", true)) TvType.TvSeries else TvType.Movie
 
-        return newnewMovieSearchResponse(title, href, type) {
+        return newMovieSearchResponse(title, href, type) {
             this.posterUrl = posterUrl
             this.score = Score.from10(score)
             this.quality = getQualityFromString(quality)
@@ -169,7 +169,7 @@ class Cinemacity : MainAPI() {
             val score = it.select("span.rating-color1").text()
             val posterUrl=it.selectFirst("div > a")?.attr("href")
 
-            newnewMovieSearchResponse(title, href, TvType.Movie) {
+            newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
                 this.score = Score.from10(score)
             }
@@ -657,3 +657,7 @@ class Cinemacity : MainAPI() {
         return base + qs
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animesalt
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -20,3 +20,7 @@ class AnimesaltProvider : BasePlugin() {
         registerExtractorAPI(Short())
     }
 }
+
+
+
+

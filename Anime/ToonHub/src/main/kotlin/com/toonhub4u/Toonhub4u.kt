@@ -1,4 +1,4 @@
-package com.toonhub4u
+package com.admknight.toonhub
 
 
 import com.lagradost.api.Log
@@ -52,7 +52,7 @@ class Toonhub4u : MainAPI() {
         val title     = this.select("a").text().trim().substringBefore("[")
         val href      = fixUrl(this.select("a").attr("href"))
         val posterUrl = this.select("a img").attr("data-src").ifEmpty { this.select("a img").attr("src") }
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
         }
     }
@@ -133,3 +133,7 @@ class Toonhub4u : MainAPI() {
         return true
     }
 }
+
+
+
+

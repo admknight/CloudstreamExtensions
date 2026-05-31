@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.sflix
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -16,3 +16,6 @@ class SflixProviderPlugin : Plugin() {
         registerMainAPI(HDTodayProvider())
     }
 }
+
+
+

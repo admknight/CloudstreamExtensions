@@ -1,4 +1,4 @@
-package com.MPlayer
+package com.admknight.mplayer
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
@@ -824,3 +824,7 @@ data class MoviePublisher2(
     val id: String,
     val name: String,
 )
+
+
+
+

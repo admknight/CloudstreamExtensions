@@ -1,4 +1,4 @@
-package com.kayifamilytv
+package com.admknight.kayifamilytv
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
@@ -206,3 +206,6 @@ abstract class FirePlayer : ExtractorApi() {
         val format: String? = null
     )
 }
+
+
+

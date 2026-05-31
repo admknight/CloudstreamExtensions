@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.tenshi
 
 import android.annotation.SuppressLint
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -57,30 +57,20 @@ class TenshiProvider : MainAPI() {
                             ) else it.toString()
                         }
                         val anime = top.select("li > a").map {
-                            newAnimeSearchResponse(
-                                it.selectFirst(".thumb-title")!!.text(),
-                                fixUrl(it.attr("href")),
-                                this.name,
-                                TvType.Anime,
-                                it.selectFirst("img")!!.attr("src"),
-                                null,
-                                EnumSet.of(DubStatus.Subbed),
-                            )
+                            newAnimeSearchResponse(it.selectFirst(".thumb-title")!!.text(), fixUrl(it.attr("href")), TvType.Anime) {
+                                this.posterUrl = it.selectFirst("img")!!.attr("src")
+                                addDubStatus(DubStatus.Subbed)
+                            }
                         }
                         items.add(HomePageList(title, anime))
                     }
                 } else {
                     val title = section.selectFirst("h2")!!.text()
                     val anime = section.select("li > a").map {
-                        newAnimeSearchResponse(
-                            it.selectFirst(".thumb-title")?.text() ?: "",
-                            fixUrl(it.attr("href")),
-                            this.name,
-                            TvType.Anime,
-                            it.selectFirst("img")!!.attr("src"),
-                            null,
-                            EnumSet.of(DubStatus.Subbed),
-                        )
+                        newAnimeSearchResponse(it.selectFirst(".thumb-title")?.text() ?: "", fixUrl(it.attr("href")), TvType.Anime) {
+                            this.posterUrl = it.selectFirst("img")!!.attr("src")
+                            addDubStatus(DubStatus.Subbed)
+                        }
                     }
                     items.add(HomePageList(title, anime))
                 }
@@ -107,19 +97,14 @@ class TenshiProvider : MainAPI() {
             val img = fixUrl(it.selectFirst("img")!!.attr("src"))
             val title = it.attr("title")
             if (getIsMovie(href, true)) {
-                newMovieSearchResponse(
-                    title, href, this.name, TvType.Movie, img, null
-                )
+                newMovieSearchResponse(title, href, TvType.Movie) {
+                    this.posterUrl = img
+                }
             } else {
-                newAnimeSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Anime,
-                    img,
-                    null,
-                    EnumSet.of(DubStatus.Subbed),
-                )
+                newAnimeSearchResponse(title, href, TvType.Anime) {
+                    this.posterUrl = img
+                    addDubStatus(DubStatus.Subbed)
+                }
             }
         }
     }
@@ -258,7 +243,9 @@ class TenshiProvider : MainAPI() {
             val title =
                 element.selectFirst("> .overlay > .thumb-title")?.text() ?: return@mapNotNull null
             val img = element.selectFirst("> img")?.attr("src")
-            newAnimeSearchResponse(title, href, this.name, TvType.Anime, img)
+            newAnimeSearchResponse(title, href, TvType.Anime) {
+                this.posterUrl = img
+            }
         }
 
         val type = document.selectFirst("a[href*=\"$mainUrl/type/\"]")?.text()?.trim()
@@ -351,3 +338,7 @@ class TenshiProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.vidsrc
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
@@ -57,3 +57,6 @@ class VidSrcProvider : TmdbProvider() {
         return true
     }
 }
+
+
+

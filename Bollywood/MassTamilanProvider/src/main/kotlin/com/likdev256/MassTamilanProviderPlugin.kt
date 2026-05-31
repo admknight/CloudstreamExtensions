@@ -1,4 +1,4 @@
-package com.likdev256
+package com.admknight.masstamilan
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -10,3 +10,7 @@ class MovieHUBProviderPlugin: BasePlugin() {
         registerMainAPI(MassTamilanProvider())
     }
 }
+
+
+
+

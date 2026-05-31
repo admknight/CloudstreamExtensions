@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.trailerstwo
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -6,6 +6,7 @@ import com.lagradost.cloudstream3.metaproviders.TmdbLink
 import com.lagradost.cloudstream3.metaproviders.TmdbProvider
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 
@@ -152,17 +153,17 @@ class TrailersTwoProvider : TmdbProvider() {
         }
 
         callback.invoke(
-            ExtractorLink(
+            newExtractorLink(
                 this.name,
                 this.name,
                 videoUrl,
-                "https://trailers.to",
-                Qualities.Unknown.value,
-                false,
-            )
+            ) {
+                this.referer = "https://trailers.to"
+                this.quality = Qualities.Unknown.value
+            }
         )
 
-        argamap(
+        runAllAsync(
             {
                 val subtitles =
                     app.get(subtitleUrl).text
@@ -187,14 +188,14 @@ class TrailersTwoProvider : TmdbProvider() {
                         .firstOrNull()?.let { movieId ->
                             val correctUrl = app.get(videoUrl).url
                             callback.invoke(
-                                ExtractorLink(
+                                newExtractorLink(
                                     this.name,
                                     "${this.name} Backup",
                                     correctUrl.replace("/$user/0/", "/$user/$movieId/"),
-                                    "https://trailers.to",
-                                    Qualities.Unknown.value,
-                                    false,
-                                )
+                                ) {
+                                    this.referer = "https://trailers.to"
+                                    this.quality = Qualities.Unknown.value
+                                }
                             )
                         }
                 }
@@ -317,3 +318,6 @@ data class ItemSubtitleAdaptations(
     @JsonProperty("EntryDate") val EntryDate: String?,
     @JsonProperty("Subtitle") val Subtitle: String?
 )
+
+
+

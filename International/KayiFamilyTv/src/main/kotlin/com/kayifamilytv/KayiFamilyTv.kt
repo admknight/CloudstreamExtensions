@@ -1,4 +1,4 @@
-package com.kayifamilytv
+package com.admknight.kayifamilytv
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -67,7 +67,7 @@ class KayiFamilyTv: MainAPI() {
         val img = selectFirst(imageSelector)
         val poster = img?.attr("data-src")?.ifEmpty { img.attr("src") }.orEmpty()
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             posterUrl = poster
         }
     }
@@ -89,7 +89,7 @@ class KayiFamilyTv: MainAPI() {
             val imgElement = this.selectFirst("img.mvp-reg-img")
             val posterUrl = imgElement?.attr("data-src")?.ifEmpty { imgElement.attr("src") } ?: ""
 
-            return newnewMovieSearchResponse(title, href, TvType.Movie) {
+            return newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
             }
         }
@@ -149,3 +149,7 @@ class KayiFamilyTv: MainAPI() {
          return true
     }
 }
+
+
+
+

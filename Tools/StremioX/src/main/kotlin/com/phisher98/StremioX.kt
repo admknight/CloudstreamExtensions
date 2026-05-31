@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.stremiox
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -41,8 +41,8 @@ import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.phisher98.SubsExtractors.invokeOpenSubs
-import com.phisher98.SubsExtractors.invokeWatchsomuch
+import com.admknight.stremiox.SubsExtractors.invokeOpenSubs
+import com.admknight.stremiox.SubsExtractors.invokeWatchsomuch
 
 class StremioX(override var mainUrl: String, override var name: String) : TmdbProvider() {
     override val hasMainPage = true
@@ -112,7 +112,7 @@ class StremioX(override var mainUrl: String, override var name: String) : TmdbPr
     }
 
     private fun Media.toSearchResponse(type: String? = null): SearchResponse? {
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             title ?: name ?: originalTitle ?: return null,
             Data(id = id, type = mediaType ?: type).toJson(),
             TvType.Movie,
@@ -710,3 +710,7 @@ class StremioX(override var mainUrl: String, override var name: String) : TmdbPr
     )
 
 }
+
+
+
+

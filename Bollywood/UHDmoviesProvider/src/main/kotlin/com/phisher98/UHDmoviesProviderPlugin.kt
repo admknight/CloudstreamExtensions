@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.uhdmovies
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.plugins.BasePlugin
@@ -40,3 +40,7 @@ class UHDmoviesProviderPlugin: BasePlugin() {
         )
     }
 }
+
+
+
+

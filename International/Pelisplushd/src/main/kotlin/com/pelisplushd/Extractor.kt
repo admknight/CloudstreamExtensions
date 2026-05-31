@@ -1,4 +1,4 @@
-package com.pelisplushd
+package com.admknight.pelisplushd
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.base64DecodeArray
@@ -184,3 +184,6 @@ suspend fun loadSourceNameExtractor(
         }
     }
 }
+
+
+

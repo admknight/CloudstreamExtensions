@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.aniwave
 
 
 
@@ -62,7 +62,7 @@ class AniwaveProvider : MainAPI() {
             val subbedEpisodes = meta?.selectFirst(".sub")?.text()?.toIntOrNull()
             val dubbedEpisodes = meta?.selectFirst(".dub")?.text()?.toIntOrNull()
 
-            newnewAnimeSearchResponse(title.text() ?: return@mapNotNull null, link) {
+            newAnimeSearchResponse(title.text() ?: return@mapNotNull null, link) {
                 this.posterUrl = poster
                 addDubStatus(
                     dubbedEpisodes != null,
@@ -98,7 +98,7 @@ class AniwaveProvider : MainAPI() {
             val title = img.attr("alt")
             val subbedEpisodes = it?.selectFirst(".sub")?.text()?.toIntOrNull()
             val dubbedEpisodes = it?.selectFirst(".dub")?.text()?.toIntOrNull()
-            newnewAnimeSearchResponse(title, link) {
+            newAnimeSearchResponse(title, link) {
                 posterUrl = img.attr("src")
                 addDubStatus(
                     dubbedEpisodes != null,
@@ -165,7 +165,7 @@ class AniwaveProvider : MainAPI() {
             val href = rec.attr("href")
             val rectitle = rec.selectFirst(".name")?.text() ?: ""
             val recimg = rec.selectFirst("img")?.attr("src")
-            newnewAnimeSearchResponse(rectitle,fixUrl(href)){
+            newAnimeSearchResponse(rectitle,fixUrl(href)){
                 this.posterUrl = recimg
             }
         }
@@ -528,3 +528,6 @@ class AniwaveProvider : MainAPI() {
         return true
     }
 }
+
+
+

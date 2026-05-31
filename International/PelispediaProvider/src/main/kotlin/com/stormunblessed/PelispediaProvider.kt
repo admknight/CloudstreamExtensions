@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.pelispedia
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addDuration
@@ -31,20 +31,14 @@ class PelispediaProvider:MainAPI() {
                 val title = it.selectFirst("h2.entry-title")?.text() ?: ""
                 val img = it.selectFirst("img")?.attr("src") ?: ""
                 val link = it.selectFirst("a.lnk-blk")?.attr("href") ?: ""
-                newTvSeriesSearchResponse(
-                    title,
-                    link,
-                    this.name,
-                    TvType.Movie,
-                    fixUrl(img),
-                    null,
-                    null,
-                )
+                newMovieSearchResponse(title, link, TvType.Movie) {
+                    this.posterUrl = fixUrl(img)
+                }
             }
             items.add(HomePageList(name, home))
         }
 
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -54,15 +48,9 @@ class PelispediaProvider:MainAPI() {
             val title = it.selectFirst("h2.entry-title")?.text() ?: ""
             val img = it.selectFirst("img")!!.attr("src")
             val link = it.selectFirst("a.lnk-blk")!!.attr("href")
-            newTvSeriesSearchResponse(
-                title,
-                link,
-                this.name,
-                TvType.Movie,
-                fixUrl(img),
-                null,
-                null,
-            )
+            newMovieSearchResponse(title, link, TvType.Movie) {
+                this.posterUrl = fixUrl(img)
+            }
         }
     }
 
@@ -101,12 +89,10 @@ class PelispediaProvider:MainAPI() {
                 val isValid = seasonid.size == 2
                 val episode = if (isValid) seasonid.getOrNull(1) else null
                 val season = if (isValid) seasonid.getOrNull(0) else null
-                epi.add(Episode(
-                    href,
-                    null,
-                    season,
-                    episode,
-                ))
+                epi.add(newEpisode(href) {
+                    this.season = season
+                    this.episode = episode
+                })
             }
         }
 
@@ -114,7 +100,7 @@ class PelispediaProvider:MainAPI() {
             val recTitle = rec.selectFirst(".entry-title")?.text() ?: ""
             val recImg = rec.selectFirst("img")?.attr("src") ?: ""
             val recLink = rec.selectFirst("a")?.attr("href") ?: ""
-            newnewTvSeriesSearchResponse(recTitle, recLink, TvType.TvSeries) {
+            newTvSeriesSearchResponse(recTitle, recLink, TvType.TvSeries) {
                 this.posterUrl = fixUrl(recImg)
             }
         }

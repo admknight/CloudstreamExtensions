@@ -1,4 +1,4 @@
-package com.ohli24
+package com.admknight.ohli24
 
 import com.lagradost.cloudstream3.DubStatus
 import com.lagradost.cloudstream3.HomePageList
@@ -72,7 +72,7 @@ class OHLI24 : MainAPI() {
 
         val posterUrl = fixUrl(this.select("img").attr("src"))
         val score = this.select("div.rating").text()
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.score = Score.from10(score)
         }
@@ -163,3 +163,6 @@ class OHLI24 : MainAPI() {
     }
 
 }
+
+
+

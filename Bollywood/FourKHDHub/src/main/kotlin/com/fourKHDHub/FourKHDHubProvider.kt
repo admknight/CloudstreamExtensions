@@ -1,4 +1,4 @@
-package com.fourKHDHub
+package com.admknight.fourkhdhub
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.app
@@ -43,3 +43,6 @@ class FourKHDHubProvider: BasePlugin() {
         )
     }
 }
+
+
+

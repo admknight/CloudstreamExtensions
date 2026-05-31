@@ -1,4 +1,4 @@
-package com.piratexplay
+package com.admknight.piratexplay
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -19,3 +19,7 @@ class PiratexplayProvider : BasePlugin() {
         registerExtractorAPI(Cloudy())
     }
 }
+
+
+
+

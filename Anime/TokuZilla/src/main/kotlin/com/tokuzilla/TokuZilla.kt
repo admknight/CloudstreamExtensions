@@ -1,4 +1,4 @@
-package com.tokuzilla
+package com.admknight.tokuzilla
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -109,7 +109,7 @@ class TokuZilla : MainAPI() {
             val href = fixUrl(this.select("h3 a").attr("href"))
             val posterUrl = this.select("a img").attr("src").ifEmpty { "" }
 
-            return newnewAnimeSearchResponse(title, href, TvType.Anime) {
+            return newAnimeSearchResponse(title, href, TvType.Anime) {
                 this.posterUrl = posterUrl
             }
         } else {
@@ -221,3 +221,6 @@ class TokuZilla : MainAPI() {
         }
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.OneTouchTV
+package com.admknight.onetouchtv
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -10,3 +10,6 @@ class OneTouchTVPlugin: BasePlugin() {
         registerMainAPI(OneTouchTV())
     }
 }
+
+
+

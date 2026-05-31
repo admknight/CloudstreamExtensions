@@ -1,4 +1,4 @@
-package com.Desicinemas
+package com.admknight.desicinemas
 
 import com.lagradost.cloudstream3.HomePageList
 import com.lagradost.cloudstream3.HomePageResponse
@@ -91,7 +91,7 @@ class BollyzoneProvider : DesicinemasProvider() {
 
         val posterUrl = fixUrlNull(img?.getImageAttr())
 
-        return newnewTvSeriesSearchResponse(title, href) {
+        return newTvSeriesSearchResponse(title, href) {
             this.posterUrl = posterUrl
         }
     }
@@ -222,3 +222,7 @@ class BollyzoneProvider : DesicinemasProvider() {
         }
     }
 }
+
+
+
+

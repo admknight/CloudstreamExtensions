@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.vmovee
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -36,8 +36,14 @@ class VMoveeProvider : MainAPI() {
             // val rating = parseRating(meta.selectFirst("> span.rating").text().replace("IMDb ", ""))
             // val descript = details.selectFirst("> div.contenido").text()
             returnValue.add(
-                if (isTV) newTvSeriesSearchResponse(title, href, this.name, TvType.TvSeries, poster, year, null)
-                else newMovieSearchResponse(title, href, this.name, TvType.Movie, poster, year)
+                if (isTV) newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                    this.posterUrl = poster
+                    this.year = year
+                }
+                else newMovieSearchResponse(title, href, TvType.Movie) {
+                    this.posterUrl = poster
+                    this.year = year
+                }
             )
         }
         return returnValue
@@ -120,6 +126,12 @@ class VMoveeProvider : MainAPI() {
         val descript = document.selectFirst("div#info > div")!!.text()
         val id = document.select("div.starstruck").attr("data-id")
 
-        return MovieLoadResponse(title, url, this.name, TvType.Movie, id, poster, null, descript, null, null)
+        return newMovieLoadResponse(title, url, TvType.Movie, id) {
+            this.posterUrl = poster
+            this.plot = descript
+        }
     }
 }
+
+
+

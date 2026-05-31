@@ -1,4 +1,4 @@
-package com.phisher98.settings
+package com.admknight.stremioaddon
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -16,11 +16,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.phisher98.BuildConfig
-import com.phisher98.StremioAddonProvider
+import com.lagradost.cloudstream3.plugins.Plugin
+import com.admknight.stremioaddon.BuildConfig
 
 class SettingsFragment(
-    plugin: StremioAddonProvider,
+    plugin: Plugin,
     private val sharedPref: SharedPreferences
 ) : BottomSheetDialogFragment() {
 
@@ -205,7 +205,7 @@ class SettingsFragment(
             holder.urlText.text = url
 
             holder.deleteButton.setOnClickListener {
-                val pos = holder.bindingAdapterPosition
+                val pos = holder.adapterPosition
                 if (pos != RecyclerView.NO_POSITION) {
                     items.removeAt(pos)
                     notifyItemRemoved(pos)
@@ -216,3 +216,7 @@ class SettingsFragment(
         override fun getItemCount(): Int = items.size
     }
 }
+
+
+
+

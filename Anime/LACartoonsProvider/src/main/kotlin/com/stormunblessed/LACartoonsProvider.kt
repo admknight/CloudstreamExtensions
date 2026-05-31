@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.lacartoons
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -82,3 +82,6 @@ class LACartoonsProvider:MainAPI() {
         return true
     }
 }
+
+
+

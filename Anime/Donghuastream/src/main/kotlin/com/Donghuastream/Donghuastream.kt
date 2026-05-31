@@ -1,4 +1,4 @@
-package com.Donghuastream
+package com.admknight.donghuastream
 
 
 import com.lagradost.api.Log
@@ -61,7 +61,7 @@ open class Donghuastream : MainAPI() {
         val title     = this.select("div.bsx > a").attr("title")
         val href      = fixUrl(this.select("div.bsx > a").attr("href"))
         val posterUrl = fixUrlNull(this.selectFirst("div.bsx a img")?.getImageAttr())
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -187,3 +187,7 @@ open class Donghuastream : MainAPI() {
         return true
     }
 }
+
+
+
+

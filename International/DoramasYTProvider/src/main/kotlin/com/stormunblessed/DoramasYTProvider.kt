@@ -1,4 +1,4 @@
-package com.lagradost.cloudstream3.animeproviders
+package com.admknight.doramasyt
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -63,7 +63,7 @@ class DoramasYTProvider : MainAPI() {
                     val url = it.selectFirst("a")!!.attr("href").replace("ver/", "dorama/")
                         .replace(epRegex, "sub-espanol")
                     val epNum = it.selectFirst(".episode")!!.text().toIntOrNull()
-                    newnewAnimeSearchResponse(title,url) {
+                    newAnimeSearchResponse(title,url) {
                         this.posterUrl = fixUrl(poster)
                         addDubStatus(getDubStatus(title), epNum)
                     }
@@ -75,7 +75,7 @@ class DoramasYTProvider : MainAPI() {
             val home = app.get(url).document.select("li.col").map {
                 val title = it.selectFirst("h3")!!.text()
                 val poster = it.selectFirst("img")!!.attr("data-src")
-                newnewAnimeSearchResponse(title, fixUrl(it.selectFirst("a")!!.attr("href"))) {
+                newAnimeSearchResponse(title, fixUrl(it.selectFirst("a")!!.attr("href"))) {
                     this.posterUrl = fixUrl(poster)
                     addDubStatus(getDubStatus(title))
                 }
@@ -84,7 +84,7 @@ class DoramasYTProvider : MainAPI() {
         }
 
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -92,17 +92,10 @@ class DoramasYTProvider : MainAPI() {
             val title = it.selectFirst("h3")!!.text()
             val href = it.selectFirst("a")!!.attr("href")
             val image = it.selectFirst("img")!!.attr("data-src")
-            newAnimeSearchResponse(
-                title,
-                href,
-                this.name,
-                TvType.Anime,
-                image,
-                null,
-                if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(
-                    DubStatus.Dubbed
-                ) else EnumSet.of(DubStatus.Subbed),
-            )
+            newAnimeSearchResponse(title, href, TvType.Anime) {
+                this.posterUrl = fixUrl(image)
+                if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
+            }
         }
     }
 
@@ -155,10 +148,8 @@ class DoramasYTProvider : MainAPI() {
 
         val epList = capJson.eps.map { epnum ->
             val epUrl = "${url.replace("-sub-espanol","").replace("/dorama/","/ver/")}-episodio-${epnum.num}"
-            newEpisode(
-                    epUrl
-            ){
-                this.episode = epnum.toString().toIntOrNull()
+            newEpisode(epUrl) {
+                this.episode = epnum.num
             }
         }
 
@@ -188,3 +179,6 @@ class DoramasYTProvider : MainAPI() {
         return true
     }
 }
+
+
+

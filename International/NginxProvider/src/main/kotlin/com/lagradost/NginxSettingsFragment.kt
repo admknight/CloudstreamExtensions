@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.nginx
 
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
@@ -90,3 +90,6 @@ class NginxSettingsFragment(private val plugin: Plugin, val nginxApi: NginxApi) 
         })
     }
 }
+
+
+

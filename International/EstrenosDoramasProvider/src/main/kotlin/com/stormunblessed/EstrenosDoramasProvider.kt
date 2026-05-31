@@ -1,8 +1,7 @@
-package com.lagradost.cloudstream3.movieproviders
+package com.admknight.estrenosdoramas
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.network.WebViewResolver
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import java.util.*
@@ -36,55 +35,37 @@ class EstrenosDoramasProvider : MainAPI() {
 
         val items = ArrayList<HomePageList>()
 
-        urls.map { (url, name) ->
+        urls.forEach { (url, name) ->
             val home = app.get(url, timeout = 120).document.select("div.clearfix").map {
                 val title = cleanTitle(it.selectFirst("h3 a")?.text()!!)
                 val poster = it.selectFirst("img.cate_thumb")?.attr("src")
-                newAnimeSearchResponse(
-                    title,
-                    it.selectFirst("a")?.attr("href")!!,
-                    this.name,
-                    TvType.AsianDrama,
-                    poster,
-                    null,
-                    if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(
-                        DubStatus.Dubbed
-                    ) else EnumSet.of(DubStatus.Subbed),
-                )
+                newAnimeSearchResponse(title, it.selectFirst("a")?.attr("href")!!, TvType.AsianDrama) {
+                    this.posterUrl = poster
+                    if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
+                }
             }
             items.add(HomePageList(name, home))
         }
 
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        val searchob = ArrayList<AnimeSearchResponse>()
-        val search =
-            app.get("$mainUrl/?s=$query", timeout = 120).document.select("div.clearfix").map {
-                val title = cleanTitle(it.selectFirst("h3 a")?.text()!!)
-                val href = it.selectFirst("a")?.attr("href")
-                val image = it.selectFirst("img.cate_thumb")?.attr("src")
-                val lists =
-                    newAnimeSearchResponse(
-                        title,
-                        href!!,
-                        this.name,
-                        TvType.AsianDrama,
-                        image,
-                        null,
-                        if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(
-                            DubStatus.Dubbed
-                        ) else EnumSet.of(DubStatus.Subbed),
-                    )
-                if (href.contains("capitulo")) {
-                    //nothing
-                }
-                else {
-                    searchob.add(lists)
-                }
+        val searchob = ArrayList<SearchResponse>()
+        app.get("$mainUrl/?s=$query", timeout = 120).document.select("div.clearfix").forEach {
+            val title = cleanTitle(it.selectFirst("h3 a")?.text()!!)
+            val href = it.selectFirst("a")?.attr("href")
+            val image = it.selectFirst("img.cate_thumb")?.attr("src")
+            if (href != null && !href.contains("capitulo")) {
+                searchob.add(
+                    newAnimeSearchResponse(title, href, TvType.AsianDrama) {
+                        this.posterUrl = image
+                        if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
+                    }
+                )
             }
+        }
         return searchob
     }
 
@@ -102,14 +83,16 @@ class EstrenosDoramasProvider : MainAPI() {
         val episodes = doc.select("div.post .lcp_catlist a").map {
             val name = it.selectFirst("a")?.text()
             val link = it.selectFirst("a")?.attr("href")
-            val test = Episode(link!!, name)
-            if (!link.equals(url)) {
-                epi.add(test)
+            if (link != null && !link.equals(url)) {
+                epi.add(newEpisode(link) {
+                    this.name = name
+                })
             }
-        }.reversed()
-        return when (val type = if (episodes.isEmpty()) TvType.Movie else TvType.AsianDrama) {
+        }
+        val type = if (epi.isEmpty()) TvType.Movie else TvType.AsianDrama
+        return when (type) {
             TvType.AsianDrama -> {
-                return newAnimeLoadResponse(title!!, url, type) {
+                newAnimeLoadResponse(title!!, url, type) {
                     japName = null
                     engName = title.replace(Regex("[Pp]elicula |[Pp]elicula"),"")
                     posterUrl = poster
@@ -118,18 +101,10 @@ class EstrenosDoramasProvider : MainAPI() {
                 }
             }
             TvType.Movie -> {
-                MovieLoadResponse(
-                    cleanTitle(title!!),
-                    url,
-                    this.name,
-                    TvType.Movie,
-                    url,
-                    poster,
-                    null,
-                    finaldesc,
-                    null,
-                    null,
-                )
+                newMovieLoadResponse(cleanTitle(title!!), url, TvType.Movie, url) {
+                    this.posterUrl = poster
+                    this.plot = finaldesc
+                }
             }
             else -> null
         }
@@ -145,7 +120,7 @@ class EstrenosDoramasProvider : MainAPI() {
 
     private fun cleanTitle(title: String): String = title.replace(Regex("[Pp]elicula |[Pp]elicula"),"")
 
-    private fun cleanExtractor(
+    private suspend fun cleanExtractor(
         source: String,
         name: String,
         url: String,
@@ -154,14 +129,11 @@ class EstrenosDoramasProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         callback(
-            ExtractorLink(
-                source,
-                name,
-                url,
-                referer,
-                Qualities.Unknown.value,
-                m3u8
-            )
+            newExtractorLink(source, name, url) {
+                this.referer = referer
+                this.quality = Qualities.Unknown.value
+                this.type = if (m3u8) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+            }
         )
         return true
     }
@@ -187,7 +159,7 @@ class EstrenosDoramasProvider : MainAPI() {
             "Cache-Control" to "max-age=0",)
 
         val document = app.get(data).document
-        document.select("div.tab_container iframe").map { container ->
+        document.select("div.tab_container iframe").forEach { container ->
             val directlink = fixUrl(container.attr("src"))
             loadExtractor(directlink, data, subtitleCallback, callback)
 
@@ -195,27 +167,31 @@ class EstrenosDoramasProvider : MainAPI() {
                 val amzregex = Regex("https:\\/\\/repro3\\.estrenosdoramas\\.us\\/repro\\/amz\\/examples\\/.*\\.php\\?key=.*\$")
                 amzregex.findAll(directlink).map {
                     it.value.replace(Regex("https:\\/\\/repro3\\.estrenosdoramas\\.us\\/repro\\/amz\\/examples\\/.*\\.php\\?key="),"")
-                }.toList().map { key ->
-                    val response = app.post("https://repro3.estrenosdoramas.us/repro/amz/examples/player/api/indexDCA.php",
-                        headers = headers,
-                        data = mapOf(
-                            Pair("key",key),
-                            Pair("token","MDAwMDAwMDAwMA=="),
-                        ),
-                        allowRedirects = false
-                    ).text
-                    val reprojson = parseJson<ReproDoramas>(response)
-                    val decodeurl = base64Decode(reprojson.link)
-                    if (decodeurl.contains("m3u8"))
-
-                        cleanExtractor(
-                            name,
-                            name,
-                            decodeurl,
-                            "https://repro3.estrenosdoramas.us",
-                            decodeurl.contains(".m3u8"),
-                            callback
-                        )
+                }.toList().forEach { key ->
+                    val response = try {
+                        app.post("https://repro3.estrenosdoramas.us/repro/amz/examples/player/api/indexDCA.php",
+                            headers = headers,
+                            data = mapOf(
+                                Pair("key",key),
+                                Pair("token","MDAwMDAwMDAwMA=="),
+                            ),
+                            allowRedirects = false
+                        ).text
+                    } catch(e: Exception) { null }
+                    
+                    if (response != null) {
+                        val reprojson = parseJson<ReproDoramas>(response)
+                        val decodeurl = base64Decode(reprojson.link)
+                        if (decodeurl.contains("m3u8"))
+                            cleanExtractor(
+                                name,
+                                name,
+                                decodeurl,
+                                "https://repro3.estrenosdoramas.us",
+                                decodeurl.contains(".m3u8"),
+                                callback
+                            )
+                    }
                 }
             }
 
@@ -224,22 +200,27 @@ class EstrenosDoramasProvider : MainAPI() {
                 val regex = Regex("(https:\\/\\/repro.\\.estrenosdoramas\\.us\\/repro\\/reproducir14\\.php\\?key=[a-zA-Z0-9]{0,8}[a-zA-Z0-9_-]+)")
                 regex.findAll(directlink).map {
                     it.value
-                }.toList().map {
+                }.toList().forEach {
                     val doc = app.get(it).text
                     val videoid = doc.substringAfter("vid=\"").substringBefore("\" n")
                     val token = doc.substringAfter("name=\"").substringBefore("\" s")
                     val acctkn = doc.substringAfter("{ acc: \"").substringBefore("\", id:")
-                    val link = app.post("https://repro3.estrenosdoramas.us/repro/proto4.php",
-                        headers = headers,
-                        data = mapOf(
-                            Pair("acc",acctkn),
-                            Pair("id",videoid),
-                            Pair("tk",token)),
-                        allowRedirects = false
-                    ).text
-                    val extracteklink = link.substringAfter("\"urlremoto\":\"").substringBefore("\"}")
-                        .replace("\\/", "/").replace("//ok.ru/","http://ok.ru/")
-                    loadExtractor(extracteklink, data, subtitleCallback, callback)
+                    val link = try {
+                        app.post("https://repro3.estrenosdoramas.us/repro/proto4.php",
+                            headers = headers,
+                            data = mapOf(
+                                Pair("acc",acctkn),
+                                Pair("id",videoid),
+                                Pair("tk",token)),
+                            allowRedirects = false
+                        ).text
+                    } catch(e: Exception) { null }
+                    
+                    if (link != null) {
+                        val extracteklink = link.substringAfter("\"urlremoto\":\"").substringBefore("\"}")
+                            .replace("\\/", "/").replace("//ok.ru/","http://ok.ru/")
+                        loadExtractor(extracteklink, data, subtitleCallback, callback)
+                    }
                 }
             }
 
@@ -247,36 +228,41 @@ class EstrenosDoramasProvider : MainAPI() {
                 val regex = Regex("(https:\\/\\/repro3.estrenosdoramas.us\\/repro\\/reproducir120\\.php\\?\\nkey=[a-zA-Z0-9]{0,8}[a-zA-Z0-9_-]+)")
                 regex.findAll(directlink).map {
                     it.value
-                }.toList().map {
+                }.toList().forEach {
                     val doc = app.get(it).text
                     val videoid = doc.substringAfter("var videoid = '").substringBefore("';")
                     val token = doc.substringAfter("var tokens = '").substringBefore("';")
                     val acctkn = doc.substringAfter("{ acc: \"").substringBefore("\", id:")
-                    val link = app.post("https://repro3.estrenosdoramas.us/repro/api3.php",
-                        headers = headers,
-                        data = mapOf(
-                            Pair("acc",acctkn),
-                            Pair("id",videoid),
-                            Pair("tk",token)),
-                        allowRedirects = false
-                    ).text
-                    val extractedlink = link.substringAfter("\"{file:'").substringBefore("',label:")
-                        .replace("\\/", "/")
-                    val quality = link.substringAfter(",label:'").substringBefore("',type:")
-                    val type = link.substringAfter("type: '").substringBefore("'}\"")
-                    if (extractedlink.isNotBlank())
-                        if (quality.contains("File not found", ignoreCase = true)) {
-                            //Nothing
-                        } else {
-                            cleanExtractor(
-                                "Movil",
-                                "Movil $quality",
-                                extractedlink,
-                                "",
-                                !type.contains("mp4"),
-                                callback
-                            )
-                        }
+                    val link = try {
+                        app.post("https://repro3.estrenosdoramas.us/repro/api3.php",
+                            headers = headers,
+                            data = mapOf(
+                                Pair("acc",acctkn),
+                                Pair("id",videoid),
+                                Pair("tk",token)),
+                            allowRedirects = false
+                        ).text
+                    } catch(e: Exception) { null }
+                    
+                    if (link != null) {
+                        val extractedlink = link.substringAfter("\"{file:'").substringBefore("',label:")
+                            .replace("\\/", "/")
+                        val quality = link.substringAfter(",label:'").substringBefore("',type:")
+                        val type = link.substringAfter("type: '").substringBefore("'}\"")
+                        if (extractedlink.isNotBlank())
+                            if (quality.contains("File not found", ignoreCase = true)) {
+                                //Nothing
+                            } else {
+                                cleanExtractor(
+                                    "Movil",
+                                    "Movil $quality",
+                                    extractedlink,
+                                    "",
+                                    !type.contains("mp4"),
+                                    callback
+                                )
+                            }
+                    }
                 }
             }
         }

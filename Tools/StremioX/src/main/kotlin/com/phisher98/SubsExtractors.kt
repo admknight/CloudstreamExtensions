@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.stremiox
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.SubtitleFile
@@ -114,3 +114,7 @@ object SubsExtractors {
         @param:JsonProperty("subtitles") val subtitles: ArrayList<WatchsomuchSubtitles>? = arrayListOf(),
     )
 }
+
+
+
+

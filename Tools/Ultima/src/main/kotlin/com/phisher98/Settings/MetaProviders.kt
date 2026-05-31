@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -20,10 +20,10 @@ import android.widget.LinearLayout
 import android.widget.Switch
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import com.phisher98.UltimaUtils.MediaProviderState
+import com.admknight.ultima.UltimaUtils.MediaProviderState
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.phisher98.BuildConfig
+import com.admknight.ultima.BuildConfig
 import kotlin.collections.toList
 
 private const val ARG_PARAM1 = "param1"
@@ -228,3 +228,7 @@ class UltimaMetaProviders(val plugin: UltimaPlugin) : BottomSheetDialogFragment(
         super.onDetach()
     }
 }
+
+
+
+

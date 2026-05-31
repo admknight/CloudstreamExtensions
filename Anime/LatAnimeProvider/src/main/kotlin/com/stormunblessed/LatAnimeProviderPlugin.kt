@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.latanime
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,3 +12,6 @@ class LatAnimeProviderPlugin: Plugin() {
         registerMainAPI(LatAnimeProvider())
     }
 }
+
+
+

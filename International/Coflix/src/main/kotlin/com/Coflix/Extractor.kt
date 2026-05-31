@@ -1,4 +1,4 @@
-package com.Coflix
+package com.admknight.coflix
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
@@ -116,3 +116,6 @@ class Uqload : ExtractorApi() {
         }
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.allwish
+package com.admknight.allwish
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -12,3 +12,7 @@ class AllWishPlugin : BasePlugin() {
         registerExtractorAPI(Vidwish())
     }
 }
+
+
+
+

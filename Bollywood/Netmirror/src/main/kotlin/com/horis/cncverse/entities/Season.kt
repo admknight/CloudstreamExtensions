@@ -1,4 +1,4 @@
-package com.horis.cncverse.entities
+package com.admknight.netmirror
 
 data class Season(
     val ep: String,
@@ -6,3 +6,7 @@ data class Season(
     val s: String,
     val sele: String
 )
+
+
+
+

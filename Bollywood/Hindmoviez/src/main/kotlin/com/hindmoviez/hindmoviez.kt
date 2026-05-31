@@ -1,4 +1,4 @@
-package com.hindmoviez
+package com.admknight.hindmoviez
 
 import com.google.gson.Gson
 import com.lagradost.cloudstream3.HomePageResponse
@@ -91,7 +91,7 @@ class Hindmoviez : MainAPI() {
             img -> img.attr("data-src").takeIf { it.isNotBlank() }
             ?: img.attr("src") })
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = getSearchQuality(title)
         }
@@ -394,3 +394,6 @@ class Hindmoviez : MainAPI() {
         return true
     }
 }
+
+
+

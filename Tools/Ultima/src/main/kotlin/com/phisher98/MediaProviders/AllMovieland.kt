@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.SubtitleFile
@@ -7,9 +7,9 @@ import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper
-import com.phisher98.UltimaMediaProvidersUtils.fixUrl
-import com.phisher98.UltimaUtils.Category
-import com.phisher98.UltimaUtils.LinkData
+import com.admknight.ultima.UltimaMediaProvidersUtils.fixUrl
+import com.admknight.ultima.UltimaUtils.Category
+import com.admknight.ultima.UltimaUtils.LinkData
 
 class AllMovielandMediaProvider : MediaProvider() {
     override val name = "AllMovieland"
@@ -104,3 +104,7 @@ class AllMovielandMediaProvider : MediaProvider() {
     // #endregion - Data classes
 
 }
+
+
+
+

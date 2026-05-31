@@ -1,4 +1,4 @@
-package com.BanglaPlex
+package com.admknight.banglaplex
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.app
@@ -42,3 +42,6 @@ class BanglaPlexProvider: BasePlugin() {
         )
     }
 }
+
+
+

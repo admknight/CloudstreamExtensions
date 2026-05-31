@@ -1,4 +1,4 @@
-package com.lagradost.cloudstream3.movieproviders
+package com.admknight.seriesflix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addDuration
@@ -32,15 +32,9 @@ class SeriesflixProvider : MainAPI() {
                 val link = it.selectFirst("a")!!.attr("href")
                 val img = it.selectFirst("img")!!.attr("data-src").replace("//tmdbcdn2.online","https://tmdbcdn2.online").replace(".webp",".jpg")
                 println("IMG $img")
-                newTvSeriesSearchResponse(
-                    title,
-                    link,
-                    this.name,
-                    TvType.Movie,
-                    img,
-                    null,
-                    null,
-                )
+                newTvSeriesSearchResponse(title, link, TvType.Movie) {
+                    this.posterUrl = img
+                }
             }
 
             items.add(HomePageList(name, home))
@@ -58,24 +52,13 @@ class SeriesflixProvider : MainAPI() {
             val name = it.selectFirst("h2.title")!!.text()
             val isMovie = href.contains("/movies/")
             if (isMovie) {
-                newMovieSearchResponse(
-                    name,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    poster,
-                    null
-                )
+                newMovieSearchResponse(name, href, TvType.Movie) {
+                    this.posterUrl = poster
+                }
             } else {
-                newTvSeriesSearchResponse(
-                    name,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    poster,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(name, href, TvType.TvSeries) {
+                    this.posterUrl = poster
+                }
             }
         }.toList()
     }
@@ -89,8 +72,6 @@ class SeriesflixProvider : MainAPI() {
         val title = document.selectFirst("h1.Title")!!.text()
         val descRegex = Regex("(Recuerda.*Seriesflix.)")
         val descipt = document.selectFirst("div.Description > p")!!.text().replace(descRegex, "")
-        val rating =
-            document.selectFirst("div.Vote > div.post-ratings > span")?.text()?.toRatingInt()
         val year = document.selectFirst("span.Date")?.text()
         // ?: does not work
         val duration = try {
@@ -146,18 +127,12 @@ class SeriesflixProvider : MainAPI() {
                     }
                 }
             }
-            return TvSeriesLoadResponse(
-                title,
-                url,
-                this.name,
-                type,
-                episodeList,
-                fixUrlNull(poster),
-                year?.toIntOrNull(),
-                descipt,
-                null,
-                rating
-            )
+            return newTvSeriesLoadResponse(title, url, type, episodeList) {
+                this.posterUrl = fixUrlNull(poster)
+                this.year = year?.toIntOrNull()
+                this.plot = descipt
+                this.score = Score.from10(document.selectFirst("div.Vote > div.post-ratings > span")?.text())
+            }
         } else {
             return newMovieLoadResponse(
                 title,
@@ -168,7 +143,7 @@ class SeriesflixProvider : MainAPI() {
                 posterUrl = fixUrlNull(poster)
                 this.year = year?.toIntOrNull()
                 this.plot = descipt
-                this.rating = rating
+                this.score = Score.from10(document.selectFirst("div.Vote > div.post-ratings > span")?.text())
                 addDuration(duration)
             }
         }
@@ -228,3 +203,7 @@ class SeriesflixProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

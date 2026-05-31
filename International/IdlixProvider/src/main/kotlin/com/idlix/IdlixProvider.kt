@@ -1,4 +1,4 @@
-package com.idlix
+package com.admknight.idlix
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Actor
@@ -74,7 +74,7 @@ class IdlixProvider : MainAPI() {
             val poster = item.posterPath?.let { "https://image.tmdb.org/t/p/w342$it" }
             if (item.contentType == "movie") {
                 val movieurl = "$mainUrl/api/movies/${item.slug}"
-                newnewMovieSearchResponse(title, movieurl, TvType.Movie) {
+                newMovieSearchResponse(title, movieurl, TvType.Movie) {
                     this.posterUrl = poster
                     this.year = item.releaseDate?.substringBefore("-")?.toIntOrNull()
                     this.quality = getSearchQuality(item.quality)
@@ -82,7 +82,7 @@ class IdlixProvider : MainAPI() {
                 }
             } else {
                 val seriesurl = "$mainUrl/api/series/${item.slug}"
-                newnewTvSeriesSearchResponse(title, seriesurl, TvType.TvSeries) {
+                newTvSeriesSearchResponse(title, seriesurl, TvType.TvSeries) {
                     this.posterUrl = poster
                     this.year = item.releaseDate?.substringBefore("-")?.toIntOrNull()
                     this.score = Score.from10(item.voteAverage)
@@ -114,14 +114,14 @@ class IdlixProvider : MainAPI() {
             val rating = item.voteAverage
 
             if (item.contentType == "movie") {
-                newnewMovieSearchResponse(title, link, TvType.Movie) {
+                newMovieSearchResponse(title, link, TvType.Movie) {
                     this.posterUrl = poster
                     this.year = year
                     this.quality = getQualityFromString(item.quality)
                     this.score = rating.let { Score.from10(it) }
                 }
             } else {
-                newnewTvSeriesSearchResponse(title, link, TvType.TvSeries) {
+                newTvSeriesSearchResponse(title, link, TvType.TvSeries) {
                     this.posterUrl = poster
                     this.year = year
                     this.score = rating.let { Score.from10(it) }
@@ -181,14 +181,14 @@ class IdlixProvider : MainAPI() {
                     }
 
                     if (item.contentType == "movie") {
-                        newnewMovieSearchResponse(title, link, TvType.Movie) {
+                        newMovieSearchResponse(title, link, TvType.Movie) {
                             this.posterUrl = poster
                             this.year = (item.releaseDate ?: item.firstAirDate)
                                 ?.substringBefore("-")
                                 ?.toIntOrNull()
                         }
                     } else {
-                        newnewTvSeriesSearchResponse(title, link, TvType.TvSeries) {
+                        newTvSeriesSearchResponse(title, link, TvType.TvSeries) {
                             this.posterUrl = poster
                             this.year = (item.releaseDate ?: item.firstAirDate)
                                 ?.substringBefore("-")
@@ -454,3 +454,7 @@ data class Subtitle(
     val label: String,
     val path: String,
 )
+
+
+
+

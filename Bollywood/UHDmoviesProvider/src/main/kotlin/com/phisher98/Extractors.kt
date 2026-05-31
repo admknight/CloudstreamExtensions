@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.uhdmovies
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -268,4 +268,8 @@ private fun cleanTitle(title: String): String {
         .filter { it.isNotBlank() }
         .joinToString(" ")
 }
+
+
+
+
 

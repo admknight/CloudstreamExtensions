@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.lacartoons
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -11,3 +11,6 @@ class LACartoonsProviderPlugin: Plugin() {
         registerMainAPI(LACartoonsProvider())
     }
 }
+
+
+

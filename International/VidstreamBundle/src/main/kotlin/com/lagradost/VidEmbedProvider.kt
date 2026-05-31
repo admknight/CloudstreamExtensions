@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.vidstreambundle
 
 import com.lagradost.cloudstream3.TvType
 
@@ -28,3 +28,7 @@ class VidEmbedProvider : VidstreamProviderTemplate() {
     // Needed for search functionality.
     override val supportedTypes = setOf(TvType.TvSeries, TvType.Movie)
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.Animeav1
+package com.admknight.animeav1
 
 import com.lagradost.cloudstream3.DubStatus
 import com.lagradost.cloudstream3.Episode
@@ -63,7 +63,7 @@ class Animeav1 : MainAPI() {
         val title     = this.select("h3").text()
         val href      = this.select("a").attr("href")
         val posterUrl = fixUrlNull(this.select("figure img").attr("src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -234,3 +234,6 @@ suspend fun loadCustomExtractor(
         }
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.content.SharedPreferences
 import androidx.core.content.edit
@@ -311,7 +311,7 @@ open class StreamPlay(val sharedPref: SharedPreferences? = null) : MainAPI() {
     }
 
     private fun Media.toSearchResponse(type: String? = null): SearchResponse? {
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             title ?: name ?: originalTitle ?: originalName ?: return null,
             Data(id = id, type = mediaType ?: type).toJson(),
             TvType.Movie,
@@ -917,3 +917,7 @@ open class StreamPlay(val sharedPref: SharedPreferences? = null) : MainAPI() {
         @get:JsonProperty("production_countries") val production_countries: ArrayList<ProductionCountries>? = arrayListOf(),
     )
 }
+
+
+
+

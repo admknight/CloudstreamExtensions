@@ -1,4 +1,4 @@
-package com.zinkmovies
+package com.admknight.zinkmovies
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Actor
@@ -89,7 +89,7 @@ class Zinkmovies : MainAPI() {
         val url = post.select("h3 a").attr("href")
         val poster = post.select("img").attr("data-lazy-src").ifBlank { post.select("img").attr("src") }
         val score = Score.from10(post.select("div.rating").text())
-        return newnewMovieSearchResponse(title, url, TvType.Movie) {
+        return newMovieSearchResponse(title, url, TvType.Movie) {
             this.posterUrl = poster.replace("/w185/", "/w500/")
             this.score = score
             this.quality = getSearchQuality(post.select("span.quality").text())
@@ -104,7 +104,7 @@ class Zinkmovies : MainAPI() {
             val name = it.select("a").text()
             val href = it.select("a").attr("href")
             val poster = it.select("img").attr("data-lazy-src").ifBlank { it.select("img").attr("src") }
-            newnewMovieSearchResponse(name,href, TvType.Movie)
+            newMovieSearchResponse(name,href, TvType.Movie)
             {
                 this.posterUrl = poster.replace("/w92/", "/w500/")
             }
@@ -133,7 +133,7 @@ class Zinkmovies : MainAPI() {
         val recommendations = doc.select("#single_relacionados article").map {
             val poster = it.select("img").attr("data-lazy-src").ifBlank { it.select("img").attr("src") }
             val href = it.select("a").attr("href")
-            newnewMovieSearchResponse("",href, TvType.Movie)
+            newMovieSearchResponse("",href, TvType.Movie)
             {
                 this.posterUrl = poster
             }
@@ -533,3 +533,6 @@ class Zinkmovies : MainAPI() {
         }
     }
 }
+
+
+

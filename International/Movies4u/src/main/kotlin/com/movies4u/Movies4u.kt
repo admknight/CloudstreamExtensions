@@ -1,4 +1,4 @@
-package com.movies4u
+package com.admknight.movies4u
 
 import com.lagradost.cloudstream3.Actor
 import com.lagradost.cloudstream3.ActorData
@@ -96,7 +96,7 @@ class Movies4u : MainAPI() {
 
         val posterUrl = fixUrlNull(img.attr("src"))
 
-        return newnewMovieSearchResponse(fullTitle, href, TvType.Movie) {
+        return newMovieSearchResponse(fullTitle, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = getSearchQuality(rawText)
         }
@@ -122,7 +122,7 @@ class Movies4u : MainAPI() {
             }
             val poster=fixUrlNull(img.attr("src"))
             val tvType=if(rawText.contains("Season",true)||rawText.contains("Series",true))TvType.TvSeries else if(rawText.contains("Anime",true))TvType.Anime else TvType.Movie
-            newnewMovieSearchResponse(fullTitle,href,tvType){
+            newMovieSearchResponse(fullTitle,href,tvType){
                 this.posterUrl=poster
                 this.quality=getSearchQuality(rawText)
             }
@@ -413,4 +413,8 @@ class Movies4u : MainAPI() {
         return null
     }
 }
+
+
+
+
 

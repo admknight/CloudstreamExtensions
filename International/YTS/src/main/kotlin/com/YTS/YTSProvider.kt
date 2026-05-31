@@ -1,4 +1,4 @@
-package com.YTS
+package com.admknight.yts
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -11,3 +11,7 @@ class YTSProvider: BasePlugin() {
 
     }
 }
+
+
+
+

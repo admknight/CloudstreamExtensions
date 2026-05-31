@@ -1,4 +1,4 @@
-package com.cinevood
+package com.admknight.cinevood
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -225,3 +225,6 @@ class HubCloud : ExtractorApi() {
         }
     }
 }
+
+
+

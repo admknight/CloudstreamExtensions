@@ -1,9 +1,9 @@
-package com.phisher98
+package com.admknight.ultima
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import com.phisher98.UltimaMediaProvidersUtils.invokeExtractors
-import com.phisher98.UltimaUtils.Category
-import com.phisher98.UltimaUtils.LinkData
+import com.admknight.ultima.UltimaMediaProvidersUtils.invokeExtractors
+import com.admknight.ultima.UltimaUtils.Category
+import com.admknight.ultima.UltimaUtils.LinkData
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.lagradost.api.Log
@@ -78,7 +78,7 @@ class AniList(val plugin: UltimaPlugin) : MainAPI() {
         val title = this.title.english ?: this.title.romaji ?: ""
         val url = "$mainUrl/anime/${this.id}"
         val posterUrl = this.coverImage.large
-        return newnewAnimeSearchResponse(title, url, TvType.Anime) { this.posterUrl = posterUrl }
+        return newAnimeSearchResponse(title, url, TvType.Anime) { this.posterUrl = posterUrl }
     }
 
     private suspend fun MainPageRequest.toSearchResponseList(
@@ -233,7 +233,7 @@ class AniList(val plugin: UltimaPlugin) : MainAPI() {
                             ?: recommendation.title?.romaji
                             ?: "Unknown"
                         val recommendationUrl = "$mainUrl/anime/${recommendation.id}"
-                        newnewAnimeSearchResponse(title, recommendationUrl, TvType.Anime).apply {
+                        newAnimeSearchResponse(title, recommendationUrl, TvType.Anime).apply {
                             this.posterUrl = recommendation.coverImage?.large
                         }
                     }
@@ -410,3 +410,7 @@ data class AniSearch(
 )
 
 data class AniIds(var id: Int? = null, var idMal: Int? = null)
+
+
+
+

@@ -1,4 +1,4 @@
-package com.animedubhindi
+package com.admknight.animedubhindi
 
 import android.util.Log
 import org.jsoup.nodes.Element
@@ -50,7 +50,7 @@ class Animedubhindi : MainAPI() {
         val title = this.select("h2 a").text().substringBeforeLast("(")
         val href = fixUrl(this.select("h2 a").attr("href"))
         val posterUrl = fixUrlNull(this.select("img").attr("src"))
-        return newnewMovieSearchResponse(title.capitalize(), href, TvType.Movie) {
+        return newMovieSearchResponse(title.capitalize(), href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -209,4 +209,8 @@ class Animedubhindi : MainAPI() {
         return true
     }
 }
+
+
+
+
 

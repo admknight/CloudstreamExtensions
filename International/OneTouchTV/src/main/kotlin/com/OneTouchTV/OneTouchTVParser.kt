@@ -1,4 +1,4 @@
-package com.OneTouchTV
+package com.admknight.onetouchtv
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import org.json.JSONArray
@@ -198,3 +198,6 @@ data class CleanMedia(
     val status: String?,
     val isSub: Boolean?
 )
+
+
+

@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.superembed
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
@@ -34,3 +34,6 @@ public object CaptchaSolver {
         val session_hash: String = "aaaaaaaaaaa"
     )
 }
+
+
+

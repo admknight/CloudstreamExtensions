@@ -1,4 +1,4 @@
-package com.Pinoymoviepedia
+package com.admknight.pinoymoviepedia
 
 import com.lagradost.cloudstream3.extractors.Upstream
 import com.lagradost.cloudstream3.extractors.VidHidePro3
@@ -21,3 +21,7 @@ class PinoymoviepediaProvider: BasePlugin() {
         registerExtractorAPI(Luluvdostore())
     }
 }
+
+
+
+

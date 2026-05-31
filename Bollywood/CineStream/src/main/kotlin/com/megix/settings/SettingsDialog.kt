@@ -1,4 +1,4 @@
-package com.megix.settings
+package com.admknight.cinestream
 
 import android.app.AlertDialog
 import android.content.ClipData
@@ -9,7 +9,7 @@ import android.graphics.drawable.GradientDrawable
 import android.view.Gravity
 import android.view.View
 import android.widget.*
-import com.megix.settings.SettingsTheme.dp
+import com.admknight.cinestream.dp
 
 /**
  * Assembles the full Settings AlertDialog and every collapsible card inside it.
@@ -1034,3 +1034,7 @@ internal object SettingsDialog {
         override fun afterTextChanged(s: android.text.Editable?) {}
     }
 }
+
+
+
+

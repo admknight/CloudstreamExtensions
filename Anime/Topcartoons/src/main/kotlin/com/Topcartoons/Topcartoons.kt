@@ -1,4 +1,4 @@
-package com.Topcartoons
+package com.admknight.topcartoons
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
@@ -34,7 +34,7 @@ class Topcartoons : MainAPI() {
         val title     = this.select("a > img").attr("alt")
         val href      = fixUrl(this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.select("a img").attr("data-src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -87,3 +87,7 @@ class Topcartoons : MainAPI() {
         return true
     }
 }
+
+
+
+

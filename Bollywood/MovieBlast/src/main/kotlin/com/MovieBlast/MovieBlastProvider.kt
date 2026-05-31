@@ -1,4 +1,4 @@
-package com.MovieBlast
+package com.admknight.movieblast
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,3 +9,6 @@ class MovieBlastProvider: BasePlugin() {
         registerMainAPI(MovieBlast())
     }
 }
+
+
+

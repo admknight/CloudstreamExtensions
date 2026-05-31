@@ -1,5 +1,5 @@
 
-package com.lagradost
+package com.admknight.ask4movie
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,3 +12,6 @@ class Ask4MoviePlugin: Plugin() {
         registerMainAPI(Ask4MovieProvider())
     }
 }
+
+
+

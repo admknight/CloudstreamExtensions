@@ -1,15 +1,15 @@
-package com.lagradost
+package com.admknight.allanime
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
 import com.lagradost.cloudstream3.mvvm.safeApiCall
-import com.lagradost.cloudstream3.ui.settings.SettingsProviders
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper
 import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.Scriptable
@@ -60,10 +60,10 @@ class AllAnimeProvider : MainAPI() {
         @JsonProperty("averageScore") val averageScore: Int?,
         @JsonProperty("description") val description: String?,
         @JsonProperty("status") val status: String?,
-        @JsonProperty("banner") val banner : String?,
-        @JsonProperty("episodeDuration") val episodeDuration : Int?,
-        @JsonProperty("prevideos") val prevideos : List<String> = emptyList(),
-        )
+        @JsonProperty("banner") val banner: String?,
+        @JsonProperty("episodeDuration") val episodeDuration: Int?,
+        @JsonProperty("prevideos") val prevideos: List<String> = emptyList(),
+    )
 
     private data class AvailableEpisodes(
         @JsonProperty("sub") val sub: Int,
@@ -137,7 +137,7 @@ class AllAnimeProvider : MainAPI() {
                 }
 
                 results.map {
-                    newnewAnimeSearchResponse(it.name, "$mainUrl/anime/${it.Id}", fix = false) {
+                    newAnimeSearchResponse(it.name, "$mainUrl/anime/${it.Id}", fix = false) {
                         this.posterUrl = it.thumbnail
                         this.year = it.airedStart?.year
                         this.otherName = it.englishName
@@ -153,7 +153,7 @@ class AllAnimeProvider : MainAPI() {
                     !(it.anyCard?.availableEpisodes?.raw == 0 && it.anyCard.availableEpisodes.sub == 0 && it.anyCard.availableEpisodes.dub == 0)
                 }
                 results?.mapNotNull {
-                    newnewAnimeSearchResponse(
+                    newAnimeSearchResponse(
                         it.anyCard?.name ?: return@mapNotNull null,
                         "$mainUrl/anime/${it.anyCard.Id ?: it.pageStatus?.Id}",
                         fix = false
@@ -170,11 +170,7 @@ class AllAnimeProvider : MainAPI() {
 
 
 
-        return HomePageResponse(
-            listOf(
-                HomePageList(request.name, home)
-            ), hasNext = home.isNotEmpty()
-        )
+        return newHomePageResponse(request.name, home, hasNext = home.isNotEmpty())
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -193,7 +189,7 @@ class AllAnimeProvider : MainAPI() {
         }
 
         return results.map {
-            newnewAnimeSearchResponse(it.name, "$mainUrl/anime/${it.Id}", fix = false) {
+            newAnimeSearchResponse(it.name, "$mainUrl/anime/${it.Id}", fix = false) {
                 this.posterUrl = it.thumbnail
                 this.year = it.airedStart?.year
                 this.otherName = it.englishName
@@ -238,18 +234,21 @@ class AllAnimeProvider : MainAPI() {
         val description = showData.description
         val poster = showData.thumbnail
 
-        val episodes = showData.availableEpisodes.let {
-            if (it == null) return@let Pair(null, null)
-            Pair(if (it.sub != 0) ((1..it.sub).map { epNum ->
-                Episode(
-                    "$mainUrl/anime/${showData.Id}/episodes/sub/$epNum", episode = epNum
-                )
-            }) else null, if (it.dub != 0) ((1..it.dub).map { epNum ->
-                Episode(
-                    "$mainUrl/anime/${showData.Id}/episodes/dub/$epNum", episode = epNum
-                )
-            }) else null)
-        }
+        val episodesSub = if (showData.availableEpisodes?.sub != null && showData.availableEpisodes.sub != 0) {
+            (1..showData.availableEpisodes.sub).map { epNum ->
+                newEpisode("$mainUrl/anime/${showData.Id}/episodes/sub/$epNum") {
+                    this.episode = epNum
+                }
+            }
+        } else emptyList()
+
+        val episodesDub = if (showData.availableEpisodes?.dub != null && showData.availableEpisodes.dub != 0) {
+            (1..showData.availableEpisodes.dub).map { epNum ->
+                newEpisode("$mainUrl/anime/${showData.Id}/episodes/dub/$epNum") {
+                    this.episode = epNum
+                }
+            }
+        } else emptyList()
 
         val characters = soup.select("div.character > div.card-character-box").mapNotNull {
             val img = it?.selectFirst("img")?.attr("src") ?: return@mapNotNull null
@@ -263,28 +262,18 @@ class AllAnimeProvider : MainAPI() {
             Pair(Actor(name, img), role)
         }
 
-        // bruh, they use graphql and bruh it is fucked
-        //val recommendations = soup.select("#suggesction > div > div.p > .swipercard")?.mapNotNull {
-        //    val recTitle = it?.selectFirst(".showname > a") ?: return@mapNotNull null
-        //    val recName = recTitle.text() ?: return@mapNotNull null
-        //    val href = fixUrlNull(recTitle.attr("href")) ?: return@mapNotNull null
-        //    val img = it.selectFirst(".image > img").attr("src") ?: return@mapNotNull null
-        //    newAnimeSearchResponse(recName, href, this.name, TvType.Anime, img)
-        //}
-
         return newAnimeLoadResponse(title, url, TvType.Anime) {
             posterUrl = poster
             backgroundPosterUrl = showData.banner
-            rating = showData.averageScore?.times(100)
+            score = Score.from100(showData.averageScore)
             tags = showData.genres
             year = showData.airedStart?.year
             duration = showData.episodeDuration?.div(60_000)
             addTrailer(showData.prevideos.filter { it.isNotBlank() }.map { "https://www.youtube.com/watch?v=$it" })
 
-            addEpisodes(DubStatus.Subbed, episodes.first)
-            addEpisodes(DubStatus.Dubbed, episodes.second)
+            addEpisodes(DubStatus.Subbed, episodesSub)
+            addEpisodes(DubStatus.Dubbed, episodesDub)
             addActors(characters)
-            //this.recommendations = recommendations
 
             showStatus = getStatus(showData.status.toString())
 
@@ -380,14 +369,14 @@ class AllAnimeProvider : MainAPI() {
                             getM3u8Qualities(link, data, URI(link).host).forEach(callback)
                         } else {
                             callback(
-                                ExtractorLink(
+                                newExtractorLink(
                                     "AllAnime - " + URI(link).host,
-                                    "",
-                                    link,
-                                    data,
-                                    Qualities.P1080.value,
-                                    false
-                                )
+                                    name = "AllAnime",
+                                    url = link,
+                                ) {
+                                    this.referer = data
+                                    this.quality = Qualities.P1080.value
+                                }
                             )
                         }
                     }
@@ -408,16 +397,16 @@ class AllAnimeProvider : MainAPI() {
                                 ).forEach(callback)
                             } else {
                                 callback(
-                                    ExtractorLink(
+                                    newExtractorLink(
                                         "AllAnime - " + URI(server.link).host,
-                                        server.resolutionStr,
-                                        server.link,
-                                        "$apiEndPoint/player?uri=" + (if (URI(server.link).host.isNotEmpty()) server.link else apiEndPoint + URI(
+                                        name = server.resolutionStr,
+                                        url = server.link,
+                                    ) {
+                                        this.referer = "$apiEndPoint/player?uri=" + (if (URI(server.link).host.isNotEmpty()) server.link else apiEndPoint + URI(
                                             server.link
-                                        ).path),
-                                        Qualities.P1080.value,
-                                        false
-                                    )
+                                        ).path)
+                                        this.quality = Qualities.P1080.value
+                                    }
                                 )
                             }
                         }

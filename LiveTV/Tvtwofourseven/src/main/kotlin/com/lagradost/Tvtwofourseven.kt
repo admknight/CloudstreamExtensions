@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.tvtwofourseven
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -112,3 +112,6 @@ class Tvtwofourseven : MainAPI() {
 
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.darkdemon
+package com.admknight.fivemovierulz
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -13,3 +13,7 @@ class FivemovierulzPlugin: BasePlugin() {
         registerExtractorAPI(mivalyo())
     }
 }
+
+
+
+

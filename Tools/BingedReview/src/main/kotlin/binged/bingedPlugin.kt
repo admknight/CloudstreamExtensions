@@ -1,4 +1,4 @@
-package binged
+package com.admknight.bingedreview
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -11,3 +11,7 @@ class BingedPlugin: Plugin() {
         registerMainAPI(BingedProvider())
     }
 }
+
+
+
+

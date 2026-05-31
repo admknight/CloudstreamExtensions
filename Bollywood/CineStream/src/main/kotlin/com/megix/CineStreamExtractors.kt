@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.cinestream
 
 // Cloudstream Core & Utils
 import com.lagradost.cloudstream3.*
@@ -31,7 +31,7 @@ import java.net.URI
 import java.net.URL
 import java.net.URLEncoder
 
-import com.megix.settings.Settings
+import com.admknight.cinestream.Settings
 
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -4583,3 +4583,7 @@ object CineStreamExtractors {
     }
 
 }
+
+
+
+

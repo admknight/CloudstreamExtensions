@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.moviesmod
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.network.CloudflareKiller
@@ -78,7 +78,7 @@ open class MoviesmodProvider : MainAPI() {
         val href = this.select("a").attr("href")
         val posterUrl = this.select("a > div > img").attr("src")
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -290,4 +290,8 @@ open class MoviesmodProvider : MainAPI() {
         val source: String
     )
 }
+
+
+
+
 

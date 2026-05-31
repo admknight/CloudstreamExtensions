@@ -1,9 +1,10 @@
-package com.lagradost
+package com.admknight.vidstreambundle
 
 import com.lagradost.cloudstream3.*
-//import com.lagradost.cloudstream3.animeproviders.GogoanimeProvider.Companion.extractVidstream
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 class DramaSeeProvider : MainAPI() {
     override var mainUrl = "https://dramasee.net"
@@ -19,10 +20,9 @@ class DramaSeeProvider : MainAPI() {
         val document = app.get(mainUrl, headers = headers).document
         val mainbody = document.getElementsByTag("body")
 
-        return HomePageResponse(
-            mainbody.select("section.block_area.block_area_home")?.map { main ->
+        val homePageLists = mainbody.select("section.block_area.block_area_home")?.mapNotNull { main ->
                 val title = main.select("h2.cat-heading").text() ?: "Main"
-                val inner = main.select("div.flw-item") ?: return@map null
+                val inner = main.select("div.flw-item") ?: return@mapNotNull null
 
                 HomePageList(
                     title,
@@ -32,19 +32,12 @@ class DramaSeeProvider : MainAPI() {
                         val link = fixUrlNull(innerBody?.attr("href")) ?: return@mapNotNull null
                         val image = fixUrlNull(it.select("img").attr("data-src")) ?: ""
                         val name = innerBody?.attr("title") ?: "<Untitled>"
-                        //Log.i(this.name, "Result => (innerBody, image) ${innerBody} / ${image}")
-                        newMovieSearchResponse(
-                            name,
-                            link,
-                            this.name,
-                            TvType.AsianDrama,
-                            image,
-                            year = null,
-                            id = null,
-                        )
+                        newMovieSearchResponse(name, link, TvType.AsianDrama) {
+                            this.posterUrl = image
+                        }
                     }.distinctBy { c -> c.url })
-            }?.filterNotNull() ?: listOf()
-        )
+            } ?: listOf()
+        return newHomePageResponse(homePageLists)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -62,14 +55,10 @@ class DramaSeeProvider : MainAPI() {
             val imgSrc = it.select("img")?.attr("data-src") ?: return@mapNotNull null
             val image = fixUrlNull(imgSrc)
 
-            newMovieSearchResponse(
-                name = title,
-                url = link,
-                apiName = this.name,
-                type = TvType.Movie,
-                posterUrl = image,
-                year = year
-            )
+            newMovieSearchResponse(title, link, TvType.Movie) {
+                this.posterUrl = image
+                this.year = year
+            }
         }
     }
 
@@ -80,7 +69,6 @@ class DramaSeeProvider : MainAPI() {
 
         // Video details
         val poster = fixUrlNull(inner?.select("img.film-poster-img")?.attr("src")) ?: ""
-        //Log.i(this.name, "Result => (imgLinkCode) ${imgLinkCode}")
         val title = inner?.select("h2.film-name.dynamic-name")?.text() ?: ""
         val year = if (title.length > 5) {
             title.substring(title.length - 5)
@@ -88,7 +76,6 @@ class DramaSeeProvider : MainAPI() {
         } else {
             null
         }
-        //Log.i(this.name, "Result => (year) ${title.substring(title.length - 5)}")
         val descript = body?.firstOrNull()?.select("div.film-description.m-hide")?.text()
         val tags = inner?.select("div.item.item-list > a")
             ?.mapNotNull { it?.text()?.trim() ?: return@mapNotNull null }
@@ -98,14 +85,10 @@ class DramaSeeProvider : MainAPI() {
             val aImg = fixUrlNull(it.select("img")?.attr("data-src"))
             val aName = a.attr("title") ?: return@mapNotNull null
             val aYear = aName.trim().takeLast(5).removeSuffix(")").toIntOrNull()
-            newMovieSearchResponse(
-                url = aUrl,
-                name = aName,
-                type = TvType.Movie,
-                posterUrl = aImg,
-                year = aYear,
-                apiName = this.name
-            )
+            newMovieSearchResponse(aName, aUrl, TvType.Movie) {
+                this.posterUrl = aImg
+                this.year = aYear
+            }
         }
 
         // Episodes Links
@@ -116,63 +99,28 @@ class DramaSeeProvider : MainAPI() {
         val episodeList = episodeDoc.select("div.ss-list.ss-list-min > a").mapNotNull { ep ->
             val episodeNumber = ep.attr("data-number").toIntOrNull()
             val epLink = fixUrlNull(ep.attr("href")) ?: return@mapNotNull null
-
-//            if (epLink.isNotBlank()) {
-//                // Fetch video links
-//                val epVidLinkEl = app.get(epLink, referer = mainUrl).document
-//                val ajaxUrl = epVidLinkEl.select("div#js-player")?.attr("embed")
-//                //Log.i(this.name, "Result => (ajaxUrl) ${ajaxUrl}")
-//                if (!ajaxUrl.isNullOrEmpty()) {
-//                    val innerPage = app.get(fixUrl(ajaxUrl), referer = epLink).document
-//                    val listOfLinks = mutableListOf<String>()
-//                    innerPage.select("div.player.active > main > div")?.forEach { em ->
-//                        val href = fixUrlNull(em.attr("src")) ?: ""
-//                        if (href.isNotBlank()) {
-//                            listOfLinks.add(href)
-//                        }
-//                    }
-//
-//                    //Log.i(this.name, "Result => (listOfLinks) ${listOfLinks.toJson()}")
-//
-//                }
-//            }
-            Episode(
-                name = null,
-                season = null,
-                episode = episodeNumber,
-                data = epLink,
-                posterUrl = null,
-                date = null
-            )
+            newEpisode(epLink) {
+                this.episode = episodeNumber
+            }
         }
 
         //If there's only 1 episode, consider it a movie.
         if (episodeList.size == 1) {
-            return MovieLoadResponse(
-                name = title,
-                url = url,
-                apiName = this.name,
-                type = TvType.Movie,
-                dataUrl = episodeList.first().data,
-                posterUrl = poster,
-                year = year,
-                plot = descript,
-                recommendations = recs,
-                tags = tags
-            )
+            return newMovieLoadResponse(title, url, TvType.Movie, episodeList.first().data) {
+                this.posterUrl = poster
+                this.year = year
+                this.plot = descript
+                this.recommendations = recs
+                this.tags = tags
+            }
         }
-        return TvSeriesLoadResponse(
-            name = title,
-            url = url,
-            apiName = this.name,
-            type = TvType.AsianDrama,
-            episodes = episodeList,
-            posterUrl = poster,
-            year = year,
-            plot = descript,
-            recommendations = recs,
-            tags = tags
-        )
+        return newTvSeriesLoadResponse(title, url, TvType.AsianDrama, episodeList) {
+            this.posterUrl = poster
+            this.year = year
+            this.plot = descript
+            this.recommendations = recs
+            this.tags = tags
+        }
     }
 
     override suspend fun loadLinks(
@@ -188,30 +136,33 @@ class DramaSeeProvider : MainAPI() {
         val iframe = app.get(iframeUrl)
         val iframeDoc = iframe.document
 
-        argamap({
-            iframeDoc.select(".list-server-items > .linkserver")
-                .forEach { element ->
-                    val status = element.attr("data-status") ?: return@forEach
-                    if (status != "1") return@forEach
-                    val extractorData = element.attr("data-video") ?: return@forEach
-                    loadExtractor(extractorData, iframe.url, subtitleCallback, callback)
-                }
-        }, {
-            val iv = "9262859232435825"
-            val secretKey = "93422192433952489752342908585752"
-            val secretDecryptKey = "93422192433952489752342908585752"
-            Vidstream.extractVidstream(
-                iframe.url,
-                this.name,
-                callback,
-                iv,
-                secretKey,
-                secretDecryptKey,
-                isUsingAdaptiveKeys = false,
-                isUsingAdaptiveData = true,
-                iframeDocument = iframeDoc
-            )
-        })
+        coroutineScope {
+            launch {
+                iframeDoc.select(".list-server-items > .linkserver")
+                    .forEach { element ->
+                        val status = element.attr("data-status") ?: return@forEach
+                        if (status != "1") return@forEach
+                        val extractorData = element.attr("data-video") ?: return@forEach
+                        loadExtractor(extractorData, iframe.url, subtitleCallback, callback)
+                    }
+            }
+            launch {
+                val iv = "9262859232435825"
+                val secretKey = "93422192433952489752342908585752"
+                val secretDecryptKey = "93422192433952489752342908585752"
+                Vidstream.extractVidstream(
+                    iframe.url,
+                    this@DramaSeeProvider.name,
+                    callback,
+                    iv,
+                    secretKey,
+                    secretDecryptKey,
+                    isUsingAdaptiveKeys = false,
+                    isUsingAdaptiveData = true,
+                    iframeDocument = iframeDoc
+                )
+            }
+        }
         return true
     }
 }

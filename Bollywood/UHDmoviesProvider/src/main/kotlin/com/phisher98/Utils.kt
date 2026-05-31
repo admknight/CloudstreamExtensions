@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.uhdmovies
 
 
 import com.lagradost.cloudstream3.*
@@ -126,3 +126,6 @@ fun getSearchQuality(check: String?): SearchQuality? {
     }
     return null
 }
+
+
+

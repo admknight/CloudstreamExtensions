@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.cablevisionhd
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -13,3 +13,6 @@ class CablevisionHdProviderPlugin: Plugin() {
     }
 
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.doramasflix
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -11,3 +11,6 @@ class DoramasFlixProviderPlugin: Plugin() {
         registerMainAPI(DoramasFlixProvider())
     }
 }
+
+
+

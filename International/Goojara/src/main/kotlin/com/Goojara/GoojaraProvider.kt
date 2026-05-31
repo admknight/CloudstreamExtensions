@@ -1,4 +1,4 @@
-package com.Goojara
+package com.admknight.goojara
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -12,3 +12,6 @@ class GoojaraProvider: BasePlugin() {
         registerExtractorAPI(Streamplay())
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.MPlayer
+package com.admknight.mplayer
 
 import com.fasterxml.jackson.core.json.JsonReadFeature
 import com.fasterxml.jackson.databind.DeserializationFeature
@@ -36,4 +36,8 @@ val JSONParser = object : ResponseParser {
 val app = Requests(responseParser = JSONParser).apply {
     defaultHeaders = mapOf("User-Agent" to USER_AGENT)
 }
+
+
+
+
 

@@ -1,4 +1,4 @@
-package binged
+package com.admknight.bingedreview
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
@@ -72,7 +72,7 @@ class BingedProvider : MainAPI() {
         var dataList = json?.get("data") as? List<Map<String, Any>>
 
         return dataList?.map { entry ->
-            newnewMovieSearchResponse(
+            newMovieSearchResponse(
                 name = entry["title"].toString(),
                 url = entry["link"].toString(),
                 type = TvType.Movie
@@ -96,7 +96,7 @@ val jsonArray = JSONArray(jsonRaw)
 return List(jsonArray.length()) { index ->
     val item = jsonArray.getJSONObject(index)
 
-    newnewMovieSearchResponse(
+    newMovieSearchResponse(
         name = item.optString("title"),
         url = item.optString("movie_link"),
         type = TvType.Movie
@@ -164,7 +164,7 @@ return List(jsonArray.length()) { index ->
         val dataList = json?.get("data") as? List<Map<String, Any>>
 
         return dataList?.map { entry ->
-            newnewMovieSearchResponse(
+            newMovieSearchResponse(
                 name = entry["title"].toString(),
                 url = entry["link"].toString(),
                 type = TvType.Movie
@@ -236,3 +236,7 @@ override suspend fun load(url: String): LoadResponse? {
         fun String.encodeUri() = URLEncoder.encode(this, "utf8")
     }
 }
+
+
+
+

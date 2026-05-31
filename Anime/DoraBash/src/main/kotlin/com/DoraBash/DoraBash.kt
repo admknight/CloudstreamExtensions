@@ -1,4 +1,4 @@
-package com.DoraBash
+package com.admknight.dorabash
 
 import android.util.Log
 import org.jsoup.nodes.Element
@@ -41,7 +41,7 @@ class DoraBash : MainAPI() {
         val href = fixUrl(this.select("h3 > a").attr("href"))
         val sourceURL = app.get(href).document.select("div.anime-data h4 a").attr("href")
         val posterUrl = fixUrlNull(this.select("img").attr("src"))
-        return newnewMovieSearchResponse(title.capitalize(), sourceURL, TvType.Movie) {
+        return newMovieSearchResponse(title.capitalize(), sourceURL, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -159,4 +159,8 @@ class DoraBash : MainAPI() {
     }
 
 }
+
+
+
+
 

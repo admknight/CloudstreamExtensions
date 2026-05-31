@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.vidstreambundle
 
 import com.lagradost.cloudstream3.TvType
 
@@ -23,3 +23,7 @@ class AsianLoadProvider : VidstreamProviderTemplate() {
 
     override val supportedTypes = setOf(TvType.AsianDrama)
 }
+
+
+
+

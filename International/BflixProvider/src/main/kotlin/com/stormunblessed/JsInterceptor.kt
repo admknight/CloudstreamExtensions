@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.bflix
 
 
 import android.annotation.SuppressLint
@@ -13,7 +13,7 @@ import com.lagradost.cloudstream3.AcraApplication.Companion.context
 import com.lagradost.cloudstream3.utils.Coroutines
 import com.lagradost.cloudstream3.utils.Coroutines.main
 import com.lagradost.nicehttp.requestCreator
-import com.stormunblessed.BflixProviderPlugin.Companion.postFunction
+import com.admknight.bflix.BflixProviderPlugin.Companion.postFunction
 import kotlinx.coroutines.runBlocking
 import okhttp3.*
 import java.util.concurrent.CountDownLatch
@@ -133,3 +133,6 @@ class JsInterceptor(private val serverid: String) : Interceptor {
         return newRequest
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.horis.cloudstreamplugins
+package com.admknight.gdindex
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -128,7 +128,7 @@ class GDIndexProvider : MainAPI() {
 
     private fun List<GDFile>.toSearchResponseList(): List<SearchResponse> {
         return filter { it.name.contains("(?i)\\.(mkv|mp4)$".toRegex()) || it.isFolder }.map {
-            newnewAnimeSearchResponse(it.name, it.toJson())
+            newAnimeSearchResponse(it.name, it.toJson())
         }
     }
 
@@ -171,3 +171,7 @@ class GDIndexProvider : MainAPI() {
     }
 
 }
+
+
+
+

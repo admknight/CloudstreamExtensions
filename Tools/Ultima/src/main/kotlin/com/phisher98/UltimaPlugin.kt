@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -809,3 +809,6 @@ class UltimaPlugin : Plugin() {
         }
     }
 }
+
+
+

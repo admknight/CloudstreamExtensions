@@ -1,4 +1,4 @@
-package com.OneTouchTV
+package com.admknight.onetouchtv
 
 import com.lagradost.cloudstream3.APIHolder.capitalize
 import com.lagradost.cloudstream3.Actor
@@ -76,7 +76,7 @@ class OneTouchTV : MainAPI() {
         }
 
         return results.map { result ->
-            newnewTvSeriesSearchResponse(
+            newTvSeriesSearchResponse(
                 result.title ?: "UnKnown",
                 "$mainUrl/vod/${result.id}/detail",
                 if (result.type.equals("movie", true)) TvType.Movie else TvType.TvSeries
@@ -170,7 +170,7 @@ class OneTouchTV : MainAPI() {
     )
 
     private fun OneTouchMedia.toSearchResponse(): SearchResponse {
-        return newnewTvSeriesSearchResponse(title, "$mainUrl/vod/${id}/detail", TvType.Movie) {
+        return newTvSeriesSearchResponse(title, "$mainUrl/vod/${id}/detail", TvType.Movie) {
             this.posterUrl = image
         }
     }
@@ -209,7 +209,7 @@ class OneTouchTV : MainAPI() {
     )
 
     private fun CleanMedia.toSearchResponse(mainUrl: String): SearchResponse {
-        return newnewTvSeriesSearchResponse(
+        return newTvSeriesSearchResponse(
             title ?: "Unknown Title",
             "$mainUrl/vod/${id ?: ""}/detail",
             TvType.Movie
@@ -418,3 +418,7 @@ class OneTouchTV : MainAPI() {
         val playId: String? = null
     )
 }
+
+
+
+

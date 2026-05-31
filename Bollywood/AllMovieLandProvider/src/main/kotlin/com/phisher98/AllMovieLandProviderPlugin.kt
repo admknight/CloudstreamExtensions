@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.allmovieland
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -10,3 +10,7 @@ class AllMovieLandProviderPlugin: BasePlugin() {
         registerMainAPI(AllMovieLandProvider())
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -42,7 +42,7 @@ import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.httpsify
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.phisher98.StreamPlay.Companion.animepaheAPI
+import com.admknight.streamplay.StreamPlay.Companion.animepaheAPI
 import kotlinx.coroutines.runBlocking
 import okhttp3.FormBody
 import okhttp3.MediaType.Companion.toMediaType
@@ -3571,3 +3571,6 @@ data class PlaybackDecryptSource(
     val bitrateKbps: Long,
     val height: Any?,
 )
+
+
+

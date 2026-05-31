@@ -1,4 +1,4 @@
-package com.ToonTales
+package com.admknight.toontales
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
@@ -39,7 +39,7 @@ class ToonTales : MainAPI() {
         val title     = this.select("a > img").attr("alt")
         val href      = fixUrl(this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.select("a > img").attr("src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -94,3 +94,7 @@ class ToonTales : MainAPI() {
         return true
     }
 }
+
+
+
+

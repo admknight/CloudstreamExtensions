@@ -1,8 +1,10 @@
-package com.lagradost
+package com.admknight.hdm
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 
 class HDMProvider : MainAPI() {
@@ -26,7 +28,9 @@ class HDMProvider : MainAPI() {
             val data = i.selectFirst("> div.item")!!
             val img = data.selectFirst("> img")!!.attr("src")
             val name = data.selectFirst("> div.movie-details")!!.text()
-            newMovieSearchResponse(name, href, this.name, TvType.Movie, img, null)
+            newMovieSearchResponse(name, href, TvType.Movie) {
+                this.posterUrl = img
+            }
         }
     }
 
@@ -41,14 +45,14 @@ class HDMProvider : MainAPI() {
         val response = app.get(data).text
         val key = Regex("playlist\\.m3u8(.*?)\"").find(response)?.groupValues?.get(1) ?: return false
         callback.invoke(
-            ExtractorLink(
+            newExtractorLink(
                 this.name,
                 this.name,
                 "https://hls.1o.to/vod/$slug/playlist.m3u8$key",
-                "",
-                Qualities.P720.value,
-                true
-            )
+                ExtractorLinkType.M3U8
+            ) {
+                this.quality = Qualities.P720.value
+            }
         )
         return true
     }
@@ -63,10 +67,11 @@ class HDMProvider : MainAPI() {
             ?.toIntOrNull()
         val data = "src/player/\\?v=(.*?)\"".toRegex().find(response)?.groupValues?.get(1) ?: return null
 
-        return MovieLoadResponse(
-            title, url, this.name, TvType.Movie,
-            "$mainUrl/src/player/?v=$data", poster, year, descript, null
-        )
+        return newMovieLoadResponse(title, url, TvType.Movie, "$mainUrl/src/player/?v=$data") {
+            this.posterUrl = poster
+            this.plot = descript
+            this.year = year
+        }
     }
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
@@ -94,15 +99,9 @@ class HDMProvider : MainAPI() {
                 var image = item?.select("img")?.get(1)?.attr("src") ?: ""
                 val year = null
 
-                newMovieSearchResponse(
-                    name,
-                    link,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    year,
-                    null,
-                )
+                newMovieSearchResponse(name, link, TvType.Movie) {
+                    this.posterUrl = image
+                }
             }
 
             all.add(
@@ -111,6 +110,9 @@ class HDMProvider : MainAPI() {
                 )
             )
         }
-        return HomePageResponse(all)
+        return newHomePageResponse(all)
     }
 }
+
+
+

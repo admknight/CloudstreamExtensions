@@ -1,8 +1,8 @@
-package com.lagradost
+package com.admknight.animekisa
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.mvvm.suspendSafeApiCall
+import com.lagradost.cloudstream3.mvvm.safeAsync
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -35,7 +35,7 @@ class AnimekisaProvider : MainAPI() {
         )
 
         val items = urls.mapNotNull  {
-            suspendSafeApiCall {
+            safeAsync {
                 val home = Jsoup.parse(
                     parseJson<Response>(
                         app.get(
@@ -46,24 +46,21 @@ class AnimekisaProvider : MainAPI() {
                     val title = it.selectFirst("h3.title a")?.text() ?: return@secondMap null
                     val link = it.selectFirst("a")?.attr("href")  ?: return@secondMap null
                     val poster = it.selectFirst("img.lazyload")?.attr("data-src")
-                    newAnimeSearchResponse(
-                        title,
-                        link,
-                        this.name,
-                        TvType.Anime,
-                        poster,
-                        null,
-                        if (title.contains("(DUB)") || title.contains("(Dub)")) EnumSet.of(
-                            DubStatus.Dubbed
-                        ) else EnumSet.of(DubStatus.Subbed),
-                    )
+                    newAnimeSearchResponse(title, link, TvType.Anime) {
+                        this.posterUrl = poster
+                        if (title.contains("(DUB)", true) || title.contains("(Dub)", true)) {
+                            addDubStatus(DubStatus.Dubbed)
+                        } else {
+                            addDubStatus(DubStatus.Subbed)
+                        }
+                    }
                 }
-                HomePageList(name, home)
+                HomePageList(it.second, home)
             }
         }
 
         if (items.isEmpty()) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -76,17 +73,14 @@ class AnimekisaProvider : MainAPI() {
                         ""
                     ) ?: return@mapNotNull null
                 val poster = it.selectFirst(".film-poster img")?.attr("data-src")
-                newAnimeSearchResponse(
-                    title,
-                    url,
-                    this.name,
-                    TvType.Anime,
-                    poster,
-                    null,
-                    if (title.contains("(DUB)") || title.contains("(Dub)")) EnumSet.of(
-                        DubStatus.Dubbed
-                    ) else EnumSet.of(DubStatus.Subbed),
-                )
+                newAnimeSearchResponse(title, url, TvType.Anime) {
+                    this.posterUrl = poster
+                    if (title.contains("(DUB)", true) || title.contains("(Dub)", true)) {
+                        addDubStatus(DubStatus.Dubbed)
+                    } else {
+                        addDubStatus(DubStatus.Subbed)
+                    }
+                }
             }.toList()
     }
 
@@ -102,7 +96,7 @@ class AnimekisaProvider : MainAPI() {
         ) ShowStatus.Ongoing else ShowStatus.Completed
         val episodes = doc.select("div.tab-content ul li.nav-item").mapNotNull {
             val link = it.selectFirst("a")?.attr("href") ?: return@mapNotNull null
-            Episode(link)
+            newEpisode(link)
         }
         val type = if (doc.selectFirst(".dp-i-stats").toString()
                 .contains("Movies")

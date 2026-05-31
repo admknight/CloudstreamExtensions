@@ -1,5 +1,5 @@
 
-package com.lagradost
+package com.admknight.ejatv
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,3 +12,6 @@ class EjaTvPlugin: Plugin() {
         registerMainAPI(EjaTv())
     }
 }
+
+
+

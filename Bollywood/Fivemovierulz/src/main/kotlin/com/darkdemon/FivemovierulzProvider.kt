@@ -1,4 +1,4 @@
-package com.darkdemon
+package com.admknight.fivemovierulz
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
@@ -40,7 +40,7 @@ class FivemovierulzProvider : MainAPI() { // all providers must be an instance o
         val href = fixUrl(this.selectFirst("a")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("src"))
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -107,3 +107,7 @@ class FivemovierulzProvider : MainAPI() { // all providers must be an instance o
         return links.isNotEmpty()
     }
 }
+
+
+
+

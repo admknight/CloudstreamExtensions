@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.pelisplus4k
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
@@ -28,23 +28,19 @@ class Pelisplus4KProvider :MainAPI() {
             Pair("Animes", "$mainUrl/animes"),
         )
 
-        urls.map { (name, url) ->
+        urls.forEach { (name, url) ->
             val doc = app.get(url).document
             val home = doc.select(".articlesList article").map {
                 val title = it.selectFirst("a h2")?.text()
                 val link = it.selectFirst("a.itemA")?.attr("href")
                 val img = it.selectFirst("picture img")?.attr("data-src")
-                newTvSeriesSearchResponse(
-                    title!!,
-                    link!!,
-                    this.name,
-                    TvType.TvSeries,
-                    img,
-                )
+                newTvSeriesSearchResponse(title!!, link!!, TvType.TvSeries) {
+                    this.posterUrl = img
+                }
             }
             items.add(HomePageList(name, home))
         }
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -54,13 +50,9 @@ class Pelisplus4KProvider :MainAPI() {
             val title = it.selectFirst("a h2")?.text()
             val link = it.selectFirst("a.itemA")?.attr("href")
             val img = it.selectFirst("picture img")?.attr("data-src")
-            newTvSeriesSearchResponse(
-                title!!,
-                link!!,
-                this.name,
-                TvType.TvSeries,
-                img,
-            )
+            newTvSeriesSearchResponse(title!!, link!!, TvType.TvSeries) {
+                this.posterUrl = img
+            }
         }
     }
 
@@ -85,22 +77,21 @@ class Pelisplus4KProvider :MainAPI() {
             if(!script.isNullOrEmpty()){
                 val jsonscript = script.substringAfter("seasonsJson = ").substringBefore(";")
                 val json = parseJson<MainTemporada>(jsonscript)
-                json.values.map { list ->
-                    list.map { info ->
+                json.values.forEach { list ->
+                    list.forEach { info ->
                         val epTitle = info.title
                         val seasonNum = info.season
                         val epNum = info.episode
                         val img = info.image
-                        val realimg = if (img == null) null else if (img.isEmpty() == true) null else "https://image.tmdb.org/t/p/w342${img.replace("\\/", "/")}"
+                        val realimg = if (img == null) null else if (img.isEmpty()) null else "https://image.tmdb.org/t/p/w342${img.replace("\\/", "/")}"
                         val epurl = "$url/season/$seasonNum/episode/$epNum"
                         epi.add(
-                            Episode(
-                                epurl,
-                                epTitle,
-                                seasonNum,
-                                epNum,
-                                realimg,
-                            ))
+                            newEpisode(epurl) {
+                                this.name = epTitle
+                                this.season = seasonNum
+                                this.episode = epNum
+                                this.posterUrl = realimg
+                            })
                     }
                 }
             }
@@ -109,8 +100,7 @@ class Pelisplus4KProvider :MainAPI() {
         return when(tvType)
         {
             TvType.TvSeries -> {
-                newTvSeriesLoadResponse(title,
-                    url, tvType, epi,){
+                newTvSeriesLoadResponse(title, url, tvType, epi) {
                     this.posterUrl = poster
                     this.backgroundPosterUrl = backimage
                     this.plot = description
@@ -118,7 +108,7 @@ class Pelisplus4KProvider :MainAPI() {
                 }
             }
             TvType.Movie -> {
-                newMovieLoadResponse(title, url, tvType, url){
+                newMovieLoadResponse(title, url, tvType, url) {
                     this.posterUrl = poster
                     this.backgroundPosterUrl = backimage
                     this.plot = description
@@ -136,17 +126,18 @@ class Pelisplus4KProvider :MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val doc = app.get(data).document
-        doc.select("div ul.subselect li").map {
+        doc.select("div ul.subselect li").forEach {
             val encodedOne = it.attr("data-server").toByteArray()
             val encodedTwo = base64Encode(encodedOne)
             val linkRegex = Regex("window\\.location\\.href\\s*=\\s*'(.*)'")
-            val text = app.get("$mainUrl/player/$encodedTwo").text
-            val link = linkRegex.find(text)?.destructured?.component1()
-            if (link != null) {
-                loadExtractor(link, mainUrl, subtitleCallback, callback)
+            val text = try { app.get("$mainUrl/player/$encodedTwo").text } catch(e: Exception) { null }
+            if (text != null) {
+                val link = linkRegex.find(text)?.destructured?.component1()
+                if (link != null) {
+                    loadExtractor(link, mainUrl, subtitleCallback, callback)
+                }
             }
         }
         return true
     }
-
 }

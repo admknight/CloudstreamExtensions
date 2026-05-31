@@ -1,4 +1,4 @@
-package com.pmsm
+package com.admknight.pmsm
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.Episode
@@ -62,7 +62,7 @@ class Pmsm : MainAPI() {
         val href = fixUrl(this.select("a").attr("href"))
         val title = this.select("h3").text().substringBeforeLast("(")
         val posterUrl = this.selectFirst("img")?.attr("src")
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -209,4 +209,8 @@ class Pmsm : MainAPI() {
         @param:JsonProperty("msg") val msg: String? = null
     )
 }
+
+
+
+
 

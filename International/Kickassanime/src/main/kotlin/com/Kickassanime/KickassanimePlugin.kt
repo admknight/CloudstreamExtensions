@@ -1,4 +1,4 @@
-package com.kickassanime
+package com.admknight.kickassanime
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -10,3 +10,6 @@ class KickassanimePlugin: BasePlugin() {
         registerMainAPI(Kickassanime())
     }
 }
+
+
+

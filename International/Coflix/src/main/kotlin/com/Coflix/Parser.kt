@@ -1,4 +1,4 @@
-package com.Coflix
+package com.admknight.coflix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -61,3 +61,7 @@ data class Search2(
     val director: String,
     val cast: String?,
 )
+
+
+
+

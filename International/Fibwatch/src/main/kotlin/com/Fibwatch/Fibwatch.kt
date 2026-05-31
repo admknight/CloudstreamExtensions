@@ -1,4 +1,4 @@
-package com.Fibwatch
+package com.admknight.fibwatch
 
 import android.util.Log
 import com.lagradost.cloudstream3.*
@@ -75,7 +75,7 @@ open class Fibwatch : MainAPI() {
         val title = cleanTitle(this.selectFirst("p.hptag")?.text() ?: this.selectFirst("div.video-thumb img")?.attr("alt"))
         val href = fixUrl(this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.select("img").attr("src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.posterHeaders = mapOf("Referer" to mainUrl)
         }
@@ -335,6 +335,10 @@ open class Fibwatch : MainAPI() {
         return true
     }
 }
+
+
+
+
 
 
 

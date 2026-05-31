@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.content.SharedPreferences
 import android.os.Build
@@ -28,10 +28,10 @@ import com.lagradost.cloudstream3.newTvSeriesLoadResponse
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.phisher98.StreamPlay.Companion.dahmerMoviesAPI
-import com.phisher98.StreamPlayExtractor.invokeSubtitleAPI
-import com.phisher98.StreamPlayExtractor.invokeWYZIESubs
-import com.phisher98.StreamPlayExtractor.token
+import com.admknight.streamplay.StreamPlay.Companion.dahmerMoviesAPI
+import com.admknight.streamplay.StreamPlayExtractor.invokeSubtitleAPI
+import com.admknight.streamplay.StreamPlayExtractor.invokeWYZIESubs
+import com.admknight.streamplay.StreamPlayExtractor.token
 import org.json.JSONObject
 
 
@@ -281,7 +281,7 @@ class StreamPlayStremioCatelog(
         @param:JsonProperty("year") val yearNum: String? = null
     ) {
         fun toSearchResponse(provider: StreamPlayStremioCatelog): SearchResponse {
-            return provider.newnewMovieSearchResponse(
+            return provider.newMovieSearchResponse(
                 name,
                 this.toJson(),
                 TvType.Others
@@ -448,3 +448,7 @@ class StreamPlayStremioCatelog(
 
 
 }
+
+
+
+

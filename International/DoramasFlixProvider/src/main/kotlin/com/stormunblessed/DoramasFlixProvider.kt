@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.doramasflix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -131,19 +131,19 @@ class DoramasFlixProvider:MainAPI() {
         val vari = variedadesresponse.data?.paginationDorama?.items
         val home1 = listdoramas?.map { info ->
             tasa(info)
-        }
+        } ?: emptyList()
         val home2 = pelis?.map { info ->
             tasa(info)
-        }
+        } ?: emptyList()
         val home3 = vari?.map {info ->
             tasa(info)
-        }
+        } ?: emptyList()
 
-        items.add(HomePageList("Doramas", home1!!))
-        items.add(HomePageList("Peliculas", home2!!))
-        items.add(HomePageList("Doramas 2", home3!!))
+        items.add(HomePageList("Doramas", home1))
+        items.add(HomePageList("Peliculas", home2))
+        items.add(HomePageList("Doramas 2", home3))
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     private fun tasa(
@@ -161,10 +161,10 @@ class DoramasFlixProvider:MainAPI() {
         return newTvSeriesSearchResponse(
             title!!,
             data,
-            name,
             TvType.AsianDrama,
-            realposter,
-        )
+        ) {
+            this.posterUrl = realposter
+        }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -173,11 +173,13 @@ class DoramasFlixProvider:MainAPI() {
         val response = app.post(doraflixapi, requestBody = bodyjson.toRequestBody(mediaType)).parsed<MainDoramas>()
         val searchDorama = response.data?.searchDorama
         val searchMovie = response.data?.searchMovie
-        if (searchDorama!!.isNotEmpty() || searchMovie!!.isNotEmpty())  {
+        if (searchDorama != null && searchDorama.isNotEmpty())  {
             searchDorama.map { info->
                 search.add(tasa(info))
             }
-            searchMovie?.map {info ->
+        }
+        if (searchMovie != null && searchMovie.isNotEmpty()) {
+            searchMovie.map {info ->
                 search.add(tasa(info))
             }
         }
@@ -185,7 +187,6 @@ class DoramasFlixProvider:MainAPI() {
     }
 
     override suspend fun load(url: String): LoadResponse? {
-        //There's ton of shit here
         val fixed = url.substringAfter("https://www.comamosramen.com/")
         val parse = parseJson<DoramasInfo>(fixed)
         val type = parse.type
@@ -205,8 +206,8 @@ class DoramasFlixProvider:MainAPI() {
         val backgroundPosterinfo = metaInfo?.backdrop ?: metaInfo?.backdropPath ?: ""
         val bgposter = getImageUrl(backgroundPosterinfo)
         val tags = ArrayList<String>()
-        val tags1 = metaInfo?.genres?.map { tags.add(it.name!!) }
-        val tags2 = metaInfo?.labels?.map { tags.add(it.name!!) }
+        metaInfo?.genres?.map { tags.add(it.name!!) }
+        metaInfo?.labels?.map { tags.add(it.name!!) }
         val episodes = ArrayList<Episode>()
         var movieData: String? = ""
         val datatwo = "{\"id\":\"${parse.id}\",\"slug\":\"${parse.slug}\",\"type\":\"${parse.type}\",\"isTV\":${parse.isTV}}"
@@ -225,13 +226,12 @@ class DoramasFlixProvider:MainAPI() {
                     val epthumb = getImageUrl(it.stillPath)
                     val name = it.name
                     episodes.add(
-                        Episode(
-                            epSlug!!,
-                            name,
-                            season,
-                            epnum,
-                            epthumb
-                        ))
+                        newEpisode(epSlug!!) {
+                            this.name = name
+                            this.season = season
+                            this.episode = epnum
+                            this.posterUrl = epthumb
+                        })
                 }
             }
         } else if (isMovie) {
@@ -277,17 +277,11 @@ class DoramasFlixProvider:MainAPI() {
         } else {
             val episodeslinkRequestbody = "{\"operationName\":\"GetEpisodeLinks\",\"variables\":{\"episode_slug\":\"$data\"},\"query\":\"query GetEpisodeLinks(\$episode_slug: String!) {\\n  detailEpisode(filter: {slug: \$episode_slug, type_serie: \\\"dorama\\\"}) {\\n    links_online\\n   }\\n}\\n\"}"
             val request = app.post(doraflixapi, requestBody = episodeslinkRequestbody.toRequestBody(mediaType)).parsedSafe<MainDoramas>()
-            //val test = app.post(doraflixapi, requestBody = episodeslinkRequestbody.toRequestBody(mediaType)).text
-            //println("TESTEO $test")
             request?.data?.detailEpisode?.linksOnline?.map {
                 val link = it.link?.replace("https://swdyu.com","https://streamwish.to")?.replace("https://uqload.to","https://uqload.co")
-                //println("LINK $link")
                 loadExtractor(link!!, data, subtitleCallback, callback)
             }
         }
-
-
-
         return true
     }
 }

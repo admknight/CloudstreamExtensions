@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.cinestream
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -8,8 +8,8 @@ import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.LoadResponse.Companion.addImdbId
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
-import com.megix.CineStreamExtractors.invokeAllSources
-import com.megix.CineStreamExtractors.invokeAnimes
+import com.admknight.cinestream.CineStreamExtractors.invokeAllSources
+import com.admknight.cinestream.CineStreamExtractors.invokeAnimes
 
 class CineTmdbProvider: MainAPI() {
     override var name = "CineTmdb"
@@ -64,7 +64,7 @@ class CineTmdbProvider: MainAPI() {
     }
 
      private fun Media.toSearchResponse(type: String? = null): SearchResponse? {
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             title ?: name ?: originalTitle ?: return null,
             Data(id = id, type = mediaType ?: type).toJson(),
             TvType.Movie,
@@ -516,3 +516,7 @@ class CineTmdbProvider: MainAPI() {
         @param:JsonProperty("certification") val certification: String? = null
     )
 }
+
+
+
+

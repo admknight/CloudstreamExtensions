@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.app.ActivityManager
 import android.content.Context
@@ -110,3 +110,7 @@ object StreamPlayConcurrency {
         }
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.cinephile.cinevood
+package com.admknight.cinevood
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -29,7 +29,7 @@ class Cinevood : MainAPI() {
         val url = post.select("a").attr("href")
         val title = post.select("a").attr("title")
         val imageUrl = post.select("img").attr("src")
-        return newnewMovieSearchResponse(title, url, TvType.Movie) {
+        return newMovieSearchResponse(title, url, TvType.Movie) {
             this.posterUrl = imageUrl
             this.quality=getSearchQuality(title)
         }
@@ -231,3 +231,6 @@ class Cinevood : MainAPI() {
 
     data class ResponseData(val meta: Meta?)
 }
+
+
+

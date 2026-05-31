@@ -1,4 +1,4 @@
-package com.BanglaPlex
+package com.admknight.banglaplex
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
@@ -66,7 +66,7 @@ class Banglaplex : MainAPI() {
         val quality = this.select("span.label.label-primary").text()
         val score = this.selectFirst("span.label.label-imdb")?.ownText()?.substringAfter("IMDB")?.trim()
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = getQualityFromString(quality)
             this.score = Score.from10(score)
@@ -122,3 +122,6 @@ class Banglaplex : MainAPI() {
         return true
     }
 }
+
+
+

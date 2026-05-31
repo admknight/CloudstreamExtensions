@@ -1,4 +1,4 @@
-package com.Cinemacity
+package com.admknight.cinemacity
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -10,3 +10,6 @@ class CinemacityPlugin: BasePlugin() {
         registerMainAPI(Cinemacity())
     }
 }
+
+
+

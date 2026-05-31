@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.ihavenotv
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -15,8 +15,6 @@ class IHaveNoTvProvider : MainAPI() {
     override val supportedTypes = setOf(TvType.Documentary)
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
-        // Uhh, I am too lazy to scrape the "latest documentaries" and "recommended documentaries",
-        // so I am just scraping 3 random categories
         val allCategories = listOf(
             "astronomy",
             "brain",
@@ -37,8 +35,7 @@ class IHaveNoTvProvider : MainAPI() {
             "travel"
         )
 
-        val categories = allCategories.asSequence().shuffled().take(3)
-            .toList()  // randomly get 3 categories, because there are too many
+        val categories = allCategories.asSequence().shuffled().take(3).toList()
 
         val items = ArrayList<HomePageList>()
 
@@ -61,25 +58,20 @@ class IHaveNoTvProvider : MainAPI() {
 
                 val title = aTag!!.attr("title")
                 val href = fixUrl(aTag.attr("href"))
-                searchResults[href] = newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Documentary,//if (href.contains("/series/")) TvType.TvSeries else TvType.Movie,
-                    poster,
-                    year,
-                    null
-                )
+                searchResults[href] = newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                    this.posterUrl = poster
+                    this.year = year
+                }
             }
             items.add(
                 HomePageList(
                     capitalizeString(cat),
-                    ArrayList(searchResults.values).subList(0, 5)
+                    ArrayList(searchResults.values).subList(0, 5.coerceAtMost(searchResults.size))
                 )
-            ) // just 5 results per category, app crashes when they are too many
+            )
         }
 
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): ArrayList<SearchResponse> {
@@ -104,15 +96,10 @@ class IHaveNoTvProvider : MainAPI() {
 
             val title = aTag!!.attr("title")
             val href = fixUrl(aTag.attr("href"))
-            searchResults[href] = newTvSeriesSearchResponse(
-                title,
-                href,
-                this.name,
-                TvType.Documentary, //if (href.contains("/series/")) TvType.TvSeries else TvType.Movie,
-                poster,
-                year,
-                null
-            )
+            searchResults[href] = newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                this.posterUrl = poster
+                this.year = year
+            }
         }
 
         return ArrayList(searchResults.values)
@@ -167,41 +154,31 @@ class IHaveNoTvProvider : MainAPI() {
                 }
             }
         } else {
-            listOf(MovieLoadResponse(
-                title,
-                url,
-                this.name,
-                TvType.Movie,
-                url,
-                soup.selectFirst("[rel=\"image_src\"]")!!.attr("href"),
-                Regex("""•?\s+(\d{4})\s+•""").find(
+            null
+        }
+
+        if (isSeries) {
+            val poster = episodes?.firstOrNull()?.posterUrl
+            return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes!!) {
+                this.posterUrl = poster
+                this.year = year
+                this.plot = description
+                this.tags = categories.toList()
+            }
+        } else {
+            val poster = soup.selectFirst("[rel=\"image_src\"]")!!.attr("href")
+            val movieYear = Regex("""•?\s+(\d{4})\s+•""").find(
                     soup.selectFirst(".videoDetails")!!.text()
-                )?.destructured?.component1()?.toIntOrNull(),
-                description,
-                null,
-                soup.selectFirst(".videoDetails")!!.select("a[href*=\"/category/\"]")
+                )?.destructured?.component1()?.toIntOrNull()
+            val tags = soup.selectFirst(".videoDetails")!!.select("a[href*=\"/category/\"]")
                     .map { it.text().trim() }
-            ))
+            return newMovieLoadResponse(title, url, TvType.Movie, url) {
+                this.posterUrl = poster
+                this.year = movieYear
+                this.plot = description
+                this.tags = tags
+            }
         }
-
-        val poster = episodes?.firstOrNull().let {
-            if (isSeries && it != null) (it as Episode).posterUrl
-            else null
-        }
-
-        return if (isSeries) TvSeriesLoadResponse(
-            title,
-            url,
-            this.name,
-            TvType.TvSeries,
-            episodes!!.map { it as Episode },
-            poster,
-            year,
-            description,
-            null,
-            null,
-            categories.toList()
-        ) else (episodes?.first() as MovieLoadResponse)
     }
 
     override suspend fun loadLinks(

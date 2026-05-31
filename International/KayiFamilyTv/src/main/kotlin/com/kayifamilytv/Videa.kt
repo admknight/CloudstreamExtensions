@@ -1,5 +1,5 @@
 // Adapted for CloudStream - taken from https://github.com/vargalex/ResolveURL/blob/fix/videa-resolver-add-cookie/script.module.resolveurl/lib/resolveurl/plugins/videa.py
-package com.kayifamilytv
+package com.admknight.kayifamilytv
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.app
@@ -281,3 +281,7 @@ class Videa : ExtractorApi() {
         return String(result, Charsets.UTF_8)
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.animeflv
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -54,7 +54,7 @@ class AnimeflvnetProvider : MainAPI() {
                         ?.replace("ver/", "anime/") ?: return@mapNotNull null
                     val epNum =
                         it.selectFirst("span.Capi")?.text()?.replace("Episodio ", "")?.toIntOrNull()
-                    newnewAnimeSearchResponse(title, url) {
+                    newAnimeSearchResponse(title, url) {
                         this.posterUrl = fixUrl(poster)
                         addDubStatus(getDubStatus(title), epNum)
                     }
@@ -66,7 +66,7 @@ class AnimeflvnetProvider : MainAPI() {
             val home = doc.select("ul.ListAnimes li article").mapNotNull {
                 val title = it.selectFirst("h3.Title")?.text() ?: return@mapNotNull null
                 val poster = it.selectFirst("figure img")?.attr("src") ?: return@mapNotNull null
-                newnewAnimeSearchResponse(
+                newAnimeSearchResponse(
                     title,
                     fixUrl(it.selectFirst("a")?.attr("href") ?: return@mapNotNull null)
                 ) {
@@ -99,7 +99,7 @@ class AnimeflvnetProvider : MainAPI() {
             val title = searchr.title
             val href = "$mainUrl/anime/${searchr.slug}"
             val image = "$mainUrl/uploads/animes/covers/${searchr.id}.jpg"
-            newnewAnimeSearchResponse(title, href) {
+            newAnimeSearchResponse(title, href) {
                 this.posterUrl = fixUrl(image)
                 addDubStatus(getDubStatus(title))
             }
@@ -111,7 +111,7 @@ class AnimeflvnetProvider : MainAPI() {
             val title = ll.selectFirst("h3")?.text() ?: ""
             val image = ll.selectFirst("figure img")?.attr("src") ?: ""
             val href = ll.selectFirst("a")?.attr("href") ?: ""
-            newnewAnimeSearchResponse(title, href){
+            newAnimeSearchResponse(title, href){
                 this.posterUrl = image
                 addDubStatus(getDubStatus(title))
             }
@@ -196,3 +196,7 @@ class AnimeflvnetProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

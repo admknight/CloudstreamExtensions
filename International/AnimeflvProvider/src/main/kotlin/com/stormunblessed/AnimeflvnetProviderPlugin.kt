@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.animeflv
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -11,3 +11,6 @@ class AnimeflvnetProviderPlugin: Plugin() {
         registerMainAPI(AnimeflvnetProvider())
     }
 }
+
+
+

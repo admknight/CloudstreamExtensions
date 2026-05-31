@@ -1,4 +1,4 @@
-package com.Pinoymoviepedia
+package com.admknight.pinoymoviepedia
 
 
 import com.lagradost.api.Log
@@ -70,7 +70,7 @@ open class Pinoymoviepedia : MainAPI() {
             }
         }
         val quality = getQualityFromString(this.select("span.quality").text())
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = quality
         }
@@ -84,7 +84,7 @@ open class Pinoymoviepedia : MainAPI() {
                 it.selectFirst("div.title > a")!!.text().replace(Regex("\\(\\d{4}\\)"), "").trim()
             val href = getProperLink(it.selectFirst("div.title > a")!!.attr("href"))
             val posterUrl = it.selectFirst("img")!!.attr("src").toString()
-            newnewMovieSearchResponse(title, href, TvType.TvSeries) {
+            newMovieSearchResponse(title, href, TvType.TvSeries) {
                 this.posterUrl = posterUrl
             }
         }
@@ -155,3 +155,7 @@ open class Pinoymoviepedia : MainAPI() {
         }
     }
 }
+
+
+
+

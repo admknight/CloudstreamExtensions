@@ -1,4 +1,4 @@
-package com.likdev256
+package com.admknight.masstamilan
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -45,7 +45,7 @@ class MassTamilanProvider : MainAPI() { // all providers must be an instance of 
         val title = this.selectFirst("div h2")?.text()?.trim() ?: return null
         val href = fixUrl(mainUrl + this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.selectFirst("a picture img")?.attr("src"))
-        return newnewTvSeriesSearchResponse(title, href+",,"+title, TvType.TvSeries) {
+        return newTvSeriesSearchResponse(title, href+",,"+title, TvType.TvSeries) {
                 this.posterUrl = posterUrl
             }
     }
@@ -183,3 +183,7 @@ class MassTamilanProvider : MainAPI() { // all providers must be an instance of 
         return true
     }
 }
+
+
+
+

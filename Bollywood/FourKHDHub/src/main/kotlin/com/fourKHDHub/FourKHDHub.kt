@@ -1,4 +1,4 @@
-package com.fourKHDHub
+package com.admknight.fourkhdhub
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -69,7 +69,7 @@ class FourKHDHub : MainAPI() {
         val posterUrl = this.select("img").attr("src")
         val tags = select("span.movie-card-format").map { it.text() }
         val quality = getSearchQuality(tags)
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = quality
         }
@@ -384,3 +384,7 @@ class FourKHDHub : MainAPI() {
         return true
     }
 }
+
+
+
+

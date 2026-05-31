@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.quickiptv
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
@@ -76,3 +76,6 @@ class SonyIPTV : SportsIPTV() {
         return true
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98.settings
+package com.admknight.streamplay
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -11,8 +11,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
-import com.phisher98.BuildConfig
-import com.phisher98.StreamPlayPlugin
+import com.admknight.streamplay.BuildConfig
+import com.admknight.streamplay.StreamPlayPlugin
 import com.lagradost.cloudstream3.CommonActivity.showToast
 
 class WyzieSettingsFragment(
@@ -127,3 +127,7 @@ class WyzieSettingsFragment(
         onDismissCallback?.invoke()
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
@@ -9,9 +9,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import com.phisher98.settings.SettingsFragment
-import com.phisher98.settings.ToggleFragment
-import com.phisher98.settings.WyzieSettingsFragment
 
 class MainSettingsFragment(
     private val plugin: StreamPlayPlugin,
@@ -182,3 +179,7 @@ class MainSettingsFragment(
         }
     }
 }
+
+
+
+

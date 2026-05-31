@@ -1,4 +1,4 @@
-package com.Fibwatch
+package com.admknight.fibwatch
 
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.mainPageOf
@@ -24,3 +24,6 @@ class Fibwatchdrama : Fibwatch() {
         "videos/latest" to "Latest Videos",
     )
 }
+
+
+

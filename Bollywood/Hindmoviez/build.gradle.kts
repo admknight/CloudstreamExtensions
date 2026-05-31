@@ -1,26 +1,6 @@
-// use an integer for version numbers
-version = 9
-
-
 cloudstream {
-    description = "Watch Movies & TvSeries (Multi-Lang)"
-    authors = listOf("Adam Knight")
-
-    /**
-    * Status int as the following:
-    * 0: Down
-    * 1: Ok
-    * 2: Slow
-    * 3: Beta only
-    * */
-    status = 1 // will be 3 if unspecified
-
-    tvTypes = listOf(
-        "Movie",
-        "TvSeries",
-    )
     language = "hi"
-    iconUrl = "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/hindmoviez.png"
-
-    isCrossPlatform = false
+    authors = listOf("Adam Knight")
+    status = 1
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Hindmoviez/icon.png"
 }

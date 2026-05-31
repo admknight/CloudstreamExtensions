@@ -1,4 +1,4 @@
-package com.horis.cloudstreamplugins
+package com.admknight.gdindex
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -11,3 +11,7 @@ class GDIndex : Plugin() {
         registerMainAPI(GDIndexProvider())
     }
 }
+
+
+
+

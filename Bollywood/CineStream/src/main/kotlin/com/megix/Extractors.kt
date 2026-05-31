@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.cinestream
 
 // Cloudstream Core, Network, Utils, & Logging
 import com.lagradost.api.Log
@@ -35,7 +35,7 @@ import javax.crypto.spec.SecretKeySpec
 import java.security.SecureRandom
 import javax.crypto.Cipher
 
-import com.megix.settings.Settings
+import com.admknight.cinestream.Settings
 
 class Streameeeeee : Videostr() {
     override var name = "Streameeeeee"
@@ -1396,3 +1396,7 @@ open class PpzjYoutube : ExtractorApi() {
             .digest(input.toByteArray())
             .joinToString("") { "%02x".format(it) }
 }
+
+
+
+

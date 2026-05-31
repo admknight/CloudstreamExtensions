@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
@@ -19,7 +19,7 @@ import com.lagradost.cloudstream3.mainPageOf
 import com.lagradost.cloudstream3.newHomePageResponse
 import com.lagradost.cloudstream3.newMovieLoadResponse
 import com.lagradost.cloudstream3.utils.AppUtils
-import com.phisher98.UltimaUtils.SectionInfo
+import com.admknight.ultima.UltimaUtils.SectionInfo
 
 class Ultima(val plugin: UltimaPlugin) : MainAPI() {
     override var name = "Ultima"
@@ -226,3 +226,7 @@ class Ultima(val plugin: UltimaPlugin) : MainAPI() {
 
 
 }
+
+
+
+

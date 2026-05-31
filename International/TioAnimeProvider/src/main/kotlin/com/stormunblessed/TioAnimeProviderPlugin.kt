@@ -1,14 +1,15 @@
-package com.stormunblessed
+package com.admknight.tioanime
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
-import com.lagradost.cloudstream3.plugins.Plugin
-import android.content.Context
-import com.lagradost.cloudstream3.animeproviders.TioAnimeProvider
+import com.lagradost.cloudstream3.plugins.BasePlugin
 
 @CloudstreamPlugin
-class TioAnimeProviderPlugin: Plugin() {
-    override fun load(context: Context) {
+class TioAnimeProviderPlugin: BasePlugin() {
+    override fun load() {
         // All providers should be added in this manner. Please don't edit the providers list directly.
         registerMainAPI(TioAnimeProvider())
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.Desicinemas
+package com.admknight.desicinemas
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -39,7 +39,7 @@ open class DesicinemasProvider : MainAPI() {
         val href = fixUrlNull(selectFirst("a")?.attr("href")) ?: return null
         val posterUrl = fixUrlNull(selectFirst("img")?.attr("data-src"))
 
-        return newnewAnimeSearchResponse(title, href) { this.posterUrl = posterUrl }
+        return newAnimeSearchResponse(title, href) { this.posterUrl = posterUrl }
     }
 
     override suspend fun search(query: String) =
@@ -82,3 +82,7 @@ open class DesicinemasProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.Animecloud
+package com.admknight.animecloud
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.SubtitleFile
@@ -48,11 +48,11 @@ data class HomeDaum(
 )
 
 data class EpisodeParser(
-    val data: Data?,
+    val data: AnimeDetailData?,
     val status: Long?,
 )
 
-data class Data(
+data class AnimeDetailData(
     val id: Long?,
     @param:JsonProperty("created_at")
     val createdAt: String?,
@@ -126,10 +126,10 @@ data class AnimeEpisode(
 
 
 data class AnimecloudEP(
-    val `data`: Data,
+    val `data`: EpisodeData,
     val status: Int
 ) {
-    data class Data(
+    data class EpisodeData(
         val anime_episode_links: List<AnimeEpisodeLink>,
         val anime_season_id: Int,
         val dislike_count: Int,
@@ -224,3 +224,7 @@ suspend fun loadSourceNameExtractor(
         }
     }
 }
+
+
+
+

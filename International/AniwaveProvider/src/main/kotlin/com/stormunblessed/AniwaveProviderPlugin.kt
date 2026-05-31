@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.aniwave
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -27,3 +27,6 @@ class AniwaveProviderPlugin : Plugin() {
         }
     }
 }
+
+
+

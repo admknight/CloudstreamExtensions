@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.bollyflix
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -18,3 +18,7 @@ class Bollyflix: Plugin() {
         registerExtractorAPI(fastdlserver())
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.dudefilms
+package com.admknight.dudefilms
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.annotations.SerializedName
@@ -162,3 +162,6 @@ fun getSearchQuality(check: String?): SearchQuality? {
     for ((regex, quality) in patterns) if (regex.containsMatchIn(u)) return quality
     return null
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.aniflix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -35,7 +35,7 @@ class AniflixProvider : MainAPI() {
     }
 
     private fun Anime.toSearchResponse(): SearchResponse? {
-        return newnewAnimeSearchResponse(
+        return newAnimeSearchResponse(
             title?.english ?: title?.romaji ?: return null,
             "$mainUrl/anime/${id ?: return null}"
         ) {
@@ -60,14 +60,14 @@ class AniflixProvider : MainAPI() {
                 val image = it.selectFirst("img.rounded-md[sizes]")!!.attr("src").replace("/_next/image?url=","")
                     .replace(Regex("\\&.*\$"),"")
                 val realposter = URLDecoder.decode(image, "UTF-8")
-                newnewAnimeSearchResponse(title, fixUrl(href)) {
+                newAnimeSearchResponse(title, fixUrl(href)) {
                     this.posterUrl = realposter
                 }
             }
             items.add(HomePageList(name, home))
         }
 
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse>? {
@@ -272,3 +272,6 @@ class AniflixProvider : MainAPI() {
         @JsonProperty("original") val original: Original?,
     )
 }
+
+
+

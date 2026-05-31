@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.onlinemovieshindit
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -40,7 +40,7 @@ class OnlineMoviesHindiProvider : MainAPI() { // all providers must be an instan
         val href = fixUrl(this.selectFirst("a")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("article img")?.attr("src"))
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -117,3 +117,7 @@ class OnlineMoviesHindiProvider : MainAPI() { // all providers must be an instan
         return true
     }
 }
+
+
+
+

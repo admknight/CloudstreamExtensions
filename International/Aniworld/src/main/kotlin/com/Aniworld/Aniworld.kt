@@ -1,7 +1,7 @@
-package com.Aniworld
+package com.admknight.aniworld
 
 import android.content.SharedPreferences
-import com.Aniworld.AniworldPlugin.ByseSX
+import com.admknight.aniworld.ByseSX
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.AnimeSearchResponse
 import com.lagradost.cloudstream3.DubStatus
@@ -84,7 +84,7 @@ open class Aniworld(sharedPref: SharedPreferences?=null) : MainAPI() {
                 .parsedSafe<SerienstreamSearch>()
                 ?.shows
                 ?.map {
-                    newnewAnimeSearchResponse(
+                    newAnimeSearchResponse(
                         it.name.replace(Regex("</?em>"), ""),
                         fixUrl(it.url),
                         TvType.TvSeries
@@ -109,7 +109,7 @@ open class Aniworld(sharedPref: SharedPreferences?=null) : MainAPI() {
                 "/stream"
             )
         }?.map {
-            newnewAnimeSearchResponse(
+            newAnimeSearchResponse(
                 it.title?.replace(Regex("</?em>"), "") ?: "",
                 fixUrl(it.link),
                 TvType.Anime
@@ -272,7 +272,7 @@ open class Aniworld(sharedPref: SharedPreferences?=null) : MainAPI() {
         val title = this.selectFirst("h3")?.text()?.takeIf { it.isNotBlank() }
             ?: this.selectFirst("img")?.attr("alt").orEmpty()
         val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("data-src")?.takeIf { it.isNotBlank() } ?: this.selectFirst("img")?.attr("src"))
-        return newnewAnimeSearchResponse(title, href, TvType.Anime) {
+        return newAnimeSearchResponse(title, href, TvType.Anime) {
             this.posterUrl = posterUrl
         }
     }
@@ -336,3 +336,6 @@ suspend fun loadCustomExtractor(
         }
     }
 }
+
+
+

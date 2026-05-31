@@ -1,4 +1,4 @@
-package com.Animexin
+package com.admknight.animexin
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
@@ -39,7 +39,7 @@ class Animexin : MainAPI() {
         val title     = this.select("div.bsx > a").attr("title")
         val href      = fixUrl(this.select("div.bsx > a").attr("href"))
         val posterUrl = fixUrlNull(this.select("div.bsx > a img").attr("src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -102,3 +102,7 @@ class Animexin : MainAPI() {
         return true
     }
 }
+
+
+
+

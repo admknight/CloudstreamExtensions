@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.movierulzhd
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -394,3 +394,7 @@ class HDm2 : ExtractorApi() {
         return if (!tok.isNullOrEmpty()) "$base?tok=$tok" else base
     }
 }
+
+
+
+

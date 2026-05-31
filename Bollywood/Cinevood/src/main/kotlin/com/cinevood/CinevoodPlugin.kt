@@ -1,7 +1,7 @@
-package com.cinephile.cinevood
+package com.admknight.cinevood
 
 import android.content.Context
-import com.cinevood.HubCloud
+import com.admknight.cinevood.HubCloud
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
 
@@ -14,3 +14,7 @@ class CinevoodPlugin : Plugin() {
         registerExtractorAPI(HubCloud())
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.vegamovies
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -14,3 +14,7 @@ class VegaMovies: Plugin() {
         registerExtractorAPI(VCloud())
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.peliculasflix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -118,7 +118,7 @@ class PeliculasFlixProvider:MainAPI() {
         val id = info.Id
         val typename = info._typename
         val data = "{\"id\":\"$id\",\"slug\":\"$slug\",\"type\":\"$typename\"}"
-        return newnewMovieSearchResponse(title, data, TvType.Movie) {
+        return newMovieSearchResponse(title, data, TvType.Movie) {
             this.posterUrl = realposter
         }
     }
@@ -205,3 +205,6 @@ class PeliculasFlixProvider:MainAPI() {
         return true
     }
 }
+
+
+

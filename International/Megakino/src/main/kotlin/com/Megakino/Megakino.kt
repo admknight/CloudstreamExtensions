@@ -1,4 +1,4 @@
-package com.Megakino
+package com.admknight.megakino
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -42,7 +42,7 @@ class Megakino : MainAPI() {
         val title = this.select("h3").text()
         val href = fixUrl(this.attr("href"))
         val posterUrl = fixUrlNull(mainUrl+this.select("img").attr("data-src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality= SearchQuality.HD
         }
@@ -52,7 +52,7 @@ class Megakino : MainAPI() {
         val title = this.select("h3").text()
         val href = fixUrl(this.attr("href"))
         val posterUrl = fixUrlNull(mainUrl+this.select("img").attr("data-src"))
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality= SearchQuality.HD
         }
@@ -123,3 +123,7 @@ class Megakino : MainAPI() {
         return true
     }
 }
+
+
+
+

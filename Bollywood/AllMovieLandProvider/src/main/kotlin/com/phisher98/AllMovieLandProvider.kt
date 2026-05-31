@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.allmovieland
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -137,19 +137,19 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
         else TvType.Cartoon
         return when (type) {
             TvType.Movie -> {
-                newnewMovieSearchResponse(title, href, TvType.Movie) {
+                newMovieSearchResponse(title, href, TvType.Movie) {
                     this.posterUrl = posterUrl
                     posterHeaders = cookies
                 }
             }
             TvType.TvSeries -> {
-                newnewTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                     this.posterUrl = posterUrl
                     posterHeaders = cookies
                 }
             }
             else -> {
-                newnewMovieSearchResponse(title, href, TvType.Cartoon) {
+                newMovieSearchResponse(title, href, TvType.Cartoon) {
                     this.posterUrl = posterUrl
                     posterHeaders = cookies
                 }
@@ -387,3 +387,7 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
         }
     }
 }
+
+
+
+

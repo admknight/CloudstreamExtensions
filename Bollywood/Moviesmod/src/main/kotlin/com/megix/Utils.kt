@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.moviesmod
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -229,3 +229,7 @@ suspend fun bypass(url: String): String? {
     if (path == "/404") return null
     return fixUrl(path, getBaseUrl(driveUrl))
 }
+
+
+
+

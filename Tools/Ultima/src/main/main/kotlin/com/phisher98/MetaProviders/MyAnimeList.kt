@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.DubStatus
@@ -27,9 +27,9 @@ import com.lagradost.cloudstream3.syncproviders.providers.MALApi.MalAnime
 import com.lagradost.cloudstream3.syncproviders.providers.MALApi.Recommendations
 import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.phisher98.UltimaMediaProvidersUtils.invokeExtractors
-import com.phisher98.UltimaUtils.Category
-import com.phisher98.UltimaUtils.LinkData
+import com.admknight.ultima.UltimaMediaProvidersUtils.invokeExtractors
+import com.admknight.ultima.UltimaUtils.Category
+import com.admknight.ultima.UltimaUtils.LinkData
 
 open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
     override var name = "MyAnimeList"
@@ -61,7 +61,7 @@ open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
     private fun MalApiResponse.MalApiData.toSearchResponse(): SearchResponse {
         val url = "$mainUrl/${this.node.id}"
         val posterUrl = this.node.picture.large
-        val res = newnewAnimeSearchResponse(this.node.title, url) { this.posterUrl = posterUrl }
+        val res = newAnimeSearchResponse(this.node.title, url) { this.posterUrl = posterUrl }
         return res
     }
 
@@ -69,23 +69,11 @@ open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
         val node = this.node ?: throw Exception("Unable to parse Recommendation")
         val url = "$mainUrl/${node.id}"
         val posterUrl = node.mainPicture?.large
-        val res = newnewAnimeSearchResponse(node.title, url) { this.posterUrl = posterUrl }
-        return res
-    }
-
-    override val mainPage =
-            mainPageOf(
-                    "$apiUrl/anime/ranking?ranking_type=all&limit=$mediaLimit&offset=" to
-                            "Top Anime Series",
-                    "$apiUrl/anime/ranking?ranking_type=airing&limit=$mediaLimit&offset=" to
-                            "Top Airing Anime",
-                    "$apiUrl/anime/ranking?ranking_type=bypopularity&limit=$mediaLimit&offset=" to
-                            "Popular Anime",
-                    "$apiUrl/anime/ranking?ranking_type=favorite&limit=$mediaLimit&offset=" to
-                            "Top Favorited Anime",
-                    "$apiUrl/anime/suggestions?limit=$mediaLimit&offset=" to "Suggestions",
-                    "Personal" to "Personal"
-            )
+        val res = newAnimeSearchResponse(node.title, "$apiUrl/anime/ranking?ranking_type=airing&limit=$mediaLimit&offset=" to
+                            "Top Airing Anime") { this.posterUrl = "$apiUrl/anime/ranking?ranking_type=bypopularity&limit=$mediaLimit&offset=" to
+                            "Popular Anime"; this.year = "$apiUrl/anime/ranking?ranking_type=favorite&limit=$mediaLimit&offset=" to
+                            "Top Favorited Anime"; this.dubStatus = "$apiUrl/anime/suggestions?limit=$mediaLimit&offset=" to "Suggestions",
+                    "Personal" to "Personal" }
 
     override suspend fun search(query: String): List<SearchResponse>? {
         val res = malAPICall("$apiUrl/anime?q=$query&limit=$mediaLimit")
@@ -191,3 +179,9 @@ open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
         }
     }
 }
+
+
+
+
+
+

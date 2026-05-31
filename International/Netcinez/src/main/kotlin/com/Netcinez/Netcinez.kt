@@ -1,4 +1,4 @@
-package com.Netcinez
+package com.admknight.netcinez
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Episode
@@ -75,7 +75,7 @@ class Netcinez : MainAPI() {
         val href = fixUrl(this.select("a").attr("href"))
         val posterUrl =
             this.select("img").attr("data-src").ifEmpty { this.select("img").attr("src") }
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -108,7 +108,7 @@ class Netcinez : MainAPI() {
             val recName = it.select("div.data-r > h4").text()
             val recHref = it.attr("href")
             val recPosterUrl = it.select("img").attr("src")
-            newnewTvSeriesSearchResponse(recName,recHref, TvType.Movie) {
+            newTvSeriesSearchResponse(recName,recHref, TvType.Movie) {
                 this.posterUrl = recPosterUrl
             }
         }
@@ -205,3 +205,7 @@ class Netcinez : MainAPI() {
         return true
     }
 }
+
+
+
+

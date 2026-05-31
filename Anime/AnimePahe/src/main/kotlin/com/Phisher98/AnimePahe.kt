@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animepahe
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -58,7 +58,7 @@ class AnimePahe : MainAPI() {
         )
         val response = app.get(request.data + page, headers = headers).text
         val episodes = parseJson<AnimePaheLatestReleases>(response).data.map {
-            newnewAnimeSearchResponse(
+            newAnimeSearchResponse(
                 it.animeTitle,
                 LoadData(it.animeSession, unixTime, it.animeTitle).toJson(),
                 fix = false
@@ -106,7 +106,7 @@ class AnimePahe : MainAPI() {
         val data = parseJson<AnimePaheSearch>(req)
 
         return data.data.map {
-            newnewAnimeSearchResponse(
+            newAnimeSearchResponse(
                 it.title,
                 LoadData(it.session, unixTime, it.title).toJson(),
                 fix = false
@@ -297,7 +297,7 @@ class AnimePahe : MainAPI() {
                     it.select("img").attr("src")
                 }
 
-                newnewMovieSearchResponse(title, json, TvType.TvSeries) {
+                newMovieSearchResponse(title, json, TvType.TvSeries) {
                     this.posterUrl = posterurl
                 }
             }
@@ -390,7 +390,7 @@ class AnimePahe : MainAPI() {
             }
 
 
-        document.select("div#pickDownload > a").amap {
+        document.select("div#pickDownload > a").map {
             val qualityRegex = Regex("""(.+?)\s+·\s+(\d{3,4}p)""")
             val href = it.attr("href")
             var type = "SUB"
@@ -413,3 +413,7 @@ class AnimePahe : MainAPI() {
         return true
     }
 }
+
+
+
+

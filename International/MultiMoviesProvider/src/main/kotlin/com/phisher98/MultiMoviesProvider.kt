@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.multimovies
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -96,12 +96,12 @@ class MultiMoviesProvider : MainAPI() { // all providers must be an instance of 
         val posterUrl = fixUrlNull(this.selectFirst("div.poster > img")?.getImageAttr())
         val quality = getQualityFromString(this.select("div.poster > div.mepo > span").text())
         return if (href.contains("Movie")) {
-            newnewMovieSearchResponse(title, href, TvType.Movie) {
+            newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
                 this.quality = quality
             }
         } else {
-            newnewTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+            newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                 this.posterUrl = posterUrl
                 this.quality = quality
             }
@@ -122,12 +122,12 @@ class MultiMoviesProvider : MainAPI() { // all providers must be an instance of 
             val quality = getQualityFromString(it.select("div.poster > div.mepo > span").text())
             val type = it.select("article > div.image > div.thumbnail > a > span").text()
             if (type.contains("Movie")) {
-                newnewMovieSearchResponse(title, href, TvType.Movie) {
+                newMovieSearchResponse(title, href, TvType.Movie) {
                     this.posterUrl = posterUrl
                     this.quality = quality
                 }
             } else {
-                newnewTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                     this.posterUrl = posterUrl
                     this.quality = quality
                 }
@@ -314,3 +314,7 @@ class MultiMoviesProvider : MainAPI() { // all providers must be an instance of 
             ?: this.attr("src").takeIf { it.isNotBlank() && it.startsWith("http") }
     }
 }
+
+
+
+

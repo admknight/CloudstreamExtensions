@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.stremiox
 
 import android.util.Log
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -37,9 +37,9 @@ import com.lagradost.cloudstream3.utils.USER_PROVIDER_API
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.phisher98.StremioC.Companion.TRACKER_LIST_URLS
-import com.phisher98.SubsExtractors.invokeOpenSubs
-import com.phisher98.SubsExtractors.invokeWatchsomuch
+import com.admknight.stremiox.StremioC.Companion.TRACKER_LIST_URLS
+import com.admknight.stremiox.SubsExtractors.invokeOpenSubs
+import com.admknight.stremiox.SubsExtractors.invokeWatchsomuch
 import org.json.JSONObject
 import java.net.URLEncoder
 import java.util.Locale
@@ -189,7 +189,7 @@ class StremioC(override var mainUrl: String, override var name: String) : MainAP
                     genre = null
                 )
 
-                newnewMovieSearchResponse(
+                newMovieSearchResponse(
                     title,
                     entry.toJson(),
                     if (stremioType == "series") TvType.TvSeries else TvType.Movie
@@ -428,7 +428,7 @@ class StremioC(override var mainUrl: String, override var name: String) : MainAP
         @param:JsonProperty("links") val links: List<Link> = emptyList()
     ) {
         fun toSearchResponse(provider: StremioC): SearchResponse {
-            return provider.newnewMovieSearchResponse(
+            return provider.newMovieSearchResponse(
                 name,
                 this.toJson(),
                 TvType.Others
@@ -486,7 +486,7 @@ class StremioC(override var mainUrl: String, override var name: String) : MainAP
                             genre = null
                         )
                         
-                        provider.newnewMovieSearchResponse(
+                        provider.newMovieSearchResponse(
                             recTitle,
                             recommendationEntry.toJson(),
                             if (stremioType == "movie") TvType.Movie else TvType.TvSeries
@@ -1057,3 +1057,7 @@ suspend fun invokeTorrentio(
         )
     }
 }
+
+
+
+

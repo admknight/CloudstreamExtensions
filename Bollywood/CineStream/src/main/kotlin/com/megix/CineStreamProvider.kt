@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.cinestream
 
 // Cloudstream Core, Utils, & Logging
 import com.lagradost.api.Log
@@ -24,9 +24,9 @@ import kotlinx.coroutines.runBlocking
 // JSON Parsing
 import org.json.JSONObject
 
-import com.megix.CineStreamExtractors.invokeAllSources
-import com.megix.CineStreamExtractors.invokeAllAnimeSources
-import com.megix.CineStreamExtractors.invokeAnimes
+import com.admknight.cinestream.CineStreamExtractors.invokeAllSources
+import com.admknight.cinestream.CineStreamExtractors.invokeAllAnimeSources
+import com.admknight.cinestream.CineStreamExtractors.invokeAnimes
 
 open class CineStreamProvider : MainAPI() {
     override var mainUrl = "https://cinemeta-catalogs.strem.io"
@@ -105,7 +105,7 @@ open class CineStreamProvider : MainAPI() {
                 if(movie.type == "movie") TvType.Movie
                 else TvType.TvSeries
             val title = movie.aliases?.firstOrNull() ?: movie.name ?: ""
-            newnewMovieSearchResponse(title, PassData(movie.id, movie.type).toJson(), type) {
+            newMovieSearchResponse(title, PassData(movie.id, movie.type).toJson(), type) {
                 this.posterUrl = getPosterUrl(movie.poster)
                 this.score = Score.from10(movie.imdbRating)
             }
@@ -132,7 +132,7 @@ open class CineStreamProvider : MainAPI() {
                         it.poster
                     }
 
-                    newnewMovieSearchResponse(title, PassData(it.id, it.type).toJson()).apply {
+                    newMovieSearchResponse(title, PassData(it.id, it.type).toJson()).apply {
                         this.posterUrl = getPosterUrl(poster)
                         this.score = Score.from10(it.imdbRating)
                     }
@@ -541,4 +541,8 @@ open class CineStreamProvider : MainAPI() {
         )
     }
 }
+
+
+
+
 

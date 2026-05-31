@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.kisskh
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -10,3 +10,6 @@ class KisskhProviderPlugin: BasePlugin() {
         registerMainAPI(KisskhProvider())
     }
 }
+
+
+

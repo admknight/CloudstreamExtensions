@@ -1,4 +1,4 @@
-package com.MPlayer
+package com.admknight.mplayer
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.lagradost.api.Log
@@ -104,14 +104,14 @@ class MPlayer : MainAPI() {
     private fun MovieItem.toSearchResult(): SearchResponse {
         val portraitLargeImageUrl = getPortraitLargeImageUrl(this)
         val bigpic=getMBigPic(this)
-        return newnewMovieSearchResponse(title, LoadUrl(this.title, this.titleContentImageInfo,bigpic,this.type,this.stream,this.description,this.shareUrl,null,languages = this.languages).toJson()) {
+        return newMovieSearchResponse(title, LoadUrl(this.title, this.titleContentImageInfo,bigpic,this.type,this.stream,this.description,this.shareUrl,null,languages = this.languages).toJson()) {
             posterUrl = portraitLargeImageUrl
         }
     }
 
     private fun Item.toSearchResult(): SearchResponse {
         val portraitLargeImageUrl = getPortraitLargeImageUrl(this)
-        return newnewMovieSearchResponse(title, LoadUrl(this.title, this.titleContentImageInfo,null,this.type,null,this.description,this.shareUrl,null,languages = this.languages).toJson()) {
+        return newMovieSearchResponse(title, LoadUrl(this.title, this.titleContentImageInfo,null,this.type,null,this.description,this.shareUrl,null,languages = this.languages).toJson()) {
             posterUrl = portraitLargeImageUrl
         }
     }
@@ -216,7 +216,7 @@ class MPlayer : MainAPI() {
                         (0 until arr.length()).map { arr.get(it) }
                     }
                     result.add(
-                        newnewMovieSearchResponse(
+                        newMovieSearchResponse(
                             title,
                             LoadUrl(
                                 title,
@@ -239,7 +239,7 @@ class MPlayer : MainAPI() {
                         (0 until arr.length()).map { arr.get(it) }
                     }
                     result.add(
-                        newnewMovieSearchResponse(
+                        newMovieSearchResponse(
                             title,
                             LoadUrl(
                                 title,
@@ -519,3 +519,6 @@ private fun Headers.getCookies(cookieKey: String = "set-cookie"): Map<String, St
     }
 
 }
+
+
+

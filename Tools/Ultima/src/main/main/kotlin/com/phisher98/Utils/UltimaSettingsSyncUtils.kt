@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import android.content.Context
 import android.os.Build
@@ -432,3 +432,7 @@ object UltimaSettingsSyncUtils {
         }
     }
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.layarKacaProvider
+package com.admknight.layarkaca
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
@@ -66,14 +66,14 @@ class LayarKacaProvider : MainAPI() {
         return if (type == TvType.TvSeries) {
             val episode = this.selectFirst("span.episode strong")?.text()?.filter { it.isDigit() }
                 ?.toIntOrNull()
-            newnewAnimeSearchResponse(title, href, TvType.TvSeries) {
+            newAnimeSearchResponse(title, href, TvType.TvSeries) {
                 this.posterUrl = posterUrl
                 this.posterHeaders = posterheaders
                 addSub(episode)
             }
         } else {
             val quality = this.select("div.quality").text().trim()
-            newnewMovieSearchResponse(title, href, TvType.Movie) {
+            newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
                 this.posterHeaders = posterheaders
                 addQuality(quality)
@@ -97,12 +97,12 @@ class LayarKacaProvider : MainAPI() {
             val posterUrl = "https://static-jpg.lk21.party/wp-content/uploads/"+item.optString("poster")
             when (type) {
                 "series" -> results.add(
-                    newnewTvSeriesSearchResponse(title, "$seriesUrl/$slug", TvType.TvSeries) {
+                    newTvSeriesSearchResponse(title, "$seriesUrl/$slug", TvType.TvSeries) {
                         this.posterUrl = posterUrl
                     }
                 )
                 "movie" -> results.add(
-                    newnewMovieSearchResponse(title, "$mainUrl/$slug", TvType.Movie) {
+                    newMovieSearchResponse(title, "$mainUrl/$slug", TvType.Movie) {
                         this.posterUrl = posterUrl
                     }
                 )
@@ -133,7 +133,7 @@ class LayarKacaProvider : MainAPI() {
             val recName = it.selectFirst("h3")?.text()?.trim().toString()
             val recHref = baseurl+it.selectFirst("a")!!.attr("href")
             val recPosterUrl = fixUrl(it.selectFirst("img")?.attr("src").toString())
-            newnewTvSeriesSearchResponse(recName, recHref, TvType.TvSeries) {
+            newTvSeriesSearchResponse(recName, recHref, TvType.TvSeries) {
                 this.posterUrl = recPosterUrl
                 this.posterHeaders = posterheaders
             }
@@ -237,3 +237,7 @@ class LayarKacaProvider : MainAPI() {
     }
 
 }
+
+
+
+

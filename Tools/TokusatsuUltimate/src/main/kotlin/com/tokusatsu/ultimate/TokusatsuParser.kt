@@ -1,4 +1,4 @@
-package com.tokusatsu.ultimate
+package com.admknight.tokusatsuultimate
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -56,3 +56,6 @@ data class TokusatsuSubtitle(
     @param:JsonProperty("language") val language: String? = null,
     @param:JsonProperty("format") val format: String? = null
 )
+
+
+

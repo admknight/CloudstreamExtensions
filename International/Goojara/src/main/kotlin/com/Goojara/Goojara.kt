@@ -1,4 +1,4 @@
-package com.Goojara
+package com.admknight.goojara
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -59,7 +59,7 @@ class Goojara : MainAPI() {
         val title = this.select("span.mtl").text()
         val href = this.attr("href")
         val posterUrl = this.select("img").attr("data-src")
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
 
@@ -109,7 +109,7 @@ class Goojara : MainAPI() {
                         val finalHref = doc.selectFirst("div.snfo h1 a")?.attr("href") ?: href
 
 
-                        newnewMovieSearchResponse(
+                        newMovieSearchResponse(
                             title,
                             fixUrl(finalHref),
                             TvType.Movie
@@ -360,3 +360,7 @@ class Goojara : MainAPI() {
         }
     }
 }
+
+
+
+

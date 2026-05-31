@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.torrastream
 
 import android.content.SharedPreferences
 import android.util.Base64
@@ -41,8 +41,8 @@ import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.nicehttp.RequestBodyTypes
-import com.phisher98.TorraStream.Companion.Meteorfortheweebs
-import com.phisher98.TorraStream.Companion.TorboxAPI
+import com.admknight.torrastream.TorraStream.Companion.Meteorfortheweebs
+import com.admknight.torrastream.TorraStream.Companion.TorboxAPI
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONArray
@@ -85,7 +85,7 @@ open class TorraStreamAnime(private val sharedPref: SharedPreferences) : MainAPI
         val url = "$mainUrl/anime/${this.id}"
         val posterUrl = this.coverImage.large
         val rating = this.averageScore
-        return newnewAnimeSearchResponse(title, url, TvType.Anime) {
+        return newAnimeSearchResponse(title, url, TvType.Anime) {
             this.posterUrl = posterUrl
             this.score= Score.from100(rating)
         }
@@ -253,7 +253,7 @@ open class TorraStreamAnime(private val sharedPref: SharedPreferences) : MainAPI
                             ?: recommendation.title?.romaji
                             ?:  "Unknown"
                         val recommendationUrl = "$mainUrl/anime/${recommendation.id}"
-                        newnewAnimeSearchResponse(title, recommendationUrl, TvType.Anime).apply {
+                        newAnimeSearchResponse(title, recommendationUrl, TvType.Anime).apply {
                             this.posterUrl = recommendation.coverImage?.large
                         }
                     }
@@ -595,3 +595,7 @@ open class TorraStreamAnime(private val sharedPref: SharedPreferences) : MainAPI
         }
     }
 }
+
+
+
+

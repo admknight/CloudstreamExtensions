@@ -1,4 +1,4 @@
-package com.Donghuastream
+package com.admknight.donghuastream
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -20,3 +20,6 @@ class DonghuastreamProvider: BasePlugin() {
         registerExtractorAPI(PlayStreamplay())
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.onepace
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -19,3 +19,7 @@ class OnePacePlugin : BasePlugin() {
         registerExtractorAPI(ascdn21())
     }
 }
+
+
+
+

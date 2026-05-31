@@ -1,10 +1,10 @@
-package com.lagradost
+package com.admknight.soaptwoday
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 
 class SoaptwoDayProvider : MainAPI() {
@@ -19,8 +19,8 @@ class SoaptwoDayProvider : MainAPI() {
     )
 
     override val mainPage = mainPageOf(
-        Pair("$mainUrl/movielist?page=", "Movies"),
-        Pair("$mainUrl/tvlist?page=", "TV Series"),
+        "$mainUrl/movielist?page=" to "Movies",
+        "$mainUrl/tvlist?page=" to "TV Series",
     )
 
     override suspend fun getMainPage(
@@ -35,15 +35,9 @@ class SoaptwoDayProvider : MainAPI() {
                 .map {
                     val title = it.selectFirst("h5 a")!!.text()
                     val link = it.selectFirst("a")!!.attr("href")
-                    newTvSeriesSearchResponse(
-                        title,
-                        link,
-                        this.name,
-                        TvType.TvSeries,
-                        fixUrl(it.selectFirst("img")!!.attr("src")),
-                        null,
-                        null,
-                    )
+                    newTvSeriesSearchResponse(title, link, TvType.TvSeries) {
+                        this.posterUrl = fixUrl(it.selectFirst("img")!!.attr("src"))
+                    }
                 }
         return newHomePageResponse(request.name, home)
     }
@@ -55,15 +49,9 @@ class SoaptwoDayProvider : MainAPI() {
                 val title = it.selectFirst("h5 a")!!.text()
                 val image = fixUrl(it.selectFirst("img")!!.attr("src"))
                 val href = fixUrl(it.selectFirst("a")!!.attr("href"))
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                    this.posterUrl = image
+                }
             }
     }
 
@@ -81,14 +69,11 @@ class SoaptwoDayProvider : MainAPI() {
                 val text = entry?.text() ?: ""
                 val name = text.replace(Regex("(^(\\d+)\\.)"), "")
                 val epNum = text.substring(0, text.indexOf(".")).toIntOrNull()
-                episodes.add(
-                    Episode(
-                        name = name,
-                        data = link,
-                        season = season,
-                        episode = epNum
-                    )
-                )
+                episodes.add(newEpisode(link) {
+                    this.name = name
+                    this.season = season
+                    this.episode = epNum
+                })
             }
         }
         val otherInfoBody = soup.select("div.col-sm-8 div.panel-body").toString()
@@ -119,32 +104,22 @@ class SoaptwoDayProvider : MainAPI() {
 
         return when (val tvType = if (episodes.isEmpty()) TvType.Movie else TvType.TvSeries) {
             TvType.TvSeries -> {
-                TvSeriesLoadResponse(
-                    title,
-                    url,
-                    this.name,
-                    tvType,
-                    episodes.reversed(),
-                    fixUrlNull(poster),
-                    year = year,
-                    description,
-                    actors = casts,
-                    tags = genre
-                )
+                newTvSeriesLoadResponse(title, url, tvType, episodes.reversed()) {
+                    this.posterUrl = fixUrlNull(poster)
+                    this.year = year
+                    this.plot = description
+                    this.actors = casts
+                    this.tags = genre
+                }
             }
             TvType.Movie -> {
-                MovieLoadResponse(
-                    title,
-                    url,
-                    this.name,
-                    tvType,
-                    url,
-                    fixUrlNull(poster),
-                    year = year,
-                    description,
-                    actors = casts,
-                    tags = genre
-                )
+                newMovieLoadResponse(title, url, tvType, url) {
+                    this.posterUrl = fixUrlNull(poster)
+                    this.year = year
+                    this.plot = description
+                    this.actors = casts
+                    this.tags = genre
+                }
             }
             else -> null
         }
@@ -231,14 +206,13 @@ class SoaptwoDayProvider : MainAPI() {
                 val cleanstreamurl = stream.replace("\\/", "/").replace("\\\\\\", "")
                 if (cleanstreamurl.isNotBlank()) {
                     callback(
-                        ExtractorLink(
+                        newExtractorLink(
                             "Soap2Day",
                             "Soap2Day",
                             cleanstreamurl,
-                            "https://soap2day.ac",
-                            Qualities.Unknown.value,
-                            isM3u8 = false
-                        )
+                        ) {
+                            this.referer = "https://soap2day.ac"
+                        }
                     )
                 }
             }

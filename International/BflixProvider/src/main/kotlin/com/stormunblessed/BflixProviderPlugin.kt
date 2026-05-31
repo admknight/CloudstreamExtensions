@@ -1,30 +1,22 @@
-package com.stormunblessed
+package com.admknight.bflix
 
-import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
-import com.lagradost.cloudstream3.plugins.Plugin
-import android.content.Context
 import android.os.Handler
+import com.lagradost.cloudstream3.plugins.BasePlugin
+import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 
 @CloudstreamPlugin
-class BflixProviderPlugin : Plugin() {
-    override fun load(context: Context) {
-        // All providers should be added in this manner. Please don't edit the providers list directly.
+class BflixProviderPlugin : BasePlugin() {
+    override fun load() {
         registerMainAPI(BflixProvider())
         registerMainAPI(FmoviesToProvider())
+        registerMainAPI(SflixProProvider())
     }
 
     companion object {
-        /**
-         * Used to make Runnables work properly on Android 21
-         * Otherwise you get:
-         * ERROR:D8: Invoke-customs are only supported starting with Android O (--min-api 26)
-         **/
         inline fun Handler.postFunction(crossinline function: () -> Unit) {
-            this.post(object : Runnable {
-                override fun run() {
-                    function()
-                }
-            })
+            this.post {
+                function()
+            }
         }
     }
 }

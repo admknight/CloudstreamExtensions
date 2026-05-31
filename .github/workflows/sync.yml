@@ -69,10 +69,17 @@ jobs:
               sed -i '/task.*clean/d' "$TARGET_DIR/build.gradle.kts"
 
               # Fix obsolete Kotlin methods
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/argamap(/runAllAsync(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.apmap/.map/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/MovieSearchResponse(/newMovieSearchResponse(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/TvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/AnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/LiveSearchResponse(/newLiveSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/HomePageResponse(/newHomePageResponse(/g' {} +
+              
+              # Score / Rating Migration (Basic)
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/rating = \(.*\)\.toRatingInt()/score = Score.from10(\1)/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.toRatingInt()//g' {} +
 
               # Safe Branding & Strip private keys
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
@@ -81,6 +88,24 @@ jobs:
               sed -i '/properties.load(/d' "$TARGET_DIR/build.gradle.kts"
             done
           done
+
+          # --- GLOBAL DEDUPLICATION & STABILITY PATCHING ---
+          echo "Applying Global Deduplication & Stability Patches..."
+          
+          # 1. Resolve Kisskh Redeclaration (Prefer Phisher98 version with TMDB)
+          find International/KisskhProvider -name "KisskhProvider.kt" | grep "lagradost" | xargs rm -f
+          find International/KisskhProvider -name "KisskhProviderPlugin.kt" | grep "lagradost" | xargs rm -f
+          
+          # 2. Resolve Netmirror Clashes (Rename internal Episode to NetmirrorEpisode)
+          find Bollywood/Netmirror -name "*.kt" -exec sed -i 's/\bEpisode\b/NetmirrorEpisode/g' {} +
+          find Bollywood/Netmirror -name "*.kt" -exec sed -i 's/com.lagradost.cloudstream3.NetmirrorEpisode/com.lagradost.cloudstream3.Episode/g' {} +
+
+          # 3. Resolve StremioAddon Duplicates
+          rm -f Tools/StremioAddon/src/main/kotlin/com/phisher98/StremioAddonProvider.kt
+          
+          # 4. Fix redundant Base64 imports clashing with Cloudstream helpers
+          find . -name "*.kt" -exec sed -i '/import java.util.Base64/d' {} +
+          find . -name "*.kt" -exec sed -i 's/Base64.getDecoder().decode/base64DecodeArray/g' {} +
 
           rm -rf temp_sources
           git add .

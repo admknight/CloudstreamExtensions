@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.topdocumentaryfilms
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
@@ -58,7 +58,7 @@ class Topdocumentaryfilms : MainAPI() {
         val posterUrl = this.selectFirst("a img")?.let {
             if (it.attr("data-src").isNullOrBlank()) it.attr("src") else it.attr("data-src")
         }
-        return newnewMovieSearchResponse(title, href, TvType.Documentary) {
+        return newMovieSearchResponse(title, href, TvType.Documentary) {
             this.posterUrl = posterUrl
         }
     }
@@ -75,11 +75,11 @@ class Topdocumentaryfilms : MainAPI() {
             this.year = document.selectFirst("div.meta-bar.meta-single")?.ownText()?.filter { it.isDigit() }?.toIntOrNull()
             this.plot = document.select("div[itemprop=reviewBody] > p").text().trim()
             this.tags = document.select("div.meta-bar.meta-single > a").map { it.text() }
-            this.rating = document.selectFirst("div.module div.star")?.text()?.toRatingInt()
+            this.score = Score.from10(document.selectFirst("div.module div.star")?.text())
             this.recommendations = document.select("ul.side-wrap.clear li").mapNotNull {
                 val recName = it.selectFirst("a")?.attr("title") ?: return@mapNotNull null
                 val recHref = it.selectFirst("a")!!.attr("href")
-                newnewMovieSearchResponse(recName, recHref, TvType.Documentary) {
+                newMovieSearchResponse(recName, recHref, TvType.Documentary) {
                     this.posterUrl = it.selectFirst("a img")?.attr("data-src").toString()
                 }
             }
@@ -99,3 +99,7 @@ class Topdocumentaryfilms : MainAPI() {
         return true
     }
 }
+
+
+
+

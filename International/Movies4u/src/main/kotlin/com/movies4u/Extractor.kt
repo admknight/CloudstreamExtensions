@@ -1,4 +1,4 @@
-package com.movies4u
+package com.admknight.movies4u
 
 
 import com.lagradost.api.Log
@@ -588,3 +588,6 @@ fun getIndexQuality(str: String?): Int {
     return Regex("(\\d{3,4})[pP]").find(str ?: "")?.groupValues?.getOrNull(1)?.toIntOrNull()
         ?: Qualities.Unknown.value
 }
+
+
+

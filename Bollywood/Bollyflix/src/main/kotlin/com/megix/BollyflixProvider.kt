@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.bollyflix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -89,7 +89,7 @@ class BollyflixProvider : MainAPI() {
         val href = this.select("a").attr("href")
         val posterUrl = this.select("img").attr("src")
     
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -305,3 +305,7 @@ class BollyflixProvider : MainAPI() {
         val source: String
     )
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.stormunblessed
+package com.admknight.jkanime
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -64,7 +64,7 @@ class JKAnimeProvider : MainAPI() {
                     val url = it.attr("href").replace(epRegex, "")
                     val epNum =
                         it.selectFirst("h6")?.text()?.replace("Episodio ", "")?.toIntOrNull()
-                    newnewAnimeSearchResponse(title, url) {
+                    newAnimeSearchResponse(title, url) {
                         this.posterUrl = poster
                         addDubStatus(dubstat, epNum)
                     }
@@ -134,7 +134,7 @@ class JKAnimeProvider : MainAPI() {
                 val img = it.selectFirst(".set-bg")?.attr("data-setbg") ?: ""
                 val isDub = title.contains("Latino") || title.contains("Castellano")
                 search.add(
-                    newnewAnimeSearchResponse(title, href) {
+                    newAnimeSearchResponse(title, href) {
                         this.posterUrl = fixUrl(img)
                         addDubStatus(isDub, !isDub)
                     })
@@ -379,3 +379,6 @@ class JKAnimeProvider : MainAPI() {
         return true
     }
 }
+
+
+

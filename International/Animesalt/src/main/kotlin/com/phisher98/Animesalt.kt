@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animesalt
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -67,7 +67,7 @@ class Animesalt : MainAPI() {
         val href = fixUrl(this.selectFirst("a")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("img")?.getImageAttr())
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
+        return newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
     }
 
     private fun Element.toRecommend(): SearchResponse {
@@ -75,7 +75,7 @@ class Animesalt : MainAPI() {
         val href = fixUrl(this.selectFirst("a")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("data-src"))
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
+        return newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
     }
 
     override suspend fun search(query: String, page: Int): SearchResponseList? {
@@ -203,3 +203,7 @@ class Animesalt : MainAPI() {
             ?: this.attr("src").takeIf { it.isNotBlank() }
     }
 }
+
+
+
+

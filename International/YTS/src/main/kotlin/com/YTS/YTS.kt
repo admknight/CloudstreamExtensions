@@ -1,4 +1,4 @@
-package com.YTS
+package com.admknight.yts
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
@@ -40,7 +40,7 @@ open class YTS : MainAPI() {
         val posterUrl = fixUrlNull(this.select("img").attr("src"))
         val year=this.selectFirst("a div.browse-movie-year")?.text()?.toIntOrNull()
         val rating = this.select("h4.rating").text().substringBefore("/".trim())
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.year = year
             this.score = Score.from10(rating)
@@ -107,3 +107,7 @@ open class YTS : MainAPI() {
             return "${mainUrl}$url"
     }
 }
+
+
+
+

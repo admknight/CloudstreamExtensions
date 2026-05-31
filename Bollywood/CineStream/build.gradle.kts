@@ -1,30 +1,22 @@
-import org.jetbrains.kotlin.konan.properties.Properties
+import java.util.Properties
 
-version = 440
-android {
-    defaultConfig {
-        val properties = Properties()
-        properties.load(project.rootProject.file("local.properties").inputStream())
-        android.buildFeatures.buildConfig=true
-        buildConfigField("String", "SIMKL_API", "\"\"")
-        buildConfigField("String", "TMDB_KEY", "\"\"")
-        buildConfigField("String", "CC_COOKIE", "\"\"")
-    }
+val properties = Properties()
+val propertiesFile = File(rootDir, "local.properties")
+if (propertiesFile.exists()) {
+    properties.load(propertiesFile.inputStream())
 }
 
 cloudstream {
-    language = "en"
-    description = "One stop solution for Movies, Series, Anime, AsianDrama and Torrents"
+    language = "hi"
     authors = listOf("Adam Knight")
     status = 1
-    tvTypes = listOf(
-        "TvSeries",
-        "Movie",
-        "AsianDrama",
-        "Anime",
-        "Torrent"
-    )
-
-    iconUrl = "https://github.com/SaurabhKaperwan/CSX/raw/refs/heads/master/CineStream/icon.png"
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/CineStream/icon.png"
 }
 
+android {
+    defaultConfig {
+        buildConfigField("String", "SIMKL_API", "\"${properties.getProperty("SIMKL_API") ?: ""}\"")
+        buildConfigField("String", "TMDB_KEY", "\"${properties.getProperty("TMDB_KEY") ?: ""}\"")
+        buildConfigField("String", "CC_COOKIE", "\"${properties.getProperty("CC_COOKIE") ?: ""}\"")
+    }
+}

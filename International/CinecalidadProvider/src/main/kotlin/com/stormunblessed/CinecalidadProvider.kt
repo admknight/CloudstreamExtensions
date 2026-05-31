@@ -1,7 +1,6 @@
-package com.lagradost.cloudstream3.movieproviders
+package com.admknight.cinecalidad
 
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.extractors.Cinestart
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
 
@@ -19,9 +18,9 @@ class CinecalidadProvider : MainAPI() {
     override val vpnStatus = VPNStatus.MightBeNeeded //Due to evoload sometimes not loading
 
     override val mainPage = mainPageOf(
-        Pair("$mainUrl/ver-serie/page/", "Series"),
-        Pair("$mainUrl/page/", "Peliculas"),
-        Pair("$mainUrl/genero-de-la-pelicula/peliculas-en-calidad-4k/page/", "4K UHD"),
+        "$mainUrl/ver-serie/page/" to "Series",
+        "$mainUrl/page/" to "Peliculas",
+        "$mainUrl/genero-de-la-pelicula/peliculas-en-calidad-4k/page/" to "4K UHD",
     )
 
     override suspend fun getMainPage(
@@ -37,12 +36,10 @@ class CinecalidadProvider : MainAPI() {
             newTvSeriesSearchResponse(
                 title,
                 link,
-                this.name,
-                if (link.contains("/ver-pelicula/")) TvType.Movie else TvType.TvSeries,
-                it.selectFirst(".poster.custom img")!!.attr("data-src"),
-                null,
-                null,
-            )
+                if (link.contains("/ver-pelicula/")) TvType.Movie else TvType.TvSeries
+            ) {
+                this.posterUrl = it.selectFirst(".poster.custom img")!!.attr("data-src")
+            }
         }
 
         return newHomePageResponse(request.name, home)
@@ -59,24 +56,13 @@ class CinecalidadProvider : MainAPI() {
             val isMovie = href.contains("/ver-pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    null
-                )
+                newMovieSearchResponse(title, href, TvType.Movie) {
+                    this.posterUrl = image
+                }
             } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                    this.posterUrl = image
+                }
             }
         }
     }
@@ -99,39 +85,26 @@ class CinecalidadProvider : MainAPI() {
             val isValid = seasonid.size == 2
             val episode = if (isValid) seasonid.getOrNull(1) else null
             val season = if (isValid) seasonid.getOrNull(0) else null
-            Episode(
-                href,
-                name,
-                season,
-                episode,
-                if (epThumb.contains("svg")) null else epThumb
-            )
+            newEpisode(href) {
+                this.name = name
+                this.season = season
+                this.episode = episode
+                this.posterUrl = if (epThumb.contains("svg")) null else epThumb
+            }
         }
-        return when (val tvType =
-            if (url.contains("/ver-pelicula/")) TvType.Movie else TvType.TvSeries) {
+        val tvType = if (url.contains("/ver-pelicula/")) TvType.Movie else TvType.TvSeries
+        return when (tvType) {
             TvType.TvSeries -> {
-                TvSeriesLoadResponse(
-                    title,
-                    url,
-                    this.name,
-                    tvType,
-                    episodes,
-                    poster,
-                    null,
-                    description,
-                )
+                newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
+                    this.posterUrl = poster
+                    this.plot = description
+                }
             }
             TvType.Movie -> {
-                MovieLoadResponse(
-                    title,
-                    url,
-                    this.name,
-                    tvType,
-                    url,
-                    poster,
-                    null,
-                    description,
-                )
+                newMovieLoadResponse(title, url, TvType.Movie, url) {
+                    this.posterUrl = poster
+                    this.plot = description
+                }
             }
             else -> null
         }

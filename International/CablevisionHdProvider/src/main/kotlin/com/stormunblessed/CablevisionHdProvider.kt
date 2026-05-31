@@ -1,10 +1,12 @@
-package com.stormunblessed
+package com.admknight.cablevisionhd
 
 import android.util.Base64
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import com.lagradost.cloudstream3.utils.JsUnpacker
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import java.net.URL
 
 class CablevisionHdProvider : MainAPI() {
@@ -238,20 +240,14 @@ class CablevisionHdProvider : MainAPI() {
                         ?: ""
                 val link = it.selectFirst("div.lm-canal.lm-info-block.gray-default a")?.attr("href")
                         ?: ""
-                LiveSearchResponse(
-                        title,
-                        link,
-                        this.name,
-                        TvType.Live,
-                        fixUrl(img),
-                        null,
-                        null,
-                )
+                newLiveSearchResponse(title, link, TvType.Live) {
+                    this.posterUrl = fixUrl(img)
+                }
             }
             items.add(HomePageList(name, home, true))
         }
 
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -273,15 +269,9 @@ class CablevisionHdProvider : MainAPI() {
                     ?: ""
             val link = it.selectFirst("div.lm-canal.lm-info-block.gray-default a")?.attr("href")
                     ?: ""
-            LiveSearchResponse(
-                    title,
-                    link,
-                    this.name,
-                    TvType.Live,
-                    fixUrl(img),
-                    null,
-                    null,
-            )
+            newLiveSearchResponse(title, link, TvType.Live) {
+                this.posterUrl = fixUrl(img)
+            }
         }
     }
 
@@ -350,14 +340,15 @@ class CablevisionHdProvider : MainAPI() {
                     val extractedurl = decodeBase64UntilUnchanged(hash)
                     if (extractedurl.isNotBlank()) {
                         callback(
-                                ExtractorLink(
-                                        it.text() ?: getHostUrl(extractedurl),
-                                        it.text() ?: getHostUrl(extractedurl),
-                                        extractedurl,
-                                        "${getBaseUrl(extractedurl)}/",
-                                        getQualityFromName(""),
-                                        extractedurl.contains("m3u8")
-                                )
+                            newExtractorLink(
+                                it.text() ?: getHostUrl(extractedurl),
+                                it.text() ?: getHostUrl(extractedurl),
+                                extractedurl,
+                                INFER_TYPE
+                            ) {
+                                this.referer = "${getBaseUrl(extractedurl)}/"
+                                this.quality = getQualityFromName("")
+                            }
                         )
                     }
                 }
@@ -376,3 +367,6 @@ class CablevisionHdProvider : MainAPI() {
         return url.host
     }
 }
+
+
+

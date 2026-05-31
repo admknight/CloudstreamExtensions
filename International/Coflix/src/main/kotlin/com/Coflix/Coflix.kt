@@ -1,4 +1,4 @@
-package com.Coflix
+package com.admknight.coflix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -46,7 +46,7 @@ class Coflix : MainAPI() {
         val title     = this.name
         val href      = fixUrl(this.url)
         val posterUrl = fetchImageUrl(this.path)
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -55,7 +55,7 @@ class Coflix : MainAPI() {
         val title     = this.title
         val href      = fixUrl(this.url)
         val posterUrl = fetchImageUrl(this.image)
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -179,3 +179,7 @@ class Coflix : MainAPI() {
     }
 
 }
+
+
+
+

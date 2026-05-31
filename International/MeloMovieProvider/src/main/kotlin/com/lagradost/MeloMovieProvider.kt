@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.melomovie
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.module.kotlin.readValue
@@ -193,3 +193,6 @@ class MeloMovieProvider : MainAPI() {
         return null
     }
 }
+
+
+

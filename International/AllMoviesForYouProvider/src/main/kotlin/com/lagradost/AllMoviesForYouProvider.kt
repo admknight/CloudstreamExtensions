@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.allmoviesforyou
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
@@ -39,15 +39,9 @@ class AllMoviesForYouProvider : MainAPI() {
                 val home = soup.select(element).map {
                     val title = it.selectFirst("h2.title")!!.text()
                     val link = it.selectFirst("a")!!.attr("href")
-                    newTvSeriesSearchResponse(
-                        title,
-                        link,
-                        this.name,
-                        TvType.Movie,
-                        fixUrl(it.selectFirst("figure img")!!.attr("data-src")),
-                        null,
-                        null,
-                    )
+                    newTvSeriesSearchResponse(title, link, TvType.Movie) {
+                        this.posterUrl = fixUrl(it.selectFirst("figure img")!!.attr("data-src"))
+                    }
                 }
 
                 items.add(HomePageList(name, home))
@@ -56,7 +50,7 @@ class AllMoviesForYouProvider : MainAPI() {
             }
         }
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -70,38 +64,16 @@ class AllMoviesForYouProvider : MainAPI() {
             val img = fixUrl(item.selectFirst("> div.Image > figure > img")!!.attr("data-src"))
             val type = getType(href)
             if (type == TvType.Movie) {
-                newMovieSearchResponse(title, href, this.name, type, img, null)
+                newMovieSearchResponse(title, href, type) {
+                    this.posterUrl = img
+                }
             } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    type,
-                    img,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(title, href, type) {
+                    this.posterUrl = img
+                }
             }
         }
     }
-
-//    private fun getLink(document: Document): List<String>? {
-//         val list = ArrayList<String>()
-//         Regex("iframe src=\"(.*?)\"").find(document.html())?.groupValues?.get(1)?.let {
-//             list.add(it)
-//         }
-//         document.select("div.OptionBx")?.forEach { element ->
-//             val baseElement = element.selectFirst("> a.Button")
-//             val elementText = element.selectFirst("> p.AAIco-dns")?.text()
-//             if (elementText == "Streamhub" || elementText == "Dood") {
-//                 baseElement?.attr("href")?.let { href ->
-//                     list.add(href)
-//                 }
-//             }
-//         }
-//
-//         return if (list.isEmpty()) null else list
-//     }
 
     override suspend fun load(url: String): LoadResponse {
         val type = getType(url)
@@ -110,8 +82,6 @@ class AllMoviesForYouProvider : MainAPI() {
 
         val title = document.selectFirst("h1.Title")!!.text()
         val descipt = document.selectFirst("div.Description > p")!!.text()
-        val rating =
-            document.selectFirst("div.Vote > div.post-ratings > span")?.text()?.toRatingInt()
         val year = document.selectFirst("span.Date")?.text()
         val backgroundPoster =
             fixUrlNull(document.selectFirst("div.Image > figure > img")?.attr("src"))
@@ -178,7 +148,7 @@ class AllMoviesForYouProvider : MainAPI() {
                 this.year = year?.toIntOrNull()
                 this.plot = descipt
                 this.tags = tags
-                this.rating = rating
+                this.score = Score.from10(document.selectFirst("div.Vote > div.post-ratings > span")?.text())
                 addActors(cast)
             }
         } else {
@@ -192,7 +162,7 @@ class AllMoviesForYouProvider : MainAPI() {
                 this.year = year?.toIntOrNull()
                 this.plot = descipt
                 this.tags = tags
-                this.rating = rating
+                this.score = Score.from10(document.selectFirst("div.Vote > div.post-ratings > span")?.text())
                 addActors(cast)
             }
         }
@@ -206,7 +176,7 @@ class AllMoviesForYouProvider : MainAPI() {
     ): Boolean {
         val doc = app.get(data).document
         val iframe = doc.select("body iframe").map { fixUrl(it.attr("src")) }
-        iframe.map { id ->
+        iframe.forEach { id ->
             if (id.contains("trembed")) {
                 val soup = app.get(id).document
                 soup.select("body iframe").map {

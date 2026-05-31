@@ -1,4 +1,4 @@
-package com.redowan
+package com.admknight.mp4moviez
 
 import com.lagradost.cloudstream3.HomePageResponse
 import com.lagradost.cloudstream3.LoadResponse
@@ -59,7 +59,7 @@ class Mp4MoviezProvider : MainAPI() {
         val url = mainUrl + post.select("a").attr("href")
         val title = post.select("img").attr("alt")
         val imageUrl = mainUrl + post.select("img").attr("src")
-        return newnewMovieSearchResponse(title, url, TvType.Movie) {
+        return newMovieSearchResponse(title, url, TvType.Movie) {
             this.posterUrl = imageUrl
         }
     }
@@ -130,3 +130,7 @@ class Mp4MoviezProvider : MainAPI() {
 
     private fun getVideoQuality(url: String?) = url?.substringAfter("q=")?.substringBefore("&")?.toIntOrNull() ?: Qualities.Unknown.value
 }
+
+
+
+

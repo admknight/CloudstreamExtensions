@@ -1,4 +1,4 @@
-package com.allwish
+package com.admknight.allwish
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -227,3 +227,7 @@ open class MegaPlay : ExtractorApi() {
             }
         }
     }
+
+
+
+

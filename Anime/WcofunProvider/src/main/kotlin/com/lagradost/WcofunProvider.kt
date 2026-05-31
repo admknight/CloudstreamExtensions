@@ -1,10 +1,11 @@
-package com.lagradost
+package com.admknight.wcofun
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.mvvm.suspendSafeApiCall
+import com.lagradost.cloudstream3.mvvm.safeApiCall
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
@@ -36,7 +37,7 @@ class WcofunProvider : MainAPI() {
             if (animes.isNotEmpty()) homePageList.add(HomePageList(header, animes))
         }
 
-        return HomePageResponse(homePageList)
+        return newHomePageResponse(homePageList)
 
     }
 
@@ -66,7 +67,7 @@ class WcofunProvider : MainAPI() {
         }
         val isDub = header.contains("Dubbed")
         val isSub = header.contains("Subbed")
-        return newnewAnimeSearchResponse(title, href, TvType.Anime) {
+        return newAnimeSearchResponse(title, href, TvType.Anime) {
             this.posterUrl = posterUrl
             addDubStatus(isDub, isSub, epNum, epNum)
         }
@@ -94,7 +95,9 @@ class WcofunProvider : MainAPI() {
         val episodes = eps.map {
             val name = it.select("a").text()
             val link = it.selectFirst("a")!!.attr("href")
-            Episode(link, name = name)
+            newEpisode(link) {
+                this.name = name
+            }
         }.reversed()
 
         return newAnimeLoadResponse(title, url, type) {
@@ -142,16 +145,17 @@ class WcofunProvider : MainAPI() {
                 listOf(
                     Pair(it.hd, "HD"),
                     Pair(it.enc, "SD")
-                ).map { source ->
-                    suspendSafeApiCall {
+                ).forEach { source ->
+                    safeApiCall {
                         callback.invoke(
-                            ExtractorLink(
+                            newExtractorLink(
                                 "${this.name} ${source.second}",
                                 "${this.name} ${source.second}",
                                 "${it.server}/getvid?evid=${source.first}",
-                                mainUrl,
-                                if (source.second == "HD") Qualities.P720.value else Qualities.P480.value
-                            )
+                            ) {
+                                this.referer = mainUrl
+                                this.quality = if (source.second == "HD") Qualities.P720.value else Qualities.P480.value
+                            }
                         )
                     }
                 }
@@ -170,3 +174,6 @@ class WcofunProvider : MainAPI() {
 
 
 }
+
+
+

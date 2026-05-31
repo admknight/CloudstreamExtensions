@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.multimovies
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.plugins.BasePlugin
@@ -61,3 +61,7 @@ class MultiMoviesProviderPlugin: BasePlugin() {
         )
     }
 }
+
+
+
+

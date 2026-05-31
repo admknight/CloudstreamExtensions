@@ -1,4 +1,4 @@
-package com.pelisplushd
+package com.admknight.pelisplushd
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -111,7 +111,7 @@ class Pelisplushd() : TmdbProvider() {
     }
 
     private fun Media.toSearchResponse(type: String? = null): SearchResponse? {
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             title ?: name ?: originalTitle ?: return null,
             Data(id = id, type = mediaType ?: type).toJson(),
             TvType.Movie,
@@ -339,4 +339,8 @@ data class Link(
     val index: Long,
     val link: String,
 )
+
+
+
+
 

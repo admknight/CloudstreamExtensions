@@ -1,4 +1,4 @@
-package com.ToonTales
+package com.admknight.toontales
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,3 +9,6 @@ class ToonTalesProvider: BasePlugin() {
         registerMainAPI(ToonTales())
     }
 }
+
+
+

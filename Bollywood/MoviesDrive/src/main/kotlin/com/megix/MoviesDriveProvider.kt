@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.moviesdrive
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -75,7 +75,7 @@ class MoviesDriveProvider : MainAPI() { // all providers must be an instance of 
         val title = this.select("p").text().replace("Download ", "")
         val href = this.attr("href")
         val posterUrl = this.select("img").attr("src")
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -88,7 +88,7 @@ class MoviesDriveProvider : MainAPI() { // all providers must be an instance of 
         val hasNext = response.hits.isNotEmpty()
         val results = response.hits.map { hit ->
             val doc = hit.document
-            newnewMovieSearchResponse(doc.postTitle, mainUrl + doc.permalink, TvType.Movie) {
+            newMovieSearchResponse(doc.postTitle, mainUrl + doc.permalink, TvType.Movie) {
                 this.posterUrl = doc.postThumbnail
             }
         }
@@ -360,4 +360,8 @@ class MoviesDriveProvider : MainAPI() { // all providers must be an instance of 
         val postTitle: String
     )
 }
+
+
+
+
 

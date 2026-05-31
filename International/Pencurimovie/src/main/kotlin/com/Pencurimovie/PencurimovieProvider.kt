@@ -1,4 +1,4 @@
-package com.Pencurimovie
+package com.admknight.pencurimovie
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,3 +9,6 @@ class PencurimovieProvider: BasePlugin() {
         registerMainAPI(Pencurimovie())
     }
 }
+
+
+

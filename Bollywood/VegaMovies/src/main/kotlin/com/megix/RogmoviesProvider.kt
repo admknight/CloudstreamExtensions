@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.vegamovies
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -47,3 +47,7 @@ class RogmoviesProvider : VegaMoviesProvider() { // all providers must be an ins
         "$mainUrl/category/web-series/mx-original/page/%d/" to "MX Original",
     )
 }
+
+
+
+

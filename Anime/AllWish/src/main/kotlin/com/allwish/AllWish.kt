@@ -1,4 +1,4 @@
-package com.allwish
+package com.admknight.allwish
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -58,7 +58,7 @@ class AllWish : MainAPI() {
             val url = item.selectFirst("div.name > a")?.attr("href")?.substringBeforeLast("/") ?: ""
             val subCount = item.selectFirst("div.dub-sub-total > span.sub")?.text()?.toIntOrNull()
             val dubCount = item.selectFirst("div.dub-sub-total > span.dub")?.text()?.toIntOrNull()
-            results += newnewAnimeSearchResponse(name, url) {
+            results += newAnimeSearchResponse(name, url) {
                 this.posterUrl = item.selectFirst("a.poster img")?.attr("data-src")
                 addDubStatus(dubCount != null, subCount != null, dubCount, subCount)
             }
@@ -252,3 +252,7 @@ class AllWish : MainAPI() {
         return Pair(subEpisodes, dubEpisodes)
     }
 }
+
+
+
+

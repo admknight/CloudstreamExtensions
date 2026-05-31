@@ -1,4 +1,4 @@
-package com.horis.cncverse
+package com.admknight.netmirror
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -16,3 +16,7 @@ open class CNCVersePlugin: Plugin() {
     }
 
 }
+
+
+
+

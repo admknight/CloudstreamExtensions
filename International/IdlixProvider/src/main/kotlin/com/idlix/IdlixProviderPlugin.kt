@@ -1,4 +1,4 @@
-package com.idlix
+package com.admknight.idlix
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -11,3 +11,6 @@ class IdlixProviderPlugin: BasePlugin() {
         registerExtractorAPI(Majorplay())
     }
 }
+
+
+

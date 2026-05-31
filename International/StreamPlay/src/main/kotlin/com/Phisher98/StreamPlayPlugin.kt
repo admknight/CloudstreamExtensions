@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
@@ -292,3 +292,7 @@ class StreamPlayPlugin: Plugin() {
         val type: String
     )
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
@@ -470,3 +470,7 @@ class UltimaConfigureAppSettingsSync(private val plugin: UltimaPlugin) : BottomS
         super.onDetach()
     }
 }
+
+
+
+

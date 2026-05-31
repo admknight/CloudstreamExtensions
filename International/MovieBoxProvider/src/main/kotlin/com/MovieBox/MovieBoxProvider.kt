@@ -1,4 +1,4 @@
-package com.MovieBox
+package com.admknight.moviebox
 
 import android.annotation.SuppressLint
 import android.net.Uri
@@ -277,7 +277,7 @@ class MovieBoxProvider : MainAPI() {
                         2 -> TvType.TvSeries
                         else -> TvType.Movie
                     }
-                    newnewMovieSearchResponse(
+                    newMovieSearchResponse(
                         name = title,
                         url = id,
                         type = type
@@ -338,7 +338,7 @@ class MovieBoxProvider : MainAPI() {
                         else -> TvType.Movie
                 }
             searchList.add(
-                newnewMovieSearchResponse(
+                newMovieSearchResponse(
                 name = title,
                 url = id,
                 type = type
@@ -1099,3 +1099,7 @@ suspend fun fetchTmdbLogoUrl(
     // No language match & no voted logos
     return null
 }
+
+
+
+

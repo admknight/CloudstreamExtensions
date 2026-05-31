@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.watchcartoononline
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -44,21 +44,16 @@ class WatchCartoonOnlineProvider : MainAPI() {
             val poster = fixUrl(header.selectFirst("> a > img")!!.attr("src"))
             val genreText = item.selectFirst("div.cerceve-tur-ve-genre")!!.ownText()
             if (genreText.contains("cartoon")) {
-                returnValue.add(TvSeriesSearchResponse(title, href, this.name, TvType.Cartoon, poster, null, null))
+                returnValue.add(newTvSeriesSearchResponse(title, href, TvType.Cartoon) {
+                    this.posterUrl = poster
+                })
             } else {
                 val isDubbed = genreText.contains("dubbed")
-                val set: EnumSet<DubStatus> =
-                    EnumSet.of(if (isDubbed) DubStatus.Dubbed else DubStatus.Subbed)
                 returnValue.add(
-                    AnimeSearchResponse(
-                        title,
-                        href,
-                        this.name,
-                        TvType.Anime,
-                        poster,
-                        null,
-                        set,
-                    )
+                    newAnimeSearchResponse(title, href, TvType.Anime) {
+                        this.posterUrl = poster
+                        addDubStatus(if (isDubbed) DubStatus.Dubbed else DubStatus.Subbed)
+                    }
                 )
             }
         }
@@ -82,15 +77,7 @@ class WatchCartoonOnlineProvider : MainAPI() {
             //val set: EnumSet<DubStatus> =
             //   EnumSet.of(if (isDubbed) DubStatus.Dubbed else DubStatus.Subbed)
             returnValue.add(
-                TvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.AnimeMovie,
-                    null,
-                    null,
-                    null,
-                )
+                newTvSeriesSearchResponse(title, href, TvType.AnimeMovie)
             )
         }
 
@@ -113,41 +100,29 @@ class WatchCartoonOnlineProvider : MainAPI() {
                 val href = it.attr("href")
                 if (match != null) {
                     val last = match.groupValues[3]
-                    return@map Episode(
-                        href,
-                        if (last.startsWith("English")) null else last,
-                        match.groupValues[1].toIntOrNull(),
-                        match.groupValues[2].toIntOrNull(),
-                    )
+                    return@map newEpisode(href) {
+                        this.name = if (last.startsWith("English")) null else last
+                        this.season = match.groupValues[1].toIntOrNull()
+                        this.episode = match.groupValues[2].toIntOrNull()
+                    }
                 }
                 val match2 = Regex("Episode ([0-9]*).*? (.*)").find(text)
                 if (match2 != null) {
                     val last = match2.groupValues[2]
-                    return@map Episode(
-                        href,
-                        if (last.startsWith("English")) null else last,
-                        null,
-                        match2.groupValues[1].toIntOrNull(),
-                    )
+                    return@map newEpisode(href) {
+                        this.name = if (last.startsWith("English")) null else last
+                        this.episode = match2.groupValues[1].toIntOrNull()
+                    }
                 }
-                return@map Episode(
-                    href,
-                    text
-                )
+                return@map newEpisode(href) {
+                    this.name = text
+                }
             }
-            TvSeriesLoadResponse(
-                title,
-                url,
-                this.name,
-                TvType.TvSeries,
-                episodes,
-                poster,
-                null,
-                plot,
-                null,
-                null,
-                tags = genres
-            )
+            newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
+                this.posterUrl = poster
+                this.plot = plot
+                this.tags = genres
+            }
         } else {
             val title = document.selectFirst(".iltext .Apple-style-span")?.text().toString()
             val b = document.select(".iltext b")
@@ -155,18 +130,9 @@ class WatchCartoonOnlineProvider : MainAPI() {
                 b.last()!!.html().split("<br>")[0]
             } else null
 
-            TvSeriesLoadResponse(
-                title,
-                url,
-                this.name,
-                TvType.TvSeries,
-                listOf(Episode(url,title)),
-                null,
-                null,
-                description,
-                null,
-                null
-            )
+            newTvSeriesLoadResponse(title, url, TvType.TvSeries, listOf(newEpisode(url) { this.name = title })) {
+                this.plot = description
+            }
         }
     }
 
@@ -268,3 +234,7 @@ class WatchCartoonOnlineProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

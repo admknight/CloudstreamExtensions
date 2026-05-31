@@ -1,4 +1,4 @@
-package com.Toonstream
+package com.admknight.toonstream
 
 import com.lagradost.api.Log
 import org.jsoup.nodes.Element
@@ -41,7 +41,7 @@ class Toonstream : MainAPI() {
         val href      = fixUrl(this.select("article  > a").attr("href"))
         val posterUrlRaw = this.select("article  > div.post-thumbnail > figure > img").attr("src")
         val poster:String = if (posterUrlRaw.startsWith("http")) { posterUrlRaw } else "https:$posterUrlRaw"
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = poster
             }
     }
@@ -52,7 +52,7 @@ class Toonstream : MainAPI() {
         val posterUrlRaw = this.select("article figure img").attr("src")
         val poster:String = if (posterUrlRaw.startsWith("http")) { posterUrlRaw } else "https:$posterUrlRaw"
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = poster
             }
     }
@@ -198,3 +198,7 @@ open class AWSStream : ExtractorApi() {
         val ck: String,
     )
 }
+
+
+
+

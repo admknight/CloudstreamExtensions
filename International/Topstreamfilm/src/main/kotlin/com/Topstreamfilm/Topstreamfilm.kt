@@ -1,4 +1,4 @@
-package com.Topstreamfilm
+package com.admknight.topstreamfilm
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
@@ -43,7 +43,7 @@ class TopStreamFilm : MainAPI() { // all providers must be an instance of MainAP
         val posterUrl = fixUrlNull(this.selectFirst("a img")?.attr("data-src"))
         val quality =getQualityFromString(this.select("span.Qlty").text())
 
-            return newnewMovieSearchResponse(title, href, TvType.Movie) {
+            return newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
                 this.quality = quality
             }
@@ -139,3 +139,6 @@ class TopStreamFilm : MainAPI() { // all providers must be an instance of MainAP
     }
 
 }
+
+
+

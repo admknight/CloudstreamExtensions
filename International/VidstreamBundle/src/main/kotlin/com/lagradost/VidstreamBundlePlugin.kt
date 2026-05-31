@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.vidstreambundle
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -24,3 +24,6 @@ class VidstreamBundlePlugin : Plugin() {
         registerMainAPI(WatchAsianProvider())
     }
 }
+
+
+

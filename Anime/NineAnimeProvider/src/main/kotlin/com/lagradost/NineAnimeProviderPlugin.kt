@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.nineanime
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -25,3 +25,6 @@ class NineAnimeProviderPlugin : Plugin() {
         registerExtractorAPI(WcoStream())
     }
 }
+
+
+

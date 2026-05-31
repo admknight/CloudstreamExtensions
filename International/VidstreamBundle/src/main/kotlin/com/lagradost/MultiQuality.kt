@@ -1,10 +1,7 @@
-package com.lagradost
+package com.admknight.vidstreambundle
 
 import com.lagradost.cloudstream3.app
-import com.lagradost.cloudstream3.utils.ExtractorApi
-import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.Qualities
-import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.*
 import java.net.URI
 
 class MultiQuality : ExtractorApi() {
@@ -29,27 +26,29 @@ class MultiQuality : ExtractorApi() {
                     with(app.get(extractedUrl)) {
                         m3u8Regex.findAll(this.text).forEach { match ->
                             extractedLinksList.add(
-                                ExtractorLink(
+                                newExtractorLink(
                                     name,
                                     name = name,
                                     urlRegex.find(this.url)!!.groupValues[1] + match.groupValues[0],
-                                    url,
-                                    getQualityFromName(match.groupValues[1]),
-                                    isM3u8 = true
-                                )
+                                    type = ExtractorLinkType.M3U8
+                                ) {
+                                    this.referer = url
+                                    this.quality = getQualityFromName(match.groupValues[1])
+                                }
                             )
                         }
 
                     }
                 } else if (extractedUrl.endsWith(".mp4")) {
                     extractedLinksList.add(
-                        ExtractorLink(
+                        newExtractorLink(
                             name,
                             "$name ${sourceMatch.groupValues[2]}",
                             extractedUrl,
-                            url.replace(" ", "%20"),
-                            Qualities.Unknown.value,
-                        )
+                        ) {
+                            this.referer = url.replace(" ", "%20")
+                            this.quality = Qualities.Unknown.value
+                        }
                     )
                 }
             }

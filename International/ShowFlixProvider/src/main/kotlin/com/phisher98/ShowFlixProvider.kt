@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.showflix
 
 import com.fasterxml.jackson.annotation.*
 import com.lagradost.cloudstream3.*
@@ -177,7 +177,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
         if (request.name.contains("Movies")) {
             val home =
                 Movielist.map {
-                    newnewMovieSearchResponse(
+                    newMovieSearchResponse(
                         it.name,
                         "$mainUrl/movie/${it.objectId}",
                         TvType.Movie
@@ -190,7 +190,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
         } else {
             val home =
                 TVlist.map {
-                    newnewTvSeriesSearchResponse(
+                    newTvSeriesSearchResponse(
                         it.name,
                         "$mainUrl/series/${it.objectId}",
                         TvType.TvSeries
@@ -216,7 +216,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
             .parsed<TVAll>().results
 
         val Movies = MovieResults.map {
-            newnewMovieSearchResponse(
+            newMovieSearchResponse(
                 it.name,
                 "$mainUrl/movie/${it.objectId}",
                 TvType.Movie
@@ -226,7 +226,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
             }
         }
         val TVSeries = TVResults.map {
-            newnewTvSeriesSearchResponse(
+            newTvSeriesSearchResponse(
                 it.name,
                 "$mainUrl/series/${it.objectId}",
                 TvType.TvSeries
@@ -268,7 +268,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
             val recommendations = queryMovieApi(
                 recQuery
             ).parsed<MovieAll>().results.map{
-                newnewMovieSearchResponse(
+                newMovieSearchResponse(
                     it.name,
                     "$mainUrl/movie/${it.objectId}",
                     TvType.Movie
@@ -330,7 +330,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
             val recommendations = queryTVApi(
                 recQuery
             ).parsed<TVAll>().results.map {
-                newnewTvSeriesSearchResponse(
+                newTvSeriesSearchResponse(
                     it.name,
                     "$mainUrl/series/${it.objectId}",
                     TvType.TvSeries
@@ -500,3 +500,7 @@ suspend fun loadSourceNameExtractor(
         }
     }
 }
+
+
+
+

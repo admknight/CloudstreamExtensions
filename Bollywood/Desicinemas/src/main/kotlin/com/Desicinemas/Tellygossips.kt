@@ -1,4 +1,4 @@
-package com.Desicinemas
+package com.admknight.desicinemas
 
 //import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -55,3 +55,6 @@ class Tellygossips(private val source:String) : ExtractorApi() {
     )
 
 }
+
+
+

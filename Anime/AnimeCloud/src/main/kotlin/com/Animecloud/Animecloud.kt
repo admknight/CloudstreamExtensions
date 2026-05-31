@@ -1,4 +1,4 @@
-package com.Animecloud
+package com.admknight.animecloud
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -56,7 +56,7 @@ class Animecloud : MainAPI() {
     private fun HomeDaum.toSearchResult(): SearchResponse {
         val href = "$mainUrl/api/anime?slug=${this.slug}"
         val posterslug= this.poster
-        return newnewMovieSearchResponse(
+        return newMovieSearchResponse(
             name = this.title,
             url = href,
             type = TvType.Movie
@@ -77,7 +77,7 @@ class Animecloud : MainAPI() {
         val title=this.title
         val poster= fixUrlNull("$mainUrl/img/posters/${this.poster}")
         val href= "$mainUrl/api/anime?slug=${this.slug}"
-        return newnewAnimeSearchResponse(
+        return newAnimeSearchResponse(
             title,
             href,
             TvType.TvSeries,
@@ -134,3 +134,7 @@ class Animecloud : MainAPI() {
         return true
     }
 }
+
+
+
+

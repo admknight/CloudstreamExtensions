@@ -1,4 +1,4 @@
-package com.allwish
+package com.admknight.allwish
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -135,3 +135,6 @@ fun getStatus(t: String?): ShowStatus {
         else -> ShowStatus.Completed
     }
 }
+
+
+

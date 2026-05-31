@@ -1,10 +1,11 @@
-package com.lagradost
+package com.admknight.theflixto
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
 
 class TheFlixToProvider : MainAPI() {
@@ -183,15 +184,9 @@ class TheFlixToProvider : MainAPI() {
                                 ""
                             )
                         }/season-1/episode-1"
-                    newTvSeriesSearchResponse(
-                        title,
-                        link,
-                        this.name,
-                        typeinfo,
-                        poster,
-                        null,
-                        null,
-                    )
+                    newTvSeriesSearchResponse(title, link, typeinfo) {
+                        this.posterUrl = poster
+                    }
                 }
                 items.add(HomePageList(homename, home))
             }
@@ -249,26 +244,15 @@ class TheFlixToProvider : MainAPI() {
                         else "$mainUrl/tv-show/${info.id}-${cleanTitle(title)}/season-1/episode-1"
                         if (typeinfo == TvType.Movie) {
                             search.add(
-                                newMovieSearchResponse(
-                                    title,
-                                    link,
-                                    this.name,
-                                    TvType.Movie,
-                                    poster,
-                                    null
-                                )
+                                newMovieSearchResponse(title, link, TvType.Movie) {
+                                    this.posterUrl = poster
+                                }
                             )
                         } else {
                             search.add(
-                                newTvSeriesSearchResponse(
-                                    title,
-                                    link,
-                                    this.name,
-                                    TvType.TvSeries,
-                                    poster,
-                                    null,
-                                    null
-                                )
+                                newTvSeriesSearchResponse(title, link, TvType.TvSeries) {
+                                    this.posterUrl = poster
+                                }
                             )
                         }
                     }
@@ -460,15 +444,14 @@ class TheFlixToProvider : MainAPI() {
                     val test = epi.videos
                     val ratinginfo = (epi.voteAverage)?.times(10)?.toInt()
                     val rating = if (ratinginfo?.equals(0) == true) null else ratinginfo
-                    val eps = Episode(
-                        "$mainUrl/tv-show/$movieId-${cleanTitle(movietitle!!)}/season-$seasonum/episode-$episodenu",
-                        title,
-                        seasonum,
-                        episodenu,
-                        description = epDesc!!,
-                        posterUrl = seasonPoster,
-                        rating = rating,
-                    )
+                    val eps = newEpisode("$mainUrl/tv-show/$movieId-${cleanTitle(movietitle!!)}/season-$seasonum/episode-$episodenu") {
+                        this.name = title
+                        this.season = seasonum
+                        this.episode = episodenu
+                        this.description = epDesc
+                        this.posterUrl = seasonPoster
+                        this.score = Score.from10(rating?.toDouble())
+                    }
                     if (test!!.isNotEmpty()) {
                         episodes.add(eps)
                     } else {
@@ -486,14 +469,9 @@ class TheFlixToProvider : MainAPI() {
             val posterrec = loadDocs.posterUrl
             val link = if (isMovie) "$mainUrl/movie/${loadDocs.id}-${cleanTitle(title)}"
             else "$mainUrl/tv-show/${loadDocs.id}-${cleanTitle(title)}/season-1/episode-1"
-            newMovieSearchResponse(
-                title,
-                link,
-                this.name,
-                tvtype,
-                posterrec,
-                year = null
-            )
+            newMovieSearchResponse(title, link, tvtype) {
+                this.posterUrl = posterrec
+            }
         }
 
         val year = metadata.releaseDate?.substringBefore("-")
@@ -552,25 +530,25 @@ class TheFlixToProvider : MainAPI() {
         val qualityReg = Regex("(\\d+p)")
         if (isMovie) {
             json.props?.pageProps?.movie?.videos?.map { id ->
-                val videoData = app.get(
-                    "$authhost/movies/videos/$id/request-access?contentUsageType=Viewing",
-                    cookies = latestCookies
-                ).parsedSafe<VideoData>() ?: return@apmap false
-                val extractedLink = videoData.url
+                    val videoData = app.get(
+                        "$authhost/movies/videos/$id/request-access?contentUsageType=Viewing",
+                        cookies = latestCookies
+                    ).parsedSafe<VideoData>() ?: return@map false
+                    val extractedLink = videoData.url
 
-                if (!extractedLink.isNullOrEmpty()) {
-                    val quality = qualityReg.find(extractedLink)?.value ?: ""
-                    callback(
-                        ExtractorLink(
-                            name,
-                            name,
-                            extractedLink,
-                            this.mainUrl + "/",
-                            getQualityFromName(quality),
-                            false
+                    if (!extractedLink.isNullOrEmpty()) {
+                        val quality = qualityReg.find(extractedLink)?.value ?: ""
+                        callback(
+                            newExtractorLink(
+                                name,
+                                name,
+                                extractedLink,
+                            ) {
+                                this.referer = this@TheFlixToProvider.mainUrl + "/"
+                                this.quality = getQualityFromName(quality)
+                            }
                         )
-                    )
-                } else null
+                    } else null
             }
         } else {
             val dataRegex = Regex("(season-(\\d+)\\/episode-(\\d+))")
@@ -590,19 +568,19 @@ class TheFlixToProvider : MainAPI() {
                             val jsonserie = app.get(
                                 "$authhost/tv/videos/$id/request-access?contentUsageType=Viewing",
                                 cookies = latestCookies
-                            ).parsedSafe<VideoData>() ?: return@apmap false
+                            ).parsedSafe<VideoData>() ?: return@map false
                             val extractedlink = jsonserie.url
                             if (!extractedlink.isNullOrEmpty()) {
                                 val quality = qualityReg.find(extractedlink)?.value ?: ""
                                 callback(
-                                    ExtractorLink(
+                                    newExtractorLink(
                                         name,
                                         name,
                                         extractedlink,
-                                        this.mainUrl + "/",
-                                        getQualityFromName(quality),
-                                        false
-                                    )
+                                    ) {
+                                        this.referer = this@TheFlixToProvider.mainUrl + "/"
+                                        this.quality = getQualityFromName(quality)
+                                    }
                                 )
                             } else null
                         }
@@ -613,3 +591,7 @@ class TheFlixToProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

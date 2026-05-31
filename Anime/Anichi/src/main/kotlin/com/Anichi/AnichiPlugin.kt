@@ -1,4 +1,4 @@
-package com.Anichi
+package com.admknight.anichi
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -14,3 +14,7 @@ class AnichiPlugin : BasePlugin() {
         registerExtractorAPI(Bysekoze())
     }
 }
+
+
+
+

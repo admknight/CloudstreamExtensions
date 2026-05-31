@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.movierulzhd
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.app
@@ -50,3 +50,7 @@ class MovierulzhdPlugin: BasePlugin() {
         )
     }
 }
+
+
+
+

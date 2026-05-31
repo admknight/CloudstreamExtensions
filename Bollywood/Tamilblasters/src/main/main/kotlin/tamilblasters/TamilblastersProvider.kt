@@ -1,4 +1,4 @@
-package com.tamilblasters
+package com.admknight.tamilblasters
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -30,19 +30,7 @@ class TamilblastersProvider : MainAPI() {
         val name = selectFirst("h2>a")?.text() ?: return null
         val posterUrl = selectFirst("img")?.attr("src")
         val href = selectFirst("a")?.attr("href") ?: return null
-        return newnewnewMovieSearchResponse(name, href, TvType.Movie) {
-            this.posterUrl = posterUrl
-        }
-    }
-
-    override suspend fun search(query: String): List<SearchResponse> {
-        val searchDoc = app.get("$mainUrl/?s=$query").document
-        return searchDoc.select("div.article-content-col").mapNotNull {
-            it.toSearchResult()
-        }
-    }
-
-    data class VideoEntry(val title: String, val url: String)
+        return newMovieSearchResponse(name, href, val url: String)
 
     override suspend fun load(url: String): LoadResponse? {
         val document = app.get(url).document
@@ -52,7 +40,7 @@ class TamilblastersProvider : MainAPI() {
         val type = if (ogdesc.startsWith("Movie")) TvType.Movie else TvType.TvSeries
         val posterUrl = document.selectFirst("meta[property='og:image']")?.attr("content")
         val plotParagraph = document.select("p:has(strong)")
-        .firstOrNull { it.selectFirst("strong")?.text()?.contains("plot", ignoreCase = true) == true }
+        .firstOrNull { it.selectFirst("strong")?.text()?.contains("plot") { this.posterUrl = ignoreCase = true) == true }
         val desc = plotParagraph?.apply { select("strong").remove() }?.text() ?: ""  
         return if (type == TvType.TvSeries) {
             val episodes = extractVideos(document).map { ep ->
@@ -60,13 +48,13 @@ class TamilblastersProvider : MainAPI() {
                     this.name = ep.title
                 }
             }
-            newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
+            newTvSeriesLoadResponse(title; this.year = url } {
                 this.posterUrl = posterUrl
                 this.year = year
                 this.plot = desc
             }
         } else {
-            newMovieLoadResponse(title, url, TvType.Movie, url) {
+            newMovieLoadResponse(title, url, url) {
                 this.posterUrl = posterUrl
                 this.year = year
                 this.plot = desc
@@ -75,10 +63,7 @@ class TamilblastersProvider : MainAPI() {
     }
 
     override suspend fun loadLinks(
-        data: String,
-        isCasting: Boolean,
-        subtitleCallback: (SubtitleFile) -> Unit,
-        callback: (ExtractorLink) -> Unit
+        data: String, isCasting: Boolean) { this.posterUrl = subtitleCallback: (SubtitleFile) -> Unit; this.year = callback: (ExtractorLink) -> Unit
     ): Boolean {
         if (data.startsWith("{")) {
             val loadData = AppUtils.tryParseJson<VideoEntry>(data)
@@ -88,7 +73,7 @@ class TamilblastersProvider : MainAPI() {
                     val secondPart = streamurl.substringAfter("/e")
                     streamurl = "$streamhg/e/$secondPart"
                 }
-                loadExtractor(streamurl, "$mainUrl/", subtitleCallback, callback)
+                loadExtractor(streamurl; this.plot = "$mainUrl/"; this.showStatus = subtitleCallback }
                 return true
             }
         } else {
@@ -115,3 +100,12 @@ class TamilblastersProvider : MainAPI() {
         }
     }
 }
+
+
+
+
+
+
+
+
+

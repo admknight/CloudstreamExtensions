@@ -1,4 +1,4 @@
-package com.pmsm
+package com.admknight.pmsm
 
 import android.content.Context
 import com.lagradost.cloudstream3.app
@@ -43,3 +43,7 @@ class PmsmPlugin : Plugin() {
         )
     }
 }
+
+
+
+

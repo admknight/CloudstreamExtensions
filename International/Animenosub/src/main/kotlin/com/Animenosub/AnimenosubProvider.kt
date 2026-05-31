@@ -1,4 +1,4 @@
-package com.Animenosub
+package com.admknight.animenosub
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -14,3 +14,6 @@ class AnimenosubProvider: BasePlugin() {
         registerExtractorAPI(AnimenosubExtractor())
     }
 }
+
+
+

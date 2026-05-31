@@ -1,8 +1,8 @@
-package com.kickassanime
+package com.admknight.kickassanime
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.Gson
-import com.kickassanime.CryptoAES.decodeHex
+import com.admknight.kickassanime.decodeHex
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.syncproviders.SyncIdName
 import com.lagradost.cloudstream3.utils.*
@@ -81,7 +81,7 @@ class Kickassanime : MainAPI() {
         val href = getProperAnimeLink(this.slug)
         val title = (this.titleEn ?: this.title).replace("\"","")
         val posterUrl = getImageUrl(this.poster.hq)
-        return newnewAnimeSearchResponse(title, href, TvType.Anime) {
+        return newAnimeSearchResponse(title, href, TvType.Anime) {
             this.posterUrl = posterUrl
         }
     }
@@ -113,7 +113,7 @@ val json = """
         val title=this.titleEn ?: this.title
         val poster= getImageUrl(this.poster.hq)
         val href="${mainUrl}/${this.slug}"
-        return newnewAnimeSearchResponse(
+        return newAnimeSearchResponse(
             title,
             href,
             TvType.TvSeries,
@@ -582,3 +582,7 @@ data class Encrypted(
         }
     }
 }
+
+
+
+

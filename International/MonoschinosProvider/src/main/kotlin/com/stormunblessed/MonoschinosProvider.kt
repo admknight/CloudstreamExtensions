@@ -1,4 +1,4 @@
-package com.lagradost.cloudstream3.animeproviders
+package com.admknight.monoschinos
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -69,7 +69,7 @@ class MonoschinosProvider : MainAPI() {
                             val url = it.selectFirst("a")?.attr("href")!!.replace("ver/", "anime/")
                                     .replace(epRegex, "sub-espanol")
                             val epNum = (it.selectFirst("article span.episode")?.text() ?: it.selectFirst("div.positioning p")?.text())?.toIntOrNull()
-                            newnewAnimeSearchResponse(title, url) {
+                            newAnimeSearchResponse(title, url) {
                                 this.posterUrl = fixUrl(poster)
                                 addDubStatus(getDubStatus(title), epNum)
                             }
@@ -84,7 +84,7 @@ class MonoschinosProvider : MainAPI() {
                         it.selectFirst("img")?.attr("data-src")
                                 ?: ""
 
-                newnewAnimeSearchResponse(title, fixUrl(it.selectFirst("a")!!.attr("href"))) {
+                newAnimeSearchResponse(title, fixUrl(it.selectFirst("a")!!.attr("href"))) {
                     this.posterUrl = fixUrl(poster)
                     addDubStatus(getDubStatus(title))
                 }
@@ -197,3 +197,6 @@ class MonoschinosProvider : MainAPI() {
         return true
     }
 }
+
+
+

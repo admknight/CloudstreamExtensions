@@ -1,4 +1,4 @@
-package com.PublicSportsIPTV
+package com.admknight.publicsportsiptv
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -132,3 +132,6 @@ data class LoadURL(
     @param:JsonProperty("poster")
     val poster: String?,
 )
+
+
+

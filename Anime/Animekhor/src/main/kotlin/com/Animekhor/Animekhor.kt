@@ -1,4 +1,4 @@
-package com.Animekhor
+package com.admknight.animekhor
 
 import com.lagradost.api.Log
 import org.jsoup.nodes.Element
@@ -42,7 +42,7 @@ open class Animekhor : MainAPI() {
         val title     = this.select("div.bsx > a").attr("title")
         val href      = fixUrl(this.select("div.bsx > a").attr("href"))
         val posterUrl = fixUrlNull(this.selectFirst("div.bsx > a img")?.getsrcAttribute())
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -51,7 +51,7 @@ open class Animekhor : MainAPI() {
         val title     = this.select("div.bsx > a").attr("title")
         val href      = fixUrl(this.select("div.bsx > a").attr("href"))
         val posterUrl = fixUrlNull(this.selectFirst("div.bsx > a img")?.getsrcAttribute())
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
         }
     }
@@ -145,3 +145,7 @@ open class Animekhor : MainAPI() {
     }
 
 }
+
+
+
+

@@ -1,4 +1,4 @@
-package com.DoraBash
+package com.admknight.dorabash
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -15,3 +15,6 @@ class DoraBashProvider: BasePlugin() {
         registerExtractorAPI(FileMoon())
     }
 }
+
+
+

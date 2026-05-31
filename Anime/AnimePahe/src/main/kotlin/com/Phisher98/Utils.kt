@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animepahe
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -256,3 +256,6 @@ fun parseAnimeData(jsonString: String): MetaAnimeData? {
         null // Return null for invalid JSON instead of crashing
     }
 }
+
+
+

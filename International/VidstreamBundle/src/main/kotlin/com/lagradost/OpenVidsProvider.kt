@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.vidstreambundle
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -130,3 +130,6 @@ class OpenVidsProvider:TmdbProvider() {
     }
 
 }
+
+
+

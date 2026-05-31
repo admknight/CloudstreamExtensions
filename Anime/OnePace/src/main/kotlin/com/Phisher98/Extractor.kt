@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.onepace
 
 import com.google.gson.JsonParser
 import com.lagradost.api.Log
@@ -302,3 +302,6 @@ class MyAnimeworld : ExtractorApi() {
         loadExtractor(iframe,"",subtitleCallback,callback)
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.latanime
+package com.admknight.latanime
 
 import com.lagradost.cloudstream3.addDubStatus
 import com.lagradost.cloudstream3.DubStatus
@@ -60,7 +60,7 @@ class Latanime : MainAPI() {
         val href      = this.attr("href")
         val posterUrl = fixUrlNull(this.selectFirst("img")?.getImageAttr())
         val isDub     = title.contains("Latino") || title.contains("Castellano")
-        return newnewAnimeSearchResponse(title, href, TvType.Anime) {
+        return newAnimeSearchResponse(title, href, TvType.Anime) {
             this.posterUrl = posterUrl
             addDubStatus(isDub)
         }
@@ -131,3 +131,6 @@ class Latanime : MainAPI() {
             ?: this.attr("src").takeIf { it.isNotBlank() && it.startsWith("http") }
     }
 }
+
+
+

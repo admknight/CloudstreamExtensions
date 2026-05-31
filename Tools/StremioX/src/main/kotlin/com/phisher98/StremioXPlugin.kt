@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.stremiox
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
@@ -105,3 +105,7 @@ class StremioXPlugin : Plugin() {
         val type: String
     )
 }
+
+
+
+

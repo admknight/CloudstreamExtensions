@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.showbox
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
@@ -399,3 +399,7 @@ object ShowBoxExtractor : ShowBox() {
         }
     }
 }
+
+
+
+

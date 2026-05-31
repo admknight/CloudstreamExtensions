@@ -1,4 +1,4 @@
-package com.Netcinez
+package com.admknight.netcinez
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,3 +9,6 @@ class NetcinezProvider: BasePlugin() {
         registerMainAPI(Netcinez())
     }
 }
+
+
+

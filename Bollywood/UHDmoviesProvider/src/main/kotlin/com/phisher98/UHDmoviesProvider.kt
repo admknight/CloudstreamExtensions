@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.uhdmovies
 
 
 import java.net.URLEncoder
@@ -78,12 +78,12 @@ class UHDmoviesProvider : MainAPI() { // all providers must be an instance of Ma
         val posterUrl = fixUrlNull(this.select("div.entry-image > a > img").attr("src"))
         val quality = getSearchQuality(titleRaw)
         return if (titleRaw.contains("season|S0", true) || titleRaw.contains("episode", true) || titleRaw.contains("S0", true)) {
-            newnewTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+            newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                 this.posterUrl = posterUrl
                 this.quality = quality
             }
         } else {
-            newnewMovieSearchResponse(title, href, TvType.Movie) {
+            newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
                 this.quality = quality
             }
@@ -352,3 +352,7 @@ private suspend fun fetchSimklId(
         ?.optInt("simkl")
         ?.takeIf { it != 0 }
 }.getOrNull()
+
+
+
+

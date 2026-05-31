@@ -1,4 +1,4 @@
-package com.Pencurimovie
+package com.admknight.pencurimovie
 
 import com.lagradost.api.Log
 import org.jsoup.nodes.Element
@@ -47,7 +47,7 @@ class Pencurimovie : MainAPI() {
         val href = fixUrl(this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.select("a img").attr("data-original"))
         val quality = getQualityFromString(this.select("span.mli-quality").text())
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = quality
         }
@@ -134,4 +134,8 @@ class Pencurimovie : MainAPI() {
         return true
     }
 }
+
+
+
+
 

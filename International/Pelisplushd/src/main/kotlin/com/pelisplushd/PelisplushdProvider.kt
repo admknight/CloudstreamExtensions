@@ -1,4 +1,4 @@
-package com.pelisplushd
+package com.admknight.pelisplushd
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -14,3 +14,6 @@ class Animeav1Provider: Plugin() {
         registerExtractorAPI(StreamwishHG())
     }
 }
+
+
+

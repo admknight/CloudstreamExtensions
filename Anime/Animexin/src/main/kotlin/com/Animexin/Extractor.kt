@@ -1,4 +1,4 @@
-package com.Animexin
+package com.admknight.animexin
 
 
 import com.lagradost.cloudstream3.app
@@ -62,3 +62,6 @@ fun Http(url: String): String {
         url
     }
 }
+
+
+

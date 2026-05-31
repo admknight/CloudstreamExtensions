@@ -1,4 +1,4 @@
-package com.Animekhor
+package com.admknight.animekhor
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
@@ -30,3 +30,6 @@ class Donghuaword  : Animekhor() {
         return true
     }
 }
+
+
+

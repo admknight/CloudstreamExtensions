@@ -1,4 +1,4 @@
-package com.Cinemacity
+package com.admknight.cinemacity
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.annotations.SerializedName
@@ -92,3 +92,6 @@ data class ResponseData(
         )
     }
 }
+
+
+

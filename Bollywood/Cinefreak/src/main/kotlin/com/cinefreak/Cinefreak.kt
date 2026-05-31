@@ -1,4 +1,4 @@
-package com.cinefreak
+package com.admknight.cinefreak
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -97,7 +97,7 @@ open class Cinefreak : MainAPI() {
         val url = post.attr("href")
         val poster = post.select("img").attr("data-lazy-src").ifBlank { post.select("img").attr("src") }
         val score = Score.from10(post.select("div.rating").text())
-        return newnewMovieSearchResponse(title, url, TvType.Movie) {
+        return newMovieSearchResponse(title, url, TvType.Movie) {
             this.posterUrl = poster.replace("/w185/", "/w500/")
             this.score = score
             this.quality = getSearchQuality(post.select("div.quality-badges span").text())
@@ -129,7 +129,7 @@ open class Cinefreak : MainAPI() {
                 else -> TvType.Movie
             }
 
-            newnewMovieSearchResponse(obj.t, href, type) {
+            newMovieSearchResponse(obj.t, href, type) {
                 this.posterUrl = obj.i
             }
         }.toNewSearchResponseList()
@@ -182,7 +182,7 @@ open class Cinefreak : MainAPI() {
 
             val href = it.select("a").attr("href")
 
-            newnewMovieSearchResponse("", href, TvType.Movie) {
+            newMovieSearchResponse("", href, TvType.Movie) {
                 posterUrl = recPoster
             }
         }
@@ -742,3 +742,6 @@ open class Cinefreak : MainAPI() {
         return URI(url).let { "${it.scheme}://${it.host}" }
     }
 }
+
+
+

@@ -1,6 +1,5 @@
-package com.stormunblessed
+package com.admknight.animejl
 
-import android.util.Log
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -27,24 +26,20 @@ class AnimeJlProvider : MainAPI() {
             Pair("Peliculas", "$mainUrl/animes?tipo[]=3&order=updated"),
         )
 
-        urls.map { (name, url) ->
+        urls.forEach { (name, url) ->
             val doc = app.get(url).document
             val home = doc.select("ul.ListAnimes li").map {
                 val title = it.selectFirst("article.Anime h3.Title")?.text()
                 val link = it.selectFirst("article.Anime a")?.attr("href")
                 val img = it.selectFirst("article.Anime a div.Image figure img")?.attr("src")
                     ?.replaceFirst("^/".toRegex(), "$mainUrl/")
-                newTvSeriesSearchResponse(
-                    title!!,
-                    link!!,
-                    this.name,
-                    TvType.Anime,
-                    img,
-                )
+                newTvSeriesSearchResponse(title!!, link!!, TvType.Anime) {
+                    this.posterUrl = img
+                }
             }
             items.add(HomePageList(name, home))
         }
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -55,13 +50,9 @@ class AnimeJlProvider : MainAPI() {
             val link = it.selectFirst("article.Anime a")?.attr("href")
             val img = it.selectFirst("article.Anime a div.Image figure img")?.attr("src")
                 ?.replaceFirst("^/".toRegex(), "$mainUrl/")
-            newTvSeriesSearchResponse(
-                title!!,
-                link!!,
-                this.name,
-                TvType.Anime,
-                img,
-            )
+            newTvSeriesSearchResponse(title!!, link!!, TvType.Anime) {
+                this.posterUrl = img
+            }
         }
     }
 
@@ -99,21 +90,16 @@ class AnimeJlProvider : MainAPI() {
                     }
                 }
                 episodes.add(
-                    Episode(
-                        epurl,
-                        epTitle,
-                        0,
-                        epNum,
-                        realimg,
-                    )
+                    newEpisode(epurl) {
+                        this.name = epTitle
+                        this.episode = epNum
+                        this.posterUrl = realimg
+                    }
                 )
             }
         }
 
-        return newTvSeriesLoadResponse(
-            title,
-            url, TvType.Anime, episodes,
-        ) {
+        return newTvSeriesLoadResponse(title, url, TvType.Anime, episodes) {
             this.posterUrl = poster
             this.backgroundPosterUrl = backimage
             this.plot = description
@@ -136,5 +122,4 @@ class AnimeJlProvider : MainAPI() {
         }
         return true
     }
-
 }

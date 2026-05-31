@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
@@ -370,3 +370,7 @@ class ProvidersFragment(
         onDismissCallback?.invoke()
     }
 }
+
+
+
+

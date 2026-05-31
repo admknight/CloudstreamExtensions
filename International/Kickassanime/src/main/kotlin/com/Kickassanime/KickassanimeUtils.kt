@@ -1,7 +1,7 @@
-package com.kickassanime
+package com.admknight.kickassanime
 
 //mark
-import com.kickassanime.Kickassanime.Companion.mainUrl
+import com.admknight.kickassanime.mainUrl
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import java.net.URI
 import java.net.URLDecoder
@@ -86,3 +86,6 @@ fun tryParseJson(jsonString: String): MyJsonData? {
     }
 }
  */
+
+
+

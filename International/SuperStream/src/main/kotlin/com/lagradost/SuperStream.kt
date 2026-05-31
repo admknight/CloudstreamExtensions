@@ -1,8 +1,8 @@
-package com.lagradost
+package com.admknight.superstream
 
 import android.util.Base64
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.lagradost.SuperStream.CipherUtils.getVerify
+import com.admknight.superstream.getVerify
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.APIHolder.capitalize
 import com.lagradost.cloudstream3.APIHolder.unixTime
@@ -281,7 +281,7 @@ class SuperStream : MainAPI() {
                 if (name.isNullOrEmpty()) name = "Featured"
                 val postList = it.list.mapNotNull second@{ post ->
                     val type = if (post.boxType == 1) TvType.Movie else TvType.TvSeries
-                    newnewnewMovieSearchResponse(
+                    newMovieSearchResponse(
                         name = post.title ?: return@second null,
                         url = LoadData(post.id ?: return@mapNotNull null, post.boxType).toJson(),
                         type = type,
@@ -310,7 +310,7 @@ class SuperStream : MainAPI() {
         @JsonProperty("quality_tag") val qualityTag: String? = null,
     ) {
         fun toSearchResponse(api: MainAPI): MovieSearchResponse? {
-            return api.newnewnewMovieSearchResponse(
+            return api.newMovieSearchResponse(
                 this.title ?: "",
                 LoadData(
                     this.id ?: this.mid ?: return null,
@@ -724,3 +724,9 @@ class SuperStream : MainAPI() {
         return true
     }
 }
+
+
+
+
+
+

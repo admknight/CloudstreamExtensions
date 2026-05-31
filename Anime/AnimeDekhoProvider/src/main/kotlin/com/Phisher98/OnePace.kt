@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.animedekho
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -61,7 +61,7 @@ open class OnepaceProvider : MainAPI() {
             subtype = true
 
         }
-        return newnewAnimeSearchResponse(title, Media(href, posterUrl,title).toJson(), TvType.Anime, false) {
+        return newAnimeSearchResponse(title, Media(href, posterUrl,title).toJson(), TvType.Anime, false) {
             this.posterUrl = posterUrl
             addDubStatus(dubExist = dubtype, subExist = subtype)
         }
@@ -150,3 +150,7 @@ open class OnepaceProvider : MainAPI() {
         }
     }
 }
+
+
+
+

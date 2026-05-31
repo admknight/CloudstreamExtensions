@@ -1,4 +1,4 @@
-package com.redowan
+package com.admknight.skymovieshd
 
 
 import com.lagradost.cloudstream3.*
@@ -46,7 +46,7 @@ class SkymoviesHDProvider : MainAPI() {
         }
         val url = mainUrl + post.select("a").attr("href")
         val doc = app.get(url).document
-        return newnewMovieSearchResponse(title, url, TvType.Movie) {
+        return newMovieSearchResponse(title, url, TvType.Movie) {
             this.posterUrl = doc.select(".movielist > img:nth-child(1)").attr("src")
         }
     }
@@ -136,3 +136,6 @@ class SkymoviesHDProvider : MainAPI() {
             ?: Qualities.Unknown.value
     }
 }
+
+
+

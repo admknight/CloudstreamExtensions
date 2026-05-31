@@ -1,4 +1,4 @@
-package com.lagradost.cloudstream3.movieproviders
+package com.admknight.pelisplushd
 
 import android.webkit.URLUtil
 import com.lagradost.cloudstream3.*
@@ -44,24 +44,13 @@ class PelisplusHDProvider:MainAPI() {
         val posterUrl = fixUrl(this.select(".Posters-img").attr("src"))
         val isMovie = href.contains("/pelicula/")
         return if (isMovie) {
-            newMovieSearchResponse(
-                title,
-                href,
-                name,
-                TvType.Movie,
-                posterUrl,
-                null
-            )
+            newMovieSearchResponse(title, href, name, TvType.Movie) {
+                this.posterUrl = posterUrl
+            }
         } else {
-            newTvSeriesSearchResponse(
-                title,
-                href,
-                name,
-                TvType.Movie,
-                posterUrl,
-                null,
-                null
-            )
+            newTvSeriesSearchResponse(title, href, name, TvType.Movie) {
+                this.posterUrl = posterUrl
+            }
         }
     }
 
@@ -76,24 +65,13 @@ class PelisplusHDProvider:MainAPI() {
             val isMovie = href.contains("/pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    null
-                )
+                newMovieSearchResponse(title, href, this.name, TvType.Movie) {
+                    this.posterUrl = image
+                }
             } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(title, href, this.name, TvType.TvSeries) {
+                    this.posterUrl = image
+                }
             }
         }
     }
@@ -115,12 +93,11 @@ class PelisplusHDProvider:MainAPI() {
             val isValid = seasonid?.size == 2
             val episode = if (isValid) seasonid?.getOrNull(1) else null
             val season = if (isValid) seasonid?.getOrNull(0) else null
-            Episode(
-                href!!,
-                name,
-                season,
-                episode,
-            )
+            newEpisode(href!!) {
+                this.name = name
+                this.season = season
+                this.episode = episode
+            }
         }
 
         val year = soup.selectFirst(".p-r-15 .text-semibold")?.text()?.toIntOrNull()
@@ -130,33 +107,20 @@ class PelisplusHDProvider:MainAPI() {
 
         return when (tvType) {
             TvType.TvSeries -> {
-                TvSeriesLoadResponse(
-                    title!!,
-                    url,
-                    this.name,
-                    tvType,
-                    episodes,
-                    fixUrl(poster!!),
-                    year,
-                    description,
-                    null,
-                    null,
-                    tags,
-                )
+                newTvSeriesLoadResponse(title!!, url, tvType, episodes) {
+                    this.posterUrl = fixUrl(poster!!)
+                    this.year = year
+                    this.plot = description
+                    this.tags = tags
+                }
             }
             TvType.Movie -> {
-                MovieLoadResponse(
-                    title!!,
-                    url,
-                    this.name,
-                    tvType,
-                    url,
-                    fixUrl(poster!!),
-                    year,
-                    description,
-                    null,
-                    tags,
-                )
+                newMovieLoadResponse(title!!, url, tvType, url) {
+                    this.posterUrl = fixUrl(poster!!)
+                    this.year = year
+                    this.plot = description
+                    this.tags = tags
+                }
             }
             else -> null
         }
@@ -231,3 +195,7 @@ class PelisplusHDProvider:MainAPI() {
         return true
     }
 }
+
+
+
+

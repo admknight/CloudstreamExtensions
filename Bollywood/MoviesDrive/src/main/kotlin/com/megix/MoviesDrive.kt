@@ -1,4 +1,4 @@
-package com.megix
+package com.admknight.moviesdrive
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -18,3 +18,7 @@ class MoviesDrive: Plugin() {
         registerExtractorAPI(GDFlix())
     }
 }
+
+
+
+

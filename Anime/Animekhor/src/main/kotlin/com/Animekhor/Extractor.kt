@@ -1,4 +1,4 @@
-package com.Animekhor
+package com.admknight.animekhor
 
 
 import com.lagradost.api.Log
@@ -120,3 +120,7 @@ open class Rumble : ExtractorApi() {
         }
     }
 }
+
+
+
+

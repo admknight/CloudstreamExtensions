@@ -1,4 +1,4 @@
-package com.pmsm
+package com.admknight.pmsm
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.extractors.VidhideExtractor
@@ -106,3 +106,7 @@ class Ezplayer : VidStack() {
 class YandexcdnPmsm : VidhideExtractor() {
     override var mainUrl = "https://yandexcdn.com"
 }
+
+
+
+

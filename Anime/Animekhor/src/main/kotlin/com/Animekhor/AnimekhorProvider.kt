@@ -1,4 +1,4 @@
-package com.Animekhor
+package com.admknight.animekhor
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -24,3 +24,6 @@ class AnimenosubProvider: BasePlugin() {
         registerExtractorAPI(Donghuaplanet())
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.ultima
 
 import com.lagradost.cloudstream3.HomePageResponse
 import com.lagradost.cloudstream3.MainAPI
@@ -27,3 +27,7 @@ open class WatchSync(val plugin: UltimaPlugin) : MainAPI() {
         return null
     }
 }
+
+
+
+

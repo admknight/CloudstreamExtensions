@@ -1,4 +1,4 @@
-package com.lagradost.cloudstream3.animeproviders
+package com.admknight.tioanime
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -50,32 +50,27 @@ class TioAnimeProvider:MainAPI() {
                     val dubstat = if (title!!.contains("Latino") || title.contains("Castellano"))
                         DubStatus.Dubbed
                     else DubStatus.Subbed
-                    newnewAnimeSearchResponse(title, fixUrl(url!!)) {
+                    newAnimeSearchResponse(title, fixUrl(url!!)) {
                         this.posterUrl = fixUrl(poster ?: "")
                         addDubStatus(dubstat, epNum)
                     }
                 })
         )
-        urls.map { (url, name) ->
+        urls.forEach { (url, name) ->
             val doc = app.get(url).document
             val home = doc.select("ul.animes li article").map {
                 val title = it.selectFirst("h3.title")?.text()
                 val poster = it.selectFirst("figure img")?.attr("src")
-                newAnimeSearchResponse(
-                    title!!,
-                    fixUrl(it.selectFirst("a")?.attr("href") ?: ""),
-                    this.name,
-                    TvType.Anime,
-                    fixUrl(poster ?: ""),
-                    null,
-                    if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(DubStatus.Dubbed) else EnumSet.of(DubStatus.Subbed),
-                )
+                newAnimeSearchResponse(title!!, fixUrl(it.selectFirst("a")?.attr("href") ?: ""), TvType.Anime) {
+                    this.posterUrl = fixUrl(poster ?: "")
+                    if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
+                }
             }
 
             items.add(HomePageList(name, home))
         }
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     data class SearchObject (
@@ -95,15 +90,10 @@ class TioAnimeProvider:MainAPI() {
             val title = searchr.title
             val href = "$mainUrl/anime/${searchr.slug}"
             val image = "$mainUrl/uploads/portadas/${searchr.id}.jpg"
-            newAnimeSearchResponse(
-                title,
-                href,
-                this.name,
-                TvType.Anime,
-                fixUrl(image),
-                null,
-                if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(DubStatus.Dubbed) else EnumSet.of(DubStatus.Subbed),
-            )
+            newAnimeSearchResponse(title, href, TvType.Anime) {
+                this.posterUrl = fixUrl(image)
+                if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
+            }
         }
     }
 
@@ -123,19 +113,16 @@ class TioAnimeProvider:MainAPI() {
             .map { it?.text()?.trim().toString() }
         val year = doc.selectFirst("span.year")?.text()?.toIntOrNull()
 
-        doc.select("script").map { script ->
+        doc.select("script").forEach { script ->
             if (script.data().contains("var episodes = [")) {
                 val data = script.data().substringAfter("var episodes = [").substringBefore("];")
                 data.split("],").forEach {
                     it.split(",").forEach { epNum ->
                         val link = url.replace("/anime/","/ver/")+"-$epNum"
-                        episodes.add( Episode(
-                            link,
-                            "Capítulo $epNum",
-                            posterUrl = null,
-                            episode = epNum.toIntOrNull()
-                        )
-                        )
+                        episodes.add(newEpisode(link) {
+                            this.name = "Capítulo $epNum"
+                            this.episode = epNum.toIntOrNull()
+                        })
                     }
                 }
             }
@@ -155,14 +142,13 @@ class TioAnimeProvider:MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        app.get(data).document.select("script").map { script ->
+        app.get(data).document.select("script").forEach { script ->
             if (script.data().contains("var videos =") || script.data().contains("var anime_id =") || script.data().contains("server")) {
                 val videos = script.data().replace("\\/", "/")
-                fetchUrls(videos).map {
-                    it.replace("https://embedsb.com/e/","https://watchsb.com/e/")
+                fetchUrls(videos).forEach {
+                    val url = it.replace("https://embedsb.com/e/","https://watchsb.com/e/")
                         .replace("https://ok.ru","http://ok.ru")
-                }.toList().map {
-                    loadExtractor(it, subtitleCallback, callback)
+                    loadExtractor(url, subtitleCallback, callback)
                 }
             }
         }

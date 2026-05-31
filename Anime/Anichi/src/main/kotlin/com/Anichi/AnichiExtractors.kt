@@ -1,11 +1,17 @@
-package com.Anichi
+package com.admknight.anichi
 
-import com.Anichi.AnichiParser.AnichiVideoApiResponse
-import com.Anichi.AnichiParser.LinksQuery
-import com.Anichi.AnichiUtils.fixSourceUrls
-import com.Anichi.AnichiUtils.fixUrlPath
-import com.Anichi.AnichiUtils.getHost
-import com.Anichi.AnichiUtils.getM3u8Qualities
+import com.admknight.anichi.Anichi.Companion.apiEndPoint
+import com.admknight.anichi.Anichi.Companion.apiUrl
+import com.admknight.anichi.Anichi.Companion.headers
+import com.admknight.anichi.Anichi.Companion.serverHash
+import com.admknight.anichi.AnichiParser.AnichiLoadData
+import com.admknight.anichi.AnichiParser.AnichiVideoApiResponse
+import com.admknight.anichi.AnichiParser.LinksQuery
+import com.admknight.anichi.AnichiParser.AnichiDownload
+import com.admknight.anichi.AnichiUtils.fixSourceUrls
+import com.admknight.anichi.AnichiUtils.fixUrlPath
+import com.admknight.anichi.AnichiUtils.getHost
+import com.admknight.anichi.AnichiUtils.getM3u8Qualities
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.APIHolder.capitalize
@@ -13,7 +19,6 @@ import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.USER_AGENT
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.base64DecodeArray
-import com.lagradost.cloudstream3.extractors.StreamWishExtractor
 import com.lagradost.cloudstream3.extractors.VidStack
 import com.lagradost.cloudstream3.mvvm.safeApiCall
 import com.lagradost.cloudstream3.network.WebViewResolver
@@ -52,13 +57,13 @@ object AnichiExtractors : Anichi() {
         val fullApiUrl = """$apiUrl?variables={"showId":"$hash","translationType":"$dubStatus","episodeString":"$episode"}&extensions={"persistedQuery":{"version":1,"sha256Hash":"$serverHash"}}"""
 
         val apiResponse = try {
-            app.get(fullApiUrl, headers = headers).parsed<LinksQuery>()
+            app.get(fullApiUrl, headers = headers).parsedSafe<LinksQuery>()
         } catch (e: Exception) {
             e.printStackTrace()
             return@coroutineScope
         }
 
-        val sources = apiResponse.data?.episode?.sourceUrls ?: return@coroutineScope
+        val sources = apiResponse?.data?.episode?.sourceUrls ?: return@coroutineScope
 
         sources.forEach { source ->
             launch {
@@ -78,23 +83,13 @@ object AnichiExtractors : Anichi() {
                             callback
                         )
                         loadExtractor(fixedLink, subtitleCallback, callback)
-                        /*
-                        when {
-                            URI(fixedLink).path.contains(".m3u") -> {
-                                getM3u8Qualities(fixedLink, serverUrl, host).forEach(callback)
-                            }
-                            else -> {
-
-                            }
-                        }
-                         */
                     } else {
                         val decodedlink=if (link.startsWith("--"))
                         {
                             decrypthex(link)
                         }
                         else link
-                        val fixedLink = decodedlink.fixUrlPath()
+                        val fixedLink = decodedlink.fixUrlPath(apiEndPoint)
                         val links = try {
                             app.get(fixedLink, headers=headers).parsedSafe<AnichiVideoApiResponse>()?.links ?: emptyList()
                         } catch (e: Exception) {
@@ -109,7 +104,7 @@ object AnichiExtractors : Anichi() {
                                     getM3u8Qualities(
                                         server.link,
                                         "https://static.crunchyroll.com/",
-                                        source.sourceName
+                                        source.sourceName ?: "Default"
                                     ).forEach(callback)
                                 }
 
@@ -137,12 +132,12 @@ object AnichiExtractors : Anichi() {
                                     )
                                 }
 
-                                server.hls -> {
+                                server.hls == true -> {
                                     val endpoint = "$apiEndPoint/player?uri=" +
                                             (if (URI(server.link).host.isNotEmpty())
                                                 server.link
                                             else apiEndPoint + URI(server.link).path)
-                                    getM3u8Qualities(server.link, server.headers?.referer ?: endpoint, host).forEach(callback)
+                                    getM3u8Qualities(server.link, server.Headers?.referer ?: endpoint, host).forEach(callback)
                                 }
 
                                 else -> {
@@ -543,3 +538,5 @@ data class PlaybackDecryptSource(
     val bitrateKbps: Long,
     val height: Any?,
 )
+
+

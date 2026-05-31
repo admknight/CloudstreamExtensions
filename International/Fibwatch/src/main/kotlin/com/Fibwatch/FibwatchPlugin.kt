@@ -1,4 +1,4 @@
-package com.Fibwatch
+package com.admknight.fibwatch
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.app
@@ -41,3 +41,7 @@ class FibwatchPlugin: BasePlugin() {
         )
     }
 }
+
+
+
+

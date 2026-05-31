@@ -1,10 +1,10 @@
-package com.horis.cncverse
+package com.admknight.netmirror
 
 import android.content.Context
-import com.horis.cncverse.entities.EpisodesData
-import com.horis.cncverse.entities.PlayList
-import com.horis.cncverse.entities.PostData
-import com.horis.cncverse.entities.SearchData
+import com.admknight.netmirror.EpisodesData
+import com.admknight.netmirror.PlayList
+import com.admknight.netmirror.PostData
+import com.admknight.netmirror.SearchData
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
@@ -86,7 +86,7 @@ class NetflixMirrorProvider : MainAPI() {
     private fun Element.toSearchResult(): SearchResponse? {
         val id = selectFirst("a")?.attr("data-post") ?: attr("data-post")
 
-        return newnewAnimeSearchResponse("", Id(id).toJson()) {
+        return newAnimeSearchResponse("", Id(id).toJson()) {
             this.posterUrl = "https://imgcdn.kim/poster/v/$id.jpg"
             posterHeaders = mapOf("Referer" to "$mainUrl/home")
         }
@@ -103,7 +103,7 @@ class NetflixMirrorProvider : MainAPI() {
         val data = app.get(url, referer = "$mainUrl/home", cookies = cookies).parsed<SearchData>()
 
         return data.searchResult.map {
-            newnewAnimeSearchResponse(it.t, Id(it.id).toJson()) {
+            newAnimeSearchResponse(it.t, Id(it.id).toJson()) {
                 posterUrl = "https://imgcdn.kim/poster/v/${it.id}.jpg"
                 posterHeaders = mapOf("Referer" to "$mainUrl/home")
             }
@@ -125,7 +125,7 @@ class NetflixMirrorProvider : MainAPI() {
             cookies = cookies
         ).parsed<PostData>()
 
-        val episodes = arrayListOf<Episode>()
+        val episodes = arrayListOf<com.lagradost.cloudstream3.Episode>()
 
         val title = data.title
         val castList = data.cast?.split(",")?.map { it.trim() } ?: emptyList()
@@ -184,8 +184,8 @@ class NetflixMirrorProvider : MainAPI() {
 
     private suspend fun getEpisodes(
         title: String, eid: String, sid: String, page: Int
-    ): List<Episode> {
-        val episodes = arrayListOf<Episode>()
+    ): List<com.lagradost.cloudstream3.Episode> {
+        val episodes = arrayListOf<com.lagradost.cloudstream3.Episode>()
         val cookies = mapOf(
             "t_hash_t" to cookie_value,
             "hd" to "on",
@@ -262,3 +262,6 @@ class NetflixMirrorProvider : MainAPI() {
         val title: String, val id: String
     )
 }
+
+
+

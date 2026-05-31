@@ -1,4 +1,4 @@
-package com.dudefilms
+package com.admknight.dudefilms
 
 import com.google.gson.Gson
 import com.lagradost.cloudstream3.HomePageResponse
@@ -75,7 +75,7 @@ class Dudefilms : MainAPI() {
             img -> img.attr("data-src").takeIf { it.isNotBlank() }
             ?: img.attr("src") })
 
-        return newnewMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.quality = getSearchQuality(title)
         }
@@ -258,3 +258,6 @@ class Dudefilms : MainAPI() {
         return true
     }
 }
+
+
+

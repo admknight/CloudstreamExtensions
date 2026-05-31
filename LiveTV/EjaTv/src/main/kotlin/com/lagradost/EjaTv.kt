@@ -1,4 +1,4 @@
-package com.lagradost
+package com.admknight.ejatv
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
@@ -118,3 +118,6 @@ class EjaTv : MainAPI() {
         return true
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package com.movies4u
+package com.admknight.movies4u
 
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.app
@@ -87,3 +87,6 @@ suspend fun fetchTmdbLogoUrl(
     // No language match & no voted logos
     return null
 }
+
+
+
