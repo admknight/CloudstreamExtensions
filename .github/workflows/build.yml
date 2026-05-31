@@ -57,6 +57,7 @@ jobs:
           python3 << 'EOF'
           import os
           import json
+          import re
           from datetime import datetime
           
           builds_dir = os.path.join(os.environ['GITHUB_WORKSPACE'], 'builds')
@@ -66,6 +67,16 @@ jobs:
           
           categories = ['Anime', 'Bollywood', 'International', 'LiveTV', 'Tools']
           
+          def extract_gradle_field(content, field):
+              match = re.search(rf'{field}\s*=\s*\"(.*?)\"', content)
+              if match: return match.group(1)
+              match = re.search(rf'{field}\s*=\s*listOf\((.*?)\)', content)
+              if match:
+                  return [x.strip().replace('"', '').replace("'", "") for x in match.group(1).split(',')]
+              match = re.search(rf'{field}\s*=\s*(\d+)', content)
+              if match: return int(match.group(1))
+              return None
+
           for cat in categories:
               cat_path = os.path.join(src_dir, cat)
               if not os.path.exists(cat_path): continue
@@ -76,25 +87,56 @@ jobs:
                   if not os.path.isdir(plugin_dir): continue
                   
                   cs3_file = f"{plugin_name}.cs3"
-                  if not os.path.exists(os.path.join(builds_dir, cs3_file)): continue
+                  cs3_path = os.path.join(builds_dir, cs3_file)
+                  if not os.path.exists(cs3_path): continue
                   
                   gradle_file = os.path.join(plugin_dir, 'build.gradle.kts')
-                  version = "1"
+                  
+                  # Default metadata
+                  version = 1
+                  lang = "en"
+                  authors = ["Adam Knight"]
+                  tv_types = ["Others"]
+                  description = f"Adam Knight curated source for {plugin_name}"
+                  status = 1
+                  
                   if os.path.exists(gradle_file):
                       with open(gradle_file, 'r') as f:
-                          for line in f:
-                              if 'version =' in line:
-                                  version = line.split('=')[1].strip().replace('"', '')
+                          content = f.read()
+                          
+                          # Extract Version
+                          v_match = re.search(r'version\s*=\s*(\d+)', content)
+                          if v_match: version = int(v_match.group(1))
+                          
+                          # Extract from cloudstream block
+                          g_lang = extract_gradle_field(content, "language")
+                          if g_lang: lang = g_lang
+                          
+                          g_authors = extract_gradle_field(content, "authors")
+                          if g_authors: authors = g_authors
+                          
+                          g_types = extract_gradle_field(content, "tvTypes")
+                          if g_types: tv_types = g_types
+                          
+                          g_desc = extract_gradle_field(content, "description")
+                          if g_desc: description = g_desc
+
+                          g_status = extract_gradle_field(content, "status")
+                          if g_status is not None: status = g_status
                   
                   plugin_data = {
                       "name": plugin_name,
-                      "version": int(version) if version.isdigit() else 1,
+                      "internalName": plugin_name,
+                      "version": version,
+                      "description": description,
+                      "repositoryUrl": f"https://github.com/{os.environ['GITHUB_REPOSITORY']}",
                       "url": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/builds/{cs3_file}",
-                      "authors": ["Adam Knight"],
-                      "repository": os.environ['GITHUB_REPOSITORY'],
-                      "description": f"Adam Knight curated source for {plugin_name}",
-                      "category": cat,
-                      "iconUrl": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/master/{cat}/{plugin_name}/icon.png"
+                      "authors": authors,
+                      "tvTypes": tv_types,
+                      "language": lang,
+                      "iconUrl": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/master/{cat}/{plugin_name}/icon.png",
+                      "status": status,
+                      "apiVersion": 1
                   }
                   plugins.append(plugin_data)
                   categories_summary[cat].append(plugin_name)
