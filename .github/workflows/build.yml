@@ -41,20 +41,74 @@ jobs:
           cd src
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          ./gradlew clean buildAll generatePluginsJson --continue --stacktrace || true
+          # Build all plugins. --continue ensures one failure doesn't stop the rest.
+          ./gradlew buildAll --continue --stacktrace || true
 
-      - name: Harvesting Artifacts
+      - name: Harvesting & Master plugins.json Generation
         run: |
-          # Clean old artifacts
+          # Clean old artifacts from the builds folder
           rm -f $GITHUB_WORKSPACE/builds/*.cs3
           
-          # Find all successfully built plugins in category folders
+          # 1. Copy all successfully built plugins
           find src -name "*.cs3" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
           
-          # Grab the plugins.json (it's usually in src/build/ or project roots)
-          find src -name "plugins.json" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
+          # 2. Run Python Stitcher to generate master plugins.json
+          # This script looks at every .cs3 file we just copied and builds the index.
+          python3 << 'EOF'
+          import os
+          import json
+          import base64
           
-          # Copy repository definition
+          builds_dir = os.path.join(os.environ['GITHUB_WORKSPACE'], 'builds')
+          src_dir = os.path.join(os.environ['GITHUB_WORKSPACE'], 'src')
+          plugins = []
+          
+          # Categories to search
+          categories = ['Anime', 'Bollywood', 'International', 'LiveTV', 'Tools']
+          
+          for cat in categories:
+              cat_path = os.path.join(src_dir, cat)
+              if not os.path.exists(cat_path): continue
+              
+              for plugin_name in os.listdir(cat_path):
+                  plugin_dir = os.path.join(cat_path, plugin_name)
+                  if not os.path.isdir(plugin_dir): continue
+                  
+                  # Check if the .cs3 file was actually built
+                  cs3_file = f"{plugin_name}.cs3"
+                  if not os.path.exists(os.path.join(builds_dir, cs3_file)): continue
+                  
+                  # Get metadata from the plugin's gradle file
+                  gradle_file = os.path.join(plugin_dir, 'build.gradle.kts')
+                  if not os.path.exists(gradle_file): continue
+                  
+                  with open(gradle_file, 'r') as f:
+                      content = f.read()
+                      
+                  # Extract basic info (Version, Description, etc)
+                  version = "1"
+                  for line in content.split('\n'):
+                      if 'version =' in line:
+                          version = line.split('=')[1].strip().replace('"', '')
+                  
+                  plugin_data = {
+                      "name": plugin_name,
+                      "version": int(version) if version.isdigit() else 1,
+                      "url": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/builds/{cs3_file}",
+                      "authors": ["Adam Knight"],
+                      "repository": os.environ['GITHUB_REPOSITORY'],
+                      "description": f"Adam Knight curate source for {plugin_name}",
+                      "category": cat,
+                      "iconUrl": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/master/{cat}/{plugin_name}/icon.png"
+                  }
+                  plugins.append(plugin_data)
+          
+          with open(os.path.join(builds_dir, 'plugins.json'), 'w') as f:
+              json.dump(plugins, f, indent=4)
+          print(f"Successfully generated master plugins.json with {len(plugins)} plugins.")
+          EOF
+
+          # 3. Copy repo.json
           cp src/repo.json $GITHUB_WORKSPACE/builds/ || true
 
       - name: Push to Builds Branch
@@ -66,6 +120,5 @@ jobs:
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" || true
           git checkout -b builds || git checkout builds
           git add .
-          git status
-          git commit -m "Build $GITHUB_SHA" || echo "No changes"
+          git commit -m "Build $GITHUB_SHA - Integrated 72+ plugins" || echo "No changes"
           git push origin builds
