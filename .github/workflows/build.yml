@@ -46,7 +46,6 @@ jobs:
           cd src
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          # Build all plugins. --continue ensures one failure doesn't stop the rest.
           ./gradlew buildAll --continue --stacktrace
 
       - name: Harvesting, plugins.json & Builds README Generation
@@ -141,4 +140,4 @@ jobs:
           git checkout -b builds || git checkout builds
           git add .
           git commit -m "Dashboard Update: ${GITHUB_SHA::8}" || echo "No changes"
-          git push origin builds
+          git push origin builds --force
