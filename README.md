@@ -21,18 +21,21 @@ A fully automated, categorized collection of **150+ Cloudstream Extensions**.
 | 3 | 🎬 Bollywood | **VegaMovies** | Adam Knight | ✅ Active |
 | 4 | 🎬 Bollywood | **Mp4Moviez** | Adam Knight | ✅ Active |
 | 5 | 🎬 Bollywood | **Cinevood** | Adam Knight | ✅ Active |
-| 6 | 🎌 Anime | **Anichi** | Adam Knight | ✅ Active |
-| 7 | 🎌 Anime | **AnimePahe** | Adam Knight | ✅ Active |
-| 8 | 🎌 Anime | **Gogoanime** | Adam Knight | ✅ Active |
-| 9 | 🎌 Anime | **Crunchyroll** | Adam Knight | ✅ Active |
-| 10 | 🌍 International | **ShowBox** | Adam Knight | ✅ Active |
-| 11 | 🌍 International | **Sflix** | Adam Knight | ✅ Active |
-| 12 | 🌍 International | **SuperStream** | Adam Knight | ✅ Active |
-| 13 | 🌍 International | **Goojara** | Adam Knight | ✅ Active |
-| 14 | 📺 Live TV | **IPTVPlayer** | Adam Knight | ✅ Active |
-| 15 | 📺 Live TV | **QuickIPTV** | Adam Knight | ✅ Active |
-| 16 | 🛠 Tools | **Ultima** | Adam Knight | ✅ Active |
-| 17 | 🛠 Tools | **Jellyfin** | Adam Knight | ✅ Active |
+| 6 | 🎬 Bollywood | **Tamilblasters** | Adam Knight | ✅ Active |
+| 7 | 🎌 Anime | **Anichi** | Adam Knight | ✅ Active |
+| 8 | 🎌 Anime | **AnimePahe** | Adam Knight | ✅ Active |
+| 9 | 🎌 Anime | **Gogoanime** | Adam Knight | ✅ Active |
+| 10 | 🎌 Anime | **Crunchyroll** | Adam Knight | ✅ Active |
+| 11 | 🎌 Anime | **NineAnime** | Adam Knight | ✅ Active |
+| 12 | 🌍 International | **ShowBox** | Adam Knight | ✅ Active |
+| 13 | 🌍 International | **Sflix** | Adam Knight | ✅ Active |
+| 14 | 🌍 International | **SuperStream** | Adam Knight | ✅ Active |
+| 15 | 🌍 International | **Goojara** | Adam Knight | ✅ Active |
+| 16 | 📺 Live TV | **IPTVPlayer** | Adam Knight | ✅ Active |
+| 17 | 📺 Live TV | **QuickIPTV** | Adam Knight | ✅ Active |
+| 18 | 🛠 Tools | **Ultima** | Adam Knight | ✅ Active |
+| 19 | 🛠 Tools | **Jellyfin** | Adam Knight | ✅ Active |
+| 20 | 🛠 Tools | **StremioAddon** | Adam Knight | ✅ Active |
 | ... | ... | **+130 more plugins** | ... | ✅ Active |
 
 ---

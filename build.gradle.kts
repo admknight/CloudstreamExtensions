@@ -69,10 +69,14 @@ subprojects {
         implementation("com.google.code.gson:gson:2.10.1")
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
+        
+        // Critical missing dependencies for many plugins
+        implementation("androidx.annotation:annotation:1.9.1")
+        implementation("org.mozilla:rhino:1.8.0")
     }
 }
 
-// Robust aggregator tasks using lazy task dependencies
+// Global Aggregator Tasks (Lazy approach)
 tasks.register("buildAll") {
     group = "cloudstream"
     dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })

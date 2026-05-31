@@ -38,7 +38,8 @@ jobs:
           cd src
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          ./gradlew clean buildAll generatePluginsJson --stacktrace
+          # Use --continue to build as many as possible even if some fail
+          ./gradlew clean buildAll generatePluginsJson --continue --stacktrace
 
       - name: Harvesting Artifacts
         run: |
