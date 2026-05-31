@@ -35,14 +35,19 @@ jobs:
           TOOLS_REGEX="Ultima|Stremio|Jellyfin|BingedReview|RingZ|GDIndex"
           LIVE_REGEX="IPTV|QuickIPTV|Sports|EjaTv|Tvtwofourseven"
 
+          # WIPE OLD MESSY DATA TO START FRESH
+          rm -rf Anime Bollywood International LiveTV Tools
           mkdir -p temp_sources
 
           for REPO_URL in "${SOURCES[@]}"; do
             REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://[^/]+/([^/]+)/([^/]+)(\.git)?|\1_\2|' | sed 's|\.git||')
             git clone --depth 1 "$REPO_URL" "temp_sources/$REPO_NAME"
             
-            find "temp_sources/$REPO_NAME" -name "build.gradle.kts" | while read -r GRADLE_FILE; do
-              PLUGIN_DIR=$(dirname "$GRADLE_FILE")
+            # CRITICAL FIX: Only find folders that contain a 'src' directory
+            find "temp_sources/$REPO_NAME" -maxdepth 3 -name "src" -type d | while read -r SRC_PATH; do
+              PLUGIN_DIR=$(dirname "$SRC_PATH")
+              if [ ! -f "$PLUGIN_DIR/build.gradle.kts" ]; then continue; fi
+              
               PLUGIN_NAME=$(basename "$PLUGIN_DIR")
               if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
 
@@ -56,38 +61,25 @@ jobs:
               mkdir -p "$TARGET_DIR"
               cp -r "$PLUGIN_DIR"/* "$TARGET_DIR/"
               
-              # --- SURGERY & AUTOMATED REPAIR ---
-              # Fix deprecated constructors and apmap globally
+              # --- SURGERY & REPAIR ---
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.apmap/.map/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/MovieSearchResponse(/newMovieSearchResponse(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/TvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/AnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
 
-              # Clean up Gradle - Brand to Adam Knight
+              # Safe buildConfigField Cleanup: Target lines and force value to ""
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
-              
-              # SAFE STRIPPING OF PRIVATE KEYS
-              # This finds buildConfigField lines and forces them to have an empty string value ""
-              sed -i -E 's/buildConfigField\("String", "([^"]+)", .*\)/buildConfigField("String", "\1", "\\"\\"")/g' "$TARGET_DIR/build.gradle.kts"
-              
-              # Remove the property loading block entirely
+              sed -i -E 's/buildConfigField\("String",\s*"[^"]+",\s*.*\)/buildConfigField("String", "REMOVED", "\\"\\"")/g' "$TARGET_DIR/build.gradle.kts"
               sed -i '/val properties = Properties()/d' "$TARGET_DIR/build.gradle.kts"
               sed -i '/properties.load(/d' "$TARGET_DIR/build.gradle.kts"
 
               if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
                 sed -i 's/buildFeatures {/buildFeatures {\n        buildConfig = true/g' "$TARGET_DIR/build.gradle.kts"
               fi
-
-              # Icon Mirror
-              sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$CATEGORY/$PLUGIN_NAME/icon.png\"|" "$TARGET_DIR/build.gradle.kts"
-
-              # Fix Manifest
-              MANIFEST="$TARGET_DIR/src/main/AndroidManifest.xml"
-              if [ -f "$MANIFEST" ]; then sed -i 's/package="[^"]*"//g' "$MANIFEST"; fi
             done
           done
 
           rm -rf temp_sources
           git add .
-          git commit -m "Auto-sync with Automated Repair logic" || echo "No changes"
-          git push origin master
+          git commit -m "FRESH RESET: Clean categorized plugins and surgical repair" || echo "No changes"
+          git push origin master --force

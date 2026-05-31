@@ -11,7 +11,6 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
-        // Downgrade Kotlin to 1.9.24 for maximum plugin compatibility
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24")
     }
 }
@@ -21,6 +20,13 @@ allprojects {
         google()
         mavenCentral()
         maven("https://jitpack.io")
+    }
+    // This fixes the 'clean' task conflict globally
+    tasks.matching { it.name == "clean" }.all {
+        val currentTask = this
+        if (currentTask.project != rootProject) {
+            currentTask.enabled = false 
+        }
     }
 }
 
@@ -55,7 +61,6 @@ subprojects {
         tasks.withType<KotlinJvmCompile> {
             compilerOptions {
                 jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
-                // Suppress all warnings to prevent deprecations from killing the build
                 freeCompilerArgs.addAll("-Xno-call-assertions", "-Xno-param-assertions", "-Xno-receiver-assertions")
             }
         }
@@ -64,10 +69,7 @@ subprojects {
     dependencies {
         val cloudstream by configurations
         val implementation by configurations
-        
-        // Use the pre-release core but ensure all auxiliary libraries are present
         cloudstream("com.lagradost:cloudstream3:pre-release")
-        
         implementation(kotlin("stdlib"))
         implementation("com.github.Blatzar:NiceHttp:0.4.11")
         implementation("org.jsoup:jsoup:1.18.3")
@@ -75,16 +77,14 @@ subprojects {
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         
-        // Fix for missing JS engines and annotations in various source repos
+        // Critical base libraries for older plugins
         implementation("androidx.annotation:annotation:1.9.1")
         implementation("org.mozilla:rhino:1.8.0")
         implementation("com.google.android.material:material:1.12.0")
         implementation("androidx.appcompat:androidx.appcompat:1.7.0")
-        implementation("androidx.core:core-ktx:1.15.0")
     }
 }
 
-// Global build commands
 tasks.register("buildAll") {
     group = "cloudstream"
     dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })
