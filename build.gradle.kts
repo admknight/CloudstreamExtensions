@@ -8,7 +8,6 @@ buildscript {
         mavenCentral()
         maven("https://jitpack.io")
     }
-
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
@@ -27,6 +26,10 @@ allprojects {
 fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) = extensions.getByName<CloudstreamExtension>("cloudstream").configuration()
 fun Project.android(configuration: BaseExtension.() -> Unit) = extensions.getByName<BaseExtension>("android").configuration()
 
+// Aggregator tasks defined at root
+val buildAll = tasks.register("buildAll") { group = "cloudstream" }
+val generatePluginsJson = tasks.register("generatePluginsJson") { group = "cloudstream" }
+
 subprojects {
     apply(plugin = "com.android.library")
     apply(plugin = "kotlin-android")
@@ -38,11 +41,8 @@ subprojects {
 
     android {
         namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
-
         val localPropertiesFile = rootProject.file("local.properties")
-        if (!localPropertiesFile.exists()) {
-            localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk")
-        }
+        if (!localPropertiesFile.exists()) { localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk") }
 
         defaultConfig {
             minSdk = 21
@@ -74,29 +74,12 @@ subprojects {
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     }
-}
 
-// Unique root task names to avoid DuplicateTaskException
-val buildAllPlugins = tasks.register("buildAll") {
-    group = "cloudstream"
-    subprojects {
-        val sub = this
-        afterEvaluate {
-            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                this@register.dependsOn(sub.tasks.named("make"))
-            }
-        }
-    }
-}
-
-val generateAllPluginsJson = tasks.register("generatePluginsJson") {
-    group = "cloudstream"
-    subprojects {
-        val sub = this
-        afterEvaluate {
-            if (sub.plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-                this@register.dependsOn(sub.tasks.named("makePluginsJson"))
-            }
+    // Link subproject tasks to root aggregator tasks correctly
+    afterEvaluate {
+        if (plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
+            buildAll.configure { dependsOn(tasks.named("make")) }
+            generatePluginsJson.configure { dependsOn(tasks.named("makePluginsJson")) }
         }
     }
 }
