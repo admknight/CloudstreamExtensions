@@ -35,7 +35,6 @@ jobs:
           TOOLS_REGEX="Ultima|Stremio|Jellyfin|BingedReview|RingZ|GDIndex"
           LIVE_REGEX="IPTV|QuickIPTV|Sports|EjaTv|Tvtwofourseven"
 
-          # WIPE OLD MESSY DATA TO START FRESH
           rm -rf Anime Bollywood International LiveTV Tools
           mkdir -p temp_sources
 
@@ -43,10 +42,15 @@ jobs:
             REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://[^/]+/([^/]+)/([^/]+)(\.git)?|\1_\2|' | sed 's|\.git||')
             git clone --depth 1 "$REPO_URL" "temp_sources/$REPO_NAME"
             
-            # CRITICAL FIX: Only find folders that contain a 'src' directory
-            find "temp_sources/$REPO_NAME" -maxdepth 3 -name "src" -type d | while read -r SRC_PATH; do
-              PLUGIN_DIR=$(dirname "$SRC_PATH")
-              if [ ! -f "$PLUGIN_DIR/build.gradle.kts" ]; then continue; fi
+            # Find plugin directories: Must have build.gradle.kts AND src, but NOT settings.gradle.kts (which is root)
+            find "temp_sources/$REPO_NAME" -type f -name "build.gradle.kts" | while read -r GRADLE_FILE; do
+              PLUGIN_DIR=$(dirname "$GRADLE_FILE")
+              
+              # Skip the root project of the cloned repo
+              if [ -f "$PLUGIN_DIR/settings.gradle.kts" ] || [ -f "$PLUGIN_DIR/settings.gradle" ]; then continue; fi
+              
+              # Must have a src directory to be a valid plugin
+              if [ ! -d "$PLUGIN_DIR/src" ]; then continue; fi
               
               PLUGIN_NAME=$(basename "$PLUGIN_DIR")
               if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
@@ -61,25 +65,36 @@ jobs:
               mkdir -p "$TARGET_DIR"
               cp -r "$PLUGIN_DIR"/* "$TARGET_DIR/"
               
-              # --- SURGERY & REPAIR ---
+              # --- CLEANUP & REPAIR ---
+              # Delete any duplicate 'clean' task registration
+              sed -i '/task\s*\(["\x27]clean["\x27]\)/d' "$TARGET_DIR/build.gradle.kts"
+              sed -i '/tasks.register\s*\(["\x27]clean["\x27]\)/d' "$TARGET_DIR/build.gradle.kts"
+              
+              # Fix obsolete Kotlin methods
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.apmap/.map/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/MovieSearchResponse(/newMovieSearchResponse(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/TvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/AnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
 
-              # Safe buildConfigField Cleanup: Target lines and force value to ""
+              # Safe Branding & Strip private keys
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
+              
+              # Replace ALL buildConfigField String values with empty string ""
+              # This handles keys, endpoints, secrets etc.
               sed -i -E 's/buildConfigField\("String",\s*"[^"]+",\s*.*\)/buildConfigField("String", "REMOVED", "\\"\\"")/g' "$TARGET_DIR/build.gradle.kts"
+              
+              # Remove manual property loading
               sed -i '/val properties = Properties()/d' "$TARGET_DIR/build.gradle.kts"
               sed -i '/properties.load(/d' "$TARGET_DIR/build.gradle.kts"
 
               if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
-                sed -i 's/buildFeatures {/buildFeatures {\n        buildConfig = true/g' "$TARGET_DIR/build.gradle.kts"
+                # Ensure buildConfig is enabled if not present
+                sed -i '/android {/a \    buildFeatures { buildConfig = true }' "$TARGET_DIR/build.gradle.kts"
               fi
             done
           done
 
           rm -rf temp_sources
           git add .
-          git commit -m "FRESH RESET: Clean categorized plugins and surgical repair" || echo "No changes"
+          git commit -m "System Fix: Resolved repo conflicts, neutralized clean tasks, and stabilized AGP config" || echo "No changes"
           git push origin master --force

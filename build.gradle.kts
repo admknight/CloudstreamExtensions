@@ -9,7 +9,8 @@ buildscript {
         maven("https://jitpack.io")
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.7.3")
+        // Downgrade AGP to 8.2.2 for better compatibility with the Cloudstream Gradle plugin
+        classpath("com.android.tools.build:gradle:8.2.2")
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24")
     }
@@ -21,13 +22,6 @@ allprojects {
         mavenCentral()
         maven("https://jitpack.io")
     }
-    // This fixes the 'clean' task conflict globally
-    tasks.matching { it.name == "clean" }.all {
-        val currentTask = this
-        if (currentTask.project != rootProject) {
-            currentTask.enabled = false 
-        }
-    }
 }
 
 fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) = extensions.getByName<CloudstreamExtension>("cloudstream").configuration()
@@ -36,21 +30,15 @@ fun Project.android(configuration: BaseExtension.() -> Unit) = extensions.getByN
 subprojects {
     apply(plugin = "com.android.library")
     apply(plugin = "kotlin-android")
-    apply(plugin = "com.lagradost.cloudstream3.gradle")
-
-    cloudstream {
-        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "admknight/CloudstreamExtensions")
-    }
-
+    
     android {
+        // Use a consistent namespace for all plugins to avoid manifest merge issues
         namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
-        val localPropertiesFile = rootProject.file("local.properties")
-        if (!localPropertiesFile.exists()) { localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk") }
-
+        
+        compileSdkVersion(34)
         defaultConfig {
             minSdk = 21
-            compileSdkVersion(35)
-            targetSdk = 35
+            targetSdk = 34
         }
 
         compileOptions {
@@ -66,6 +54,13 @@ subprojects {
         }
     }
 
+    // Apply Cloudstream plugin AFTER basic android config
+    apply(plugin = "com.lagradost.cloudstream3.gradle")
+
+    cloudstream {
+        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "admknight/CloudstreamExtensions")
+    }
+
     dependencies {
         val cloudstream by configurations
         val implementation by configurations
@@ -77,24 +72,25 @@ subprojects {
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         
-        // Critical base libraries for older plugins
-        implementation("androidx.annotation:annotation:1.9.1")
-        implementation("org.mozilla:rhino:1.8.0")
-        implementation("com.google.android.material:material:1.12.0")
-        implementation("androidx.appcompat:androidx.appcompat:1.7.0")
+        // Critical base libraries
+        implementation("androidx.annotation:annotation:1.7.0")
+        implementation("org.mozilla:rhino:1.7.15")
+        implementation("androidx.appcompat:androidx.appcompat:1.6.1")
     }
 }
 
+// Global build commands
 tasks.register("buildAll") {
     group = "cloudstream"
+    // Only depend on 'make' tasks of actual plugin subprojects
     dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })
 }
 
-tasks.register("generatePluginsJson") {
-    group = "cloudstream"
-    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "makePluginsJson" } })
-}
-
-task<Delete>("clean") {
-    delete(rootProject.layout.buildDirectory)
+// Fix for duplicate clean task from root and subprojects
+tasks.named("clean") {
+    doFirst {
+        subprojects.forEach { 
+            it.tasks.matching { t -> t.name == "clean" && t != this }.all { enabled = false }
+        }
+    }
 }
