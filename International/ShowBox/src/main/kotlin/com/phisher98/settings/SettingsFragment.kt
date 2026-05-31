@@ -21,10 +21,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.cloudstream3.CommonActivity.showToast
 import com.admknight.showbox.BuildConfig
-import com.admknight.showbox.SuperStreamPlugin
+import com.admknight.showbox.ShowBoxPlugin
 
 class SettingsFragment(
-    plugin: SuperStreamPlugin,
+    plugin: ShowBoxPlugin,
     private val sharedPref: SharedPreferences,
 ) : BottomSheetDialogFragment() {
     private val res = plugin.resources ?: throw Exception("Unable to read resources")

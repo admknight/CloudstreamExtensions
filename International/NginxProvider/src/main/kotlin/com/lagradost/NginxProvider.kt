@@ -13,6 +13,7 @@ import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.cloudstream3.utils.newExtractorLink
 
 class NginxProvider : MainAPI() {
     override var name = "Nginx"
@@ -147,7 +148,7 @@ class NginxProvider : MainAPI() {
                     ) {
                         this.year = date
                         this.plot = description
-                        this.rating = ratingAverage
+                        this.score = Score.from10(ratingAverage)
                         this.tags = tagsList
                         this.backgroundPosterUrl = fanart
                         this.duration = durationInMinutes
@@ -234,9 +235,6 @@ class NginxProvider : MainAPI() {
                     }
                 }
                 return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodeList) {
-                    this.name = title
-                    this.url = url
-                    this.episodes = episodeList
                     this.plot = description
                     this.tags = tagsList
                     addPoster(posterUrl, authHeader)
@@ -283,15 +281,16 @@ class NginxProvider : MainAPI() {
         }
 
         callback.invoke (
-            ExtractorLink(
+            newExtractorLink(
                 name,
                 name,
                 data,
-                "",  // referer not needed
-                Qualities.Unknown.value,
-                false,
-                authHeader,
-            )
+            ) {
+                this.referer = ""
+                this.quality = Qualities.Unknown.value
+                // headers = authHeader // need to check if newExtractorLink supports headers in block
+                this.headers = authHeader
+            }
         )
         return true
     }
@@ -419,8 +418,7 @@ class NginxProvider : MainAPI() {
                 } else null
             } else null  // the path is ../ which is parent directory
         }
-        // if (returnList.isEmpty()) return null // maybe doing nothing idk
-        return HomePageResponse(returnList)
+        return newHomePageResponse(returnList)
     }
 }
 

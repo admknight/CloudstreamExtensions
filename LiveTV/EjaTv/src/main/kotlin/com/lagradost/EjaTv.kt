@@ -4,7 +4,9 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.nodes.Element
 
 class EjaTv : MainAPI() {
@@ -26,15 +28,15 @@ class EjaTv : MainAPI() {
         val img = this.selectFirst("div.thumb img")
         val lang = this.selectFirst(".card-title > a")?.attr("href")?.removePrefix("?country=")
             ?.replace("int", "eu") //international -> European Union 🇪🇺
-        return LiveSearchResponse(
+        return newLiveSearchResponse(
             // Kinda hack way to get the title
             img?.attr("alt")?.replaceFirst("Watch ", "") ?: return null,
             href,
-            this@EjaTv.name,
             TvType.Live,
-            fixUrl(img.attr("src")),
-            lang = lang
-        )
+        ) {
+            this.posterUrl = fixUrl(img.attr("src"))
+            this.lang = lang
+        }
     }
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
@@ -45,7 +47,7 @@ class EjaTv : MainAPI() {
             "Sports" to mapOf("language" to language, "category" to "Sports"),
             "Entertainment" to mapOf("language" to language, "category" to "Entertainment")
         )
-        return HomePageResponse(dataMap.map { (title, data) ->
+        return newHomePageResponse(dataMap.map { (title, data) ->
             val document = app.post(mainUrl, data = data).document
             val shows = document.select("div.card-body").mapNotNull {
                 it.toSearchResponse()
@@ -82,14 +84,14 @@ class EjaTv : MainAPI() {
             "$innerText: $outerText"
         }
 
-        return LiveStreamLoadResponse(
+        return newLiveStreamLoadResponse(
             title,
             url,
-            this.name,
             LoadData(link, title).toJson(),
-            poster,
-            plot = summary
-        )
+        ) {
+            this.posterUrl = poster
+            this.plot = summary
+        }
     }
 
     data class LoadData(
@@ -106,14 +108,14 @@ class EjaTv : MainAPI() {
         val loadData = parseJson<LoadData>(data)
 
         callback.invoke(
-            ExtractorLink(
+            newExtractorLink(
                 this.name,
                 loadData.title,
                 loadData.url,
-                "",
-                Qualities.Unknown.value,
-                isM3u8 = true
-            )
+            ) {
+                this.quality = Qualities.Unknown.value
+                this.type = ExtractorLinkType.M3U8
+            }
         )
         return true
     }

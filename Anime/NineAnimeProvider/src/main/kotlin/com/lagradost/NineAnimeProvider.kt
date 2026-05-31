@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.mvvm.logError
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 
 private const val nineAnimeKey = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -321,14 +323,15 @@ class NineAnimeProvider : MainAPI() {
                 val url = decodeVrf(encodedStreamUrl, cipherKey)
                 if (!loadExtractor(url, mainUrl, subtitleCallback, callback)) {
                     callback(
-                        ExtractorLink(
+                        newExtractorLink(
                             this.name,
                             name,
                             url,
-                            mainUrl,
-                            Qualities.Unknown.value,
-                            url.contains(".m3u8")
-                        )
+                        ) {
+                            this.referer = mainUrl
+                            this.quality = Qualities.Unknown.value
+                            this.type = if (url.contains(".m3u8")) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+                        }
                     )
                 }
             } catch (e: Exception) {

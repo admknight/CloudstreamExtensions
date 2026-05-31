@@ -194,7 +194,7 @@ class TheFlixToProvider : MainAPI() {
         }
 
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     data class SearchJson(
@@ -490,7 +490,7 @@ class TheFlixToProvider : MainAPI() {
                     this.tags = tags
                     this.recommendations = recommendationsitem
                     this.comingSoon = comingsoon
-                    this.rating = rating
+                    this.score = Score.from10(metadata.voteAverage)
                 }
             }
             TvType.Movie -> {
@@ -503,7 +503,7 @@ class TheFlixToProvider : MainAPI() {
                     this.tags = tags
                     this.recommendations = recommendationsitem
                     this.comingSoon = comingsoon
-                    this.rating = rating
+                    this.score = Score.from10(metadata.voteAverage)
                 }
             }
             else -> null

@@ -7,6 +7,7 @@ import com.lagradost.cloudstream3.APIHolder.unixTimeMS
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 import java.util.*
 
@@ -99,7 +100,7 @@ class DubbedAnimeProvider : MainAPI() {
             // HomePageList("All", parseDocument(allUrl))
         )
 
-        return HomePageResponse(listItems)
+        return newHomePageResponse(listItems)
     }
 
 
@@ -190,13 +191,14 @@ class DubbedAnimeProvider : MainAPI() {
                 if (find != null) {
                     val quality = find.groupValues[2]
                     callback.invoke(
-                        ExtractorLink(
+                        newExtractorLink(
                             this.name,
                             this.name + " " + quality + if (quality.endsWith('p')) "" else 'p',
                             fixUrl(find.groupValues[1]),
-                            this.mainUrl,
-                            getQualityFromName(quality)
-                        )
+                        ) {
+                            this.referer = this@DubbedAnimeProvider.mainUrl
+                            this.quality = getQualityFromName(quality)
+                        }
                     )
                 }
             } catch (e: Exception) {

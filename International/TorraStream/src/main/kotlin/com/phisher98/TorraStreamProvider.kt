@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
-import com.admknight.torrastream.settings.SettingsFragment
 
 @CloudstreamPlugin
 class TorraStreamProvider: Plugin() {

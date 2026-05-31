@@ -7,6 +7,7 @@ import com.lagradost.cloudstream3.LoadResponse.Companion.addImdbUrl
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
@@ -47,26 +48,17 @@ class MeloMovieProvider : MainAPI() {
             val currentPoster = "$mainUrl/assets/images/poster/${i.imdbId}.jpg"
             if (i.type == 2) { // TV-SERIES
                 returnValue.add(
-                    newTvSeriesSearchResponse(
-                        i.title,
-                        currentUrl,
-                        this.name,
-                        TvType.TvSeries,
-                        currentPoster,
-                        i.year,
-                        null
-                    )
+                    newTvSeriesSearchResponse(i.title, currentUrl, TvType.TvSeries) {
+                        this.posterUrl = currentPoster
+                        this.year = i.year
+                    }
                 )
             } else if (i.type == 1) { // MOVIE
                 returnValue.add(
-                    newMovieSearchResponse(
-                        i.title,
-                        currentUrl,
-                        this.name,
-                        TvType.Movie,
-                        currentUrl,
-                        i.year
-                    )
+                    newMovieSearchResponse(i.title, currentUrl, TvType.Movie) {
+                        this.posterUrl = currentPoster
+                        this.year = i.year
+                    }
                 )
             }
         }
@@ -110,14 +102,13 @@ class MeloMovieProvider : MainAPI() {
         val links = parseJson<List<MeloMovieLink>>(data)
         for (link in links) {
             callback.invoke(
-                ExtractorLink(
+                newExtractorLink(
                     this.name,
                     link.name,
                     link.link,
-                    "",
-                    getQualityFromName(link.name),
-                    false
-                )
+                ) {
+                    this.quality = getQualityFromName(link.name)
+                }
             )
         }
         return true

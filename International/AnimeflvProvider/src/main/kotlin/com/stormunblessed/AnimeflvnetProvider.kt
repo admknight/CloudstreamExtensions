@@ -78,7 +78,7 @@ class AnimeflvnetProvider : MainAPI() {
             items.add(HomePageList(name, home))
         }
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     data class SearchObject(
@@ -145,12 +145,9 @@ class AnimeflvnetProvider : MainAPI() {
                     //val epthumb = "https://cdn.animeflv.net/screenshots/$animeid/$epNum/th_3.jpg"
                     val link = url.replace("/anime/", "/ver/") + "-$epNum"
                     episodes.add(
-                        Episode(
-                            link,
-                            null,
-                            //posterUrl = epthumb,
-                            episode = epNum.toIntOrNull()
-                        )
+                        newEpisode(link) {
+                            this.episode = epNum.toIntOrNull()
+                        }
                     )
                 }
             }

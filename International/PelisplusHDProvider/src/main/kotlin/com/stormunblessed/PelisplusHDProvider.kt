@@ -36,7 +36,7 @@ class PelisplusHDProvider:MainAPI() {
                 }
             ))
         }
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
     private fun Element.toSearchResult(): SearchResponse {
         val title = this.select(".listing-content p").text()
@@ -44,11 +44,11 @@ class PelisplusHDProvider:MainAPI() {
         val posterUrl = fixUrl(this.select(".Posters-img").attr("src"))
         val isMovie = href.contains("/pelicula/")
         return if (isMovie) {
-            newMovieSearchResponse(title, href, name, TvType.Movie) {
+            newMovieSearchResponse(title, href, TvType.Movie) {
                 this.posterUrl = posterUrl
             }
         } else {
-            newTvSeriesSearchResponse(title, href, name, TvType.Movie) {
+            newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                 this.posterUrl = posterUrl
             }
         }
@@ -65,11 +65,11 @@ class PelisplusHDProvider:MainAPI() {
             val isMovie = href.contains("/pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(title, href, this.name, TvType.Movie) {
+                newMovieSearchResponse(title, href, TvType.Movie) {
                     this.posterUrl = image
                 }
             } else {
-                newTvSeriesSearchResponse(title, href, this.name, TvType.TvSeries) {
+                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                     this.posterUrl = image
                 }
             }

@@ -5,6 +5,7 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 
 class VMoveeProvider : MainAPI() {
@@ -99,14 +100,14 @@ class VMoveeProvider : MainAPI() {
             val apiData = parseJson<ReeoovAPI>(apiResponse)
             for (d in apiData.data) {
                 callback.invoke(
-                    ExtractorLink(
+                    newExtractorLink(
                         this.name,
                         this.name + " " + d.label,
                         d.file,
-                        "https://reeoov.tube/",
-                        getQualityFromName(d.label),
-                        false
-                    )
+                    ) {
+                        this.referer = "https://reeoov.tube/"
+                        this.quality = getQualityFromName(d.label)
+                    }
                 )
             }
         }

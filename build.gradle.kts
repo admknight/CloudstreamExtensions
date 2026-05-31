@@ -74,6 +74,7 @@ cloudstream {
             buildConfigField("String", "YFXDEC", "\"\"")
             buildConfigField("String", "TMDB_KEY", "\"1865f43a0549ca50d341dd9ab8b29f49\"")
             buildConfigField("String", "CC_COOKIE", "\"\"")
+            buildConfigField("String", "FanCode_API", "\"\"")
         }
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_1_8

@@ -8,6 +8,8 @@ import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import java.util.*
 
 class AnimeflvIOProvider : MainAPI() {
@@ -171,14 +173,15 @@ class AnimeflvIOProvider : MainAPI() {
                         ).forEach(callback)
                     } else {
                         callback(
-                            ExtractorLink(
+                            newExtractorLink(
                                 name,
                                 "$name ${source.label}",
                                 source.file,
-                                "https://animeid.to",
-                                getQualityFromName(source.label),
-                                isM3u8 = source.file.contains("m3u8")
-                            )
+                            ) {
+                                this.referer = "https://animeid.to"
+                                this.quality = getQualityFromName(source.label)
+                                this.type = if (source.file.contains("m3u8")) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+                            }
                         )
                     }
                 }

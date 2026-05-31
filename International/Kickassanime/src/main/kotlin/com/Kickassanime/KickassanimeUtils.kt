@@ -1,7 +1,6 @@
 package com.admknight.kickassanime
 
 //mark
-import com.admknight.kickassanime.mainUrl
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import java.net.URI
 import java.net.URLDecoder
@@ -26,17 +25,17 @@ fun String.getTrackerTitle(): String {
 
 fun getImageUrl(link: String?): String? {
     if (link == null) return null
-    return if (link.startsWith(mainUrl)) link else "$mainUrl/image/poster/$link.webp"
+    return if (link.startsWith(MAIN_URL)) link else "$MAIN_URL/image/poster/$link.webp"
 }
 
 fun getThumbnailUrl(link: String?): String? {
     if (link == null) return null
-    return if (link.startsWith(mainUrl)) link else "$mainUrl/image/thumbnail/$link.webp"
+    return if (link.startsWith(MAIN_URL)) link else "$MAIN_URL/image/thumbnail/$link.webp"
 }
 
 fun getBannerUrl(link: String?): String? {
     if (link == null) return null
-    return if (link.startsWith(mainUrl)) link else "$mainUrl/image/banner/$link.webp"
+    return if (link.startsWith(MAIN_URL)) link else "$MAIN_URL/image/banner/$link.webp"
 }
 
 fun getBaseUrl(url: String): String {

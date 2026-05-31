@@ -25,6 +25,7 @@ import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.addDate
 import com.lagradost.cloudstream3.addEpisodes
+import com.lagradost.cloudstream3.amap
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.mainPageOf
 import com.lagradost.cloudstream3.metaproviders.TmdbProvider
@@ -142,6 +143,26 @@ open class SuperStream(sharedPref: SharedPreferences? = null) : TmdbProvider() {
             }
         }
 
+        fun getDate(): TmdbDate {
+            val formatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            val calender = Calendar.getInstance()
+            val today = formatter.format(calender.time)
+            calender.add(Calendar.WEEK_OF_YEAR, 1)
+            val nextWeek = formatter.format(calender.time)
+            return TmdbDate(today, nextWeek)
+        }
+
+        fun isUpcoming(dateString: String?): Boolean {
+            return try {
+                val format = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                val dateTime = dateString?.let { format.parse(it)?.time } ?: return false
+                unixTimeMS < dateTime
+            } catch (t: Throwable) {
+                logError(t)
+                false
+            }
+        }
+
     }
 
     override val mainPage = mainPageOf(
@@ -199,9 +220,9 @@ open class SuperStream(sharedPref: SharedPreferences? = null) : TmdbProvider() {
 
             val document = Jsoup.parse(htmlResponse?.html.orEmpty())
             val parsedHtmlContent = document.select("div.list_scroll > div > div,tbody tr")
-            val filesFromHtml = parsedHtmlContent.mapNotNull { div ->
+            val filesFromHtml = parsedHtmlContent.amap { div ->
                 div.toSearchResponse()
-             }
+            }.filterNotNull()
 
             return newHomePageResponse(
                 listOf(
@@ -824,30 +845,10 @@ val malId: Int? = null,
 
 
 
-    private fun getDate(): TmdbDate {
-        val formatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-        val calender = Calendar.getInstance()
-        val today = formatter.format(calender.time)
-        calender.add(Calendar.WEEK_OF_YEAR, 1)
-        val nextWeek = formatter.format(calender.time)
-        return TmdbDate(today, nextWeek)
-    }
-
     data class TmdbDate(
         val today: String,
         val nextWeek: String,
     )
-
-    private fun isUpcoming(dateString: String?): Boolean {
-        return try {
-            val format = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-            val dateTime = dateString?.let { format.parse(it)?.time } ?: return false
-            unixTimeMS < dateTime
-        } catch (t: Throwable) {
-            logError(t)
-            false
-        }
-    }
 
 }
 

@@ -165,27 +165,28 @@ private suspend fun Sources.toExtractorLink(
             } catch(e: Exception) { null }
             
             if (!res.isNullOrEmpty()) res else listOf(
-                ExtractorLink(
+                newExtractorLink(
                     caller.name,
                     "${caller.name} $name",
-                    this.file,
-                    caller.mainUrl,
-                    getQualityFromName(this.label),
-                    isM3u8,
-                    extractorData = extractorData
-                )
+                    this.file ?: "",
+                ) {
+                    this.referer = caller.mainUrl
+                    this.quality = getQualityFromName(this@toExtractorLink.label)
+                    this.type = if (isM3u8) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+                    this.extractorData = extractorData
+                }
             )
         } else {
             listOf(
-                ExtractorLink(
+                newExtractorLink(
                     caller.name,
                     caller.name,
                     file,
-                    caller.mainUrl,
-                    getQualityFromName(this.label),
-                    false,
-                    extractorData = extractorData
-                )
+                ) {
+                    this.referer = caller.mainUrl
+                    this.quality = getQualityFromName(this@toExtractorLink.label)
+                    this.extractorData = extractorData
+                }
             )
         }
     }

@@ -5,9 +5,7 @@ import com.admknight.nineanime.cipher
 import com.admknight.nineanime.encrypt
 import com.lagradost.cloudstream3.ErrorLoadingException
 import com.lagradost.cloudstream3.app
-import com.lagradost.cloudstream3.utils.ExtractorApi
-import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.*
 
 class Vidstreamz : WcoStream() {
     override var mainUrl = "https://vidstreamz.online"
@@ -126,7 +124,15 @@ open class WcoStream : ExtractorApi() {
 
         if (!response.text.startsWith("{")) throw ErrorLoadingException("Seems like 9Anime kiddies changed stuff again, Go touch some grass for bout an hour Or use a different Server")
         return response.parsed<Response>().data.media.sources.map {
-            ExtractorLink(name, it.file,it.file,host,Qualities.Unknown.value,it.file.contains(".m3u8"))
+            newExtractorLink(
+                name,
+                name,
+                it.file,
+            ) {
+                this.referer = host
+                this.quality = Qualities.Unknown.value
+                this.type = if (it.file.contains(".m3u8")) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+            }
         }
 
     }

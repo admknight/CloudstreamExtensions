@@ -102,7 +102,9 @@ class LatAnimeProvider : MainAPI() {
         val episodes = doc.select("div.row div.col-lg-9.col-md-8 div.row div a").map {
             val name = it.selectFirst("div.cap-layout")!!.text()
             val link = it!!.attr("href")
-            Episode(link, name)
+            newEpisode(link) {
+                this.name = name
+            }
         }
         return newAnimeLoadResponse(title, url, getType(title)) {
             posterUrl = poster

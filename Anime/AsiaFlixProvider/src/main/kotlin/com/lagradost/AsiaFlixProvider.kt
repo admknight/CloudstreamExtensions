@@ -8,6 +8,7 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.DataStore.toKotlinObject
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import java.net.URI
 
 class AsiaFlixProvider : MainAPI() {
@@ -88,42 +89,30 @@ class AsiaFlixProvider : MainAPI() {
     )
 
     private fun Data.toSearchResponse(): TvSeriesSearchResponse {
-        return newTvSeriesSearchResponse(
-            name,
-            _id,
-            this@AsiaFlixProvider.name,
-            TvType.AsianDrama,
-            image,
-            releaseYear,
-            episodes?.size,
-        )
+        return newTvSeriesSearchResponse(name, _id, TvType.AsianDrama) {
+            this.posterUrl = image
+            this.year = releaseYear
+        }
     }
 
     private fun Episodes.toEpisode(): Episode? {
         if (videoUrl != null && videoUrl.contains("watch/null") || number == null) return null
         return videoUrl?.let {
-            Episode(
-                it,
-                null,
-                number,
-            )
+            newEpisode(it) {
+                this.episode = number
+            }
         }
     }
 
-    private fun DramaPage.toLoadResponse(): TvSeriesLoadResponse {
-        return TvSeriesLoadResponse(
-            name,
-            "$mainUrl$dramaUrl/$_id".replace("drama-detail", "show-details"),
-            this@AsiaFlixProvider.name,
-            TvType.AsianDrama,
-            episodes.mapNotNull { it.toEpisode() }.sortedBy { it.episode },
-            image,
-            releaseYear,
-            synopsis,
-            getStatus(tvStatus ?: ""),
-            null,
-            genre?.split(",")?.map { it.trim() }
-        )
+    private suspend fun DramaPage.toLoadResponse(): TvSeriesLoadResponse {
+        val dramaUrl = "$mainUrl$dramaUrl/$_id".replace("drama-detail", "show-details")
+        return newTvSeriesLoadResponse(name, dramaUrl, TvType.AsianDrama, episodes.mapNotNull { it.toEpisode() }.sortedBy { it.episode }) {
+            this.posterUrl = image
+            this.year = releaseYear
+            this.plot = synopsis
+            this.showStatus = getStatus(tvStatus ?: "")
+            this.tags = genre?.split(",")?.map { it.trim() }
+        }
     }
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
@@ -145,8 +134,8 @@ class AsiaFlixProvider : MainAPI() {
             }?.let { searchResponse ->
                 HomePageList(it.sectionName, searchResponse)
             }
-        }
-        return HomePageResponse(listItems ?: listOf())
+        } ?: listOf()
+        return newHomePageResponse(listItems)
     }
 
     data class Link(
@@ -165,17 +154,15 @@ class AsiaFlixProvider : MainAPI() {
             "$apiUrl/utility/get-stream-links?url=$data",
             headers = headers
         ).text.toKotlinObject<Link>().url?.let {
-//            val fixedUrl = "https://api.asiaflix.app/api/v2/utility/cors-proxy/playlist/${URLEncoder.encode(it, StandardCharsets.UTF_8.toString())}"
             callback.invoke(
-                ExtractorLink(
+                newExtractorLink(
                     name,
                     name,
                     it,
-                    "https://asianload1.com/",
-                    /** <------ This provider should be added instead */
-                    getQualityFromName(it),
-                    URI(it).path.endsWith(".m3u8")
-                )
+                ) {
+                    this.referer = "https://asianload1.com/"
+                    this.quality = getQualityFromName(it)
+                }
             )
         }
         return true

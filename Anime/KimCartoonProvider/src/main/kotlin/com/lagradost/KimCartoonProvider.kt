@@ -23,20 +23,19 @@ class KimCartoonProvider : MainAPI() {
             HomePageList(
                 "Latest Update",
                 doc.select("div.bigBarContainer div.items > div > a").map {
-                    newAnimeSearchResponse(
-                        it.select(".item-title").let { div ->
-                            //Because it doesn't contain Title separately
-                            div.text().replace(div.select("span").text(), "")
-                        },
-                        mainUrl + it.attr("href"),
-                        mainUrl,
-                        TvType.Cartoon,
-                        fixUrl(it.select("img").let { img ->
-                            img.attr("src").let { src ->
-                                src.ifEmpty { img.attr("srctemp") }
-                            }
-                        })
-                    )
+                    val name = it.select(".item-title").let { div ->
+                        //Because it doesn't contain Title separately
+                        div.text().replace(div.select("span").text(), "")
+                    }
+                    val url = mainUrl + it.attr("href")
+                    val poster = fixUrl(it.select("img").let { img ->
+                        img.attr("src").let { src ->
+                            src.ifEmpty { img.attr("srctemp") }
+                        }
+                    })
+                    newAnimeSearchResponse(name, url, TvType.Cartoon) {
+                        this.posterUrl = poster
+                    }
                 }
             )
         )
@@ -53,14 +52,14 @@ class KimCartoonProvider : MainAPI() {
                     newAnimeSearchResponse(
                         it.select("span.title").text(),
                         mainUrl + it.select("a")[0].attr("href"),
-                        mainUrl,
-                        TvType.Cartoon,
-                        fixUrl(it.select("a > img").attr("src"))
-                    )
+                        TvType.Cartoon
+                    ) {
+                        this.posterUrl = fixUrl(it.select("a > img").attr("src"))
+                    }
                 }
             )
         })
-        return HomePageResponse(response)
+        return newHomePageResponse(response)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -73,10 +72,10 @@ class KimCartoonProvider : MainAPI() {
                 newAnimeSearchResponse(
                     it.select("span").text(),
                     mainUrl + it.attr("href"),
-                    mainUrl,
-                    TvType.Cartoon,
-                    fixUrl(it.select("img").attr("src"))
-                )
+                    TvType.Cartoon
+                ) {
+                    this.posterUrl = fixUrl(it.select("img").attr("src"))
+                }
             }
     }
 
@@ -88,7 +87,6 @@ class KimCartoonProvider : MainAPI() {
             newAnimeSearchResponse(
                 it.text(),
                 it.attr("href"),
-                mainUrl,
                 TvType.Cartoon,
             )
         }
@@ -108,10 +106,9 @@ class KimCartoonProvider : MainAPI() {
         val info = doc.select("div.barContent")
         val name = info.select("a.bigChar").text()
         val eps = doc.select("table.listing > tbody > tr a").reversed().map {
-            Episode(
-                fixUrl(it.attr("href")),
-                it.text().replace(name, "").trim()
-            )
+            newEpisode(fixUrl(it.attr("href"))) {
+                this.name = it.text().replace(name, "").trim()
+            }
         }
         val infoText = info.text()
         fun getData(after: String, before: String): String? {

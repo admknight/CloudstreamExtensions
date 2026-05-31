@@ -5,6 +5,8 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addAniListId
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import java.net.URLDecoder
 
 class AniflixProvider : MainAPI() {
@@ -138,28 +140,30 @@ class AniflixProvider : MainAPI() {
             val dubReferer = res.dub?.Referer ?: ""
             res.dub?.sources?.forEach { source ->
                 callback(
-                    ExtractorLink(
+                    newExtractorLink(
                         name,
                         "${source.label ?: name} (DUB)",
                         source.file ?: return@forEach,
-                        dubReferer,
-                        getQualityFromName(source.label),
-                        source.type == "hls"
-                    )
+                    ) {
+                        this.referer = dubReferer
+                        this.quality = getQualityFromName(source.label)
+                        this.type = if (source.type == "hls") ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+                    }
                 )
             }
 
             val subReferer = res.dub?.Referer ?: ""
             res.sub?.sources?.forEach { source ->
                 callback(
-                    ExtractorLink(
+                    newExtractorLink(
                         name,
                         "${source.label ?: name} (SUB)",
                         source.file ?: return@forEach,
-                        subReferer,
-                        getQualityFromName(source.label),
-                        source.type == "hls"
-                    )
+                    ) {
+                        this.referer = subReferer
+                        this.quality = getQualityFromName(source.label)
+                        this.type = if (source.type == "hls") ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+                    }
                 )
             }
 
