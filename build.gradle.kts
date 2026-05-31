@@ -38,7 +38,9 @@ subprojects {
     android {
         namespace = "com.admknight.${project.name.lowercase().replace("[^a-zA-Z0-9]".toRegex(), "")}"
         val localPropertiesFile = rootProject.file("local.properties")
-        if (!localPropertiesFile.exists()) { localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk") }
+        if (!localPropertiesFile.exists()) {
+            localPropertiesFile.writeText("sdk.dir=/home/runner/android-sdk")
+        }
 
         defaultConfig {
             minSdk = 21
@@ -70,13 +72,13 @@ subprojects {
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         
-        // Critical missing dependencies for many plugins
+        // Critical dependencies for plugins like AllAnime and AllWish
         implementation("androidx.annotation:annotation:1.9.1")
         implementation("org.mozilla:rhino:1.8.0")
     }
 }
 
-// Global Aggregator Tasks (Lazy approach)
+// Simple aggregator tasks - zero logic, zero chance of configuration crash
 tasks.register("buildAll") {
     group = "cloudstream"
     dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })

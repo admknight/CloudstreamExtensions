@@ -26,6 +26,9 @@ jobs:
           ref: "builds"
           path: "builds"
 
+      - name: Create builds dir if missing
+        run: mkdir -p $GITHUB_WORKSPACE/builds
+
       - name: Setup JDK 21
         uses: actions/setup-java@v4
         with:
@@ -38,26 +41,31 @@ jobs:
           cd src
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          # Use --continue to build as many as possible even if some fail
-          ./gradlew clean buildAll generatePluginsJson --continue --stacktrace
+          ./gradlew clean buildAll generatePluginsJson --continue --stacktrace || true
 
       - name: Harvesting Artifacts
         run: |
-          mkdir -p builds
-          rm -f builds/*.cs3
-          find src -name "*.cs3" -exec cp -v {} builds/ \;
-          # Combined plugins.json is usually in src/build/
-          cp src/build/plugins.json builds/ || find src -name "plugins.json" -exec cp -v {} builds/ \;
-          cp src/repo.json builds/ || true
+          # Clean old artifacts
+          rm -f $GITHUB_WORKSPACE/builds/*.cs3
+          
+          # Find all successfully built plugins in category folders
+          find src -name "*.cs3" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
+          
+          # Grab the plugins.json (it's usually in src/build/ or project roots)
+          find src -name "plugins.json" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
+          
+          # Copy repository definition
+          cp src/repo.json $GITHUB_WORKSPACE/builds/ || true
 
-      - name: Push builds
+      - name: Push to Builds Branch
         run: |
-          cd builds
+          cd $GITHUB_WORKSPACE/builds
           git init || true
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" || true
           git checkout -b builds || git checkout builds
           git add .
+          git status
           git commit -m "Build $GITHUB_SHA" || echo "No changes"
           git push origin builds

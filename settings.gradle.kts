@@ -3,17 +3,17 @@ plugins {
 }
 rootProject.name = "CloudstreamExtensions"
 
-val searchDirs = listOf(".", "Anime", "Bollywood", "International", "LiveTV", "Tools")
+// Only scan category folders to avoid including the root itself as a subproject
+val categoryDirs = listOf("Anime", "Bollywood", "International", "LiveTV", "Tools")
 
-searchDirs.forEach { parent ->
-    val parentDir = File(rootDir, parent)
-    if (parentDir.exists() && parentDir.isDirectory) {
-        parentDir.listFiles()?.filter { it.isDirectory }?.forEach { dir ->
-            if (File(dir, "build.gradle.kts").exists()) {
-                val projectName = dir.name
-                println("Including project: :$projectName from ${dir.absolutePath}")
+categoryDirs.forEach { category ->
+    val categoryDir = File(rootDir, category)
+    if (categoryDir.exists() && categoryDir.isDirectory) {
+        categoryDir.listFiles()?.filter { it.isDirectory }?.forEach { sub ->
+            if (File(sub, "build.gradle.kts").exists()) {
+                val projectName = sub.name
                 include(":$projectName")
-                project(":$projectName").projectDir = dir
+                project(":$projectName").projectDir = sub
             }
         }
     }
