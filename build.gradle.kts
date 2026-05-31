@@ -26,10 +26,6 @@ allprojects {
 fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) = extensions.getByName<CloudstreamExtension>("cloudstream").configuration()
 fun Project.android(configuration: BaseExtension.() -> Unit) = extensions.getByName<BaseExtension>("android").configuration()
 
-// Aggregator tasks defined at root
-val buildAll = tasks.register("buildAll") { group = "cloudstream" }
-val generatePluginsJson = tasks.register("generatePluginsJson") { group = "cloudstream" }
-
 subprojects {
     apply(plugin = "com.android.library")
     apply(plugin = "kotlin-android")
@@ -74,14 +70,17 @@ subprojects {
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     }
+}
 
-    // Link subproject tasks to root aggregator tasks correctly
-    afterEvaluate {
-        if (plugins.hasPlugin("com.lagradost.cloudstream3.gradle")) {
-            buildAll.configure { dependsOn(tasks.named("make")) }
-            generatePluginsJson.configure { dependsOn(tasks.named("makePluginsJson")) }
-        }
-    }
+// Robust aggregator tasks using lazy task dependencies
+tasks.register("buildAll") {
+    group = "cloudstream"
+    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })
+}
+
+tasks.register("generatePluginsJson") {
+    group = "cloudstream"
+    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "makePluginsJson" } })
 }
 
 task<Delete>("clean") {

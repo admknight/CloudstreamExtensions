@@ -3,6 +3,7 @@
 A fully automated, categorized collection of **150+ Cloudstream Extensions**.
 
 ![Build Status](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg)
+![Sync Status](https://github.com/admknight/CloudstreamExtensions/actions/workflows/sync.yml/badge.svg)
 
 ## 🌐 Quick Install
 
@@ -15,17 +16,24 @@ A fully automated, categorized collection of **150+ Cloudstream Extensions**.
 
 | Sr.# | Category | Plugin Name | Author | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | 🎬 Bollywood | Netmirror | Adam Knight | ✅ Active |
-| 2 | 🎬 Bollywood | Bollyflix | Adam Knight | ✅ Active |
-| 3 | 🎬 Bollywood | VegaMovies | Adam Knight | ✅ Active |
-| 4 | 🎬 Bollywood | Mp4Moviez | Adam Knight | ✅ Active |
-| 5 | 🎌 Anime | Anichi | Adam Knight | ✅ Active |
-| 6 | 🎌 Anime | AnimePahe | Adam Knight | ✅ Active |
-| 7 | 🎌 Anime | Gogoanime | Adam Knight | ✅ Active |
-| 8 | 🌍 International | ShowBox | Adam Knight | ✅ Active |
-| 9 | 🌍 International | Sflix | Adam Knight | ✅ Active |
-| 10 | 🌍 International | SuperStream | Adam Knight | ✅ Active |
-| ... | ... | ... and 140+ more | ... | ✅ Active |
+| 1 | 🎬 Bollywood | **Netmirror** | Adam Knight | ✅ Active |
+| 2 | 🎬 Bollywood | **Bollyflix** | Adam Knight | ✅ Active |
+| 3 | 🎬 Bollywood | **VegaMovies** | Adam Knight | ✅ Active |
+| 4 | 🎬 Bollywood | **Mp4Moviez** | Adam Knight | ✅ Active |
+| 5 | 🎬 Bollywood | **Cinevood** | Adam Knight | ✅ Active |
+| 6 | 🎌 Anime | **Anichi** | Adam Knight | ✅ Active |
+| 7 | 🎌 Anime | **AnimePahe** | Adam Knight | ✅ Active |
+| 8 | 🎌 Anime | **Gogoanime** | Adam Knight | ✅ Active |
+| 9 | 🎌 Anime | **Crunchyroll** | Adam Knight | ✅ Active |
+| 10 | 🌍 International | **ShowBox** | Adam Knight | ✅ Active |
+| 11 | 🌍 International | **Sflix** | Adam Knight | ✅ Active |
+| 12 | 🌍 International | **SuperStream** | Adam Knight | ✅ Active |
+| 13 | 🌍 International | **Goojara** | Adam Knight | ✅ Active |
+| 14 | 📺 Live TV | **IPTVPlayer** | Adam Knight | ✅ Active |
+| 15 | 📺 Live TV | **QuickIPTV** | Adam Knight | ✅ Active |
+| 16 | 🛠 Tools | **Ultima** | Adam Knight | ✅ Active |
+| 17 | 🛠 Tools | **Jellyfin** | Adam Knight | ✅ Active |
+| ... | ... | **+130 more plugins** | ... | ✅ Active |
 
 ---
 
@@ -43,4 +51,4 @@ A fully automated, categorized collection of **150+ Cloudstream Extensions**.
 This repository is for educational purposes. It does not host any content. All extensions are specialized web scrapers that fetch data from publicly available third-party websites. Use at your own risk.
 
 ---
-*Maintained by [Adam Knight](https://github.com/admknight)*
+*Maintained with ❤️ by [Adam Knight](https://github.com/admknight)*
