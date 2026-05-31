@@ -3,28 +3,28 @@
 This branch contains the compiled `.cs3` files and the live index.
 
 ### 📊 Status
-* **Total Plugins Live:** `119` / 155
-* **Last Update:** `2026-05-31 20:43:45` UTC
+* **Total Plugins Live:** `147` / 155
+* **Last Update:** `2026-05-31 23:52:30` UTC
 * **Repo URL:** `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json` 
 
 ---
 
 ### 📂 Available Plugins by Category
 
-#### 📁 Anime (26)
-`AllWish`, `Anichi`, `AnimeCloud`, `AnimeDekhoProvider`, `AnimePahe`, `AnimePaheProvider`, `Animeav1`, `Animedubhindi`, `Animekhor`, `AnimekisaProvider`, `Animexin`, `Crunchyroll`, `Donghuastream`, `DoraBash`, `GogoanimeProvider`, `KawaiifuProvider`, `LACartoonsProvider`, `Latanime`, `OnePace`, `TokuZilla`, `ToonHub`, `ToonTales`, `Toonstream`, `Topcartoons`, `WatchCartoonOnlineProvider`, `WcofunProvider`
+#### 📁 Anime (32)
+`AllWish`, `Anichi`, `AniflixProvider`, `AnimeCloud`, `AnimeDekhoProvider`, `AnimePahe`, `AnimePaheProvider`, `Animeav1`, `Animedubhindi`, `Animekhor`, `AnimekisaProvider`, `Animexin`, `AsiaFlixProvider`, `Crunchyroll`, `Donghuastream`, `DoraBash`, `DubbedAnimeProvider`, `GogoanimeProvider`, `KawaiifuProvider`, `KimCartoonProvider`, `LACartoonsProvider`, `LatAnimeProvider`, `Latanime`, `NineAnimeProvider`, `OnePace`, `TokuZilla`, `ToonHub`, `ToonTales`, `Toonstream`, `Topcartoons`, `WatchCartoonOnlineProvider`, `WcofunProvider`
 
 #### 📁 Bollywood (24)
 `AllMovieLandProvider`, `BanglaPlex`, `Bollyflix`, `CineStream`, `Cinefreak`, `Cinevood`, `Desicinemas`, `Fivemovierulz`, `FourKHDHub`, `HDhub4u`, `Hindmoviez`, `MassTamilanProvider`, `MovieBlast`, `Movierulzhd`, `MoviesDrive`, `Moviesmod`, `Mp4Moviez`, `Netmirror`, `OnlineMoviesHinditProvider`, `SkymoviesHD`, `Tamilblasters`, `Tamilian`, `UHDmoviesProvider`, `VegaMovies`
 
-#### 📁 International (61)
-`AllAnimeProvider`, `AllMoviesForYouProvider`, `AnimeFlickProvider`, `AnimeJlProvider`, `Animenosub`, `AnimensionProvider`, `Animesalt`, `AniwatchProvider`, `Aniworld`, `Ask4Movie`, `BflixProvider`, `CablevisionHdProvider`, `CinecalidadProvider`, `Cinemacity`, `Coflix`, `ComamosRamenProvider`, `CuevanaProvider`, `DoramasFlixProvider`, `DoramasYTProvider`, `DudeFilms`, `EntrepeliculasyseriesProvider`, `EstrenosDoramasProvider`, `Fibwatch`, `Goojara`, `HDMProvider`, `IHaveNoTvProvider`, `IdlixProvider`, `KayiFamilyTv`, `KisskhProvider`, `LACartoonsProvider`, `LayarKacaProvider`, `MPlayerProvider`, `Megakino`, `MovieBoxProvider`, `Movies4u`, `MultiMoviesProvider`, `Netcinez`, `OHLI24`, `OlgplyProvider`, `OneTouchTV`, `PelispediaProvider`, `Pelisplus4KProvider`, `PelisplusSOProvider`, `Pelisplushd`, `Pencurimovie`, `Pinoymoviepedia`, `Piratexplay`, `Pmsm`, `SeriesMetroProvider`, `ShowFlixProvider`, `SoaptwoDayProvider`, `SoloLatinoProvider`, `StreamPlay`, `SuperembedProvider`, `TioAnimeProvider`, `Topdocumentaryfilms`, `Topstreamfilm`, `TrailersTwoProvider`, `WatchCartoonOnlineProvider`, `YTS`, `Zinkmovies`
+#### 📁 International (80)
+`AllAnimeProvider`, `AllMoviesForYouProvider`, `AnimeFlickProvider`, `AnimeJlProvider`, `AnimeflvIOProvider`, `AnimeflvProvider`, `Animenosub`, `AnimensionProvider`, `Animesalt`, `AniwatchProvider`, `AniwaveProvider`, `Aniworld`, `Ask4Movie`, `BflixProvider`, `CablevisionHdProvider`, `CinecalidadProvider`, `Cinemacity`, `Coflix`, `ComamosRamenProvider`, `CuevanaProvider`, `DoramasFlixProvider`, `DoramasYTProvider`, `DudeFilms`, `EntrepeliculasyseriesProvider`, `EstrenosDoramasProvider`, `Fibwatch`, `Goojara`, `HDMProvider`, `IHaveNoTvProvider`, `IdlixProvider`, `JKAnimeProvider`, `KayiFamilyTv`, `Kickassanime`, `KisskhProvider`, `LACartoonsProvider`, `LatAnimeProvider`, `LayarKacaProvider`, `MPlayerProvider`, `Megakino`, `MeloMovieProvider`, `MonoschinosProvider`, `MovieBoxProvider`, `Movies4u`, `MultiMoviesProvider`, `Netcinez`, `NginxProvider`, `OHLI24`, `OlgplyProvider`, `OneTouchTV`, `PelispediaProvider`, `Pelisplus4KProvider`, `PelisplusHDProvider`, `PelisplusSOProvider`, `Pelisplushd`, `Pencurimovie`, `Pinoymoviepedia`, `Piratexplay`, `PlayhubProvider`, `Pmsm`, `SeriesMetroProvider`, `SeriesflixProvider`, `SflixProvider`, `ShowBox`, `ShowFlixProvider`, `SoaptwoDayProvider`, `SoloLatinoProvider`, `StreamPlay`, `SuperStream`, `SuperembedProvider`, `TheFlixToProvider`, `TioAnimeProvider`, `Topdocumentaryfilms`, `Topstreamfilm`, `TorraStream`, `TrailersTwoProvider`, `VMoveeProvider`, `VidSrcProvider`, `WatchCartoonOnlineProvider`, `YTS`, `Zinkmovies`
 
-#### 📁 LiveTV (2)
-`IPTVPlayer`, `QuickIPTV`
+#### 📁 LiveTV (4)
+`EjaTv`, `IPTVPlayer`, `PublicSportsIPTV`, `QuickIPTV`
 
-#### 📁 Tools (6)
-`BingedReview`, `GDIndex`, `StremioAddon`, `StremioProvider`, `StremioX`, `Ultima`
+#### 📁 Tools (7)
+`BingedReview`, `GDIndex`, `Jellyfin`, `RingZ`, `StremioAddon`, `StremioProvider`, `StremioX`
 
 
 ---
