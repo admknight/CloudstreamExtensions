@@ -1,5 +1,5 @@
-# Mega-Repo Surgical Sync & Sanitization Script
-# This script organizes, brands, and fixes 151+ plugins for Adam Knight.
+# Mega-Repo Surgical Sync & Sanitization Script v2
+# This script organizes, brands, AND REPAIRS 151+ plugins for Adam Knight.
 
 $Sources = @(
     "https://github.com/Hexated/CloudStream-Extensions.git",
@@ -30,7 +30,6 @@ foreach ($URL in $Sources) {
         $PluginName = $_.Name
         if ($PluginName -match "^(gradle|buildSrc|build|.github|.idea)$") { return }
 
-        # Determine Category
         $Category = "International"
         if ($PluginName -match $AnimeRegex) { $Category = "Anime" }
         elseif ($PluginName -match $HindiRegex) { $Category = "Bollywood" }
@@ -38,52 +37,60 @@ foreach ($URL in $Sources) {
         elseif ($PluginName -match $LiveRegex) { $Category = "LiveTV" }
 
         $Target = Join-Path $Category $PluginName
-        $SrcDir = Join-Path $Target "src"
         if (-not (Test-Path $Target)) { New-Item -ItemType Directory $Target -Force | Out-Null }
 
-        # Copy data
+        # Copy and Organize into 'src'
         Copy-Item -Path (Join-Path $PluginDir.FullName "*") -Destination $Target -Recurse -Force -ErrorAction SilentlyContinue
+        if (Test-Path (Join-Path $Target "main")) {
+            $SrcDir = Join-Path $Target "src"
+            if (-not (Test-Path $SrcDir)) { mkdir $SrcDir | Out-Null }
+            Move-Item (Join-Path $Target "main") (Join-Path $SrcDir "main") -Force -ErrorAction SilentlyContinue
+        }
 
-        # --- SURGERY & BRANDING ---
+        # --- CODE SURGERY & REPAIR ---
+        Get-ChildItem -Path $Target -Filter "*.kt" -Recurse | ForEach-Object {
+            $Code = Get-Content $_.FullName -Raw
+
+            # 1. Fix .apmap failures (Replace with .map which is safer in this repo context)
+            $Code = $Code -replace '\.apmap', '.map'
+
+            # 2. Fix Unresolved 'mozilla' by ensuring correct rhino package if needed
+            # (Handled mostly by root build.gradle.kts now)
+
+            # 3. Fix regex group access issues for Kotlin 2.x/1.9 compatibility
+            # This is hard via regex, but we handle it by downgrading Kotlin in build.gradle.kts
+
+            # 4. Patch deprecated Search Response constructors (Common killer)
+            # MovieSearchResponse(...) -> newMovieSearchResponse(...)
+            $Code = $Code -replace 'MovieSearchResponse\(', 'newMovieSearchResponse('
+            $Code = $Code -replace 'TvSeriesSearchResponse\(', 'newTvSeriesSearchResponse('
+            $Code = $Code -replace 'AnimeSearchResponse\(', 'newAnimeSearchResponse('
+
+            Set-Content $_.FullName $Code
+        }
+
+        # --- GRADLE SANITIZATION ---
         $GradleFile = Join-Path $Target "build.gradle.kts"
         if (Test-Path $GradleFile) {
             $Content = Get-Content $GradleFile
-
-            # Brand authors
             $Content = $Content -replace 'authors\s*=\s*listOf\(.*\)', 'authors = listOf("Adam Knight")'
-
-            # Sanitization: Neutralize private properties without breaking syntax
             $Content = $Content -replace 'val properties = Properties\(\).*properties\.load\(.*\)', ''
             $Content = $Content -replace 'properties\.getProperty\("[^"]*"\)', '""'
             $Content = $Content -replace 'properties\.getProperty\([^)]*\)', '""'
+            $Content = $Content -replace '\"\$\{""', '""' # Fix syntax errors
 
-            # Fix common template syntax errors (unclosed strings)
-            $Content = $Content -replace '\"\$\{""', '""'
-
-            # Force BuildConfig for metadata access
             if ($Content -notmatch "buildConfig = true") {
                 $Content = $Content -replace 'buildFeatures \{', "buildFeatures {`n        buildConfig = true"
             }
 
-            # Local Icon Mirroring
-            $IconUrlMatch = [regex]::Match($Content, 'iconUrl\s*=\s*"([^"]+)"')
-            if ($IconUrlMatch.Success) {
-                $OriginalIcon = $IconUrlMatch.Groups[1].Value
-                Invoke-WebRequest -Uri $OriginalIcon -OutFile (Join-Path $Target "icon.png") -ErrorAction SilentlyContinue
+            # Icon Mirroring
+            $IconMatch = [regex]::Match($Content, 'iconUrl\s*=\s*"([^"]+)"')
+            if ($IconMatch.Success) {
                 $Content = $Content -replace 'iconUrl\s*=\s*"[^"]+"', "iconUrl = `"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$Category/$PluginName/icon.png`""
             }
-
             $Content | Set-Content $GradleFile
         }
 
-        # Fix AndroidManifest package errors
-        $Manifest = Join-Path $Target "src/main/AndroidManifest.xml"
-        if (Test-Path $Manifest) {
-            $MContent = Get-Content $Manifest
-            $MContent = $MContent -replace 'package="[^"]*"', ""
-            $MContent | Set-Content $Manifest
-        }
-
-        Write-Host "Synced & Sanitized: [$Category] $PluginName" -ForegroundColor Green
+        Write-Host "Repaired & Branded: [$Category] $PluginName" -ForegroundColor Green
     }
 }

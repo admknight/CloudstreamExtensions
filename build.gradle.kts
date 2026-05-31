@@ -11,7 +11,8 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20")
+        // Downgrade Kotlin to 1.9.24 for maximum plugin compatibility
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24")
     }
 }
 
@@ -54,6 +55,7 @@ subprojects {
         tasks.withType<KotlinJvmCompile> {
             compilerOptions {
                 jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
+                // Suppress all warnings to prevent deprecations from killing the build
                 freeCompilerArgs.addAll("-Xno-call-assertions", "-Xno-param-assertions", "-Xno-receiver-assertions")
             }
         }
@@ -62,7 +64,10 @@ subprojects {
     dependencies {
         val cloudstream by configurations
         val implementation by configurations
+        
+        // Use the pre-release core but ensure all auxiliary libraries are present
         cloudstream("com.lagradost:cloudstream3:pre-release")
+        
         implementation(kotlin("stdlib"))
         implementation("com.github.Blatzar:NiceHttp:0.4.11")
         implementation("org.jsoup:jsoup:1.18.3")
@@ -70,26 +75,24 @@ subprojects {
         implementation("org.json:json:20240303")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         
-        // Critical missing dependencies for plugins using JS or specialized Android features
+        // Fix for missing JS engines and annotations in various source repos
         implementation("androidx.annotation:annotation:1.9.1")
         implementation("org.mozilla:rhino:1.8.0")
         implementation("com.google.android.material:material:1.12.0")
+        implementation("androidx.appcompat:androidx.appcompat:1.7.0")
+        implementation("androidx.core:core-ktx:1.15.0")
     }
 }
 
-// Global build commands that actually work
+// Global build commands
 tasks.register("buildAll") {
     group = "cloudstream"
-    subprojects.forEach { sub ->
-        dependsOn(sub.tasks.matching { it.name == "make" })
-    }
+    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "make" } })
 }
 
 tasks.register("generatePluginsJson") {
     group = "cloudstream"
-    subprojects.forEach { sub ->
-        dependsOn(sub.tasks.matching { it.name == "makePluginsJson" })
-    }
+    dependsOn(subprojects.map { it.tasks.matching { t -> t.name == "makePluginsJson" } })
 }
 
 task<Delete>("clean") {

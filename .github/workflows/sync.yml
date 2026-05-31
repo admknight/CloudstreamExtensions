@@ -16,7 +16,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Sync from Sources
+      - name: Sync & Surgical Repair
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
@@ -56,28 +56,23 @@ jobs:
               mkdir -p "$TARGET_DIR"
               cp -r "$PLUGIN_DIR"/* "$TARGET_DIR/"
               
-              # --- CLEANER SURGERY ---
-              # Brand
+              # --- SURGERY & AUTOMATED REPAIR ---
+              # Fix deprecated constructors and apmap globally
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.apmap/.map/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/MovieSearchResponse(/newMovieSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/TvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/AnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
+
+              # Clean up Gradle
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
-              
-              # Strip private keys safely - targeting common property access patterns
               sed -i 's/val properties = Properties().*properties.load(.*)//g' "$TARGET_DIR/build.gradle.kts"
               sed -i 's/properties.getProperty("[^"]*")/""/g' "$TARGET_DIR/build.gradle.kts"
               sed -i 's/properties.getProperty([^)]*)/""/g' "$TARGET_DIR/build.gradle.kts"
-              
-              # Fix broken strings caused by previous bad logic
               sed -i 's/"${""/""/g' "$TARGET_DIR/build.gradle.kts"
 
               if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
                 sed -i 's/buildFeatures {/buildFeatures {\n        buildConfig = true/g' "$TARGET_DIR/build.gradle.kts"
               fi
-
-              # Icon Mirror
-              ICON_URL=$(grep "iconUrl =" "$TARGET_DIR/build.gradle.kts" | sed -E 's/.*iconUrl = "([^"]+)".*/\1/')
-              if [ ! -z "$ICON_URL" ]; then
-                curl -L -s -o "$TARGET_DIR/icon.png" "$ICON_URL" || true
-              fi
-              sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/$CATEGORY/$PLUGIN_NAME/icon.png\"|" "$TARGET_DIR/build.gradle.kts"
 
               # Fix Manifest
               MANIFEST="$TARGET_DIR/src/main/AndroidManifest.xml"
@@ -87,5 +82,5 @@ jobs:
 
           rm -rf temp_sources
           git add .
-          git commit -m "Auto-sync: Safe sanitization and categorization" || echo "No changes"
+          git commit -m "Auto-sync with Automated Repair logic" || echo "No changes"
           git push origin master
