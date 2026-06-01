@@ -1,4 +1,4 @@
-package com.admknight.tokuzilla
+package com.tokuzilla
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,6 +12,5 @@ class TokuZillaPlugin: Plugin() {
         registerExtractorAPI(TokuZilla.P2pplay())
     }
 }
-
 
 

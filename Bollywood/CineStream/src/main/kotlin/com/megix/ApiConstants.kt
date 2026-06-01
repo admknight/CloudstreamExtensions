@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 import android.util.Log
 import com.lagradost.cloudstream3.app
@@ -96,7 +96,6 @@ val dudefilmsAPI get() = api("dudefilms")
 val m4ufreeAPI get() = api("m4ufree")
 val zinkmoviesAPI get() = api("zinkmovies")
 val animedaoAPI get() = api("animedao")
-
 
 
 

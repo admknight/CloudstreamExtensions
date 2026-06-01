@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -42,7 +42,7 @@ import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.httpsify
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.admknight.streamplay.StreamPlay.Companion.animepaheAPI
+import com.phisher98.StreamPlay.Companion.animepaheAPI
 import kotlinx.coroutines.runBlocking
 import okhttp3.FormBody
 import okhttp3.MediaType.Companion.toMediaType
@@ -58,7 +58,7 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.security.MessageDigest
 import java.security.SecureRandom
-import java.util.Base64
+
 import javax.crypto.Cipher
 import javax.crypto.spec.GCMParameterSpec
 import javax.crypto.spec.IvParameterSpec
@@ -2093,7 +2093,7 @@ class Cdnstreame : ExtractorApi() {
     @SuppressLint("NewApi")
     private fun decryptOpenSSL(encBase64: String, password: String): String {
         return runCatching {
-            val data = Base64.getDecoder().decode(encBase64)
+            val data = base64DecodeArray(encBase64)
             require(data.copyOfRange(0, 8).contentEquals("Salted__".toByteArray()))
             val salt = data.copyOfRange(8, 16)
             val (key, iv) = opensslKeyIv(password.toByteArray(), salt)
@@ -3571,6 +3571,5 @@ data class PlaybackDecryptSource(
     val bitrateKbps: Long,
     val height: Any?,
 )
-
 
 

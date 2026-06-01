@@ -1,4 +1,4 @@
-package com.admknight.bingedreview
+package binged
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
@@ -236,7 +236,6 @@ override suspend fun load(url: String): LoadResponse? {
         fun String.encodeUri() = URLEncoder.encode(this, "utf8")
     }
 }
-
 
 
 

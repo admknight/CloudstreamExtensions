@@ -1,4 +1,4 @@
-package com.admknight.stremioaddon
+package com.phisher98
 
 import com.lagradost.cloudstream3.APIHolder.unixTimeMS
 import com.lagradost.cloudstream3.TvType
@@ -153,6 +153,5 @@ suspend fun fetchTmdbLogoUrl(
     // No language match & no voted logos
     return null
 }
-
 
 

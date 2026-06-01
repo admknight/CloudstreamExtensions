@@ -1,4 +1,4 @@
-package com.admknight.piratexplay
+package com.piratexplay
 
 import com.google.gson.JsonParser
 import com.lagradost.api.Log
@@ -308,6 +308,5 @@ class PiratexplayExtractor : ExtractorApi() {
 class Cloudy : VidStack() {
     override var mainUrl = "https://cloudy.upns.one"
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.superstream
+package com.phisher98
 
 import com.lagradost.cloudstream3.utils.Qualities
 
@@ -182,6 +182,5 @@ fun cleanTitle(title: String): String {
 
     return filtered.distinct().joinToString(" ")
 }
-
 
 

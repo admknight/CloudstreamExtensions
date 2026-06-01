@@ -1,4 +1,4 @@
-package com.admknight.animension
+package com.stormunblessed
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.JsonNode
@@ -10,11 +10,10 @@ import com.fasterxml.jackson.module.kotlin.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.INFER_TYPE
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
-import com.lagradost.cloudstream3.utils.newExtractorLink
 
 class AnimensionProvider:MainAPI() {
     override var mainUrl = "https://animension.to"
@@ -88,9 +87,10 @@ class AnimensionProvider:MainAPI() {
             val epid = it[1]
             val epnum = it[2]
             val epinfo = "$mainUrl/public-api/episode.php?id=$epid"
-            newEpisode(epinfo) {
-                this.episode = epnum.toString().toIntOrNull()
-            }
+            newEpisode(
+                epinfo,
+                episode = epnum.toString().toIntOrNull()
+            )
         }
         return newAnimeLoadResponse(title, url, TvType.Anime){
             addEpisodes(DubStatus.Subbed, episodes)
@@ -146,10 +146,10 @@ class AnimensionProvider:MainAPI() {
                         this.name,
                         "${this.name} MP4",
                         link,
-                        INFER_TYPE
-                    ) {
-                        this.quality = Qualities.Unknown.value
-                    }
+                        "",
+                        Qualities.Unknown.value,
+                        isM3u8 = false
+                    )
                 )
             }
             else {

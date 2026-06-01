@@ -1,6 +1,1 @@
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    status = 1
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioAddon/icon.png"
-}
+import org.jetbrains.kotlin.konan.properties.Properties  version = 11 android {     buildFeatures {         buildConfig = true         viewBinding = true     }     defaultConfig {          } 

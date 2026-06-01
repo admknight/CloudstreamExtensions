@@ -1,4 +1,4 @@
-package com.admknight.ultima
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -21,13 +21,13 @@ import com.lagradost.cloudstream3.utils.M3u8Helper
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.admknight.ultima.UltimaMediaProvidersUtils.ServerName.Hubcloud
-import com.admknight.ultima.UltimaMediaProvidersUtils.ServerName.Vcloud
-import com.admknight.ultima.UltimaMediaProvidersUtils.commonLinkLoader
-import com.admknight.ultima.UltimaMediaProvidersUtils.getBaseUrl
-import com.admknight.ultima.UltimaMediaProvidersUtils.getIndexQuality
-import com.admknight.ultima.UltimaUtils.Category
-import com.admknight.ultima.UltimaUtils.LinkData
+import com.phisher98.UltimaMediaProvidersUtils.ServerName.Hubcloud
+import com.phisher98.UltimaMediaProvidersUtils.ServerName.Vcloud
+import com.phisher98.UltimaMediaProvidersUtils.commonLinkLoader
+import com.phisher98.UltimaMediaProvidersUtils.getBaseUrl
+import com.phisher98.UltimaMediaProvidersUtils.getIndexQuality
+import com.phisher98.UltimaUtils.Category
+import com.phisher98.UltimaUtils.LinkData
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import okhttp3.FormBody
@@ -1192,6 +1192,5 @@ data class MetaData(
         )
     }
 }
-
 
 

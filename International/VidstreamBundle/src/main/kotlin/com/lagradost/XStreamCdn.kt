@@ -1,12 +1,12 @@
-package com.admknight.vidstreambundle
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.ExtractorApi
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.getQualityFromName
 
 class LayarKaca: XStreamCdn() {
     override val name: String = "LayarKaca-xxi"
@@ -81,10 +81,9 @@ open class XStreamCdn : ExtractorApi() {
                                 name,
                                 name = name,
                                 data.file,
-                            ) {
-                                this.referer = url
-                                this.quality = getQualityFromName(data.label)
-                            }
+                                url,
+                                getQualityFromName(data.label),
+                            )
                         )
                     }
                 }
@@ -93,3 +92,6 @@ open class XStreamCdn : ExtractorApi() {
         return extractedLinksList
     }
 }
+
+
+

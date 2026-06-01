@@ -1,4 +1,4 @@
-package com.admknight.showflix
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.*
 import com.lagradost.cloudstream3.*
@@ -500,7 +500,5 @@ suspend fun loadSourceNameExtractor(
         }
     }
 }
-
-
 
 

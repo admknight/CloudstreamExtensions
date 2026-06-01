@@ -1,4 +1,4 @@
-package com.admknight.toonhub
+package com.toonhub4u
 
 import com.lagradost.cloudstream3.extractors.MixDrop
 import com.lagradost.cloudstream3.plugins.BasePlugin
@@ -21,6 +21,5 @@ class Toonhub4uPlugin: BasePlugin() {
         registerExtractorAPI(Multimoviesshg())
     }
 }
-
 
 

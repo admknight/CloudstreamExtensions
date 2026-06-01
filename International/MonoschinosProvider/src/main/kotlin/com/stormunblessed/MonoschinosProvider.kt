@@ -1,4 +1,4 @@
-package com.admknight.monoschinos
+package com.lagradost.cloudstream3.animeproviders
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -102,10 +102,17 @@ class MonoschinosProvider : MainAPI() {
             val title = it.selectFirst("h3")!!.text()
             val href = fixUrl(it.selectFirst("a")!!.attr("href"))
             val image = it.selectFirst("img")!!.attr("data-src")
-            newAnimeSearchResponse(title, href, TvType.Anime) {
-                this.posterUrl = fixUrl(image)
-                if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
-            }
+            newAnimeSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Anime,
+                    fixUrl(image),
+                    null,
+                    if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(
+                            DubStatus.Dubbed
+                    ) else EnumSet.of(DubStatus.Subbed),
+            )
         }
     }
 
@@ -120,7 +127,7 @@ class MonoschinosProvider : MainAPI() {
     override suspend fun load(url: String): LoadResponse {
         getToken(url)
         val doc = app.get(url, timeout = 120).document
-        val caplist = doc.selectFirst(".caplist")?.attr("data-ajax") ?: throw ErrorLoadingException("No episode list found")
+        val caplist = doc.selectFirst(".caplist").attr("data-ajax")
         val poster = doc.selectFirst("img.w-100")!!.attr("data-src")
         val backimage = doc.selectFirst("img.rounded-3")!!.attr("data-src")
         val title = doc.selectFirst(".fs-2")!!.text()
@@ -155,8 +162,10 @@ class MonoschinosProvider : MainAPI() {
 
         val epList = capJson.eps.map { epnum ->
             val epUrl = "${url.replace("-sub-espanol","").replace("/anime/","/ver/")}-episodio-${epnum.num}"
-            newEpisode(epUrl) {
-                this.episode = epnum.num
+            newEpisode(
+                    epUrl
+            ){
+                this.episode = epnum.toString().toIntOrNull()
             }
         }
 
@@ -188,6 +197,5 @@ class MonoschinosProvider : MainAPI() {
         return true
     }
 }
-
 
 

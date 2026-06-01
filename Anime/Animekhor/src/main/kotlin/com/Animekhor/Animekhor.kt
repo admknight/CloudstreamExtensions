@@ -1,4 +1,4 @@
-package com.admknight.animekhor
+package com.Animekhor
 
 import com.lagradost.api.Log
 import org.jsoup.nodes.Element
@@ -145,7 +145,6 @@ open class Animekhor : MainAPI() {
     }
 
 }
-
 
 
 

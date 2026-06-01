@@ -1,9 +1,9 @@
-package com.admknight.cinestream
+package com.megix.settings
 
 import android.content.Context
 import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
 import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
-import com.admknight.cinestream.ProviderRegistry
+import com.megix.ProviderRegistry
 
 object Settings {
 
@@ -186,6 +186,5 @@ object Settings {
     fun showSettingsDialog(context: Context, onSave: () -> Unit) =
         SettingsDialog.show(context, onSave)
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.trailerstwo
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -157,10 +157,10 @@ class TrailersTwoProvider : TmdbProvider() {
                 this.name,
                 this.name,
                 videoUrl,
-            ) {
-                this.referer = "https://trailers.to"
-                this.quality = Qualities.Unknown.value
-            }
+                "https://trailers.to",
+                Qualities.Unknown.value,
+                false,
+            )
         )
 
         runAllAsync(
@@ -192,10 +192,10 @@ class TrailersTwoProvider : TmdbProvider() {
                                     this.name,
                                     "${this.name} Backup",
                                     correctUrl.replace("/$user/0/", "/$user/$movieId/"),
-                                ) {
-                                    this.referer = "https://trailers.to"
-                                    this.quality = Qualities.Unknown.value
-                                }
+                                    "https://trailers.to",
+                                    Qualities.Unknown.value,
+                                    false,
+                                )
                             )
                         }
                 }
@@ -213,7 +213,7 @@ class TrailersTwoProvider : TmdbProvider() {
         val request = app.get(data)
         val endUrl = request.url
         callback.invoke(
-            ExtractorLink(
+            newExtractorLink(
                 this.name,
                 "${this.name} Backup",
                 endUrl.replace("/cloudstream/0/", "/cloudstream/$movieId/"),

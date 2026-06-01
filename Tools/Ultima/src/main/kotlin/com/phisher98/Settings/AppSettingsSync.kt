@@ -1,4 +1,4 @@
-package com.admknight.ultima
+package com.phisher98
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
@@ -23,7 +23,7 @@ import java.util.UUID
 class UltimaConfigureAppSettingsSync(private val plugin: UltimaPlugin) : BottomSheetDialogFragment() {
     private val sm = UltimaStorageManager
     private val res: Resources = plugin.resources ?: throw Exception("Unable to read resources")
-    private val packageName = BuildConfig.LIBRARY_PACKAGE_NAME
+    private val packageName = com.admknight.ultima.BuildConfig.LIBRARY_PACKAGE_NAME
 
     // #region - necessary functions
     @SuppressLint("DiscouragedApi")
@@ -470,7 +470,6 @@ class UltimaConfigureAppSettingsSync(private val plugin: UltimaPlugin) : BottomS
         super.onDetach()
     }
 }
-
 
 
 

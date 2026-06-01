@@ -1,4 +1,4 @@
-package com.admknight.pinoymoviepedia
+package com.Pinoymoviepedia
 
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.extractors.MixDrop
@@ -54,7 +54,6 @@ open class Ds2play : ExtractorApi() {
 
     }
 }
-
 
 
 

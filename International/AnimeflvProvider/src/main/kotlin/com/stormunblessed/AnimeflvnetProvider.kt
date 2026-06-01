@@ -1,4 +1,4 @@
-package com.admknight.animeflv
+package com.stormunblessed
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -145,9 +145,12 @@ class AnimeflvnetProvider : MainAPI() {
                     //val epthumb = "https://cdn.animeflv.net/screenshots/$animeid/$epNum/th_3.jpg"
                     val link = url.replace("/anime/", "/ver/") + "-$epNum"
                     episodes.add(
-                        newEpisode(link) {
-                            this.episode = epNum.toIntOrNull()
-                        }
+                        newEpisode(
+                            link,
+                            null,
+                            //posterUrl = epthumb,
+                            episode = epNum.toIntOrNull()
+                        )
                     )
                 }
             }
@@ -193,7 +196,6 @@ class AnimeflvnetProvider : MainAPI() {
         return true
     }
 }
-
 
 
 

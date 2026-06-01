@@ -1,4 +1,4 @@
-package com.admknight.netmirror
+package com.horis.cncverse.entities
 
 class PlayList : ArrayList<PlayListItem>()
 

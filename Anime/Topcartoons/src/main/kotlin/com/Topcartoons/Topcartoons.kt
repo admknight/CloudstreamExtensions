@@ -1,4 +1,4 @@
-package com.admknight.topcartoons
+package com.Topcartoons
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*

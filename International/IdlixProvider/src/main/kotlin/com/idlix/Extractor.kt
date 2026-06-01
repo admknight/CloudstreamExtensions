@@ -1,4 +1,4 @@
-package com.admknight.idlix
+package com.idlix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -108,6 +108,5 @@ class Majorplay : ExtractorApi() {
         }
     }
 }
-
 
 

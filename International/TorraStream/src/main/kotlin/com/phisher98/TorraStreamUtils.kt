@@ -1,4 +1,4 @@
-package com.admknight.torrastream
+package com.phisher98
 
 import android.content.SharedPreferences
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
@@ -359,6 +359,5 @@ fun filteredCallback(
         resultCount++
     }
 }
-
 
 

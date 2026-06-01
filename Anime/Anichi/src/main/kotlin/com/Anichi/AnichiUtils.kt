@@ -1,8 +1,24 @@
-package com.admknight.anichi
+package com.Anichi
 
+import com.Anichi.Anichi.Companion.anilistApi
+import com.Anichi.Anichi.Companion.apiEndPoint
+import com.Anichi.AnichiParser.AkIframe
+import com.Anichi.AnichiParser.AniMedia
+import com.Anichi.AnichiParser.AniSearch
+import com.Anichi.AnichiParser.DataAni
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.SubtitleFile
+import com.lagradost.cloudstream3.TvType
+import com.lagradost.cloudstream3.app
+import com.lagradost.cloudstream3.base64Decode
+import com.lagradost.cloudstream3.fixTitle
+import com.lagradost.cloudstream3.syncproviders.providers.AniListApi.CoverImage
+import com.lagradost.cloudstream3.syncproviders.providers.AniListApi.LikePageInfo
+import com.lagradost.cloudstream3.syncproviders.providers.AniListApi.RecommendationConnection
+import com.lagradost.cloudstream3.syncproviders.providers.AniListApi.SeasonNextAiringEpisode
+import com.lagradost.cloudstream3.syncproviders.providers.AniListApi.Title
+import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper
@@ -25,7 +41,7 @@ object AnichiUtils {
         year: Int?,
         season: String?,
         type: String?
-    ): AnilistAPIResponse.anilistMedia? {
+    ): AniMedia? {
 
         val primary = fetchId(name, year, season, type)
         if (primary?.id != null) return primary
@@ -36,7 +52,7 @@ object AnichiUtils {
         return null
     }
 
-    suspend fun fetchId(title: String?, year: Int?, season: String?, type: String?): AnilistAPIResponse.anilistMedia? {
+    suspend fun fetchId(title: String?, year: Int?, season: String?, type: String?): AniMedia? {
 
         if (title.isNullOrBlank()) return null
 
@@ -52,15 +68,6 @@ object AnichiUtils {
               synonyms
               coverImage { extraLarge large }
               bannerImage
-              averageScore
-              status
-              description
-              episodes
-              genres
-              episodeDuration
-              prevideos
-              nextAiringEpisode { episode }
-              airingSchedule { nodes { episode } }
             }
           }
         }
@@ -76,9 +83,9 @@ object AnichiUtils {
             .toRequestBody(RequestBodyTypes.JSON.toMediaTypeOrNull())
 
         val results = try {
-            app.post("https://graphql.anilist.co", requestBody = body)
-                .parsedSafe<AnilistAPIResponse>()
-                ?.data?.page?.media
+            app.post(anilistApi, requestBody = body)
+                .parsedSafe<AniSearch>()
+                ?.data?.Page?.media
         } catch (_: Throwable) {
             null
         } ?: return null
@@ -113,17 +120,29 @@ object AnichiUtils {
 
     suspend fun aniToMal(id: String): String? {
         return app.post(
-                        "https://graphql.anilist.co",
+                        anilistApi,
                         data =
                                 mapOf(
                                         "query" to "{Media(id:$id,type:ANIME){idMal}}",
                                 )
                 )
-                .parsedSafe<AnilistDataAni>()
+                .parsedSafe<DataAni>()
                 ?.data
                 ?.media
                 ?.idMal
     }
+
+    private val embedBlackList =
+            listOf(
+                    "https://mp4upload.com/",
+                    "https://streamsb.net/",
+                    "https://dood.to/",
+                    "https://videobin.co/",
+                    "https://ok.ru",
+                    "https://streamlare.com",
+                    "https://filemoon",
+                    "streaming.php",
+            )
 
     suspend fun getM3u8Qualities(
             m3u8Link: String,
@@ -141,31 +160,20 @@ object AnichiUtils {
         return fixTitle(URI(this).host.substringBeforeLast(".").substringAfterLast("."))
     }
 
-    fun String.fixUrlPath(apiEndPoint: String): String {
+    fun String.fixUrlPath(): String {
         return if (this.contains(".json?")) apiEndPoint + this
         else apiEndPoint + URI(this).path + ".json?" + URI(this).query
     }
 
     fun fixSourceUrls(url: String, source: String?): String? {
         return if (source == "Ak" || url.contains("/player/vitemb")) {
-            com.lagradost.cloudstream3.utils.AppUtils.tryParseJson<AnichiParser.AkIframe>(base64Decode(url.substringAfter("=")))?.idUrl
+            AppUtils.tryParseJson<AkIframe>(base64Decode(url.substringAfter("=")))?.idUrl
         } else {
             url.replace(" ", "%20")
         }
     }
-
-    suspend fun anilistAPICall(query: String): AnilistAPIResponse {
-        val data = mapOf("query" to query)
-        val headerJSON = mapOf("Accept" to "application/json", "Content-Type" to "application/json")
-        return app.post("https://graphql.anilist.co", headers = headerJSON, data = data)
-            .parsedSafe<AnilistAPIResponse>()
-            ?: throw Exception("Unable to fetch or parse Anilist api response")
-    }
 }
 
-data class AnilistDataAni(val data: AnilistDataAniInner)
-data class AnilistDataAniInner(val media: AnilistMediaIdMal)
-data class AnilistMediaIdMal(val idMal: String?)
 
 fun parseAnimeData(jsonString: String): MetaAnimeData? {
     return try {
@@ -176,70 +184,119 @@ fun parseAnimeData(jsonString: String): MetaAnimeData? {
     }
 }
 
+suspend fun fetchTmdbLogoUrl(
+    tmdbAPI: String,
+    apiKey: String,
+    type: TvType,
+    tmdbId: Int?,
+    appLangCode: String?
+): String? {
+
+    if (tmdbId == null) return null
+
+    val appLang = appLangCode
+        ?.substringBefore("-")
+        ?.lowercase()
+
+    val url = if (type == TvType.Movie) {
+        "$tmdbAPI/movie/$tmdbId/images?api_key=$apiKey"
+    } else {
+        "$tmdbAPI/tv/$tmdbId/images?api_key=$apiKey"
+    }
+
+    val json = runCatching { JSONObject(app.get(url).text) }.getOrNull()
+        ?: return null
+
+    val logos = json.optJSONArray("logos") ?: return null
+    if (logos.length() == 0) return null
+
+    fun logoUrlAt(i: Int): String = "https://image.tmdb.org/t/p/w500${logos.getJSONObject(i).optString("file_path")}"
+
+    if (!appLang.isNullOrBlank()) {
+        for (i in 0 until logos.length()) {
+            val logo = logos.optJSONObject(i) ?: continue
+            if (logo.optString("iso_639_1") == appLang) {
+                return logoUrlAt(i)
+            }
+        }
+    }
+
+    for (i in 0 until logos.length()) {
+        val logo = logos.optJSONObject(i) ?: continue
+        if (logo.optString("iso_639_1") == "en") {
+            return logoUrlAt(i)
+        }
+    }
+
+    return logoUrlAt(0)
+}
+
+private val apiUrl = "https://graphql.anilist.co"
+
+private val headerJSON =
+    mapOf("Accept" to "application/json", "Content-Type" to "application/json")
+
+suspend fun anilistAPICall(query: String): AnilistAPIResponse {
+    val data = mapOf("query" to query)
+    val test = app.post(apiUrl, headers = headerJSON, data = data)
+    val res =
+        test.parsedSafe<AnilistAPIResponse>()
+            ?: throw Exception("Unable to fetch or parse Anilist api response")
+    return res
+}
+
 data class AnilistAPIResponse(
     @param:JsonProperty("data") val data: AnilistData,
 ) {
     data class AnilistData(
-        @param:JsonProperty("Page") val page: AnilistPage? = null,
-        @param:JsonProperty("Media") val media: anilistMedia? = null,
-    )
-
-    data class AnilistPage(
-        @param:JsonProperty("media") val media: List<anilistMedia>? = null,
-    )
+        @param:JsonProperty("Page") val page: AnilistPage?,
+        @param:JsonProperty("Media") val media: anilistMedia?,
+    ) {
+        data class AnilistPage(
+            @param:JsonProperty("pageInfo") val pageInfo: LikePageInfo,
+            @param:JsonProperty("media") val media: List<Media>,
+        )
+    }
 
     data class anilistMedia(
-        @param:JsonProperty("id") val id: Int? = null,
-        @param:JsonProperty("idMal") val idMal: Int? = null,
-        @param:JsonProperty("seasonYear") val seasonYear: Int? = null,
-        @param:JsonProperty("episodes") val episodes: Int? = null,
-        @param:JsonProperty("title") val title: Title? = null,
-        @param:JsonProperty("season") val season: String? = null,
-        @param:JsonProperty("genres") val genres: List<String>? = null,
-        @param:JsonProperty("averageScore") val averageScore: Int? = null,
-        @param:JsonProperty("status") val status: String? = null,
-        @param:JsonProperty("description") val description: String? = null,
-        @param:JsonProperty("coverImage") val coverImage: CoverImage? = null,
-        @param:JsonProperty("bannerImage") val bannerImage: String? = null,
-        @param:JsonProperty("format") val format: String? = null,
-        @param:JsonProperty("synonyms") val synonyms: List<String>? = null,
-        @param:JsonProperty("startDate") val startDate: StartDate? = null,
-    )
+        @param:JsonProperty("id") val id: Int,
+        @param:JsonProperty("startDate") val startDate: StartDate,
+        @param:JsonProperty("episodes") val episodes: Int?,
+        @param:JsonProperty("title") val title: Title,
+        @param:JsonProperty("season") val season: String?,
+        @param:JsonProperty("genres") val genres: List<String>,
+        @param:JsonProperty("averageScore") val averageScore: Int,
+        @param:JsonProperty("status") val status: String,
+        @param:JsonProperty("description") val description: String?,
+        @param:JsonProperty("coverImage") val coverImage: CoverImage,
+        @param:JsonProperty("bannerImage") val bannerImage: String?,
+        @param:JsonProperty("nextAiringEpisode") val nextAiringEpisode: SeasonNextAiringEpisode?,
+        @param:JsonProperty("airingSchedule") val airingSchedule: AiringScheduleNodes?,
+        @param:JsonProperty("recommendations") val recommendations: RecommendationConnection?,
+        @param:JsonProperty("format") val format: String?,
+    ) {
+        data class StartDate(@param:JsonProperty("year") val year: Int)
 
-    data class Title(
-        @param:JsonProperty("romaji") val romaji: String? = null,
-        @param:JsonProperty("english") val english: String? = null,
-        @param:JsonProperty("native") val native: String? = null,
-    )
+        data class AiringScheduleNodes(
+            @param:JsonProperty("nodes") val nodes: List<SeasonNextAiringEpisode>?
+        )
+    }
 
-    data class CoverImage(
-        @param:JsonProperty("extraLarge") val extraLarge: String? = null,
-        @param:JsonProperty("large") val large: String? = null,
-        @param:JsonProperty("medium") val medium: String? = null,
-    )
-
-    data class StartDate(
-        @param:JsonProperty("year") val year: Int? = null,
+    data class Media(
+        @param:JsonProperty("id") val id: Int,
+        @param:JsonProperty("idMal") val idMal: Int?,
+        @param:JsonProperty("season") val season: String?,
+        @param:JsonProperty("seasonYear") val seasonYear: Int,
+        @param:JsonProperty("format") val format: String?,
+        @param:JsonProperty("averageScore") val averageScore: Int,
+        @param:JsonProperty("episodes") val episodes: Int,
+        @param:JsonProperty("title") val title: Title,
+        @param:JsonProperty("description") val description: String?,
+        @param:JsonProperty("coverImage") val coverImage: CoverImage,
+        @param:JsonProperty("synonyms") val synonyms: List<String>,
+        @param:JsonProperty("nextAiringEpisode") val nextAiringEpisode: SeasonNextAiringEpisode?,
     )
 }
-
-data class MetaAnimeData(
-    val titles: Map<String, String>? = null,
-    val images: List<MetaImageData>? = null,
-    val episodes: Map<String, MetaEpisodeData>? = null,
-    val mappings: MetaMappingsData? = null
-)
-
-data class MetaImageData(val coverType: String?, val url: String?)
-data class MetaEpisodeData(
-    val title: Map<String, String>?,
-    val image: String?,
-    val overview: String?,
-    val rating: String?,
-    val runtime: Int?,
-    val airDateUtc: String?
-)
-data class MetaMappingsData(val themoviedb_id: String?)
 
 
 suspend fun loadCustomExtractor(
@@ -270,3 +327,6 @@ suspend fun loadCustomExtractor(
         }
     }
 }
+
+
+

@@ -1,7 +1,8 @@
-package com.admknight.superstream
+package com.phisher98
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
+import com.phisher98.settings.SettingsFragment
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
 
@@ -18,6 +19,5 @@ class SuperStreamPlugin: Plugin() {
         }
     }
 }
-
 
 

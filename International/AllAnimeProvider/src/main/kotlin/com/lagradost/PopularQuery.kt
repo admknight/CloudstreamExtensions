@@ -1,9 +1,9 @@
-package com.admknight.allanime
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class PopularQuery(
-    @JsonProperty("data") val data: PopularData? = PopularData()
+    @JsonProperty("data") val data: Data? = Data()
 )
 
 
@@ -63,10 +63,9 @@ data class QueryPopular(
     @JsonProperty("__typename") val _typename: String? = null
 )
 
-data class PopularData(
+data class Data(
     @JsonProperty("queryPopular") val queryPopular: QueryPopular? = QueryPopular()
 )
-
 
 
 

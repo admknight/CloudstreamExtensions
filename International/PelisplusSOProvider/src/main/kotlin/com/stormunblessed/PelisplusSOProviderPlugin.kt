@@ -1,11 +1,16 @@
-package com.admknight.pelisplusso
+package com.stormunblessed
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
-import com.lagradost.cloudstream3.plugins.BasePlugin
+import com.lagradost.cloudstream3.plugins.Plugin
+import android.content.Context
+import com.lagradost.cloudstream3.movieproviders.PelisplusSOProvider
 
 @CloudstreamPlugin
-class PelisplusSOProviderPlugin: BasePlugin() {
-    override fun load() {
+class PelisplusSOProviderPlugin: Plugin() {
+    override fun load(context: Context) {
+        // All providers should be added in this manner. Please don't edit the providers list directly.
         registerMainAPI(PelisplusSOProvider())
     }
 }
+
+

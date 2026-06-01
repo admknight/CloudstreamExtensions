@@ -1,4 +1,4 @@
-package com.admknight.asiaflix
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.core.JsonParser
@@ -7,8 +7,8 @@ import com.lagradost.cloudstream3.*
 //import com.lagradost.cloudstream3.animeproviders.GogoanimeProvider.Companion.getStatus
 import com.lagradost.cloudstream3.utils.DataStore.toKotlinObject
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.getQualityFromName
 import java.net.URI
 
 class AsiaFlixProvider : MainAPI() {
@@ -89,30 +89,42 @@ class AsiaFlixProvider : MainAPI() {
     )
 
     private fun Data.toSearchResponse(): TvSeriesSearchResponse {
-        return newTvSeriesSearchResponse(name, _id, TvType.AsianDrama) {
-            this.posterUrl = image
-            this.year = releaseYear
-        }
+        return newTvSeriesSearchResponse(
+            name,
+            _id,
+            this@AsiaFlixProvider.name,
+            TvType.AsianDrama,
+            image,
+            releaseYear,
+            episodes?.size,
+        )
     }
 
     private fun Episodes.toEpisode(): Episode? {
         if (videoUrl != null && videoUrl.contains("watch/null") || number == null) return null
         return videoUrl?.let {
-            newEpisode(it) {
-                this.episode = number
-            }
+            newEpisode(
+                it,
+                null,
+                number,
+            )
         }
     }
 
-    private suspend fun DramaPage.toLoadResponse(): TvSeriesLoadResponse {
-        val dramaUrl = "$mainUrl$dramaUrl/$_id".replace("drama-detail", "show-details")
-        return newTvSeriesLoadResponse(name, dramaUrl, TvType.AsianDrama, episodes.mapNotNull { it.toEpisode() }.sortedBy { it.episode }) {
-            this.posterUrl = image
-            this.year = releaseYear
-            this.plot = synopsis
-            this.showStatus = getStatus(tvStatus ?: "")
-            this.tags = genre?.split(",")?.map { it.trim() }
-        }
+    private fun DramaPage.toLoadResponse(): TvSeriesLoadResponse {
+        return newTvSeriesLoadResponse(
+            name,
+            "$mainUrl$dramaUrl/$_id".replace("drama-detail", "show-details"),
+            this@AsiaFlixProvider.name,
+            TvType.AsianDrama,
+            episodes.mapNotNull { it.toEpisode() }.sortedBy { it.episode },
+            image,
+            releaseYear,
+            synopsis,
+            getStatus(tvStatus ?: ""),
+            null,
+            genre?.split(",")?.map { it.trim() }
+        )
     }
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
@@ -134,8 +146,8 @@ class AsiaFlixProvider : MainAPI() {
             }?.let { searchResponse ->
                 HomePageList(it.sectionName, searchResponse)
             }
-        } ?: listOf()
-        return newHomePageResponse(listItems)
+        }
+        return newHomePageResponse(listItems ?: listOf())
     }
 
     data class Link(
@@ -154,15 +166,17 @@ class AsiaFlixProvider : MainAPI() {
             "$apiUrl/utility/get-stream-links?url=$data",
             headers = headers
         ).text.toKotlinObject<Link>().url?.let {
+//            val fixedUrl = "https://api.asiaflix.app/api/v2/utility/cors-proxy/playlist/${URLEncoder.encode(it, StandardCharsets.UTF_8.toString())}"
             callback.invoke(
                 newExtractorLink(
                     name,
                     name,
                     it,
-                ) {
-                    this.referer = "https://asianload1.com/"
-                    this.quality = getQualityFromName(it)
-                }
+                    "https://asianload1.com/",
+                    /** <------ This provider should be added instead */
+                    getQualityFromName(it),
+                    URI(it).path.endsWith(".m3u8")
+                )
             )
         }
         return true

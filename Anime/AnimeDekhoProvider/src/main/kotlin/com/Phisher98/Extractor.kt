@@ -1,4 +1,4 @@
-package com.admknight.animedekho
+package com.phisher98
 
 import com.google.gson.JsonParser
 import com.lagradost.api.Log
@@ -452,6 +452,5 @@ open class Abyass : ExtractorApi() {
 
 
 }
-
 
 

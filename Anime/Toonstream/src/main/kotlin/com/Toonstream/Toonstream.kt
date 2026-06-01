@@ -1,4 +1,4 @@
-package com.admknight.toonstream
+package com.Toonstream
 
 import com.lagradost.api.Log
 import org.jsoup.nodes.Element

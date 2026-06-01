@@ -1,12 +1,11 @@
-package com.admknight.cablevisionhd
+package com.stormunblessed
 
 import android.util.Base64
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.INFER_TYPE
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.JsUnpacker
 import com.lagradost.cloudstream3.utils.getQualityFromName
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import java.net.URL
 
 class CablevisionHdProvider : MainAPI() {
@@ -240,9 +239,15 @@ class CablevisionHdProvider : MainAPI() {
                         ?: ""
                 val link = it.selectFirst("div.lm-canal.lm-info-block.gray-default a")?.attr("href")
                         ?: ""
-                newLiveSearchResponse(title, link, TvType.Live) {
-                    this.posterUrl = fixUrl(img)
-                }
+                newLiveSearchResponse(
+                        title,
+                        link,
+                        this.name,
+                        TvType.Live,
+                        fixUrl(img),
+                        null,
+                        null,
+                )
             }
             items.add(HomePageList(name, home, true))
         }
@@ -269,9 +274,15 @@ class CablevisionHdProvider : MainAPI() {
                     ?: ""
             val link = it.selectFirst("div.lm-canal.lm-info-block.gray-default a")?.attr("href")
                     ?: ""
-            newLiveSearchResponse(title, link, TvType.Live) {
-                this.posterUrl = fixUrl(img)
-            }
+            newLiveSearchResponse(
+                    title,
+                    link,
+                    this.name,
+                    TvType.Live,
+                    fixUrl(img),
+                    null,
+                    null,
+            )
         }
     }
 
@@ -340,15 +351,14 @@ class CablevisionHdProvider : MainAPI() {
                     val extractedurl = decodeBase64UntilUnchanged(hash)
                     if (extractedurl.isNotBlank()) {
                         callback(
-                            newExtractorLink(
-                                it.text() ?: getHostUrl(extractedurl),
-                                it.text() ?: getHostUrl(extractedurl),
-                                extractedurl,
-                                INFER_TYPE
-                            ) {
-                                this.referer = "${getBaseUrl(extractedurl)}/"
-                                this.quality = getQualityFromName("")
-                            }
+                                newExtractorLink(
+                                        it.text() ?: getHostUrl(extractedurl),
+                                        it.text() ?: getHostUrl(extractedurl),
+                                        extractedurl,
+                                        "${getBaseUrl(extractedurl)}/",
+                                        getQualityFromName(""),
+                                        extractedurl.contains("m3u8")
+                                )
                         )
                     }
                 }

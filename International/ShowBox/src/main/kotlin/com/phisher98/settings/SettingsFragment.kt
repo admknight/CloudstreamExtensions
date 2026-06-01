@@ -1,4 +1,4 @@
-package com.admknight.showbox
+package com.phisher98.settings
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -20,11 +20,11 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.admknight.showbox.BuildConfig
-import com.admknight.showbox.ShowBoxPlugin
+import com.phisher98.BuildConfig
+import com.phisher98.SuperStreamPlugin
 
 class SettingsFragment(
-    plugin: ShowBoxPlugin,
+    plugin: SuperStreamPlugin,
     private val sharedPref: SharedPreferences,
 ) : BottomSheetDialogFragment() {
     private val res = plugin.resources ?: throw Exception("Unable to read resources")
@@ -182,7 +182,6 @@ class SettingsFragment(
         }
     }
 }
-
 
 
 

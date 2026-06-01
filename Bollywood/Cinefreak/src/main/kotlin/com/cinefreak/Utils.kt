@@ -1,4 +1,4 @@
-package com.admknight.cinefreak
+package com.cinefreak
 
 import com.lagradost.cloudstream3.ActorData
 import com.lagradost.cloudstream3.Score
@@ -55,6 +55,5 @@ fun getIndexQuality(str: String?): Int {
     return Regex("(\\d{3,4})[pP]").find(str ?: "")?.groupValues?.getOrNull(1)?.toIntOrNull()
         ?: Qualities.Unknown.value
 }
-
 
 

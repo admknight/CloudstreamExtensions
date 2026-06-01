@@ -1,4 +1,4 @@
-package com.admknight.torrastream
+package com.phisher98
 
 import android.content.SharedPreferences
 import android.util.Base64
@@ -587,7 +587,6 @@ suspend fun generateMagnetLink(
             }
     }
 }
-
 
 
 

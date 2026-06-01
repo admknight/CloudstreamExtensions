@@ -1,4 +1,4 @@
-package com.admknight.cinefreak
+package com.cinefreak
 
 import com.lagradost.cloudstream3.extractors.StreamTape
 import com.lagradost.cloudstream3.plugins.BasePlugin
@@ -42,6 +42,5 @@ class CinefreakPlugin: BasePlugin() {
         )
     }
 }
-
 
 

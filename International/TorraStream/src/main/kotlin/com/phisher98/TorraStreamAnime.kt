@@ -1,4 +1,4 @@
-package com.admknight.torrastream
+package com.phisher98
 
 import android.content.SharedPreferences
 import android.util.Base64
@@ -41,8 +41,8 @@ import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.nicehttp.RequestBodyTypes
-import com.admknight.torrastream.TorraStream.Companion.Meteorfortheweebs
-import com.admknight.torrastream.TorraStream.Companion.TorboxAPI
+import com.phisher98.TorraStream.Companion.Meteorfortheweebs
+import com.phisher98.TorraStream.Companion.TorboxAPI
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONArray
@@ -595,7 +595,5 @@ open class TorraStreamAnime(private val sharedPref: SharedPreferences) : MainAPI
         }
     }
 }
-
-
 
 

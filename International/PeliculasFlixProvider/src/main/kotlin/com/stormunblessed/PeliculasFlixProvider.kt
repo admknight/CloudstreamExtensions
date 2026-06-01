@@ -1,10 +1,12 @@
-package com.admknight.peliculasflix
+package com.stormunblessed
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.ExtractorLinkType
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
 import okhttp3.MediaType.Companion.toMediaType
@@ -105,7 +107,7 @@ class PeliculasFlixProvider:MainAPI() {
         }
         items.add(HomePageList("Peliculas", home!!))
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     private fun tasa(
@@ -186,14 +188,14 @@ class PeliculasFlixProvider:MainAPI() {
                 val file = fi?.file ?: ""
                 if (check) {
                     callback(
-                        ExtractorLink(
-                            this.name,
-                            this.name,
-                            file,
-                            "",
-                            Qualities.Unknown.value,
-                            file.contains(".m3u8")
-                        )
+                        newExtractorLink(
+                            source = this.name,
+                            name = this.name,
+                            url = file,
+                            type = if (file.contains(".m3u8")) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+                        ) {
+                            this.quality = Qualities.Unknown.value
+                        }
                     )
                 } else {
                     ///nothing
@@ -205,6 +207,3 @@ class PeliculasFlixProvider:MainAPI() {
         return true
     }
 }
-
-
-

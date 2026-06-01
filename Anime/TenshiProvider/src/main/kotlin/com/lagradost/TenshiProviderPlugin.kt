@@ -1,5 +1,5 @@
 
-package com.admknight.tenshi
+package com.lagradost.tenshiprovider
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,6 +12,3 @@ class TenshiProviderPlugin: Plugin() {
         registerMainAPI(TenshiProvider())
     }
 }
-
-
-

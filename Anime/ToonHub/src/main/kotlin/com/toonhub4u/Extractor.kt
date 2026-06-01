@@ -1,4 +1,4 @@
-package com.admknight.toonhub
+package com.toonhub4u
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.JsonNode
@@ -245,6 +245,5 @@ open class GDMirrorbot : ExtractorApi() {
         }
     }
 }
-
 
 

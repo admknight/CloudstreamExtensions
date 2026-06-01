@@ -1,12 +1,11 @@
-package com.admknight.pelisplusso
+package com.lagradost.cloudstream3.movieproviders
 
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import com.lagradost.cloudstream3.utils.getQualityFromName
-import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.jsoup.Jsoup
 import java.util.*
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -27,30 +26,41 @@ class PelisplusSOProvider : MainAPI() {
         val items = ArrayList<HomePageList>()
         val urls = listOf(
             Pair("$mainUrl/series", "Series actualizadas",),
-            Pair("$mainUrl/", "Peliculas actualizadas"),
+                Pair("$mainUrl/", "Peliculas actualizadas"),
         )
+        runAllAsync({
+            items.add(HomePageList("Estrenos", app.get(mainUrl).document.select("div#owl-demo-premiere-movies .pull-left").map{
+                                        val title = it.selectFirst("p")?.text() ?: ""
+                                        newTvSeriesSearchResponse(
+                                                title,
+                                                fixUrl(it.selectFirst("a")?.attr("href") ?: ""),
+                                                this.name,
+                                                TvType.Movie,
+                                                it.selectFirst("img")?.attr("src"),
+                                                it.selectFirst("span.year").toString().toIntOrNull(),
+                                                null,
+                                        )
+            }))
 
-        items.add(HomePageList("Estrenos", app.get(mainUrl).document.select("div#owl-demo-premiere-movies .pull-left").map{
-            val title = it.selectFirst("p")?.text() ?: ""
-            newTvSeriesSearchResponse(title, fixUrl(it.selectFirst("a")?.attr("href") ?: ""), TvType.Movie) {
-                this.posterUrl = it.selectFirst("img")?.attr("src")
-                this.year = it.selectFirst("span.year")?.text()?.toIntOrNull()
-            }
-        }))
-
-        urls.amap { (url, name) ->
-            val soup = app.get(url).document
-            val home = soup.select(".main-peliculas div.item-pelicula").map {
-                val title = it.selectFirst(".item-detail p")?.text() ?: ""
-                val titleRegex = Regex("(\\d+)x(\\d+)")
-                newTvSeriesSearchResponse(title.replace(titleRegex,""), fixUrl(it.selectFirst("a")?.attr("href") ?: ""), TvType.Movie) {
-                    this.posterUrl = it.selectFirst("img")?.attr("src")
-                    this.year = it.selectFirst("span.year")?.text()?.toIntOrNull()
+            urls.map { (url, name) ->
+                val soup = app.get(url).document
+                val home = soup.select(".main-peliculas div.item-pelicula").map {
+                    val title = it.selectFirst(".item-detail p")?.text() ?: ""
+                    val titleRegex = Regex("(\\d+)x(\\d+)")
+                    newTvSeriesSearchResponse(
+                        title.replace(titleRegex,""),
+                            fixUrl(it.selectFirst("a")?.attr("href") ?: ""),
+                            this.name,
+                            TvType.Movie,
+                            it.selectFirst("img")?.attr("src"),
+                            it.selectFirst("span.year").toString().toIntOrNull(),
+                            null,
+                    )
                 }
-            }
 
-            items.add(HomePageList(name, home))
-        }
+                items.add(HomePageList(name, home))
+            }
+        })
 
         if (items.size <= 0) throw ErrorLoadingException()
         return newHomePageResponse(items)
@@ -84,15 +94,24 @@ class PelisplusSOProvider : MainAPI() {
             val isMovie = href.contains("/pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(title, href, TvType.Movie) {
-                    this.posterUrl = image
-                    this.year = year
-                }
+                newMovieSearchResponse(
+                        title,
+                        href,
+                        this.name,
+                        TvType.Movie,
+                        image,
+                        year
+                )
             } else {
-                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
-                    this.posterUrl = image
-                    this.year = year
-                }
+                newTvSeriesSearchResponse(
+                        title,
+                        href,
+                        this.name,
+                        TvType.TvSeries,
+                        image,
+                        year,
+                        null
+                )
             }
         }
     }
@@ -112,11 +131,13 @@ class PelisplusSOProvider : MainAPI() {
             val isValid = seasonid.size == 2
             val episode = if (isValid) seasonid.getOrNull(1) else null
             val season = if (isValid) seasonid.getOrNull(0) else null
-            newEpisode(href) {
-                this.name = epTitle
-                this.season = season
-                this.episode = episode
-            }
+            newEpisode(
+                    href,
+                    epTitle,
+                    season = season,
+                    episode = episode,
+
+                    )
         }.reversed()
 
         val year = Regex("(\\d*)").find(soup.select(".info-half").text())
@@ -129,22 +150,35 @@ class PelisplusSOProvider : MainAPI() {
 
         return when (tvType) {
             TvType.TvSeries -> {
-                newTvSeriesLoadResponse(title, url, tvType, episodes) {
-                    this.posterUrl = poster
-                    this.year = year?.value?.toIntOrNull()
-                    this.plot = description
-                    this.showStatus = ShowStatus.Ongoing
-                    this.tags = tags
-                }
+                newTvSeriesLoadResponse(
+                        title,
+                        url,
+                        this.name,
+                        tvType,
+                        episodes,
+                        poster,
+                        year.toString().toIntOrNull(),
+                        description,
+                        ShowStatus.Ongoing,
+                        null,
+                        tags,
+                )
             }
             TvType.Movie -> {
-                newMovieLoadResponse(title, url, tvType, url) {
-                    this.posterUrl = poster
-                    this.year = year?.value?.toIntOrNull()
-                    this.plot = description
-                    this.tags = tags
-                    this.duration = duration?.value?.toIntOrNull()
-                }
+                newMovieLoadResponse(
+                        title,
+                        url,
+                        this.name,
+                        tvType,
+                        url,
+                        poster,
+                        year.toString().toIntOrNull(),
+                        description,
+                        null,
+                        tags,
+                        duration.toString().toIntOrNull(),
+
+                        )
             }
             else -> null
         }
@@ -162,17 +196,16 @@ class PelisplusSOProvider : MainAPI() {
                 name,
                 m3u8,
                 mainUrl,
-        ).forEach {
+        ).map {
             callback(
-                newExtractorLink(
-                    name,
-                    "$name $lang",
-                    it.url,
-                    INFER_TYPE
-                ) {
-                    this.referer = mainUrl
-                    this.quality = getQualityFromName(it.quality.toString())
-                }
+                    newExtractorLink(
+                            name,
+                            "$name $lang",
+                            it.url,
+                            mainUrl,
+                            getQualityFromName(it.quality.toString()),
+                            true
+                    )
             )
         }
         return true

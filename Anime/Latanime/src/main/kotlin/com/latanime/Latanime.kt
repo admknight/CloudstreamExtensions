@@ -1,4 +1,4 @@
-package com.admknight.latanime
+package com.latanime
 
 import com.lagradost.cloudstream3.addDubStatus
 import com.lagradost.cloudstream3.DubStatus
@@ -131,6 +131,5 @@ class Latanime : MainAPI() {
             ?: this.attr("src").takeIf { it.isNotBlank() && it.startsWith("http") }
     }
 }
-
 
 

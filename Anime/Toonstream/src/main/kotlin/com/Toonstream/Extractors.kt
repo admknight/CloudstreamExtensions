@@ -1,4 +1,4 @@
-package com.admknight.toonstream
+package com.Toonstream
 
 
 import com.google.gson.JsonParser
@@ -170,7 +170,6 @@ class FileMoonnl : Filesim() {
     override val mainUrl = "https://filemoon.nl"
     override val name = "FileMoon"
 }
-
 
 
 

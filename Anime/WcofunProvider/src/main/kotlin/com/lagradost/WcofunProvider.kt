@@ -1,11 +1,11 @@
-package com.admknight.wcofun
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.mvvm.safeApiCall
+import com.lagradost.cloudstream3.mvvm.suspendSafeApiCall
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.Qualities
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
@@ -95,9 +95,7 @@ class WcofunProvider : MainAPI() {
         val episodes = eps.map {
             val name = it.select("a").text()
             val link = it.selectFirst("a")!!.attr("href")
-            newEpisode(link) {
-                this.name = name
-            }
+            newEpisode(link, name = name)
         }.reversed()
 
         return newAnimeLoadResponse(title, url, type) {
@@ -145,17 +143,16 @@ class WcofunProvider : MainAPI() {
                 listOf(
                     Pair(it.hd, "HD"),
                     Pair(it.enc, "SD")
-                ).forEach { source ->
-                    safeApiCall {
+                ).map { source ->
+                    suspendSafeApiCall {
                         callback.invoke(
                             newExtractorLink(
                                 "${this.name} ${source.second}",
                                 "${this.name} ${source.second}",
                                 "${it.server}/getvid?evid=${source.first}",
-                            ) {
-                                this.referer = mainUrl
-                                this.quality = if (source.second == "HD") Qualities.P720.value else Qualities.P480.value
-                            }
+                                mainUrl,
+                                if (source.second == "HD") Qualities.P720.value else Qualities.P480.value
+                            )
                         )
                     }
                 }

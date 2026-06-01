@@ -1,4 +1,4 @@
-package com.admknight.quickiptv
+package com.phisher98
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -13,6 +13,5 @@ class QuickIPTVPlugin: BasePlugin() {
         registerMainAPI(JapanIPTV())
     }
 }
-
 
 

@@ -1,6 +1,7 @@
-package com.admknight.sflix
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import com.lagradost.SflixProvider.Companion.extractRabbitStream
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addAniListId
 import com.lagradost.cloudstream3.LoadResponse.Companion.addMalId
@@ -9,6 +10,7 @@ import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 import com.lagradost.cloudstream3.utils.Coroutines.ioSafe
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.nicehttp.Requests.Companion.await
 import okhttp3.Interceptor
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
@@ -52,11 +54,15 @@ class ZoroProvider : MainAPI() {
         val href = fixUrl(this.select("a").attr("href"))
         val title = this.select("h3.film-name").text()
         val dubSub = this.select(".film-poster > .tick.ltr").text()
+        //val episodes = this.selectFirst(".film-poster > .tick-eps")?.text()?.toIntOrNull()
 
         val dubExist = dubSub.contains("dub", ignoreCase = true)
         val subExist = dubSub.contains("sub", ignoreCase = true)
         val episodes =
             this.selectFirst(".film-poster > .tick.rtl > .tick-eps")?.text()?.let { eps ->
+                //println("REGEX:::: $eps")
+                // current episode / max episode
+                //Regex("Ep (\\d+)/(\\d+)")
                 epRegex.find(eps)?.groupValues?.get(1)?.toIntOrNull()
             }
         if (href.contains("/news/") || title.trim().equals("News", ignoreCase = true)) return null
@@ -99,6 +105,33 @@ class ZoroProvider : MainAPI() {
         @JsonProperty("html") val html: String
     )
 
+//    override suspend fun quickSearch(query: String): List<SearchResponse> {
+//        val url = "$mainUrl/ajax/search/suggest?keyword=${query}"
+//        val html = mapper.readValue<Response>(khttp.get(url).text).html
+//        val document = Jsoup.parse(html)
+//
+//        return document.select("a.nav-item").map {
+//            val title = it.selectFirst(".film-name")?.text().toString()
+//            val href = fixUrl(it.attr("href"))
+//            val year = it.selectFirst(".film-infor > span")?.text()?.split(",")?.get(1)?.trim()?.toIntOrNull()
+//            val image = it.select("img").attr("data-src")
+//
+//            newAnimeSearchResponse(
+//                title,
+//                href,
+//                this.name,
+//                TvType.TvSeries,
+//                image,
+//                year,
+//                null,
+//                EnumSet.of(DubStatus.Subbed),
+//                null,
+//                null
+//            )
+//
+//        }
+//    }
+
     override suspend fun search(query: String): List<SearchResponse> {
         val link = "$mainUrl/search?keyword=$query"
         val html = app.get(link).text
@@ -110,7 +143,8 @@ class ZoroProvider : MainAPI() {
             val poster = filmPoster!!.selectFirst("img")?.attr("data-src")
 
             val episodes = filmPoster.selectFirst("div.rtl > div.tick-eps")?.text()?.let { eps ->
-                val epRegex = Regex("Ep (\\d+)/")
+                // current episode / max episode
+                val epRegex = Regex("Ep (\\d+)/")//Regex("Ep (\\d+)/(\\d+)")
                 epRegex.find(eps)?.groupValues?.get(1)?.toIntOrNull()
             }
             val dubsub = filmPoster.selectFirst("div.ltr")?.text()
@@ -214,9 +248,14 @@ class ZoroProvider : MainAPI() {
                     if (epHref == null || epTitle == null || epPoster == null) {
                         null
                     } else {
-                        newAnimeSearchResponse(epTitle, fixUrl(epHref), TvType.Anime) {
-                            this.posterUrl = epPoster
-                        }
+                        newAnimeSearchResponse(
+                            epTitle,
+                            fixUrl(epHref),
+                            this.name,
+                            TvType.Anime,
+                            epPoster,
+                            dubStatus = null
+                        )
                     }
                 }
 
@@ -240,14 +279,21 @@ class ZoroProvider : MainAPI() {
         @JsonProperty("link") val link: String
     )
 
+    /** Url hashcode to sid */
     var sid: HashMap<Int, String?> = hashMapOf()
 
+    /**
+     * Makes an identical Options request before .ts request
+     * Adds an SID header to the .ts request.
+     * */
     override fun getVideoInterceptor(extractorLink: ExtractorLink): Interceptor {
+        // Needs to be object instead of lambda to make it compile correctly
         return object : Interceptor {
             override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
                 val request = chain.request()
                 if (request.url.toString().endsWith(".ts")
                     && request.method != OPTIONS
+                    // No option requests on VidCloud
                     && !request.url.toString().contains("betterstream")
                 ) {
                     val newRequest =
@@ -269,6 +315,10 @@ class ZoroProvider : MainAPI() {
         }
     }
 
+    private suspend fun getKey(): String {
+        return app.get("https://raw.githubusercontent.com/consumet/rapidclown/main/key.txt").text
+    }
+
     override suspend fun loadLinks(
         data: String,
         isCasting: Boolean,
@@ -286,6 +336,10 @@ class ZoroProvider : MainAPI() {
             )
         }
 
+//        val extractorData =
+//            "https://ws1.rapid-cloud.ru/socket.io/?EIO=4&transport=polling"
+
+        // Prevent duplicates
         servers.distinctBy { it.second }.map {
             val link =
                 "$mainUrl/ajax/v2/episode/sources?id=${it.second}"
@@ -298,8 +352,10 @@ class ZoroProvider : MainAPI() {
                 extractRabbitStream(
                     extractorLink,
                     subtitleCallback,
+                    // Blacklist VidCloud for now
                     { videoLink -> if (!videoLink.url.contains("betterstream")) callback(videoLink) },
                     false,
+                    null,
                     decryptKey = getKey()
                 ) { sourceName ->
                     sourceName + " - ${it.first}"
@@ -310,3 +366,6 @@ class ZoroProvider : MainAPI() {
         return true
     }
 }
+
+
+

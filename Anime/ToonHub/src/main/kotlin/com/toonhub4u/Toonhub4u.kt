@@ -1,4 +1,4 @@
-package com.admknight.toonhub
+package com.toonhub4u
 
 
 import com.lagradost.api.Log
@@ -133,7 +133,6 @@ class Toonhub4u : MainAPI() {
         return true
     }
 }
-
 
 
 

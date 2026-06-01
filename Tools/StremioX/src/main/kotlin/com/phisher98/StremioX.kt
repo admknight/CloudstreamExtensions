@@ -1,4 +1,4 @@
-package com.admknight.stremiox
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -41,8 +41,8 @@ import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.admknight.stremiox.SubsExtractors.invokeOpenSubs
-import com.admknight.stremiox.SubsExtractors.invokeWatchsomuch
+import com.phisher98.SubsExtractors.invokeOpenSubs
+import com.phisher98.SubsExtractors.invokeWatchsomuch
 
 class StremioX(override var mainUrl: String, override var name: String) : TmdbProvider() {
     override val hasMainPage = true
@@ -710,7 +710,6 @@ class StremioX(override var mainUrl: String, override var name: String) : TmdbPr
     )
 
 }
-
 
 
 

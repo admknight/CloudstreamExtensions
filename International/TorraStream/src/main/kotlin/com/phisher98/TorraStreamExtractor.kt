@@ -1,8 +1,8 @@
-package com.admknight.torrastream
+package com.phisher98
 
-import com.admknight.torrastream.TorraStream.Companion.AnimetoshoAPI
-import com.admknight.torrastream.TorraStream.Companion.SubtitlesAPI
-import com.admknight.torrastream.TorraStream.Companion.TRACKER_LIST_URL
+import com.phisher98.TorraStream.Companion.AnimetoshoAPI
+import com.phisher98.TorraStream.Companion.SubtitlesAPI
+import com.phisher98.TorraStream.Companion.TRACKER_LIST_URL
 import com.google.gson.Gson
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
@@ -973,6 +973,5 @@ suspend fun invokeMeteorAnimeDebian(
         )
     }
 }
-
 
 

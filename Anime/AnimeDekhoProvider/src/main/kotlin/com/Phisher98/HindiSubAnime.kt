@@ -1,4 +1,4 @@
-package com.admknight.animedekho
+package com.phisher98
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.ErrorLoadingException
@@ -43,6 +43,5 @@ class HindiSubAnime : AnimeDekhoProvider() {
         return true
     }
 }
-
 
 

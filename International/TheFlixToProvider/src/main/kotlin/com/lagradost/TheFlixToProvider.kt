@@ -1,4 +1,4 @@
-package com.admknight.theflixto
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -184,9 +184,15 @@ class TheFlixToProvider : MainAPI() {
                                 ""
                             )
                         }/season-1/episode-1"
-                    newTvSeriesSearchResponse(title, link, typeinfo) {
-                        this.posterUrl = poster
-                    }
+                    newTvSeriesSearchResponse(
+                        title,
+                        link,
+                        this.name,
+                        typeinfo,
+                        poster,
+                        null,
+                        null,
+                    )
                 }
                 items.add(HomePageList(homename, home))
             }
@@ -244,15 +250,26 @@ class TheFlixToProvider : MainAPI() {
                         else "$mainUrl/tv-show/${info.id}-${cleanTitle(title)}/season-1/episode-1"
                         if (typeinfo == TvType.Movie) {
                             search.add(
-                                newMovieSearchResponse(title, link, TvType.Movie) {
-                                    this.posterUrl = poster
-                                }
+                                newMovieSearchResponse(
+                                    title,
+                                    link,
+                                    this.name,
+                                    TvType.Movie,
+                                    poster,
+                                    null
+                                )
                             )
                         } else {
                             search.add(
-                                newTvSeriesSearchResponse(title, link, TvType.TvSeries) {
-                                    this.posterUrl = poster
-                                }
+                                newTvSeriesSearchResponse(
+                                    title,
+                                    link,
+                                    this.name,
+                                    TvType.TvSeries,
+                                    poster,
+                                    null,
+                                    null
+                                )
                             )
                         }
                     }
@@ -444,14 +461,15 @@ class TheFlixToProvider : MainAPI() {
                     val test = epi.videos
                     val ratinginfo = (epi.voteAverage)?.times(10)?.toInt()
                     val rating = if (ratinginfo?.equals(0) == true) null else ratinginfo
-                    val eps = newEpisode("$mainUrl/tv-show/$movieId-${cleanTitle(movietitle!!)}/season-$seasonum/episode-$episodenu") {
-                        this.name = title
-                        this.season = seasonum
-                        this.episode = episodenu
-                        this.description = epDesc
-                        this.posterUrl = seasonPoster
-                        this.score = Score.from10(rating?.toDouble())
-                    }
+                    val eps = newEpisode(
+                        "$mainUrl/tv-show/$movieId-${cleanTitle(movietitle!!)}/season-$seasonum/episode-$episodenu",
+                        title,
+                        seasonum,
+                        episodenu,
+                        description = epDesc!!,
+                        posterUrl = seasonPoster,
+                        rating = rating,
+                    )
                     if (test!!.isNotEmpty()) {
                         episodes.add(eps)
                     } else {
@@ -469,9 +487,14 @@ class TheFlixToProvider : MainAPI() {
             val posterrec = loadDocs.posterUrl
             val link = if (isMovie) "$mainUrl/movie/${loadDocs.id}-${cleanTitle(title)}"
             else "$mainUrl/tv-show/${loadDocs.id}-${cleanTitle(title)}/season-1/episode-1"
-            newMovieSearchResponse(title, link, tvtype) {
-                this.posterUrl = posterrec
-            }
+            newMovieSearchResponse(
+                title,
+                link,
+                this.name,
+                tvtype,
+                posterrec,
+                year = null
+            )
         }
 
         val year = metadata.releaseDate?.substringBefore("-")
@@ -490,7 +513,7 @@ class TheFlixToProvider : MainAPI() {
                     this.tags = tags
                     this.recommendations = recommendationsitem
                     this.comingSoon = comingsoon
-                    this.score = Score.from10(metadata.voteAverage)
+                    this.rating = rating
                 }
             }
             TvType.Movie -> {
@@ -503,7 +526,7 @@ class TheFlixToProvider : MainAPI() {
                     this.tags = tags
                     this.recommendations = recommendationsitem
                     this.comingSoon = comingsoon
-                    this.score = Score.from10(metadata.voteAverage)
+                    this.rating = rating
                 }
             }
             else -> null
@@ -530,25 +553,25 @@ class TheFlixToProvider : MainAPI() {
         val qualityReg = Regex("(\\d+p)")
         if (isMovie) {
             json.props?.pageProps?.movie?.videos?.map { id ->
-                    val videoData = app.get(
-                        "$authhost/movies/videos/$id/request-access?contentUsageType=Viewing",
-                        cookies = latestCookies
-                    ).parsedSafe<VideoData>() ?: return@map false
-                    val extractedLink = videoData.url
+                val videoData = app.get(
+                    "$authhost/movies/videos/$id/request-access?contentUsageType=Viewing",
+                    cookies = latestCookies
+                ).parsedSafe<VideoData>() ?: return@apmap false
+                val extractedLink = videoData.url
 
-                    if (!extractedLink.isNullOrEmpty()) {
-                        val quality = qualityReg.find(extractedLink)?.value ?: ""
-                        callback(
-                            newExtractorLink(
-                                name,
-                                name,
-                                extractedLink,
-                            ) {
-                                this.referer = this@TheFlixToProvider.mainUrl + "/"
-                                this.quality = getQualityFromName(quality)
-                            }
+                if (!extractedLink.isNullOrEmpty()) {
+                    val quality = qualityReg.find(extractedLink)?.value ?: ""
+                    callback(
+                        newExtractorLink(
+                            name,
+                            name,
+                            extractedLink,
+                            this.mainUrl + "/",
+                            getQualityFromName(quality),
+                            false
                         )
-                    } else null
+                    )
+                } else null
             }
         } else {
             val dataRegex = Regex("(season-(\\d+)\\/episode-(\\d+))")
@@ -568,7 +591,7 @@ class TheFlixToProvider : MainAPI() {
                             val jsonserie = app.get(
                                 "$authhost/tv/videos/$id/request-access?contentUsageType=Viewing",
                                 cookies = latestCookies
-                            ).parsedSafe<VideoData>() ?: return@map false
+                            ).parsedSafe<VideoData>() ?: return@apmap false
                             val extractedlink = jsonserie.url
                             if (!extractedlink.isNullOrEmpty()) {
                                 val quality = qualityReg.find(extractedlink)?.value ?: ""
@@ -577,10 +600,10 @@ class TheFlixToProvider : MainAPI() {
                                         name,
                                         name,
                                         extractedlink,
-                                    ) {
-                                        this.referer = this@TheFlixToProvider.mainUrl + "/"
-                                        this.quality = getQualityFromName(quality)
-                                    }
+                                        this.mainUrl + "/",
+                                        getQualityFromName(quality),
+                                        false
+                                    )
                                 )
                             } else null
                         }

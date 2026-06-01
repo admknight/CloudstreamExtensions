@@ -1,4 +1,4 @@
-package com.admknight.ohli24
+package com.ohli24
 
 import com.lagradost.cloudstream3.DubStatus
 import com.lagradost.cloudstream3.HomePageList
@@ -163,6 +163,5 @@ class OHLI24 : MainAPI() {
     }
 
 }
-
 
 

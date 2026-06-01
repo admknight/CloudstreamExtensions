@@ -1,4 +1,4 @@
-package com.admknight.ohli24
+package com.ohli24
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
@@ -74,7 +74,6 @@ data class Response(
     val attachmentLinks: List<Any?>,
     val ck: String,
 )
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.showbox
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.TvType
@@ -130,6 +130,5 @@ suspend fun fetchTmdbLogoUrl(
     // No language match & no voted logos
     return null
 }
-
 
 

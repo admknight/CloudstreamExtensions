@@ -1,6 +1,1 @@
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    status = 1
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioX/icon.png"
-}
+import org.jetbrains.kotlin.konan.properties.Properties  // use an integer for version numbers version = 22 android {     buildFeatures {         buildConfig = true         viewBinding = true     }     defaultConfig {              requiresResources = true          iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioX/icon.png" } 

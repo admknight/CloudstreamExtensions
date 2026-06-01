@@ -1,4 +1,4 @@
-package com.admknight.cinemacity
+package com.Cinemacity
 
 import android.util.Log
 import com.google.gson.Gson
@@ -657,7 +657,6 @@ class Cinemacity : MainAPI() {
         return base + qs
     }
 }
-
 
 
 

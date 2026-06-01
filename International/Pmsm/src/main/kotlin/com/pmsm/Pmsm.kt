@@ -1,4 +1,4 @@
-package com.admknight.pmsm
+package com.pmsm
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.Episode
@@ -209,7 +209,6 @@ class Pmsm : MainAPI() {
         @param:JsonProperty("msg") val msg: String? = null
     )
 }
-
 
 
 

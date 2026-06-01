@@ -46,11 +46,19 @@ foreach ($URL in $Sources) {
             $Code = Get-Content $_.FullName -Raw
             $Code = $Code -replace 'argamap\(', 'runAllAsync('
             $Code = $Code -replace '\.apmap', '.map'
-            $Code = $Code -replace '(?<!new)MovieSearchResponse\(', 'newMovieSearchResponse('
-            $Code = $Code -replace '(?<!new)TvSeriesSearchResponse\(', 'newTvSeriesSearchResponse('
-            $Code = $Code -replace '(?<!new)AnimeSearchResponse\(', 'newAnimeSearchResponse('
-            $Code = $Code -replace '(?<!new)LiveSearchResponse\(', 'newLiveSearchResponse('
-            $Code = $Code -replace '(?<!new)HomePageResponse\(', 'newHomePageResponse('
+
+            # Aggressive DSL Migration
+            $Code = $Code -replace '\bMovieSearchResponse\(', 'newMovieSearchResponse('
+            $Code = $Code -replace '\bTvSeriesSearchResponse\(', 'newTvSeriesSearchResponse('
+            $Code = $Code -replace '\bAnimeSearchResponse\(', 'newAnimeSearchResponse('
+            $Code = $Code -replace '\bLiveSearchResponse\(', 'newLiveSearchResponse('
+            $Code = $Code -replace '\bHomePageResponse\(', 'newHomePageResponse('
+            $Code = $Code -replace '\bAnimeLoadResponse\(', 'newAnimeLoadResponse('
+            $Code = $Code -replace '\bMovieLoadResponse\(', 'newMovieLoadResponse('
+            $Code = $Code -replace '\bTvSeriesLoadResponse\(', 'newTvSeriesLoadResponse('
+            $Code = $Code -replace '\bLiveStreamLoadResponse\(', 'newLiveStreamLoadResponse('
+            $Code = $Code -replace '\bEpisode\(', 'newEpisode('
+            $Code = $Code -replace '\bExtractorLink\(', 'newExtractorLink('
 
             # Score / Rating Migration
             $Code = $Code -replace 'rating\s*=\s*(.*)\.toRatingInt\(\)', 'score = Score.from10($1)'

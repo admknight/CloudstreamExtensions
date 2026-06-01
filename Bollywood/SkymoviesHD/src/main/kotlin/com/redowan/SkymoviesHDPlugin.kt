@@ -1,9 +1,9 @@
-package com.admknight.skymovieshd
+package com.redowan
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
 import android.content.Context
-import com.admknight.skymovieshd.HubCloud
+import com.redowan.HubCloud
 
 @CloudstreamPlugin
 class SkymoviesHDPlugin: Plugin() {
@@ -13,6 +13,5 @@ class SkymoviesHDPlugin: Plugin() {
         registerExtractorAPI(HubCloud())
     }
 }
-
 
 

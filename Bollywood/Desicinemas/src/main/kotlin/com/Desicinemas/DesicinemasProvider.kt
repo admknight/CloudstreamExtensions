@@ -1,4 +1,4 @@
-package com.admknight.desicinemas
+package com.Desicinemas
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -82,7 +82,6 @@ open class DesicinemasProvider : MainAPI() {
         return true
     }
 }
-
 
 
 

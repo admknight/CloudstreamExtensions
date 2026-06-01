@@ -1,4 +1,4 @@
-package com.admknight.animenosub
+package com.Animenosub
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
@@ -123,7 +123,6 @@ class Animenosub : MainAPI() {
         return true
     }
 }
-
 
 
 

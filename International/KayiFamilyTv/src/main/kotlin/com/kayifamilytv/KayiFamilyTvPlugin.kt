@@ -1,4 +1,4 @@
-package com.admknight.kayifamilytv
+package com.kayifamilytv
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -13,6 +13,5 @@ class KayiFamilyTvPlugin: Plugin() {
         registerExtractorAPI(FirePlayerX())
     }
 }
-
 
 

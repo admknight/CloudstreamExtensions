@@ -1,4 +1,4 @@
-package com.admknight.latanime
+package com.latanime
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -11,6 +11,5 @@ class LatanimeProvider: Plugin() {
         registerMainAPI(Latanime())
     }
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.dorabash
+package com.DoraBash
 
 import android.util.Log
 import org.jsoup.nodes.Element

@@ -1,4 +1,4 @@
-package com.admknight.idlix
+package com.idlix
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Actor
@@ -454,7 +454,6 @@ data class Subtitle(
     val label: String,
     val path: String,
 )
-
 
 
 

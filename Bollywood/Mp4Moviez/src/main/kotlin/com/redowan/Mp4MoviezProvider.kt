@@ -1,4 +1,4 @@
-package com.admknight.mp4moviez
+package com.redowan
 
 import com.lagradost.cloudstream3.HomePageResponse
 import com.lagradost.cloudstream3.LoadResponse
@@ -130,7 +130,6 @@ class Mp4MoviezProvider : MainAPI() {
 
     private fun getVideoQuality(url: String?) = url?.substringAfter("q=")?.substringBefore("&")?.toIntOrNull() ?: Qualities.Unknown.value
 }
-
 
 
 

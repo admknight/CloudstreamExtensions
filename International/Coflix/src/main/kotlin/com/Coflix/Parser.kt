@@ -1,4 +1,4 @@
-package com.admknight.coflix
+package com.Coflix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -36,7 +36,7 @@ data class EpRes(
     val episodes: List<Episode>,
 )
 
-data class Episode(
+data class newEpisode(
     val id: Long,
     val title: String,
     val number: String,
@@ -61,7 +61,6 @@ data class Search2(
     val director: String,
     val cast: String?,
 )
-
 
 
 

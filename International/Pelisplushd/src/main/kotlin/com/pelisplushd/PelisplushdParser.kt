@@ -1,4 +1,4 @@
-package com.admknight.pelisplushd
+package com.pelisplushd
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.APIHolder.unixTimeMS
@@ -196,6 +196,5 @@ fun isUpcoming(dateString: String?): Boolean {
         false
     }
 }
-
 
 

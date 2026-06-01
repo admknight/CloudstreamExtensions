@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 // Cloudstream & NiceHttp
 import com.lagradost.api.Log
@@ -53,7 +53,7 @@ import javax.crypto.spec.SecretKeySpec
 import java.math.BigInteger
 
 // Settings
-import com.admknight.cinestream.Settings
+import com.megix.settings.Settings
 
 
 class SpecOption(searchTerms: List<String>, val label: String) {

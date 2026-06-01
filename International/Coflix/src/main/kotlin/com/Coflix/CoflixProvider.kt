@@ -1,4 +1,4 @@
-package com.admknight.coflix
+package com.Coflix
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -23,6 +23,5 @@ class CoflixProvider: BasePlugin() {
         registerExtractorAPI(Voe())
     }
 }
-
 
 

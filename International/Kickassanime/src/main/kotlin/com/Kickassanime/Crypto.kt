@@ -1,4 +1,4 @@
-package com.admknight.kickassanime
+package com.kickassanime
 /*
  * Copyright (C) The Tachiyomi Open Source Project
  *
@@ -209,15 +209,14 @@ object CryptoAES {
             Arrays.fill(generatedData, 0.toByte())
         }
     }
-}
 
-// Stolen from AnimixPlay(EN) / GogoCdnExtractor
-fun String.decodeHex(): ByteArray {
-    check(length % 2 == 0) { "Must have an even length" }
-    return chunked(2)
-        .map { it.toInt(16).toByte() }
-        .toByteArray()
+    // Stolen from AnimixPlay(EN) / GogoCdnExtractor
+    fun String.decodeHex(): ByteArray {
+        check(length % 2 == 0) { "Must have an even length" }
+        return chunked(2)
+            .map { it.toInt(16).toByte() }
+            .toByteArray()
+    }
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.quickiptv
+package com.phisher98
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
@@ -76,6 +76,5 @@ class JapanIPTV : SportsIPTV() {
         return true
     }
 }
-
 
 

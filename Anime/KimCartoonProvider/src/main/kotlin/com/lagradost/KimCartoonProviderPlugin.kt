@@ -1,5 +1,5 @@
 
-package com.admknight.kimcartoon
+package com.lagradost
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,6 +12,5 @@ class KimCartoonProviderPlugin: Plugin() {
         registerMainAPI(KimCartoonProvider())
     }
 }
-
 
 

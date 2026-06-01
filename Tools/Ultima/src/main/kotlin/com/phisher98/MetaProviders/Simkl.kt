@@ -1,4 +1,4 @@
-package com.admknight.ultima
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.Episode
@@ -27,9 +27,9 @@ import com.lagradost.cloudstream3.syncproviders.providers.SimklApi.Companion.Med
 import com.lagradost.cloudstream3.syncproviders.providers.SimklApi.Companion.getPosterUrl
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.admknight.ultima.UltimaMediaProvidersUtils.invokeExtractors
-import com.admknight.ultima.UltimaUtils.Category
-import com.admknight.ultima.UltimaUtils.LinkData
+import com.phisher98.UltimaMediaProvidersUtils.invokeExtractors
+import com.phisher98.UltimaUtils.Category
+import com.phisher98.UltimaUtils.LinkData
 
 class Simkl(val plugin: UltimaPlugin) : MainAPI() {
     override var name = "Simkl"
@@ -260,7 +260,6 @@ class Simkl(val plugin: UltimaPlugin) : MainAPI() {
         @param:JsonProperty("anilist") val anilist: String? = null,
     )
 }
-
 
 
 

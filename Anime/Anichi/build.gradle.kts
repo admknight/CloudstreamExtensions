@@ -1,6 +1,1 @@
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    status = 1
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Anichi/icon.png"
-}
+import org.jetbrains.kotlin.konan.properties.Properties  // use an integer for version numbers version = 14 android {     buildFeatures {         buildConfig = true     }     defaultConfig {                   iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Anichi/icon.png"           isCrossPlatform = true }

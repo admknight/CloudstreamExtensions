@@ -1,4 +1,4 @@
-package com.admknight.animeav1
+package com.Animeav1
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -13,6 +13,5 @@ class Animeav1Provider: Plugin() {
         registerExtractorAPI(Zilla())
     }
 }
-
 
 

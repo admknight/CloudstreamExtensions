@@ -1,4 +1,4 @@
-package com.admknight.onepace
+package com.phisher98
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -160,7 +160,6 @@ class OnepaceProvider : MainAPI() {
     }
 
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.tamilblasters
+package com.tamilblasters
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -115,7 +115,6 @@ class TamilblastersProvider : MainAPI() {
         }
     }
 }
-
 
 
 

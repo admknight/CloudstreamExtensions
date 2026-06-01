@@ -1,4 +1,4 @@
-package com.admknight.fivemovierulz
+package com.darkdemon
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
@@ -107,7 +107,6 @@ class FivemovierulzProvider : MainAPI() { // all providers must be an instance o
         return links.isNotEmpty()
     }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.dudefilms
+package com.dudefilms
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -644,6 +644,5 @@ open class Gofile : ExtractorApi() {
         @param:JsonProperty("size") val size: Long? = 0L
     )
 }
-
 
 

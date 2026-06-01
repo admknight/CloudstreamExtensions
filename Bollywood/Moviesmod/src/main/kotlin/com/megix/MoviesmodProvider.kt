@@ -1,4 +1,4 @@
-package com.admknight.moviesmod
+package com.megix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.network.CloudflareKiller
@@ -290,7 +290,6 @@ open class MoviesmodProvider : MainAPI() {
         val source: String
     )
 }
-
 
 
 

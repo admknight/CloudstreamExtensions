@@ -1,12 +1,11 @@
-package com.admknight.ejatv
+package com.lagradost
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.ExtractorLinkType
-import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.Qualities
 import org.jsoup.nodes.Element
 
 class EjaTv : MainAPI() {
@@ -32,11 +31,11 @@ class EjaTv : MainAPI() {
             // Kinda hack way to get the title
             img?.attr("alt")?.replaceFirst("Watch ", "") ?: return null,
             href,
+            this@EjaTv.name,
             TvType.Live,
-        ) {
-            this.posterUrl = fixUrl(img.attr("src"))
-            this.lang = lang
-        }
+            fixUrl(img.attr("src")),
+            lang = lang
+        )
     }
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
@@ -87,11 +86,11 @@ class EjaTv : MainAPI() {
         return newLiveStreamLoadResponse(
             title,
             url,
+            this.name,
             LoadData(link, title).toJson(),
-        ) {
-            this.posterUrl = poster
-            this.plot = summary
-        }
+            poster,
+            plot = summary
+        )
     }
 
     data class LoadData(
@@ -112,10 +111,10 @@ class EjaTv : MainAPI() {
                 this.name,
                 loadData.title,
                 loadData.url,
-            ) {
-                this.quality = Qualities.Unknown.value
-                this.type = ExtractorLinkType.M3U8
-            }
+                "",
+                Qualities.Unknown.value,
+                isM3u8 = true
+            )
         )
         return true
     }

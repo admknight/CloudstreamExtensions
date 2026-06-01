@@ -1,4 +1,4 @@
-package com.admknight.animecloud
+package com.Animecloud
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
@@ -77,7 +77,6 @@ open class LuluStream : ExtractorApi() {
             }
     }
 }
-
 
 
 

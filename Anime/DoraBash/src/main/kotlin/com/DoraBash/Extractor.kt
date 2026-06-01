@@ -1,4 +1,4 @@
-package com.admknight.dorabash
+package com.DoraBash
 
 
 import com.lagradost.cloudstream3.app
@@ -52,6 +52,5 @@ class FileMoonIN : Filesim() {
     override val mainUrl = "https://filemoon.in"
     override val name = "FileMoonSx"
 }
-
 
 

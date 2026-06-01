@@ -1,4 +1,4 @@
-package com.admknight.superstream
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -294,6 +294,5 @@ data class FebboxFile(
     val thumb: String?,
     val thumb_big: String?
 )
-
 
 

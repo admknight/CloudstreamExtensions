@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.annotations.SerializedName
@@ -812,6 +812,5 @@ data class ZinkLink(
     val url: String,
     val title: String,
 )
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.megakino
+package com.Megakino
 
 import android.annotation.SuppressLint
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
@@ -55,7 +55,6 @@ data class Details(
     val views: String,
     val md5: String,
 )
-
 
 
 

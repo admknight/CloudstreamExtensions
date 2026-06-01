@@ -1,4 +1,4 @@
-package com.admknight.zinkmovies
+package com.zinkmovies
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -295,7 +295,6 @@ class HUBCDN : ExtractorApi() {
         }
     }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.ohli24
+package com.ohli24
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -12,6 +12,5 @@ class OHLI24Plugin: BasePlugin() {
         registerExtractorAPI(MichealCDN())
     }
 }
-
 
 

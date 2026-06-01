@@ -1,4 +1,4 @@
-package com.admknight.moviesdrive
+package com.megix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -360,7 +360,6 @@ class MoviesDriveProvider : MainAPI() { // all providers must be an instance of 
         val postTitle: String
     )
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.mplayer
+package com.MPlayer
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.lagradost.api.Log
@@ -519,6 +519,5 @@ private fun Headers.getCookies(cookieKey: String = "set-cookie"): Map<String, St
     }
 
 }
-
 
 

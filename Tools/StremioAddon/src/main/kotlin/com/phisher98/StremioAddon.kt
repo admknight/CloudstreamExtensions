@@ -1,4 +1,4 @@
-package com.admknight.stremioaddon
+package com.phisher98
 
 import android.content.SharedPreferences
 import android.os.Build
@@ -40,8 +40,8 @@ import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.admknight.stremioaddon.SubsExtractors.invokeOpenSubs
-import com.admknight.stremioaddon.SubsExtractors.invokeWatchsomuch
+import com.phisher98.SubsExtractors.invokeOpenSubs
+import com.phisher98.SubsExtractors.invokeWatchsomuch
 import java.util.Calendar
 
 class StremioAddon(private val sharedPref: SharedPreferences) : TmdbProvider() {
@@ -524,7 +524,6 @@ class StremioAddon(private val sharedPref: SharedPreferences) : TmdbProvider() {
     )
 
 }
-
 
 
 

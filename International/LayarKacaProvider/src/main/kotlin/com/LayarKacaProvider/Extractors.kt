@@ -1,4 +1,4 @@
-package com.admknight.layarkaca
+package com.layarKacaProvider
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -72,7 +72,6 @@ class Turbovidhls : Filesim() {
     override val name = "Turbovidhls"
     override var mainUrl = "https://turbovidhls.com"
 }
-
 
 
 

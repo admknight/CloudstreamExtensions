@@ -1,4 +1,4 @@
-package com.admknight.animedubhindi
+package com.animedubhindi
 
 import android.util.Log
 import org.jsoup.nodes.Element
@@ -209,7 +209,6 @@ class Animedubhindi : MainAPI() {
         return true
     }
 }
-
 
 
 

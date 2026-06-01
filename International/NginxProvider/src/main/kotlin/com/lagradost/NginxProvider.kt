@@ -1,4 +1,4 @@
-package com.admknight.nginx
+package com.lagradost
 
 
 import com.lagradost.cloudstream3.TvType
@@ -10,10 +10,10 @@ import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
 import com.lagradost.cloudstream3.mvvm.logError
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import com.lagradost.cloudstream3.utils.loadExtractor
-import com.lagradost.cloudstream3.utils.newExtractorLink
 
 class NginxProvider : MainAPI() {
     override var name = "Nginx"
@@ -148,7 +148,7 @@ class NginxProvider : MainAPI() {
                     ) {
                         this.year = date
                         this.plot = description
-                        this.score = Score.from10(ratingAverage)
+                        this.rating = ratingAverage
                         this.tags = tagsList
                         this.backgroundPosterUrl = fanart
                         this.duration = durationInMinutes
@@ -235,6 +235,9 @@ class NginxProvider : MainAPI() {
                     }
                 }
                 return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodeList) {
+                    this.name = title
+                    this.url = url
+                    this.episodes = episodeList
                     this.plot = description
                     this.tags = tagsList
                     addPoster(posterUrl, authHeader)
@@ -285,12 +288,11 @@ class NginxProvider : MainAPI() {
                 name,
                 name,
                 data,
-            ) {
-                this.referer = ""
-                this.quality = Qualities.Unknown.value
-                // headers = authHeader // need to check if newExtractorLink supports headers in block
-                this.headers = authHeader
-            }
+                "",  // referer not needed
+                Qualities.Unknown.value,
+                false,
+                authHeader,
+            )
         )
         return true
     }
@@ -418,6 +420,7 @@ class NginxProvider : MainAPI() {
                 } else null
             } else null  // the path is ../ which is parent directory
         }
+        // if (returnList.isEmpty()) return null // maybe doing nothing idk
         return newHomePageResponse(returnList)
     }
 }

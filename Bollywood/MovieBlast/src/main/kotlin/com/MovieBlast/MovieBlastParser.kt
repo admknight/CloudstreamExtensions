@@ -1,4 +1,4 @@
-package com.admknight.movieblast
+package com.MovieBlast
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.base64Decode
@@ -142,7 +142,6 @@ fun generateSignedUrl(url: String): String {
         throw RuntimeException("Error generating HMAC", e)
     }
 }
-
 
 
 

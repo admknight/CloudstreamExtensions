@@ -1,4 +1,4 @@
-package com.admknight.kickassanime
+package com.kickassanime
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.app
@@ -166,7 +166,6 @@ object GogoExtractor {
         @param:JsonProperty("default") val default: String? = null
     )
 }
-
 
 
 

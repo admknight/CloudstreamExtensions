@@ -1,4 +1,4 @@
-package com.admknight.mp4moviez
+package com.redowan
 
 import android.content.Context
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -11,6 +11,5 @@ class Mp4MoviezPlugin : Plugin() {
         registerMainAPI(Mp4MoviezProvider())
     }
 }
-
 
 

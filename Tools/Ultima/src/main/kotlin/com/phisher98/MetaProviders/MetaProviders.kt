@@ -1,4 +1,4 @@
-package com.admknight.ultima
+package com.phisher98
 
 object UltimaMetaProviderUtils {
     val metaProviders =
@@ -10,7 +10,6 @@ object UltimaMetaProviderUtils {
                     "Trakt" to false
             )
 }
-
 
 
 

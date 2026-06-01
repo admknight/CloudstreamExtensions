@@ -1,10 +1,9 @@
-package com.admknight.kawaiifu
+package com.lagradost
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.INFER_TYPE
-import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.getQualityFromName
 import org.jsoup.Jsoup
 import java.util.*
 
@@ -24,22 +23,34 @@ class KawaiifuProvider : MainAPI() {
 
         items.add(HomePageList("Latest Updates", soup.select(".today-update .item").mapNotNull {
             val title = it.selectFirst("img")?.attr("alt")
-            newAnimeSearchResponse(title ?: return@mapNotNull null, it.selectFirst("a")?.attr("href") ?: return@mapNotNull null, TvType.Anime) {
-                this.posterUrl = it.selectFirst("img")?.attr("src")
-                this.year = it.selectFirst("h4 > a")?.attr("href")?.split("-")?.last()?.toIntOrNull()
-                addDubStatus(if (title.contains("(DUB)")) DubStatus.Dubbed else DubStatus.Subbed)
-            }
+            newAnimeSearchResponse(
+                title ?: return@mapNotNull null,
+                it.selectFirst("a")?.attr("href") ?: return@mapNotNull null,
+                this.name,
+                TvType.Anime,
+                it.selectFirst("img")?.attr("src"),
+                it.selectFirst("h4 > a")?.attr("href")?.split("-")?.last()?.toIntOrNull(),
+                if (title.contains("(DUB)")) EnumSet.of(DubStatus.Dubbed) else EnumSet.of(
+                    DubStatus.Subbed
+                ),
+            )
         }))
         for (section in soup.select(".section")) {
             try {
                 val title = section.selectFirst(".title")!!.text()
                 val anime = section.select(".list-film > .item").mapNotNull { ani ->
                     val animTitle = ani.selectFirst("img")?.attr("alt")
-                    newAnimeSearchResponse(animTitle ?: return@mapNotNull null, ani.selectFirst("a")?.attr("href") ?: return@mapNotNull null, TvType.Anime) {
-                        this.posterUrl = ani.selectFirst("img")?.attr("src")
-                        this.year = ani.selectFirst(".vl-chil-date")?.text()?.toIntOrNull()
-                        addDubStatus(if (animTitle.contains("(DUB)")) DubStatus.Dubbed else DubStatus.Subbed)
-                    }
+                    newAnimeSearchResponse(
+                        animTitle ?: return@mapNotNull null,
+                        ani.selectFirst("a")?.attr("href") ?: return@mapNotNull null,
+                        this.name,
+                        TvType.Anime,
+                        ani.selectFirst("img")?.attr("src"),
+                        ani.selectFirst(".vl-chil-date")?.text()?.toIntOrNull(),
+                        if (animTitle.contains("(DUB)")) EnumSet.of(DubStatus.Dubbed) else EnumSet.of(
+                            DubStatus.Subbed
+                        ),
+                    )
                 }
                 items.add(HomePageList(title, anime))
 
@@ -62,11 +73,15 @@ class KawaiifuProvider : MainAPI() {
             val title = it.selectFirst("img")?.attr("alt") ?: return@mapNotNull null
             val poster = it.selectFirst("img")?.attr("src")
             val uri = it.selectFirst("a")?.attr("href") ?: return@mapNotNull null
-            newAnimeSearchResponse(title, uri, TvType.Anime) {
-                this.posterUrl = poster
-                this.year = year
-                addDubStatus(if (title.contains("(DUB)")) DubStatus.Dubbed else DubStatus.Subbed)
-            }
+            newAnimeSearchResponse(
+                title,
+                uri,
+                this.name,
+                TvType.Anime,
+                poster,
+                year,
+                if (title.contains("(DUB)")) EnumSet.of(DubStatus.Dubbed) else EnumSet.of(DubStatus.Subbed),
+            )
         })
     }
 
@@ -86,11 +101,12 @@ class KawaiifuProvider : MainAPI() {
         val episodes = Jsoup.parse(
             app.get(episodesLink).text
         ).selectFirst(".list-ep")?.select("li")?.map {
-            newEpisode(it.selectFirst("a")!!.attr("href")) {
-                this.name = if (it.text().trim().toIntOrNull() != null) "Episode ${
+            newEpisode(
+                it.selectFirst("a")!!.attr("href"),
+                if (it.text().trim().toIntOrNull() != null) "Episode ${
                     it.text().trim()
                 }" else it.text().trim()
-            }
+            )
         }
         val poster = soup.selectFirst("a.thumb > img")?.attr("src")
 
@@ -147,10 +163,10 @@ class KawaiifuProvider : MainAPI() {
                         "Kawaiifu",
                         it.first,
                         source.first,
-                        INFER_TYPE
-                    ) {
-                        this.quality = getQualityFromName(source.second)
-                    }
+                        "",
+                        getQualityFromName(source.second),
+                        source.first.contains(".m3u")
+                    )
                 )
             }
         }

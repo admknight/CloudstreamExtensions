@@ -41,31 +41,31 @@ class UltimaReorder(val plugin: UltimaPlugin) : BottomSheetDialogFragment() {
 
     // region - resource helpers
     private fun getLayout(name: String, inflater: LayoutInflater, container: ViewGroup?): View {
-        val id = res.getIdentifier(name, "layout", BuildConfig.LIBRARY_PACKAGE_NAME)
+        val id = res.getIdentifier(name, "layout", com.admknight.ultima.BuildConfig.LIBRARY_PACKAGE_NAME)
         return inflater.inflate(res.getLayout(id), container, false)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun getDrawable(name: String): Drawable {
-        val id = res.getIdentifier(name, "drawable", BuildConfig.LIBRARY_PACKAGE_NAME)
+        val id = res.getIdentifier(name, "drawable", com.admknight.ultima.BuildConfig.LIBRARY_PACKAGE_NAME)
         return res.getDrawable(id, null)
             ?: throw Exception("Unable to find drawable $name")
     }
 
     private fun getString(name: String): String {
-        val id = res.getIdentifier(name, "string", BuildConfig.LIBRARY_PACKAGE_NAME)
+        val id = res.getIdentifier(name, "string", com.admknight.ultima.BuildConfig.LIBRARY_PACKAGE_NAME)
         return res.getString(id)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun <T : View> View.findView(name: String): T {
-        val id = res.getIdentifier(name, "id", BuildConfig.LIBRARY_PACKAGE_NAME)
+        val id = res.getIdentifier(name, "id", com.admknight.ultima.BuildConfig.LIBRARY_PACKAGE_NAME)
         return findViewById(id)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun View.makeTvCompatible() {
-        val outlineId = res.getIdentifier("outline", "drawable", BuildConfig.LIBRARY_PACKAGE_NAME)
+        val outlineId = res.getIdentifier("outline", "drawable", com.admknight.ultima.BuildConfig.LIBRARY_PACKAGE_NAME)
         background = res.getDrawable(outlineId, null)
     }
 
@@ -295,6 +295,8 @@ class UltimaReorder(val plugin: UltimaPlugin) : BottomSheetDialogFragment() {
         )
     }
 }
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.movierulzhd
+package com.phisher98
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -483,7 +483,6 @@ open class Movierulzhd : MainAPI() {
         @param:JsonProperty("type") val type: String?,
     )
 }
-
 
 
 

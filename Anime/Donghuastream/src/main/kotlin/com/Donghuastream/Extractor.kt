@@ -1,4 +1,4 @@
-package com.admknight.donghuastream
+package com.Donghuastream
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -252,7 +252,6 @@ open class PlayStreamplay : ExtractorApi() {
     )
 
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.pinoymoviepedia
+package com.Pinoymoviepedia
 
 
 import com.lagradost.api.Log
@@ -108,7 +108,7 @@ open class Pinoymoviepedia : MainAPI() {
                     val type = it.attr("data-type")
                     val post = it.attr("data-post")
                     val nume = it.attr("data-nume")
-                    Episode(
+                    newEpisode(
                         LinkData(type, post,nume).toJson(),
                         name,
                     )
@@ -155,7 +155,6 @@ open class Pinoymoviepedia : MainAPI() {
         }
     }
 }
-
 
 
 

@@ -1,7 +1,8 @@
-package com.admknight.kickassanime
+package com.kickassanime
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.Gson
+import com.kickassanime.CryptoAES.decodeHex
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.syncproviders.SyncIdName
 import com.lagradost.cloudstream3.utils.*
@@ -15,10 +16,8 @@ import org.json.JSONObject
 import java.net.URLEncoder
 import java.util.Calendar
 
-const val MAIN_URL = "https://kaa.lt"
-
 class Kickassanime : MainAPI() {
-    override var mainUrl = MAIN_URL
+    override var mainUrl = "https://kaa.lt"
     override var name = "KickassAnime"
     override val hasMainPage = true
     override var lang = "en"
@@ -143,12 +142,13 @@ val json = """
             }
         }
 
-        return newTvSeriesLoadResponse(title, url, TvType.Anime, episodes) {
-            this.posterUrl = poster
-            this.backgroundPosterUrl = poster
-            this.plot = description
+        return newTvSeriesLoadResponse(title, url, TvType.Anime, episodes).apply {
+            name = title
+            posterUrl = poster
+            backgroundPosterUrl = poster
+            plot = description
             this.tags = tags
-            this.showStatus = status
+            showStatus = status
         }
     }
 

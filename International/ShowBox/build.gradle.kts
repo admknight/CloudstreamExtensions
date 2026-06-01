@@ -1,6 +1,1 @@
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    status = 1
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/ShowBox/icon.png"
-}
+import org.jetbrains.kotlin.konan.properties.Properties  // use an integer for version numbers version = 5 android {     buildFeatures {         buildConfig = true         viewBinding = true     }     defaultConfig {              requiresResources = true          isCrossPlatform = false           iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/ShowBox/icon.png" } 

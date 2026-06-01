@@ -1,4 +1,4 @@
-package com.admknight.playhub
+package com.stormunblessed
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -80,9 +80,13 @@ class PlayhubProvider:MainAPI() {
                 val data = if (type == "serie") "${mainUrl}/series/$id" else if (type == "movie") "$mainUrl/movies/$id" else if (!airdate) "${mainUrl}/series/$id"
                 else if (airdate) "$mainUrl/movies/$id"
                 else ""
-                newTvSeriesSearchResponse(title, data, TvType.TvSeries) {
-                    this.posterUrl = poster
-                }
+                newTvSeriesSearchResponse(
+                    title,
+                    data,
+                    this.name,
+                    TvType.TvSeries,
+                    poster,
+                )
             }
             items.add(HomePageList(name, home!!))
         }
@@ -332,6 +336,5 @@ class PlayhubProvider:MainAPI() {
         return true
     }
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.megakino
+package com.Megakino
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -123,7 +123,6 @@ class Megakino : MainAPI() {
         return true
     }
 }
-
 
 
 

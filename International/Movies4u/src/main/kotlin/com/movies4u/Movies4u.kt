@@ -1,4 +1,4 @@
-package com.admknight.movies4u
+package com.movies4u
 
 import com.lagradost.cloudstream3.Actor
 import com.lagradost.cloudstream3.ActorData
@@ -413,7 +413,6 @@ class Movies4u : MainAPI() {
         return null
     }
 }
-
 
 
 

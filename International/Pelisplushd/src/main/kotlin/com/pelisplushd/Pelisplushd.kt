@@ -1,4 +1,4 @@
-package com.admknight.pelisplushd
+package com.pelisplushd
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -339,7 +339,6 @@ data class Link(
     val index: Long,
     val link: String,
 )
-
 
 
 

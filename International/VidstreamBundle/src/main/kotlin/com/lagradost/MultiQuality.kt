@@ -1,7 +1,11 @@
-package com.admknight.vidstreambundle
+package com.lagradost
 
 import com.lagradost.cloudstream3.app
-import com.lagradost.cloudstream3.utils.*
+import com.lagradost.cloudstream3.utils.ExtractorApi
+import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.getQualityFromName
 import java.net.URI
 
 class MultiQuality : ExtractorApi() {
@@ -30,11 +34,10 @@ class MultiQuality : ExtractorApi() {
                                     name,
                                     name = name,
                                     urlRegex.find(this.url)!!.groupValues[1] + match.groupValues[0],
-                                    type = ExtractorLinkType.M3U8
-                                ) {
-                                    this.referer = url
-                                    this.quality = getQualityFromName(match.groupValues[1])
-                                }
+                                    url,
+                                    getQualityFromName(match.groupValues[1]),
+                                    isM3u8 = true
+                                )
                             )
                         }
 
@@ -45,10 +48,9 @@ class MultiQuality : ExtractorApi() {
                             name,
                             "$name ${sourceMatch.groupValues[2]}",
                             extractedUrl,
-                        ) {
-                            this.referer = url.replace(" ", "%20")
-                            this.quality = Qualities.Unknown.value
-                        }
+                            url.replace(" ", "%20"),
+                            Qualities.Unknown.value,
+                        )
                     )
                 }
             }
@@ -56,3 +58,6 @@ class MultiQuality : ExtractorApi() {
         }
     }
 }
+
+
+

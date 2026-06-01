@@ -1,4 +1,4 @@
-package com.admknight.dudefilms
+package com.dudefilms
 
 import com.google.gson.Gson
 import com.lagradost.cloudstream3.HomePageResponse
@@ -258,6 +258,5 @@ class Dudefilms : MainAPI() {
         return true
     }
 }
-
 
 

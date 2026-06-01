@@ -1,15 +1,16 @@
-package com.admknight.seriesflix
+package com.stormunblessed
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
-import com.lagradost.cloudstream3.plugins.BasePlugin
+import com.lagradost.cloudstream3.plugins.Plugin
+import android.content.Context
+import com.lagradost.cloudstream3.movieproviders.SeriesflixProvider
 
 @CloudstreamPlugin
-class SeriesflixProviderPlugin: BasePlugin() {
-    override fun load() {
+class SeriesflixProviderPlugin: Plugin() {
+    override fun load(context: Context) {
         // All providers should be added in this manner. Please don't edit the providers list directly.
         registerMainAPI(SeriesflixProvider())
     }
 }
-
 
 

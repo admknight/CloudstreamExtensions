@@ -1,6 +1,8 @@
-package com.admknight.sololatino
+package com.stormunblessed
 
+import android.util.Log
 import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.network.CloudflareKiller
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
 
@@ -27,7 +29,7 @@ class SoloLatinoProvider : MainAPI() {
             Pair("Cartoons", "$mainUrl/genre_series/toons"),
         )
 
-        urls.forEach { (name, url) ->
+        urls.map { (name, url) ->
             val tvType = when (name) {
                 "Peliculas" -> TvType.Movie
                 "Series" -> TvType.TvSeries
@@ -40,9 +42,13 @@ class SoloLatinoProvider : MainAPI() {
                 val title = it.selectFirst("a div.data h3")?.text()
                 val link = it.selectFirst("a")?.attr("href")
                 val img = it.selectFirst("div.poster img.lazyload")?.attr("data-srcset")
-                newTvSeriesSearchResponse(title!!, link!!, tvType) {
-                    this.posterUrl = img
-                }
+                newTvSeriesSearchResponse(
+                    title!!,
+                    link!!,
+                    this.name,
+                    tvType,
+                    img,
+                )
             }
             items.add(HomePageList(name, home))
         }
@@ -56,20 +62,35 @@ class SoloLatinoProvider : MainAPI() {
             val title = it.selectFirst("a div.data h3")?.text()
             val link = it.selectFirst("a")?.attr("href")
             val img = it.selectFirst("div.poster img.lazyload")?.attr("data-srcset")
-            newTvSeriesSearchResponse(title!!, link!!, TvType.TvSeries) {
-                this.posterUrl = img
-            }
+            newTvSeriesSearchResponse(
+                title!!,
+                link!!,
+                this.name,
+                TvType.TvSeries,
+                img,
+            )
         }
     }
+
+    class MainTemporada(elements: Map<String, List<MainTemporadaElement>>) :
+        HashMap<String, List<MainTemporadaElement>>(elements)
+
+    data class MainTemporadaElement(
+        val title: String? = null,
+        val image: String? = null,
+        val season: Int? = null,
+        val episode: Int? = null
+    )
 
     override suspend fun load(url: String): LoadResponse? {
         val doc = app.get(url).document
         val tvType = if (url.contains("peliculas")) TvType.Movie else TvType.TvSeries
         val title = doc.selectFirst("div.data h1")?.text() ?: ""
+//        val backimage = doc.selectFirst("head meta[property=og:image]")!!.attr("content")
         val poster = doc.selectFirst("div.poster img")!!.attr("src")
         val description = doc.selectFirst("div.wp-content")!!.text()
         val tags = doc.select("div.sgeneros a").map { it.text() }
-        val episodes = if (tvType == TvType.TvSeries) {
+        var episodes = if (tvType == TvType.TvSeries) {
             doc.select("div#seasons div.se-c").flatMap { season ->
                 season.select("ul.episodios li").map {
                     val epurl = fixUrl(it.selectFirst("a")?.attr("href") ?: "")
@@ -79,19 +100,23 @@ class SoloLatinoProvider : MainAPI() {
                             it.trim().toIntOrNull()
                         }
                     val realimg = it.selectFirst("div.imagen img")?.attr("src")
-                    newEpisode(epurl) {
-                        this.name = epTitle
-                        this.season = seasonEpisodeNumber?.getOrNull(0)
-                        this.episode = seasonEpisodeNumber?.getOrNull(1)
-                        this.posterUrl = realimg
-                    }
+                    newEpisode(
+                        epurl,
+                        epTitle,
+                        seasonEpisodeNumber?.getOrNull(0),
+                        seasonEpisodeNumber?.getOrNull(1),
+                        realimg,
+                    )
                 }
             }
         } else listOf()
 
         return when (tvType) {
             TvType.TvSeries -> {
-                newTvSeriesLoadResponse(title, url, tvType, episodes) {
+                newTvSeriesLoadResponse(
+                    title,
+                    url, tvType, episodes,
+                ) {
                     this.posterUrl = poster
                     this.backgroundPosterUrl = poster
                     this.plot = description
@@ -120,10 +145,13 @@ class SoloLatinoProvider : MainAPI() {
     ): Boolean {
         val regex = """(go_to_player|go_to_playerVast)\('(.*?)'""".toRegex()
         app.get(data).document.selectFirst("iframe")?.attr("src")?.let { frameUrl ->
-            regex.findAll(app.get(frameUrl).document.html()).map { it.groupValues.get(2) }.toList().forEach {
+            regex.findAll(app.get(frameUrl).document.html()).map { it.groupValues.get(2) }.toList().map {
                 loadExtractor(it, data, subtitleCallback, callback)
             }
         }
         return true
     }
+
 }
+
+

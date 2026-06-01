@@ -1,7 +1,7 @@
-package com.admknight.aniworld
+package com.Aniworld
 
 import android.content.SharedPreferences
-import com.admknight.aniworld.ByseSX
+import com.Aniworld.AniworldPlugin.ByseSX
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.AnimeSearchResponse
 import com.lagradost.cloudstream3.DubStatus
@@ -336,6 +336,5 @@ suspend fun loadCustomExtractor(
         }
     }
 }
-
 
 

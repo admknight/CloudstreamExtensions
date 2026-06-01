@@ -1,4 +1,4 @@
-package com.admknight.desicinemas
+package com.Desicinemas
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.base64Decode
@@ -156,6 +156,5 @@ class Tvlogy(private val source:String) : ExtractorApi() {
     )
 
 }
-
 
 

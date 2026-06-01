@@ -1,4 +1,4 @@
-package com.admknight.hdhub4u
+package com.hdhub4u
 
 import android.annotation.SuppressLint
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -205,7 +205,6 @@ data class RequestParams(
     val perPage: Long,
     val q: String,
 )
-
 
 
 

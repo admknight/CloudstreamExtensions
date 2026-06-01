@@ -1,4 +1,4 @@
-package com.admknight.stremiox
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -260,6 +260,5 @@ data class MetaAnimeData(
     @param:JsonProperty("episodes") val episodes: Map<String, MetaEpisode>? = null,
     @param:JsonProperty("mappings") val mappings: MetaMappings? = null
 )
-
 
 

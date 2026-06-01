@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix.settings
 
 import android.content.Context
 import android.graphics.Color
@@ -8,7 +8,7 @@ import android.view.animation.DecelerateInterpolator
 import android.widget.LinearLayout
 import android.widget.Switch
 import android.widget.TextView
-import com.admknight.cinestream.dp
+import com.megix.settings.SettingsTheme.dp
 
 /**
  * Small, reusable UI building blocks shared across all Settings card files.
@@ -131,7 +131,6 @@ internal object SettingsWidgets {
         elevation = 4f
     }
 }
-
 
 
 

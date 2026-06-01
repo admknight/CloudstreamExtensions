@@ -1,4 +1,4 @@
-package com.admknight.ringz
+package com.RingZ
 
 data class LoadURL(
     val url: String?=null ,
@@ -13,7 +13,6 @@ data class LoadURL(
     val genre: String?=null,
     val extra: String? = null
 )
-
 
 
 

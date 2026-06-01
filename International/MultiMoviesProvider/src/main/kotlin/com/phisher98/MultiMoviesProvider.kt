@@ -1,4 +1,4 @@
-package com.admknight.multimovies
+package com.phisher98
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -314,7 +314,6 @@ class MultiMoviesProvider : MainAPI() { // all providers must be an instance of 
             ?: this.attr("src").takeIf { it.isNotBlank() && it.startsWith("http") }
     }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.animedekho
+package com.phisher98
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -150,7 +150,6 @@ open class OnepaceProvider : MainAPI() {
         }
     }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.skymovieshd
+package com.redowan
 
 
 import com.lagradost.cloudstream3.*
@@ -136,6 +136,5 @@ class SkymoviesHDProvider : MainAPI() {
             ?: Qualities.Unknown.value
     }
 }
-
 
 

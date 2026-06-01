@@ -1,4 +1,4 @@
-package com.admknight.animecloud
+package com.Animecloud
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -134,7 +134,6 @@ class Animecloud : MainAPI() {
         return true
     }
 }
-
 
 
 

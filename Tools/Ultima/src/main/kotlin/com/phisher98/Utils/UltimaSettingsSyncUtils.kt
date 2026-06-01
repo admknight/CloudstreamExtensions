@@ -1,4 +1,4 @@
-package com.admknight.ultima
+package com.phisher98
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -448,7 +448,6 @@ object UltimaSettingsSyncUtils {
         }
     }
 }
-
 
 
 

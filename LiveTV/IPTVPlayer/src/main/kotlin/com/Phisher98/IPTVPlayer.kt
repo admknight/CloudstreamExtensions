@@ -1,4 +1,4 @@
-package com.admknight.iptvplayer
+package com.phisher98
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
@@ -413,7 +413,6 @@ sealed class PlaylistParserException(message: String) : Exception(message) {
         PlaylistParserException("Invalid file header. Header doesn't start with #EXTM3U")
 
 }
-
 
 
 

@@ -1,12 +1,16 @@
-package com.admknight.cinecalidad
+package com.stormunblessed
 
-import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
+import com.lagradost.cloudstream3.plugins.Plugin
+import android.content.Context
+import com.lagradost.cloudstream3.movieproviders.CinecalidadProvider
 
 @CloudstreamPlugin
-class CinecalidadProviderPlugin: BasePlugin() {
-    override fun load() {
+class CinecalidadProviderPlugin: Plugin() {
+    override fun load(context: Context) {
         // All providers should be added in this manner. Please don't edit the providers list directly.
         registerMainAPI(CinecalidadProvider())
     }
 }
+
+

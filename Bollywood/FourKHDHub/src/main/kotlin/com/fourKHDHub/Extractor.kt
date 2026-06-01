@@ -1,4 +1,4 @@
-package com.admknight.fourkhdhub
+package com.fourKHDHub
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -441,7 +441,6 @@ class HUBCDN : ExtractorApi() {
         }
     }
 }
-
 
 
 

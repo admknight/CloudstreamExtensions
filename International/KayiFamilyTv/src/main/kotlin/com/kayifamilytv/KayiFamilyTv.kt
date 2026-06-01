@@ -1,4 +1,4 @@
-package com.admknight.kayifamilytv
+package com.kayifamilytv
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -149,7 +149,6 @@ class KayiFamilyTv: MainAPI() {
          return true
     }
 }
-
 
 
 

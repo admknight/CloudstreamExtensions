@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 
 // Cloudstream Core & Utils
@@ -29,8 +29,8 @@ import kotlinx.coroutines.coroutineScope
 // JSON Parsing
 import org.json.JSONObject
 
-import com.admknight.cinestream.CineStreamExtractors.invokeAllSources
-import com.admknight.cinestream.CineStreamExtractors.invokeAllAnimeSources
+import com.megix.CineStreamExtractors.invokeAllSources
+import com.megix.CineStreamExtractors.invokeAllAnimeSources
 
 class CineSimklProvider: MainAPI() {
     override var name = "CineSimkl"
@@ -622,7 +622,6 @@ class CineSimklProvider: MainAPI() {
         val imdbEpisode : Int?    = null,
     )
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.aniworld
+package com.Aniworld
 
 import android.content.SharedPreferences
 import com.lagradost.cloudstream3.HomePageList
@@ -91,6 +91,5 @@ class Serienstream(sharedPref: SharedPreferences?=null) : Aniworld() {
         return super.load(url).apply { this?.type = TvType.TvSeries }
     }
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.mplayer
+package com.MPlayer
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -10,7 +10,6 @@ class MPlayerPlugin : BasePlugin() {
         registerMainAPI(MPlayer())
     }
 }
-
 
 
 

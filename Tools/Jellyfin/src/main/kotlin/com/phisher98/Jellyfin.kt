@@ -1,4 +1,4 @@
-package com.admknight.jellyfin
+package com.phisher98
 
 import android.content.SharedPreferences
 import com.lagradost.api.Log
@@ -298,7 +298,6 @@ open class Jellyfin(sharedPref: SharedPreferences? = null) : MainAPI() {
         }
     }
 }
-
 
 
 

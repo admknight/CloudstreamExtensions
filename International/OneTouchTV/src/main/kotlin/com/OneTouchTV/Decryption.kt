@@ -1,4 +1,4 @@
-package com.admknight.onetouchtv
+package com.OneTouchTV
 
 import com.lagradost.cloudstream3.base64Decode
 import com.lagradost.cloudstream3.base64DecodeArray
@@ -43,6 +43,5 @@ fun decryptString(input: String): String {
     val text = String(plaintextBytes, Charsets.UTF_8)
     return JSONObject(text).getString("result")
 }
-
 
 

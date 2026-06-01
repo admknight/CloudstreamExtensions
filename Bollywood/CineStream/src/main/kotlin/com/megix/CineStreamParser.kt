@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -837,6 +837,5 @@ data class FileListResponse(val data: FileListData? = null)
 data class VideoQualityResponse(val html: String? = null)
 
 data class VideoQuality(val url: String, val quality: String)
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.cinevood
+package com.cinephile.cinevood
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -231,6 +231,5 @@ class Cinevood : MainAPI() {
 
     data class ResponseData(val meta: Meta?)
 }
-
 
 

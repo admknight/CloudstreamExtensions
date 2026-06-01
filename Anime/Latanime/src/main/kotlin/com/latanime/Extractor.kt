@@ -1,4 +1,4 @@
-package com.admknight.latanime
+package com.latanime
 
 import com.lagradost.cloudstream3.extractors.VidStack
 import com.lagradost.cloudstream3.utils.ExtractorApi
@@ -31,6 +31,5 @@ open class Zilla : ExtractorApi() {
 class Animeav1upn : VidStack() {
     override var mainUrl = "https://animeav1.uns.bio"
 }
-
 
 

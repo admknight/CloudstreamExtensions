@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 // Cloudstream Core, Network, Utils, & Logging
 import com.lagradost.api.Log
@@ -35,7 +35,7 @@ import javax.crypto.spec.SecretKeySpec
 import java.security.SecureRandom
 import javax.crypto.Cipher
 
-import com.admknight.cinestream.Settings
+import com.megix.settings.Settings
 
 class Streameeeeee : Videostr() {
     override var name = "Streameeeeee"

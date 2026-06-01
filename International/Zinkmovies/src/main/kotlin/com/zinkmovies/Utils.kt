@@ -1,4 +1,4 @@
-package com.admknight.zinkmovies
+package com.zinkmovies
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.ActorData
@@ -226,6 +226,5 @@ fun getIndexQuality(str: String?): Int {
     return Regex("(\\d{3,4})[pP]").find(str ?: "")?.groupValues?.getOrNull(1)?.toIntOrNull()
         ?: Qualities.Unknown.value
 }
-
 
 

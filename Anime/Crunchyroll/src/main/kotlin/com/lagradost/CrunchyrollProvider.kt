@@ -1,9 +1,14 @@
-package com.admknight.crunchyroll
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.utils.*
+import com.lagradost.cloudstream3.APIHolder.capitalize
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
+import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.M3u8Helper
+import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.nicehttp.NiceResponse
 import kotlinx.coroutines.delay
 import org.jsoup.Jsoup
@@ -16,10 +21,14 @@ class KrunchyGeoBypasser {
         const val BYPASS_SERVER = "https://cr-unblocker.us.to/start_session"
         val headers = mapOf(
             "accept" to "*/*",
+//            "Accept-Encoding" to "gzip, deflate",
             "connection" to "keep-alive",
+//            "Referer" to "https://google.com/",
             "user-agent" to "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36".toAscii()
         )
         var sessionId: String? = null
+
+        //        val interceptor = CookieInterceptor()
         val session = CustomSession(app.baseClient)
     }
 
@@ -101,10 +110,14 @@ class KrunchyProvider : MainAPI() {
                 val imgEl = anime.selectFirst("img")
                 val name = imgEl?.attr("alt") ?: ""
                 val posterUrl = imgEl?.attr("src")?.replace("small", "full")
-                newAnimeSearchResponse(name, url, TvType.Anime) {
-                    this.posterUrl = posterUrl
-                    addDubStatus(DubStatus.Subbed)
-                }
+                newAnimeSearchResponse(
+                    name = name,
+                    url = url,
+                    apiName = this.name,
+                    type = TvType.Anime,
+                    posterUrl = posterUrl,
+                    dubStatus = EnumSet.of(DubStatus.Subbed)
+                )
             }
             val recent =
                 doc.select("div.welcome-countdown-day:contains(Now Showing) li").mapNotNull {
@@ -112,15 +125,26 @@ class KrunchyProvider : MainAPI() {
                         fixUrlNull(it.selectFirst("a")?.attr("href")) ?: return@mapNotNull null
                     val name = it.selectFirst("span.welcome-countdown-name")?.text() ?: ""
                     val img = it.selectFirst("img")?.attr("src")?.replace("medium", "full")
-                    val isDub = name.contains("Dub)", true)
+                    val dubstat = if (name.contains("Dub)", true)) EnumSet.of(DubStatus.Dubbed) else
+                        EnumSet.of(DubStatus.Subbed)
                     val details = it.selectFirst("span.welcome-countdown-details")?.text()
                     val epnum =
-                        if (details.isNullOrBlank()) null else episodeNumRegex.find(details)?.groupValues?.get(1) ?: "0"
-                    
-                    newAnimeSearchResponse("★ $name ★", link.replace(Regex("(\\/episode.*)"), ""), TvType.Anime) {
-                        this.posterUrl = fixUrlNull(img)
-                        if (isDub) addDubStatus(DubStatus.Dubbed, epnum?.toIntOrNull()) else addDubStatus(DubStatus.Subbed, epnum?.toIntOrNull())
-                    }
+                        if (details.isNullOrBlank()) null else episodeNumRegex.find(details)?.value?.replace(
+                            "Episode ",
+                            ""
+                        ) ?: "0"
+                    val episodesMap = mutableMapOf<DubStatus, Int>()
+                    episodesMap[DubStatus.Subbed] = epnum?.toIntOrNull() ?: 0
+                    episodesMap[DubStatus.Dubbed] = epnum?.toIntOrNull() ?: 0
+                    newAnimeSearchResponse(
+                        name = "★ $name ★",
+                        url = link.replace(Regex("(\\/episode.*)"), ""),
+                        apiName = this.name,
+                        type = TvType.Anime,
+                        posterUrl = fixUrlNull(img),
+                        dubStatus = dubstat,
+                        episodes = episodesMap
+                    )
                 }
             if (recent.isNotEmpty()) {
                 items.add(
@@ -142,10 +166,14 @@ class KrunchyProvider : MainAPI() {
                 val episodes = soup.select("li").mapNotNull {
                     val innerA = it.selectFirst("a") ?: return@mapNotNull null
                     val urlEps = fixUrlNull(innerA.attr("href")) ?: return@mapNotNull null
-                    newAnimeSearchResponse(innerA.attr("title"), urlEps, TvType.Anime) {
-                        this.posterUrl = it.selectFirst("img")?.attr("src")
-                        addDubStatus(DubStatus.Subbed)
-                    }
+                    newAnimeSearchResponse(
+                        name = innerA.attr("title"),
+                        url = urlEps,
+                        apiName = this.name,
+                        type = TvType.Anime,
+                        posterUrl = it.selectFirst("img")?.attr("src"),
+                        dubStatus = EnumSet.of(DubStatus.Subbed)
+                    )
                 }
                 if (episodes.isNotEmpty()) {
                     items.add(
@@ -208,14 +236,20 @@ class KrunchyProvider : MainAPI() {
                 break
             }
             if (anime.name == results[count]) {
-                val isDub = anime.name.contains("Dub)", true)
+                val dubstat =
+                    if (anime.name.contains("Dub)", true)) EnumSet.of(DubStatus.Dubbed) else
+                        EnumSet.of(DubStatus.Subbed)
                 anime.link = fixUrl(anime.link)
                 anime.img = anime.img.replace("small", "full")
                 searchResutls.add(
-                    newAnimeSearchResponse(anime.name, anime.link, TvType.Anime) {
-                        this.posterUrl = anime.img
-                        if (isDub) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
-                    }
+                    newAnimeSearchResponse(
+                        name = anime.name,
+                        url = anime.link,
+                        apiName = this.name,
+                        type = TvType.Anime,
+                        posterUrl = anime.img,
+                        dubStatus = dubstat,
+                    )
                 )
                 ++count
             }
@@ -236,7 +270,7 @@ class KrunchyProvider : MainAPI() {
         }
 
         val genres = soup.select(".large-margin-bottom > ul:nth-child(2) li:nth-child(2) a")
-            .map { it.text().replaceFirstChar { char -> char.uppercase() } }
+            .map { it.text().capitalize() }
         val year = genres.filter { it.toIntOrNull() != null }.map { it.toInt() }.sortedBy { it }
             .getOrNull(0)
 
@@ -251,7 +285,7 @@ class KrunchyProvider : MainAPI() {
 
                 val epNum = episodeNumRegex.find(
                     ep.selectFirst("span.ellipsis")?.text().toString()
-                )?.groupValues?.get(1)?.toIntOrNull()
+                )?.destructured?.component1()
                 var poster = ep.selectFirst("img.landscape")?.attr("data-thumbnailurl")
                 val poster2 = ep.selectFirst("img")?.attr("src")
                 if (poster.isNullOrBlank()) {
@@ -270,13 +304,13 @@ class KrunchyProvider : MainAPI() {
                         "Russian"
                     ) || seasonName.contains("Spanish"))
 
-                val epi = newEpisode(fixUrl(ep.attr("href"))) {
-                    this.name = epTitle
-                    this.posterUrl = poster?.replace("widestar", "full")?.replace("wide", "full")
-                    this.description = epDesc
-                    this.season = if (isPremium) -1 else 1
-                    this.episode = epNum
-                }
+                val epi = newEpisode(
+                    fixUrl(ep.attr("href")),
+                    "$epTitle",
+                    posterUrl = poster?.replace("widestar", "full")?.replace("wide", "full"),
+                    description = epDesc,
+                    season = if (isPremium) -1 else 1
+                )
                 if (isPremiumDubbed) {
                     premiumDubEpisodes.add(epi)
                 } else if (isPremium) {
@@ -294,14 +328,17 @@ class KrunchyProvider : MainAPI() {
                     element.select("span.ellipsis[dir=auto]").text() ?: return@mapNotNull null
                 val image = element.select("img")?.attr("src")
                 val recUrl = fixUrl(element.select("a").attr("href"))
-                newAnimeSearchResponse(recTitle, fixUrl(recUrl), TvType.Anime) {
-                    this.posterUrl = fixUrl(image ?: "")
-                    if (recTitle.contains("(DUB)", true) || recTitle.contains("Dub", true)) {
-                        addDubStatus(DubStatus.Dubbed)
-                    } else {
-                        addDubStatus(DubStatus.Subbed)
-                    }
-                }
+                newAnimeSearchResponse(
+                    recTitle,
+                    fixUrl(recUrl),
+                    this.name,
+                    TvType.Anime,
+                    fixUrl(image!!),
+                    dubStatus =
+                    if (recTitle.contains("(DUB)") || recTitle.contains("Dub")) EnumSet.of(
+                        DubStatus.Dubbed
+                    ) else EnumSet.of(DubStatus.Subbed),
+                )
             }
         return newAnimeLoadResponse(title.toString(), url, TvType.Anime) {
             this.posterUrl = posterU
@@ -380,6 +417,8 @@ class KrunchyProvider : MainAPI() {
         val contentRegex = Regex("""vilos\.config\.media = (\{.+\})""")
         val response = crUnblock.geoBypassRequest(data)
 
+        val hlsHelper = M3u8Helper()
+
         val dat = contentRegex.find(response.text)?.destructured?.component1()
 
         if (!dat.isNullOrEmpty()) {
@@ -407,6 +446,7 @@ class KrunchyProvider : MainAPI() {
                             "enUS",
                             null
                         ).contains(stream.hardsubLang))
+//                        && URI(stream.url).path.endsWith(".m3u")
                     ) {
                         stream.title = stream.title()
                         streams.add(stream)
@@ -428,26 +468,34 @@ class KrunchyProvider : MainAPI() {
 
             streams.map { stream ->
                 if (stream.url.contains("m3u8") && stream.format!!.contains("adaptive")) {
-                    newExtractorLink(
+//                    hlsHelper.m3u8Generation(M3u8Helper.M3u8Stream(stream.url, null), false)
+//                        .forEach {
+                    callback(
+                        newExtractorLink(
                             "Crunchyroll",
                             "Crunchy - ${stream.title}",
                             stream.url,
-                            type = ExtractorLinkType.M3U8
-                        ) {
-                            this.quality = getQualityFromName(stream.resolution)
-                        }.let(callback)
+                            "",
+                            getQualityFromName(stream.resolution),
+                            true
+                        )
+                    )
+//                        }
                 } else if (stream.format == "trailer_hls") {
                     val premiumStream = stream.url
                         .replace("\\/", "/")
                         .replace(Regex("\\/clipFrom.*?index.m3u8"), "").replace("'_,'", "'_'")
                         .replace(stream.url.split("/")[2], "fy.v.vrv.co")
-                    newExtractorLink(
+                    callback(
+                        newExtractorLink(
                             this.name,
                             "Crunchy - ${stream.title} ★",
                             premiumStream,
-                        ) {
-                            this.quality = Qualities.Unknown.value
-                        }.let(callback)
+                            "",
+                            Qualities.Unknown.value,
+                            false
+                        )
+                    )
                 } else null
             }
             json.subtitles.forEach {
@@ -464,3 +512,6 @@ class KrunchyProvider : MainAPI() {
         return false
     }
 }
+
+
+

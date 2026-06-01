@@ -1,4 +1,4 @@
-package com.admknight.vegamovies
+package com.megix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -315,7 +315,6 @@ open class VegaMoviesProvider : MainAPI() {
         val post_thumbnail: String
     )
 }
-
 
 
 

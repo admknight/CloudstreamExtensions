@@ -1,4 +1,4 @@
-package com.admknight.tokuzilla
+package com.tokuzilla
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*

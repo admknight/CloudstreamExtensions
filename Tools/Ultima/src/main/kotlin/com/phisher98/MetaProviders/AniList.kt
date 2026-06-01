@@ -1,9 +1,9 @@
-package com.admknight.ultima
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import com.admknight.ultima.UltimaMediaProvidersUtils.invokeExtractors
-import com.admknight.ultima.UltimaUtils.Category
-import com.admknight.ultima.UltimaUtils.LinkData
+import com.phisher98.UltimaMediaProvidersUtils.invokeExtractors
+import com.phisher98.UltimaUtils.Category
+import com.phisher98.UltimaUtils.LinkData
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.lagradost.api.Log
@@ -410,7 +410,5 @@ data class AniSearch(
 )
 
 data class AniIds(var id: Int? = null, var idMal: Int? = null)
-
-
 
 

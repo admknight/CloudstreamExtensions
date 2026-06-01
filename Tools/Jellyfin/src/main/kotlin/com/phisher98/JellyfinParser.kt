@@ -1,4 +1,4 @@
-package com.admknight.jellyfin
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.TvType
@@ -330,6 +330,5 @@ data class UserData(
     @param:JsonProperty("Played")
     val played: Boolean? = null
 )
-
 
 

@@ -51,10 +51,15 @@ jobs:
               if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
 
               CATEGORY="International"
-              if [[ "$PLUGIN_NAME" =~ $ANIME_REGEX ]]; then CATEGORY="Anime"; fi
-              if [[ "$PLUGIN_NAME" =~ $HINDI_REGEX ]]; then CATEGORY="Bollywood"; fi
-              if [[ "$PLUGIN_NAME" =~ $TOOLS_REGEX ]]; then CATEGORY="Tools"; fi
-              if [[ "$PLUGIN_NAME" =~ $LIVE_REGEX ]]; then CATEGORY="LiveTV"; fi
+              if [[ "$PLUGIN_NAME" =~ $ANIME_REGEX ]]; then 
+                CATEGORY="Anime"
+              elif [[ "$PLUGIN_NAME" =~ $HINDI_REGEX ]]; then 
+                CATEGORY="Bollywood"
+              elif [[ "$PLUGIN_NAME" =~ $TOOLS_REGEX ]]; then 
+                CATEGORY="Tools"
+              elif [[ "$PLUGIN_NAME" =~ $LIVE_REGEX ]]; then 
+                CATEGORY="LiveTV"
+              fi
 
               TARGET_DIR="$CATEGORY/$PLUGIN_NAME"
               mkdir -p "$TARGET_DIR"
@@ -71,11 +76,19 @@ jobs:
               # Fix obsolete Kotlin methods
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/argamap(/runAllAsync(/g' {} +
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.apmap/.map/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/MovieSearchResponse(/newMovieSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/TvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/AnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/LiveSearchResponse(/newLiveSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/HomePageResponse(/newHomePageResponse(/g' {} +
+              
+              # Aggressive DSL Migration
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bMovieSearchResponse(/newMovieSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bTvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bAnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bLiveSearchResponse(/newLiveSearchResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bHomePageResponse(/newHomePageResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bAnimeLoadResponse(/newAnimeLoadResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bMovieLoadResponse(/newMovieLoadResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bTvSeriesLoadResponse(/newTvSeriesLoadResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bLiveStreamLoadResponse(/newLiveStreamLoadResponse(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bEpisode(/newEpisode(/g' {} +
+              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bExtractorLink(/newExtractorLink(/g' {} +
               
               # Score / Rating Migration (Basic)
               find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/rating = \(.*\)\.toRatingInt()/score = Score.from10(\1)/g' {} +

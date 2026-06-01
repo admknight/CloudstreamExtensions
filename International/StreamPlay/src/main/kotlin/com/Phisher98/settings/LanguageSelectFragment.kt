@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
@@ -12,8 +12,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.fragment.app.DialogFragment
-import com.admknight.streamplay.BuildConfig
-import com.admknight.streamplay.StreamPlayPlugin
+import com.phisher98.BuildConfig
+import com.phisher98.StreamPlayPlugin
 import androidx.core.content.edit
 import androidx.core.widget.addTextChangedListener
 
@@ -206,7 +206,6 @@ class LanguageSelectFragment(
         onDismissCallback?.invoke()
     }
 }
-
 
 
 

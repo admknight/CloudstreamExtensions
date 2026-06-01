@@ -1,5 +1,6 @@
-package com.admknight.animejl
+package com.stormunblessed
 
+import android.util.Log
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -26,16 +27,20 @@ class AnimeJlProvider : MainAPI() {
             Pair("Peliculas", "$mainUrl/animes?tipo[]=3&order=updated"),
         )
 
-        urls.forEach { (name, url) ->
+        urls.map { (name, url) ->
             val doc = app.get(url).document
             val home = doc.select("ul.ListAnimes li").map {
                 val title = it.selectFirst("article.Anime h3.Title")?.text()
                 val link = it.selectFirst("article.Anime a")?.attr("href")
                 val img = it.selectFirst("article.Anime a div.Image figure img")?.attr("src")
                     ?.replaceFirst("^/".toRegex(), "$mainUrl/")
-                newTvSeriesSearchResponse(title!!, link!!, TvType.Anime) {
-                    this.posterUrl = img
-                }
+                newTvSeriesSearchResponse(
+                    title!!,
+                    link!!,
+                    this.name,
+                    TvType.Anime,
+                    img,
+                )
             }
             items.add(HomePageList(name, home))
         }
@@ -50,9 +55,13 @@ class AnimeJlProvider : MainAPI() {
             val link = it.selectFirst("article.Anime a")?.attr("href")
             val img = it.selectFirst("article.Anime a div.Image figure img")?.attr("src")
                 ?.replaceFirst("^/".toRegex(), "$mainUrl/")
-            newTvSeriesSearchResponse(title!!, link!!, TvType.Anime) {
-                this.posterUrl = img
-            }
+            newTvSeriesSearchResponse(
+                title!!,
+                link!!,
+                this.name,
+                TvType.Anime,
+                img,
+            )
         }
     }
 
@@ -90,16 +99,21 @@ class AnimeJlProvider : MainAPI() {
                     }
                 }
                 episodes.add(
-                    newEpisode(epurl) {
-                        this.name = epTitle
-                        this.episode = epNum
-                        this.posterUrl = realimg
-                    }
+                    newEpisode(
+                        epurl,
+                        epTitle,
+                        0,
+                        epNum,
+                        realimg,
+                    )
                 )
             }
         }
 
-        return newTvSeriesLoadResponse(title, url, TvType.Anime, episodes) {
+        return newTvSeriesLoadResponse(
+            title,
+            url, TvType.Anime, episodes,
+        ) {
             this.posterUrl = poster
             this.backgroundPosterUrl = backimage
             this.plot = description
@@ -122,4 +136,7 @@ class AnimeJlProvider : MainAPI() {
         }
         return true
     }
+
 }
+
+

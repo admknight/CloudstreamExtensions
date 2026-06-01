@@ -1,4 +1,4 @@
-package com.admknight.donghuastream
+package com.Donghuastream
 
 
 import com.lagradost.api.Log
@@ -187,7 +187,6 @@ open class Donghuastream : MainAPI() {
         return true
     }
 }
-
 
 
 

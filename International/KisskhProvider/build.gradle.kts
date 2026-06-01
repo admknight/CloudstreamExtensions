@@ -1,6 +1,1 @@
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    status = 1
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/KisskhProvider/icon.png"
-}
+ import org.jetbrains.kotlin.konan.properties.Properties // use an integer for version numbers version = 18 android {     defaultConfig {                    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/KisskhProvider/icon.png"           isCrossPlatform = true }

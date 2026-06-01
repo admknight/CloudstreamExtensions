@@ -1,4 +1,4 @@
-package com.admknight.showflix
+package com.phisher98
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -556,7 +556,6 @@ fun cleanTitle(title: String): String {
         parts.takeLast(3).joinToString(".")
     }
 }
-
 
 
 

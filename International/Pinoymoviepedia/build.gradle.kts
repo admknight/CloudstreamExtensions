@@ -1,6 +1,1 @@
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    status = 1
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Pinoymoviepedia/icon.png"
-}
+version = 2  cloudstream {          authors = listOf("Adam Knight")          language = "fil"          description = "Contains Bluray7"      /**      * Status int as the following:      * 0: Down      * 1: Ok      * 2: Slow      * 3: Beta only     **/          status = 1 // will be 3 if unspecified          tvTypes = listOf("Movie","TvSeries")          iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Pinoymoviepedia/icon.png"           isCrossPlatform = true } 

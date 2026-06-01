@@ -1,4 +1,4 @@
-package com.admknight.ultima
+package com.phisher98
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -923,7 +923,6 @@ object UltimaBackupUtils {
                stringSet.isNullOrEmpty()
     }
 }
-
 
 
 

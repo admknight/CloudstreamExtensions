@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -42,16 +42,16 @@ import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.nicehttp.RequestBodyTypes
-import com.admknight.streamplay.StreamPlay.Companion.anilistAPI
-import com.admknight.streamplay.StreamPlay.Companion.malsyncAPI
-import com.admknight.streamplay.StreamPlayExtractor.invokeAnichi
-import com.admknight.streamplay.StreamPlayExtractor.invokeAnimepahe
-import com.admknight.streamplay.StreamPlayExtractor.invokeAnimetosho
-import com.admknight.streamplay.StreamPlayExtractor.invokeAnimex
-import com.admknight.streamplay.StreamPlayExtractor.invokeAnizone
-import com.admknight.streamplay.StreamPlayExtractor.invokeHianime
-import com.admknight.streamplay.StreamPlayExtractor.invokeKickAssAnime
-import com.admknight.streamplay.StreamPlayExtractor.invokeReAnime
+import com.phisher98.StreamPlay.Companion.anilistAPI
+import com.phisher98.StreamPlay.Companion.malsyncAPI
+import com.phisher98.StreamPlayExtractor.invokeAnichi
+import com.phisher98.StreamPlayExtractor.invokeAnimepahe
+import com.phisher98.StreamPlayExtractor.invokeAnimetosho
+import com.phisher98.StreamPlayExtractor.invokeAnimex
+import com.phisher98.StreamPlayExtractor.invokeAnizone
+import com.phisher98.StreamPlayExtractor.invokeHianime
+import com.phisher98.StreamPlayExtractor.invokeKickAssAnime
+import com.phisher98.StreamPlayExtractor.invokeReAnime
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.util.Calendar
@@ -523,7 +523,5 @@ class StreamPlayAnime : MainAPI() {
         return seasonStr.toIntOrNull()
     }
 }
-
-
 
 

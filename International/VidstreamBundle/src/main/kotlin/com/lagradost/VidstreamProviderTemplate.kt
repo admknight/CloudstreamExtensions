@@ -1,9 +1,11 @@
-package com.admknight.vidstreambundle
+package com.lagradost
 
 import com.lagradost.cloudstream3.*
+//import com.lagradost.cloudstream3.animeproviders.GogoanimeProvider.Companion.extractVidstream
+//import com.lagradost.Vidstream
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.getQualityFromName
 import org.jsoup.Jsoup
 import java.net.URI
 
@@ -13,6 +15,55 @@ import java.net.URI
 open class VidstreamProviderTemplate : MainAPI() {
     open val homePageUrlList = listOf<String>()
     open val vidstreamExtractorUrl: String? = null
+
+    /**
+     *  Used to generate encrypted video links.
+     *  Try keys from other providers before cracking
+     *  one yourself.
+     * */
+    // Userscript to get the keys:
+
+    /*
+    // ==UserScript==
+    // @name        Easy keys
+    // @namespace   Violentmonkey Scripts
+    // @match       https://*/streaming.php*
+    // @grant       none
+    // @version     1.0
+    // @author      LagradOst
+    // @description 4/16/2022, 2:05:31 PM
+    // ==/UserScript==
+
+    let encrypt = CryptoJS.AES.encrypt;
+    CryptoJS.AES.encrypt = (message, key, cfg) => {
+        let realKey = CryptoJS.enc.Utf8.stringify(key);
+        let realIv = CryptoJS.enc.Utf8.stringify(cfg.iv);
+
+        var result = encrypt(message, key, cfg);
+        let realResult = CryptoJS.enc.Utf8.stringify(result);
+
+        popup = "Encrypt key: " + realKey + "\n\nIV: " + realIv + "\n\nMessage: " + message + "\n\nResult: " + realResult;
+        alert(popup);
+
+        return result;
+    };
+
+    let decrypt = CryptoJS.AES.decrypt;
+    CryptoJS.AES.decrypt = (message, key, cfg) => {
+        let realKey = CryptoJS.enc.Utf8.stringify(key);
+        let realIv = CryptoJS.enc.Utf8.stringify(cfg.iv);
+
+        let result = decrypt(message, key, cfg);
+        let realResult = CryptoJS.enc.Utf8.stringify(result);
+
+        popup = "Decrypt key: " + realKey + "\n\nIV: " + realIv + "\n\nMessage: " + message + "\n\nResult: " + realResult;
+        alert(popup);
+
+        return result;
+    };
+
+     */
+     */
 
     open val iv: String? = null
     open val secretKey: String? = null
@@ -26,6 +77,15 @@ open class VidstreamProviderTemplate : MainAPI() {
      * See $("script[data-name='episode']")[0].dataset.value
      * */
     open val isUsingAdaptiveData: Boolean = false
+
+
+//    // mainUrl is good to have as a holder for the url to make future changes easier.
+//    override val mainUrl: String
+//        get() = "https://vidembed.cc"
+//
+//    // name is for how the provider will be named which is visible in the UI, no real rules for this.
+//    override val name: String
+//        get() = "VidEmbed"
 
     // hasQuickSearch defines if quickSearch() should be called, this is only when typing the searchbar
     // gives results on the site instead of bringing you to another page.
@@ -59,11 +119,12 @@ open class VidstreamProviderTemplate : MainAPI() {
                 // .trim() removes unwanted spaces in the start and end.
                 if (!title.contains("Episode")) title else title.split("Episode")[0].trim(),
                 href,
-                TvType.TvSeries
-            ) {
-                this.posterUrl = poster
-                this.year = year
-            }
+                this.name,
+                TvType.TvSeries,
+                poster, year,
+                // You can't get the episodes from the search bar.
+                null
+            )
         })
     }
 
@@ -116,19 +177,33 @@ open class VidstreamProviderTemplate : MainAPI() {
 
         return when (tvType) {
             TvType.TvSeries -> {
-                newTvSeriesLoadResponse(title, url, tvType, episodes) {
-                    this.posterUrl = poster
-                    this.year = year
-                    this.plot = description
-                    this.showStatus = ShowStatus.Ongoing
-                }
+                newTvSeriesLoadResponse(
+                    title,
+                    url,
+                    this.name,
+                    tvType,
+                    episodes,
+                    poster,
+                    year,
+                    description,
+                    ShowStatus.Ongoing,
+                    null,
+                    null
+                )
             }
             TvType.Movie -> {
-                newMovieLoadResponse(title, url, tvType, episodes[0].data) {
-                    this.posterUrl = poster
-                    this.year = year
-                    this.plot = description
-                }
+                newMovieLoadResponse(
+                    title,
+                    url,
+                    this.name,
+                    tvType,
+                    episodes[0].data,
+                    poster,
+                    year,
+                    description,
+                    null,
+                    null
+                )
             }
             else -> null
         }
@@ -154,11 +229,11 @@ open class VidstreamProviderTemplate : MainAPI() {
                     val isSeries = (name.contains("Season") || name.contains("Episode"))
 
                     if (isSeries) {
-                        newTvSeriesSearchResponse(name, link, TvType.TvSeries) {
+                        newTvSeriesSearchResponse(name, link) {
                             posterUrl = image
                         }
                     } else {
-                        newMovieSearchResponse(name, link, TvType.Movie) {
+                        newMovieSearchResponse(name, link) {
                             posterUrl = image
                         }
                     }
@@ -175,7 +250,7 @@ open class VidstreamProviderTemplate : MainAPI() {
     }
 
     // loadLinks gets the raw .mp4 or .m3u8 urls from the data parameter in the episodes class generated in load()
-    // See Episode(...) in this provider.
+    // See newEpisode(...) in this provider.
     // The data are usually links, but can be any other string to help aid loading the links.
     override suspend fun loadLinks(
         data: String,
@@ -188,6 +263,16 @@ open class VidstreamProviderTemplate : MainAPI() {
         val iframeLink =
             Jsoup.parse(app.get(data).text).selectFirst("iframe")?.attr("src") ?: return false
 
+//        extractVidstream(
+//            iframeLink,
+//            this.name,
+//            callback,
+//            iv,
+//            secretKey,
+//            secretDecryptKey,
+//            isUsingAdaptiveKeys,
+//            isUsingAdaptiveData
+//        )
         // In this case the video player is a vidstream clone and can be handled by the vidstream extractor.
         // This case is a both unorthodox and you normally do not call extractors as they detect the url returned and does the rest.
         val vidstreamObject = Vidstream(vidstreamExtractorUrl ?: mainUrl)
@@ -226,11 +311,15 @@ open class VidstreamProviderTemplate : MainAPI() {
                         newExtractorLink(
                             this.name,
                             match.groupValues.getOrNull(2)?.let { "${this.name} $it" } ?: this.name,
-                            match.groupValues[1]
-                        ) {
-                            this.referer = it.second
-                            this.quality = getQualityFromName(match.groupValues.getOrNull(2) ?: "")
-                        }
+                            match.groupValues[1],
+                            it.second,
+                            // Useful function to turn something like "1080p" to an app quality.
+                            getQualityFromName(match.groupValues.getOrNull(2) ?: ""),
+                            // Kinda risky
+                            // isM3u8 makes the player pick the correct extractor for the source.
+                            // If isM3u8 is wrong the player will error on that source.
+                            URI(match.groupValues[1]).path.endsWith(".m3u8"),
+                        )
                     )
                 }
                 trackRegex.findAll(serverHtml).forEach { match ->
@@ -247,3 +336,7 @@ open class VidstreamProviderTemplate : MainAPI() {
         return true
     }
 }
+
+
+
+

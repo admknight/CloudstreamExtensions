@@ -1,4 +1,4 @@
-package com.admknight.nineanime
+package com.lagradost
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -58,10 +58,9 @@ class WcoProvider : MainAPI() {
                             ?.contains("DUB")
                             ?: false
                     val poster = filmPoster.selectFirst("> img")!!.attr("data-src")
-                    newAnimeSearchResponse(title, href, TvType.Anime) {
-                        this.posterUrl = poster
-                        addDubStatus(if (isDub) DubStatus.Dubbed else DubStatus.Subbed)
-                    }
+                    val set: EnumSet<DubStatus> =
+                        EnumSet.of(if (isDub) DubStatus.Dubbed else DubStatus.Subbed)
+                    newAnimeSearchResponse(title, href, this.name, TvType.Anime, poster, null, set)
                 }
                 items.add(HomePageList(i.second, results))
             } catch (e: Exception) {
@@ -94,16 +93,19 @@ class WcoProvider : MainAPI() {
                 i.selectFirst(".film-detail.film-detail-fix > div > span:nth-child(3)")!!.text()
 
             if (getType(type) == TvType.AnimeMovie) {
-                newMovieSearchResponse(title, href, TvType.AnimeMovie) {
-                    this.posterUrl = img
-                    this.year = year
-                }
+                newMovieSearchResponse(
+                    title, href, this.name, TvType.AnimeMovie, img, year
+                )
             } else {
-                newAnimeSearchResponse(title, href, TvType.Anime) {
-                    this.posterUrl = img
-                    this.year = year
-                    addDubStatus(if (isDub) DubStatus.Dubbed else DubStatus.Subbed)
-                }
+                newAnimeSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Anime,
+                    img,
+                    year,
+                    EnumSet.of(if (isDub) DubStatus.Dubbed else DubStatus.Subbed),
+                )
             }
         }
     }
@@ -146,16 +148,19 @@ class WcoProvider : MainAPI() {
             val year = filmInfo?.select("span")?.get(0)?.text()?.toIntOrNull()
             val type = filmInfo?.select("span")?.get(1)?.text().toString()
             if (getType(type) == TvType.AnimeMovie) {
-                newMovieSearchResponse(title, href, TvType.AnimeMovie) {
-                    this.posterUrl = img
-                    this.year = year
-                }
+                newMovieSearchResponse(
+                    title, href, this.name, TvType.AnimeMovie, img, year
+                )
             } else {
-                newAnimeSearchResponse(title, href, TvType.Anime) {
-                    this.posterUrl = img
-                    this.year = year
-                    addDubStatus(if (isDub) DubStatus.Dubbed else DubStatus.Subbed)
-                }
+                newAnimeSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Anime,
+                    img,
+                    year,
+                    EnumSet.of(if (isDub) DubStatus.Dubbed else DubStatus.Subbed),
+                )
             }
         }
     }
@@ -231,7 +236,6 @@ class WcoProvider : MainAPI() {
         return true
     }
 }
-
 
 
 

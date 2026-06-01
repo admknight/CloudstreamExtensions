@@ -1,4 +1,4 @@
-package com.admknight.banglaplex
+package com.BanglaPlex
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
@@ -100,7 +100,6 @@ open class Xcloud : ExtractorApi() {
         }
     }
 }
-
 
 
 

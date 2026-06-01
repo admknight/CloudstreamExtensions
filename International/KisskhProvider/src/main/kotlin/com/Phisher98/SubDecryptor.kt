@@ -1,4 +1,4 @@
-package com.admknight.kisskh
+package com.phisher98
 
 import com.lagradost.cloudstream3.base64DecodeArray
 import javax.crypto.Cipher
@@ -51,6 +51,5 @@ private fun IntArray.toByteArray(): ByteArray {
         }
     }
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.mundodonghua
+package com.stormunblessed
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -61,7 +61,7 @@ class MundoDonghuaProvider : MainAPI() {
         }
 
         if (items.size <= 0) throw ErrorLoadingException()
-        return HomePageResponse(items)
+        return newHomePageResponse(items)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -97,7 +97,7 @@ class MundoDonghuaProvider : MainAPI() {
             val epnum = epNumRegex.find(link)?.destructured?.component1()
             newEpisodes.add(
                 newEpisode(fixUrl(link)) {
-                    episode = epnum.toString().toIntOrNull()
+                    this.episode = epnum.toString().toIntOrNull()
                 }
             )
         }
@@ -107,7 +107,7 @@ class MundoDonghuaProvider : MainAPI() {
                 val epnum = epNumRegex.find(href)?.destructured?.component1()
                 newEpisodes.add(
                     newEpisode(fixUrl(href)) {
-                        episode = epnum.toString().toIntOrNull()
+                        this.episode = epnum.toString().toIntOrNull()
                     }
                 )
             }
@@ -145,7 +145,7 @@ class MundoDonghuaProvider : MainAPI() {
             "User-Agent" to USER_AGENT,
             "Accept" to "*/*",
             "Accept-Language" to "en-US,en;q=0.5",
-            "X-Requested-With" to "XMLHttpRequest",
+            "X-With" to "XMLHttpRequest",
             "Referer" to datafix,
             "DNT" to "1",
             "Connection" to "keep-alive",
@@ -197,6 +197,3 @@ class MundoDonghuaProvider : MainAPI() {
         return true
     }
 }
-
-
-

@@ -1,12 +1,11 @@
-package com.admknight.aniflix
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addAniListId
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.lagradost.cloudstream3.utils.ExtractorLinkType
+import com.lagradost.cloudstream3.utils.getQualityFromName
 import java.net.URLDecoder
 
 class AniflixProvider : MainAPI() {
@@ -144,11 +143,10 @@ class AniflixProvider : MainAPI() {
                         name,
                         "${source.label ?: name} (DUB)",
                         source.file ?: return@forEach,
-                    ) {
-                        this.referer = dubReferer
-                        this.quality = getQualityFromName(source.label)
-                        this.type = if (source.type == "hls") ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
-                    }
+                        dubReferer,
+                        getQualityFromName(source.label),
+                        source.type == "hls"
+                    )
                 )
             }
 
@@ -159,11 +157,10 @@ class AniflixProvider : MainAPI() {
                         name,
                         "${source.label ?: name} (SUB)",
                         source.file ?: return@forEach,
-                    ) {
-                        this.referer = subReferer
-                        this.quality = getQualityFromName(source.label)
-                        this.type = if (source.type == "hls") ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
-                    }
+                        subReferer,
+                        getQualityFromName(source.label),
+                        source.type == "hls"
+                    )
                 )
             }
 

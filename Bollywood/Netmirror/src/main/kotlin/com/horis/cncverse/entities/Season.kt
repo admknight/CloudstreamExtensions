@@ -1,4 +1,4 @@
-package com.admknight.netmirror
+package com.horis.cncverse.entities
 
 data class Season(
     val ep: String,

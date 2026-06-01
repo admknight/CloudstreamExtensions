@@ -1,8 +1,10 @@
-package com.admknight.cuevana
+package com.lagradost.cloudstream3.movieproviders
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
+import com.lagradost.cloudstream3.mvvm.logError
+import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
 
@@ -32,9 +34,15 @@ class CuevanaProvider : MainAPI() {
                         val title = it.selectFirst("h2.Title")!!.text()
                         val poster = it.selectFirst("img.lazy")!!.attr("data-src").replaceFirst("//", "https://")
                         val url = it.selectFirst("a")!!.attr("href")
-                        newTvSeriesSearchResponse(title, url, TvType.Anime) {
-                            this.posterUrl = poster
-                        }
+                        newTvSeriesSearchResponse(
+                            title,
+                            url,
+                            this.name,
+                            TvType.Anime,
+                            poster,
+                            null,
+                            null,
+                        )
                     })
         )
         urls.map { (url, name) ->
@@ -42,10 +50,15 @@ class CuevanaProvider : MainAPI() {
             val home = soup.select("section li.xxx.TPostMv").map {
                 val title = it.selectFirst("h2.Title")!!.text()
                 val link = it.selectFirst("a")!!.attr("href")
-                val type = if (link.contains("/pelicula/")) TvType.Movie else TvType.TvSeries
-                newMovieSearchResponse(title, link, type) {
-                    this.posterUrl = it.selectFirst("img.lazy")!!.attr("data-src").replaceFirst("//", "https://")
-                }
+                newTvSeriesSearchResponse(
+                    title,
+                    link,
+                    this.name,
+                    if (link.contains("/pelicula/")) TvType.Movie else TvType.TvSeries,
+                    it.selectFirst("img.lazy")!!.attr("data-src").replaceFirst("//", "https://"),
+                    null,
+                    null,
+                )
             }
 
             items.add(HomePageList(name, home))
@@ -66,13 +79,24 @@ class CuevanaProvider : MainAPI() {
             val isSerie = href.contains("/serie/")
 
             if (isSerie) {
-                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
-                    this.posterUrl = image
-                }
+                newTvSeriesSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.TvSeries,
+                    image,
+                    null,
+                    null
+                )
             } else {
-                newMovieSearchResponse(title, href, TvType.Movie) {
-                    this.posterUrl = image
-                }
+                newMovieSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Movie,
+                    image,
+                    null
+                )
             }
         }
     }
@@ -100,11 +124,13 @@ class CuevanaProvider : MainAPI() {
             val isValid = seasonid.size == 2
             val episode = if (isValid) seasonid.getOrNull(1) else null
             val season = if (isValid) seasonid.getOrNull(0) else null
-            newEpisode(href) {
-                this.season = season
-                this.episode = episode
-                this.posterUrl = fixUrl(epThumb)
-            }
+            newEpisode(
+                href,
+                null,
+                season,
+                episode,
+                fixUrl(epThumb)
+            )
         }
         val tags = soup.select("ul.InfoList li.AAIco-adjust:contains(Genero) a").map { it.text() }
         val tvType = if (episodes.isEmpty()) TvType.Movie else TvType.TvSeries
@@ -116,16 +142,22 @@ class CuevanaProvider : MainAPI() {
                 val recTitle = element.select("h2.Title").text() ?: return@mapNotNull null
                 val image = element.select("figure img")?.attr("data-src")
                 val recUrl = fixUrl(element.select("a").attr("href"))
-                newMovieSearchResponse(recTitle, recUrl, TvType.Movie) {
-                    this.posterUrl = image
-                }
+                newMovieSearchResponse(
+                    recTitle,
+                    recUrl,
+                    this.name,
+                    TvType.Movie,
+                    image,
+                    year = null
+                )
             }
         val trailer = soup.selectFirst("div.TPlayer.embed_div div[id=OptY] iframe")?.attr("data-src") ?: ""
 
 
         return when (tvType) {
             TvType.TvSeries -> {
-                newTvSeriesLoadResponse(title, url, tvType, episodes){
+                newTvSeriesLoadResponse(title,
+                    url, tvType, episodes,){
                     this.posterUrl = poster
                     this.backgroundPosterUrl = backgrounposter
                     this.plot = description
@@ -169,3 +201,5 @@ class CuevanaProvider : MainAPI() {
         return true
     }
 }
+
+

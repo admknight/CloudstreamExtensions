@@ -1,4 +1,4 @@
-package com.admknight.tokusatsuultimate
+package com.tokusatsu.ultimate
 
 import android.util.Log
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
@@ -305,6 +305,5 @@ class TokusatsuUltimate : MainAPI() {
     }
 
 }
-
 
 

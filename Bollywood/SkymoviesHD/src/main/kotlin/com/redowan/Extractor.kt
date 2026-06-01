@@ -1,4 +1,4 @@
-package com.admknight.skymovieshd
+package com.redowan
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -225,6 +225,5 @@ class HubCloud : ExtractorApi() {
         }
     }
 }
-
 
 

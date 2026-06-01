@@ -1,4 +1,4 @@
-package com.admknight.dorabash
+package com.DoraBash
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -14,7 +14,7 @@ data class Data(
     val message: String,
 )
 
-data class Episode(
+data class newEpisode(
     val number: String,
     val thumbnail: String,
     val title: String,
@@ -30,6 +30,5 @@ data class Episode(
     @param:JsonProperty("meta_number")
     val metaNumber: String,
 )
-
 
 

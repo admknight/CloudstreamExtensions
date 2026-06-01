@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import android.content.SharedPreferences
 import androidx.core.content.edit
@@ -917,7 +917,6 @@ open class StreamPlay(val sharedPref: SharedPreferences? = null) : MainAPI() {
         @get:JsonProperty("production_countries") val production_countries: ArrayList<ProductionCountries>? = arrayListOf(),
     )
 }
-
 
 
 

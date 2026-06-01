@@ -1,4 +1,4 @@
-package com.admknight.pencurimovie
+package com.Pencurimovie
 
 import com.lagradost.api.Log
 import org.jsoup.nodes.Element
@@ -134,7 +134,6 @@ class Pencurimovie : MainAPI() {
         return true
     }
 }
-
 
 
 

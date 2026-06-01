@@ -1,4 +1,4 @@
-package com.admknight.publicsportsiptv
+package com.PublicSportsIPTV
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -9,7 +9,6 @@ class PublicSportsIPTVProvider: BasePlugin() {
         registerMainAPI(PublicSportsIPTV())
     }
 }
-
 
 
 

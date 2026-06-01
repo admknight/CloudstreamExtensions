@@ -1,4 +1,4 @@
-package com.admknight.toontales
+package com.ToonTales
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*

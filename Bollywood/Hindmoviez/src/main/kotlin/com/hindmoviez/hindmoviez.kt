@@ -1,4 +1,4 @@
-package com.admknight.hindmoviez
+package com.hindmoviez
 
 import com.google.gson.Gson
 import com.lagradost.cloudstream3.HomePageResponse
@@ -394,6 +394,5 @@ class Hindmoviez : MainAPI() {
         return true
     }
 }
-
 
 

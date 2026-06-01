@@ -1,4 +1,4 @@
-package com.admknight.tokusatsuultimate
+package com.tokusatsu.ultimate
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,6 +12,5 @@ class TokusatsuUltimatePlugin: Plugin() {
         registerExtractorAPI(TokusatsuUltimate.P2pplay())
     }
 }
-
 
 

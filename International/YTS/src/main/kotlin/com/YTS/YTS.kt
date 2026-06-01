@@ -1,4 +1,4 @@
-package com.admknight.yts
+package com.YTS
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*

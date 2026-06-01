@@ -1,9 +1,9 @@
-package com.admknight.fourkhdhub
+package com.fourKHDHub
 
 import android.util.Base64
-import com.admknight.fourkhdhub.BuildConfig.TMDBAPI
-import com.admknight.fourkhdhub.BuildConfig.TMDBIMAGEBASEURL
-import com.admknight.fourkhdhub.BuildConfig.TMDB_API_KEY
+import com.fourKHDHub.FourKHDHub.Companion.TMDBAPI
+import com.fourKHDHub.FourKHDHub.Companion.TMDBIMAGEBASEURL
+import com.fourKHDHub.FourKHDHub.Companion.TMDB_API_KEY
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Actor
 import com.lagradost.cloudstream3.ActorData
@@ -33,6 +33,7 @@ suspend fun getRedirectLinks(url: String): String {
         return ""
     }
 
+    // Faster than buildString + forEach
     val combined = StringBuilder(128)
     for (m in REDIRECT_REGEX.findAll(html)) {
         m.groups[1]?.value?.let(combined::append)
@@ -195,3 +196,7 @@ fun safeScoreFrom10(value: Double?): Score? {
         Score.from10(it)
     }
 }
+
+
+
+

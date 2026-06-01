@@ -1,4 +1,4 @@
-package com.admknight.desicinemas
+package com.Desicinemas
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -15,7 +15,6 @@ class DesicinemasPlugin: BasePlugin() {
         registerExtractorAPI(Tvlogyflow((provider.name)))
     }
 }
-
 
 
 

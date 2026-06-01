@@ -1,6 +1,1 @@
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    status = 1
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/PublicSportsIPTV/icon.png"
-}
+@file:Suppress("UnstableApiUsage")  import org.jetbrains.kotlin.konan.properties.Properties  version = 2 android {     defaultConfig {                    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/PublicSportsIPTV/icon.png"           isCrossPlatform = true } 

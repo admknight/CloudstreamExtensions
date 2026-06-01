@@ -1,4 +1,4 @@
-package com.admknight.hdhub4u
+package com.hdhub4u
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.SubtitleFile
@@ -484,7 +484,6 @@ class HUBCDN : ExtractorApi() {
         }
     }
 }
-
 
 
 

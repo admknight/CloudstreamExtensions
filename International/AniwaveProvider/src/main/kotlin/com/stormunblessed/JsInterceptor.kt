@@ -1,4 +1,4 @@
-package com.admknight.aniwave
+package com.stormunblessed
 
 
 import android.annotation.SuppressLint
@@ -14,7 +14,7 @@ import com.lagradost.cloudstream3.USER_AGENT
 import com.lagradost.cloudstream3.utils.Coroutines
 import com.lagradost.cloudstream3.utils.Coroutines.main
 import com.lagradost.nicehttp.requestCreator
-import com.admknight.aniwave.AniwaveProviderPlugin.Companion.postFunction
+import com.stormunblessed.AniwaveProviderPlugin.Companion.postFunction
 import kotlinx.coroutines.runBlocking
 import okhttp3.*
 import java.util.concurrent.CountDownLatch
@@ -132,7 +132,6 @@ class JsInterceptor(private val serverid: String, private val lang: String) : In
         return newRequest
     }
 }
-
 
 
 

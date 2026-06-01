@@ -1,4 +1,4 @@
-package com.admknight.animexin
+package com.Animexin
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
@@ -102,7 +102,6 @@ class Animexin : MainAPI() {
         return true
     }
 }
-
 
 
 

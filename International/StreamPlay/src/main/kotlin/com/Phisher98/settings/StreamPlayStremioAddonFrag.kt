@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -321,7 +321,6 @@ class StreamPlayStremioAddonFrag(
         onDismissCallback?.invoke()
     }
 }
-
 
 
 

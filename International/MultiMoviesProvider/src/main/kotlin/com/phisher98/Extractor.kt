@@ -1,4 +1,4 @@
-package com.admknight.multimovies
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.JsonParser
@@ -377,6 +377,5 @@ open class Gofile : ExtractorApi() {
         @param:JsonProperty("size") val size: Long? = 0L
     )
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.uhdmovies
+package com.phisher98
 
 
 import java.net.URLEncoder
@@ -352,7 +352,6 @@ private suspend fun fetchSimklId(
         ?.optInt("simkl")
         ?.takeIf { it != 0 }
 }.getOrNull()
-
 
 
 

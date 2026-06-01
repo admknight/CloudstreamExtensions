@@ -1,4 +1,4 @@
-package com.admknight.fibwatch
+package com.Fibwatch
 
 import android.util.Log
 import com.lagradost.cloudstream3.*
@@ -335,7 +335,6 @@ open class Fibwatch : MainAPI() {
         return true
     }
 }
-
 
 
 

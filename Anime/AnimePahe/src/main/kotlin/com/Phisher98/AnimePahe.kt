@@ -1,4 +1,4 @@
-package com.admknight.animepahe
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -390,7 +390,7 @@ class AnimePahe : MainAPI() {
             }
 
 
-        document.select("div#pickDownload > a").map {
+        document.select("div#pickDownload > a").amap {
             val qualityRegex = Regex("""(.+?)\s+·\s+(\d{3,4}p)""")
             val href = it.attr("href")
             var type = "SUB"
@@ -413,7 +413,6 @@ class AnimePahe : MainAPI() {
         return true
     }
 }
-
 
 
 

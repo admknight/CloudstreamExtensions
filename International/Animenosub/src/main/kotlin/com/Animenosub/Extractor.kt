@@ -1,4 +1,4 @@
-package com.admknight.animenosub
+package com.Animenosub
 
 
 import com.lagradost.cloudstream3.SubtitleFile
@@ -109,7 +109,6 @@ object AesHelper {
         return chunked(2).map { it.toInt(16).toByte() }.toByteArray()
     }
 }
-
 
 
 

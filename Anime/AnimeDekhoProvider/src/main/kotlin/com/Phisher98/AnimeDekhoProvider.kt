@@ -1,4 +1,4 @@
-package com.admknight.animedekho
+package com.phisher98
 
 import com.google.gson.Gson
 import com.lagradost.api.Log
@@ -195,7 +195,6 @@ open class AnimeDekhoProvider : MainAPI() {
     data class Media(val url: String, val poster: String? = null, val mediaType: Int? = null)
 
 }
-
 
 
 

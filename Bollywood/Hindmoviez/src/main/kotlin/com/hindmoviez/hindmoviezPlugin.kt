@@ -1,4 +1,4 @@
-package com.admknight.hindmoviez
+package com.hindmoviez
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.plugins.BasePlugin
@@ -36,6 +36,5 @@ class HindmoviezPlugin : BasePlugin() {
         )
     }
 }
-
 
 

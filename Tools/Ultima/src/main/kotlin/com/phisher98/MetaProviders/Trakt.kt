@@ -1,8 +1,8 @@
-package com.admknight.ultima
+package com.phisher98
 
-import com.admknight.ultima.UltimaMediaProvidersUtils.invokeExtractors
-import com.admknight.ultima.UltimaUtils.Category
-import com.admknight.ultima.UltimaUtils.LinkData as UltimaLinkData
+import com.phisher98.UltimaMediaProvidersUtils.invokeExtractors
+import com.phisher98.UltimaUtils.Category
+import com.phisher98.UltimaUtils.LinkData as UltimaLinkData
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.base64Decode
@@ -68,7 +68,6 @@ class Trakt(val plugin: UltimaPlugin) : TraktProvider() {
         return true
     }
 }
-
 
 
 

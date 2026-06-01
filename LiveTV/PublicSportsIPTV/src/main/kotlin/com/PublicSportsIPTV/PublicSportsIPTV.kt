@@ -1,4 +1,4 @@
-package com.admknight.publicsportsiptv
+package com.PublicSportsIPTV
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -6,7 +6,7 @@ import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 
 class PublicSportsIPTV : MainAPI() {
-    override var mainUrl: String = com.admknight.publicsportsiptv.BuildConfig.FanCode_API
+    override var mainUrl: String = com.phisher98.BuildConfig.FanCode_API
     override var name = "PublicSportsIPTV"
     override val hasMainPage = true
     override var lang = "en"

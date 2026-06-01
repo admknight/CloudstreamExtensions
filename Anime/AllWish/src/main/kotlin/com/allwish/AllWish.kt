@@ -1,4 +1,4 @@
-package com.admknight.allwish
+package com.allwish
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -252,7 +252,6 @@ class AllWish : MainAPI() {
         return Pair(subEpisodes, dubEpisodes)
     }
 }
-
 
 
 

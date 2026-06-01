@@ -1,15 +1,14 @@
-package com.admknight.jkanime
+package com.stormunblessed
 
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.ExtractorLinkType
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -77,15 +76,17 @@ class JKAnimeProvider : MainAPI() {
             val home = soup.select(".g-0").map {
                 val title = it.selectFirst("h5 a")?.text()
                 val poster = it.selectFirst("img")?.attr("src") ?: ""
-                val isDub = title?.contains("Latino") == true || title?.contains("Castellano") == true
                 newAnimeSearchResponse(
-                    title ?: "",
+                    title!!,
                     fixUrl(it.selectFirst("a")?.attr("href") ?: ""),
-                    TvType.Anime
-                ) {
-                    this.posterUrl = fixUrl(poster)
-                    addDubStatus(isDub, !isDub)
-                }
+                    this.name,
+                    TvType.Anime,
+                    fixUrl(poster),
+                    null,
+                    if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(
+                        DubStatus.Dubbed
+                    ) else EnumSet.of(DubStatus.Subbed),
+                )
             }
             items.add(HomePageList(name, home))
         }
@@ -172,9 +173,10 @@ class JKAnimeProvider : MainAPI() {
                 val imagetest = !info.image.isNullOrBlank()
                 val image = if (imagetest) "https://cdn.jkdesu.com/assets/images/animes/video/image_thumb/${info.image}" else null
                 val link = "${url.removeSuffix("/")}/${info.number}"
-                val ep = newEpisode(link) {
-                    this.posterUrl = image
-                }
+                val ep = newEpisode(
+                    link,
+                    posterUrl = image
+                )
                 episodes.add(ep)
             }
         }
@@ -192,7 +194,7 @@ class JKAnimeProvider : MainAPI() {
         @JsonProperty("file") val file: String?
     )
 
-    private suspend fun streamClean(
+    private fun streamClean(
         name: String,
         url: String,
         referer: String,
@@ -205,11 +207,10 @@ class JKAnimeProvider : MainAPI() {
                 name,
                 name,
                 url,
-            ) {
-                this.referer = referer
-                this.quality = getQualityFromName(quality)
-                this.type = if (m3u8) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
-            }
+                referer,
+                getQualityFromName(quality),
+                m3u8
+            )
         )
         return true
     }

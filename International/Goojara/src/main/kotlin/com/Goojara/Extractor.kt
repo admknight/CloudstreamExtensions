@@ -1,4 +1,4 @@
-package com.admknight.goojara
+package com.Goojara
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.APIHolder.getCaptchaToken
@@ -130,6 +130,5 @@ class Wootly : ExtractorApi() {
         )
     }
 }
-
 
 

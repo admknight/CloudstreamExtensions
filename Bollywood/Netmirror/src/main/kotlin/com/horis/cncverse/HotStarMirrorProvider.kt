@@ -1,15 +1,16 @@
-package com.admknight.netmirror
+package com.horis.cncverse
 
 import android.content.Context
-import com.admknight.netmirror.EpisodesData
-import com.admknight.netmirror.PlayList
-import com.admknight.netmirror.PostData
-import com.admknight.netmirror.SearchData
+import com.horis.cncverse.entities.EpisodesData
+import com.horis.cncverse.entities.PlayList
+import com.horis.cncverse.entities.PostData
+import com.horis.cncverse.entities.SearchData
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.httpsify
 import com.lagradost.cloudstream3.utils.getQualityFromName
@@ -127,7 +128,7 @@ class HotStarMirrorProvider : MainAPI() {
             cookies = cookies
         ).parsed<PostData>()
 
-        val episodes = arrayListOf<com.lagradost.cloudstream3.Episode>()
+        val episodes = arrayListOf<NetmirrorEpisode>()
 
         val title = data.title
         val castList = data.cast?.split(",")?.map { it.trim() } ?: emptyList()
@@ -152,7 +153,7 @@ class HotStarMirrorProvider : MainAPI() {
             data.episodes.filterNotNull().mapTo(episodes) {
                 newEpisode(LoadData(title, it.id)) {
                     this.name = it.t
-                    this.episode = it.ep.replace("E", "").toIntOrNull()
+                    this.NetmirrorEpisode = it.ep.replace("E", "").toIntOrNull()
                     this.season = it.s.replace("S", "").toIntOrNull()
                     this.posterUrl = "https://imgcdn.kim/hsepimg/150/${it.id}.jpg"
                     this.runTime = it.time.replace("m", "").toIntOrNull()
@@ -187,8 +188,8 @@ class HotStarMirrorProvider : MainAPI() {
 
     private suspend fun getEpisodes(
         title: String, eid: String, sid: String, page: Int
-    ): List<com.lagradost.cloudstream3.Episode> {
-        val episodes = arrayListOf<com.lagradost.cloudstream3.Episode>()
+    ): List<NetmirrorEpisode> {
+        val episodes = arrayListOf<NetmirrorEpisode>()
         val cookies = mapOf(
             "t_hash_t" to cookie_value,
             "hd" to "on",
@@ -205,7 +206,7 @@ class HotStarMirrorProvider : MainAPI() {
             data.episodes?.mapTo(episodes) {
                 newEpisode(LoadData(title, it.id)) {
                     name = it.t
-                    episode = it.ep.replace("E", "").toIntOrNull()
+                    NetmirrorEpisode = it.ep.replace("E", "").toIntOrNull()
                     season = it.s.replace("S", "").toIntOrNull()
                     this.posterUrl = "https://imgcdn.kim/hsepimg/${it.id}.jpg"
                     this.runTime = it.time.replace("m", "").toIntOrNull()
@@ -265,6 +266,7 @@ class HotStarMirrorProvider : MainAPI() {
         val title: String, val id: String
     )
 }
+
 
 
 

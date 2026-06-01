@@ -1,4 +1,4 @@
-package com.admknight.coflix
+package com.Coflix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -179,7 +179,6 @@ class Coflix : MainAPI() {
     }
 
 }
-
 
 
 

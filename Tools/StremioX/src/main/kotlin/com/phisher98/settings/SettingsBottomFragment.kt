@@ -1,4 +1,4 @@
-package com.admknight.stremiox
+package com.phisher98
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -325,7 +325,6 @@ class SettingsBottomFragment(
 
 
 }
-
 
 
 

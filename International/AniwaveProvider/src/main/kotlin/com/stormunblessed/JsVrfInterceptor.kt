@@ -1,4 +1,4 @@
-package com.admknight.aniwave
+package com.stormunblessed
 
 import android.annotation.SuppressLint
 import android.os.Handler
@@ -7,7 +7,7 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.lagradost.cloudstream3.AcraApplication.Companion.context
-import com.admknight.aniwave.AniwaveProviderPlugin.Companion.postFunction
+import com.stormunblessed.AniwaveProviderPlugin.Companion.postFunction
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
@@ -99,7 +99,6 @@ class JsVrfInterceptor(private val baseUrl: String) {
         """.trimIndent()
     }
 }
-
 
 
 

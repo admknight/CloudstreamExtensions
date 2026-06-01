@@ -1,4 +1,4 @@
-package com.admknight.jellyfin
+package com.phisher98.settings
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -18,10 +18,10 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.admknight.jellyfin.BuildConfig
+import com.phisher98.BuildConfig
 import androidx.appcompat.app.AlertDialog
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.admknight.jellyfin.JellyfinPlugin
+import com.phisher98.JellyfinPlugin
 import androidx.core.content.edit
 
 class SettingsFragment(
@@ -189,7 +189,6 @@ class SettingsFragment(
         }
     }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.comamosramen
+package com.lagradost.cloudstream3.movieproviders
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -120,10 +120,15 @@ class ComamosRamenProvider : MainAPI() {
             val title = it.title
             val img = "https://img.comamosramen.com/${it.img?.vertical}-high.jpg"
             val link = "$mainUrl/v/${it.Id}/${title.replace(" ", "-")}"
-            newAnimeSearchResponse(title, link, TvType.AsianDrama) {
-                this.posterUrl = img
-                if (title.contains("Latino")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
-            }
+            newAnimeSearchResponse(
+                title,
+                link,
+                this.name,
+                TvType.AsianDrama,
+                img,
+                null,
+                if (title.contains("Latino")) EnumSet.of(DubStatus.Dubbed) else EnumSet.of(DubStatus.Subbed),
+            )
         }
     }
 
@@ -221,19 +226,26 @@ class ComamosRamenProvider : MainAPI() {
             val seasonID = seasons.season
             seasons.episodes.map { episodes ->
                 val epnum = episodes.episode
-                epi.add(newEpisode("$mainUrl/v/$movieID/${title?.replace(" ","-")}/$seasonID-$epnum") {
-                    this.season = seasonID
-                    this.episode = epnum
-                })
+                epi.add(newEpisode(
+                    "$mainUrl/v/$movieID/${title?.replace(" ","-")}/$seasonID-$epnum",
+                    season =seasonID,
+                    episode = epnum,
+                ))
             }
         }
-        return newTvSeriesLoadResponse(title!!, url, TvType.AsianDrama, epi) {
-            this.posterUrl = img
-            this.year = year
-            this.plot = desc
-            this.showStatus = status
-            this.tags = tags
-        }
+        return newTvSeriesLoadResponse(
+            title!!,
+            url,
+            this.name,
+            TvType.AsianDrama,
+            epi,
+            img,
+            year,
+            desc,
+            status,
+            null,
+            tags
+        )
     }
 
     data class LoadLinksMain (
@@ -294,3 +306,6 @@ class ComamosRamenProvider : MainAPI() {
         return true
     }
 }
+
+
+

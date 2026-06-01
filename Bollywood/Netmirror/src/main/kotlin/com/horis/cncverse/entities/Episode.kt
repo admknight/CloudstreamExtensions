@@ -1,6 +1,6 @@
-package com.admknight.netmirror
+package com.horis.cncverse.entities
 
-data class NetmirrorEpisode(
+data class newEpisode(
     val complate: String,
     val ep: String,
     val id: String,
@@ -8,3 +8,7 @@ data class NetmirrorEpisode(
     val t: String,
     val time: String
 )
+
+
+
+

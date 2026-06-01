@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix.settings
 
 import android.content.Context
 import android.graphics.Color
@@ -68,20 +68,19 @@ internal object SettingsTheme {
         setColor(Color.parseColor("#0D1117"))
         setStroke(1, Color.parseColor("#2E2850"))
     }
+
+    // ── dp helpers ───────────────────────────────────────────
+
+    fun Int.dp(context: Context): Int =
+        TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP, toFloat(), context.resources.displayMetrics
+        ).toInt()
+
+    fun Float.dp(context: Context): Float =
+        TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP, this, context.resources.displayMetrics
+        )
 }
-
-// ── dp helpers ───────────────────────────────────────────
-
-fun Int.dp(context: Context): Int =
-    TypedValue.applyDimension(
-        TypedValue.COMPLEX_UNIT_DIP, toFloat(), context.resources.displayMetrics
-    ).toInt()
-
-fun Float.dp(context: Context): Float =
-    TypedValue.applyDimension(
-        TypedValue.COMPLEX_UNIT_DIP, this, context.resources.displayMetrics
-    )
-
 
 
 

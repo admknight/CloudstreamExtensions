@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 // Cloudstream Core, Utils, & Logging
 import com.lagradost.api.Log
@@ -24,9 +24,9 @@ import kotlinx.coroutines.runBlocking
 // JSON Parsing
 import org.json.JSONObject
 
-import com.admknight.cinestream.CineStreamExtractors.invokeAllSources
-import com.admknight.cinestream.CineStreamExtractors.invokeAllAnimeSources
-import com.admknight.cinestream.CineStreamExtractors.invokeAnimes
+import com.megix.CineStreamExtractors.invokeAllSources
+import com.megix.CineStreamExtractors.invokeAllAnimeSources
+import com.megix.CineStreamExtractors.invokeAnimes
 
 open class CineStreamProvider : MainAPI() {
     override var mainUrl = "https://cinemeta-catalogs.strem.io"
@@ -541,7 +541,6 @@ open class CineStreamProvider : MainAPI() {
         )
     }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.moviebox
+package com.MovieBox
 
 import android.annotation.SuppressLint
 import android.net.Uri
@@ -1099,7 +1099,6 @@ suspend fun fetchTmdbLogoUrl(
     // No language match & no voted logos
     return null
 }
-
 
 
 

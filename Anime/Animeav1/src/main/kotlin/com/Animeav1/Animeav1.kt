@@ -1,4 +1,4 @@
-package com.admknight.animeav1
+package com.Animeav1
 
 import com.lagradost.cloudstream3.DubStatus
 import com.lagradost.cloudstream3.Episode
@@ -234,6 +234,5 @@ suspend fun loadCustomExtractor(
         }
     }
 }
-
 
 

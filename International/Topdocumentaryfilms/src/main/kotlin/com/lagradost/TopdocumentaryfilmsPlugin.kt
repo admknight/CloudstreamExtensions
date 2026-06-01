@@ -1,5 +1,5 @@
 
-package com.admknight.topdocumentaryfilms
+package com.lagradost
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -12,6 +12,5 @@ class TopdocumentaryfilmsPlugin: Plugin() {
         registerMainAPI(Topdocumentaryfilms())
     }
 }
-
 
 

@@ -1,7 +1,7 @@
-package com.admknight.ringz
+package com.RingZ
 
 import android.util.Log
-import com.admknight.ringz.headers
+import com.RingZ.RingZ.Companion.headers
 import com.lagradost.cloudstream3.app
 import org.json.JSONArray
 import org.json.JSONObject
@@ -90,6 +90,5 @@ object RingzConfigLoader {
         }
     }
 }
-
 
 

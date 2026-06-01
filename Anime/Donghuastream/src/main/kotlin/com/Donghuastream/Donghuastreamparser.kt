@@ -1,4 +1,4 @@
-package com.admknight.donghuastream
+package com.Donghuastream
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -37,7 +37,6 @@ data class Track(
     val label: String,
     val default: Boolean?,
 )
-
 
 
 

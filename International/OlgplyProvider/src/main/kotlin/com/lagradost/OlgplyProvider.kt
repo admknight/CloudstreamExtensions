@@ -1,4 +1,4 @@
-package com.admknight.olgply
+package com.lagradost
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
@@ -6,7 +6,9 @@ import com.lagradost.cloudstream3.metaproviders.TmdbLink
 import com.lagradost.cloudstream3.metaproviders.TmdbProvider
 import com.lagradost.cloudstream3.network.WebViewResolver
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
-import com.lagradost.cloudstream3.utils.*
+import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.nicehttp.requestCreator
 
 class OlgplyProvider : TmdbProvider() {
@@ -36,10 +38,10 @@ class OlgplyProvider : TmdbProvider() {
                 this.name,
                 this.name,
                 foundVideo.url.toString(),
-            ) {
-                this.quality = Qualities.Unknown.value
-                this.type = ExtractorLinkType.M3U8
-            }
+                "",
+                Qualities.Unknown.value,
+                true
+            )
         )
     }
 
@@ -91,7 +93,7 @@ class OlgplyProvider : TmdbProvider() {
 //
 //        if (hls != null) {
 //            callback.invoke(
-//                ExtractorLink(
+//                newExtractorLink(
 //                    this.name,
 //                    this.name,
 //                    hls["url"].toString(),

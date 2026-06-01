@@ -1,4 +1,4 @@
-package com.admknight.moviesmod
+package com.megix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -47,7 +47,6 @@ class TopmoviesProvider : MoviesmodProvider() { // all providers must be an inst
         "/movies/hindi-movies/page/" to "Latest Hindi Movies",
     )
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.piratexplay
+package com.piratexplay
 
 import com.lagradost.cloudstream3.HomePageResponse
 import com.lagradost.cloudstream3.LoadResponse
@@ -147,7 +147,6 @@ class Piratexplay : MainAPI() {
     }
 
 }
-
 
 
 

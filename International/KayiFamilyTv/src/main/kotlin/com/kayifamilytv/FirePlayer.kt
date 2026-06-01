@@ -1,4 +1,4 @@
-package com.admknight.kayifamilytv
+package com.kayifamilytv
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app

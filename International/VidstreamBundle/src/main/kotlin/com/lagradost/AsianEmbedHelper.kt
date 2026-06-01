@@ -1,7 +1,8 @@
-package com.admknight.vidstreambundle
+package com.lagradost
 
 import android.util.Log
 import com.lagradost.cloudstream3.SubtitleFile
+import com.lagradost.cloudstream3.map
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -29,6 +30,5 @@ class AsianEmbedHelper {
         }
     }
 }
-
 
 

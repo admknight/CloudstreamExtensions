@@ -1,4 +1,4 @@
-package com.admknight.seriesmetro
+package com.stormunblessed
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
@@ -25,14 +25,40 @@ class SeriesMetroProvider: MainAPI() {
             Pair("Series Populares", ".serie.sm")
         )
 
-        list.forEach { (name, csselement) ->
+        /*
+        val newseries = soup.select(".section.episodes article").map {
+            val title = it.selectFirst(".entry-header .tvshow")!!.text()
+            val poster = it.selectFirst(".post-thumbnail figure img")!!.attr("src")
+            val href = it.selectFirst("a.lnk-blk")!!.attr("href").replace(Regex("(-(\\d+)x(\\d+).*)"),"")
+                .replace("/episode","/serie")
+            newTvSeriesSearchResponse(
+                title,
+                fixUrl(href),
+                this.name,
+                TvType.TvSeries,
+                fixUrl(poster),
+                null,
+                null
+            )
+        }
+
+        items.add(HomePageList("Agregados Recientemente", newseries, true))
+        */
+
+        list.map { (name, csselement) ->
             val home = soup.select(csselement).map {
                 val title = it.selectFirst(".entry-title")!!.text()
                 val poster = it.selectFirst(".post-thumbnail figure img")!!.attr("src")
                 val href = it.selectFirst("a.lnk-blk")!!.attr("href")
-                newTvSeriesSearchResponse(title, fixUrl(href), TvType.TvSeries) {
-                    this.posterUrl = fixUrl(poster)
-                }
+                newTvSeriesSearchResponse(
+                    title,
+                    fixUrl(href),
+                    this.name,
+                    TvType.TvSeries,
+                    fixUrl(poster),
+                    null,
+                    null
+                )
             }
             items.add(HomePageList(name, home))
         }
@@ -46,9 +72,15 @@ class SeriesMetroProvider: MainAPI() {
             val title = it.selectFirst(".entry-title")!!.text()
             val href = it.selectFirst("a.lnk-blk")!!.attr("href")
             val image = it.selectFirst(".post-thumbnail figure img")!!.attr("src")
-            newTvSeriesSearchResponse(title, fixUrl(href), TvType.TvSeries) {
-                this.posterUrl = fixUrl(image)
-            }
+            newTvSeriesSearchResponse(
+                title,
+                fixUrl(href),
+                this.name,
+                TvType.TvSeries,
+                fixUrl(image),
+                null,
+                null
+            )
         }
     }
 
@@ -70,7 +102,7 @@ class SeriesMetroProvider: MainAPI() {
             it.attr("data-season")
         }
         val episodes = ArrayList<Episode>()
-        dataseason.forEach { season ->
+        val episs = dataseason.map { season ->
             val response = app.post("$mainUrl/wp-admin/admin-ajax.php", data =
             mapOf(
                 "action" to "action_select_season",
@@ -90,12 +122,16 @@ class SeriesMetroProvider: MainAPI() {
                 val isValid = seasonid.size == 2
                 val episode = if (isValid) seasonid.getOrNull(1) else null
                 val seasonint = if (isValid) seasonid.getOrNull(0) else null
-                episodes.add(newEpisode(link) {
-                    this.season = seasonint
-                    this.episode = episode
-                })
+                episodes.add(newEpisode(
+                    link,
+                    season = seasonint,
+                    episode = episode
+                ))
             }
         }
+
+
+
 
         val recommendations =
             soup.select(".serie.sm").mapNotNull { element ->
@@ -105,12 +141,18 @@ class SeriesMetroProvider: MainAPI() {
                     image = element.selectFirst(".post-thumbnail figure img")!!.attr("src")
                 }
                 val recUrl = fixUrl(element.selectFirst("a.lnk-blk")!!.attr("href"))
-                newTvSeriesSearchResponse(recTitle, recUrl, TvType.TvSeries) {
-                    this.posterUrl = fixUrl(image)
-                }
+                newTvSeriesSearchResponse(
+                    recTitle,
+                    recUrl,
+                    this.name,
+                    TvType.Movie,
+                    fixUrl(image),
+                    year = null
+                )
             }
 
-        return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
+        return  newTvSeriesLoadResponse(title,
+            url, TvType.TvSeries, episodes,){
             this.posterUrl = fixUrl(poster ?: "")
             this.plot = description
             this.backgroundPosterUrl = fixUrl(backposter ?: "")
@@ -129,34 +171,31 @@ class SeriesMetroProvider: MainAPI() {
         val soup = app.get(data).document
         val dataterm = soup.select(".video.aa-tb.hdd.anm-a.on").attr("data-term")
         val dataop = soup.select("ul.aa-tbs-video li a").map { it.attr("data-opt") }
-        dataop.forEach { serverid ->
-            val response = try {
-                app.post("$mainUrl/wp-admin/admin-ajax.php",
-                    headers = mapOf(
-                        "User-Agent" to USER_AGENT,
-                        "Accept" to "*/*",
-                        "Accept-Language" to "en-US,en;q=0.5",
-                        "X-Requested-With" to "XMLHttpRequest",
-                        "DNT" to "1",
-                        "Connection" to "keep-alive",
-                        "Referer" to data,
-                        "Sec-Fetch-Dest" to "empty",
-                        "Sec-Fetch-Mode" to "cors",
-                        "Sec-Fetch-Site" to "same-origin",),
-                    data = mapOf(
-                        Pair("action","action_player_series"),
-                        Pair("ide",serverid),
-                        Pair("term_id",dataterm))
-                ).document
-            } catch(e: Exception) { null }
-            
-            if (response != null) {
-                val embedlink = response.select("body iframe").attr("src")
-                val secondresponse = app.get(embedlink).document
-                val trueembedlink = secondresponse.select(".Video iframe").attr("src")
-                loadExtractor(trueembedlink, subtitleCallback, callback)
-            }
+        dataop.map { serverid ->
+            val response = app.post("$mainUrl/wp-admin/admin-ajax.php",
+                headers = mapOf(
+                    "User-Agent" to USER_AGENT,
+                    "Accept" to "*/*",
+                    "Accept-Language" to "en-US,en;q=0.5",
+                    "X-Requested-With" to "XMLHttpRequest",
+                    "DNT" to "1",
+                    "Connection" to "keep-alive",
+                    "Referer" to data,
+                    "Sec-Fetch-Dest" to "empty",
+                    "Sec-Fetch-Mode" to "cors",
+                    "Sec-Fetch-Site" to "same-origin",),
+                data = mapOf(
+                    Pair("action","action_player_series"),
+                    Pair("ide",serverid),
+                    Pair("term_id",dataterm))
+            ).document
+            val embedlink = response.select("body iframe").attr("src")
+            val secondresponse = app.get(embedlink).document
+            val trueembedlink = secondresponse.select(".Video iframe").attr("src")
+            loadExtractor(trueembedlink, subtitleCallback, callback)
         }
         return true
     }
 }
+
+

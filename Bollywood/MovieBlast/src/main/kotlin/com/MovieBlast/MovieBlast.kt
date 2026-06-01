@@ -1,4 +1,4 @@
-package com.admknight.movieblast
+package com.MovieBlast
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.Actor
@@ -314,7 +314,6 @@ class MovieBlast : MainAPI() {
     }
 
 }
-
 
 
 

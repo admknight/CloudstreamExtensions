@@ -1,4 +1,4 @@
-package com.admknight.animepahe
+package com.phisher98
 
 import androidx.appcompat.app.AppCompatActivity
 import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
@@ -36,6 +36,5 @@ class AnimePaheProviderPlugin: Plugin() {
             }
     }
 }
-
 
 

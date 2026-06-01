@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix.settings
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -17,7 +17,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.webkit.*
 import android.widget.*
-import com.admknight.cinestream.dp
+import com.megix.settings.SettingsTheme.dp
 
 
 //WebView login dialog for extracting authentication tokens.
@@ -271,7 +271,6 @@ internal object SettingsWebView {
         }
     }
 }
-
 
 
 

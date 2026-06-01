@@ -1,4 +1,4 @@
-package com.admknight.pinoymoviepedia
+package com.Pinoymoviepedia
 
 import com.lagradost.cloudstream3.mainPageOf
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -94,6 +94,5 @@ class Bluray : Pinoymoviepedia() {
         @param:JsonProperty("type") val type: String?,
     )
 }
-
 
 

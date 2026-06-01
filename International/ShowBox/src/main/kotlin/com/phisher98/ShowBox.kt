@@ -1,4 +1,4 @@
-package com.admknight.showbox
+package com.phisher98
 
 import android.content.SharedPreferences
 import android.util.Base64
@@ -37,12 +37,12 @@ import com.lagradost.cloudstream3.runAllAsync
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.admknight.showbox.ShowBox.CipherUtils.getVerify
-import com.admknight.showbox.ShowBoxExtractor.invokeExternalM3u8Source
-import com.admknight.showbox.ShowBoxExtractor.invokeExternalSource
-import com.admknight.showbox.ShowBoxExtractor.invokeInternalSource
-import com.admknight.showbox.ShowBoxExtractor.invokeOpenSubs
-import com.admknight.showbox.ShowBoxExtractor.invokeWatchsomuch
+import com.phisher98.ShowBox.CipherUtils.getVerify
+import com.phisher98.ShowBoxExtractor.invokeExternalM3u8Source
+import com.phisher98.ShowBoxExtractor.invokeExternalSource
+import com.phisher98.ShowBoxExtractor.invokeInternalSource
+import com.phisher98.ShowBoxExtractor.invokeOpenSubs
+import com.phisher98.ShowBoxExtractor.invokeWatchsomuch
 import okhttp3.FormBody
 import okhttp3.Headers.Companion.toHeaders
 import okhttp3.Interceptor
@@ -942,7 +942,6 @@ oFuZne+lYcCPMNDXdku6wKdf9gSnOSHOGMu8TvHcud4uIDYmFH5qabJL5GDoQi7Q
     )
 
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.allmovieland
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
@@ -387,7 +387,6 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
         }
     }
 }
-
 
 
 

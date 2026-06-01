@@ -1,6 +1,5 @@
-package com.admknight.streamplay
+package com.phisher98
 
-import com.admknight.streamplay.BuildConfig
 import android.content.SharedPreferences
 import androidx.core.net.toUri
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
@@ -29,9 +28,9 @@ import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.nicehttp.RequestBodyTypes
-import com.admknight.streamplay.StreamPlay.Companion.anilistAPI
-import com.admknight.streamplay.StreamPlay.Companion.fourthAPI
-import com.admknight.streamplay.StreamPlay.Companion.thrirdAPI
+import com.phisher98.StreamPlay.Companion.anilistAPI
+import com.phisher98.StreamPlay.Companion.fourthAPI
+import com.phisher98.StreamPlay.Companion.thrirdAPI
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -66,6 +65,7 @@ import java.security.MessageDigest
 import java.security.SecureRandom
 import java.text.SimpleDateFormat
 import java.util.Arrays
+
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
@@ -2224,8 +2224,6 @@ fun b64UrlDecode(data: String): ByteArray {
 
     return base64DecodeArray(fixed)
 }
-
-
 
 
 

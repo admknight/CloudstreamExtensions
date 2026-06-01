@@ -1,4 +1,4 @@
-package com.admknight.cinefreak
+package com.cinefreak
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.api.Log
@@ -742,6 +742,5 @@ open class Cinefreak : MainAPI() {
         return URI(url).let { "${it.scheme}://${it.host}" }
     }
 }
-
 
 

@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -370,7 +370,6 @@ object ProviderRegistry {
     val namesMap get() = builtInProviders.associate { it.key to it.displayName }
     val torrentKeys get() = builtInProviders.filter { it.isTorrent }.map { it.key }.toSet()
 }
-
 
 
 

@@ -1,4 +1,4 @@
-package com.admknight.onetouchtv
+package com.OneTouchTV
 
 import com.lagradost.cloudstream3.APIHolder.capitalize
 import com.lagradost.cloudstream3.Actor
@@ -418,7 +418,6 @@ class OneTouchTV : MainAPI() {
         val playId: String? = null
     )
 }
-
 
 
 

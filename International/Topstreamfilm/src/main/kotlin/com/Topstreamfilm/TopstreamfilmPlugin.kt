@@ -1,4 +1,4 @@
-package com.admknight.topstreamfilm
+package com.Topstreamfilm
 
 import com.lagradost.cloudstream3.extractors.MixDrop
 import com.lagradost.cloudstream3.plugins.BasePlugin
@@ -14,7 +14,6 @@ class TopstreamfilmPlugin : BasePlugin() {
         registerExtractorAPI(MixDrop())
     }
 }
-
 
 
 

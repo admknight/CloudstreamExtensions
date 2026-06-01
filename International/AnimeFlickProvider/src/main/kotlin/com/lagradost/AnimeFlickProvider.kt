@@ -1,10 +1,10 @@
-package com.admknight.animeflick
+package com.lagradost
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.extractorApis
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.Jsoup
 import java.util.*
 
@@ -37,10 +37,15 @@ class AnimeFlickProvider : MainAPI() {
             val href = mainUrl + it.selectFirst("a")?.attr("href")
             val title = it.selectFirst("h5 > a")?.text() ?: return@mapNotNull null
             val poster = mainUrl + it.selectFirst("img")?.attr("src")?.replace("70x110", "225x320")
-            newAnimeSearchResponse(title, href, TvType.Anime) {
-                this.posterUrl = poster
-                addDubStatus(DubStatus.Subbed)
-            }
+            newAnimeSearchResponse(
+                title,
+                href,
+                this.name,
+                getType(title),
+                poster,
+                null,
+                EnumSet.of(DubStatus.Subbed),
+            )
         }
     }
 
@@ -62,9 +67,7 @@ class AnimeFlickProvider : MainAPI() {
         val episodes = doc.select("#collapseOne .block-space > .row > div:nth-child(2)").map {
             val name = it.selectFirst("a")?.text()
             val link = mainUrl + it.selectFirst("a")?.attr("href")
-            newEpisode(link ?: "") {
-                this.name = name
-            }
+            newEpisode(link, name)
         }.reversed()
 
         return newAnimeLoadResponse(title, url, getType(title)) {
@@ -103,12 +106,11 @@ class AnimeFlickProvider : MainAPI() {
                 callback(
                     newExtractorLink(
                         this.name,
-                        name = "${this.name} - Auto",
-                        url = link,
-                    ) {
-                        this.referer = ""
-                        this.quality = Qualities.P1080.value
-                    }
+                        "${this.name} - Auto",
+                        link,
+                        "",
+                        Qualities.P1080.value
+                    )
                 )
             }
         }
@@ -116,3 +118,7 @@ class AnimeFlickProvider : MainAPI() {
         return true
     }
 }
+
+
+
+

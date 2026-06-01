@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.google.gson.Gson
@@ -5359,6 +5359,5 @@ object StreamPlayExtractor : StreamPlay() {
     }
 
 }
-
 
 

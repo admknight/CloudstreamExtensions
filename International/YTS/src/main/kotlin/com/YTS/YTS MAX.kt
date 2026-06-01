@@ -1,4 +1,4 @@
-package com.admknight.yts
+package com.YTS
 
 import com.lagradost.cloudstream3.HomePageList
 import com.lagradost.cloudstream3.HomePageResponse
@@ -118,6 +118,5 @@ class YTSMX : YTS(){
         return true
     }
 }
-
 
 

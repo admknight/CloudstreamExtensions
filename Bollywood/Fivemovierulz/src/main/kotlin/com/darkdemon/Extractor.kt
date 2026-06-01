@@ -1,4 +1,4 @@
-package com.admknight.fivemovierulz
+package com.darkdemon
 import com.lagradost.cloudstream3.extractors.StreamWishExtractor
 import com.lagradost.cloudstream3.extractors.VidhideExtractor
 
@@ -15,6 +15,5 @@ class mivalyo : VidhideExtractor() {
 class StreamwishHG : StreamWishExtractor() {
     override val mainUrl = "https://hglink.to"
 }
-
 
 

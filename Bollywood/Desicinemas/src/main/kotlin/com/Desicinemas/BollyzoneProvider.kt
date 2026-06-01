@@ -1,4 +1,4 @@
-package com.admknight.desicinemas
+package com.Desicinemas
 
 import com.lagradost.cloudstream3.HomePageList
 import com.lagradost.cloudstream3.HomePageResponse
@@ -222,7 +222,6 @@ class BollyzoneProvider : DesicinemasProvider() {
         }
     }
 }
-
 
 
 

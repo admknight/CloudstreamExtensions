@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98.settings
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
@@ -14,12 +14,12 @@ import android.widget.Switch
 import androidx.core.content.edit
 import androidx.fragment.app.DialogFragment
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.admknight.streamplay.BuildConfig
-import com.admknight.streamplay.StreamPlay
-import com.admknight.streamplay.StreamPlayAnime
-import com.admknight.streamplay.StreamPlayPlugin
-import com.admknight.streamplay.StreamPlayStremioCatelog
-import com.admknight.streamplay.StreamPlayStremioCatelogFrag
+import com.phisher98.BuildConfig
+import com.phisher98.StreamPlay
+import com.phisher98.StreamPlayAnime
+import com.phisher98.StreamPlayPlugin
+import com.phisher98.StreamPlayStremioCatelog
+import com.phisher98.StreamPlayStremioCatelogFrag
 
 class ToggleFragment(
     plugin: StreamPlayPlugin,
@@ -186,7 +186,6 @@ class ToggleFragment(
         onDismissCallback?.invoke()
     }
 }
-
 
 
 

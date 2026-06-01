@@ -1,4 +1,4 @@
-package com.admknight.streamplay
+package com.phisher98
 
 import android.content.SharedPreferences
 import com.lagradost.api.Log
@@ -281,7 +281,6 @@ object StreamPlayCache {
         Log.d(TAG, "📂 Loaded provider stats from SharedPreferences (${providerStatsMap.size} providers)")
     }
 }
-
 
 
 

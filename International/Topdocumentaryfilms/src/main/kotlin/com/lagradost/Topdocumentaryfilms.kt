@@ -1,4 +1,4 @@
-package com.admknight.topdocumentaryfilms
+package com.lagradost
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
@@ -75,7 +75,7 @@ class Topdocumentaryfilms : MainAPI() {
             this.year = document.selectFirst("div.meta-bar.meta-single")?.ownText()?.filter { it.isDigit() }?.toIntOrNull()
             this.plot = document.select("div[itemprop=reviewBody] > p").text().trim()
             this.tags = document.select("div.meta-bar.meta-single > a").map { it.text() }
-            this.score = Score.from10(document.selectFirst("div.module div.star")?.text())
+            this.score = Score.from10(document.selectFirst("div.module div.star")?.text()?)
             this.recommendations = document.select("ul.side-wrap.clear li").mapNotNull {
                 val recName = it.selectFirst("a")?.attr("title") ?: return@mapNotNull null
                 val recHref = it.selectFirst("a")!!.attr("href")
@@ -99,7 +99,6 @@ class Topdocumentaryfilms : MainAPI() {
         return true
     }
 }
-
 
 
 

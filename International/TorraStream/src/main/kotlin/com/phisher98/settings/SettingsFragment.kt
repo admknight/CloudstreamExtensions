@@ -1,4 +1,4 @@
-package com.admknight.torrastream
+package com.phisher98.settings
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -14,8 +14,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.admknight.torrastream.BuildConfig
-import com.admknight.torrastream.TorraStreamProvider
+import com.phisher98.BuildConfig
+import com.phisher98.TorraStreamProvider
 
 class SettingsFragment(
     plugin: TorraStreamProvider,
@@ -304,7 +304,6 @@ class SettingsFragment(
         }
     }
 }
-
 
 
 

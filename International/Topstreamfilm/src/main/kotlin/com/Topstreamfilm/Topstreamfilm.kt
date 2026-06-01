@@ -1,4 +1,4 @@
-package com.admknight.topstreamfilm
+package com.Topstreamfilm
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
@@ -139,6 +139,5 @@ class TopStreamFilm : MainAPI() { // all providers must be an instance of MainAP
     }
 
 }
-
 
 

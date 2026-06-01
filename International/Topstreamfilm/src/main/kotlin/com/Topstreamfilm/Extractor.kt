@@ -1,4 +1,4 @@
-package com.admknight.topstreamfilm
+package com.Topstreamfilm
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.app
@@ -59,6 +59,5 @@ open class Dropload : ExtractorApi() {
         ).forEach(callback)
     }
 }
-
 
 

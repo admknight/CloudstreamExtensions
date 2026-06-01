@@ -1,4 +1,4 @@
-package com.admknight.netmirror
+package com.horis.cncverse
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
@@ -17,7 +17,7 @@ import com.lagradost.api.Log
 import org.json.JSONObject
 import java.util.UUID
 import okhttp3.Request
-import java.util.Base64
+
 
 val JSONParser = object : ResponseParser {
     val mapper: ObjectMapper = jacksonObjectMapper().configure(
@@ -183,7 +183,7 @@ val newTvDomains = listOf(
 )
 
 fun decodeBase64(value: String): String {
-    return String(Base64.getDecoder().decode(value))
+    return String(base64DecodeArray(value))
 }
 
 private var resolvedApiUrl: String = ""

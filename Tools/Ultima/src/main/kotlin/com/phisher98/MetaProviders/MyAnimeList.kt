@@ -1,4 +1,4 @@
-package com.admknight.ultima
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.DubStatus
@@ -27,9 +27,9 @@ import com.lagradost.cloudstream3.syncproviders.providers.MALApi.MalAnime
 import com.lagradost.cloudstream3.syncproviders.providers.MALApi.Recommendations
 import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.admknight.ultima.UltimaMediaProvidersUtils.invokeExtractors
-import com.admknight.ultima.UltimaUtils.Category
-import com.admknight.ultima.UltimaUtils.LinkData
+import com.phisher98.UltimaMediaProvidersUtils.invokeExtractors
+import com.phisher98.UltimaUtils.Category
+import com.phisher98.UltimaUtils.LinkData
 
 open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
     override var name = "MyAnimeList"
@@ -191,7 +191,6 @@ open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
         }
     }
 }
-
 
 
 

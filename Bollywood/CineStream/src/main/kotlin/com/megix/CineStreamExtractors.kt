@@ -1,4 +1,4 @@
-package com.admknight.cinestream
+package com.megix
 
 // Cloudstream Core & Utils
 import com.lagradost.cloudstream3.*
@@ -31,7 +31,7 @@ import java.net.URI
 import java.net.URL
 import java.net.URLEncoder
 
-import com.admknight.cinestream.Settings
+import com.megix.settings.Settings
 
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -295,7 +295,7 @@ object CineStreamExtractors {
 
             val match = episodeLinks.find { element ->
                 val text = element.text()
-                val regex = "(?:حلقة|Episode)\\s+$episode(?!\\d)".toRegex(RegexOption.IGNORE_CASE)
+                val regex = "(?:حلقة|Episode)\\s+$newEpisode(?!\\d)".toRegex(RegexOption.IGNORE_CASE)
                 regex.containsMatchIn(text)
             }
 

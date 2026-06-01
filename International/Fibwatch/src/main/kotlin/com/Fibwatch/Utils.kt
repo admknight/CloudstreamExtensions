@@ -1,4 +1,4 @@
-package com.admknight.fibwatch
+package com.Fibwatch
 
 fun cleanTitle(raw: String?): String {
     val regex = Regex("""S(\d+)[Ee](\d+)(?:-(\d+))?""")
@@ -95,7 +95,6 @@ fun parseSeasonEpisode(title: String): EpisodeInfo {
 
     return EpisodeInfo(null, null, null)
 }
-
 
 
 

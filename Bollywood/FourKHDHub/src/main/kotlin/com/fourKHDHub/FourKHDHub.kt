@@ -1,4 +1,4 @@
-package com.admknight.fourkhdhub
+package com.fourKHDHub
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -384,7 +384,6 @@ class FourKHDHub : MainAPI() {
         return true
     }
 }
-
 
 
 

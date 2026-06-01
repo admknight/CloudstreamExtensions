@@ -1,4 +1,4 @@
-package com.admknight.pelispedia
+package com.stormunblessed
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addDuration
@@ -31,9 +31,15 @@ class PelispediaProvider:MainAPI() {
                 val title = it.selectFirst("h2.entry-title")?.text() ?: ""
                 val img = it.selectFirst("img")?.attr("src") ?: ""
                 val link = it.selectFirst("a.lnk-blk")?.attr("href") ?: ""
-                newMovieSearchResponse(title, link, TvType.Movie) {
-                    this.posterUrl = fixUrl(img)
-                }
+                newTvSeriesSearchResponse(
+                    title,
+                    link,
+                    this.name,
+                    TvType.Movie,
+                    fixUrl(img),
+                    null,
+                    null,
+                )
             }
             items.add(HomePageList(name, home))
         }
@@ -48,9 +54,15 @@ class PelispediaProvider:MainAPI() {
             val title = it.selectFirst("h2.entry-title")?.text() ?: ""
             val img = it.selectFirst("img")!!.attr("src")
             val link = it.selectFirst("a.lnk-blk")!!.attr("href")
-            newMovieSearchResponse(title, link, TvType.Movie) {
-                this.posterUrl = fixUrl(img)
-            }
+            newTvSeriesSearchResponse(
+                title,
+                link,
+                this.name,
+                TvType.Movie,
+                fixUrl(img),
+                null,
+                null,
+            )
         }
     }
 
@@ -89,10 +101,12 @@ class PelispediaProvider:MainAPI() {
                 val isValid = seasonid.size == 2
                 val episode = if (isValid) seasonid.getOrNull(1) else null
                 val season = if (isValid) seasonid.getOrNull(0) else null
-                epi.add(newEpisode(href) {
-                    this.season = season
-                    this.episode = episode
-                })
+                epi.add(newEpisode(
+                    href,
+                    null,
+                    season,
+                    episode,
+                ))
             }
         }
 
@@ -150,3 +164,5 @@ class PelispediaProvider:MainAPI() {
         return true
     }
 }
+
+

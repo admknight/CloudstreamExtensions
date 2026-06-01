@@ -1,4 +1,4 @@
-package com.admknight.banglaplex
+package com.BanglaPlex
 
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
@@ -122,6 +122,5 @@ class Banglaplex : MainAPI() {
         return true
     }
 }
-
 
 

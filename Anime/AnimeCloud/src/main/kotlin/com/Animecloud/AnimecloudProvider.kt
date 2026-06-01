@@ -1,4 +1,4 @@
-package com.admknight.animecloud
+package com.Animecloud
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
@@ -11,6 +11,5 @@ class AnimecloudProvider: BasePlugin() {
         registerExtractorAPI(LuluStream())
     }
 }
-
 
 

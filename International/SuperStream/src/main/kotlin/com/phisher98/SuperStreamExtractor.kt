@@ -1,4 +1,4 @@
-package com.admknight.superstream
+package com.phisher98
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -14,9 +14,9 @@ import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.INFER_TYPE
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.admknight.superstream.BuildConfig.SUPERSTREAM_FOURTH_API
-import com.admknight.superstream.BuildConfig.SUPERSTREAM_THIRD_API
-import com.admknight.superstream.BuildConfig.NuvFeb
+import com.phisher98.BuildConfig.SUPERSTREAM_FOURTH_API
+import com.phisher98.BuildConfig.SUPERSTREAM_THIRD_API
+import com.phisher98.BuildConfig.NuvFeb
 import kotlinx.coroutines.delay
 
 import org.json.JSONArray
@@ -290,7 +290,6 @@ object SuperStreamExtractor : SuperStream() {
         }
     }
 }
-
 
 
 

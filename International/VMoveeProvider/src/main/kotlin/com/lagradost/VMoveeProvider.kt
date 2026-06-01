@@ -1,11 +1,11 @@
-package com.admknight.vmovee
+package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.getQualityFromName
 import org.jsoup.Jsoup
 
 class VMoveeProvider : MainAPI() {
@@ -37,14 +37,8 @@ class VMoveeProvider : MainAPI() {
             // val rating = parseRating(meta.selectFirst("> span.rating").text().replace("IMDb ", ""))
             // val descript = details.selectFirst("> div.contenido").text()
             returnValue.add(
-                if (isTV) newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
-                    this.posterUrl = poster
-                    this.year = year
-                }
-                else newMovieSearchResponse(title, href, TvType.Movie) {
-                    this.posterUrl = poster
-                    this.year = year
-                }
+                if (isTV) newTvSeriesSearchResponse(title, href, this.name, TvType.TvSeries, poster, year, null)
+                else newMovieSearchResponse(title, href, this.name, TvType.Movie, poster, year)
             )
         }
         return returnValue
@@ -104,10 +98,10 @@ class VMoveeProvider : MainAPI() {
                         this.name,
                         this.name + " " + d.label,
                         d.file,
-                    ) {
-                        this.referer = "https://reeoov.tube/"
-                        this.quality = getQualityFromName(d.label)
-                    }
+                        "https://reeoov.tube/",
+                        getQualityFromName(d.label),
+                        false
+                    )
                 )
             }
         }
@@ -127,10 +121,7 @@ class VMoveeProvider : MainAPI() {
         val descript = document.selectFirst("div#info > div")!!.text()
         val id = document.select("div.starstruck").attr("data-id")
 
-        return newMovieLoadResponse(title, url, TvType.Movie, id) {
-            this.posterUrl = poster
-            this.plot = descript
-        }
+        return newMovieLoadResponse(title, url, this.name, TvType.Movie, id, poster, null, descript, null, null)
     }
 }
 
