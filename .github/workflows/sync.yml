@@ -83,9 +83,14 @@ jobs:
 
               # Safe Branding & Strip private keys
               sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
-              sed -i -E 's/buildConfigField\("String",\s*"[^"]+",\s*.*\)/buildConfigField("String", "REMOVED", "\\"\\"")/g' "$TARGET_DIR/build.gradle.kts"
+              sed -i -E 's/buildConfigField\s*\(\s*"String"\s*,\s*"([^"]+)"\s*,.*?\)/buildConfigField("String", "\1", "\\"\\"")/g' "$TARGET_DIR/build.gradle.kts"
               sed -i '/val properties = Properties()/d' "$TARGET_DIR/build.gradle.kts"
               sed -i '/properties.load(/d' "$TARGET_DIR/build.gradle.kts"
+              
+              # Ensure buildConfig is enabled in every plugin
+              if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
+                sed -i '/buildFeatures {/a \        buildConfig = true' "$TARGET_DIR/build.gradle.kts"
+              fi
             done
           done
 
@@ -93,8 +98,7 @@ jobs:
           echo "Applying Global Deduplication & Stability Patches..."
           
           # 1. Resolve Kisskh Redeclaration (Prefer Phisher98 version with TMDB)
-          find International/KisskhProvider -name "KisskhProvider.kt" | grep "lagradost" | xargs rm -f
-          find International/KisskhProvider -name "KisskhProviderPlugin.kt" | grep "lagradost" | xargs rm -f
+          find International/KisskhProvider -name "*KisskhProvider*.kt" | grep "lagradost" | xargs rm -f
           
           # 2. Resolve Netmirror Clashes (Rename internal Episode to NetmirrorEpisode)
           find Bollywood/Netmirror -name "*.kt" -exec sed -i 's/\bEpisode\b/NetmirrorEpisode/g' {} +
@@ -106,6 +110,14 @@ jobs:
           # 4. Fix redundant Base64 imports clashing with Cloudstream helpers
           find . -name "*.kt" -exec sed -i '/import java.util.Base64/d' {} +
           find . -name "*.kt" -exec sed -i 's/Base64.getDecoder().decode/base64DecodeArray/g' {} +
+
+          # 5. Fix icons
+          find . -maxdepth 3 -name "build.gradle.kts" | while read -r G_FILE; do
+            P_DIR=$(dirname "$G_FILE")
+            P_NAME=$(basename "$P_DIR")
+            C_NAME=$(basename "$(dirname "$P_DIR")")
+            sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/${{ github.repository }}/master/$C_NAME/$P_NAME/icon.png\"|g" "$G_FILE"
+          done
 
           rm -rf temp_sources
           git add .
