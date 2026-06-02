@@ -6,7 +6,3 @@ data class EpisodesData(
     val nextPageSeason: String,
     val nextPageShow: Int,
 )
-
-
-
-

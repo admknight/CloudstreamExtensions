@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addAniListId
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
-import com.lagradost.cloudstream3.utils.INFER_TYPE
 import java.net.URLDecoder
 
 class AniflixProvider : MainAPI() {
@@ -39,8 +37,7 @@ class AniflixProvider : MainAPI() {
     private fun Anime.toSearchResponse(): SearchResponse? {
         return newAnimeSearchResponse(
             title?.english ?: title?.romaji ?: return null,
-            "$mainUrl/anime/${id ?: return null}",
-            TvType.Anime
+            "$mainUrl/anime/${id ?: return null}"
         ) {
             posterUrl = coverImage?.large ?: coverImage?.medium
         }
@@ -56,14 +53,14 @@ class AniflixProvider : MainAPI() {
             Pair("Top Rated", "div:nth-child(5) > div a"),
         )
 
-        elements.forEach { (name, element) ->
+        elements.map { (name, element) ->
             val home = soup.select(element).map {
                 val href = it.attr("href")
                 val title = it.selectFirst("p.mt-2")!!.text()
                 val image = it.selectFirst("img.rounded-md[sizes]")!!.attr("src").replace("/_next/image?url=","")
                     .replace(Regex("\\&.*\$"),"")
                 val realposter = URLDecoder.decode(image, "UTF-8")
-                newAnimeSearchResponse(title, fixUrl(href), TvType.Anime) {
+                newAnimeSearchResponse(title, fixUrl(href)) {
                     this.posterUrl = realposter
                 }
             }
@@ -120,12 +117,13 @@ class AniflixProvider : MainAPI() {
             else
                 addEpisodes(DubStatus.Subbed, res.episodes.episodes?.nodes?.mapIndexed { index, node ->
                     val episodeIndex = node?.number ?: (index + 1)
+                    //"$mainUrl/_next/data/$token/watch/$id.json?episode=${node.number ?: return@mapNotNull null}&id=$id"
                     newEpisode("$mainUrl/api/anime?id=$id&episode=${episodeIndex}") {
                         episode = episodeIndex
                         posterUrl = node?.thumbnail?.original?.url
                         name = node?.titles?.canonical
                     }
-                } ?: emptyList())
+                })
         }
     }
 
@@ -144,26 +142,24 @@ class AniflixProvider : MainAPI() {
                         name,
                         "${source.label ?: name} (DUB)",
                         source.file ?: return@forEach,
-                        INFER_TYPE
-                    ) {
-                        this.referer = dubReferer
-                        this.quality = getQualityFromName(source.label)
-                    }
+                        dubReferer,
+                        getQualityFromName(source.label),
+                        source.type == "hls"
+                    )
                 )
             }
 
-            val subReferer = res.sub?.Referer ?: ""
+            val subReferer = res.dub?.Referer ?: ""
             res.sub?.sources?.forEach { source ->
                 callback(
                     newExtractorLink(
                         name,
                         "${source.label ?: name} (SUB)",
                         source.file ?: return@forEach,
-                        INFER_TYPE
-                    ) {
-                        this.referer = subReferer
-                        this.quality = getQualityFromName(source.label)
-                    }
+                        subReferer,
+                        getQualityFromName(source.label),
+                        source.type == "hls"
+                    )
                 )
             }
 

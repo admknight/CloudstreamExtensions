@@ -12,5 +12,3 @@ class WcofunProviderPlugin: Plugin() {
         registerMainAPI(WcofunProvider())
     }
 }
-
-

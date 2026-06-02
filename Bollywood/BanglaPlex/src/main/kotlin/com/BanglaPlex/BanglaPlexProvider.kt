@@ -42,5 +42,3 @@ class BanglaPlexProvider: BasePlugin() {
         )
     }
 }
-
-

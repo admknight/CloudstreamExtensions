@@ -12,5 +12,3 @@ class TioAnimeProviderPlugin: Plugin() {
         registerMainAPI(TioAnimeProvider())
     }
 }
-
-

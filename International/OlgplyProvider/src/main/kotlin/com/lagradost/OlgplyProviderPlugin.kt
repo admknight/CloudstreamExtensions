@@ -12,5 +12,3 @@ class OlgplyProviderPlugin: Plugin() {
         registerMainAPI(OlgplyProvider())
     }
 }
-
-

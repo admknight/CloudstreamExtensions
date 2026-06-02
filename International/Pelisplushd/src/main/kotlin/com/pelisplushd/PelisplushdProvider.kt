@@ -14,5 +14,3 @@ class Animeav1Provider: Plugin() {
         registerExtractorAPI(StreamwishHG())
     }
 }
-
-

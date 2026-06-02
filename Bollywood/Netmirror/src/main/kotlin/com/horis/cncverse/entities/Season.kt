@@ -6,7 +6,3 @@ data class Season(
     val s: String,
     val sele: String
 )
-
-
-
-

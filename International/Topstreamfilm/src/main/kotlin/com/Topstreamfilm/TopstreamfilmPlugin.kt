@@ -14,6 +14,3 @@ class TopstreamfilmPlugin : BasePlugin() {
         registerExtractorAPI(MixDrop())
     }
 }
-
-
-

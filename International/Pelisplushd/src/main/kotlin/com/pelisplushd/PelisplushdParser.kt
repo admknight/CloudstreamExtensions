@@ -196,5 +196,3 @@ fun isUpcoming(dateString: String?): Boolean {
         false
     }
 }
-
-

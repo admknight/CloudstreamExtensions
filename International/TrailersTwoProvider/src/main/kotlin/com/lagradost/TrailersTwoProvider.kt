@@ -6,7 +6,6 @@ import com.lagradost.cloudstream3.metaproviders.TmdbLink
 import com.lagradost.cloudstream3.metaproviders.TmdbProvider
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 
@@ -153,7 +152,14 @@ class TrailersTwoProvider : TmdbProvider() {
         }
 
         callback.invoke(
-            newExtractorLink(this.name, this.name, videoUrl, INFER_TYPE) { this.referer = "https://trailers.to" ; this.quality = Qualities.Unknown.value ; this.isM3u8 = false }
+            newExtractorLink(
+                this.name,
+                this.name,
+                videoUrl,
+                "https://trailers.to",
+                Qualities.Unknown.value,
+                false,
+            )
         )
 
         runAllAsync(
@@ -311,6 +317,3 @@ data class ItemSubtitleAdaptations(
     @JsonProperty("EntryDate") val EntryDate: String?,
     @JsonProperty("Subtitle") val Subtitle: String?
 )
-
-
-

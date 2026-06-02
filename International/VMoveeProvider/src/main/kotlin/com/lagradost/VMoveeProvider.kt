@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import org.jsoup.Jsoup
 
@@ -34,11 +33,11 @@ class VMoveeProvider : MainAPI() {
             val href = titleHolder.attr("href")
             val meta = details.selectFirst("> div.meta")
             val year = meta!!.selectFirst("> span.year")!!.text().toIntOrNull()
-            // val this.score = Score.from10(parseRating(meta.selectFirst("> span.rating").text().replace("IMDb ", "")))
+            // val rating = parseRating(meta.selectFirst("> span.rating").text().replace("IMDb ", ""))
             // val descript = details.selectFirst("> div.contenido").text()
             returnValue.add(
-                if (isTV) newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = poster }
-                else newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
+                if (isTV) newTvSeriesSearchResponse(title, href, this.name, TvType.TvSeries, poster, year, null)
+                else newMovieSearchResponse(title, href, this.name, TvType.Movie, poster, year)
             )
         }
         return returnValue
@@ -124,6 +123,3 @@ class VMoveeProvider : MainAPI() {
         return newMovieLoadResponse(title, url, this.name, TvType.Movie, id, poster, null, descript, null, null)
     }
 }
-
-
-

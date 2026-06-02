@@ -10,5 +10,3 @@ class IPTVPlayerPlugin: BasePlugin() {
         registerMainAPI(IPTVPlayer())
     }
 }
-
-

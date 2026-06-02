@@ -1,16 +1,26 @@
+// use an integer for version numbers
 version = 1
+
 
 cloudstream {
     language = "en"
-    authors = listOf("Adam Knight")
-    description = "Webview is used to load links, reload if necessary"
-    status = 1
-    tvTypes = listOf(         "Anime",         "OVA",     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AnimensionProvider/icon.png"
-}
+    // All of these properties are optional, you can safely remove them
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+    //description = "Webview is used to load links, reload if necessary"
+    authors = listOf("Adam Knight")
+
+    /**
+     * Status int as the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta only
+     * */
+    status = 1 // will be 3 if unspecified
+    tvTypes = listOf(
+        "Anime",
+        "OVA",
+    )
+
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AnimensionProvider/icon.png"
 }

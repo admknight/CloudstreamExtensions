@@ -1,17 +1,26 @@
+// use an integer for version numbers
 version = 8
 
-cloudstream {
-    language = "en"
-    authors = listOf("Adam Knight")
-    description = "Watch Movies & TvSeries (Multi-Lang/Audio)"
-    status = 1
-    tvTypes = listOf(         "Movie",         "TvSeries",     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Cinemacity/icon.png"
-    isCrossPlatform = false
-}
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+cloudstream {
+    description = "Watch Movies & TvSeries (Multi-Lang/Audio)"
+    authors = listOf("Adam Knight")
+
+    /**
+    * Status int as the following:
+    * 0: Down
+    * 1: Ok
+    * 2: Slow
+    * 3: Beta only
+    * */
+    status = 1 // will be 3 if unspecified
+
+    tvTypes = listOf(
+        "Movie",
+        "TvSeries",
+    )
+    language = "en"
+    iconUrl= "https://www.google.com/s2/favicons?domain=cinemacity.cc&sz=%size%"
+
+    isCrossPlatform = false
 }

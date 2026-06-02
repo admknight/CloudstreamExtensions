@@ -9,5 +9,3 @@ class ToonTalesProvider: BasePlugin() {
         registerMainAPI(ToonTales())
     }
 }
-
-

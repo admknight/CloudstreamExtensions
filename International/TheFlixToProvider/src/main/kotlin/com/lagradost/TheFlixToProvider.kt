@@ -5,7 +5,6 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
 
 class TheFlixToProvider : MainAPI() {
@@ -184,7 +183,15 @@ class TheFlixToProvider : MainAPI() {
                                 ""
                             )
                         }/season-1/episode-1"
-                    newTvSeriesSearchResponse(title, link, this.name) { this.posterUrl = typeinfo ; this.quality = poster }
+                    newTvSeriesSearchResponse(
+                        title,
+                        link,
+                        this.name,
+                        typeinfo,
+                        poster,
+                        null,
+                        null,
+                    )
                 }
                 items.add(HomePageList(homename, home))
             }
@@ -242,11 +249,26 @@ class TheFlixToProvider : MainAPI() {
                         else "$mainUrl/tv-show/${info.id}-${cleanTitle(title)}/season-1/episode-1"
                         if (typeinfo == TvType.Movie) {
                             search.add(
-                                newMovieSearchResponse(title, link, this.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
+                                newMovieSearchResponse(
+                                    title,
+                                    link,
+                                    this.name,
+                                    TvType.Movie,
+                                    poster,
+                                    null
+                                )
                             )
                         } else {
                             search.add(
-                                newTvSeriesSearchResponse(title, link, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = poster }
+                                newTvSeriesSearchResponse(
+                                    title,
+                                    link,
+                                    this.name,
+                                    TvType.TvSeries,
+                                    poster,
+                                    null,
+                                    null
+                                )
                             )
                         }
                     }
@@ -437,7 +459,7 @@ class TheFlixToProvider : MainAPI() {
                     val epDesc = epi.overview
                     val test = epi.videos
                     val ratinginfo = (epi.voteAverage)?.times(10)?.toInt()
-                    val this.score = Score.from10(if (ratinginfo?.equals(0) == true) null else ratinginfo)
+                    val rating = if (ratinginfo?.equals(0) == true) null else ratinginfo
                     val eps = newEpisode(
                         "$mainUrl/tv-show/$movieId-${cleanTitle(movietitle!!)}/season-$seasonum/episode-$episodenu",
                         title,
@@ -445,7 +467,7 @@ class TheFlixToProvider : MainAPI() {
                         episodenu,
                         description = epDesc!!,
                         posterUrl = seasonPoster,
-                        this.score = Score.from10(rating,)
+                        rating = rating,
                     )
                     if (test!!.isNotEmpty()) {
                         episodes.add(eps)
@@ -455,7 +477,7 @@ class TheFlixToProvider : MainAPI() {
                 }
             }
         }
-        val this.score = Score.from10(metadata.voteAverage?.toFloat()?.times(1000)?.toInt())
+        val rating = metadata.voteAverage?.toFloat()?.times(1000)?.toInt()
 
         val tags = metadata.genres?.mapNotNull { it.name }
 
@@ -464,7 +486,14 @@ class TheFlixToProvider : MainAPI() {
             val posterrec = loadDocs.posterUrl
             val link = if (isMovie) "$mainUrl/movie/${loadDocs.id}-${cleanTitle(title)}"
             else "$mainUrl/tv-show/${loadDocs.id}-${cleanTitle(title)}/season-1/episode-1"
-            newMovieSearchResponse(title, link, this.name) { this.posterUrl = tvtype ; this.quality = posterrec ; this.year = null }
+            newMovieSearchResponse(
+                title,
+                link,
+                this.name,
+                tvtype,
+                posterrec,
+                year = null
+            )
         }
 
         val year = metadata.releaseDate?.substringBefore("-")
@@ -584,7 +613,3 @@ class TheFlixToProvider : MainAPI() {
         return true
     }
 }
-
-
-
-

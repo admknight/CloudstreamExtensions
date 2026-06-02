@@ -260,6 +260,3 @@ class Simkl(val plugin: UltimaPlugin) : MainAPI() {
         @param:JsonProperty("anilist") val anilist: String? = null,
     )
 }
-
-
-

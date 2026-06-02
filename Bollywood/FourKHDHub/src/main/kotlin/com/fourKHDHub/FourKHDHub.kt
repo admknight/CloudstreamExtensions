@@ -384,6 +384,3 @@ class FourKHDHub : MainAPI() {
         return true
     }
 }
-
-
-

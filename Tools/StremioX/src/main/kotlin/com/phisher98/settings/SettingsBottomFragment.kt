@@ -1,4 +1,4 @@
-package com.admknight.stremiox.settings
+package com.phisher98
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -21,8 +21,6 @@ import androidx.core.net.toUri
 import androidx.core.content.edit
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.admknight.stremiox.BuildConfig
-import com.admknight.stremiox.StremioXPlugin
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.CommonActivity.showToast
 
@@ -327,6 +325,3 @@ class SettingsBottomFragment(
 
 
 }
-
-
-

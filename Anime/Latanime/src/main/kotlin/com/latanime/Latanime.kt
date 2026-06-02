@@ -131,5 +131,3 @@ class Latanime : MainAPI() {
             ?: this.attr("src").takeIf { it.isNotBlank() && it.startsWith("http") }
     }
 }
-
-

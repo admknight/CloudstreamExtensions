@@ -12,5 +12,3 @@ class VMoveeProviderPlugin: Plugin() {
         registerMainAPI(VMoveeProvider())
     }
 }
-
-

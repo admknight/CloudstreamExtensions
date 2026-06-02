@@ -16,5 +16,3 @@ class SflixProviderPlugin : Plugin() {
         registerMainAPI(HDTodayProvider())
     }
 }
-
-

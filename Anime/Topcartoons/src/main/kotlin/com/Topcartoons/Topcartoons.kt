@@ -87,7 +87,3 @@ class Topcartoons : MainAPI() {
         return true
     }
 }
-
-
-
-

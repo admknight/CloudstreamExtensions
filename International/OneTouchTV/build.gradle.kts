@@ -1,17 +1,28 @@
+// use an integer for version numbers
 version = 1
+
 
 cloudstream {
     language = "en"
-    authors = listOf("Adam Knight")
-    description = "Asian Dramas"
-    status = 1
-    tvTypes = listOf(         "AsianDrama",         "TvSeries",     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/OneTouchTV/icon.png"
-    isCrossPlatform = true
-}
+    // All of these properties are optional, you can safely remove them
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+     description = "Asian Dramas"
+     authors = listOf("Adam Knight")
+
+    /**
+     * Status int as the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta only
+     * */
+    status = 1 // will be 3 if unspecified
+    tvTypes = listOf(
+        "AsianDrama",
+        "TvSeries",
+    )
+
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/OneTouchTV/icon.png"
+
+    isCrossPlatform = true
 }

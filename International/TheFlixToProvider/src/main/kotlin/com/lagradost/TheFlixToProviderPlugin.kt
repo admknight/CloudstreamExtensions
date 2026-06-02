@@ -12,5 +12,3 @@ class TheFlixToProviderPlugin: Plugin() {
         registerMainAPI(TheFlixToProvider())
     }
 }
-
-

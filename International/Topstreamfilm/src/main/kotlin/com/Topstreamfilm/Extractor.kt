@@ -59,5 +59,3 @@ open class Dropload : ExtractorApi() {
         ).forEach(callback)
     }
 }
-
-

@@ -352,6 +352,3 @@ private suspend fun fetchSimklId(
         ?.optInt("simkl")
         ?.takeIf { it != 0 }
 }.getOrNull()
-
-
-

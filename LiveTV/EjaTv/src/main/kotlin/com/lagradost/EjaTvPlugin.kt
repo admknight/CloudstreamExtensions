@@ -12,5 +12,3 @@ class EjaTvPlugin: Plugin() {
         registerMainAPI(EjaTv())
     }
 }
-
-

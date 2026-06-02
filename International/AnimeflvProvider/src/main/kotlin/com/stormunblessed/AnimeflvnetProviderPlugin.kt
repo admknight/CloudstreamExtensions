@@ -11,5 +11,3 @@ class AnimeflvnetProviderPlugin: Plugin() {
         registerMainAPI(AnimeflvnetProvider())
     }
 }
-
-

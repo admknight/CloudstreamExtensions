@@ -20,5 +20,3 @@ class DonghuastreamProvider: BasePlugin() {
         registerExtractorAPI(PlayStreamplay())
     }
 }
-
-

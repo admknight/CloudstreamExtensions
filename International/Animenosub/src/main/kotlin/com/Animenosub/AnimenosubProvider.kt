@@ -14,5 +14,3 @@ class AnimenosubProvider: BasePlugin() {
         registerExtractorAPI(AnimenosubExtractor())
     }
 }
-
-

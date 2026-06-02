@@ -12,5 +12,3 @@ class AllAnimeProviderPlugin: Plugin() {
         registerMainAPI(AllAnimeProvider())
     }
 }
-
-

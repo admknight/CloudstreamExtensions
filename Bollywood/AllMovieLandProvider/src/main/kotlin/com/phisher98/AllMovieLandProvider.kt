@@ -13,7 +13,7 @@ import okhttp3.FormBody
 import org.jsoup.nodes.Element
 import java.net.URI
 
-class AllMovieLandProvider : MainAPI() {
+class AllMovieLandProvider : MainAPI() { // all providers must be an instance of MainAPI
     override var mainUrl = "https://allmovieland.you"
     override var name = "AllMovieLand"
     override val hasMainPage = true
@@ -46,7 +46,7 @@ class AllMovieLandProvider : MainAPI() {
             .build()
 
         return app.post(
-            "$mainUrl/index.php?do=opensearch",
+            "$mainUrl/index.php?do=opensearch", //$mainUrl/engine/ajax/controller.php?mod=search
             requestBody = body,
             referer = "$mainUrl/",
             cookies = ensureSession()
@@ -135,8 +135,13 @@ class AllMovieLandProvider : MainAPI() {
         val type = if (checkType.contains("films", true)) TvType.Movie
         else if (checkType.contains("series", true)) TvType.TvSeries
         else TvType.Cartoon
-        
         return when (type) {
+            TvType.Movie -> {
+                newMovieSearchResponse(title, href, TvType.Movie) {
+                    this.posterUrl = posterUrl
+                    posterHeaders = cookies
+                }
+            }
             TvType.TvSeries -> {
                 newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                     this.posterUrl = posterUrl
@@ -144,7 +149,7 @@ class AllMovieLandProvider : MainAPI() {
                 }
             }
             else -> {
-                newMovieSearchResponse(title, href, type) {
+                newMovieSearchResponse(title, href, TvType.Cartoon) {
                     this.posterUrl = posterUrl
                     posterHeaders = cookies
                 }
@@ -154,7 +159,9 @@ class AllMovieLandProvider : MainAPI() {
 
     override suspend fun search(query: String): List<SearchResponse> {
         val cookies = ensureSession()
-        val searchList = querySearchApi(query).document
+        val searchList = querySearchApi(
+            query
+        ).document
 
         return searchList.select("article.short-mid").mapNotNull {
             it.toSearchResult(cookies)
@@ -183,7 +190,7 @@ class AllMovieLandProvider : MainAPI() {
             it.select("iframe").attr("src")
         }.filter { it.contains("youtube") }.joinToString()
         val trailer = fixUrlNull(trailerLink)
-        val scoreValue = Score.from10(doc.select("b.imdb__value").text().replace(",", "."))
+        val rating = doc.select("b.imdb__value").text().replace(",", ".")
         val duration =
             doc.select("li.xfs__item_op:nth-child(3) > b").text().removeSuffix(" min.").trim()
                 .toIntOrNull()
@@ -242,13 +249,26 @@ class AllMovieLandProvider : MainAPI() {
         }
 
         return when (type) {
+            TvType.Movie -> {
+                newMovieLoadResponse(title, url, TvType.Movie, data) {
+                    this.posterUrl = poster?.trim()
+                    this.year = year
+                    this.plot = description
+                    this.tags = tags
+                    this.score = Score.from100(rating)
+                    this.duration = duration
+                    this.actors = actors
+                    this.recommendations = recommendations
+                    addTrailer(trailer)
+                }
+            }
             TvType.TvSeries -> {
                 newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
                     this.posterUrl = poster?.trim()
                     this.year = year
                     this.plot = description
                     this.tags = tags
-                    this.score = scoreValue
+                    this.score = Score.from100(rating)
                     this.duration = duration
                     this.actors = actors
                     this.recommendations = recommendations
@@ -256,13 +276,12 @@ class AllMovieLandProvider : MainAPI() {
                 }
             }
             else -> {
-                newMovieLoadResponse(title, url, type, data) {
+                newMovieLoadResponse(title, url, TvType.Movie, data) {
                     this.posterUrl = poster?.trim()
                     this.year = year
                     this.plot = description
                     this.tags = tags
-                    this.score = scoreValue
-                    this.duration = duration
+                    this.score = Score.from100(rating)
                     this.actors = actors
                     this.recommendations = recommendations
                     addTrailer(trailer)

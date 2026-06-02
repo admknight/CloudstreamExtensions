@@ -55,6 +55,3 @@ data class Details(
     val views: String,
     val md5: String,
 )
-
-
-

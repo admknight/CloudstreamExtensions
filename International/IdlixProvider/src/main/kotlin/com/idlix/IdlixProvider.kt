@@ -111,7 +111,7 @@ class IdlixProvider : MainAPI() {
                 else -> return@mapNotNull null
             }
 
-            val this.score = Score.from10(item.voteAverage)
+            val rating = item.voteAverage
 
             if (item.contentType == "movie") {
                 newMovieSearchResponse(title, link, TvType.Movie) {
@@ -153,7 +153,7 @@ class IdlixProvider : MainAPI() {
         } ?: emptyList()
 
         val trailer = data.trailerUrl
-        val this.score = Score.from10(data.voteAverage)
+        val rating = data.voteAverage
 
         val relatedUrl = if (data.seasons != null) {
             "$mainUrl/api/series/${data.slug}/related"
@@ -454,6 +454,3 @@ data class Subtitle(
     val label: String,
     val path: String,
 )
-
-
-

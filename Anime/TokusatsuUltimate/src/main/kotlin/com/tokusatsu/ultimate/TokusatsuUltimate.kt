@@ -305,5 +305,3 @@ class TokusatsuUltimate : MainAPI() {
     }
 
 }
-
-

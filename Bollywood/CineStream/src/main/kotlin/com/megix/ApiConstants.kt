@@ -1,7 +1,6 @@
 package com.megix
 
 import android.util.Log
-import com.admknight.cinestream.BuildConfig
 import com.lagradost.cloudstream3.app
 import org.json.JSONObject
 
@@ -97,6 +96,3 @@ val dudefilmsAPI get() = api("dudefilms")
 val m4ufreeAPI get() = api("m4ufree")
 val zinkmoviesAPI get() = api("zinkmovies")
 val animedaoAPI get() = api("animedao")
-
-
-

@@ -12,5 +12,3 @@ class DoramasYTProviderPlugin: Plugin() {
         registerMainAPI(DoramasYTProvider())
     }
 }
-
-

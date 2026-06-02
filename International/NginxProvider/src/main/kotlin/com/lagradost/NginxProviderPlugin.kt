@@ -32,6 +32,3 @@ class NginxProviderPlugin : Plugin() {
         }
     }
 }
-
-
-

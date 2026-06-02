@@ -132,5 +132,3 @@ data class LoadURL(
     @param:JsonProperty("poster")
     val poster: String?,
 )
-
-

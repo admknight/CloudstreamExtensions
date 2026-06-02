@@ -12,5 +12,3 @@ class IHaveNoTvProviderPlugin: Plugin() {
         registerMainAPI(IHaveNoTvProvider())
     }
 }
-
-

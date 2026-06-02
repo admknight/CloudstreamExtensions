@@ -315,6 +315,3 @@ open class VegaMoviesProvider : MainAPI() {
         val post_thumbnail: String
     )
 }
-
-
-

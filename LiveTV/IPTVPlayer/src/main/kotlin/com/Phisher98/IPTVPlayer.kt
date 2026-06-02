@@ -413,6 +413,3 @@ sealed class PlaylistParserException(message: String) : Exception(message) {
         PlaylistParserException("Invalid file header. Header doesn't start with #EXTM3U")
 
 }
-
-
-

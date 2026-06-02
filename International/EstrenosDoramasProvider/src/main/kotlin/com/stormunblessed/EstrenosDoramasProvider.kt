@@ -102,7 +102,7 @@ class EstrenosDoramasProvider : MainAPI() {
         val episodes = doc.select("div.post .lcp_catlist a").map {
             val name = it.selectFirst("a")?.text()
             val link = it.selectFirst("a")?.attr("href")
-            val test = newEpisode(link!!) { this.name = name }
+            val test = newEpisode(link!!, name)
             if (!link.equals(url)) {
                 epi.add(test)
             }
@@ -154,7 +154,14 @@ class EstrenosDoramasProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         callback(
-            newExtractorLink(source, name, url, INFER_TYPE) { this.referer = referer ; this.quality = Qualities.Unknown.value ; this.isM3u8 = m3u8 }
+            newExtractorLink(
+                source,
+                name,
+                url,
+                referer,
+                Qualities.Unknown.value,
+                m3u8
+            )
         )
         return true
     }
@@ -277,7 +284,3 @@ class EstrenosDoramasProvider : MainAPI() {
         return true
     }
 }
-
-
-
-

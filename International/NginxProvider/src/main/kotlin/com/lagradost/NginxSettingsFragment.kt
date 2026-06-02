@@ -90,5 +90,3 @@ class NginxSettingsFragment(private val plugin: Plugin, val nginxApi: NginxApi) 
         })
     }
 }
-
-

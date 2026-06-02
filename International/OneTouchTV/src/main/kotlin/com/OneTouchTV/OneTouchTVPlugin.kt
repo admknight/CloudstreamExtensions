@@ -10,5 +10,3 @@ class OneTouchTVPlugin: BasePlugin() {
         registerMainAPI(OneTouchTV())
     }
 }
-
-

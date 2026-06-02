@@ -197,5 +197,3 @@ class AniworldPlugin: Plugin() {
     )
 
 }
-
-

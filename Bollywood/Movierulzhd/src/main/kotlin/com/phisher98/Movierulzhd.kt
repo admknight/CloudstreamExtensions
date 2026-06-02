@@ -164,7 +164,7 @@ open class Movierulzhd : MainAPI() {
         ) TvType.TvSeries else TvType.Movie
         val description = document.select("div.wp-content > p").text().trim()
         val trailer = document.selectFirst("div.embed iframe")?.attr("src")
-        val this.score = Score.from10(document.selectFirst("span.dt_rating_vgs")?.text())
+        val rating = document.selectFirst("span.dt_rating_vgs")?.text()
         val actors = document.select("div.persons > div[itemprop=actor]").map {
             Actor(
                 it.select("meta[itemprop=name]").attr("content"),
@@ -483,6 +483,3 @@ open class Movierulzhd : MainAPI() {
         @param:JsonProperty("type") val type: String?,
     )
 }
-
-
-

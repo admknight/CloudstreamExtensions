@@ -10,6 +10,3 @@ object UltimaMetaProviderUtils {
                     "Trakt" to false
             )
 }
-
-
-

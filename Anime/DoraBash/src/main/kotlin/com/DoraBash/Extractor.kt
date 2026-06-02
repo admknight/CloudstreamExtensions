@@ -52,5 +52,3 @@ class FileMoonIN : Filesim() {
     override val mainUrl = "https://filemoon.in"
     override val name = "FileMoonSx"
 }
-
-

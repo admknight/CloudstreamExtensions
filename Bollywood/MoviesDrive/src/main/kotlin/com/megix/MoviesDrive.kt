@@ -18,6 +18,3 @@ class MoviesDrive: Plugin() {
         registerExtractorAPI(GDFlix())
     }
 }
-
-
-

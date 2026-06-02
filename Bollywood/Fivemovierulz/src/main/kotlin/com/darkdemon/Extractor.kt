@@ -15,5 +15,3 @@ class mivalyo : VidhideExtractor() {
 class StreamwishHG : StreamWishExtractor() {
     override val mainUrl = "https://hglink.to"
 }
-
-

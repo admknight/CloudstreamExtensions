@@ -227,6 +227,3 @@ open class MegaPlay : ExtractorApi() {
             }
         }
     }
-
-
-

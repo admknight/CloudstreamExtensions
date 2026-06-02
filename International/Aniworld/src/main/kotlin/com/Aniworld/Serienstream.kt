@@ -91,5 +91,3 @@ class Serienstream(sharedPref: SharedPreferences?=null) : Aniworld() {
         return super.load(url).apply { this?.type = TvType.TvSeries }
     }
 }
-
-

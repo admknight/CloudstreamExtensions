@@ -12,5 +12,3 @@ class AniflixProviderPlugin: Plugin() {
         registerMainAPI(AniflixProvider())
     }
 }
-
-

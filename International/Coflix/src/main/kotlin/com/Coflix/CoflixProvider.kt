@@ -23,5 +23,3 @@ class CoflixProvider: BasePlugin() {
         registerExtractorAPI(Voe())
     }
 }
-
-

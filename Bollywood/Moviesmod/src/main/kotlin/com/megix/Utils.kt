@@ -229,7 +229,3 @@ suspend fun bypass(url: String): String? {
     if (path == "/404") return null
     return fixUrl(path, getBaseUrl(driveUrl))
 }
-
-
-
-

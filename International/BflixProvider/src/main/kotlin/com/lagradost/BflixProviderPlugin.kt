@@ -14,6 +14,3 @@ class BflixProviderPlugin: Plugin() {
         registerMainAPI(SflixProProvider())
     }
 }
-
-
-

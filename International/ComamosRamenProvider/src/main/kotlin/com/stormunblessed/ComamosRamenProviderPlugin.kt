@@ -12,5 +12,3 @@ class ComamosRamenProviderPlugin: Plugin() {
         registerMainAPI(ComamosRamenProvider())
     }
 }
-
-

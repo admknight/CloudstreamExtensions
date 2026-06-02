@@ -245,5 +245,3 @@ open class GDMirrorbot : ExtractorApi() {
         }
     }
 }
-
-

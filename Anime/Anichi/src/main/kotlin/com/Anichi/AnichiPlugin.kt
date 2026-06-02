@@ -14,6 +14,3 @@ class AnichiPlugin : BasePlugin() {
         registerExtractorAPI(Bysekoze())
     }
 }
-
-
-

@@ -1,11 +1,9 @@
-package com.lagradost.tvtwofourseven
+package com.lagradost
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.M3u8Helper
 import com.lagradost.cloudstream3.utils.Qualities
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import org.jsoup.nodes.Element
 import java.net.URI
 
@@ -23,21 +21,24 @@ class Tvtwofourseven : MainAPI() {
             Pair("$mainUrl/top-channels", "Top Channels"),
             Pair("$mainUrl/all-channels", "All Channels")
         ).map { (url,name) ->
-            val homeItems =
+            val home =
                 app.get(url).document.select("div.grid-items div.item").mapNotNull { item ->
                     item.toSearchResult()
                 }
-            HomePageList(name, homeItems)
+            HomePageList(name, home)
         }.filter { it.list.isNotEmpty() }
         return newHomePageResponse(home)
     }
 
     private fun Element.toSearchResult(): LiveSearchResponse? {
-        val title = this.selectFirst("div.layer-content a")?.text() ?: return null
-        val href = fixUrlNull(this.selectFirst("a")?.attr("href")) ?: return null
-        return newLiveSearchResponse(title, href, TvType.Live) {
-            this.posterUrl = fixUrlNull(this@toSearchResult.select("img").attr("src"))
-        }
+        return newLiveSearchResponse(
+            this.selectFirst("div.layer-content a")?.text() ?: return null,
+            fixUrlNull(this.selectFirst("a")?.attr("href")) ?: return null,
+            this@Tvtwofourseven.name,
+            TvType.Live,
+            fixUrlNull(this.select("img").attr("src")),
+        )
+
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -50,14 +51,16 @@ class Tvtwofourseven : MainAPI() {
             ),
             headers = mapOf("X-Requested-With" to "XMLHttpRequest")
         ).document.select("div.item").mapNotNull {
-            val title = it.selectFirst("a")?.text() ?: return@mapNotNull null
-            val href = fixUrl(it.selectFirst("a")!!.attr("href"))
-            newLiveSearchResponse(title, href, TvType.Live) {
-                this.posterUrl = fixUrlNull(
+            newLiveSearchResponse(
+                it.selectFirst("a")?.text() ?: return@mapNotNull null,
+                fixUrl(it.selectFirst("a")!!.attr("href")),
+                this@Tvtwofourseven.name,
+                TvType.Live,
+                fixUrlNull(
                     it.select("div.asl_image").attr("style").substringAfter("url(\"")
                         .substringBefore("\");")
                 )
-            }
+            )
         }
     }
 
@@ -67,10 +70,14 @@ class Tvtwofourseven : MainAPI() {
             document.select("script").find { it.data().contains("var channelName =") }?.data()
         val baseUrl = data?.substringAfter("baseUrl = \"")?.substringBefore("\";")
         val channel = data?.substringAfter("var channelName = \"")?.substringBefore("\";")
-        val title = document.selectFirst("title")?.text()?.split("-")?.first()?.trim() ?: return null
-        return newLiveStreamLoadResponse(title, url, "$baseUrl$channel.m3u8") {
-            // DSL fields
-        }
+        return newLiveStreamLoadResponse(
+            document.selectFirst("title")?.text()?.split("-")?.first()?.trim() ?: return null,
+            url,
+            this.name,
+            "$baseUrl$channel.m3u8",
+            fixUrlNull(document.selectFirst("img.aligncenter.jetpack-lazy-image")?.attr("src")),
+            plot = document.select("address").text()
+        )
     }
 
     override suspend fun loadLinks(
@@ -93,12 +100,11 @@ class Tvtwofourseven : MainAPI() {
                     source = name,
                     name = name,
                     url = data,
-                    type = ExtractorLinkType.M3U8
-                ) {
-                    this.referer = "$mainUrl/"
-                    this.headers = mapOf("Origin" to mainUrl)
-                    this.quality = Qualities.Unknown.value
-                }
+                    referer = "$mainUrl/",
+                    quality = Qualities.Unknown.value,
+                    isM3u8 = true,
+                    headers = mapOf("Origin" to mainUrl)
+                )
             )
         }
 

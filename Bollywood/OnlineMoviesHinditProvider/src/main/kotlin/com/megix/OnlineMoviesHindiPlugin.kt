@@ -11,6 +11,3 @@ class OnlineMoviesHindiPlugin: Plugin() {
         registerMainAPI(OnlineMoviesHindiProvider())
     }
 }
-
-
-

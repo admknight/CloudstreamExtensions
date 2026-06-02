@@ -80,7 +80,13 @@ class PlayhubProvider:MainAPI() {
                 val data = if (type == "serie") "${mainUrl}/series/$id" else if (type == "movie") "$mainUrl/movies/$id" else if (!airdate) "${mainUrl}/series/$id"
                 else if (airdate) "$mainUrl/movies/$id"
                 else ""
-                newTvSeriesSearchResponse(title, data, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = poster }
+                newTvSeriesSearchResponse(
+                    title,
+                    data,
+                    this.name,
+                    TvType.TvSeries,
+                    poster,
+                )
             }
             items.add(HomePageList(name, home!!))
         }
@@ -330,5 +336,3 @@ class PlayhubProvider:MainAPI() {
         return true
     }
 }
-
-

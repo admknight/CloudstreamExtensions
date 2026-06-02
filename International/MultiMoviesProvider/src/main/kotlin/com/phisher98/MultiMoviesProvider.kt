@@ -184,7 +184,7 @@ class MultiMoviesProvider : MainAPI() { // all providers must be an instance of 
             fixUrlNull(iframeSrc)
         }
         trailer = trailer?.let { trailerRegex.find(it)?.value?.trim('"') }
-        val this.score = Score.from10(doc.select("span.dt_rating_vgs").text())
+        val rating = doc.select("span.dt_rating_vgs").text()
         val duration =
             doc.selectFirst("span.runtime")?.text()?.removeSuffix(" Min.")?.trim()
                 ?.toInt()
@@ -314,6 +314,3 @@ class MultiMoviesProvider : MainAPI() { // all providers must be an instance of 
             ?: this.attr("src").takeIf { it.isNotBlank() && it.startsWith("http") }
     }
 }
-
-
-

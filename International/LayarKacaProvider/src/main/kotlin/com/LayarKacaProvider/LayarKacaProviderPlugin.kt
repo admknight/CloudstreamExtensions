@@ -20,5 +20,3 @@ class LayarKacaProviderPlugin: BasePlugin() {
         registerExtractorAPI(Co4nxtrl())
     }
 }
-
-

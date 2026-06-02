@@ -3,7 +3,6 @@ package com.stormunblessed
 import android.util.Base64
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.JsUnpacker
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import java.net.URL
@@ -377,6 +376,3 @@ class CablevisionHdProvider : MainAPI() {
         return url.host
     }
 }
-
-
-

@@ -117,7 +117,3 @@ class OnlineMoviesHindiProvider : MainAPI() { // all providers must be an instan
         return true
     }
 }
-
-
-
-

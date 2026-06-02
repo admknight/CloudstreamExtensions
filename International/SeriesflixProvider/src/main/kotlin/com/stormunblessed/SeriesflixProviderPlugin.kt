@@ -12,5 +12,3 @@ class SeriesflixProviderPlugin: Plugin() {
         registerMainAPI(SeriesflixProvider())
     }
 }
-
-

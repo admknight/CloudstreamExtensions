@@ -12,5 +12,3 @@ class GogoanimeProviderPlugin: Plugin() {
         registerMainAPI(GogoanimeProvider())
     }
 }
-
-

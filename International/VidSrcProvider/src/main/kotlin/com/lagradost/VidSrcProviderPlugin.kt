@@ -12,5 +12,3 @@ class VidSrcProviderPlugin: Plugin() {
         registerMainAPI(VidSrcProvider())
     }
 }
-
-

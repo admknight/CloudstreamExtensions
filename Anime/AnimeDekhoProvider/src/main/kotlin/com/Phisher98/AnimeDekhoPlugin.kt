@@ -35,6 +35,3 @@ class AnimeDekhoPlugin: BasePlugin() {
         registerExtractorAPI(Abyass())
     }
 }
-
-
-

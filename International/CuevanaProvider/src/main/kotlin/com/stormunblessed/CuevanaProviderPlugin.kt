@@ -12,5 +12,3 @@ class CuevanaProviderPlugin: Plugin() {
         registerMainAPI(CuevanaProvider())
     }
 }
-
-

@@ -101,7 +101,12 @@ class PelispediaProvider:MainAPI() {
                 val isValid = seasonid.size == 2
                 val episode = if (isValid) seasonid.getOrNull(1) else null
                 val season = if (isValid) seasonid.getOrNull(0) else null
-                epi.add(newEpisode(href) { this.name = null ; this.season = season ; this.episode = episode })
+                epi.add(newEpisode(
+                    href,
+                    null,
+                    season,
+                    episode,
+                ))
             }
         }
 
@@ -159,5 +164,3 @@ class PelispediaProvider:MainAPI() {
         return true
     }
 }
-
-

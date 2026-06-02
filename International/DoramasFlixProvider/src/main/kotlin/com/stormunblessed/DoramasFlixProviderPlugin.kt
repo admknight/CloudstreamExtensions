@@ -11,5 +11,3 @@ class DoramasFlixProviderPlugin: Plugin() {
         registerMainAPI(DoramasFlixProvider())
     }
 }
-
-

@@ -145,6 +145,3 @@ open class Animekhor : MainAPI() {
     }
 
 }
-
-
-

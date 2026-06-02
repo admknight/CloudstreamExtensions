@@ -94,5 +94,3 @@ class Bluray : Pinoymoviepedia() {
         @param:JsonProperty("type") val type: String?,
     )
 }
-
-

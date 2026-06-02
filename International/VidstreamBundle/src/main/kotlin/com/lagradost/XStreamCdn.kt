@@ -5,7 +5,6 @@ import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.ExtractorApi
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
 
 class LayarKaca: XStreamCdn() {
@@ -92,6 +91,3 @@ open class XStreamCdn : ExtractorApi() {
         return extractedLinksList
     }
 }
-
-
-

@@ -203,6 +203,3 @@ class Animesalt : MainAPI() {
             ?: this.attr("src").takeIf { it.isNotBlank() }
     }
 }
-
-
-

@@ -12,5 +12,3 @@ class KimCartoonProviderPlugin: Plugin() {
         registerMainAPI(KimCartoonProvider())
     }
 }
-
-

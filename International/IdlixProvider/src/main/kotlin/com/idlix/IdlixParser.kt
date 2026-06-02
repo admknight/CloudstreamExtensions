@@ -122,7 +122,16 @@ data class Season(
     val episodes: List<Episode>? = null
 )
 
-data class newEpisode(val id: String? = null) { this.val episodeNumber: Int? = null ; this.val name: String? = null ; this.val overview: String? = null ; this.val stillPath: String? = null ; this.val airDate: String? = null ; this.val runtime: Int? = null ; this.val voteAverage: Any? = null }
+data class newEpisode(
+    val id: String? = null,
+    val episodeNumber: Int? = null,
+    val name: String? = null,
+    val overview: String? = null,
+    val stillPath: String? = null,
+    val airDate: String? = null,
+    val runtime: Int? = null,
+    val voteAverage: Any? = null
+)
 
 data class SeasonWrapper(
     val season: Season? = null
@@ -166,5 +175,3 @@ data class LoadData(
     val id: String,
     val type: String // "movie" or "episode"
 )
-
-

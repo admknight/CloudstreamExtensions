@@ -132,6 +132,3 @@ class JsInterceptor(private val serverid: String, private val lang: String) : In
         return newRequest
     }
 }
-
-
-

@@ -126,6 +126,3 @@ fun getSearchQuality(check: String?): SearchQuality? {
     }
     return null
 }
-
-
-

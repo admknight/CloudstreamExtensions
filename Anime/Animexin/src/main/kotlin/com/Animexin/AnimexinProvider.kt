@@ -15,5 +15,3 @@ class AnimexinProvider: BasePlugin() {
         registerExtractorAPI(Dailymotion())
     }
 }
-
-

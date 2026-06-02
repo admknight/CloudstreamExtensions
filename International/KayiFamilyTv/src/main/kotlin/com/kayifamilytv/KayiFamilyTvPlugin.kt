@@ -13,5 +13,3 @@ class KayiFamilyTvPlugin: Plugin() {
         registerExtractorAPI(FirePlayerX())
     }
 }
-
-

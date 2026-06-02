@@ -12,5 +12,3 @@ class PelisplusHDProviderPlugin: Plugin() {
         registerMainAPI(PelisplusHDProvider())
     }
 }
-
-

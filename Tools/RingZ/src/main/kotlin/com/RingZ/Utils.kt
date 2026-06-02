@@ -90,5 +90,3 @@ object RingzConfigLoader {
         }
     }
 }
-
-

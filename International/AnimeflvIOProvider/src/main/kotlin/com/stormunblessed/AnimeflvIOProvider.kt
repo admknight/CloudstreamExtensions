@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.getQualityFromName
@@ -86,7 +85,14 @@ class AnimeflvIOProvider:MainAPI() {
             val isMovie = href.contains("/pelicula/")
             if (image.contains("/static/img/picture.png")) { image = ""}
             if (isMovie) {
-                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.AnimeMovie ; this.quality = image }
+                newMovieSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.AnimeMovie,
+                    image,
+                    null
+                )
             } else {
                 newAnimeSearchResponse(
                     title,
@@ -110,7 +116,9 @@ class AnimeflvIOProvider:MainAPI() {
         val episodes = soup.select(".item-season-episodes a").map { li ->
             val href = fixUrl(li.selectFirst("a")?.attr("href") ?: "")
             val name = li.selectFirst("a")?.text() ?: ""
-            newEpisode(href) { this.name = name ; this.season =  }
+            newEpisode(
+                href, name,
+            )
         }.reversed()
 
         val year = Regex("(\\d*)").find(soup.select(".info-half").text())
@@ -219,6 +227,3 @@ class AnimeflvIOProvider:MainAPI() {
         return true
     }
 }
-
-
-

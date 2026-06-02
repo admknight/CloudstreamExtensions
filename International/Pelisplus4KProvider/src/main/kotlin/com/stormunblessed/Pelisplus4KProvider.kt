@@ -34,7 +34,13 @@ class Pelisplus4KProvider :MainAPI() {
                 val title = it.selectFirst("a h2")?.text()
                 val link = it.selectFirst("a.itemA")?.attr("href")
                 val img = it.selectFirst("picture img")?.attr("data-src")
-                newTvSeriesSearchResponse(title!!, link!!, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = img }
+                newTvSeriesSearchResponse(
+                    title!!,
+                    link!!,
+                    this.name,
+                    TvType.TvSeries,
+                    img,
+                )
             }
             items.add(HomePageList(name, home))
         }
@@ -48,7 +54,13 @@ class Pelisplus4KProvider :MainAPI() {
             val title = it.selectFirst("a h2")?.text()
             val link = it.selectFirst("a.itemA")?.attr("href")
             val img = it.selectFirst("picture img")?.attr("data-src")
-            newTvSeriesSearchResponse(title!!, link!!, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = img }
+            newTvSeriesSearchResponse(
+                title!!,
+                link!!,
+                this.name,
+                TvType.TvSeries,
+                img,
+            )
         }
     }
 
@@ -82,7 +94,13 @@ class Pelisplus4KProvider :MainAPI() {
                         val realimg = if (img == null) null else if (img.isEmpty() == true) null else "https://image.tmdb.org/t/p/w342${img.replace("\\/", "/")}"
                         val epurl = "$url/season/$seasonNum/episode/$epNum"
                         epi.add(
-                            newEpisode(epurl) { this.name = epTitle ; this.season = seasonNum ; this.episode = epNum })
+                            newEpisode(
+                                epurl,
+                                epTitle,
+                                seasonNum,
+                                epNum,
+                                realimg,
+                            ))
                     }
                 }
             }
@@ -132,5 +150,3 @@ class Pelisplus4KProvider :MainAPI() {
     }
 
 }
-
-

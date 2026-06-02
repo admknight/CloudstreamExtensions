@@ -11,5 +11,3 @@ class IdlixProviderPlugin: BasePlugin() {
         registerExtractorAPI(Majorplay())
     }
 }
-
-

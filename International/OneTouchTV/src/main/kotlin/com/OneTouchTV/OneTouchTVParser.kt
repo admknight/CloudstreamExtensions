@@ -198,5 +198,3 @@ data class CleanMedia(
     val status: String?,
     val isSub: Boolean?
 )
-
-

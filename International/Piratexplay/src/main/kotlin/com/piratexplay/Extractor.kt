@@ -308,5 +308,3 @@ class PiratexplayExtractor : ExtractorApi() {
 class Cloudy : VidStack() {
     override var mainUrl = "https://cloudy.upns.one"
 }
-
-

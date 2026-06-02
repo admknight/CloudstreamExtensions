@@ -81,6 +81,3 @@ internal object SettingsTheme {
             TypedValue.COMPLEX_UNIT_DIP, this, context.resources.displayMetrics
         )
 }
-
-
-

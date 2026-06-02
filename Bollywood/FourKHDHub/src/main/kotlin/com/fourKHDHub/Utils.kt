@@ -197,6 +197,3 @@ fun safeScoreFrom10(value: Double?): Score? {
     }
 }
 
-
-
-

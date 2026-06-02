@@ -354,5 +354,3 @@ class AnimesaltMulti : ExtractorApi() {
     }
 
 }
-
-

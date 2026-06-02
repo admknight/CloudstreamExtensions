@@ -1,12 +1,10 @@
 package com.horis.cncverse.entities
 
-import com.fasterxml.jackson.annotation.JsonProperty
-
-data class NetmirrorEpisode(
-    @JsonProperty("complate") val complate: String? = null,
-    @JsonProperty("ep") val ep: String? = null,
-    @JsonProperty("id") val id: String? = null,
-    @JsonProperty("s") val s: String? = null,
-    @JsonProperty("t") val t: String? = null,
-    @JsonProperty("time") val time: String? = null
+data class newEpisode(
+    val complate: String,
+    val ep: String,
+    val id: String,
+    val s: String,
+    val t: String,
+    val time: String
 )

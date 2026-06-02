@@ -43,5 +43,3 @@ class HindiSubAnime : AnimeDekhoProvider() {
         return true
     }
 }
-
-

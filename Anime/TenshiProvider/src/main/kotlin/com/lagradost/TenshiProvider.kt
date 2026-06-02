@@ -1,4 +1,4 @@
-package com.lagradost.tenshiprovider
+package com.lagradost
 
 import android.annotation.SuppressLint
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -7,8 +7,6 @@ import com.lagradost.cloudstream3.network.DdosGuardKiller
 import com.lagradost.cloudstream3.network.getHeaders
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.ExtractorLinkType
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import org.jsoup.nodes.Document
 import java.net.URI
@@ -17,6 +15,9 @@ import java.util.*
 
 class TenshiProvider : MainAPI() {
     companion object {
+        //var token: String? = null
+        //var cookie: Map<String, String> = mapOf()
+
         fun getType(t: String): TvType {
             return if (t.contains("OVA") || t.contains("Special")) TvType.OVA
             else if (t.contains("Movie")) TvType.AnimeMovie
@@ -31,6 +32,18 @@ class TenshiProvider : MainAPI() {
     override val supportedTypes = setOf(TvType.Anime, TvType.AnimeMovie, TvType.OVA)
     private var ddosGuardKiller = DdosGuardKiller(true)
 
+    /*private fun loadToken(): Boolean {
+        return try {
+            val response = get(mainUrl)
+            cookie = response.cookies
+            val document = Jsoup.parse(response.text)
+            token = document.selectFirst("""meta[name="csrf-token"]""").attr("content")
+            token != null
+        } catch (e: Exception) {
+            false
+        }
+    }*/
+
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
         val items = ArrayList<HomePageList>()
         val soup = app.get(mainUrl, interceptor = ddosGuardKiller).document
@@ -39,23 +52,35 @@ class TenshiProvider : MainAPI() {
                 if (section.attr("id") == "toplist-tabs") {
                     for (top in section.select(".tab-content > [role=\"tabpanel\"]")) {
                         val title = "Top - " + top.attr("id").split("-")[1].replaceFirstChar {
-                            if (it.isLowerCase()) it.titlecase(Locale.UK) else it.toString()
+                            if (it.isLowerCase()) it.titlecase(
+                                Locale.UK
+                            ) else it.toString()
                         }
                         val anime = top.select("li > a").map {
-                            newAnimeSearchResponse(it.selectFirst(".thumb-title")!!.text(), fixUrl(it.attr("href")), TvType.Anime) {
-                                this.posterUrl = it.selectFirst("img")!!.attr("src")
-                                addDubStatus(DubStatus.Subbed)
-                            }
+                            newAnimeSearchResponse(
+                                it.selectFirst(".thumb-title")!!.text(),
+                                fixUrl(it.attr("href")),
+                                this.name,
+                                TvType.Anime,
+                                it.selectFirst("img")!!.attr("src"),
+                                null,
+                                EnumSet.of(DubStatus.Subbed),
+                            )
                         }
                         items.add(HomePageList(title, anime))
                     }
                 } else {
                     val title = section.selectFirst("h2")!!.text()
                     val anime = section.select("li > a").map {
-                        newAnimeSearchResponse(it.selectFirst(".thumb-title")?.text() ?: "", fixUrl(it.attr("href")), TvType.Anime) {
-                            this.posterUrl = it.selectFirst("img")!!.attr("src")
-                            addDubStatus(DubStatus.Subbed)
-                        }
+                        newAnimeSearchResponse(
+                            it.selectFirst(".thumb-title")?.text() ?: "",
+                            fixUrl(it.attr("href")),
+                            this.name,
+                            TvType.Anime,
+                            it.selectFirst("img")!!.attr("src"),
+                            null,
+                            EnumSet.of(DubStatus.Subbed),
+                        )
                     }
                     items.add(HomePageList(title, anime))
                 }
@@ -69,6 +94,7 @@ class TenshiProvider : MainAPI() {
 
     private fun getIsMovie(type: String, id: Boolean = false): Boolean {
         if (!id) return type == "Movie"
+
         val movies = listOf("rrso24fa", "e4hqvtym", "bl5jdbqn", "u4vtznut", "37t6h2r4", "cq4azcrj")
         val aniId = type.replace("$mainUrl/anime/", "")
         return movies.contains(aniId)
@@ -81,14 +107,19 @@ class TenshiProvider : MainAPI() {
             val img = fixUrl(it.selectFirst("img")!!.attr("src"))
             val title = it.attr("title")
             if (getIsMovie(href, true)) {
-                newMovieSearchResponse(title, href, TvType.Movie) {
-                    this.posterUrl = img
-                }
+                newMovieSearchResponse(
+                    title, href, this.name, TvType.Movie, img, null
+                )
             } else {
-                newAnimeSearchResponse(title, href, TvType.Anime) {
-                    this.posterUrl = img
-                    addDubStatus(DubStatus.Subbed)
-                }
+                newAnimeSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Anime,
+                    img,
+                    null,
+                    EnumSet.of(DubStatus.Subbed),
+                )
             }
         }
     }
@@ -107,6 +138,57 @@ class TenshiProvider : MainAPI() {
             return null
         }
     }
+
+//    data class TenshiSearchResponse(
+//        @JsonProperty("url") var url : String,
+//        @JsonProperty("title") var title : String,
+//        @JsonProperty("cover") var cover : String,
+//        @JsonProperty("genre") var genre : String,
+//        @JsonProperty("year") var year : Int,
+//        @JsonProperty("type") var type : String,
+//        @JsonProperty("eps") var eps : String,
+//        @JsonProperty("cen") var cen : String
+//    )
+
+//    override suspend fun quickSearch(query: String): ArrayList<SearchResponse>? {
+//        if (!autoLoadToken()) return quickSearch(query)
+//        val url = "$mainUrl/anime/search"
+//        val response = khttp.post(
+//            url,
+//            data=mapOf("q" to query),
+//            headers=mapOf("x-csrf-token" to token, "x-requested-with" to "XMLHttpRequest"),
+//            cookies = cookie
+//
+//        )
+//
+//        val items = mapper.readValue<List<TenshiSearchResponse>>(response.text)
+//
+//        if (items.isEmpty()) return ArrayList()
+//
+//        val returnValue = ArrayList<SearchResponse>()
+//        for (i in items) {
+//            val href = fixUrl(i.url)
+//            val title = i.title
+//            val img = fixUrl(i.cover)
+//            val year = i.year
+//
+//            returnValue.add(
+//                if (getIsMovie(i.type)) {
+//                    newMovieSearchResponse(
+//                        title, href, getSlug(href), this.name, TvType.Movie, img, year
+//                    )
+//                } else {
+//                    newAnimeSearchResponse(
+//                        title, href, getSlug(href), this.name,
+//                        TvType.Anime, img,  year, null,
+//                        EnumSet.of(DubStatus.Subbed),
+//                        null, null
+//                    )
+//                }
+//            )
+//        }
+//        return returnValue
+//    }
 
     override suspend fun search(query: String): List<SearchResponse> {
         val url = "$mainUrl/anime"
@@ -176,9 +258,7 @@ class TenshiProvider : MainAPI() {
             val title =
                 element.selectFirst("> .overlay > .thumb-title")?.text() ?: return@mapNotNull null
             val img = element.selectFirst("> img")?.attr("src")
-            newAnimeSearchResponse(title, href, TvType.Anime) {
-                this.posterUrl = img
-            }
+            newAnimeSearchResponse(title, href, this.name, TvType.Anime, img)
         }
 
         val type = document.selectFirst("a[href*=\"$mainUrl/type/\"]")?.text()?.trim()
@@ -256,15 +336,13 @@ class TenshiProvider : MainAPI() {
                             this.name,
                             "${this.name} $release",
                             fixUrl(it.src),
-                            ExtractorLinkType.VIDEO,
-                        ) {
-                            this.referer = this@TenshiProvider.mainUrl
-                            this.quality = getQualityFromName("${it.size}")
-                            this.headers = getHeaders(emptyMap(),
-                                ddosGuardKiller.savedCookiesMap[URI(this@TenshiProvider.mainUrl).host]
+                            this.mainUrl,
+                            getQualityFromName("${it.size}"),
+                            headers = getHeaders(emptyMap(),
+                                ddosGuardKiller.savedCookiesMap[URI(this.mainUrl).host]
                                     ?: emptyMap()
                             ).toMap()
-                        }
+                        )
                     )
                 }
             }

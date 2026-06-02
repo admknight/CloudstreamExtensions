@@ -6,7 +6,6 @@ import com.lagradost.cloudstream3.mvvm.logError
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
 import org.jsoup.Jsoup
@@ -51,7 +50,14 @@ class KdramaHoodProvider : MainAPI() {
                 null
             }
 
-            newMovieSearchResponse(name = title, url = link, TvType.TvSeries) { this.apiName = this.name ; this.posterUrl = image ; this.year = year }
+            newMovieSearchResponse(
+                name = title,
+                url = link,
+                apiName = this.name,
+                type = TvType.TvSeries,
+                posterUrl = image,
+                year = year
+            )
         }.distinctBy { it.url } ?: listOf()
         home.add(HomePageList(recentlyAddedTitle, recentlyAdded))
         return newHomePageResponse(home.filter { it.list.isNotEmpty() })
@@ -74,7 +80,14 @@ class KdramaHoodProvider : MainAPI() {
             val year = it.selectFirst("span.year")?.text()?.toIntOrNull()
             val image = fixUrlNull(it.selectFirst("div.image > img")?.attr("src"))
 
-            newMovieSearchResponse(name = title, url = link, TvType.Movie) { this.apiName = this.name ; this.posterUrl = image ; this.year = year }
+            newMovieSearchResponse(
+                name = title,
+                url = link,
+                apiName = this.name,
+                type = TvType.Movie,
+                posterUrl = image,
+                year = year
+            )
         }
     }
 
@@ -116,7 +129,14 @@ class KdramaHoodProvider : MainAPI() {
             val aNameYear = a.select("div.datatvrel") ?: return@mapNotNull null
             val aName = aNameYear.select("h4").text() ?: aImg.attr("alt") ?: return@mapNotNull null
             val aYear = aName.trim().takeLast(5).removeSuffix(")").toIntOrNull()
-            newMovieSearchResponse(url = aUrl, name = aName, TvType.Movie) { this.posterUrl = aCover ; this.year = aYear ; this.apiName = this.name }
+            newMovieSearchResponse(
+                url = aUrl,
+                name = aName,
+                type = TvType.Movie,
+                posterUrl = aCover,
+                year = aYear,
+                apiName = this.name
+            )
         }
 
         // Episodes Links
@@ -272,6 +292,3 @@ class KdramaHoodProvider : MainAPI() {
         return count > 0
     }
 }
-
-
-

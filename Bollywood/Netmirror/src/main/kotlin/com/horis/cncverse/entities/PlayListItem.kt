@@ -5,7 +5,3 @@ data class PlayListItem(
     val tracks: List<Tracks>?,
     val title: String
 )
-
-
-
-

@@ -8,13 +8,13 @@ data class EpJson(
 )
 
 data class Data(
-    val episodes: List<DoraBashEpisode>,
+    val episodes: List<Episode>,
     @param:JsonProperty("max_episodes_page")
     val maxEpisodesPage: Long,
     val message: String,
 )
 
-data class DoraBashEpisode(
+data class newEpisode(
     val number: String,
     val thumbnail: String,
     val title: String,

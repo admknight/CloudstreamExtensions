@@ -23,5 +23,3 @@ class Fibtoon : Fibwatch() {
         "videos/latest" to "Latest Videos",
     )
 }
-
-

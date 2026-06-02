@@ -1,10 +1,9 @@
-package com.admknight.stremiox
+package com.phisher98
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.MainActivity
-import com.admknight.stremiox.settings.SettingsBottomFragment
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
 import com.lagradost.cloudstream3.plugins.PluginData
@@ -106,6 +105,3 @@ class StremioXPlugin : Plugin() {
         val type: String
     )
 }
-
-
-

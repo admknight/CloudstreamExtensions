@@ -24,5 +24,3 @@ class Fibwatchdrama : Fibwatch() {
         "videos/latest" to "Latest Videos",
     )
 }
-
-

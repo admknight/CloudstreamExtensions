@@ -1,17 +1,27 @@
+// use an integer for version numbers
 version = 12
+
 
 cloudstream {
     language = "hi"
-    authors = listOf("Adam Knight")
+    // All of these properties are optional, you can safely remove them
     description = "Contains BollyZone"
-    status = 1
-    tvTypes = listOf(         "Movie",         "TvSeries"     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Desicinemas/icon.png"
-    isCrossPlatform = true
-}
+    authors = listOf("Adam Knight")
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+    /**
+     * Status int as the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta only
+     * */
+    status = 1 // will be 3 if unspecified
+    tvTypes = listOf(
+        "Movie",
+        "TvSeries"
+    )
+
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Desicinemas/icon.png"
+
+    isCrossPlatform = true
 }

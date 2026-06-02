@@ -24,5 +24,3 @@ class VidstreamBundlePlugin : Plugin() {
         registerMainAPI(WatchAsianProvider())
     }
 }
-
-

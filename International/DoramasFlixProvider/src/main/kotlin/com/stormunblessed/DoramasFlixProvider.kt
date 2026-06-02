@@ -158,7 +158,13 @@ class DoramasFlixProvider:MainAPI() {
         val istvShow = info.isTVShow
         val data = "{\"id\":\"$id\",\"slug\":\"$slug\",\"type\":\"$typename\",\"isTV\":$istvShow}"
 
-        return newTvSeriesSearchResponse(title!!, data, name) { this.posterUrl = TvType.AsianDrama ; this.quality = realposter }
+        return newTvSeriesSearchResponse(
+            title!!,
+            data,
+            name,
+            TvType.AsianDrama,
+            realposter,
+        )
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -219,7 +225,13 @@ class DoramasFlixProvider:MainAPI() {
                     val epthumb = getImageUrl(it.stillPath)
                     val name = it.name
                     episodes.add(
-                        newEpisode(epSlug!!) { this.name = name ; this.season = season ; this.episode = epnum })
+                        newEpisode(
+                            epSlug!!,
+                            name,
+                            season,
+                            epnum,
+                            epthumb
+                        ))
                 }
             }
         } else if (isMovie) {
@@ -279,6 +291,3 @@ class DoramasFlixProvider:MainAPI() {
         return true
     }
 }
-
-
-

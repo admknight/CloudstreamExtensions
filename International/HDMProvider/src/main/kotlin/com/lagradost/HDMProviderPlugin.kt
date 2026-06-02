@@ -12,5 +12,3 @@ class HDMProviderPlugin: Plugin() {
         registerMainAPI(HDMProvider())
     }
 }
-
-

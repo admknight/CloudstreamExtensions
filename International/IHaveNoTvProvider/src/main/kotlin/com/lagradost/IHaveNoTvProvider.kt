@@ -220,6 +220,3 @@ class IHaveNoTvProvider : MainAPI() {
         return true
     }
 }
-
-
-

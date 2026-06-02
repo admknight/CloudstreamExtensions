@@ -12,5 +12,3 @@ class StremioProviderPlugin: Plugin() {
         registerMainAPI(StremioProvider())
     }
 }
-
-

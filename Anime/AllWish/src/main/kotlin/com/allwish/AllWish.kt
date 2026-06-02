@@ -252,6 +252,3 @@ class AllWish : MainAPI() {
         return Pair(subEpisodes, dubEpisodes)
     }
 }
-
-
-

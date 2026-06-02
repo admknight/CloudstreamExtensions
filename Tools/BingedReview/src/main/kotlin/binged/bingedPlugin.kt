@@ -11,6 +11,3 @@ class BingedPlugin: Plugin() {
         registerMainAPI(BingedProvider())
     }
 }
-
-
-

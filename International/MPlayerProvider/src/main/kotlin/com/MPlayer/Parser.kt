@@ -824,6 +824,3 @@ data class MoviePublisher2(
     val id: String,
     val name: String,
 )
-
-
-

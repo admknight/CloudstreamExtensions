@@ -41,5 +41,3 @@ data class Loadlinks(
     val goFile: String?,
     val hubCloudLink: String?
 )
-
-

@@ -12,5 +12,3 @@ class AnimeflvIOProviderPlugin: Plugin() {
         registerMainAPI(AnimeflvIOProvider())
     }
 }
-
-

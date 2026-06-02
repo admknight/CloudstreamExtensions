@@ -256,5 +256,3 @@ fun parseAnimeData(jsonString: String): MetaAnimeData? {
         null // Return null for invalid JSON instead of crashing
     }
 }
-
-

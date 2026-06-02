@@ -13,6 +13,3 @@ data class LoadURL(
     val genre: String?=null,
     val extra: String? = null
 )
-
-
-

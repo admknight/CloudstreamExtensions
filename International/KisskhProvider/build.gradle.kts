@@ -1,10 +1,41 @@
+
+import org.jetbrains.kotlin.konan.properties.Properties
+// use an integer for version numbers
 version = 18
 
-cloudstream {
+android {
+    defaultConfig {
+        android.buildFeatures.buildConfig=true
+        buildConfigField("String", "KissKh", "\"\"")
+        buildConfigField("String", "KisskhSub", "\"\"")
+
+    }
 }
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+
+cloudstream {
+    language = "en"
+    // All of these properties are optional, you can safely remove them
+
+    // description = "Lorem Ipsum"
+     authors = listOf("Adam Knight")
+
+    /**
+     * Status int as the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta only
+     * */
+    status = 1 // will be 3 if unspecified
+    tvTypes = listOf(
+        "AsianDrama",
+        "TvSeries",
+        "Anime",
+        "Movie",
+    )
+
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/KisskhProvider/icon.png"
+
+    isCrossPlatform = true
 }

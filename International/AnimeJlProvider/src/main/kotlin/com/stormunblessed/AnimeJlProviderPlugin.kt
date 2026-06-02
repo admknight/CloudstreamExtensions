@@ -11,5 +11,3 @@ class AnimeJlProviderPlugin: Plugin() {
         registerMainAPI(AnimeJlProvider())
     }
 }
-
-

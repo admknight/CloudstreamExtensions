@@ -11,5 +11,3 @@ class SoloLatinoProviderPlugin: Plugin() {
         registerMainAPI(SoloLatinoProvider())
     }
 }
-
-

@@ -136,5 +136,3 @@ class SkymoviesHDProvider : MainAPI() {
             ?: Qualities.Unknown.value
     }
 }
-
-

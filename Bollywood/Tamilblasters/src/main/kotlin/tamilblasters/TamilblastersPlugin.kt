@@ -12,6 +12,3 @@ class TamilblastersPlugin: Plugin() {
         registerExtractorAPI(Streamhg())
     }
 }
-
-
-

@@ -14,6 +14,3 @@ class CinevoodPlugin : Plugin() {
         registerExtractorAPI(HubCloud())
     }
 }
-
-
-

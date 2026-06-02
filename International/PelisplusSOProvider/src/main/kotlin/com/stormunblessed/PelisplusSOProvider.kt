@@ -3,7 +3,6 @@ package com.lagradost.cloudstream3.movieproviders
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import org.jsoup.Jsoup
@@ -94,9 +93,24 @@ class PelisplusSOProvider : MainAPI() {
             val isMovie = href.contains("/pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = image }
+                newMovieSearchResponse(
+                        title,
+                        href,
+                        this.name,
+                        TvType.Movie,
+                        image,
+                        year
+                )
             } else {
-                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image }
+                newTvSeriesSearchResponse(
+                        title,
+                        href,
+                        this.name,
+                        TvType.TvSeries,
+                        image,
+                        year,
+                        null
+                )
             }
         }
     }
@@ -116,7 +130,13 @@ class PelisplusSOProvider : MainAPI() {
             val isValid = seasonid.size == 2
             val episode = if (isValid) seasonid.getOrNull(1) else null
             val season = if (isValid) seasonid.getOrNull(0) else null
-            newEpisode(href) { this.name = epTitle ; this.season = season ; this.episode = episode }
+            newEpisode(
+                    href,
+                    epTitle,
+                    season = season,
+                    episode = episode,
+
+                    )
         }.reversed()
 
         val year = Regex("(\\d*)").find(soup.select(".info-half").text())
@@ -238,7 +258,3 @@ class PelisplusSOProvider : MainAPI() {
         return true
     }
 }
-
-
-
-

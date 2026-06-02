@@ -394,7 +394,3 @@ class HDm2 : ExtractorApi() {
         return if (!tok.isNullOrEmpty()) "$base?tok=$tok" else base
     }
 }
-
-
-
-

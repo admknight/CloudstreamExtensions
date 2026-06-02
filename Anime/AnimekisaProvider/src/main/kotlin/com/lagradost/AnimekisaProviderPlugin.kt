@@ -12,5 +12,3 @@ class AnimekisaProviderPlugin: Plugin() {
         registerMainAPI(AnimekisaProvider())
     }
 }
-
-

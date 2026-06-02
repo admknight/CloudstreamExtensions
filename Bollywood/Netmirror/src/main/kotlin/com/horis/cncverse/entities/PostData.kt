@@ -16,7 +16,3 @@ data class PostData(
     val match: String?,
     val runtime: String?,
 )
-
-
-
-

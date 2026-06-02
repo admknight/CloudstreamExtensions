@@ -11,6 +11,3 @@ class MovieBoxProviderPlugin: Plugin() {
         registerMainAPI(MovieBoxProvider())
     }
 }
-
-
-

@@ -53,7 +53,7 @@ class DoraBash : MainAPI() {
         val backgroundposter = doc.select("main div.absolute img").attr("src")
         val description = doc.selectFirst("div.mb-6 > section > p:nth-child(1)")?.text()?.trim()
         val poster = doc.select("meta[property=og:image]").attr("content").trim()
-        val scoreValue = Score.from10(doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(1)").text())
+        val rating = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(1)").text()
         val year = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(4)").text()
         val contentRating = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(7)").text()
         val duration = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(8)").text()
@@ -74,7 +74,7 @@ class DoraBash : MainAPI() {
             newTvSeriesLoadResponse(title, url, TvType.Anime, episodes) {
                 this.posterUrl = poster
                 this.backgroundPosterUrl = backgroundposter
-                this.score = scoreValue
+                this.score = Score.from10(rating)
                 this.year = year.toIntOrNull()
                 this.duration = duration.toIntOrNull()
                 this.contentRating = contentRating
@@ -85,7 +85,7 @@ class DoraBash : MainAPI() {
             newMovieLoadResponse(title, url, TvType.Movie, url.replace("series","watch")) {
                 this.posterUrl = poster
                 this.backgroundPosterUrl = backgroundposter
-                this.score = scoreValue
+                this.score = Score.from10(rating)
                 this.year = year.toIntOrNull()
                 this.duration = duration.toIntOrNull()
                 this.contentRating = contentRating
@@ -144,11 +144,11 @@ class DoraBash : MainAPI() {
                         name ?: link.source,
                         name ?: link.name,
                         link.url,
-                        link.type
                     ) {
                         this.quality = when {
                             else -> quality ?: link.quality
                         }
+                        this.type = link.type
                         this.referer = link.referer
                         this.headers = link.headers
                         this.extractorData = link.extractorData
@@ -159,3 +159,4 @@ class DoraBash : MainAPI() {
     }
 
 }
+

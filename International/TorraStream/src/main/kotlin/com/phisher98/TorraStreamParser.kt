@@ -1,4 +1,4 @@
-package com.admknight.torrastream
+package com.phisher98
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.annotations.SerializedName
@@ -460,5 +460,3 @@ data class MeteorHints(
     val filename: String?,
     val videoSize: Long?
 )
-
-

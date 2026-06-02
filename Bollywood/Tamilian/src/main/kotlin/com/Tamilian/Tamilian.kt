@@ -115,5 +115,3 @@ class Tamilian : TmdbProvider() {
     )
 
 }
-
-

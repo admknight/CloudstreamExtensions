@@ -12,5 +12,3 @@ class KawaiifuProviderPlugin: Plugin() {
         registerMainAPI(KawaiifuProvider())
     }
 }
-
-

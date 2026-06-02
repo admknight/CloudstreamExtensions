@@ -12,5 +12,3 @@ class AllMoviesForYouProviderPlugin: Plugin() {
         registerMainAPI(AllMoviesForYouProvider())
     }
 }
-
-

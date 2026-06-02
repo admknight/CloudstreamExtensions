@@ -40,5 +40,3 @@ class Movies4uProvider: BasePlugin() {
         )
     }
 }
-
-

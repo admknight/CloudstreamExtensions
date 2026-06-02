@@ -12,5 +12,3 @@ class DubbedAnimeProviderPlugin: Plugin() {
         registerMainAPI(DubbedAnimeProvider())
     }
 }
-
-

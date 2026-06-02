@@ -18,6 +18,3 @@ class Bollyflix: Plugin() {
         registerExtractorAPI(fastdlserver())
     }
 }
-
-
-

@@ -130,6 +130,3 @@ class Mp4MoviezProvider : MainAPI() {
 
     private fun getVideoQuality(url: String?) = url?.substringAfter("q=")?.substringBefore("&")?.toIntOrNull() ?: Qualities.Unknown.value
 }
-
-
-

@@ -255,7 +255,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
             val poster = Movieit.posterURL
             val backdrop = Movieit.backdropURL
             val plot = Movieit.storyline
-            val this.score = Score.from10(Movieit.rating)
+            val rating = Movieit.rating
 
             val recQuery = when {
                 Movieit.category?.contains("Dubbed", ignoreCase = true) == true    -> "Tamil Dubbed"
@@ -318,7 +318,7 @@ class ShowFlixProvider : MainAPI() { // all providers must be an instance of Mai
             val poster = TVit.posterURL
             val backdrop = TVit.backdropURL
             val plot = TVit.storyline
-            val this.score = Score.from10(TVit.rating)
+            val rating = TVit.rating
             val recQuery = when(TVit.seriesCategory != null) {
                 TVit.seriesCategory.toString().contains("Dubbed")    -> """Tamil Dubbed"""
                 TVit.seriesCategory.toString().contains("Tamil")     -> """Tamil"""
@@ -500,5 +500,3 @@ suspend fun loadSourceNameExtractor(
         }
     }
 }
-
-

@@ -11,5 +11,3 @@ class MundoDonghuaProviderPlugin: Plugin() {
         registerMainAPI(MundoDonghuaProvider())
     }
 }
-
-

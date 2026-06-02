@@ -9,5 +9,3 @@ class TopcartoonsProvider: BasePlugin() {
         registerMainAPI(Topcartoons())
     }
 }
-
-

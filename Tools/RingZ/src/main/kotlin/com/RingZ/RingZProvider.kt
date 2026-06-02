@@ -9,5 +9,3 @@ class RingZProvider: BasePlugin() {
         registerMainAPI(RingZ())
     }
 }
-
-

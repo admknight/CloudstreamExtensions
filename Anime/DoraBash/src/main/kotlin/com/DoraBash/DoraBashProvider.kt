@@ -15,5 +15,3 @@ class DoraBashProvider: BasePlugin() {
         registerExtractorAPI(FileMoon())
     }
 }
-
-

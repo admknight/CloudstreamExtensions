@@ -10,6 +10,3 @@ class MPlayerPlugin : BasePlugin() {
         registerMainAPI(MPlayer())
     }
 }
-
-
-

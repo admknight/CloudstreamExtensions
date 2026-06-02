@@ -12,5 +12,3 @@ class SuperembedProviderPlugin: Plugin() {
         registerMainAPI(SuperembedProvider())
     }
 }
-
-

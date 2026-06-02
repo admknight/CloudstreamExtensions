@@ -20,7 +20,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.admknight.showbox.BuildConfig
+import com.phisher98.BuildConfig
 import com.phisher98.SuperStreamPlugin
 
 class SettingsFragment(
@@ -182,6 +182,3 @@ class SettingsFragment(
         }
     }
 }
-
-
-

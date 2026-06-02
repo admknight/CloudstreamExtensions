@@ -34,7 +34,15 @@ class CuevanaProvider : MainAPI() {
                         val title = it.selectFirst("h2.Title")!!.text()
                         val poster = it.selectFirst("img.lazy")!!.attr("data-src").replaceFirst("//", "https://")
                         val url = it.selectFirst("a")!!.attr("href")
-                        newTvSeriesSearchResponse(title, url, this.name) { this.posterUrl = TvType.Anime ; this.quality = poster }
+                        newTvSeriesSearchResponse(
+                            title,
+                            url,
+                            this.name,
+                            TvType.Anime,
+                            poster,
+                            null,
+                            null,
+                        )
                     })
         )
         urls.map { (url, name) ->
@@ -71,9 +79,24 @@ class CuevanaProvider : MainAPI() {
             val isSerie = href.contains("/serie/")
 
             if (isSerie) {
-                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image }
+                newTvSeriesSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.TvSeries,
+                    image,
+                    null,
+                    null
+                )
             } else {
-                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = image }
+                newMovieSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Movie,
+                    image,
+                    null
+                )
             }
         }
     }
@@ -119,7 +142,14 @@ class CuevanaProvider : MainAPI() {
                 val recTitle = element.select("h2.Title").text() ?: return@mapNotNull null
                 val image = element.select("figure img")?.attr("data-src")
                 val recUrl = fixUrl(element.select("a").attr("href"))
-                newMovieSearchResponse(recTitle, recUrl, this.name) { this.posterUrl = TvType.Movie ; this.quality = image ; this.year = null }
+                newMovieSearchResponse(
+                    recTitle,
+                    recUrl,
+                    this.name,
+                    TvType.Movie,
+                    image,
+                    year = null
+                )
             }
         val trailer = soup.selectFirst("div.TPlayer.embed_div div[id=OptY] iframe")?.attr("data-src") ?: ""
 
@@ -171,5 +201,3 @@ class CuevanaProvider : MainAPI() {
         return true
     }
 }
-
-

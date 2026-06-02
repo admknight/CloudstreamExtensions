@@ -42,5 +42,3 @@ class CinefreakPlugin: BasePlugin() {
         )
     }
 }
-
-

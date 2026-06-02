@@ -1590,7 +1590,7 @@ suspend fun searchSuperstream(imdbId: String): Int? {
 
         if (result != null) return result
         Log.d("Showbox", "searchSuperstream attempt ${attempt + 1} failed")
-        delay(1000)
+        delay(100)
     }
     return null
 }
@@ -1661,7 +1661,3 @@ fun parseQualityDivs(html: String): List<VideoQuality> {
             VideoQuality(url = url.replace("\\/", "/"), quality = quality)
         }.toList()
 }
-
-
-
-

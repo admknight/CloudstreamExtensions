@@ -56,5 +56,3 @@ class Gdshine : ExtractorApi() {
         val copyUrl: String
     )
 }
-
-

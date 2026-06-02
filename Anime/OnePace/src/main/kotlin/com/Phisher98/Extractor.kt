@@ -302,5 +302,3 @@ class MyAnimeworld : ExtractorApi() {
         loadExtractor(iframe,"",subtitleCallback,callback)
     }
 }
-
-

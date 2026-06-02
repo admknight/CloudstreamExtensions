@@ -40,6 +40,3 @@ class UHDmoviesProviderPlugin: BasePlugin() {
         )
     }
 }
-
-
-

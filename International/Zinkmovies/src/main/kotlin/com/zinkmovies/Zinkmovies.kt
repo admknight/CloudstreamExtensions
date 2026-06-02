@@ -272,7 +272,7 @@ class Zinkmovies : MainAPI() {
                                         overview = epDesc,
                                         thumbnail = epThumb,
                                         released = epAir,
-                                        this.score = Score.from10(epRating,)
+                                        rating = epRating,
                                     )
                                 )
                             }
@@ -292,7 +292,7 @@ class Zinkmovies : MainAPI() {
                     background = metaBackground,
                     genres = metaGenres.ifEmpty { null },
                     videos = videos.ifEmpty { null },
-                    this.score = Score.from10(Score.from10(metaRating),)
+                    rating = Score.from10(metaRating),
                     logo = logoPath,
                     imdbId = imdbId
                 )
@@ -533,5 +533,3 @@ class Zinkmovies : MainAPI() {
         }
     }
 }
-
-

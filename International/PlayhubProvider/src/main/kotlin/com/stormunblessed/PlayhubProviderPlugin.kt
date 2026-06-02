@@ -11,5 +11,3 @@ class PlayhubProviderPlugin: Plugin() {
         registerMainAPI(PlayhubProvider())
     }
 }
-
-

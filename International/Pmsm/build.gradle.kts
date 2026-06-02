@@ -1,17 +1,15 @@
 version = 2
 
 cloudstream {
+    description = "PMSM (Pencuri Movie Sub Malay)"
     language = "id"
     authors = listOf("Adam Knight")
-    description = "PMSM (Pencuri Movie Sub Malay)"
     status = 1
-    tvTypes = listOf(         "Movie",         "TvSeries",     )
+    tvTypes = listOf(
+        "Movie",
+        "TvSeries",
+    )
+
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Pmsm/icon.png"
     isCrossPlatform = false
-}
-
-android {
-    buildFeatures {
-        buildConfig = true
-    }
 }

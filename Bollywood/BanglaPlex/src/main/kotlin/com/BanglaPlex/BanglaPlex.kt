@@ -122,5 +122,3 @@ class Banglaplex : MainAPI() {
         return true
     }
 }
-
-

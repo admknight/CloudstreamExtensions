@@ -11,5 +11,3 @@ class PeliculasFlixProviderPlugin: Plugin() {
         registerMainAPI(PeliculasFlixProvider())
     }
 }
-
-

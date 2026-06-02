@@ -12,5 +12,3 @@ class SoaptwoDayProviderPlugin: Plugin() {
         registerMainAPI(SoaptwoDayProvider())
     }
 }
-
-

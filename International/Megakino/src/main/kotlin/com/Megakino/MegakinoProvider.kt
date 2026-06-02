@@ -12,5 +12,3 @@ class MegakinoProvider: BasePlugin() {
         registerExtractorAPI(Gxplayer())
     }
 }
-
-

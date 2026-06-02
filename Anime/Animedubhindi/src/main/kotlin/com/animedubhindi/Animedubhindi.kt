@@ -68,11 +68,11 @@ class Animedubhindi : MainAPI() {
         val audio = infoMap["Audio Tracks"]?.split("|")?.map { it.trim() } ?: emptyList()
         val rawtitle = doc.select("meta[property=og:title]").attr("content")
         val title = rawtitle.substringBeforeLast("(").trim()
-        val description = (doc.selectFirst("div.entry-content p")?.ownText()?.trim() ?: "") + "\n$audio"
+        val description = doc.selectFirst("div.entry-content p")?.ownText()?.trim() + "\n$audio"
         val backgroundposter = doc.select("div.entry-content img").attr("src")
-        val scoreValue = Score.from10(infoMap["MAL Rating"]?.substringBefore("/") ?: infoMap["IMDb Rating"]?.substringBefore("/"))
+        val rating = infoMap["MAL Rating"]?.substringBefore("/") ?: infoMap["IMDb Rating"]?.substringBefore("/")
         val genres = infoMap["Genres"]?.split("|")?.map { it.trim() } ?: emptyList()
-        val contentRatingValue = infoMap["Official Dub By"]
+        val contentRating = infoMap["Official Dub By"]
         val tvtag = if (rawtitle.contains("Movie",ignoreCase = true)) TvType.Movie else TvType.TvSeries
 
         return if (tvtag == TvType.TvSeries) {
@@ -144,16 +144,16 @@ class Animedubhindi : MainAPI() {
             newTvSeriesLoadResponse(title, url, TvType.Anime, episodes) {
                 this.posterUrl = backgroundposter
                 this.tags = genres
-                this.score = scoreValue
-                this.contentRating = contentRatingValue
+                this.score = Score.from10(rating)
+                this.contentRating = contentRating
                 this.plot = description
             }
 
         } else {
-            val epDoc = app.get(iframe).document
+            val doc = app.get(iframe).document
             val hrefs = (
                     // OLD STRUCTURE
-                    epDoc.select("div.entry-content h4").flatMap { h4 ->
+                    doc.select("div.entry-content h4").flatMap { h4 ->
                         val quality = h4.ownText().substringBefore("[Size").trim()
 
                         h4.select("a").mapNotNull { a ->
@@ -165,7 +165,7 @@ class Animedubhindi : MainAPI() {
                                 "url" to url
                             )
                         }
-                    } + epDoc.select("div.pro-ep-card .pro-quality-wrapper").flatMap { sec ->
+                    } + doc.select("div.pro-ep-card .pro-quality-wrapper").flatMap { sec ->
                                 val quality = sec.selectFirst(".pro-ep-quality")
                                     ?.text()
                                     ?.removeSurrounding("[", "]")
@@ -186,8 +186,8 @@ class Animedubhindi : MainAPI() {
             newMovieLoadResponse(title, url, TvType.Movie, hrefs) {
                 this.posterUrl = backgroundposter
                 this.tags = genres
-                this.score = scoreValue
-                this.contentRating = contentRatingValue
+                this.score = Score.from10(rating)
+                this.contentRating = contentRating
                 this.plot = description
             }
         }
@@ -199,11 +199,14 @@ class Animedubhindi : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
+        Log.d("Phisher",data.toJson())
         val links = tryParseJson<List<Map<String, String>>>(data) ?: return false
         links.forEach { item ->
             val url = item["url"] ?: return@forEach
-            loadExtractor(url, url, subtitleCallback, callback)
+            loadExtractor(url, url, subtitleCallback, callback
+            )
         }
         return true
     }
 }
+

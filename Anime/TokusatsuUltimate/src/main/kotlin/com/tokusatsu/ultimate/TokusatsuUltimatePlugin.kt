@@ -12,5 +12,3 @@ class TokusatsuUltimatePlugin: Plugin() {
         registerExtractorAPI(TokusatsuUltimate.P2pplay())
     }
 }
-
-

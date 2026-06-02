@@ -24,5 +24,3 @@ class AnimenosubProvider: BasePlugin() {
         registerExtractorAPI(Donghuaplanet())
     }
 }
-
-

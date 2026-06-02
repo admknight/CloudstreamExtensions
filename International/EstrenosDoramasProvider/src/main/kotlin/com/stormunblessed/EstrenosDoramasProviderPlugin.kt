@@ -12,5 +12,3 @@ class EstrenosDoramasProviderPlugin: Plugin() {
         registerMainAPI(EstrenosDoramasProvider())
     }
 }
-
-

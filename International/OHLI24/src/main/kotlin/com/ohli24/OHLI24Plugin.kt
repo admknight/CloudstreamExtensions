@@ -12,5 +12,3 @@ class OHLI24Plugin: BasePlugin() {
         registerExtractorAPI(MichealCDN())
     }
 }
-
-

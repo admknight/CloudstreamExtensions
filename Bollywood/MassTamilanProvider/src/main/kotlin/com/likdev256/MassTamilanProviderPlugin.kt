@@ -10,6 +10,3 @@ class MovieHUBProviderPlugin: BasePlugin() {
         registerMainAPI(MassTamilanProvider())
     }
 }
-
-
-

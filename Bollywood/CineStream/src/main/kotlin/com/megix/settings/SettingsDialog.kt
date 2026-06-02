@@ -1034,6 +1034,3 @@ internal object SettingsDialog {
         override fun afterTextChanged(s: android.text.Editable?) {}
     }
 }
-
-
-

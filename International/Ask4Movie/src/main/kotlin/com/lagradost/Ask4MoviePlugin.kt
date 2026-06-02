@@ -12,5 +12,3 @@ class Ask4MoviePlugin: Plugin() {
         registerMainAPI(Ask4MovieProvider())
     }
 }
-
-

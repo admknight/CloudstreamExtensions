@@ -330,5 +330,3 @@ data class UserData(
     @param:JsonProperty("Played")
     val played: Boolean? = null
 )
-
-

@@ -12,5 +12,3 @@ class TrailersTwoProviderPlugin: Plugin() {
         registerMainAPI(TrailersTwoProvider())
     }
 }
-
-

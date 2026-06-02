@@ -32,7 +32,15 @@ class SeriesflixProvider : MainAPI() {
                 val link = it.selectFirst("a")!!.attr("href")
                 val img = it.selectFirst("img")!!.attr("data-src").replace("//tmdbcdn2.online","https://tmdbcdn2.online").replace(".webp",".jpg")
                 println("IMG $img")
-                newTvSeriesSearchResponse(title, link, this.name) { this.posterUrl = TvType.Movie ; this.quality = img }
+                newTvSeriesSearchResponse(
+                    title,
+                    link,
+                    this.name,
+                    TvType.Movie,
+                    img,
+                    null,
+                    null,
+                )
             }
 
             items.add(HomePageList(name, home))
@@ -50,9 +58,24 @@ class SeriesflixProvider : MainAPI() {
             val name = it.selectFirst("h2.title")!!.text()
             val isMovie = href.contains("/movies/")
             if (isMovie) {
-                newMovieSearchResponse(name, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
+                newMovieSearchResponse(
+                    name,
+                    href,
+                    this.name,
+                    TvType.Movie,
+                    poster,
+                    null
+                )
             } else {
-                newTvSeriesSearchResponse(name, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = poster }
+                newTvSeriesSearchResponse(
+                    name,
+                    href,
+                    this.name,
+                    TvType.TvSeries,
+                    poster,
+                    null,
+                    null
+                )
             }
         }.toList()
     }
@@ -66,7 +89,8 @@ class SeriesflixProvider : MainAPI() {
         val title = document.selectFirst("h1.Title")!!.text()
         val descRegex = Regex("(Recuerda.*Seriesflix.)")
         val descipt = document.selectFirst("div.Description > p")!!.text().replace(descRegex, "")
-        val score = Score.from10(document.selectFirst("div.Vote > div.post-ratings > span")?.text()?)
+        val rating =
+            document.selectFirst("div.Vote > div.post-ratings > span")?.text()?
         val year = document.selectFirst("span.Date")?.text()
         // ?: does not work
         val duration = try {
@@ -204,6 +228,3 @@ class SeriesflixProvider : MainAPI() {
         return true
     }
 }
-
-
-

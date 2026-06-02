@@ -55,5 +55,3 @@ class Tellygossips(private val source:String) : ExtractorApi() {
     )
 
 }
-
-

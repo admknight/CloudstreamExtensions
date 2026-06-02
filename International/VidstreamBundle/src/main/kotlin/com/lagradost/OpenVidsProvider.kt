@@ -130,5 +130,3 @@ class OpenVidsProvider:TmdbProvider() {
     }
 
 }
-
-

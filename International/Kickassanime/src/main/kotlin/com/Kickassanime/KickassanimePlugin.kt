@@ -10,5 +10,3 @@ class KickassanimePlugin: BasePlugin() {
         registerMainAPI(Kickassanime())
     }
 }
-
-

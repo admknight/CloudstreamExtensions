@@ -2,6 +2,7 @@ package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.mvvm.suspendSafeApiCall
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -33,24 +34,32 @@ class AnimekisaProvider : MainAPI() {
             Pair("$mainUrl/ajax/list/views?type=month", "Trending by month"),
         )
 
-        val items = urls.mapNotNull { (url, listName) ->
-            runCatching {
+        val items = urls.mapNotNull  {
+            suspendSafeApiCall {
                 val home = Jsoup.parse(
                     parseJson<Response>(
-                        app.get(url).text
+                        app.get(
+                            it.first
+                        ).text
                     ).html
-                ).select("div.flw-item").mapNotNull {
-                    val title = it.selectFirst("h3.title a")?.text() ?: return@mapNotNull null
-                    val link = it.selectFirst("a")?.attr("href") ?: return@mapNotNull null
+                ).select("div.flw-item").mapNotNull secondMap@ {
+                    val title = it.selectFirst("h3.title a")?.text() ?: return@secondMap null
+                    val link = it.selectFirst("a")?.attr("href")  ?: return@secondMap null
                     val poster = it.selectFirst("img.lazyload")?.attr("data-src")
-                    val isDub = title.contains("(DUB)", true)
-                    newAnimeSearchResponse(title, link, TvType.Anime) {
-                        this.posterUrl = poster
-                        addDubStatus(isDub, !isDub)
-                    }
+                    newAnimeSearchResponse(
+                        title,
+                        link,
+                        this.name,
+                        TvType.Anime,
+                        poster,
+                        null,
+                        if (title.contains("(DUB)") || title.contains("(Dub)")) EnumSet.of(
+                            DubStatus.Dubbed
+                        ) else EnumSet.of(DubStatus.Subbed),
+                    )
                 }
-                HomePageList(listName, home)
-            }.getOrNull()
+                HomePageList(name, home)
+            }
         }
 
         if (items.isEmpty()) throw ErrorLoadingException()
@@ -67,19 +76,25 @@ class AnimekisaProvider : MainAPI() {
                         ""
                     ) ?: return@mapNotNull null
                 val poster = it.selectFirst(".film-poster img")?.attr("data-src")
-                val isDub = title.contains("(DUB)", true)
-                newAnimeSearchResponse(title, url, TvType.Anime) {
-                    this.posterUrl = poster
-                    addDubStatus(isDub, !isDub)
-                }
-            }
+                newAnimeSearchResponse(
+                    title,
+                    url,
+                    this.name,
+                    TvType.Anime,
+                    poster,
+                    null,
+                    if (title.contains("(DUB)") || title.contains("(Dub)")) EnumSet.of(
+                        DubStatus.Dubbed
+                    ) else EnumSet.of(DubStatus.Subbed),
+                )
+            }.toList()
     }
 
     override suspend fun load(url: String): LoadResponse {
-        val doc = app.get(url, timeout = 120L).document
+        val doc = app.get(url, timeout = 120).document
         val poster = doc.selectFirst(".mb-2 img")?.attr("src")
             ?: doc.selectFirst("head meta[property=og:image]")?.attr("content")
-        val title = doc.selectFirst("h1.heading-name a")?.text() ?: ""
+        val title = doc.selectFirst("h1.heading-name a")!!.text()
         val description = doc.selectFirst("div.description p")?.text()?.trim()
         val genres = doc.select("div.row-line a").map { it.text() }
         val test = if (doc.selectFirst("div.dp-i-c-right").toString()

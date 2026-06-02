@@ -9,5 +9,3 @@ class PencurimovieProvider: BasePlugin() {
         registerMainAPI(Pencurimovie())
     }
 }
-
-

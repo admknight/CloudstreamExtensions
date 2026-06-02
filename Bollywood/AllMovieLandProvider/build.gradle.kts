@@ -1,17 +1,32 @@
+// use an integer for version numbers
 version = 18
 
+
 cloudstream {
+    // All of these properties are optional, you can safely remove them
+
+    description = "Indian MultiLanguage Provider (Mostly Hindi)"
     language = "hi"
     authors = listOf("Adam Knight")
-    description = "Indian MultiLanguage Provider (Mostly Hindi)"
-    status = 1
-    tvTypes = listOf(         "Movie",         "TvSeries",         "Cartoon"     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/AllMovieLandProvider/icon.png"
-    isCrossPlatform = true
-}
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+    /**
+    * Status int as the following:
+    * 0: Down
+    * 1: Ok
+    * 2: Slow
+    * 3: Beta only
+    * */
+    status = 1 // will be 3 if unspecified
+
+    // List of video source types. Users are able to filter for extensions in a given category.
+    // You can find a list of available types here:
+    // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
+    tvTypes = listOf(
+        "Movie",
+        "TvSeries",
+        "Cartoon"
+    )
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/AllMovieLandProvider/icon.png"
+
+    isCrossPlatform = true
 }

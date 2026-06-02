@@ -309,5 +309,3 @@ fun signHShare(rawId: String, domain: String): String {
     val s = hmacSha256(SECRET, "$encoded|$t")
     return "$domain/r.php?d=${URLEncoder.encode(encoded, "UTF-8")}&t=$t&s=$s"
 }
-
-

@@ -11,5 +11,3 @@ class LatanimeProvider: Plugin() {
         registerMainAPI(Latanime())
     }
 }
-
-

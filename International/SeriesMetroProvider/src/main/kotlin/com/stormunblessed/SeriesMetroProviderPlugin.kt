@@ -11,5 +11,3 @@ class SeriesMetroProviderPlugin: Plugin() {
         registerMainAPI(SeriesMetroProvider())
     }
 }
-
-

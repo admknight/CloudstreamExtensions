@@ -11,5 +11,3 @@ class Mp4MoviezPlugin : Plugin() {
         registerMainAPI(Mp4MoviezProvider())
     }
 }
-
-

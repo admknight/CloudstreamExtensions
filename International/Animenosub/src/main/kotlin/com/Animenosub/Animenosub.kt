@@ -123,6 +123,3 @@ class Animenosub : MainAPI() {
         return true
     }
 }
-
-
-

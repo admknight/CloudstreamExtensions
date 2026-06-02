@@ -123,6 +123,3 @@ class Megakino : MainAPI() {
         return true
     }
 }
-
-
-

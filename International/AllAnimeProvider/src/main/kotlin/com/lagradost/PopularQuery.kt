@@ -66,6 +66,3 @@ data class QueryPopular(
 data class Data(
     @JsonProperty("queryPopular") val queryPopular: QueryPopular? = QueryPopular()
 )
-
-
-

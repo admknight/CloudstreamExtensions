@@ -71,6 +71,3 @@ open class CineStream: Plugin() {
         }
     }
 }
-
-
-

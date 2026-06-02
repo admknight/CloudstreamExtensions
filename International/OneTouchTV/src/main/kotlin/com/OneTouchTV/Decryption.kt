@@ -43,5 +43,3 @@ fun decryptString(input: String): String {
     val text = String(plaintextBytes, Charsets.UTF_8)
     return JSONObject(text).getString("result")
 }
-
-

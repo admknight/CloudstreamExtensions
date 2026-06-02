@@ -12,6 +12,3 @@ class AllWishPlugin : BasePlugin() {
         registerExtractorAPI(Vidwish())
     }
 }
-
-
-

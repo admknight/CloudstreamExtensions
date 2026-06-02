@@ -34,5 +34,3 @@ public object CaptchaSolver {
         val session_hash: String = "aaaaaaaaaaa"
     )
 }
-
-

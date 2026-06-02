@@ -18,7 +18,6 @@ import org.json.JSONObject
 import java.util.UUID
 import okhttp3.Request
 
-
 val JSONParser = object : ResponseParser {
     val mapper: ObjectMapper = jacksonObjectMapper().configure(
         DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false
@@ -225,6 +224,3 @@ data class NewTvPlayerResponse(
     val video_link: String? = null,
     val referer: String? = null
 )
-
-
-

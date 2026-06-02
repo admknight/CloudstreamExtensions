@@ -7,7 +7,6 @@ import com.lagradost.cloudstream3.ErrorLoadingException
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.ExtractorApi
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 
 class Vidstreamz : WcoStream() {
@@ -127,20 +126,8 @@ open class WcoStream : ExtractorApi() {
 
         if (!response.text.startsWith("{")) throw ErrorLoadingException("Seems like 9Anime kiddies changed stuff again, Go touch some grass for bout an hour Or use a different Server")
         return response.parsed<Response>().data.media.sources.map {
-            newExtractorLink(
-                source = name,
-                name = it.file,
-                url = it.file,
-                type = com.lagradost.cloudstream3.utils.INFER_TYPE
-            ) {
-                this.quality = Qualities.Unknown.value
-                this.referer = host
-            }
+            newExtractorLink(name, it.file,it.file,host,Qualities.Unknown.value,it.file.contains(".m3u8"))
         }
 
     }
 }
-
-
-
-

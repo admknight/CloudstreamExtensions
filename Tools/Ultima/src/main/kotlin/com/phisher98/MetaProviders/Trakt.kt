@@ -68,6 +68,3 @@ class Trakt(val plugin: UltimaPlugin) : TraktProvider() {
         return true
     }
 }
-
-
-

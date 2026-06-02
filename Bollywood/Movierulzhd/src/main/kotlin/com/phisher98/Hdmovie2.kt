@@ -142,6 +142,3 @@ open class Hdmovie2 : Movierulzhd() {
     )
 
 }
-
-
-

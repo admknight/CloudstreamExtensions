@@ -12,5 +12,3 @@ class TokuZillaPlugin: Plugin() {
         registerExtractorAPI(TokuZilla.P2pplay())
     }
 }
-
-

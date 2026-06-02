@@ -19,6 +19,3 @@ class ShowFlixProviderPlugin: BasePlugin() {
         registerExtractorAPI(Showflixarchives())
     }
 }
-
-
-

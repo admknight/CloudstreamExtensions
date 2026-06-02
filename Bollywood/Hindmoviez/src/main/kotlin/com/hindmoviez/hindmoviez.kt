@@ -394,5 +394,3 @@ class Hindmoviez : MainAPI() {
         return true
     }
 }
-
-

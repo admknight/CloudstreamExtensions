@@ -370,6 +370,3 @@ object ProviderRegistry {
     val namesMap get() = builtInProviders.associate { it.key to it.displayName }
     val torrentKeys get() = builtInProviders.filter { it.isTorrent }.map { it.key }.toSet()
 }
-
-
-

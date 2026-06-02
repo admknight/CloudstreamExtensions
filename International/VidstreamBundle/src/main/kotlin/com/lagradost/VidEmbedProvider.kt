@@ -28,6 +28,3 @@ class VidEmbedProvider : VidstreamProviderTemplate() {
     // Needed for search functionality.
     override val supportedTypes = setOf(TvType.TvSeries, TvType.Movie)
 }
-
-
-

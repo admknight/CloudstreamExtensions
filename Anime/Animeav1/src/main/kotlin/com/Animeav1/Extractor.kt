@@ -31,5 +31,3 @@ open class Zilla : ExtractorApi() {
 class Animeav1upn : VidStack() {
     override var mainUrl = "https://animeav1.uns.bio"
 }
-
-

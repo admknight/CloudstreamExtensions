@@ -13,6 +13,3 @@ class FivemovierulzPlugin: BasePlugin() {
         registerExtractorAPI(mivalyo())
     }
 }
-
-
-

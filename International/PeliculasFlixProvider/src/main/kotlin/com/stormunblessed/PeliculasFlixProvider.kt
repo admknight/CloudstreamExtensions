@@ -5,8 +5,6 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.ExtractorLinkType
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
 import okhttp3.MediaType.Companion.toMediaType
@@ -189,13 +187,13 @@ class PeliculasFlixProvider:MainAPI() {
                 if (check) {
                     callback(
                         newExtractorLink(
-                            source = this.name,
-                            name = this.name,
-                            url = file,
-                            type = if (file.contains(".m3u8")) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
-                        ) {
-                            this.quality = Qualities.Unknown.value
-                        }
+                            this.name,
+                            this.name,
+                            file,
+                            "",
+                            Qualities.Unknown.value,
+                            file.contains(".m3u8")
+                        )
                     )
                 } else {
                     ///nothing

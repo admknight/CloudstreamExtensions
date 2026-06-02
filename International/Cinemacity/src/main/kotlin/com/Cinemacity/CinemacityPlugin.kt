@@ -10,5 +10,3 @@ class CinemacityPlugin: BasePlugin() {
         registerMainAPI(Cinemacity())
     }
 }
-
-

@@ -21,6 +21,3 @@ class PinoymoviepediaProvider: BasePlugin() {
         registerExtractorAPI(Luluvdostore())
     }
 }
-
-
-

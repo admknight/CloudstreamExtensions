@@ -47,6 +47,3 @@ class TopmoviesProvider : MoviesmodProvider() { // all providers must be an inst
         "/movies/hindi-movies/page/" to "Latest Hindi Movies",
     )
 }
-
-
-

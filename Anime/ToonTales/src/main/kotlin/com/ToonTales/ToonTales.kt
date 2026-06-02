@@ -94,7 +94,3 @@ class ToonTales : MainAPI() {
         return true
     }
 }
-
-
-
-

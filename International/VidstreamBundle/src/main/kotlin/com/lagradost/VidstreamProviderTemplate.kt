@@ -4,7 +4,6 @@ import com.lagradost.cloudstream3.*
 //import com.lagradost.cloudstream3.animeproviders.GogoanimeProvider.Companion.extractVidstream
 //import com.lagradost.Vidstream
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import org.jsoup.Jsoup
 import java.net.URI
@@ -336,7 +335,3 @@ open class VidstreamProviderTemplate : MainAPI() {
         return true
     }
 }
-
-
-
-

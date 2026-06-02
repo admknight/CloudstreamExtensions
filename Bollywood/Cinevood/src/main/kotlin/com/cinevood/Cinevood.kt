@@ -231,5 +231,3 @@ class Cinevood : MainAPI() {
 
     data class ResponseData(val meta: Meta?)
 }
-
-

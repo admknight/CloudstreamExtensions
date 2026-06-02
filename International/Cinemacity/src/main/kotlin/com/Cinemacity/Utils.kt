@@ -92,5 +92,3 @@ data class ResponseData(
         )
     }
 }
-
-

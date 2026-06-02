@@ -162,5 +162,3 @@ fun getSearchQuality(check: String?): SearchQuality? {
     for ((regex, quality) in patterns) if (regex.containsMatchIn(u)) return quality
     return null
 }
-
-

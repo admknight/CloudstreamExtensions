@@ -72,6 +72,3 @@ class Turbovidhls : Filesim() {
     override val name = "Turbovidhls"
     override var mainUrl = "https://turbovidhls.com"
 }
-
-
-

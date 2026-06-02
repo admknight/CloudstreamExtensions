@@ -5,7 +5,3 @@ data class Source(
     val label: String,
     val type: String
 )
-
-
-
-

@@ -410,5 +410,3 @@ data class AniSearch(
 )
 
 data class AniIds(var id: Int? = null, var idMal: Int? = null)
-
-

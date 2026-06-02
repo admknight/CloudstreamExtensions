@@ -14,6 +14,3 @@ class Moviesmod: Plugin() {
         registerExtractorAPI(Driveleech())
     }
 }
-
-
-

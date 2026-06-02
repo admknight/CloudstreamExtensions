@@ -20,6 +20,3 @@ class AnimesaltProvider : BasePlugin() {
         registerExtractorAPI(Short())
     }
 }
-
-
-

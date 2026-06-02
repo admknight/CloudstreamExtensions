@@ -1,17 +1,30 @@
+// use an integer for version numbers
 version = 2
 
 cloudstream {
-    language = "te"
-    authors = listOf("Adam Knight")
-    description = "MovieBlast App"
-    status = 1
-    tvTypes = listOf(         "Movie",         "TvSeries"     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/MovieBlast/icon.png"
-    isCrossPlatform = false
-}
+    // All of these properties are optional, you can safely remove them
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+    description = "MovieBlast App"
+    language    = "te"
+    authors = listOf("Adam Knight")
+
+    /**
+    * Status int as the following:
+    * 0: Down
+    * 1: Ok
+    * 2: Slow
+    * 3: Beta only
+    * */
+    status = 1 // will be 3 if unspecified
+
+    // List of video source types. Users are able to filter for extensions in a given category.
+    // You can find a list of available types here:
+    // https://recloudstream.github.io/cloudstream/html/app/com.lagradost.cloudstream3/-tv-type/index.html
+    tvTypes = listOf(
+        "Movie",
+        "TvSeries"
+    )
+    iconUrl="https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/movieblast.png"
+
+    isCrossPlatform = false
 }

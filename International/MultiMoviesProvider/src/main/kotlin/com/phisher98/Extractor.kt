@@ -377,5 +377,3 @@ open class Gofile : ExtractorApi() {
         @param:JsonProperty("size") val size: Long? = 0L
     )
 }
-
-

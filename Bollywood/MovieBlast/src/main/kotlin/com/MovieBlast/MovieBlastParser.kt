@@ -142,6 +142,3 @@ fun generateSignedUrl(url: String): String {
         throw RuntimeException("Error generating HMAC", e)
     }
 }
-
-
-

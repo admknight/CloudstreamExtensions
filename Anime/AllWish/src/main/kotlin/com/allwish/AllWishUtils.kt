@@ -7,8 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.lagradost.cloudstream3.ShowStatus
 import java.net.URLEncoder
-import java.util.Base64
-
 
 @RequiresApi(Build.VERSION_CODES.O)
 fun generateEpisodeVrf(episodeId: String): String {
@@ -136,5 +134,3 @@ fun getStatus(t: String?): ShowStatus {
         else -> ShowStatus.Completed
     }
 }
-
-

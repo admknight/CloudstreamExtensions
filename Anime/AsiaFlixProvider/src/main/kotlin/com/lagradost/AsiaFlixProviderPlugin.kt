@@ -12,5 +12,3 @@ class AsiaFlixProviderPlugin: Plugin() {
         registerMainAPI(AsiaFlixProvider())
     }
 }
-
-

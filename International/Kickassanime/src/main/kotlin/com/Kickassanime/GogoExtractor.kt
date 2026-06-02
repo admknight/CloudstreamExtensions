@@ -166,6 +166,3 @@ object GogoExtractor {
         @param:JsonProperty("default") val default: String? = null
     )
 }
-
-
-

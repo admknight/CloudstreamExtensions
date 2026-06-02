@@ -2,7 +2,6 @@ package com.lagradost
 
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.extractorApis
 import org.jsoup.Jsoup
@@ -67,7 +66,7 @@ class AnimeFlickProvider : MainAPI() {
         val episodes = doc.select("#collapseOne .block-space > .row > div:nth-child(2)").map {
             val name = it.selectFirst("a")?.text()
             val link = mainUrl + it.selectFirst("a")?.attr("href")
-            newEpisode(link) { this.name = name }
+            newEpisode(link, name)
         }.reversed()
 
         return newAnimeLoadResponse(title, url, getType(title)) {
@@ -118,7 +117,3 @@ class AnimeFlickProvider : MainAPI() {
         return true
     }
 }
-
-
-
-

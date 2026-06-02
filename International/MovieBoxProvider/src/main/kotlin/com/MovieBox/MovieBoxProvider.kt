@@ -1099,6 +1099,3 @@ suspend fun fetchTmdbLogoUrl(
     // No language match & no voted logos
     return null
 }
-
-
-

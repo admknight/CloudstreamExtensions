@@ -6,18 +6,17 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addAniListId
 import com.lagradost.cloudstream3.LoadResponse.Companion.addMalId
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
+import com.lagradost.cloudstream3.mvvm.suspendSafeApiCall
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.JsUnpacker
 import com.lagradost.cloudstream3.utils.getQualityFromName
-import com.lagradost.cloudstream3.utils.INFER_TYPE
 import com.lagradost.nicehttp.NiceResponse
 import org.jsoup.Jsoup
 import kotlin.math.pow
-import java.util.Locale
 
 class AnimePaheProvider : MainAPI() {
+    // credit to https://github.com/justfoolingaround/animdl/tree/master/animdl/core/codebase/providers/animepahe
     companion object {
         const val MAIN_URL = "https://animepahe.com"
 
@@ -88,7 +87,7 @@ class AnimePaheProvider : MainAPI() {
                     newAnimeSearchResponse(
                         it.animeTitle,
                         "https://pahe.win/a/${it.animeId}?slug=${it.animeTitle}",
-                        TvType.Anime
+                        fix = false
                     ) {
                         this.posterUrl = it.snapshot
                         addDubStatus(DubStatus.Subbed, it.episode)
@@ -150,7 +149,7 @@ class AnimePaheProvider : MainAPI() {
             newAnimeSearchResponse(
                 it.title,
                 "https://pahe.win/a/${it.id}?slug=${it.title}",
-                TvType.Anime
+                fix = false
             ) {
                 this.posterUrl = it.poster
                 addDubStatus(DubStatus.Subbed, it.episodes)
@@ -235,7 +234,7 @@ class AnimePaheProvider : MainAPI() {
     }
 
     override suspend fun load(url: String): LoadResponse? {
-        return runCatching {
+        return suspendSafeApiCall {
             val regex = Regex("""a/(\d+)\?slug=(.+)""")
             val (animeId, animeTitle) = regex.find(url)!!.destructured
             val link = getAnimeByIdAndTitle(animeTitle, animeId.toInt())!!
@@ -300,7 +299,7 @@ class AnimePaheProvider : MainAPI() {
                 addAniListId(anilistId)
                 addTrailer(trailer)
             }
-        }.getOrNull()
+        }
     }
 
 
@@ -535,17 +534,16 @@ class AnimePaheProvider : MainAPI() {
 
         data.data.forEach {
             it.entries.toList().map { quality ->
-                getStreamUrlFromKwik(quality.value.kwik)?.let { l ->
+                getStreamUrlFromKwik(quality.value.kwik)?.let { link ->
                     callback(
                         newExtractorLink(
                             "KWIK",
                             "KWIK - ${quality.key} [${quality.value.audio ?: "jpn"}]",
-                            l,
-                            INFER_TYPE
-                        ) {
-                            this.referer = "https://kwik.cx/"
-                            this.quality = getQualityFromName(quality.key)
-                        }
+                            link,
+                            "https://kwik.cx/",
+                            getQualityFromName(quality.key),
+                            link.contains(".m3u8")
+                        )
                     )
                 }
             }

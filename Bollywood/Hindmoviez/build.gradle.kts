@@ -1,17 +1,26 @@
+// use an integer for version numbers
 version = 9
 
-cloudstream {
-    language = "hi"
-    authors = listOf("Adam Knight")
-    description = "Watch Movies & TvSeries (Multi-Lang)"
-    status = 1
-    tvTypes = listOf(         "Movie",         "TvSeries",     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Hindmoviez/icon.png"
-    isCrossPlatform = false
-}
 
-android {
-    buildFeatures {
-        buildConfig = true
-    }
+cloudstream {
+    description = "Watch Movies & TvSeries (Multi-Lang)"
+    authors = listOf("Adam Knight")
+
+    /**
+    * Status int as the following:
+    * 0: Down
+    * 1: Ok
+    * 2: Slow
+    * 3: Beta only
+    * */
+    status = 1 // will be 3 if unspecified
+
+    tvTypes = listOf(
+        "Movie",
+        "TvSeries",
+    )
+    language = "hi"
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Hindmoviez/icon.png"
+
+    isCrossPlatform = false
 }

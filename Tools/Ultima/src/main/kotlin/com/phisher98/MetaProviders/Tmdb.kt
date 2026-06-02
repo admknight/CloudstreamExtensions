@@ -179,6 +179,3 @@ fun getLanguage(language: String?): String? {
     val normalizedLang = language.substringBefore("-")
     return languageMap.entries.find { it.value.first == normalizedLang || it.value.second == normalizedLang }?.key
 }
-
-
-

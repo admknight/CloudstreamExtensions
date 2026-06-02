@@ -12,5 +12,3 @@ class MeloMovieProviderPlugin: Plugin() {
         registerMainAPI(MeloMovieProvider())
     }
 }
-
-

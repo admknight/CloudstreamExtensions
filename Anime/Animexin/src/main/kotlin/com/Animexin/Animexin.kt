@@ -102,6 +102,3 @@ class Animexin : MainAPI() {
         return true
     }
 }
-
-
-

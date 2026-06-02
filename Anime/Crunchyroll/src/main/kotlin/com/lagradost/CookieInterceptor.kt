@@ -2,6 +2,7 @@ package com.lagradost
 
 import com.lagradost.nicehttp.Requests
 import okhttp3.*
+import okhttp3.internal.parseCookie
 
 /**
  * An HTTP session manager.
@@ -19,10 +20,13 @@ class CustomSession(
         this.baseClient = client
             .newBuilder()
             .addInterceptor {
+                val time = System.currentTimeMillis()
                 val request = it.request()
-                request.headers("Cookie").forEach { header ->
-                    val cookie = Cookie.parse(request.url, header) ?: return@forEach
-                    cookies += cookie.name to cookie
+                request.headers.forEach { header ->
+                    if (header.first.equals("cookie", ignoreCase = true)) {
+                        val cookie = parseCookie(time, request.url, header.second) ?: return@forEach
+                        cookies += cookie.name to cookie
+                    }
                 }
                 it.proceed(request)
             }

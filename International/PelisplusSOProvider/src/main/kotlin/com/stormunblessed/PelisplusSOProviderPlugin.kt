@@ -12,5 +12,3 @@ class PelisplusSOProviderPlugin: Plugin() {
         registerMainAPI(PelisplusSOProvider())
     }
 }
-
-

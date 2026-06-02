@@ -195,6 +195,3 @@ open class AnimeDekhoProvider : MainAPI() {
     data class Media(val url: String, val poster: String? = null, val mediaType: Int? = null)
 
 }
-
-
-

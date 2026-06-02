@@ -191,6 +191,3 @@ open class MyAnimeList(val plugin: UltimaPlugin) : MainAPI() {
         }
     }
 }
-
-
-

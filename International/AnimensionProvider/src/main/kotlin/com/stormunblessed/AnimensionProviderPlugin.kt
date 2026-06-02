@@ -11,5 +11,3 @@ class AnimensionProviderPlugin: Plugin() {
         registerMainAPI(AnimensionProvider())
     }
 }
-
-

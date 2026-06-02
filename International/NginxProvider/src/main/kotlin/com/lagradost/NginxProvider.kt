@@ -10,7 +10,6 @@ import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
 import com.lagradost.cloudstream3.mvvm.logError
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -284,8 +283,15 @@ class NginxProvider : MainAPI() {
         }
 
         callback.invoke (
-            newExtractorLink(name, name, data, INFER_TYPE) { this.referer = "" ; this.quality = // referer not needed
-                Qualities.Unknown.value ; this.isM3u8 = false }
+            newExtractorLink(
+                name,
+                name,
+                data,
+                "",  // referer not needed
+                Qualities.Unknown.value,
+                false,
+                authHeader,
+            )
         )
         return true
     }
@@ -352,7 +358,11 @@ class NginxProvider : MainAPI() {
                                 val nfoPath = if (nfoFilename != null) {
                                     mediaRootUrl + nfoFilename // metadata must exist
                                 } else {
-                                    return@mapNotNull newMovieSearchResponse(linkToElement, mediaRootUrl, TvType.Movie) { this.posterUrl =  }
+                                    return@mapNotNull newMovieSearchResponse(
+                                        linkToElement,
+                                        mediaRootUrl,
+                                        TvType.Movie,
+                                    )
                                 }
 
                                 val nfoContent = app.get(nfoPath, authHeader).document  // get all the metadata
@@ -389,7 +399,11 @@ class NginxProvider : MainAPI() {
                                      ├── Eternals.2021.MULTi.WiTH.TRUEFRENCH.iMAX.1080p.DSNP.WEB-DL.DDP5.1.H264-FRATERNiTY.mkv  // the media root folder
                                      ├── Juste la fin du monde (2016) VOF 1080p mHD x264 AC3-SANTACRUZ.mkv
                                 */
-                                return@mapNotNull newMovieSearchResponse(linkToElement, mediaRootUrl, TvType.Movie) { this.posterUrl =  }
+                                return@mapNotNull newMovieSearchResponse(
+                                    linkToElement,
+                                    mediaRootUrl,
+                                    TvType.Movie,
+                                )
                             }
 
                         } catch (e: Exception) {  // can cause issues invisible errors
@@ -409,8 +423,4 @@ class NginxProvider : MainAPI() {
         return newHomePageResponse(returnList)
     }
 }
-
-
-
-
 

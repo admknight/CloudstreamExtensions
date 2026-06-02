@@ -5,7 +5,3 @@ data class SearchData(
     val searchResult: List<SearchResult>,
     val type: Int
 )
-
-
-
-

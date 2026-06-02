@@ -298,6 +298,3 @@ open class Jellyfin(sharedPref: SharedPreferences? = null) : MainAPI() {
         }
     }
 }
-
-
-

@@ -110,6 +110,3 @@ object NineAnimeApi {
 
     private fun decode(input: String): String = java.net.URLDecoder.decode(input, "utf-8")
 }
-
-
-

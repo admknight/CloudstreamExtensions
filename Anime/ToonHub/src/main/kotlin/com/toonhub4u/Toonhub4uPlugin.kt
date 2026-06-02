@@ -21,5 +21,3 @@ class Toonhub4uPlugin: BasePlugin() {
         registerExtractorAPI(Multimoviesshg())
     }
 }
-
-

@@ -47,6 +47,3 @@ class RogmoviesProvider : VegaMoviesProvider() { // all providers must be an ins
         "$mainUrl/category/web-series/mx-original/page/%d/" to "MX Original",
     )
 }
-
-
-

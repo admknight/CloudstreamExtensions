@@ -10,6 +10,3 @@ class AllMovieLandProviderPlugin: BasePlugin() {
         registerMainAPI(AllMovieLandProvider())
     }
 }
-
-
-

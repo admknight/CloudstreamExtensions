@@ -12,5 +12,3 @@ class TopdocumentaryfilmsPlugin: Plugin() {
         registerMainAPI(Topdocumentaryfilms())
     }
 }
-
-

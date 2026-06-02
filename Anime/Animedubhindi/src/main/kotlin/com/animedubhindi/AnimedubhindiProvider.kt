@@ -13,5 +13,3 @@ class AnimedubhindiProvider: BasePlugin() {
         registerExtractorAPI(FileMoon())
     }
 }
-
-

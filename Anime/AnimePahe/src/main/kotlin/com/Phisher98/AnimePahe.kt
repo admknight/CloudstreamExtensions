@@ -413,6 +413,3 @@ class AnimePahe : MainAPI() {
         return true
     }
 }
-
-
-

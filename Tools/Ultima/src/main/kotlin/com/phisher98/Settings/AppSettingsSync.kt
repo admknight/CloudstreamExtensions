@@ -23,7 +23,7 @@ import java.util.UUID
 class UltimaConfigureAppSettingsSync(private val plugin: UltimaPlugin) : BottomSheetDialogFragment() {
     private val sm = UltimaStorageManager
     private val res: Resources = plugin.resources ?: throw Exception("Unable to read resources")
-    private val packageName = com.admknight.ultima.BuildConfig.LIBRARY_PACKAGE_NAME
+    private val packageName = BuildConfig.LIBRARY_PACKAGE_NAME
 
     // #region - necessary functions
     @SuppressLint("DiscouragedApi")
@@ -128,6 +128,7 @@ class UltimaConfigureAppSettingsSync(private val plugin: UltimaPlugin) : BottomS
 
                         activity?.lifecycle?.coroutineScope?.launch {
                             showToast("Credentials saved. Performing initial sync...")
+                            UltimaSettingsSyncUtils.registerDevice()
                             plugin.mergeAndSyncAllCategories(context)
                             showToast("Initial sync complete!")
                             refreshDevicesList(settings, inflater, container)
@@ -470,6 +471,3 @@ class UltimaConfigureAppSettingsSync(private val plugin: UltimaPlugin) : BottomS
         super.onDetach()
     }
 }
-
-
-

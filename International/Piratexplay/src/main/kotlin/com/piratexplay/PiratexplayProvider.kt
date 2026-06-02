@@ -19,6 +19,3 @@ class PiratexplayProvider : BasePlugin() {
         registerExtractorAPI(Cloudy())
     }
 }
-
-
-

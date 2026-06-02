@@ -11,5 +11,3 @@ class AniwatchProviderPlugin: Plugin() {
         registerMainAPI(AniwatchProvider())
     }
 }
-
-

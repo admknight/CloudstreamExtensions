@@ -17,6 +17,3 @@ class DesicinemasPlugin: BasePlugin() {
 }
 
 
-
-
-

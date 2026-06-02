@@ -12,5 +12,3 @@ class GoojaraProvider: BasePlugin() {
         registerExtractorAPI(Streamplay())
     }
 }
-
-

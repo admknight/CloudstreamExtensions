@@ -48,5 +48,3 @@ class HDhub4uPlugin: BasePlugin() {
         )
     }
 }
-
-

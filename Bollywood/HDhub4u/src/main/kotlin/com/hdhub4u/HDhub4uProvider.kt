@@ -31,7 +31,6 @@ import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
 import kotlinx.coroutines.runBlocking
 import org.json.JSONObject
-import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.select.Elements
 import java.text.Normalizer
@@ -93,6 +92,16 @@ class HDhub4uProvider : MainAPI() {
         }
     }
 
+    private fun Document.toSearchResult(): SearchResponse {
+        return newMovieSearchResponse(
+            name = postTitle,
+            url = permalink,
+            type = TvType.Movie
+        ) {
+            posterUrl = postThumbnail
+        }
+    }
+
 
     override suspend fun search(query: String, page: Int): SearchResponseList {
         val response = app.get(
@@ -109,11 +118,7 @@ class HDhub4uProvider : MainAPI() {
             referer = mainUrl
         ).parsedSafe<Search>()
 
-        return response?.hits?.map { hit ->
-            newMovieSearchResponse(hit.document.postTitle, hit.document.permalink, TvType.Movie) {
-                this.posterUrl = hit.document.postThumbnail
-            }
-        }?.toNewSearchResponseList() ?: emptyList<SearchResponse>().toNewSearchResponseList()
+        return response?.hits!!.map { hit -> hit.document.toSearchResult() }.toNewSearchResponseList()
     }
 
 
@@ -252,10 +257,10 @@ class HDhub4uProvider : MainAPI() {
             detailsJson.optJSONObject("credits")?.optJSONArray("cast")?.let { castArr ->
                 for (i in 0 until castArr.length()) {
                     val c = castArr.optJSONObject(i) ?: continue
-                    val actorName = c.optString("name").takeIf { it.isNotBlank() } ?: c.optString("original_name").orEmpty()
+                    val name = c.optString("name").takeIf { it.isNotBlank() } ?: c.optString("original_name").orEmpty()
                     val profile = c.optString("profile_path").takeIf { it.isNotBlank() }?.let { TMDBBASE + it }
                     val character = c.optString("character").takeIf { it.isNotBlank() }
-                    val actor = Actor(actorName, profile)
+                    val actor = Actor(name, profile)
                     actorDataList += ActorData(actor = actor, roleString = character)
                 }
             }
@@ -283,7 +288,7 @@ class HDhub4uProvider : MainAPI() {
                                 val epDesc = ep.optString("overview")
                                 val epThumb = ep.optString("still_path").takeIf { it.isNotBlank() }?.let { TMDBBASE + it }
                                 val epAir = ep.optString("air_date")
-                                val epRating = ep.optString("vote_average").let { Score.from10(it) }
+                                val epRating = ep.optString("vote_average").let { Score.from10(it.toString()) }
 
                                 videos.add(
                                     VideoLocal(
@@ -293,7 +298,7 @@ class HDhub4uProvider : MainAPI() {
                                         overview = epDesc,
                                         thumbnail = epThumb,
                                         released = epAir,
-                                        rating = epRating
+                                        rating = epRating,
                                     )
                                 )
                             }
@@ -329,6 +334,7 @@ class HDhub4uProvider : MainAPI() {
                 genre = g
                 for (gn in g) if (!tags.contains(gn)) tags.add(gn)
             }
+            responseData.meta?.rating
         }
 
         if (tvtype == TvType.Movie) {
@@ -340,7 +346,7 @@ class HDhub4uProvider : MainAPI() {
 
             return newMovieLoadResponse(title, url, TvType.Movie, movieList) {
                 this.backgroundPosterUrl = background
-                this.logoUrl = responseData?.meta?.logo
+                try { this.logoUrl = responseData?.meta?.logo } catch(_:Throwable){}
                 this.posterUrl = poster
                 this.year = year.toIntOrNull()
                 this.plot = description ?: plot
@@ -365,9 +371,9 @@ class HDhub4uProvider : MainAPI() {
                 val allEpisodeLinks = mutableSetOf<String>()
 
                 if (isDirectLinkBlock) {
-                    baseLinks.forEach { u ->
+                    baseLinks.forEach { url ->
                         try {
-                            val resolvedUrl = getRedirectLinks(u.trim()) ?: u
+                            val resolvedUrl = getRedirectLinks(url.trim()) ?: url
                             val episodeDoc = app.get(resolvedUrl).document
 
                             episodeDoc.select("h5 a").forEach { linkElement ->
@@ -382,7 +388,7 @@ class HDhub4uProvider : MainAPI() {
                                 }
                             }
                         } catch (_: Exception) {
-                            Log.e(TAG, "Error resolving direct link for URL: $u")
+                            Log.e(TAG, "Error resolving direct link for URL: $url")
                         }
                     }
                 } else if (episodeNumberFromTitle != null) {
@@ -424,7 +430,7 @@ class HDhub4uProvider : MainAPI() {
 
             return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodesData) {
                 this.backgroundPosterUrl = background
-                this.logoUrl = responseData?.meta?.logo
+                try { this.logoUrl = responseData?.meta?.logo } catch(_:Throwable){}
                 this.posterUrl = poster
                 this.year = year.toIntOrNull()
                 this.plot = description ?: plot

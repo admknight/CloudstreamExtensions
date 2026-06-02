@@ -9,6 +9,3 @@ class PublicSportsIPTVProvider: BasePlugin() {
         registerMainAPI(PublicSportsIPTV())
     }
 }
-
-
-

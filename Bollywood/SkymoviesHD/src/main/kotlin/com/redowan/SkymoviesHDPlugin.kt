@@ -13,5 +13,3 @@ class SkymoviesHDPlugin: Plugin() {
         registerExtractorAPI(HubCloud())
     }
 }
-
-

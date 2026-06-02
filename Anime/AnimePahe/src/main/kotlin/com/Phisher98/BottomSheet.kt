@@ -117,6 +117,3 @@ class BottomFragment(private val plugin: AnimePaheProviderPlugin) : BottomSheetD
         }
     }
 }
-
-
-

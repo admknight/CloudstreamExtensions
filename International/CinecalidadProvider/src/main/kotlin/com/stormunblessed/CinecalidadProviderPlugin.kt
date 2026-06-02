@@ -12,5 +12,3 @@ class CinecalidadProviderPlugin: Plugin() {
         registerMainAPI(CinecalidadProvider())
     }
 }
-
-

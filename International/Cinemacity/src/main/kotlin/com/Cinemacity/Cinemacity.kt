@@ -657,6 +657,3 @@ class Cinemacity : MainAPI() {
         return base + qs
     }
 }
-
-
-

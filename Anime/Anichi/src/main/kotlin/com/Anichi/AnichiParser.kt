@@ -1,6 +1,5 @@
 package com.Anichi
 
-import com.admknight.anichi.BuildConfig
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -193,7 +192,7 @@ object AnichiParser {
 
     data class LinksQuery(@param:JsonProperty("data") val data: LinkData? = LinkData())
 
-    data class LinkData(@param:JsonProperty("episode") val episode: AnichiEpisode? = AnichiEpisode())
+    data class LinkData(@param:JsonProperty("episode") val episode: Episode? = newEpisode())
 
     data class SourceUrls(
         @param:JsonProperty("sourceUrl") val sourceUrl: String? = null,
@@ -210,7 +209,7 @@ object AnichiParser {
         @param:JsonProperty("downloadUrl") val downloadUrl: String? = null
     )
 
-    data class AnichiEpisode(
+    data class newEpisode(
             @param:JsonProperty("sourceUrls") val sourceUrls: ArrayList<SourceUrls> = arrayListOf(),
     )
 
@@ -264,5 +263,3 @@ data class AnichiDownloadLink(
     val priority: Long,
     val src: String?,
 )
-
-

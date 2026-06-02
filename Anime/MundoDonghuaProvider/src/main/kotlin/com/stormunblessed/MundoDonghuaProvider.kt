@@ -51,10 +51,17 @@ class MundoDonghuaProvider : MainAPI() {
             val home = app.get(url, timeout = 120).document.select(".col-xs-4").map {
                 val title = it.selectFirst(".fs-14")?.text() ?: ""
                 val poster = it.selectFirst(".fit-1 img")?.attr("src") ?: ""
-                newAnimeSearchResponse(title, fixUrl(it.selectFirst("a")?.attr("href") ?: ""), TvType.Anime) {
-                    this.posterUrl = fixUrl(poster)
-                    if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
-                }
+                newAnimeSearchResponse(
+                    title,
+                    fixUrl(it.selectFirst("a")?.attr("href") ?: ""),
+                    this.name,
+                    TvType.Anime,
+                    fixUrl(poster),
+                    null,
+                    if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(
+                        DubStatus.Dubbed
+                    ) else EnumSet.of(DubStatus.Subbed),
+                )
             }
 
             items.add(HomePageList(name, home))
@@ -69,10 +76,17 @@ class MundoDonghuaProvider : MainAPI() {
             val title = it.selectFirst(".fs-14")?.text() ?: ""
             val href = fixUrl(it.selectFirst("a")?.attr("href") ?: "")
             val image = it.selectFirst(".fit-1 img")?.attr("src")
-            newAnimeSearchResponse(title, href, TvType.Anime) {
-                this.posterUrl = fixUrl(image ?: "")
-                if (title.contains("Latino") || title.contains("Castellano")) addDubStatus(DubStatus.Dubbed) else addDubStatus(DubStatus.Subbed)
-            }
+            newAnimeSearchResponse(
+                title,
+                href,
+                this.name,
+                TvType.Anime,
+                fixUrl(image ?: ""),
+                null,
+                if (title.contains("Latino") || title.contains("Castellano")) EnumSet.of(
+                    DubStatus.Dubbed
+                ) else EnumSet.of(DubStatus.Subbed),
+            )
         }
     }
 
@@ -96,9 +110,10 @@ class MundoDonghuaProvider : MainAPI() {
             val link = it.attr("href")
             val epnum = epNumRegex.find(link)?.destructured?.component1()
             newEpisodes.add(
-                newEpisode(fixUrl(link)) {
-                    this.episode = epnum.toString().toIntOrNull()
-                }
+                newEpisode(
+                    fixUrl(link),
+                    episode = epnum.toString().toIntOrNull()
+                )
             )
         }
         secondDoc.select("div.sm-row.bg-white.pt-10.pr-20.pb-15.pl-20 div.row div.item.col-lg-2.col-md-2.col-xs-4").mapNotNull {
@@ -106,9 +121,10 @@ class MundoDonghuaProvider : MainAPI() {
             if (href?.contains(slug) == true) {
                 val epnum = epNumRegex.find(href)?.destructured?.component1()
                 newEpisodes.add(
-                    newEpisode(fixUrl(href)) {
-                        this.episode = epnum.toString().toIntOrNull()
-                    }
+                    newEpisode(
+                        fixUrl(href),
+                        episode = epnum.toString().toIntOrNull()
+                    )
                 )
             }
         }
@@ -145,7 +161,7 @@ class MundoDonghuaProvider : MainAPI() {
             "User-Agent" to USER_AGENT,
             "Accept" to "*/*",
             "Accept-Language" to "en-US,en;q=0.5",
-            "X-With" to "XMLHttpRequest",
+            "X-Requested-With" to "XMLHttpRequest",
             "Referer" to datafix,
             "DNT" to "1",
             "Connection" to "keep-alive",

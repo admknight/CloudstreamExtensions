@@ -271,6 +271,3 @@ internal object SettingsWebView {
         }
     }
 }
-
-
-

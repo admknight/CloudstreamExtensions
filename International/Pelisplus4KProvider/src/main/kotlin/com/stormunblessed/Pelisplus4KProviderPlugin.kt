@@ -11,5 +11,3 @@ class Pelisplus4KProviderPlugin: Plugin() {
         registerMainAPI(Pelisplus4KProvider())
     }
 }
-
-

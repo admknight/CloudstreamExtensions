@@ -9,5 +9,3 @@ class MovieBlastProvider: BasePlugin() {
         registerMainAPI(MovieBlast())
     }
 }
-
-

@@ -11,5 +11,3 @@ class PelispediaProviderPlugin: Plugin() {
         registerMainAPI(PelispediaProvider())
     }
 }
-
-

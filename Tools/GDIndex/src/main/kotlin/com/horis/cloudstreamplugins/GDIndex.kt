@@ -11,6 +11,3 @@ class GDIndex : Plugin() {
         registerMainAPI(GDIndexProvider())
     }
 }
-
-
-

@@ -186,5 +186,3 @@ object Settings {
     fun showSettingsDialog(context: Context, onSave: () -> Unit) =
         SettingsDialog.show(context, onSave)
 }
-
-

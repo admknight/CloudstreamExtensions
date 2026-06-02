@@ -13,5 +13,3 @@ class CablevisionHdProviderPlugin: Plugin() {
     }
 
 }
-
-

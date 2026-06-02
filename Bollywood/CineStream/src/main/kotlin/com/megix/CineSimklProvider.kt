@@ -2,7 +2,6 @@ package com.megix
 
 
 // Cloudstream Core & Utils
-import com.admknight.cinestream.BuildConfig
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 
@@ -268,7 +267,7 @@ class CineSimklProvider: MainAPI() {
         val isAsian = !isAnime && country in listOf("JP", "KR", "CN")
         val ids = json.ids
         val allRatings = json.ratings
-        val score = Score.from10(allRatings?.mal?.rating ?: allRatings?.imdb?.rating)
+        val rating = allRatings?.mal?.rating ?: allRatings?.imdb?.rating
         val kitsuId = ids?.kitsu
         val anilistId = ids?.anilist?.toIntOrNull()
         val malId = ids?.mal?.toIntOrNull()
@@ -357,7 +356,7 @@ class CineSimklProvider: MainAPI() {
                 this.tags = genres
                 this.comingSoon = isUpcoming(json.released)
                 this.duration = duration
-                this.score = score
+                this.score = Score.from10(rating)
                 this.year = json.year
                 this.actors = tvdbData?.cast
                 this.logoUrl = logo
@@ -411,7 +410,7 @@ class CineSimklProvider: MainAPI() {
                 this.plot = plot
                 this.tags = genres
                 this.duration = duration
-                this.score = score
+                this.score = Score.from10(rating)
                 this.year = json.year
                 this.logoUrl = logo
                 this.actors = tvdbData?.cast
@@ -623,6 +622,3 @@ class CineSimklProvider: MainAPI() {
         val imdbEpisode : Int?    = null,
     )
 }
-
-
-

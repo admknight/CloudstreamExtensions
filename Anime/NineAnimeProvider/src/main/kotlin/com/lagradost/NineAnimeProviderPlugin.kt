@@ -25,5 +25,3 @@ class NineAnimeProviderPlugin : Plugin() {
         registerExtractorAPI(WcoStream())
     }
 }
-
-

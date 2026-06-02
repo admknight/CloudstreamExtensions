@@ -1,6 +1,5 @@
 package com.Anichi
 
-import com.Anichi.AnichiParser.AnichiEpisode
 import com.Anichi.AnichiParser.AnichiVideoApiResponse
 import com.Anichi.AnichiParser.LinksQuery
 import com.Anichi.AnichiUtils.fixSourceUrls
@@ -544,5 +543,3 @@ data class PlaybackDecryptSource(
     val bitrateKbps: Long,
     val height: Any?,
 )
-
-

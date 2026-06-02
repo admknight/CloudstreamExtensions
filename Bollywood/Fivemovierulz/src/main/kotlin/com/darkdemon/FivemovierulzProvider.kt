@@ -107,6 +107,3 @@ class FivemovierulzProvider : MainAPI() { // all providers must be an instance o
         return links.isNotEmpty()
     }
 }
-
-
-

@@ -122,7 +122,11 @@ class SeriesMetroProvider: MainAPI() {
                 val isValid = seasonid.size == 2
                 val episode = if (isValid) seasonid.getOrNull(1) else null
                 val seasonint = if (isValid) seasonid.getOrNull(0) else null
-                episodes.add(newEpisode(link) { this.season = seasonint ; this.episode = episode })
+                episodes.add(newEpisode(
+                    link,
+                    season = seasonint,
+                    episode = episode
+                ))
             }
         }
 
@@ -193,5 +197,3 @@ class SeriesMetroProvider: MainAPI() {
         return true
     }
 }
-
-

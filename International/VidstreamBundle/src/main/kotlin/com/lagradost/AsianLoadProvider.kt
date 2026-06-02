@@ -23,6 +23,3 @@ class AsianLoadProvider : VidstreamProviderTemplate() {
 
     override val supportedTypes = setOf(TvType.AsianDrama)
 }
-
-
-

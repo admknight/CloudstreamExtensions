@@ -30,5 +30,3 @@ class Donghuaword  : Animekhor() {
         return true
     }
 }
-
-

@@ -12,5 +12,3 @@ class MonoschinosProviderPlugin: Plugin() {
         registerMainAPI(MonoschinosProvider())
     }
 }
-
-

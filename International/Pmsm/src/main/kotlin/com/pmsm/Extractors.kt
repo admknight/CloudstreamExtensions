@@ -106,6 +106,3 @@ class Ezplayer : VidStack() {
 class YandexcdnPmsm : VidhideExtractor() {
     override var mainUrl = "https://yandexcdn.com"
 }
-
-
-

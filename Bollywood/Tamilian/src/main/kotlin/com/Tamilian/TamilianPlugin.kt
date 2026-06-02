@@ -9,6 +9,3 @@ class HiAnimeProviderPlugin : BasePlugin() {
         registerMainAPI(Tamilian())
     }
 }
-
-
-

@@ -6,9 +6,7 @@ import com.lagradost.cloudstream3.APIHolder.unixTime
 import com.lagradost.cloudstream3.APIHolder.unixTimeMS
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
-import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.jsoup.Jsoup
 import java.util.*
 
@@ -41,6 +39,19 @@ class DubbedAnimeProvider : MainAPI() {
         @JsonProperty("wideImg") val wideImg: String?,
         @JsonProperty("year") val year: String?,
         @JsonProperty("desc") val desc: String?,
+
+        /*
+        @JsonProperty("rowid") val rowid: String,
+        @JsonProperty("status") val status: String,
+        @JsonProperty("skips") val skips: String,
+        @JsonProperty("totalEp") val totalEp: Long,
+        @JsonProperty("ep") val ep: String,
+        @JsonProperty("NextEp") val nextEp: Long,
+        @JsonProperty("slug") val slug: String,
+        @JsonProperty("showid") val showid: String,
+        @JsonProperty("Epviews") val epviews: String,
+        @JsonProperty("TotalViews") val totalViews: String,
+        @JsonProperty("tags") val tags: String,*/
     )
 
     private suspend fun parseDocumentTrending(url: String): List<SearchResponse> {
@@ -50,10 +61,15 @@ class DubbedAnimeProvider : MainAPI() {
             val href = fixUrl(it.attr("href"))
             val title = it.selectFirst("> div > div.cittx")?.text() ?: return@mapNotNull null
             val poster = fixUrlNull(it.selectFirst("> div > div.imghddde > img")?.attr("src"))
-            newAnimeSearchResponse(title, href, TvType.Anime) {
-                this.posterUrl = poster
-                addDubStatus(true, null)
-            }
+            newAnimeSearchResponse(
+                title,
+                href,
+                this.name,
+                TvType.Anime,
+                poster,
+                null,
+                EnumSet.of(DubStatus.Dubbed),
+            )
         }
     }
 
@@ -66,15 +82,17 @@ class DubbedAnimeProvider : MainAPI() {
         return document.select("a.grid__link").mapNotNull {
             val href = fixUrl(it.attr("href"))
             val title = it.selectFirst("> div.gridtitlek")?.text() ?: return@mapNotNull null
-            val poster = fixUrlNull(it.selectFirst("> img.grid__img")?.attr("src"))
+            val poster =
+                fixUrl(it.selectFirst("> img.grid__img")?.attr("src") ?: return@mapNotNull null)
             newAnimeSearchResponse(
                 title,
-                if (trimEpisode) href.substringBeforeLast('/') else href,
-                TvType.Anime
-            ) {
-                this.posterUrl = poster
-                addDubStatus(true, null)
-            }
+                if (trimEpisode) href.removeRange(href.lastIndexOf('/'), href.length) else href,
+                this.name,
+                TvType.Anime,
+                poster,
+                null,
+                EnumSet.of(DubStatus.Dubbed),
+            )
         }
     }
 
@@ -82,11 +100,13 @@ class DubbedAnimeProvider : MainAPI() {
         val trendingUrl = "$mainUrl/xz/trending.php?_=$unixTimeMS"
         val lastEpisodeUrl = "$mainUrl/xz/epgrid.php?p=1&_=$unixTimeMS"
         val recentlyAddedUrl = "$mainUrl/xz/gridgrabrecent.php?p=1&_=$unixTimeMS"
+        //val allUrl = "$mainUrl/xz/gridgrab.php?p=1&limit=12&_=$unixTimeMS"
 
         val listItems = listOf(
             HomePageList("Trending", parseDocumentTrending(trendingUrl)),
             HomePageList("Recently Added", parseDocument(recentlyAddedUrl)),
             HomePageList("Recent Releases", parseDocument(lastEpisodeUrl, true)),
+            // HomePageList("All", parseDocument(allUrl))
         )
 
         return newHomePageResponse(listItems)
@@ -94,7 +114,8 @@ class DubbedAnimeProvider : MainAPI() {
 
 
     private suspend fun getEpisode(slug: String, isMovie: Boolean): EpisodeInfo {
-        val url = mainUrl + (if (isMovie) "/movies/jsonMovie" else "/xz/v3/jsonEpi") + ".php?slug=$slug&_=$unixTime"
+        val url =
+            mainUrl + (if (isMovie) "/movies/jsonMovie" else "/xz/v3/jsonEpi") + ".php?slug=$slug&_=$unixTime"
         val response = app.get(url).text
         val mapped = parseJson<QueryEpisodeResultRoot>(response)
         return mapped.result.anime.first()
@@ -121,14 +142,19 @@ class DubbedAnimeProvider : MainAPI() {
             val img = fixUrlNull(i.selectFirst("img.grid__img")?.attr("src"))
 
             if (getIsMovie(href)) {
-                newMovieSearchResponse(title, href, TvType.AnimeMovie) {
-                    this.posterUrl = img
-                }
+                newMovieSearchResponse(
+                    title, href, this.name, TvType.AnimeMovie, img, null
+                )
             } else {
-                newAnimeSearchResponse(title, href, TvType.Anime) {
-                    this.posterUrl = img
-                    addDubStatus(true, null)
-                }
+                newAnimeSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Anime,
+                    img,
+                    null,
+                    EnumSet.of(DubStatus.Dubbed),
+                )
             }
         }
     }
@@ -142,18 +168,23 @@ class DubbedAnimeProvider : MainAPI() {
         return items.mapNotNull { i ->
             val innerDiv = i.selectFirst("> div.result")
             val href = fixUrl(i.attr("href"))
-            val img = fixUrlNull(innerDiv?.selectFirst("> div.imgkz > img")?.attr("src"))
-            val title = innerDiv?.selectFirst("> div.titleresults")?.text() ?: return@mapNotNull null
+            val img = fixUrl(innerDiv?.selectFirst("> div.imgkz > img")?.attr("src") ?: return@mapNotNull null)
+            val title = innerDiv.selectFirst("> div.titleresults")?.text() ?: return@mapNotNull null
 
             if (getIsMovie(href)) {
-                newMovieSearchResponse(title, href, TvType.AnimeMovie) {
-                    this.posterUrl = img
-                }
+                newMovieSearchResponse(
+                    title, href, this.name, TvType.AnimeMovie, img, null
+                )
             } else {
-                newAnimeSearchResponse(title, href, TvType.Anime) {
-                    this.posterUrl = img
-                    addDubStatus(true, null)
-                }
+                newAnimeSearchResponse(
+                    title,
+                    href,
+                    this.name,
+                    TvType.Anime,
+                    img,
+                    null,
+                    EnumSet.of(DubStatus.Dubbed),
+                )
             }
         }
     }
@@ -164,15 +195,14 @@ class DubbedAnimeProvider : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        val serversHTML = (if (data.startsWith(mainUrl)) {
+        val serversHTML = (if (data.startsWith(mainUrl)) { // CLASSIC EPISODE
             val slug = getSlug(data)
             getEpisode(slug, false).serversHTML
         } else data).replace("\\", "")
 
-        val hls = "hl=\"(.*?)\"".toRegex().findAll(serversHTML).map {
+        val hls = ArrayList("hl=\"(.*?)\"".toRegex().findAll(serversHTML).map {
             it.groupValues[1]
-        }.toList()
-        
+        }.toList())
         for (hl in hls) {
             try {
                 val sources = app.get("$mainUrl/xz/api/playeri.php?url=$hl&_=$unixTime").text
@@ -182,16 +212,15 @@ class DubbedAnimeProvider : MainAPI() {
                     callback.invoke(
                         newExtractorLink(
                             this.name,
-                            "${this.name} $quality${if (quality.endsWith('p')) "" else 'p'}",
+                            this.name + " " + quality + if (quality.endsWith('p')) "" else 'p',
                             fixUrl(find.groupValues[1]),
-                            INFER_TYPE
-                        ) {
-                            this.referer = mainUrl
-                            this.quality = getQualityFromName(quality)
-                        }
+                            this.mainUrl,
+                            getQualityFromName(quality)
+                        )
                     )
                 }
             } catch (e: Exception) {
+                //IDK
             }
         }
         return true
@@ -202,21 +231,21 @@ class DubbedAnimeProvider : MainAPI() {
             val realSlug = url.replace("movies/", "")
             val episode = getEpisode(realSlug, true)
             val poster = episode.previewImg ?: episode.wideImg
-            
             return newMovieLoadResponse(
                 episode.title,
                 realSlug,
+                this.name,
                 TvType.AnimeMovie,
-                episode.serversHTML
-            ) {
-                this.posterUrl = fixUrlNull(poster)
-                this.year = episode.year?.toIntOrNull()
-                this.plot = episode.desc
-            }
+                episode.serversHTML,
+                if (poster == null) null else fixUrl(poster),
+                episode.year?.toIntOrNull(),
+                episode.desc,
+                null
+            )
         } else {
             val response = app.get(url).text
             val document = Jsoup.parse(response)
-            val title = document.selectFirst("h4")?.text() ?: ""
+            val title = document.selectFirst("h4")!!.text()
             val descriptHeader = document.selectFirst("div.animeDescript")
             val descript = descriptHeader?.selectFirst("> p")?.text()
             val year = descriptHeader?.selectFirst("> div.distatsx > div.sroverd")
@@ -226,17 +255,15 @@ class DubbedAnimeProvider : MainAPI() {
 
             val episodes = document.select("a.epibloks").map {
                 val epTitle = it.selectFirst("> div.inwel > span.isgrxx")?.text()
-                newEpisode(fixUrl(it.attr("href"))) {
-                    this.name = epTitle
-                }
+                newEpisode(fixUrl(it.attr("href")), epTitle)
             }
 
-            val img = fixUrlNull(document.selectFirst("div.fkimgs > img")?.attr("src"))
+            val img = fixUrl(document.select("div.fkimgs > img").attr("src"))
             return newAnimeLoadResponse(title, url, TvType.Anime) {
-                this.posterUrl = img
+                posterUrl = img
                 this.year = year
                 addEpisodes(DubStatus.Dubbed, episodes)
-                this.plot = descript
+                plot = descript
             }
         }
     }
