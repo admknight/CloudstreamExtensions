@@ -13,7 +13,7 @@ import okhttp3.FormBody
 import org.jsoup.nodes.Element
 import java.net.URI
 
-class AllMovieLandProvider : MainAPI() { // all providers must be an instance of MainAPI
+class AllMovieLandProvider : MainAPI() {
     override var mainUrl = "https://allmovieland.you"
     override var name = "AllMovieLand"
     override val hasMainPage = true
@@ -46,7 +46,7 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
             .build()
 
         return app.post(
-            "$mainUrl/index.php?do=opensearch", //$mainUrl/engine/ajax/controller.php?mod=search
+            "$mainUrl/index.php?do=opensearch",
             requestBody = body,
             referer = "$mainUrl/",
             cookies = ensureSession()
@@ -135,13 +135,8 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
         val type = if (checkType.contains("films", true)) TvType.Movie
         else if (checkType.contains("series", true)) TvType.TvSeries
         else TvType.Cartoon
+        
         return when (type) {
-            TvType.Movie -> {
-                newMovieSearchResponse(title, href, TvType.Movie) {
-                    this.posterUrl = posterUrl
-                    posterHeaders = cookies
-                }
-            }
             TvType.TvSeries -> {
                 newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
                     this.posterUrl = posterUrl
@@ -149,7 +144,7 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
                 }
             }
             else -> {
-                newMovieSearchResponse(title, href, TvType.Cartoon) {
+                newMovieSearchResponse(title, href, type) {
                     this.posterUrl = posterUrl
                     posterHeaders = cookies
                 }
@@ -159,9 +154,7 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
 
     override suspend fun search(query: String): List<SearchResponse> {
         val cookies = ensureSession()
-        val searchList = querySearchApi(
-            query
-        ).document
+        val searchList = querySearchApi(query).document
 
         return searchList.select("article.short-mid").mapNotNull {
             it.toSearchResult(cookies)
@@ -190,7 +183,7 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
             it.select("iframe").attr("src")
         }.filter { it.contains("youtube") }.joinToString()
         val trailer = fixUrlNull(trailerLink)
-        val this.score = Score.from10(doc.select("b.imdb__value").text().replace(",", "."))
+        val scoreValue = Score.from10(doc.select("b.imdb__value").text().replace(",", "."))
         val duration =
             doc.select("li.xfs__item_op:nth-child(3) > b").text().removeSuffix(" min.").trim()
                 .toIntOrNull()
@@ -249,26 +242,13 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
         }
 
         return when (type) {
-            TvType.Movie -> {
-                newMovieLoadResponse(title, url, TvType.Movie, data) {
-                    this.posterUrl = poster?.trim()
-                    this.year = year
-                    this.plot = description
-                    this.tags = tags
-                    this.score = Score.from100(rating)
-                    this.duration = duration
-                    this.actors = actors
-                    this.recommendations = recommendations
-                    addTrailer(trailer)
-                }
-            }
             TvType.TvSeries -> {
                 newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
                     this.posterUrl = poster?.trim()
                     this.year = year
                     this.plot = description
                     this.tags = tags
-                    this.score = Score.from100(rating)
+                    this.score = scoreValue
                     this.duration = duration
                     this.actors = actors
                     this.recommendations = recommendations
@@ -276,12 +256,13 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
                 }
             }
             else -> {
-                newMovieLoadResponse(title, url, TvType.Movie, data) {
+                newMovieLoadResponse(title, url, type, data) {
                     this.posterUrl = poster?.trim()
                     this.year = year
                     this.plot = description
                     this.tags = tags
-                    this.score = Score.from100(rating)
+                    this.score = scoreValue
+                    this.duration = duration
                     this.actors = actors
                     this.recommendations = recommendations
                     addTrailer(trailer)
@@ -387,6 +368,3 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
         }
     }
 }
-
-
-

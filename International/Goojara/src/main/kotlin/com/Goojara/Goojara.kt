@@ -37,7 +37,6 @@ class Goojara : MainAPI() {
     companion object
     {
         const val TMDBIMAGEBASEURL = "https://image.tmdb.org/t/p/original"
-        val headers = mapOf("Cookie" to "aGooz=dg18hh2eittp5e7s53u0e6bloh; 98ef5a07=747ffc60ea65eb361a495f; _997e=CC3E288A8E177D1A15AC79C049BCE3162D678A00; 3d4930c4=6239ad831b7cfd09950432; _2252=8A4FEB904DF45EB188E25A7A89432E0E489A5ADA; 12cd410d=77da7901426e0f0c27e062; _3553=3DB01E776983EE4DACE282E616C9B7B4FB2E2D3D")
     }
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
@@ -64,8 +63,6 @@ class Goojara : MainAPI() {
         }
 
     }
-
-    //override suspend fun quickSearch(query: String): List<SearchResponse> = search(query,1).items
 
     private val DEFAULT_POSTER = "https://thumbs.dreamstime.com/b/cinema-poster-design-template-popcorn-box-disposable-cup-beverages-straw-film-strip-clapper-board-ticket-detailed-44098150.jpg"
 
@@ -215,12 +212,12 @@ class Goojara : MainAPI() {
                 val seasonHref = href.substringBefore("?s=") + "?s=$seasonIndex"
                 val seasonDoc = app.get(seasonHref).document
                 seasonDoc.select("div.seho")
-                    .mapNotNull { input ->
+                    .forEach { input ->
                         val hrefEp = fixUrl(input.select("a").attr("href"))
                         val epnoText = input.select("span.sea").text().substringAfter("0").trim()
                         val epno = epnoText.toIntOrNull()
 
-                        if (hrefEp.isBlank() || epno == null) return@mapNotNull null
+                        if (hrefEp.isBlank() || epno == null) return@forEach
                         val metaKey = "$seasonIndex:$epno"
                         val epMeta = epMetaMap[metaKey]
                         val epnameFromPage = input.select("a").text().takeIf { it.isNotBlank() }
@@ -279,7 +276,7 @@ class Goojara : MainAPI() {
                 val redirectResp = app.get(href, mapOf("Referer" to "https://ww1.goojara.to", "Cookie" to cookieHeader), allowRedirects = false)
                 val iframe = redirectResp.headers["location"] ?: redirectResp.headers["Location"] ?: return@forEach
                 Log.d("Phisher", iframe)
-                loadSourceNameExtractor("", iframe, "", Qualities.P720.value, subtitleCallback, callback)
+                loadSourceNameExtractor("", iframe, subtitleCallback, callback)
             } catch (e: Exception) {
                 Log.w("Phisher", "failed to fetch embed redirect: ${e.message}")
             }
@@ -324,10 +321,10 @@ class Goojara : MainAPI() {
         val castArr = root.optJSONArray("cast") ?: return list
         for (i in 0 until castArr.length()) {
             val c = castArr.optJSONObject(i) ?: continue
-            val name = c.optString("name").takeIf { it.isNotBlank() } ?: c.optString("original_name").orEmpty()
+            val actorName = c.optString("name").takeIf { it.isNotBlank() } ?: c.optString("original_name").orEmpty()
             val profile = c.optString("profile_path").takeIf { it.isNotBlank() }?.let { "$TMDBIMAGEBASEURL$it" }
             val character = c.optString("character").takeIf { it.isNotBlank() }
-            val actor = Actor(name, profile)
+            val actor = Actor(actorName, profile)
             list += ActorData(actor, roleString = character)
         }
         return list
@@ -336,21 +333,19 @@ class Goojara : MainAPI() {
     suspend fun loadSourceNameExtractor(
         source: String,
         url: String,
-        referer: String? = null,
-        quality: Int? = null,
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit,
     ) {
-        loadExtractor(url, referer, subtitleCallback) { link ->
+        loadExtractor(url, subtitleCallback) { link ->
             CoroutineScope(Dispatchers.IO).launch {
                 callback.invoke(
                     newExtractorLink(
                         "${link.source} $source",
                         "${link.source} $source",
                         link.url,
+                        link.type
                     ) {
-                        this.quality = quality ?: link.quality
-                        this.type = link.type
+                        this.quality = link.quality
                         this.referer = link.referer
                         this.headers = link.headers
                         this.extractorData = link.extractorData
@@ -360,7 +355,3 @@ class Goojara : MainAPI() {
         }
     }
 }
-
-
-
-

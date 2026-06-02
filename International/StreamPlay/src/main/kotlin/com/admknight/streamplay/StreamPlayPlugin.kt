@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +21,7 @@ import com.lagradost.cloudstream3.extractors.Vidmolyme
 import com.lagradost.cloudstream3.extractors.Voe
 import com.lagradost.cloudstream3.plugins.Plugin
 import androidx.core.content.edit
+import com.admknight.streamplay.settings.MainSettingsFragment
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.MainActivity
 import com.lagradost.cloudstream3.extractors.FilemoonV2

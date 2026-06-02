@@ -4,11 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.lagradost.cloudstream3.*
-//import com.lagradost.cloudstream3.animeproviders.GogoanimeProvider.Companion.getStatus
 import com.lagradost.cloudstream3.utils.DataStore.toKotlinObject
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import java.net.URI
 
 class AsiaFlixProvider : MainAPI() {
@@ -88,31 +88,19 @@ class AsiaFlixProvider : MainAPI() {
         @JsonProperty("views") val views: Int?
     )
 
-    private fun Data.toSearchResponse(): TvSeriesSearchResponse {
-        return newTvSeriesSearchResponse(name, _id, this@AsiaFlixProvider.name) { this.posterUrl = TvType.AsianDrama ; this.quality = image }
+    private fun Data.toSearchResponse(): SearchResponse {
+        return newTvSeriesSearchResponse(name, _id, TvType.AsianDrama) {
+            this.posterUrl = image
+        }
     }
 
     private fun Episodes.toEpisode(): Episode? {
         if (videoUrl != null && videoUrl.contains("watch/null") || number == null) return null
         return videoUrl?.let {
-            newEpisode(it) { this.name = null ; this.season = number ; this.episode =  }
+            newEpisode(it) {
+                this.episode = number
+            }
         }
-    }
-
-    private fun DramaPage.toLoadResponse(): TvSeriesLoadResponse {
-        return newTvSeriesLoadResponse(
-            name,
-            "$mainUrl$dramaUrl/$_id".replace("drama-detail", "show-details"),
-            this@AsiaFlixProvider.name,
-            TvType.AsianDrama,
-            episodes.mapNotNull { it.toEpisode() }.sortedBy { it.episode },
-            image,
-            releaseYear,
-            synopsis,
-            getStatus(tvStatus ?: ""),
-            null,
-            genre?.split(",")?.map { it.trim() }
-        )
     }
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
@@ -121,7 +109,6 @@ class AsiaFlixProvider : MainAPI() {
 
         val customMapper =
             mapper.copy().configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true)
-        // Hack, because it can either be object or a list
         val cleanedResponse = Regex(""""data":(\{.*?),\{"sectionName"""").replace(response) {
             """"data":null},{"sectionName""""
         }
@@ -154,17 +141,16 @@ class AsiaFlixProvider : MainAPI() {
             "$apiUrl/utility/get-stream-links?url=$data",
             headers = headers
         ).text.toKotlinObject<Link>().url?.let {
-//            val fixedUrl = "https://api.asiaflix.app/api/v2/utility/cors-proxy/playlist/${URLEncoder.encode(it, StandardCharsets.UTF_8.toString())}"
             callback.invoke(
                 newExtractorLink(
                     name,
                     name,
                     it,
-                    "https://asianload1.com/",
-                    /** <------ This provider should be added instead */
-                    getQualityFromName(it),
-                    URI(it).path.endsWith(".m3u8")
-                )
+                    INFER_TYPE
+                ) {
+                    this.referer = "https://asianload1.com/"
+                    this.quality = getQualityFromName(it)
+                }
             )
         }
         return true
@@ -182,10 +168,18 @@ class AsiaFlixProvider : MainAPI() {
         val requestUrl = "$apiUrl/drama?id=${url.split("/").lastOrNull()}"
         val response = app.get(requestUrl, headers = headers).text
         val dramaPage = response.toKotlinObject<DramaPage>()
-        return dramaPage.toLoadResponse()
+        
+        return newTvSeriesLoadResponse(
+            dramaPage.name,
+            url,
+            TvType.AsianDrama,
+            dramaPage.episodes.mapNotNull { it.toEpisode() }.sortedBy { it.episode }
+        ) {
+            this.posterUrl = dramaPage.image
+            this.year = dramaPage.releaseYear
+            this.plot = dramaPage.synopsis
+            this.showStatus = getStatus(dramaPage.tvStatus ?: "")
+            this.tags = dramaPage.genre?.split(",")?.map { it.trim() }
+        }
     }
 }
-
-
-
-

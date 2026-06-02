@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import android.content.SharedPreferences
 import androidx.core.content.edit

@@ -19,10 +19,10 @@ class LACartoonsProvider:MainAPI() {
 
     private fun Document.toSearchResult():List<SearchResponse>{
         return this.select(".categorias .conjuntos-series a").map {
-            val title = it.selectFirst("p.nombre-serie")?.text()
+            val title = it.selectFirst("p.nombre-serie")?.text() ?: ""
             val href = fixUrl(it.attr("href"))
-            val img = fixUrl(it.selectFirst("img")!!.attr("src"))
-            newTvSeriesSearchResponse(title!!, href){
+            val img = fixUrlNull(it.selectFirst("img")?.attr("src"))
+            newTvSeriesSearchResponse(title, href, TvType.Cartoon){
                 this.posterUrl = img
             }
         }
@@ -43,27 +43,28 @@ class LACartoonsProvider:MainAPI() {
     override suspend fun load(url: String): LoadResponse? {
         val doc = app.get(url).document
 
-        val title = doc.selectFirst("h2.text-center")?.text()
+        val title = doc.selectFirst("h2.text-center")?.text() ?: ""
         val description = doc.selectFirst(".informacion-serie-seccion p:contains(Reseña)")?.text()?.substringAfter("Reseña:")?.trim()
         val poster = doc.selectFirst(".imagen-serie img")?.attr("src")
         val backposter = doc.selectFirst("img.fondo-serie-seccion")?.attr("src")
-        val episodes = doc.select("ul.listas-de-episodion li").map {
+        val episodes = doc.select("ul.listas-de-episodion li").mapNotNull {
             val regexep = Regex("Capitulo.(\\d+)|Capitulo.(\\d+)\\-")
-            val href = it.selectFirst("a")?.attr("href")
-            val name = it.selectFirst("a")?.text()?.replace(regexep, "")?.replace("-","")
-            val seasonnum = href?.substringAfter("t=")
-            val epnum = regexep.find(name.toString())?.destructured?.component1()
-            newEpisode(
-                fixUrl(href!!),
-                name,
-                seasonnum.toString().toIntOrNull(),
-                epnum.toString().toIntOrNull(),
-            )
+            val a = it.selectFirst("a") ?: return@mapNotNull null
+            val href = a.attr("href")
+            val name = a.text().replace(regexep, "").replace("-","").trim()
+            val seasonnum = href.substringAfter("t=", "").toIntOrNull()
+            val epnum = regexep.find(a.text())?.groupValues?.get(1)?.toIntOrNull()
+            
+            newEpisode(fixUrl(href)) {
+                this.name = name
+                this.season = seasonnum
+                this.episode = epnum
+            }
         }
 
-        return newTvSeriesLoadResponse(title!!, url, TvType.Cartoon, episodes){
-            this.posterUrl = fixUrl(poster!!)
-            this.backgroundPosterUrl = fixUrl(backposter!!)
+        return newTvSeriesLoadResponse(title, url, TvType.Cartoon, episodes){
+            this.posterUrl = fixUrlNull(poster)
+            this.backgroundPosterUrl = fixUrlNull(backposter)
             this.plot = description
         }
     }
@@ -75,12 +76,10 @@ class LACartoonsProvider:MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val res = app.get(data).document
-        res.select(".serie-video-informacion iframe").map {
-            val link = it.attr("src")?.replace("https://short.ink/","https://abysscdn.com/?v=")
-            loadExtractor(link!!, data, subtitleCallback, callback)
+        res.select(".serie-video-informacion iframe").forEach {
+            val link = it.attr("src")?.replace("https://short.ink/","https://abysscdn.com/?v=") ?: return@forEach
+            loadExtractor(link, data, subtitleCallback, callback)
         }
         return true
     }
 }
-
-

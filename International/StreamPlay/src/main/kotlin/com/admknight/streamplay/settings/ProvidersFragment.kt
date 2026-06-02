@@ -1,5 +1,8 @@
-package com.phisher98
+package com.admknight.streamplay.settings
 
+import com.admknight.streamplay.StreamPlayPlugin
+import com.admknight.streamplay.BuildConfig
+import com.admknight.streamplay.*
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.graphics.drawable.Drawable

@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.streamplay
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.google.gson.annotations.SerializedName

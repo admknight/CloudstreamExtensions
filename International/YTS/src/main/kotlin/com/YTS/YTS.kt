@@ -38,12 +38,12 @@ open class YTS : MainAPI() {
         val title     = this.select("div.browse-movie-bottom a").text().trim()
         val href      = fixUrl(this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.select("img").attr("src"))
-        val year=this.selectFirst("a div.browse-movie-year")?.text()?.toIntOrNull()
-        val this.score = Score.from10(this.select("h4.rating").text().substringBefore("/".trim()))
+        val yearValue = this.selectFirst("a div.browse-movie-year")?.text()?.toIntOrNull()
+        val scoreValue = Score.from10(this.select("h4.rating").text().substringBefore("/").trim())
         return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
-            this.year = year
-            this.score = Score.from10(rating)
+            this.year = yearValue
+            this.score = scoreValue
         }
     }
 
@@ -69,16 +69,16 @@ open class YTS : MainAPI() {
         val document = app.get(url).document
         val title = document.selectFirst("#mobile-movie-info h1")?.text()?.trim() ?:"No Title"
         val poster = getURL(document.select("#movie-poster img").attr("src"))
-        val year = document.selectFirst("#mobile-movie-info h2")?.text()?.trim()?.toIntOrNull()
+        val yearValue = document.selectFirst("#mobile-movie-info h2")?.text()?.trim()?.toIntOrNull()
         val tags = document.selectFirst("#mobile-movie-info > h2:nth-child(3)")?.text()?.trim()
             ?.split(" / ")
             ?.map { it.trim() }
-        val this.score = Score.from10(document.select("#movie-info > div.bottom-info > div:nth-child(2) > span:nth-child(2)").text())
+        val scoreValue = Score.from10(document.select("#movie-info > div.bottom-info > div:nth-child(2) > span:nth-child(2)").text())
         return newMovieLoadResponse(title, url, TvType.Movie, url) {
                 this.posterUrl = poster
                 this.plot = title
-                this.year = year
-                this.score = Score.from10(rating)
+                this.year = yearValue
+                this.score = scoreValue
                 this.tags = tags
             }
     }
@@ -87,13 +87,13 @@ open class YTS : MainAPI() {
         val document = app.get(data).document
         document.select("p.hidden-md.hidden-lg a").amap {
             val href=getURL(it.attr("href").replace(" ","%20"))
-            val quality =it.ownText().substringBefore(".").replace("p","").toInt()
+            val quality = it.ownText().substringBefore(".").replace("p","").toIntOrNull() ?: Qualities.Unknown.value
             callback.invoke(
                 newExtractorLink(
                     "$name $quality",
                     name,
                     url = fixUrl(href),
-                    INFER_TYPE
+                    type = INFER_TYPE
                 ) {
                     this.referer = ""
                     this.quality = quality
@@ -107,7 +107,3 @@ open class YTS : MainAPI() {
             return "${mainUrl}$url"
     }
 }
-
-
-
-

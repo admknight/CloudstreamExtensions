@@ -6,6 +6,7 @@ import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.jsoup.Jsoup
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.Scriptable
@@ -26,57 +27,48 @@ class WatchCartoonOnlineProvider : MainAPI() {
     override suspend fun search(query: String): List<SearchResponse> {
         val url = "https://www.wcostream.com/search"
 
-        var response =
-            app.post(
-                url,
-                headers = mapOf("Referer" to url),
-                data = mapOf("catara" to query, "konuara" to "series")
-            ).text
-        var document = Jsoup.parse(response)
-        var items = document.select("div#blog > div.cerceve").toList()
+        val response = app.post(
+            url,
+            headers = mapOf("Referer" to url),
+            data = mapOf("catara" to query, "konuara" to "series")
+        ).text
+        val document = Jsoup.parse(response)
+        val items = document.select("div#blog > div.cerceve").toList()
 
         val returnValue = ArrayList<SearchResponse>()
 
         for (item in items) {
             val header = item.selectFirst("> div.iccerceve")
-            val titleHeader = header!!.selectFirst("> div.aramadabaslik > a")
-            val title = titleHeader!!.text()
+            val titleHeader = header?.selectFirst("> div.aramadabaslik > a") ?: continue
+            val title = titleHeader.text()
             val href = fixUrl(titleHeader.attr("href"))
-            val poster = fixUrl(header.selectFirst("> a > img")!!.attr("src"))
-            val genreText = item.selectFirst("div.cerceve-tur-ve-genre")!!.ownText()
+            val poster = fixUrlNull(header.selectFirst("> a > img")?.attr("src"))
+            val genreText = item.selectFirst("div.cerceve-tur-ve-genre")?.ownText() ?: ""
             if (genreText.contains("cartoon")) {
-                returnValue.add(newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.Cartoon ; this.quality = poster })
+                returnValue.add(newTvSeriesSearchResponse(title, href, TvType.Cartoon) { this.posterUrl = poster })
             } else {
                 val isDubbed = genreText.contains("dubbed")
-                val set: EnumSet<DubStatus> =
-                    EnumSet.of(if (isDubbed) DubStatus.Dubbed else DubStatus.Subbed)
-                returnValue.add(
-                    newAnimeSearchResponse(title, href, this.name) { this.posterUrl = TvType.Anime ; this.quality = poster }
-                )
+                returnValue.add(newAnimeSearchResponse(title, href, TvType.Anime) {
+                    this.posterUrl = poster
+                    addDubStatus(isDubbed, null)
+                })
             }
         }
 
-        // "episodes-search", is used for finding movies, anime episodes should be filtered out
-        response =
-            app.post(
-                url,
-                headers = mapOf("Referer" to url),
-                data = mapOf("catara" to query, "konuara" to "episodes")
-            ).text
-        document = Jsoup.parse(response)
-        items = document.select("#catlist-listview2 > ul > li")
-            .filter { it -> it?.text() != null && !it.text().toString().contains("Episode") }
+        val response2 = app.post(
+            url,
+            headers = mapOf("Referer" to url),
+            data = mapOf("catara" to query, "konuara" to "episodes")
+        ).text
+        val document2 = Jsoup.parse(response2)
+        val items2 = document2.select("#catlist-listview2 > ul > li")
+            .filter { it?.text() != null && !it.text().contains("Episode") }
 
-        for (item in items) {
-            val titleHeader = item.selectFirst("a")
-            val title = titleHeader!!.text()
+        for (item in items2) {
+            val titleHeader = item.selectFirst("a") ?: continue
+            val title = titleHeader.text()
             val href = fixUrl(titleHeader.attr("href"))
-            //val isDubbed = title.contains("dubbed")
-            //val set: EnumSet<DubStatus> =
-            //   EnumSet.of(if (isDubbed) DubStatus.Dubbed else DubStatus.Subbed)
-            returnValue.add(
-                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.AnimeMovie ; this.quality = null }
-            )
+            returnValue.add(newTvSeriesSearchResponse(title, href, TvType.AnimeMovie) { this.posterUrl = null })
         }
 
         return returnValue
@@ -88,9 +80,9 @@ class WatchCartoonOnlineProvider : MainAPI() {
         val document = Jsoup.parse(response)
 
         return if (!isMovie) {
-            val title = document.selectFirst("td.vsbaslik > h2")!!.text()
+            val title = document.selectFirst("td.vsbaslik > h2")?.text() ?: ""
             val poster = fixUrlNull(document.selectFirst("div#cat-img-desc > div > img")?.attr("src"))
-            val plot = document.selectFirst("div.iltext")!!.text()
+            val plot = document.selectFirst("div.iltext")?.text()
             val genres = document.select("div#cat-genre > div.wcobtn > a").map { it.text() }
             val episodes = document.select("div#catlist-listview > ul > li > a").reversed().map {
                 val text = it.text()
@@ -98,69 +90,46 @@ class WatchCartoonOnlineProvider : MainAPI() {
                 val href = it.attr("href")
                 if (match != null) {
                     val last = match.groupValues[3]
-                    return@map newEpisode(
-                        href,
-                        if (last.startsWith("English")) null else last,
-                        match.groupValues[1].toIntOrNull(),
-                        match.groupValues[2].toIntOrNull(),
-                    )
+                    newEpisode(href) {
+                        this.name = if (last.startsWith("English")) null else last
+                        this.season = match.groupValues[1].toIntOrNull()
+                        this.episode = match.groupValues[2].toIntOrNull()
+                    }
+                } else {
+                    val match2 = Regex("Episode ([0-9]*).*? (.*)").find(text)
+                    if (match2 != null) {
+                        val last = match2.groupValues[2]
+                        newEpisode(href) {
+                            this.name = if (last.startsWith("English")) null else last
+                            this.episode = match2.groupValues[1].toIntOrNull()
+                        }
+                    } else {
+                        newEpisode(href) { this.name = text }
+                    }
                 }
-                val match2 = Regex("Episode ([0-9]*).*? (.*)").find(text)
-                if (match2 != null) {
-                    val last = match2.groupValues[2]
-                    return@map newEpisode(
-                        href,
-                        if (last.startsWith("English")) null else last,
-                        null,
-                        match2.groupValues[1].toIntOrNull(),
-                    )
-                }
-                return@map newEpisode(href) { this.name = text }
             }
-            newTvSeriesLoadResponse(
-                title,
-                url,
-                this.name,
-                TvType.TvSeries,
-                episodes,
-                poster,
-                null,
-                plot,
-                null,
-                null,
-                tags = genres
-            )
+            newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
+                this.posterUrl = poster
+                this.plot = plot
+                this.tags = genres
+            }
         } else {
-            val title = document.selectFirst(".iltext .Apple-style-span")?.text().toString()
+            val title = document.selectFirst(".iltext .Apple-style-span")?.text() ?: ""
             val b = document.select(".iltext b")
             val description = if (b.isNotEmpty()) {
-                b.last()!!.html().split("<br>")[0]
+                b.last()?.html()?.split("<br>")?.get(0)
             } else null
 
-            newTvSeriesLoadResponse(
-                title,
-                url,
-                this.name,
-                TvType.TvSeries,
-                listOf(newEpisode(url) { this.name = title }),
-                null,
-                null,
-                description,
-                null,
-                null
-            )
+            newTvSeriesLoadResponse(title, url, TvType.TvSeries, listOf(newEpisode(url) { this.name = title })) {
+                this.plot = description
+            }
         }
     }
 
     data class LinkResponse(
-        //  @JsonProperty("cdn")
-        //  val cdn: String,
-        @JsonProperty("enc")
-        val enc: String,
-        @JsonProperty("hd")
-        val hd: String,
-        @JsonProperty("server")
-        val server: String,
+        @JsonProperty("enc") val enc: String,
+        @JsonProperty("hd") val hd: String,
+        @JsonProperty("server") val server: String,
     )
 
     override suspend fun loadLinks(
@@ -170,12 +139,9 @@ class WatchCartoonOnlineProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val response = app.get(data).text
-        /*val embedUrl = fixUrl(
-            Regex("itemprop=\"embedURL\" content=\"(.*?)\"").find(response.text)?.groupValues?.get(1) ?: return false
-        )*/
         val start = response.indexOf("itemprop=\"embedURL")
         val foundJS = Regex("<script>(.*?)</script>").find(response, start)?.groupValues?.get(1)
-            ?.replace("document.write", "var returnValue = ")
+            ?.replace("document.write", "var returnValue = ") ?: return false
 
         val rhino = Context.enter()
         rhino.initStandardObjects()
@@ -197,10 +163,7 @@ class WatchCartoonOnlineProvider : MainAPI() {
         val jsEval = scope.get("returnValue", scope) ?: return false
         val src = fixUrl(Regex("src=\"(.*?)\"").find(jsEval as String)?.groupValues?.get(1) ?: return false)
 
-        val embedResponse = app.get(
-            (src),
-            headers = mapOf("Referer" to data)
-        )
+        val embedResponse = app.get(src, headers = mapOf("Referer" to data))
 
         val getVidLink = fixUrl(
             Regex("get\\(\"(.*?)\"").find(embedResponse.text)?.groupValues?.get(1) ?: return false
@@ -238,7 +201,3 @@ class WatchCartoonOnlineProvider : MainAPI() {
         return true
     }
 }
-
-
-
-

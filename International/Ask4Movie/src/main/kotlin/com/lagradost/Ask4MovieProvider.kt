@@ -1,7 +1,6 @@
 package com.lagradost
 
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.utils.Coroutines.main
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
 import org.jsoup.Jsoup
@@ -10,13 +9,11 @@ import java.net.URI
 
 class Ask4MovieProvider : MainAPI() {
     override var mainUrl = "https://ask4movie.mx"
-
     override var name = "Ask4Movie"
     override val supportedTypes = setOf(TvType.TvSeries, TvType.Movie, TvType.AnimeMovie)
     override val hasMainPage = true
 
-    private fun Element.toSearchResponse(): MovieSearchResponse {
-        // style="background-image: url(https://ask4movie.me/wp-content/uploads/2022/08/Your-Name.-2016-cover.jpg)"
+    private fun Element.toSearchResponse(): SearchResponse {
         val posterRegex = Regex("""url\((.*?)\)""")
         val poster = posterRegex.find(this.attr("style"))?.groupValues?.get(1)
 
@@ -24,62 +21,52 @@ class Ask4MovieProvider : MainAPI() {
         val href = a.attr("href")
         val title = a.text().trim()
 
-        // Title (2022) -> 2022
-        val year =
-            Regex("""\((\d{4})\)$""").find(title)?.groupValues?.getOrNull(1)?.toIntOrNull()
-
-        return newMovieSearchResponse(title, href, this@Ask4MovieProvider.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
+        return newMovieSearchResponse(title, href, TvType.Movie) {
+            this.posterUrl = poster
+        }
     }
 
-    // Used in movies/single seasons to get recommendations
-    private fun Element.articleToSearchResponse(): MovieSearchResponse {
+    private fun Element.articleToSearchResponse(): SearchResponse {
         val poster = this.select("img").attr("src")
-
         val a = this.select("a")
         val href = a.attr("href")
-        val title = a.attr("title")
+        val title = a.attr("title") ?: ""
 
-        // Title (2022) -> 2022
-        val year =
-            Regex("""\((\d{4})\)$""").find(title)?.groupValues?.getOrNull(1)?.toIntOrNull()
-
-        return newMovieSearchResponse(title, href, this@Ask4MovieProvider.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
+        return newMovieSearchResponse(title, href, TvType.Movie) {
+            this.posterUrl = poster
+        }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
         val url = "$mainUrl/?s=$query"
-        val doc = app.post(
-            url,
-//            data = mapOf("np_asl_data" to "customset[]=post&customset[]=ct_channel&customset[]=post&customset[]=post&customset[]=post&customset[]=post&asl_gen[]=title&asl_gen[]=exact&qtranslate_lang=0&filters_initial=1&filters_changed=0")
-        ).document
-        return doc.select("div.item").map {
-            it.toSearchResponse()
-        }
+        val doc = app.post(url).document
+        return doc.select("div.item").map { it.toSearchResponse() }
     }
 
     private fun getIframe(html: String): String? {
         val data = Regex("""<script src="data:text\/javascript;base64,([^"']*)""").findAll(html)
-            .lastOrNull()?.groupValues?.getOrNull(1) ?: return null
+            .lastOrNull()?.groupValues?.get(1) ?: return null
         val decoded = base64Decode(data)
         val iframeUrlRegex = Regex("""dir['"],['"]([^"']*)""")
 
-        val iframeEncoded = iframeUrlRegex.find(decoded)?.groupValues?.getOrNull(1) ?: return null
+        val iframeEncoded = iframeUrlRegex.find(decoded)?.groupValues?.get(1) ?: return null
         val iframe = base64Decode(iframeEncoded)
         return Jsoup.parse(iframe).select("iframe").attr("src")
     }
 
     private suspend fun getEpisodes(iframe: String): List<Episode> {
         val playlistDoc = app.get(iframe).document
-
-        // S04┋E01
         val episodeRegex = Regex("""S(\d+).E(\d+)""")
         return playlistDoc.select("span.episode").mapNotNull { episode ->
             val partialUrl = episode.attr("data-url")
             val fullUrl = "https://${URI(iframe).rawAuthority}$partialUrl"
             val info = episodeRegex.find(episode.text())
-            val seasonIndex = info?.groupValues?.getOrNull(1)?.toIntOrNull()
-            val episodeIndex = info?.groupValues?.getOrNull(2)?.toIntOrNull()
-            newEpisode(fullUrl) { this.episode = episodeIndex ; this.season = seasonIndex }
+            val seasonIndex = info?.groupValues?.get(1)?.toIntOrNull()
+            val episodeIndex = info?.groupValues?.get(2)?.toIntOrNull()
+            newEpisode(fullUrl) {
+                this.episode = episodeIndex
+                this.season = seasonIndex
+            }
         }
     }
 
@@ -95,9 +82,9 @@ class Ask4MovieProvider : MainAPI() {
                 val poster = posterRegex.find(thumb.attr("style"))?.groupValues?.get(1)
                 val href = thumb.select("a").attr("href")
                 val title = element.select("div.video-short-intro a").text()
-                val year =
-                    Regex("""\((\d{4})\)$""").find(title)?.groupValues?.getOrNull(1)?.toIntOrNull()
-                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
+                newMovieSearchResponse(title, href, TvType.Movie) {
+                    this.posterUrl = poster
+                }
             }.ifEmpty {
                 isHorizontal = false
                 it.select("div.channel-content.clearfix").map { searchElement ->
@@ -106,7 +93,7 @@ class Ask4MovieProvider : MainAPI() {
             }
 
             val title = it.select("div.title").text()
-            if (title.contains("porn", true) && !settingsForProvider.enableAdult) return@mapNotNull null
+            if (title.contains("porn", true)) return@mapNotNull null
             HomePageList(title, items, isHorizontal)
         }
         return newHomePageResponse(mappedRows)
@@ -117,19 +104,16 @@ class Ask4MovieProvider : MainAPI() {
         val document = response.document
 
         val seasons = document.select("div.item")
-        val isSingleVideo = (seasons.isNullOrEmpty())
+        val isSingleVideo = seasons.isEmpty()
         val yearRegex = Regex("""\((\d{4})\)$""")
 
         if (isSingleVideo) {
             val description = document.select("div.custom.video-the-content").text().trim()
-            val (title, year) = document.select("a.video-title").text().let {
-                it.replace(yearRegex, "") to yearRegex.find(it)?.groupValues?.get(1)?.toIntOrNull()
-            }
-            val genres =
-                document.selectFirst("div.categories.cactus-info")?.select("a")?.map { it.text() }
+            val titleRaw = document.select("a.video-title").text()
+            val title = titleRaw.replace(yearRegex, "").trim()
+            val year = yearRegex.find(titleRaw)?.groupValues?.get(1)?.toIntOrNull()
+            val genres = document.selectFirst("div.categories.cactus-info")?.select("a")?.map { it.text() }
 
-            // This is actually a json with all the data, but I opted to just scrape the html
-            // Try the json in the future if html turns out bad
             val posterRegex = Regex("""contentUrl['"].*?(http[^"']*)""")
             val poster = posterRegex.find(response.text)?.groupValues?.get(1)
             val recommendations = document.select("div.cactus-sub-wrap article").mapNotNull {
@@ -137,23 +121,17 @@ class Ask4MovieProvider : MainAPI() {
             }
 
             val iframe = getIframe(response.text)
-            // It can be a season as a single video iframe!
             return if (iframe?.contains("/p/") == true) {
                 val episodes = getEpisodes(iframe)
-                newTvSeriesLoadResponse(
-                    title,
-                    url,
-                    this.name,
-                    TvType.TvSeries,
-                    episodes,
-                    poster,
-                    year,
-                    recommendations = recommendations,
-                    tags = genres,
-                    plot = description
-                )
+                newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
+                    this.posterUrl = poster
+                    this.year = year
+                    this.recommendations = recommendations
+                    this.tags = genres
+                    this.plot = description
+                }
             } else {
-                newMovieLoadResponse(title, url, TvType.Movie, iframe) {
+                newMovieLoadResponse(title, url, TvType.Movie, iframe ?: "") {
                     this.posterUrl = poster
                     this.tags = genres
                     this.plot = description
@@ -176,30 +154,25 @@ class Ask4MovieProvider : MainAPI() {
                     ?.text()?.substringAfter("Genre:")?.split(",")
             }
 
-            val (title, year) = document.select("h3.channel-name").text().let {
-                it.replace(yearRegex, "") to yearRegex.find(it)?.groupValues?.get(1)?.toIntOrNull()
-            }
+            val titleRaw = document.select("h3.channel-name").text()
+            val title = titleRaw.replace(yearRegex, "").trim()
+            val year = yearRegex.find(titleRaw)?.groupValues?.get(1)?.toIntOrNull()
 
             val poster = document.select("div.channel-pic > img").attr("src")
-            val mappedSeasons = seasons.map {
+            val mappedSeasons = seasons.mapNotNull {
                 val href = it.select("div.top-item > a").attr("href")
                 val text = app.get(href).text
-                val iframe = getIframe(text) ?: return@apmap emptyList()
+                val iframe = getIframe(text) ?: return@mapNotNull null
                 getEpisodes(iframe)
             }.flatten()
 
-            return newTvSeriesLoadResponse(
-                title,
-                url,
-                this.name,
-                TvType.TvSeries,
-                mappedSeasons,
-                poster,
-                year,
-                recommendations = recommendations,
-                tags = genres,
-                plot = description
-            )
+            return newTvSeriesLoadResponse(title, url, TvType.TvSeries, mappedSeasons) {
+                this.posterUrl = poster
+                this.year = year
+                this.recommendations = recommendations
+                this.tags = genres?.map { it.trim() }
+                this.plot = description
+            }
         }
     }
 
@@ -213,5 +186,3 @@ class Ask4MovieProvider : MainAPI() {
         return true
     }
 }
-
-

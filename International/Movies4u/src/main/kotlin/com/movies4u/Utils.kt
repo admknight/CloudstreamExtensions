@@ -1,5 +1,6 @@
 package com.movies4u
 
+import com.lagradost.cloudstream3.Score
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.app
 import org.json.JSONObject
@@ -11,7 +12,7 @@ data class VideoLocal(
     val overview: String? = null,
     val thumbnail: String? = null,
     val released: String? = null,
-    val rating: Double? = null
+    val rating: Score? = null
 )
 
 suspend fun fetchTmdbLogoUrl(
@@ -87,5 +88,3 @@ suspend fun fetchTmdbLogoUrl(
     // No language match & no voted logos
     return null
 }
-
-
