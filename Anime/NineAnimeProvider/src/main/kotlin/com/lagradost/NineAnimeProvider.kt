@@ -7,6 +7,7 @@ import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.jsoup.Jsoup
 
 class NineAnimeProvider : MainAPI() {
@@ -18,8 +19,6 @@ class NineAnimeProvider : MainAPI() {
     override val supportedTypes = setOf(TvType.Anime)
     override val hasQuickSearch = true
 
-    // taken from https://github.com/saikou-app/saikou/blob/b35364c8c2a00364178a472fccf1ab72f09815b4/app/src/main/java/ani/saikou/parsers/anime/NineAnime.kt
-    // GNU General Public License v3.0 https://github.com/saikou-app/saikou/blob/main/LICENSE.md
     companion object {
         private const val nineAnimeKey =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -30,7 +29,7 @@ class NineAnimeProvider : MainAPI() {
                 encrypt(
                     cipher(mainKey, encode(text)),
                     nineAnimeKey
-            )//.replace("""=+$""".toRegex(), "")
+                )
             )
         }
 
@@ -155,7 +154,7 @@ class NineAnimeProvider : MainAPI() {
             val subbedEpisodes = meta?.selectFirst(".sub")?.text()?.toIntOrNull()
             val dubbedEpisodes = meta?.selectFirst(".dub")?.text()?.toIntOrNull()
 
-            newAnimeSearchResponse(title.text() ?: return@mapNotNull null, link) {
+            newAnimeSearchResponse(title.text() ?: return@mapNotNull null, link, TvType.Anime) {
                 this.posterUrl = poster
                 addDubStatus(
                     dubbedEpisodes != null,
@@ -174,15 +173,11 @@ class NineAnimeProvider : MainAPI() {
     )
 
     data class QuickSearchResponse(
-        //@JsonProperty("status") val status: Int? = null,
         @JsonProperty("result") val result: QuickSearchResult? = null,
-        //@JsonProperty("message") val message: String? = null,
-        //@JsonProperty("messages") val messages: ArrayList<String> = arrayListOf()
     )
 
     data class QuickSearchResult(
         @JsonProperty("html") val html: String? = null,
-        //@JsonProperty("linkMore") val linkMore: String? = null
     )
 
     override suspend fun quickSearch(query: String): List<SearchResponse>? {
@@ -194,7 +189,7 @@ class NineAnimeProvider : MainAPI() {
         return document.select(".items > a").mapNotNull { element ->
             val link = fixUrl(element?.attr("href") ?: return@mapNotNull null)
             val title = element.selectFirst(".info > .name")?.text() ?: return@mapNotNull null
-            newAnimeSearchResponse(title, link) {
+            newAnimeSearchResponse(title, link, TvType.Anime) {
                 posterUrl = element.selectFirst(".poster > span > img")?.attr("src")
             }
         }
@@ -202,14 +197,13 @@ class NineAnimeProvider : MainAPI() {
 
     override suspend fun search(query: String): List<SearchResponse> {
         val vrf = encodeVrf(query, cipherKey)
-        //?language%5B%5D=${if (selectDub) "dubbed" else "subbed"}&
         val url =
             "$mainUrl/filter?keyword=${encode(query)}&vrf=${vrf}&page=1"
         return app.get(url).document.select("#list-items div.ani.poster.tip > a").mapNotNull {
             val link = fixUrl(it.attr("href") ?: return@mapNotNull null)
             val img = it.select("img")
             val title = img.attr("alt")
-            newAnimeSearchResponse(title, link) {
+            newAnimeSearchResponse(title, link, TvType.Anime) {
                 posterUrl = img.attr("src")
             }
         }
@@ -238,31 +232,25 @@ class NineAnimeProvider : MainAPI() {
         val subEpisodes = ArrayList<Episode>()
         val dubEpisodes = ArrayList<Episode>()
 
-        //TODO RECOMMENDATIONS
-
         Jsoup.parse(body).body().select(".episodes > ul > li > a").mapNotNull { element ->
             val ids = element.attr("data-ids").split(",", limit = 2)
 
-            val epNum = element.attr("data-num")
-                .toIntOrNull() // might fuck up on 7.5 ect might use data-slug instead
+            val epNum = element.attr("data-num").toIntOrNull()
             val epTitle = element.selectFirst("span.d-title")?.text()
-            //val filler = element.hasClass("filler")
             ids.getOrNull(1)?.let { dub ->
                 dubEpisodes.add(
-                    newEpisode(
-                        "$mainUrl/ajax/server/list/$dub?vrf=${encodeVrf(dub, cipherKey)}",
-                        epTitle,
-                        episode = epNum
-                    )
+                    newEpisode("$mainUrl/ajax/server/list/$dub?vrf=${encodeVrf(dub, cipherKey)}") {
+                        this.name = epTitle
+                        this.episode = epNum
+                    }
                 )
             }
             ids.getOrNull(0)?.let { sub ->
                 subEpisodes.add(
-                    newEpisode(
-                        "$mainUrl/ajax/server/list/$sub?vrf=${encodeVrf(sub, cipherKey)}",
-                        epTitle,
-                        episode = epNum
-                    )
+                    newEpisode("$mainUrl/ajax/server/list/$sub?vrf=${encodeVrf(sub, cipherKey)}") {
+                        this.name = epTitle
+                        this.episode = epNum
+                    }
                 )
             }
         }
@@ -273,7 +261,7 @@ class NineAnimeProvider : MainAPI() {
 
             plot = info.selectFirst(".synopsis > .shorting > .content")?.text()
             posterUrl = binfo.selectFirst(".poster > span > img")?.attr("src")
-            rating = ratingElement.attr("data-score").toFloat().times(1000f).toInt()
+            this.score = Score.from10(ratingElement.attr("data-score"))
 
             info.select(".bmeta > .meta > div").forEach { element ->
                 when (element.ownText()) {
@@ -286,21 +274,16 @@ class NineAnimeProvider : MainAPI() {
                     "Type: " -> {
                         type = when (element.selectFirst("span > a")?.text()) {
                             "ONA" -> TvType.OVA
-                            else -> {
-                                type
-                            }
+                            else -> type
                         }
                     }
                     "Status: " -> {
                         showStatus = when (element.selectFirst("span")?.text()) {
                             "Releasing" -> ShowStatus.Ongoing
                             "Completed" -> ShowStatus.Completed
-                            else -> {
-                                showStatus
-                            }
+                            else -> showStatus
                         }
                     }
-                    else -> {}
                 }
             }
         }
@@ -316,7 +299,6 @@ class NineAnimeProvider : MainAPI() {
         val result: Result? = null
     )
 
-    //TODO 9anime outro into {"status":200,"result":{"url":"","skip_data":{"intro_begin":67,"intro_end":154,"outro_begin":1337,"outro_end":1415,"count":3}},"message":"","messages":[]}
     private suspend fun getEpisodeLinks(id: String): Links? {
         return app.get("$mainUrl/ajax/server/$id?vrf=${encodeVrf(id, cipherKey)}").parsedSafe()
     }
@@ -327,25 +309,26 @@ class NineAnimeProvider : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        val body = app.get(data).parsed<Response>().html
+        val body = app.get(data).parsedSafe<Response>()?.html ?: return false
         val document = Jsoup.parse(body)
 
         document.select("li").map {
             try {
                 val name = it.text()
                 val encodedStreamUrl =
-                    getEpisodeLinks(it.attr("data-link-id"))?.result?.url ?: return@apmap
+                    getEpisodeLinks(it.attr("data-link-id"))?.result?.url ?: return@map
                 val url = decodeVrf(encodedStreamUrl, cipherKey)
                 if (!loadExtractor(url, mainUrl, subtitleCallback, callback)) {
                     callback(
                         newExtractorLink(
-                            this.name,
-                            name,
-                            url,
-                            mainUrl,
-                            Qualities.Unknown.value,
-                            url.contains(".m3u8")
-                        )
+                            source = this.name,
+                            name = name,
+                            url = url,
+                            type = INFER_TYPE
+                        ) {
+                            this.referer = mainUrl
+                            this.quality = Qualities.Unknown.value
+                        }
                     )
                 }
             } catch (e: Exception) {
@@ -356,7 +339,3 @@ class NineAnimeProvider : MainAPI() {
         return true
     }
 }
-
-
-
-

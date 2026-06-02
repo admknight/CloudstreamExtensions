@@ -87,7 +87,7 @@ class Pmsm : MainAPI() {
         val year = extractYear(document.selectFirst("div.details-info p:contains(Year)")?.text() ?: rawTitle)
         val duration = document.selectFirst("span[itemprop=duration]")?.text()?.replace(Regex("\\D"), "")
             ?.toIntOrNull()
-        val rating = Regex("""(\d+(\.\d+)?)""").find(document.selectFirst("span.data-imdb")?.text().orEmpty())
+        val this.score = Score.from10(Regex("""(\d+(\.\d+)?)""").find(document.selectFirst("span.data-imdb")?.text().orEmpty()))
             ?.groupValues?.firstOrNull()?.toDoubleOrNull()
         val trailerId = document.selectFirst("span.data-trailer[data-tid], a.btn-trailer[data-tid]")
             ?.attr("data-tid")?.trim()

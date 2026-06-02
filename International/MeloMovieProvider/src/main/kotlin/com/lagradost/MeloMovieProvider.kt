@@ -48,26 +48,11 @@ class MeloMovieProvider : MainAPI() {
             val currentPoster = "$mainUrl/assets/images/poster/${i.imdbId}.jpg"
             if (i.type == 2) { // TV-SERIES
                 returnValue.add(
-                    newTvSeriesSearchResponse(
-                        i.title,
-                        currentUrl,
-                        this.name,
-                        TvType.TvSeries,
-                        currentPoster,
-                        i.year,
-                        null
-                    )
+                    newTvSeriesSearchResponse(i.title, currentUrl, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = currentPoster }
                 )
             } else if (i.type == 1) { // MOVIE
                 returnValue.add(
-                    newMovieSearchResponse(
-                        i.title,
-                        currentUrl,
-                        this.name,
-                        TvType.Movie,
-                        currentUrl,
-                        i.year
-                    )
+                    newMovieSearchResponse(i.title, currentUrl, this.name) { this.posterUrl = TvType.Movie ; this.quality = currentUrl }
                 )
             }
         }

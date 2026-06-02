@@ -55,15 +55,7 @@ class WatchAsianProvider : MainAPI() {
                         val name = (innerBody?.selectFirst("h3.title")?.text() ?: innerBody?.text())
                             ?: "<Untitled>"
                         //Log.i(this.name, "Result => (innerBody, image) ${innerBody} / ${image}")
-                        newMovieSearchResponse(
-                            name,
-                            link,
-                            this.name,
-                            TvType.TvSeries,
-                            image,
-                            year = null,
-                            id = null,
-                        )
+                        newMovieSearchResponse(name, link, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image ; this.year = null ; this.id = null }
                     }.filterNotNull().distinctBy { c -> c.url })
             }.filter { a -> a.list.isNotEmpty() }
         )
@@ -85,14 +77,7 @@ class WatchAsianProvider : MainAPI() {
             val imgsrc = innerA.select("img").attr("data-original") ?: return@mapNotNull null
             val image = fixUrlNull(imgsrc)
             //Log.i(this.name, "Result => (img movie) $title / $link")
-            newMovieSearchResponse(
-                title,
-                link,
-                this.name,
-                TvType.Movie,
-                image,
-                year
-            )
+            newMovieSearchResponse(title, link, this.name) { this.posterUrl = TvType.Movie ; this.quality = image }
         }.distinctBy { a -> a.url }
     }
 
@@ -156,14 +141,7 @@ class WatchAsianProvider : MainAPI() {
             val regex = "(?<=episode-).*?(?=.html)".toRegex()
             val count = regex.find(epLink, mainUrl.length)?.value?.toIntOrNull() ?: 0
             //Log.i(this.name, "Result => $epLink (regexYear) ${count}")
-            newEpisode(
-                name = null,
-                season = null,
-                episode = count,
-                data = epLink,
-                posterUrl = poster,
-                date = null
-            )
+            newEpisode(name = null) { this.season = null ; this.episode = count ; this.data = epLink ; this.posterUrl = poster ; this.date = null }
         }
         //If there's only 1 episode, consider it a movie.
         if (episodeList.size == 1) {

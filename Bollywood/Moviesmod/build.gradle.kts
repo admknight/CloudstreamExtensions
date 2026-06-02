@@ -1,1 +1,16 @@
-version = 30  cloudstream {     //     language = "hi"     // All of these properties are optional, you can safely remove them           description = "Includes Topmovies"           authors = listOf("Adam Knight")      /**      * Status int as the following:      * 0: Down      * 1: Ok      * 2: Slow      * 3: Beta only      * */          status = 1 // will be 3 if unspecified          tvTypes = listOf(         "TvSeries",         "Movie",         "AsianDrama",         "Anime"     )           iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Moviesmod/icon.png" } 
+version = 30
+
+cloudstream {
+    language = "hi"
+    authors = listOf("Adam Knight")
+    description = "Includes Topmovies"
+    status = 1
+    tvTypes = listOf(         "TvSeries",         "Movie",         "AsianDrama",         "Anime"     )
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Moviesmod/icon.png"
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

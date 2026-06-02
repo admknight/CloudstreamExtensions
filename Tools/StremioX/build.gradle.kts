@@ -1,1 +1,10 @@
-import org.jetbrains.kotlin.konan.properties.Properties  // use an integer for version numbers version = 22 android {     buildFeatures {         buildConfig = true         viewBinding = true     }     defaultConfig {              requiresResources = true          iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioX/icon.png" } 
+version = 22
+
+cloudstream {
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

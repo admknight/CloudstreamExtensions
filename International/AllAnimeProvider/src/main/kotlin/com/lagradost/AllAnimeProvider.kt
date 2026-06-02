@@ -270,13 +270,13 @@ class AllAnimeProvider : MainAPI() {
         //    val recName = recTitle.text() ?: return@mapNotNull null
         //    val href = fixUrlNull(recTitle.attr("href")) ?: return@mapNotNull null
         //    val img = it.selectFirst(".image > img").attr("src") ?: return@mapNotNull null
-        //    newAnimeSearchResponse(recName, href, this.name, TvType.Anime, img)
+        //    newAnimeSearchResponse(recName, href, this.name) { this.posterUrl = TvType.Anime ; this.quality = img }
         //}
 
         return newAnimeLoadResponse(title, url, TvType.Anime) {
             posterUrl = poster
             backgroundPosterUrl = showData.banner
-            rating = showData.averageScore?.times(100)
+            this.score = Score.from10(showData.averageScore?.times(100))
             tags = showData.genres
             year = showData.airedStart?.year
             duration = showData.episodeDuration?.div(60_000)

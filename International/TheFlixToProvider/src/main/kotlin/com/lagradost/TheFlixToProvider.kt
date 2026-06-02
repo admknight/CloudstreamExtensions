@@ -184,15 +184,7 @@ class TheFlixToProvider : MainAPI() {
                                 ""
                             )
                         }/season-1/episode-1"
-                    newTvSeriesSearchResponse(
-                        title,
-                        link,
-                        this.name,
-                        typeinfo,
-                        poster,
-                        null,
-                        null,
-                    )
+                    newTvSeriesSearchResponse(title, link, this.name) { this.posterUrl = typeinfo ; this.quality = poster }
                 }
                 items.add(HomePageList(homename, home))
             }
@@ -250,26 +242,11 @@ class TheFlixToProvider : MainAPI() {
                         else "$mainUrl/tv-show/${info.id}-${cleanTitle(title)}/season-1/episode-1"
                         if (typeinfo == TvType.Movie) {
                             search.add(
-                                newMovieSearchResponse(
-                                    title,
-                                    link,
-                                    this.name,
-                                    TvType.Movie,
-                                    poster,
-                                    null
-                                )
+                                newMovieSearchResponse(title, link, this.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
                             )
                         } else {
                             search.add(
-                                newTvSeriesSearchResponse(
-                                    title,
-                                    link,
-                                    this.name,
-                                    TvType.TvSeries,
-                                    poster,
-                                    null,
-                                    null
-                                )
+                                newTvSeriesSearchResponse(title, link, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = poster }
                             )
                         }
                     }
@@ -460,7 +437,7 @@ class TheFlixToProvider : MainAPI() {
                     val epDesc = epi.overview
                     val test = epi.videos
                     val ratinginfo = (epi.voteAverage)?.times(10)?.toInt()
-                    val rating = if (ratinginfo?.equals(0) == true) null else ratinginfo
+                    val this.score = Score.from10(if (ratinginfo?.equals(0) == true) null else ratinginfo)
                     val eps = newEpisode(
                         "$mainUrl/tv-show/$movieId-${cleanTitle(movietitle!!)}/season-$seasonum/episode-$episodenu",
                         title,
@@ -468,7 +445,7 @@ class TheFlixToProvider : MainAPI() {
                         episodenu,
                         description = epDesc!!,
                         posterUrl = seasonPoster,
-                        rating = rating,
+                        this.score = Score.from10(rating,)
                     )
                     if (test!!.isNotEmpty()) {
                         episodes.add(eps)
@@ -478,7 +455,7 @@ class TheFlixToProvider : MainAPI() {
                 }
             }
         }
-        val rating = metadata.voteAverage?.toFloat()?.times(1000)?.toInt()
+        val this.score = Score.from10(metadata.voteAverage?.toFloat()?.times(1000)?.toInt())
 
         val tags = metadata.genres?.mapNotNull { it.name }
 
@@ -487,14 +464,7 @@ class TheFlixToProvider : MainAPI() {
             val posterrec = loadDocs.posterUrl
             val link = if (isMovie) "$mainUrl/movie/${loadDocs.id}-${cleanTitle(title)}"
             else "$mainUrl/tv-show/${loadDocs.id}-${cleanTitle(title)}/season-1/episode-1"
-            newMovieSearchResponse(
-                title,
-                link,
-                this.name,
-                tvtype,
-                posterrec,
-                year = null
-            )
+            newMovieSearchResponse(title, link, this.name) { this.posterUrl = tvtype ; this.quality = posterrec ; this.year = null }
         }
 
         val year = metadata.releaseDate?.substringBefore("-")

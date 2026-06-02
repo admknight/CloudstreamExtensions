@@ -94,24 +94,9 @@ class PelisplusSOProvider : MainAPI() {
             val isMovie = href.contains("/pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(
-                        title,
-                        href,
-                        this.name,
-                        TvType.Movie,
-                        image,
-                        year
-                )
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = image }
             } else {
-                newTvSeriesSearchResponse(
-                        title,
-                        href,
-                        this.name,
-                        TvType.TvSeries,
-                        image,
-                        year,
-                        null
-                )
+                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image }
             }
         }
     }
@@ -131,13 +116,7 @@ class PelisplusSOProvider : MainAPI() {
             val isValid = seasonid.size == 2
             val episode = if (isValid) seasonid.getOrNull(1) else null
             val season = if (isValid) seasonid.getOrNull(0) else null
-            newEpisode(
-                    href,
-                    epTitle,
-                    season = season,
-                    episode = episode,
-
-                    )
+            newEpisode(href) { this.name = epTitle ; this.season = season ; this.episode = episode }
         }.reversed()
 
         val year = Regex("(\\d*)").find(soup.select(".info-half").text())

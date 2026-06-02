@@ -211,26 +211,9 @@ override suspend fun search(query: String): List<SearchResponse>? {
         val quality = getQualityFromString(qualityInfo)
 
         if (isMovie) {
-            newMovieSearchResponse(
-                title,
-                href,
-                this.name,
-                TvType.Movie,
-                image,
-                null,
-                quality = quality
-            )
+            newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = image ; this.quality = quality }
         } else {
-            newTvSeriesSearchResponse(
-                title,
-                href,
-                this.name,
-                TvType.TvSeries,
-                image,
-                null,
-                null,
-                quality = quality
-            )
+            newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image ; this.quality = quality }
         }
     }
 }

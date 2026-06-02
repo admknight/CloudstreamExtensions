@@ -242,14 +242,7 @@ class KrunchyProvider : MainAPI() {
                 anime.link = fixUrl(anime.link)
                 anime.img = anime.img.replace("small", "full")
                 searchResutls.add(
-                    newAnimeSearchResponse(
-                        name = anime.name,
-                        url = anime.link,
-                        apiName = this.name,
-                        type = TvType.Anime,
-                        posterUrl = anime.img,
-                        dubStatus = dubstat,
-                    )
+                    newAnimeSearchResponse(name = anime.name, url = anime.link, TvType.Anime) { this.apiName = this.name ; this.posterUrl = anime.img ; this.dubStatus = dubstat }
                 )
                 ++count
             }

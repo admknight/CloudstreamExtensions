@@ -42,13 +42,7 @@ class SoloLatinoProvider : MainAPI() {
                 val title = it.selectFirst("a div.data h3")?.text()
                 val link = it.selectFirst("a")?.attr("href")
                 val img = it.selectFirst("div.poster img.lazyload")?.attr("data-srcset")
-                newTvSeriesSearchResponse(
-                    title!!,
-                    link!!,
-                    this.name,
-                    tvType,
-                    img,
-                )
+                newTvSeriesSearchResponse(title!!, link!!, this.name) { this.posterUrl = tvType ; this.quality = img }
             }
             items.add(HomePageList(name, home))
         }
@@ -62,13 +56,7 @@ class SoloLatinoProvider : MainAPI() {
             val title = it.selectFirst("a div.data h3")?.text()
             val link = it.selectFirst("a")?.attr("href")
             val img = it.selectFirst("div.poster img.lazyload")?.attr("data-srcset")
-            newTvSeriesSearchResponse(
-                title!!,
-                link!!,
-                this.name,
-                TvType.TvSeries,
-                img,
-            )
+            newTvSeriesSearchResponse(title!!, link!!, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = img }
         }
     }
 

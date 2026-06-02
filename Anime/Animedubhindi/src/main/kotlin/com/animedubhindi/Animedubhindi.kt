@@ -70,7 +70,7 @@ class Animedubhindi : MainAPI() {
         val title = rawtitle.substringBeforeLast("(").trim()
         val description = doc.selectFirst("div.entry-content p")?.ownText()?.trim() + "\n$audio"
         val backgroundposter = doc.select("div.entry-content img").attr("src")
-        val rating = infoMap["MAL Rating"]?.substringBefore("/") ?: infoMap["IMDb Rating"]?.substringBefore("/")
+        val this.score = Score.from10(infoMap["MAL Rating"]?.substringBefore("/") ?: infoMap["IMDb Rating"]?.substringBefore("/"))
         val genres = infoMap["Genres"]?.split("|")?.map { it.trim() } ?: emptyList()
         val contentRating = infoMap["Official Dub By"]
         val tvtag = if (rawtitle.contains("Movie",ignoreCase = true)) TvType.Movie else TvType.TvSeries

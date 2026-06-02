@@ -59,24 +59,9 @@ class CinecalidadProvider : MainAPI() {
             val isMovie = href.contains("/ver-pelicula/")
 
             if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    null
-                )
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = image }
             } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image }
             }
         }
     }

@@ -173,10 +173,7 @@ class JKAnimeProvider : MainAPI() {
                 val imagetest = !info.image.isNullOrBlank()
                 val image = if (imagetest) "https://cdn.jkdesu.com/assets/images/animes/video/image_thumb/${info.image}" else null
                 val link = "${url.removeSuffix("/")}/${info.number}"
-                val ep = newEpisode(
-                    link,
-                    posterUrl = image
-                )
+                val ep = newEpisode(link) { this.posterUrl = image }
                 episodes.add(ep)
             }
         }

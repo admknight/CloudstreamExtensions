@@ -58,9 +58,10 @@ class WcoProvider : MainAPI() {
                             ?.contains("DUB")
                             ?: false
                     val poster = filmPoster.selectFirst("> img")!!.attr("data-src")
-                    val set: EnumSet<DubStatus> =
-                        EnumSet.of(if (isDub) DubStatus.Dubbed else DubStatus.Subbed)
-                    newAnimeSearchResponse(title, href, this.name, TvType.Anime, poster, null, set)
+                    newAnimeSearchResponse(title, href, TvType.Anime) {
+                        this.posterUrl = poster
+                        addDubStatus(isDub, !isDub)
+                    }
                 }
                 items.add(HomePageList(i.second, results))
             } catch (e: Exception) {
@@ -93,19 +94,15 @@ class WcoProvider : MainAPI() {
                 i.selectFirst(".film-detail.film-detail-fix > div > span:nth-child(3)")!!.text()
 
             if (getType(type) == TvType.AnimeMovie) {
-                newMovieSearchResponse(
-                    title, href, this.name, TvType.AnimeMovie, img, year
-                )
+                newMovieSearchResponse(title, href, TvType.AnimeMovie) {
+                    this.posterUrl = img
+                }
             } else {
-                newAnimeSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Anime,
-                    img,
-                    year,
-                    EnumSet.of(if (isDub) DubStatus.Dubbed else DubStatus.Subbed),
-                )
+                newAnimeSearchResponse(title, href, TvType.Anime) {
+                    this.posterUrl = img
+                    this.year = year
+                    addDubStatus(isDub, !isDub)
+                }
             }
         }
     }
@@ -148,19 +145,15 @@ class WcoProvider : MainAPI() {
             val year = filmInfo?.select("span")?.get(0)?.text()?.toIntOrNull()
             val type = filmInfo?.select("span")?.get(1)?.text().toString()
             if (getType(type) == TvType.AnimeMovie) {
-                newMovieSearchResponse(
-                    title, href, this.name, TvType.AnimeMovie, img, year
-                )
+                newMovieSearchResponse(title, href, TvType.AnimeMovie) {
+                    this.posterUrl = img
+                }
             } else {
-                newAnimeSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Anime,
-                    img,
-                    year,
-                    EnumSet.of(if (isDub) DubStatus.Dubbed else DubStatus.Subbed),
-                )
+                newAnimeSearchResponse(title, href, TvType.Anime) {
+                    this.posterUrl = img
+                    this.year = year
+                    addDubStatus(isDub, !isDub)
+                }
             }
         }
     }
@@ -236,6 +229,3 @@ class WcoProvider : MainAPI() {
         return true
     }
 }
-
-
-

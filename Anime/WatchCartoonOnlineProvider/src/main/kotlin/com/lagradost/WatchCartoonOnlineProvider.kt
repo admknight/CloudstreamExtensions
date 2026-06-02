@@ -45,21 +45,13 @@ class WatchCartoonOnlineProvider : MainAPI() {
             val poster = fixUrl(header.selectFirst("> a > img")!!.attr("src"))
             val genreText = item.selectFirst("div.cerceve-tur-ve-genre")!!.ownText()
             if (genreText.contains("cartoon")) {
-                returnValue.add(newTvSeriesSearchResponse(title, href, this.name, TvType.Cartoon, poster, null, null))
+                returnValue.add(newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.Cartoon ; this.quality = poster })
             } else {
                 val isDubbed = genreText.contains("dubbed")
                 val set: EnumSet<DubStatus> =
                     EnumSet.of(if (isDubbed) DubStatus.Dubbed else DubStatus.Subbed)
                 returnValue.add(
-                    newAnimeSearchResponse(
-                        title,
-                        href,
-                        this.name,
-                        TvType.Anime,
-                        poster,
-                        null,
-                        set,
-                    )
+                    newAnimeSearchResponse(title, href, this.name) { this.posterUrl = TvType.Anime ; this.quality = poster }
                 )
             }
         }
@@ -83,15 +75,7 @@ class WatchCartoonOnlineProvider : MainAPI() {
             //val set: EnumSet<DubStatus> =
             //   EnumSet.of(if (isDubbed) DubStatus.Dubbed else DubStatus.Subbed)
             returnValue.add(
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.AnimeMovie,
-                    null,
-                    null,
-                    null,
-                )
+                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.AnimeMovie ; this.quality = null }
             )
         }
 
@@ -131,10 +115,7 @@ class WatchCartoonOnlineProvider : MainAPI() {
                         match2.groupValues[1].toIntOrNull(),
                     )
                 }
-                return@map newEpisode(
-                    href,
-                    text
-                )
+                return@map newEpisode(href) { this.name = text }
             }
             newTvSeriesLoadResponse(
                 title,
@@ -161,7 +142,7 @@ class WatchCartoonOnlineProvider : MainAPI() {
                 url,
                 this.name,
                 TvType.TvSeries,
-                listOf(newEpisode(url,title)),
+                listOf(newEpisode(url) { this.name = title }),
                 null,
                 null,
                 description,
@@ -246,24 +227,12 @@ class WatchCartoonOnlineProvider : MainAPI() {
 
         if (link.hd.isNotBlank())
             callback.invoke(
-                newExtractorLink(
-                    this.name,
-                    this.name + " HD",
-                    hdLink,
-                    "",
-                    Qualities.P720.value
-                )
+                newExtractorLink(this.name, this.name + " HD", hdLink, INFER_TYPE) { this.referer = "" ; this.quality = Qualities.P720.value }
             )
 
         if (link.enc.isNotBlank())
             callback.invoke(
-                newExtractorLink(
-                    this.name,
-                    this.name + " SD",
-                    sdLink,
-                    "",
-                    Qualities.P480.value
-                )
+                newExtractorLink(this.name, this.name + " SD", sdLink, INFER_TYPE) { this.referer = "" ; this.quality = Qualities.P480.value }
             )
 
         return true

@@ -143,9 +143,7 @@ class DubbedAnimeProvider : MainAPI() {
             val img = fixUrlNull(i.selectFirst("img.grid__img")?.attr("src"))
 
             if (getIsMovie(href)) {
-                newMovieSearchResponse(
-                    title, href, this.name, TvType.AnimeMovie, img, null
-                )
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.AnimeMovie ; this.quality = img }
             } else {
                 newAnimeSearchResponse(
                     title,
@@ -173,9 +171,7 @@ class DubbedAnimeProvider : MainAPI() {
             val title = innerDiv.selectFirst("> div.titleresults")?.text() ?: return@mapNotNull null
 
             if (getIsMovie(href)) {
-                newMovieSearchResponse(
-                    title, href, this.name, TvType.AnimeMovie, img, null
-                )
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.AnimeMovie ; this.quality = img }
             } else {
                 newAnimeSearchResponse(
                     title,

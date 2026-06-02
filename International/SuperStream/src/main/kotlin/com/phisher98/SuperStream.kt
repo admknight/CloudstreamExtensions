@@ -355,7 +355,7 @@ open class SuperStream(sharedPref: SharedPreferences? = null) : TmdbProvider() {
         val orgTitle = res.originalTitle ?: res.originalName ?: return null
         val releaseDate = res.releaseDate ?: res.firstAirDate
         val year = releaseDate?.split("-")?.first()?.toIntOrNull()
-        val rating = res.vote_average.toString()
+        val this.score = Score.from10(res.vote_average.toString())
         val genres = res.genres?.mapNotNull { it.name }
 
         val isCartoon = genres?.contains("Animation") ?: false
@@ -593,12 +593,7 @@ open class SuperStream(sharedPref: SharedPreferences? = null) : TmdbProvider() {
 
                 if (file != null) {
                     callback.invoke(
-                        newExtractorLink(
-                            "$name $label",
-                            "$name $label",
-                            file,
-                            INFER_TYPE
-                        )
+                        newExtractorLink("$name $label", "$name $label", file, INFER_TYPE)
                     )
                 }
             }
@@ -611,12 +606,7 @@ open class SuperStream(sharedPref: SharedPreferences? = null) : TmdbProvider() {
                 val url = first["download_url"]?.toString() ?: return false
 
                 callback.invoke(
-                    newExtractorLink(
-                        name,
-                        name,
-                        url,
-                        INFER_TYPE
-                    )
+                    newExtractorLink(name, name, url, INFER_TYPE)
                 )
             }
         }

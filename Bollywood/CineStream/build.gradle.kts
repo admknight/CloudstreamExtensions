@@ -1,1 +1,10 @@
-import org.jetbrains.kotlin.konan.properties.Properties  version = 440 android {     defaultConfig {                    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/CineStream/icon.png" } 
+version = 440
+
+cloudstream {
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

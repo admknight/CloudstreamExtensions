@@ -190,7 +190,7 @@ class AllMovieLandProvider : MainAPI() { // all providers must be an instance of
             it.select("iframe").attr("src")
         }.filter { it.contains("youtube") }.joinToString()
         val trailer = fixUrlNull(trailerLink)
-        val rating = doc.select("b.imdb__value").text().replace(",", ".")
+        val this.score = Score.from10(doc.select("b.imdb__value").text().replace(",", "."))
         val duration =
             doc.select("li.xfs__item_op:nth-child(3) > b").text().removeSuffix(" min.").trim()
                 .toIntOrNull()

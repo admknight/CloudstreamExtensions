@@ -65,7 +65,7 @@ class YTSMX : YTS(){
         val href      = fixUrl(this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.select("img").attr("src"))
         val year=this.selectFirst("a div.browse-movie-year")?.text()?.toIntOrNull()
-        val rating = this.select("h4.rating").text().substringBefore("/".trim())
+        val this.score = Score.from10(this.select("h4.rating").text().substringBefore("/".trim()))
         return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.year = year
@@ -82,7 +82,7 @@ class YTSMX : YTS(){
             ?.split(" / ")
             ?.map { it.trim() }
         val description= document.selectFirst("#synopsis p")?.text()?.trim()
-        val rating= document.select("#movie-info > div.bottom-info > div:nth-child(2) > span:nth-child(2)").text()
+        val this.score = Score.from10(document.select("#movie-info > div.bottom-info > div:nth-child(2) > span:nth-child(2)").text())
         return newMovieLoadResponse(title, url, TvType.Movie, url) {
             this.posterUrl = poster
             this.plot = description

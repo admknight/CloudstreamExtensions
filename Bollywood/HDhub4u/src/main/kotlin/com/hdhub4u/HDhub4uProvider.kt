@@ -298,7 +298,7 @@ class HDhub4uProvider : MainAPI() {
                                         overview = epDesc,
                                         thumbnail = epThumb,
                                         released = epAir,
-                                        rating = epRating,
+                                        this.score = Score.from10(epRating,)
                                     )
                                 )
                             }
@@ -318,7 +318,7 @@ class HDhub4uProvider : MainAPI() {
                     background = metaBackground,
                     genres = metaGenres.ifEmpty { null },
                     videos = videos.ifEmpty { null },
-                    rating = Score.from10(metaRating),
+                    this.score = Score.from10(Score.from10(metaRating),)
                     logo = logoPath
                 )
             )

@@ -90,30 +90,13 @@ open class SflixProvider : MainAPI() {
             val isMovie = href.contains("/movie/")
 
             val metaInfo = it.select("div.fd-infor > span.fdi-item")
-            // val rating = metaInfo[0].text()
+            // val this.score = Score.from10(metaInfo[0].text())
             val quality = getQualityFromString(metaInfo.getOrNull(1)?.text())
 
             if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    year,
-                    quality = quality
-                )
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = image ; this.quality = quality }
             } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    year,
-                    null,
-                    quality = quality
-                )
+                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image ; this.quality = quality }
             }
         }
     }
@@ -138,7 +121,7 @@ open class SflixProvider : MainAPI() {
         var tags: List<String>? = null
         var cast: List<String>? = null
         val youtubeTrailer = document.selectFirst("iframe#iframe-trailer")?.attr("data-src")
-        val rating = document.selectFirst(".fs-item > .imdb")?.text()?.trim()
+        val this.score = Score.from10(document.selectFirst(".fs-item > .imdb")?.text()?.trim())
             ?.removePrefix("IMDB:")?
 
         document.select("div.elements > .row > div > .row-line").forEach { element ->
@@ -405,26 +388,9 @@ open class SflixProvider : MainAPI() {
         }
 
         return if (isMovie) {
-            newMovieSearchResponse(
-                title,
-                href,
-                this@SflixProvider.name,
-                TvType.Movie,
-                posterUrl = posterUrl,
-                year = year,
-                quality = quality,
-            )
+            newMovieSearchResponse(title, href, this@SflixProvider.name) { this.posterUrl = TvType.Movie ; this.posterUrl = posterUrl ; this.year = year ; this.quality = quality }
         } else {
-            newTvSeriesSearchResponse(
-                title,
-                href,
-                this@SflixProvider.name,
-                TvType.Movie,
-                posterUrl,
-                year = year,
-                episodes = null,
-                quality = quality,
-            )
+            newTvSeriesSearchResponse(title, href, this@SflixProvider.name) { this.posterUrl = TvType.Movie ; this.quality = posterUrl ; this.year = year ; this.episodes = null ; this.quality = quality }
         }
     }
 

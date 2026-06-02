@@ -107,14 +107,7 @@ class EjaTv : MainAPI() {
         val loadData = parseJson<LoadData>(data)
 
         callback.invoke(
-            newExtractorLink(
-                this.name,
-                loadData.title,
-                loadData.url,
-                "",
-                Qualities.Unknown.value,
-                isM3u8 = true
-            )
+            newExtractorLink(this.name, loadData.title, loadData.url, INFER_TYPE) { this.referer = "" ; this.quality = Qualities.Unknown.value ; this.isM3u8 = true }
         )
         return true
     }

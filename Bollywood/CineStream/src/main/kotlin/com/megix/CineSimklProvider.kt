@@ -267,7 +267,7 @@ class CineSimklProvider: MainAPI() {
         val isAsian = !isAnime && country in listOf("JP", "KR", "CN")
         val ids = json.ids
         val allRatings = json.ratings
-        val rating = allRatings?.mal?.rating ?: allRatings?.imdb?.rating
+        val this.score = Score.from10(allRatings?.mal?.rating ?: allRatings?.imdb?.rating)
         val kitsuId = ids?.kitsu
         val anilistId = ids?.anilist?.toIntOrNull()
         val malId = ids?.mal?.toIntOrNull()

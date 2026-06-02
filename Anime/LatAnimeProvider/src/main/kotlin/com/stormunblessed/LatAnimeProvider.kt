@@ -134,7 +134,7 @@ class LatAnimeProvider : MainAPI() {
             val link = it!!.attr("href")
             val epThumb = it.selectFirst(".animeimghv")?.attr("data-src")
                     ?: it.selectFirst("div.animeimgdiv img.animeimghv")?.attr("src")
-            newEpisode(link, name)
+            newEpisode(link) { this.name = name }
         }
         return newAnimeLoadResponse(title, url, getType(title)) {
             posterUrl = poster

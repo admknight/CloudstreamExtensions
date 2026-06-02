@@ -28,17 +28,7 @@ class Ask4MovieProvider : MainAPI() {
         val year =
             Regex("""\((\d{4})\)$""").find(title)?.groupValues?.getOrNull(1)?.toIntOrNull()
 
-        return newMovieSearchResponse(
-            title,
-            href,
-            this@Ask4MovieProvider.name,
-            TvType.Movie,
-            poster,
-            year,
-            null,
-            null,
-            null
-        )
+        return newMovieSearchResponse(title, href, this@Ask4MovieProvider.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
     }
 
     // Used in movies/single seasons to get recommendations
@@ -53,17 +43,7 @@ class Ask4MovieProvider : MainAPI() {
         val year =
             Regex("""\((\d{4})\)$""").find(title)?.groupValues?.getOrNull(1)?.toIntOrNull()
 
-        return newMovieSearchResponse(
-            title,
-            href,
-            this@Ask4MovieProvider.name,
-            TvType.Movie,
-            poster,
-            year,
-            null,
-            null,
-            null
-        )
+        return newMovieSearchResponse(title, href, this@Ask4MovieProvider.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -99,11 +79,7 @@ class Ask4MovieProvider : MainAPI() {
             val info = episodeRegex.find(episode.text())
             val seasonIndex = info?.groupValues?.getOrNull(1)?.toIntOrNull()
             val episodeIndex = info?.groupValues?.getOrNull(2)?.toIntOrNull()
-            newEpisode(
-                fullUrl,
-                episode = episodeIndex,
-                season = seasonIndex
-            )
+            newEpisode(fullUrl) { this.episode = episodeIndex ; this.season = seasonIndex }
         }
     }
 
@@ -121,7 +97,7 @@ class Ask4MovieProvider : MainAPI() {
                 val title = element.select("div.video-short-intro a").text()
                 val year =
                     Regex("""\((\d{4})\)$""").find(title)?.groupValues?.getOrNull(1)?.toIntOrNull()
-                newMovieSearchResponse(title, href, this.name, TvType.Movie, poster, year)
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
             }.ifEmpty {
                 isHorizontal = false
                 it.select("div.channel-content.clearfix").map { searchElement ->

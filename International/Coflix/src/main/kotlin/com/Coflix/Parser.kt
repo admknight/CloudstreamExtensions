@@ -36,14 +36,7 @@ data class EpRes(
     val episodes: List<Episode>,
 )
 
-data class newEpisode(
-    val id: Long,
-    val title: String,
-    val number: String,
-    val season: String,
-    val links: String,
-    val image: String,
-)
+data class newEpisode(val id: Long) { this.name = val title: String ; this.season = val number: String ; this.episode = val season: String }
 
 typealias Search = List<Search2>
 

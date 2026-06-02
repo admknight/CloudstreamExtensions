@@ -125,11 +125,7 @@ class AniwaveProvider : MainAPI() {
            val epTitle = this.selectFirst("span.d-title")?.text()
            val epurl = "$url/ep-$epNum"
            val data = "{\"llaa\":\"null\",\"epurl\":\"$epurl\",\"needDUB\":$needDub}"
-          return newEpisode(
-               data,
-               epTitle,
-               episode = epNum
-           )
+          return newEpisode(data) { this.name = epTitle ; this.episode = epNum }
        } */
 
 
@@ -317,7 +313,7 @@ class AniwaveProvider : MainAPI() {
             this.seasonNames = names.map { (name, int) -> SeasonData(int, name) }
             plot = info.selectFirst(".synopsis > .shorting > .content")?.text()
             this.posterUrl = poster
-            rating = ratingElement.attr("data-score").toFloat().times(1000f).toInt()
+            this.score = Score.from10(ratingElement.attr("data-score").toFloat().times(1000f).toInt())
             this.backgroundPosterUrl = backposter
             this.tags = genres
             this.recommendations = recss

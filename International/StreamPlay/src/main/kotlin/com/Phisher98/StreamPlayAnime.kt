@@ -88,7 +88,7 @@ class StreamPlayAnime : MainAPI() {
         val title = this.title.english ?: this.title.romaji ?: ""
         val url = "$mainUrl/anime/${this.id}"
         val posterUrl = this.coverImage.large
-        val rating = this.averageScore
+        val this.score = Score.from10(this.averageScore)
         return newAnimeSearchResponse(title, url, TvType.Anime) {
             this.posterUrl = posterUrl
             this.score= Score.from100(rating)

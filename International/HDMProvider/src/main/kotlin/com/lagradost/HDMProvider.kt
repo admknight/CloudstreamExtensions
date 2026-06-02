@@ -27,7 +27,7 @@ class HDMProvider : MainAPI() {
             val data = i.selectFirst("> div.item")!!
             val img = data.selectFirst("> img")!!.attr("src")
             val name = data.selectFirst("> div.movie-details")!!.text()
-            newMovieSearchResponse(name, href, this.name, TvType.Movie, img, null)
+            newMovieSearchResponse(name, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = img }
         }
     }
 
@@ -42,14 +42,7 @@ class HDMProvider : MainAPI() {
         val response = app.get(data).text
         val key = Regex("playlist\\.m3u8(.*?)\"").find(response)?.groupValues?.get(1) ?: return false
         callback.invoke(
-            newExtractorLink(
-                this.name,
-                this.name,
-                "https://hls.1o.to/vod/$slug/playlist.m3u8$key",
-                "",
-                Qualities.P720.value,
-                true
-            )
+            newExtractorLink(this.name, this.name, "https://hls.1o.to/vod/$slug/playlist.m3u8$key", INFER_TYPE) { this.referer = "" ; this.quality = Qualities.P720.value ; this.isM3u8 = true }
         )
         return true
     }
@@ -95,15 +88,7 @@ class HDMProvider : MainAPI() {
                 var image = item?.select("img")?.get(1)?.attr("src") ?: ""
                 val year = null
 
-                newMovieSearchResponse(
-                    name,
-                    link,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    year,
-                    null,
-                )
+                newMovieSearchResponse(name, link, this.name) { this.posterUrl = TvType.Movie ; this.quality = image }
             }
 
             all.add(

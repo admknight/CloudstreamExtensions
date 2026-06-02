@@ -50,8 +50,7 @@ cloudstream {
             minSdk = 21
             targetSdk = 34
             
-            buildConfigField("String", "TMDB_API", "\"https://api.themoviedb.org/3\"")
-            buildConfigField("String", "TMDBAPI", "\"https://api.themoviedb.org/3\"")
+            buildConfigField("String", "TMDB_API", "\"1865f43a0549ca50d341dd9ab8b29f49\"")
             buildConfigField("String", "TMDB_API_KEY", "\"1865f43a0549ca50d341dd9ab8b29f49\"")
             buildConfigField("String", "TMDBIMAGEBASEURL", "\"https://image.tmdb.org/t/p/w500\"")
             buildConfigField("String", "SIMKL_CLIENT_ID", "\"\"")

@@ -39,7 +39,7 @@ open class YTS : MainAPI() {
         val href      = fixUrl(this.select("a").attr("href"))
         val posterUrl = fixUrlNull(this.select("img").attr("src"))
         val year=this.selectFirst("a div.browse-movie-year")?.text()?.toIntOrNull()
-        val rating = this.select("h4.rating").text().substringBefore("/".trim())
+        val this.score = Score.from10(this.select("h4.rating").text().substringBefore("/".trim()))
         return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
             this.year = year
@@ -73,7 +73,7 @@ open class YTS : MainAPI() {
         val tags = document.selectFirst("#mobile-movie-info > h2:nth-child(3)")?.text()?.trim()
             ?.split(" / ")
             ?.map { it.trim() }
-        val rating= document.select("#movie-info > div.bottom-info > div:nth-child(2) > span:nth-child(2)").text()
+        val this.score = Score.from10(document.select("#movie-info > div.bottom-info > div:nth-child(2) > span:nth-child(2)").text())
         return newMovieLoadResponse(title, url, TvType.Movie, url) {
                 this.posterUrl = poster
                 this.plot = title

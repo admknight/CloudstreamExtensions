@@ -33,15 +33,7 @@ class DramaSeeProvider : MainAPI() {
                         val image = fixUrlNull(it.select("img").attr("data-src")) ?: ""
                         val name = innerBody?.attr("title") ?: "<Untitled>"
                         //Log.i(this.name, "Result => (innerBody, image) ${innerBody} / ${image}")
-                        newMovieSearchResponse(
-                            name,
-                            link,
-                            this.name,
-                            TvType.AsianDrama,
-                            image,
-                            year = null,
-                            id = null,
-                        )
+                        newMovieSearchResponse(name, link, this.name) { this.posterUrl = TvType.AsianDrama ; this.quality = image ; this.year = null ; this.id = null }
                     }.distinctBy { c -> c.url })
             }?.filterNotNull() ?: listOf()
         )
@@ -62,14 +54,7 @@ class DramaSeeProvider : MainAPI() {
             val imgSrc = it.select("img")?.attr("data-src") ?: return@mapNotNull null
             val image = fixUrlNull(imgSrc)
 
-            newMovieSearchResponse(
-                name = title,
-                url = link,
-                apiName = this.name,
-                type = TvType.Movie,
-                posterUrl = image,
-                year = year
-            )
+            newMovieSearchResponse(name = title, url = link, TvType.Movie) { this.apiName = this.name ; this.posterUrl = image ; this.year = year }
         }
     }
 
@@ -98,14 +83,7 @@ class DramaSeeProvider : MainAPI() {
             val aImg = fixUrlNull(it.select("img")?.attr("data-src"))
             val aName = a.attr("title") ?: return@mapNotNull null
             val aYear = aName.trim().takeLast(5).removeSuffix(")").toIntOrNull()
-            newMovieSearchResponse(
-                url = aUrl,
-                name = aName,
-                type = TvType.Movie,
-                posterUrl = aImg,
-                year = aYear,
-                apiName = this.name
-            )
+            newMovieSearchResponse(url = aUrl, name = aName, TvType.Movie) { this.posterUrl = aImg ; this.year = aYear ; this.apiName = this.name }
         }
 
         // Episodes Links
@@ -136,14 +114,7 @@ class DramaSeeProvider : MainAPI() {
 //
 //                }
 //            }
-            newEpisode(
-                name = null,
-                season = null,
-                episode = episodeNumber,
-                data = epLink,
-                posterUrl = null,
-                date = null
-            )
+            newEpisode(name = null) { this.season = null ; this.episode = episodeNumber ; this.data = epLink ; this.posterUrl = null ; this.date = null }
         }
 
         //If there's only 1 episode, consider it a movie.

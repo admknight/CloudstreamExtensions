@@ -1,1 +1,10 @@
-import org.jetbrains.kotlin.konan.properties.Properties  // use an integer for version numbers version = 5 android {     buildFeatures {         buildConfig = true         viewBinding = true     }     defaultConfig {              requiresResources = true          isCrossPlatform = false           iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/ShowBox/icon.png" } 
+version = 5
+
+cloudstream {
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

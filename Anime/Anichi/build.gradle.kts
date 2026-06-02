@@ -1,1 +1,10 @@
-import org.jetbrains.kotlin.konan.properties.Properties  // use an integer for version numbers version = 14 android {     buildFeatures {         buildConfig = true     }     defaultConfig {                   iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Anichi/icon.png"           isCrossPlatform = true }
+version = 14
+
+cloudstream {
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

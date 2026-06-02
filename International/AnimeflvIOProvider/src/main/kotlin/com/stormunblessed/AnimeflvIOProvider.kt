@@ -86,14 +86,7 @@ class AnimeflvIOProvider:MainAPI() {
             val isMovie = href.contains("/pelicula/")
             if (image.contains("/static/img/picture.png")) { image = ""}
             if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.AnimeMovie,
-                    image,
-                    null
-                )
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.AnimeMovie ; this.quality = image }
             } else {
                 newAnimeSearchResponse(
                     title,
@@ -117,9 +110,7 @@ class AnimeflvIOProvider:MainAPI() {
         val episodes = soup.select(".item-season-episodes a").map { li ->
             val href = fixUrl(li.selectFirst("a")?.attr("href") ?: "")
             val name = li.selectFirst("a")?.text() ?: ""
-            newEpisode(
-                href, name,
-            )
+            newEpisode(href) { this.name = name ; this.season =  }
         }.reversed()
 
         val year = Regex("(\\d*)").find(soup.select(".info-half").text())

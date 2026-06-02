@@ -1,13 +1,6 @@
 package com.horis.cncverse.entities
 
-data class newEpisode(
-    val complate: String,
-    val ep: String,
-    val id: String,
-    val s: String,
-    val t: String,
-    val time: String
-)
+data class newEpisode(val complate: String) { this.name = val ep: String ; this.season = val id: String ; this.episode = val s: String }
 
 
 

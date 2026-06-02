@@ -56,15 +56,7 @@ class SoaptwoDayProvider : MainAPI() {
                 val title = it.selectFirst("h5 a")!!.text()
                 val image = fixUrl(it.selectFirst("img")!!.attr("src"))
                 val href = fixUrl(it.selectFirst("a")!!.attr("href"))
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    null,
-                    null
-                )
+                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image }
             }
     }
 
@@ -83,12 +75,7 @@ class SoaptwoDayProvider : MainAPI() {
                 val name = text.replace(Regex("(^(\\d+)\\.)"), "")
                 val epNum = text.substring(0, text.indexOf(".")).toIntOrNull()
                 episodes.add(
-                    newEpisode(
-                        name = name,
-                        data = link,
-                        season = season,
-                        episode = epNum
-                    )
+                    newEpisode(name = name) { this.data = link ; this.season = season ; this.episode = epNum }
                 )
             }
         }
@@ -232,14 +219,7 @@ class SoaptwoDayProvider : MainAPI() {
                 val cleanstreamurl = stream.replace("\\/", "/").replace("\\\\\\", "")
                 if (cleanstreamurl.isNotBlank()) {
                     callback(
-                        newExtractorLink(
-                            "Soap2Day",
-                            "Soap2Day",
-                            cleanstreamurl,
-                            "https://soap2day.ac",
-                            Qualities.Unknown.value,
-                            isM3u8 = false
-                        )
+                        newExtractorLink("Soap2Day", "Soap2Day", cleanstreamurl, INFER_TYPE) { this.referer = "https://soap2day.ac" ; this.quality = Qualities.Unknown.value ; this.isM3u8 = false }
                     )
                 }
             }

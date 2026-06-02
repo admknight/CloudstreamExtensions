@@ -53,7 +53,7 @@ class DoraBash : MainAPI() {
         val backgroundposter = doc.select("main div.absolute img").attr("src")
         val description = doc.selectFirst("div.mb-6 > section > p:nth-child(1)")?.text()?.trim()
         val poster = doc.select("meta[property=og:image]").attr("content").trim()
-        val rating = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(1)").text()
+        val this.score = Score.from10(doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(1)").text())
         val year = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(4)").text()
         val contentRating = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(7)").text()
         val duration = doc.select("div.flex.flex-wrap.justify-center.lg\\:justify-start.gap-1.lg\\:gap-2.mb-4.text-sm.font-semibold span:nth-child(8)").text()

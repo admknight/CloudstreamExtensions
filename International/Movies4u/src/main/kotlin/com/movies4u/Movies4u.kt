@@ -218,7 +218,7 @@ class Movies4u : MainAPI() {
                                 overview = ep.optString("overview"),
                                 thumbnail = ep.optString("still_path").takeIf { it.isNotBlank() }?.let { TMDBBASE + it },
                                 released = ep.optString("air_date"),
-                                rating = ep.optDouble("vote_average", 0.0)
+                                this.score = Score.from10(ep.optDouble("vote_average", 0.0))
                             )
                     }
 

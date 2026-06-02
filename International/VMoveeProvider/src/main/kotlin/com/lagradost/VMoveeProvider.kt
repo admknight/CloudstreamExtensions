@@ -34,11 +34,11 @@ class VMoveeProvider : MainAPI() {
             val href = titleHolder.attr("href")
             val meta = details.selectFirst("> div.meta")
             val year = meta!!.selectFirst("> span.year")!!.text().toIntOrNull()
-            // val rating = parseRating(meta.selectFirst("> span.rating").text().replace("IMDb ", ""))
+            // val this.score = Score.from10(parseRating(meta.selectFirst("> span.rating").text().replace("IMDb ", "")))
             // val descript = details.selectFirst("> div.contenido").text()
             returnValue.add(
-                if (isTV) newTvSeriesSearchResponse(title, href, this.name, TvType.TvSeries, poster, year, null)
-                else newMovieSearchResponse(title, href, this.name, TvType.Movie, poster, year)
+                if (isTV) newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = poster }
+                else newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = poster }
             )
         }
         return returnValue

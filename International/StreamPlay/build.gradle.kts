@@ -1,1 +1,10 @@
-@file:Suppress("UnstableApiUsage")  import org.jetbrains.kotlin.konan.properties.Properties  version = 646 android {     buildFeatures {         buildConfig = true         viewBinding = true     }     defaultConfig {          } 
+version = 646
+
+cloudstream {
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

@@ -89,25 +89,13 @@ class AsiaFlixProvider : MainAPI() {
     )
 
     private fun Data.toSearchResponse(): TvSeriesSearchResponse {
-        return newTvSeriesSearchResponse(
-            name,
-            _id,
-            this@AsiaFlixProvider.name,
-            TvType.AsianDrama,
-            image,
-            releaseYear,
-            episodes?.size,
-        )
+        return newTvSeriesSearchResponse(name, _id, this@AsiaFlixProvider.name) { this.posterUrl = TvType.AsianDrama ; this.quality = image }
     }
 
     private fun Episodes.toEpisode(): Episode? {
         if (videoUrl != null && videoUrl.contains("watch/null") || number == null) return null
         return videoUrl?.let {
-            newEpisode(
-                it,
-                null,
-                number,
-            )
+            newEpisode(it) { this.name = null ; this.season = number ; this.episode =  }
         }
     }
 

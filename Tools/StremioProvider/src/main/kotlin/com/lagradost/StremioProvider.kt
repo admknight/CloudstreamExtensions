@@ -183,24 +183,10 @@ class StremioProvider : MainAPI() {
 
                 if (url.endsWith(".m3u8")) {
                     callback.invoke(
-                        newExtractorLink(
-                        name ?: "",
-                        title ?: name ?: "",
-                        url,
-                            referer ?: "",
-                        Qualities.Unknown.value,
-                        isM3u8 = true
-                    ))
+                        newExtractorLink(name ?: "", title ?: name ?: "", url, INFER_TYPE) { this.referer = referer ?: "" ; this.quality = Qualities.Unknown.value ; this.isM3u8 = true })
                 } else {
                     callback.invoke(
-                        newExtractorLink(
-                            name ?: "",
-                            title ?: name ?: "",
-                            url,
-                            referer ?: "",
-                            Qualities.Unknown.value,
-                            isM3u8 = false
-                        ))
+                        newExtractorLink(name ?: "", title ?: name ?: "", url, INFER_TYPE) { this.referer = referer ?: "" ; this.quality = Qualities.Unknown.value ; this.isM3u8 = false })
                 }
             }
             if (ytId != null) {
@@ -227,13 +213,7 @@ class StremioProvider : MainAPI() {
 
                 val magnet = "magnet:?xt=urn:btih:${infoHash}${sourceTrackers}${otherTrackers}"
                 callback.invoke(
-                    newExtractorLink(
-                        name ?: "",
-                        title ?: name ?: "",
-                        magnet,
-                        "",
-                        Qualities.Unknown.value
-                    )
+                    newExtractorLink(name ?: "", title ?: name ?: "", magnet, INFER_TYPE) { this.referer = "" ; this.quality = Qualities.Unknown.value }
                 )
             }
         }

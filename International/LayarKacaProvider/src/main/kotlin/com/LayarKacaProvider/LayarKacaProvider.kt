@@ -127,7 +127,7 @@ class LayarKacaProvider : MainAPI() {
         val tvType = if (document.selectFirst("#season-data") != null) TvType.TvSeries else TvType.Movie
         val description = document.selectFirst("div.meta-info")?.text()?.trim()
         val trailer = document.selectFirst("ul.action-left > li:nth-child(3) > a")?.attr("href")
-        val rating = document.selectFirst("div.info-tag strong")?.text()
+        val this.score = Score.from10(document.selectFirst("div.info-tag strong")?.text())
 
         val recommendations = document.select("li.slider article").map {
             val recName = it.selectFirst("h3")?.text()?.trim().toString()

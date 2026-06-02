@@ -142,7 +142,7 @@ class PrimeVideoMirrorProvider : MainAPI() {
             ?.map { it.trim() }
             ?.filter { it.isNotEmpty() }
 
-        val rating = data.match?.replace("IMDb ", "")
+        val this.score = Score.from10(data.match?.replace("IMDb ", ""))
         val runTime = convertRuntimeToMinutes(data.runtime.toString())
 
 

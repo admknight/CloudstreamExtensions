@@ -34,13 +34,7 @@ class AnimeJlProvider : MainAPI() {
                 val link = it.selectFirst("article.Anime a")?.attr("href")
                 val img = it.selectFirst("article.Anime a div.Image figure img")?.attr("src")
                     ?.replaceFirst("^/".toRegex(), "$mainUrl/")
-                newTvSeriesSearchResponse(
-                    title!!,
-                    link!!,
-                    this.name,
-                    TvType.Anime,
-                    img,
-                )
+                newTvSeriesSearchResponse(title!!, link!!, this.name) { this.posterUrl = TvType.Anime ; this.quality = img }
             }
             items.add(HomePageList(name, home))
         }
@@ -55,13 +49,7 @@ class AnimeJlProvider : MainAPI() {
             val link = it.selectFirst("article.Anime a")?.attr("href")
             val img = it.selectFirst("article.Anime a div.Image figure img")?.attr("src")
                 ?.replaceFirst("^/".toRegex(), "$mainUrl/")
-            newTvSeriesSearchResponse(
-                title!!,
-                link!!,
-                this.name,
-                TvType.Anime,
-                img,
-            )
+            newTvSeriesSearchResponse(title!!, link!!, this.name) { this.posterUrl = TvType.Anime ; this.quality = img }
         }
     }
 
@@ -99,13 +87,7 @@ class AnimeJlProvider : MainAPI() {
                     }
                 }
                 episodes.add(
-                    newEpisode(
-                        epurl,
-                        epTitle,
-                        0,
-                        epNum,
-                        realimg,
-                    )
+                    newEpisode(epurl) { this.name = epTitle ; this.season = 0 ; this.episode = epNum }
                 )
             }
         }

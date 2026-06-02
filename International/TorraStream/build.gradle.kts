@@ -1,1 +1,10 @@
-import org.jetbrains.kotlin.konan.properties.Properties  // use an integer for version numbers version = 82 android {     buildFeatures {         buildConfig = true         viewBinding = true     }     defaultConfig {          } 
+version = 82
+
+cloudstream {
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

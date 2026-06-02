@@ -80,26 +80,9 @@ open class BflixProvider : MainAPI() {
             val quality = getQualityFromString(qualityInfo)
 
             if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    null,
-                    quality = quality
-                )
+                newMovieSearchResponse(title, href, this.name) { this.posterUrl = TvType.Movie ; this.quality = image ; this.quality = quality }
             } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    null,
-                    null,
-                    quality = quality
-                )
+                newTvSeriesSearchResponse(title, href, this.name) { this.posterUrl = TvType.TvSeries ; this.quality = image ; this.quality = quality }
             }
         }
     }
@@ -144,12 +127,7 @@ open class BflixProvider : MainAPI() {
             val eptitle = it.selectFirst(".episode a span.name")!!.text()
             val secondtitle = it.selectFirst(".episode a span")!!.text()
                 .replace(Regex("(Episode (\\d+):|Episode (\\d+)-|Episode (\\d+))"), "") ?: ""
-            newEpisode(
-                href,
-                secondtitle + eptitle,
-                season,
-                episode,
-            )
+            newEpisode(href) { this.name = secondtitle + eptitle ; this.season = season ; this.episode = episode }
         }
         val tvType =
             if (url.contains("/movie/") && episodes.size == 1) TvType.Movie else TvType.TvSeries

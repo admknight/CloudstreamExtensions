@@ -153,14 +153,7 @@ class TrailersTwoProvider : TmdbProvider() {
         }
 
         callback.invoke(
-            newExtractorLink(
-                this.name,
-                this.name,
-                videoUrl,
-                "https://trailers.to",
-                Qualities.Unknown.value,
-                false,
-            )
+            newExtractorLink(this.name, this.name, videoUrl, INFER_TYPE) { this.referer = "https://trailers.to" ; this.quality = Qualities.Unknown.value ; this.isM3u8 = false }
         )
 
         runAllAsync(

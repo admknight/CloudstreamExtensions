@@ -1,1 +1,16 @@
-// use an integer for version numbers version = 4  cloudstream {          language = "en"     // All of these properties are optional, you can safely remove them           description = "Uses TMDB"          authors = listOf("Adam Knight")      /**      * Status int as the following:      * 0: Down      * 1: Ok      * 2: Slow      * 3: Beta only      * */          status = 0 // will be 3 if unspecified          tvTypes = listOf(         "TvSeries",         "Movie",     )           iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/SuperembedProvider/icon.png" }
+version = 4
+
+cloudstream {
+    language = "en"
+    authors = listOf("Adam Knight")
+    description = "Uses TMDB"
+    status = 0
+    tvTypes = listOf(         "TvSeries",         "Movie",     )
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/SuperembedProvider/icon.png"
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}
