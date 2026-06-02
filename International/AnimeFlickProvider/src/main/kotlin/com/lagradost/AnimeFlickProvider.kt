@@ -4,15 +4,18 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.extractorApis
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.jsoup.Jsoup
 import java.util.*
 
 class AnimeFlickProvider : MainAPI() {
     companion object {
         fun getType(t: String): TvType {
-            return if (t.contains("OVA") || t.contains("Special")) TvType.OVA
-            else if (t.contains("Movie")) TvType.AnimeMovie
-            else TvType.Anime
+            return when {
+                t.contains("OVA") || t.contains("Special") -> TvType.OVA
+                t.contains("Movie") -> TvType.AnimeMovie
+                else -> TvType.Anime
+            }
         }
     }
 
@@ -36,31 +39,21 @@ class AnimeFlickProvider : MainAPI() {
             val href = mainUrl + it.selectFirst("a")?.attr("href")
             val title = it.selectFirst("h5 > a")?.text() ?: return@mapNotNull null
             val poster = mainUrl + it.selectFirst("img")?.attr("src")?.replace("70x110", "225x320")
-            newAnimeSearchResponse(
-                title,
-                href,
-                this.name,
-                getType(title),
-                poster,
-                null,
-                EnumSet.of(DubStatus.Subbed),
-            )
+            
+            newAnimeSearchResponse(title, href, getType(title)) {
+                this.posterUrl = poster
+                addDubStatus(DubStatus.Subbed)
+            }
         }
     }
 
     override suspend fun load(url: String): LoadResponse {
-        val html = app.get(url).text
-        val doc = Jsoup.parse(html)
+        val doc = app.get(url).document
 
         val poster = mainUrl + doc.selectFirst("img.rounded")?.attr("src")
-        val title = doc.selectFirst("h2.title")!!.text()
-
-        val yearText = doc.selectFirst(".trending-year")?.text()
-        val year =
-            if (yearText != null) Regex("""(\d{4})""").find(yearText)?.destructured?.component1()
-                ?.toIntOrNull() else null
+        val title = doc.selectFirst("h2.title")?.text() ?: ""
+        val year = Regex("(\\d{4})").find(doc.selectFirst(".trending-year")?.text() ?: "")?.groupValues?.get(1)?.toIntOrNull()
         val description = doc.selectFirst("p")?.text()
-
         val genres = doc.select("a[href*=\"genre-\"]").map { it.text() }
 
         val episodes = doc.select("#collapseOne .block-space > .row > div:nth-child(2)").map {
@@ -70,13 +63,11 @@ class AnimeFlickProvider : MainAPI() {
         }.reversed()
 
         return newAnimeLoadResponse(title, url, getType(title)) {
-            posterUrl = poster
+            this.posterUrl = poster
             this.year = year
-
             addEpisodes(DubStatus.Subbed, episodes)
-
-            plot = description
-            tags = genres
+            this.plot = description
+            this.tags = genres
         }
     }
 
@@ -87,33 +78,20 @@ class AnimeFlickProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val html = app.get(data).text
-
-        val episodeRegex = Regex("""(https://.*?\.mp4)""")
-        val links = episodeRegex.findAll(html).map {
-            it.value
-        }.toList()
+        val links = Regex("(https://.*?\\.mp4)").findAll(html).map { it.value }.toList()
+        
         for (link in links) {
-            var alreadyAdded = false
-            for (extractor in extractorApis) {
-                if (link.startsWith(extractor.mainUrl)) {
-                    extractor.getSafeUrl(link, data, subtitleCallback, callback)
-                    alreadyAdded = true
-                    break
-                }
-            }
-            if (!alreadyAdded) {
+            val extractor = extractorApis.find { link.startsWith(it.mainUrl) }
+            if (extractor != null) {
+                extractor.getSafeUrl(link, data, subtitleCallback, callback)
+            } else {
                 callback(
-                    newExtractorLink(
-                        this.name,
-                        "${this.name} - Auto",
-                        link,
-                        "",
-                        Qualities.P1080.value
-                    )
+                    newExtractorLink(name, "$name - Auto", link, INFER_TYPE) {
+                        this.quality = Qualities.P1080.value
+                    }
                 )
             }
         }
-
         return true
     }
 }

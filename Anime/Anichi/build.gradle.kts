@@ -1,42 +1,16 @@
-import org.jetbrains.kotlin.konan.properties.Properties
-
-// use an integer for version numbers
 version = 14
 
+cloudstream {
+}
+
 android {
+    namespace = "com.admknight.anichi"
     buildFeatures {
         buildConfig = true
     }
     defaultConfig {
-
-        buildConfigField("String", "ANICHI_API", "\"\"")
-        buildConfigField("String", "ANICHI_SERVER", "\"\"")
-        buildConfigField("String", "ANICHI_ENDPOINT", "\"\"")
-        buildConfigField("String", "ANICHI_APP", "\"\"")
+        buildConfigField("String", "ANICHI_API", "\"https://api.allmanga.to/graphql\"")
+        buildConfigField("String", "ANICHI_APP", "\"https://allmanga.to\"")
+        buildConfigField("String", "ANICHI_ENDPOINT", "\"https://api.allmanga.to\"")
     }
-}
-
-cloudstream {
-    language = "en"
-    // All of these properties are optional, you can safely remove them
-
-    // description = "Lorem Ipsum"
-     authors = listOf("Adam Knight")
-
-    /**
-     * Status int as the following:
-     * 0: Down
-     * 1: Ok
-     * 2: Slow
-     * 3: Beta only
-     * */
-    status = 1 // will be 3 if unspecified
-    tvTypes = listOf(
-        "AnimeMovie",
-        "Anime",
-        "OVA",
-    )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Anichi/icon.png"
-
-    isCrossPlatform = true
 }

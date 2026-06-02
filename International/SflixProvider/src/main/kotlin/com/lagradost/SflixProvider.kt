@@ -1,22 +1,20 @@
 package com.lagradost
 
-import android.util.Log
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.APIHolder.getCaptchaToken
 import com.lagradost.cloudstream3.APIHolder.unixTimeMS
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.LoadResponse.Companion.addDuration
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
-//import com.lagradost.cloudstream3.animeproviders.ZoroProvider
-import com.lagradost.cloudstream3.mvvm.suspendSafeApiCall
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 import com.lagradost.cloudstream3.utils.Coroutines.ioSafe
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import com.lagradost.nicehttp.NiceResponse
 import kotlinx.coroutines.delay
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -30,6 +28,7 @@ import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 import kotlin.system.measureTimeMillis
+import com.lagradost.api.Log
 
 open class SflixProvider : MainAPI() {
     override var mainUrl = "https://sflix.to"
@@ -47,29 +46,23 @@ open class SflixProvider : MainAPI() {
     override val vpnStatus = VPNStatus.None
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
-        val html = app.get("$mainUrl/home").text
-        val document = Jsoup.parse(html)
-
+        val document = app.get("$mainUrl/home").document
         val all = ArrayList<HomePageList>()
 
         val map = mapOf(
             "Trending Movies" to "div#trending-movies",
             "Trending TV Shows" to "div#trending-tv",
         )
-        map.forEach {
+        map.forEach { (name, selector) ->
             all.add(HomePageList(
-                it.key,
-                document.select(it.value).select("div.flw-item").map { element ->
-                    element.toSearchResult()
-                }
+                name,
+                document.select(selector).select("div.flw-item").map { it.toSearchResult() }
             ))
         }
 
         document.select("section.block_area.block_area_home.section-id-02").forEach {
             val title = it.select("h2.cat-heading").text().trim()
-            val elements = it.select("div.flw-item").map { element ->
-                element.toSearchResult()
-            }
+            val elements = it.select("div.flw-item").map { it.toSearchResult() }
             all.add(HomePageList(title, elements))
         }
 
@@ -78,139 +71,81 @@ open class SflixProvider : MainAPI() {
 
     override suspend fun search(query: String): List<SearchResponse> {
         val url = "$mainUrl/search/${query.replace(" ", "-")}"
-        val html = app.get(url).text
-        val document = Jsoup.parse(html)
+        val document = app.get(url).document
 
         return document.select("div.flw-item").map {
             val title = it.select("h2.film-name").text()
             val href = fixUrl(it.select("a").attr("href"))
-            val year = it.select("span.fdi-item").text().toIntOrNull()
             val image = it.select("img").attr("data-src")
             val isMovie = href.contains("/movie/")
 
             val metaInfo = it.select("div.fd-infor > span.fdi-item")
-            // val rating = metaInfo[0].text()
             val quality = getQualityFromString(metaInfo.getOrNull(1)?.text())
 
-            if (isMovie) {
-                newMovieSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.Movie,
-                    image,
-                    year,
-                    quality = quality
-                )
-            } else {
-                newTvSeriesSearchResponse(
-                    title,
-                    href,
-                    this.name,
-                    TvType.TvSeries,
-                    image,
-                    year,
-                    null,
-                    quality = quality
-                )
+            newMovieSearchResponse(title, href, if (isMovie) TvType.Movie else TvType.TvSeries) {
+                this.posterUrl = image
+                this.quality = quality
             }
         }
     }
 
     override suspend fun load(url: String): LoadResponse {
-        val document = app.get(url).document
+        val details = app.get(url).document.selectFirst("div.detail_page-watch") ?: throw ErrorLoadingException("No detail found")
+        val img = details.selectFirst("img.film-poster-img")
+        val posterUrl = img?.attr("src")
+        val title = img?.attr("title") ?: throw ErrorLoadingException("No Title")
 
-        val details = document.select("div.detail_page-watch")
-        val img = details.select("img.film-poster-img")
-        val posterUrl = img.attr("src")
-        val title = img.attr("title") ?: throw ErrorLoadingException("No Title")
-
-        /*
-        val year = Regex("""[Rr]eleased:\s*(\d{4})""").find(
-            document.select("div.elements").text()
-        )?.groupValues?.get(1)?.toIntOrNull()
-        val duration = Regex("""[Dd]uration:\s*(\d*)""").find(
-            document.select("div.elements").text()
-        )?.groupValues?.get(1)?.trim()?.plus(" min")*/
-        var duration = document.selectFirst(".fs-item > .duration")?.text()?.trim()
+        var duration: String? = details.selectFirst(".fs-item > .duration")?.text()?.trim()
         var year: Int? = null
         var tags: List<String>? = null
         var cast: List<String>? = null
-        val youtubeTrailer = document.selectFirst("iframe#iframe-trailer")?.attr("data-src")
-        val rating = document.selectFirst(".fs-item > .imdb")?.text()?.trim()
-            ?.removePrefix("IMDB:")?
+        val youtubeTrailer = details.selectFirst("iframe#iframe-trailer")?.attr("data-src")
+        val scoreValue = Score.from10(details.selectFirst(".fs-item > .imdb")?.text()?.substringAfter("IMDb:")?.trim())
 
-        document.select("div.elements > .row > div > .row-line").forEach { element ->
-            val type = element?.select(".type")?.text() ?: return@forEach
+        details.select("div.elements > .row > div > .row-line").forEach { element ->
+            val type = element.select(".type").text()
             when {
                 type.contains("Released") -> {
-                    year = Regex("\\d+").find(
-                        element.ownText() ?: return@forEach
-                    )?.groupValues?.firstOrNull()?.toIntOrNull()
+                    year = Regex("\\d+").find(element.ownText())?.value?.toIntOrNull()
                 }
                 type.contains("Genre") -> {
-                    tags = element.select("a").mapNotNull { it.text() }
+                    tags = element.select("a").map { it.text() }
                 }
                 type.contains("Cast") -> {
-                    cast = element.select("a").mapNotNull { it.text() }
+                    cast = element.select("a").map { it.text() }
                 }
                 type.contains("Duration") -> {
                     duration = duration ?: element.ownText().trim()
                 }
             }
         }
-        val plot = details.select("div.description").text().replace("Overview:", "").trim()
+        val plot = details.selectFirst("div.description")?.text()?.replace("Overview:", "")?.trim()
 
         val isMovie = url.contains("/movie/")
-
-        // https://sflix.to/movie/free-never-say-never-again-hd-18317 -> 18317
-        val idRegex = Regex(""".*-(\d+)""")
         val dataId = details.attr("data-id")
         val id = if (dataId.isNullOrEmpty())
-            idRegex.find(url)?.groupValues?.get(1)
-                ?: throw ErrorLoadingException("Unable to get id from '$url'")
+            Regex(""".*-(\d+)""").find(url)?.groupValues?.get(1) ?: throw ErrorLoadingException("Unable to get id")
         else dataId
 
-        val recommendations =
-            document.select("div.film_list-wrap > div.flw-item").mapNotNull { element ->
-                val titleHeader =
-                    element.select("div.film-detail > .film-name > a") ?: return@mapNotNull null
-                val recUrl = fixUrlNull(titleHeader.attr("href")) ?: return@mapNotNull null
-                val recTitle = titleHeader.text() ?: return@mapNotNull null
-                val poster = element.select("div.film-poster > img").attr("data-src")
-                newMovieSearchResponse(
-                    recTitle,
-                    recUrl,
-                    this.name,
-                    if (recUrl.contains("/movie/")) TvType.Movie else TvType.TvSeries,
-                    poster,
-                    year = null
-                )
+        val recommendations = details.select("div.film_list-wrap > div.flw-item").mapNotNull { element ->
+            val titleHeader = element.selectFirst("div.film-detail > .film-name > a") ?: return@mapNotNull null
+            val recUrl = fixUrlNull(titleHeader.attr("href")) ?: return@mapNotNull null
+            val recTitle = titleHeader.text()
+            val poster = element.selectFirst("div.film-poster > img")?.attr("data-src")
+            newMovieSearchResponse(recTitle, recUrl, if (recUrl.contains("/movie/")) TvType.Movie else TvType.TvSeries) {
+                this.posterUrl = poster
             }
+        }
 
         if (isMovie) {
-            // Movies
-            val episodesUrl = "$mainUrl/ajax/movie/episodes/$id"
-            val episodes = app.get(episodesUrl).text
-
-            // Supported streams, they're identical
-            val sourceIds = Jsoup.parse(episodes).select("a").mapNotNull { element ->
-                var sourceId = element.attr("data-id")
-                if (sourceId.isNullOrEmpty())
-                    sourceId = element.attr("data-linkid")
-
-                if (element.select("span").text().trim().isValidServer()) {
-                    if (sourceId.isNullOrEmpty()) {
-                        fixUrlNull(element.attr("href"))
-                    } else {
-                        "$url.$sourceId".replace("/movie/", "/watch-movie/")
-                    }
-                } else {
-                    null
-                }
+            val episodesHtml = app.get("$mainUrl/ajax/movie/episodes/$id").text
+            val sourceIds = Jsoup.parse(episodesHtml).select("a").mapNotNull { element ->
+                val sourceId = element.attr("data-id").ifEmpty { element.attr("data-linkid") }
+                if (element.selectFirst("span")?.text()?.trim()?.isValidServer() == true) {
+                    if (sourceId.isNullOrEmpty()) fixUrlNull(element.attr("href"))
+                    else "$url.$sourceId".replace("/movie/", "/watch-movie/")
+                } else null
             }
-
-            val comingSoon = sourceIds.isEmpty()
 
             return newMovieLoadResponse(title, url, TvType.Movie, sourceIds) {
                 this.year = year
@@ -220,48 +155,35 @@ open class SflixProvider : MainAPI() {
                 addActors(cast)
                 this.tags = tags
                 this.recommendations = recommendations
-                this.comingSoon = comingSoon
+                this.comingSoon = sourceIds.isEmpty()
                 addTrailer(youtubeTrailer)
-                this.rating = rating
+                this.score = scoreValue
             }
         } else {
             val seasonsDocument = app.get("$mainUrl/ajax/v2/tv/seasons/$id").document
             val episodes = arrayListOf<Episode>()
-            var seasonItems = seasonsDocument.select("div.dropdown-menu.dropdown-menu-model > a")
-            if (seasonItems.isNullOrEmpty())
-                seasonItems = seasonsDocument.select("div.dropdown-menu > a.dropdown-item")
-            seasonItems.mapIndexed { season, element ->
+            val seasonItems = seasonsDocument.select("div.dropdown-menu > a")
+            
+            seasonItems.forEachIndexed { seasonIdx, element ->
                 val seasonId = element.attr("data-id")
-                if (seasonId.isNullOrBlank()) return@apmapIndexed
+                if (seasonId.isBlank()) return@forEachIndexed
 
-                var episode = 0
                 val seasonEpisodes = app.get("$mainUrl/ajax/v2/season/episodes/$seasonId").document
-                var seasonEpisodesItems =
-                    seasonEpisodes.select("div.flw-item.film_single-item.episode-item.eps-item")
-                if (seasonEpisodesItems.isNullOrEmpty()) {
-                    seasonEpisodesItems =
-                        seasonEpisodes.select("ul > li > a")
-                }
-                seasonEpisodesItems.forEach {
-                    val episodeImg = it?.select("img")
+                val seasonEpisodesItems = seasonEpisodes.select("div.flw-item.eps-item, ul > li > a")
+                
+                seasonEpisodesItems.forEachIndexed { epIdx, it ->
+                    val episodeImg = it.selectFirst("img")
                     val episodeTitle = episodeImg?.attr("title") ?: it.ownText()
                     val episodePosterUrl = episodeImg?.attr("src")
-                    val episodeData = it.attr("data-id") ?: return@forEach
+                    val episodeData = it.attr("data-id") ?: return@forEachIndexed
 
-                    episode++
-
-                    val episodeNum =
-                        (it.select("div.episode-number").text()
-                            ?: episodeTitle).let { str ->
-                            Regex("""\d+""").find(str)?.groupValues?.firstOrNull()
-                                ?.toIntOrNull()
-                        } ?: episode
+                    val episodeNum = Regex("""\d+""").find(it.selectFirst("div.episode-number")?.text() ?: episodeTitle)?.value?.toIntOrNull() ?: (epIdx + 1)
 
                     episodes.add(
                         newEpisode(Pair(url, episodeData)) {
                             this.posterUrl = fixUrlNull(episodePosterUrl)
-                            this.name = episodeTitle?.removePrefix("Episode $episodeNum: ")
-                            this.season = season + 1
+                            this.name = episodeTitle.removePrefix("Episode $episodeNum: ").trim()
+                            this.season = seasonIdx + 1
                             this.episode = episodeNum
                         }
                     )
@@ -277,23 +199,13 @@ open class SflixProvider : MainAPI() {
                 this.tags = tags
                 this.recommendations = recommendations
                 addTrailer(youtubeTrailer)
-                this.rating = rating
+                this.score = scoreValue
             }
         }
     }
 
-    data class Tracks(
-        @JsonProperty("file") val file: String?,
-        @JsonProperty("label") val label: String?,
-        @JsonProperty("kind") val kind: String?
-    )
-
-    data class Sources(
-        @JsonProperty("file") val file: String?,
-        @JsonProperty("type") val type: String?,
-        @JsonProperty("label") val label: String?
-    )
-
+    data class Tracks(@JsonProperty("file") val file: String?, @JsonProperty("label") val label: String?, @JsonProperty("kind") val kind: String?)
+    data class Sources(@JsonProperty("file") val file: String?, @JsonProperty("type") val type: String?, @JsonProperty("label") val label: String?)
     data class SourceObject(
         @JsonProperty("sources") val sources: List<Sources?>? = null,
         @JsonProperty("sources_1") val sources1: List<Sources?>? = null,
@@ -301,7 +213,6 @@ open class SflixProvider : MainAPI() {
         @JsonProperty("sourcesBackup") val sourcesBackup: List<Sources?>? = null,
         @JsonProperty("tracks") val tracks: List<Tracks?>? = null
     )
-
     data class SourceObjectEncrypted(
         @JsonProperty("sources") val sources: String?,
         @JsonProperty("encrypted") val encrypted: Boolean?,
@@ -310,14 +221,7 @@ open class SflixProvider : MainAPI() {
         @JsonProperty("sourcesBackup") val sourcesBackup: String?,
         @JsonProperty("tracks") val tracks: List<Tracks?>?
     )
-
-    data class IframeJson(
-//        @JsonProperty("type") val type: String? = null,
-        @JsonProperty("link") val link: String? = null,
-//        @JsonProperty("sources") val sources: ArrayList<String> = arrayListOf(),
-//        @JsonProperty("tracks") val tracks: ArrayList<String> = arrayListOf(),
-//        @JsonProperty("title") val title: String? = null
-    )
+    data class IframeJson(@JsonProperty("link") val link: String? = null)
 
     override suspend fun loadLinks(
         data: String,
@@ -326,104 +230,52 @@ open class SflixProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val urls = (tryParseJson<Pair<String, String>>(data)?.let { (prefix, server) ->
-            val episodesUrl = "$mainUrl/ajax/v2/episode/servers/$server"
-
-            // Supported streams, they're identical
-            app.get(episodesUrl).document.select("a").mapNotNull { element ->
-                val id = element?.attr("data-id") ?: return@mapNotNull null
-                if (element.select("span").text().trim().isValidServer()) {
+            app.get("$mainUrl/ajax/v2/episode/servers/$server").document.select("a").mapNotNull { element ->
+                val id = element.attr("data-id") ?: return@mapNotNull null
+                if (element.selectFirst("span")?.text()?.trim()?.isValidServer() == true) {
                     "$prefix.$id".replace("/tv/", "/watch-tv/")
-                } else {
-                    null
-                }
+                } else null
             }
         } ?: tryParseJson<List<String>>(data))?.distinct()
 
-        urls?.map { url ->
-            suspendSafeApiCall {
-                // Possible without token
-
-//                val response = app.get(url)
-//                val key =
-//                    response.document.select("script[src*=https://www.google.com/recaptcha/api.js?render=]")
-//                        .attr("src").substringAfter("render=")
-//                val token = getCaptchaToken(mainUrl, key) ?: return@suspendSafeApiCall
-
+        urls?.forEach { url ->
+            runCatching {
                 val serverId = url.substringAfterLast(".")
-                val iframeLink =
-                    app.get("${this.mainUrl}/ajax/get_link/$serverId").parsed<IframeJson>().link
-                        ?: return@suspendSafeApiCall
-
-                // Some smarter ws11 or w10 selection might be required in the future.
-//                val extractorData =
-//                    "https://ws11.rabbitstream.net/socket.io/?EIO=4&transport=polling"
+                val iframeLink = app.get("${this.mainUrl}/ajax/get_link/$serverId").parsed<IframeJson>().link ?: return@forEach
 
                 if (!loadExtractor(iframeLink, null, subtitleCallback, callback)) {
-                    extractRabbitStream(
-                        iframeLink,
-                        subtitleCallback,
-                        callback,
-                        false,
-                        decryptKey = getKey()
-                    ) { it }
+                    val key = getKey()
+                    extractRabbitStream(iframeLink, subtitleCallback, callback, false, decryptKey = key) { it }
                 }
             }
         }
-
         return !urls.isNullOrEmpty()
     }
 
-//    override suspend fun extractorVerifierJob(extractorData: String?) {
-//        runSflixExtractorVerifierJob(this, extractorData, "https://rabbitstream.net/")
-//    }
-
     private fun Element.toSearchResult(): SearchResponse {
-        val inner = this.selectFirst("div.film-poster")
-        val img = inner!!.select("img")
-        val title = img.attr("title")
-        val posterUrl = img.attr("data-src") ?: img.attr("src")
-        val href = fixUrl(inner.select("a").attr("href"))
+        val inner = this.selectFirst("div.film-poster") ?: return newMovieSearchResponse("", "", TvType.Movie) {}
+        val img = inner.selectFirst("img")
+        val title = img?.attr("title") ?: ""
+        val posterUrl = img?.attr("data-src") ?: img?.attr("src")
+        val href = fixUrl(inner.selectFirst("a")?.attr("href") ?: "")
         val isMovie = href.contains("/movie/")
-        val otherInfo =
-            this.selectFirst("div.film-detail > div.fd-infor")?.select("span")?.toList() ?: listOf()
-        //var rating: Int? = null
+        val otherInfo = this.select("div.film-detail > div.fd-infor > span").map { it.text().trim() }
+        
         var year: Int? = null
         var quality: SearchQuality? = null
         when (otherInfo.size) {
-            1 -> {
-                year = otherInfo[0]?.text()?.trim()?.toIntOrNull()
-            }
-            2 -> {
-                year = otherInfo[0]?.text()?.trim()?.toIntOrNull()
-            }
+            1 -> year = otherInfo[0].toIntOrNull()
+            2 -> year = otherInfo[0].toIntOrNull()
             3 -> {
-                //score = Score.from10(otherInfo[0]?.text()?)
-                quality = getQualityFromString(otherInfo[1]?.text())
-                year = otherInfo[2]?.text()?.trim()?.toIntOrNull()
+                quality = getQualityFromString(otherInfo[1])
+                year = otherInfo[2].toIntOrNull()
             }
         }
 
-        return if (isMovie) {
-            newMovieSearchResponse(
-                title,
-                href,
-                this@SflixProvider.name,
-                TvType.Movie,
-                posterUrl = posterUrl,
-                year = year,
-                quality = quality,
-            )
-        } else {
-            newTvSeriesSearchResponse(
-                title,
-                href,
-                this@SflixProvider.name,
-                TvType.Movie,
-                posterUrl,
-                year = year,
-                episodes = null,
-                quality = quality,
-            )
+        return newMovieSearchResponse(title, href, if (isMovie) TvType.Movie else TvType.TvSeries) {
+            this.posterUrl = posterUrl
+            this.year = year
+            this.quality = quality
         }
     }
 
@@ -435,248 +287,64 @@ open class SflixProvider : MainAPI() {
             @JsonProperty("pingTimeout") val pingTimeout: Int? = null
         )
 
-        /*
-        # python code to figure out the time offset based on code if necessary
-        chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_"
-        code = "Nxa_-bM"
-        total = 0
-        for i, char in enumerate(code[::-1]):
-            index = chars.index(char)
-            value = index * 64**i
-            total += value
-        print(f"total {total}")
-        */
         private fun generateTimeStamp(): String {
             val chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_"
             var code = ""
             var time = unixTimeMS
             while (time > 0) {
-                code += chars[(time % (chars.length)).toInt()]
+                code += chars[(time % chars.length).toInt()]
                 time /= chars.length
             }
             return code.reversed()
         }
 
-        suspend fun getKey(): String? {
-            return app.get("https://raw.githubusercontent.com/consumet/rapidclown/rabbitstream/key.txt")
-                .text
-        }
+        suspend fun getKey(): String? = app.get("https://raw.githubusercontent.com/consumet/rapidclown/rabbitstream/key.txt").text
 
-        /**
-         * Generates a session
-         * 1 Get request.
-         * */
         private suspend fun negotiateNewSid(baseUrl: String): PollingData? {
-            // Tries multiple times
             for (i in 1..5) {
-                val jsonText =
-                    app.get("$baseUrl&t=${generateTimeStamp()}").text.replaceBefore("{", "")
-//            println("Negotiated sid $jsonText")
+                val jsonText = app.get("$baseUrl&t=${generateTimeStamp()}").text.replaceBefore("{", "")
                 parseJson<PollingData?>(jsonText)?.let { return it }
                 delay(1000L * i)
             }
             return null
         }
 
-        /**
-         * Generates a new session if the request fails
-         * @return the data and if it is new.
-         * */
-        private suspend fun getUpdatedData(
-            response: NiceResponse,
-            data: PollingData,
-            baseUrl: String
-        ): Pair<PollingData, Boolean> {
-            if (!response.okhttpResponse.isSuccessful) {
-                return negotiateNewSid(baseUrl)?.let {
-                    it to true
-                } ?: (data to false)
-            }
-            return data to false
-        }
-
-
-        private suspend fun initPolling(
-            extractorData: String,
-            referer: String
-        ): Pair<PollingData?, String?> {
-            val headers = mapOf(
-                "Referer" to referer // "https://rabbitstream.net/"
-            )
-
-            val data = negotiateNewSid(extractorData) ?: return null to null
-            app.post(
-                "$extractorData&t=${generateTimeStamp()}&sid=${data.sid}",
-                requestBody = "40".toRequestBody(),
-                headers = headers
-            )
-
-            // This makes the second get request work, and re-connect work.
-            val reconnectSid =
-                parseJson<PollingData>(
-                    app.get(
-                        "$extractorData&t=${generateTimeStamp()}&sid=${data.sid}",
-                        headers = headers
-                    )
-//                    .also { println("First get ${it.text}") }
-                        .text.replaceBefore("{", "")
-                ).sid
-
-            // This response is used in the post requests. Same contents in all it seems.
-            val authInt =
-                app.get(
-                    "$extractorData&t=${generateTimeStamp()}&sid=${data.sid}",
-                    timeout = 60,
-                    headers = headers
-                ).text
-                    //.also { println("Second get ${it}") }
-                    // Dunno if it's actually generated like this, just guessing.
-                    .toIntOrNull()?.plus(1) ?: 3
-
-            return data to reconnectSid
-        }
-
-        suspend fun runSflixExtractorVerifierJob(
-            api: MainAPI,
-            extractorData: String?,
-            referer: String
-        ) {
-            if (extractorData == null) return
-            val headers = mapOf(
-                "Referer" to referer // "https://rabbitstream.net/"
-            )
-
-            lateinit var data: PollingData
-            var reconnectSid = ""
-
-            initPolling(extractorData, referer)
-                .also {
-                    data = it.first ?: throw RuntimeException("Data Null")
-                    reconnectSid = it.second ?: throw RuntimeException("ReconnectSid Null")
-                }
-
-            // Prevents them from fucking us over with doing a while(true){} loop
-            val interval = maxOf(data.pingInterval?.toLong()?.plus(2000) ?: return, 10000L)
-            var reconnect = false
-            var newAuth = false
-
-
-            while (true) {
-                val authData =
-                    when {
-                        newAuth -> "40"
-                        reconnect -> """42["_reconnect", "$reconnectSid"]"""
-                        else -> "3"
-                    }
-
-                val url = "${extractorData}&t=${generateTimeStamp()}&sid=${data.sid}"
-
-                getUpdatedData(
-                    app.post(url, json = authData, headers = headers),
-                    data,
-                    extractorData
-                ).also {
-                    newAuth = it.second
-                    data = it.first
-                }
-
-                //.also { println("Sflix post job ${it.text}") }
-                Log.d(api.name, "Running ${api.name} job $url")
-
-                val time = measureTimeMillis {
-                    // This acts as a timeout
-                    val getResponse = app.get(
-                        url,
-                        timeout = interval / 1000,
-                        headers = headers
-                    )
-//                    .also { println("Sflix get job ${it.text}") }
-                    reconnect = getResponse.text.contains("sid")
-                }
-                // Always waits even if the get response is instant, to prevent a while true loop.
-                if (time < interval - 4000)
-                    delay(4000)
-            }
-        }
-
-        // Only scrape servers with these names
         fun String?.isValidServer(): Boolean {
             val list = listOf("upcloud", "vidcloud", "streamlare")
             return list.contains(this?.lowercase(Locale.ROOT))
         }
 
-        // For re-use in Zoro
-        private suspend fun Sources.toExtractorLink(
-            caller: MainAPI,
-            name: String,
-            extractorData: String? = null,
-        ): List<ExtractorLink>? {
+        private suspend fun Sources.toExtractorLink(caller: MainAPI, name: String, extractorData: String? = null): List<ExtractorLink>? {
             return this.file?.let { file ->
-                //println("FILE::: $file")
-                val isM3u8 = URI(this.file).path.endsWith(".m3u8") || this.type.equals(
-                    "hls",
-                    ignoreCase = true
-                )
+                val isM3u8 = file.contains(".m3u8") || this.type.equals("hls", ignoreCase = true)
                 return if (isM3u8) {
-                    suspendSafeApiCall {
-                        M3u8Helper().m3u8Generation(
-                            M3u8Helper.M3u8Stream(
-                                this.file,
-                                null,
-                                mapOf("Referer" to "https://mzzcloud.life/")
-                            ), false
-                        )
+                    runCatching {
+                        M3u8Helper().m3u8Generation(M3u8Helper.M3u8Stream(file, null, mapOf("Referer" to "https://mzzcloud.life/")), false)
                             .map { stream ->
-                                newExtractorLink(
-                                    caller.name,
-                                    "${caller.name} $name",
-                                    stream.streamUrl,
-                                    caller.mainUrl,
-                                    getQualityFromName(stream.quality?.toString()),
-                                    true,
-                                    extractorData = extractorData
-                                )
+                                newExtractorLink(caller.name, "${caller.name} $name", stream.streamUrl, INFER_TYPE) {
+                                    this.referer = caller.mainUrl
+                                    this.quality = getQualityFromName(stream.quality?.toString())
+                                }
                             }
-                    }.takeIf { !it.isNullOrEmpty() } ?: listOf(
-                        // Fallback if m3u8 extractor fails
-                        newExtractorLink(
-                            caller.name,
-                            "${caller.name} $name",
-                            this.file,
-                            caller.mainUrl,
-                            getQualityFromName(this.label),
-                            isM3u8,
-                            extractorData = extractorData
-                        )
+                    }.getOrNull()?.takeIf { it.isNotEmpty() } ?: listOf(
+                        newExtractorLink(caller.name, "${caller.name} $name", file, INFER_TYPE) {
+                            this.referer = caller.mainUrl
+                            this.quality = getQualityFromName(this@toExtractorLink.label)
+                        }
                     )
                 } else {
                     listOf(
-                        newExtractorLink(
-                            caller.name,
-                            caller.name,
-                            file,
-                            caller.mainUrl,
-                            getQualityFromName(this.label),
-                            false,
-                            extractorData = extractorData
-                        )
+                        newExtractorLink(caller.name, caller.name, file, INFER_TYPE) {
+                            this.referer = caller.mainUrl
+                            this.quality = getQualityFromName(this@toExtractorLink.label)
+                        }
                     )
                 }
             }
         }
 
-        private fun Tracks.toSubtitleFile(): SubtitleFile? {
-            return this.file?.let {
-                SubtitleFile(
-                    this.label ?: "Unknown",
-                    it
-                )
-            }
-        }
-
-        private fun md5(input: ByteArray): ByteArray {
-            return MessageDigest.getInstance("MD5").digest(input)
-        }
+        private fun Tracks.toSubtitleFile(): SubtitleFile? = this.file?.let { SubtitleFile(this.label ?: "Unknown", it) }
+        private fun md5(input: ByteArray): ByteArray = MessageDigest.getInstance("MD5").digest(input)
 
         private fun generateKey(salt: ByteArray, secret: ByteArray): ByteArray {
             var key = md5(secret + salt)
@@ -692,88 +360,37 @@ open class SflixProvider : MainAPI() {
             val cipherData = base64DecodeArray(sourceUrl)
             val encrypted = cipherData.copyOfRange(16, cipherData.size)
             val aesCBC = Cipher.getInstance("AES/CBC/PKCS5Padding")
-
-            Objects.requireNonNull(aesCBC).init(
-                Cipher.DECRYPT_MODE, SecretKeySpec(
-                    decryptionKey.copyOfRange(0, 32),
-                    "AES"
-                ),
-                IvParameterSpec(decryptionKey.copyOfRange(32, decryptionKey.size))
-            )
-            val decryptedData = aesCBC!!.doFinal(encrypted)
-            return String(decryptedData, StandardCharsets.UTF_8)
+            aesCBC.init(Cipher.DECRYPT_MODE, SecretKeySpec(decryptionKey.copyOfRange(0, 32), "AES"), IvParameterSpec(decryptionKey.copyOfRange(32, decryptionKey.size)))
+            return String(aesCBC.doFinal(encrypted), StandardCharsets.UTF_8)
         }
 
-        private inline fun <reified T> decryptMapped(input: String, key: String): T? {
-            return tryParseJson(decrypt(input, key))
-        }
-
-        private fun decrypt(input: String, key: String): String {
-            return decryptSourceUrl(
-                generateKey(
-                    base64DecodeArray(input).copyOfRange(8, 16),
-                    key.toByteArray()
-                ), input
-            )
-        }
+        private inline fun <reified T> decryptMapped(input: String, key: String): T? = tryParseJson(decrypt(input, key))
+        private fun decrypt(input: String, key: String): String = decryptSourceUrl(generateKey(base64DecodeArray(input).copyOfRange(8, 16), key.toByteArray()), input)
 
         suspend fun MainAPI.extractRabbitStream(
             url: String,
             subtitleCallback: (SubtitleFile) -> Unit,
             callback: (ExtractorLink) -> Unit,
             useSidAuthentication: Boolean,
-            /** Used for extractorLink name, input: Source name */
             extractorData: String? = null,
             decryptKey: String? = null,
             nameTransformer: (String) -> String,
-        ) = suspendSafeApiCall {
-            // https://rapid-cloud.ru/embed-6/dcPOVRE57YOT?z= -> https://rapid-cloud.ru/embed-6
-            val mainIframeUrl =
-                url.substringBeforeLast("/")
-            val mainIframeId = url.substringAfterLast("/")
-                .substringBefore("?") // https://rapid-cloud.ru/embed-6/dcPOVRE57YOT?z= -> dcPOVRE57YOT
-//            val iframe = app.get(url, referer = mainUrl)
-//            val iframeKey =
-//                iframe.document.select("script[src*=https://www.google.com/recaptcha/api.js?render=]")
-//                    .attr("src").substringAfter("render=")
-//            val iframeToken = getCaptchaToken(url, iframeKey)
-//            val number =
-//                Regex("""recaptchaNumber = '(.*?)'""").find(iframe.text)?.groupValues?.get(1)
-
+        ) {
+            val mainIframeUrl = url.substringBeforeLast("/")
+            val mainIframeId = url.substringAfterLast("/").substringBefore("?")
             var sid: String? = null
+            
             if (useSidAuthentication && extractorData != null) {
                 negotiateNewSid(extractorData)?.also { pollingData ->
-                    app.post(
-                        "$extractorData&t=${generateTimeStamp()}&sid=${pollingData.sid}",
-                        requestBody = "40".toRequestBody(),
-                        timeout = 60
-                    )
-                    val text = app.get(
-                        "$extractorData&t=${generateTimeStamp()}&sid=${pollingData.sid}",
-                        timeout = 60
-                    ).text.replaceBefore("{", "")
-
+                    app.post("$extractorData&t=${generateTimeStamp()}&sid=${pollingData.sid}", requestBody = "40".toRequestBody(), timeout = 60)
+                    val text = app.get("$extractorData&t=${generateTimeStamp()}&sid=${pollingData.sid}", timeout = 60).text.replaceBefore("{", "")
                     sid = parseJson<PollingData>(text).sid
                     ioSafe { app.get("$extractorData&t=${generateTimeStamp()}&sid=${pollingData.sid}") }
                 }
             }
-            val getSourcesUrl = "${
-                mainIframeUrl.replace(
-                    "/embed",
-                    "/ajax/embed"
-                )
-            }/getSources?id=$mainIframeId${sid?.let { "$&sId=$it" } ?: ""}"
-            val response = app.get(
-                getSourcesUrl,
-                referer = mainUrl,
-                headers = mapOf(
-                    "X-Requested-With" to "XMLHttpRequest",
-                    "Accept" to "*/*",
-                    "Accept-Language" to "en-US,en;q=0.5",
-                    "Connection" to "keep-alive",
-                    "TE" to "trailers"
-                )
-            )
+            
+            val getSourcesUrl = "${mainIframeUrl.replace("/embed", "/ajax/embed")}/getSources?id=$mainIframeId${sid?.let { "$&sId=$it" } ?: ""}"
+            val response = app.get(getSourcesUrl, headers = mapOf("X-Requested-With" to "XMLHttpRequest"))
 
             val sourceObject = if (decryptKey != null) {
                 val encryptedMap = response.parsedSafe<SourceObjectEncrypted>()
@@ -781,44 +398,17 @@ open class SflixProvider : MainAPI() {
                 if (sources == null || encryptedMap.encrypted == false) {
                     response.parsedSafe()
                 } else {
-                    val decrypted = decryptMapped<List<Sources>>(sources, decryptKey)
-                    SourceObject(
-                        sources = decrypted,
-                        tracks = encryptedMap.tracks
-                    )
+                    SourceObject(sources = decryptMapped<List<Sources>>(sources, decryptKey), tracks = encryptedMap.tracks)
                 }
-            } else {
-                response.parsedSafe()
-            } ?: return@suspendSafeApiCall
+            } else response.parsedSafe()
 
-            sourceObject.tracks?.forEach { track ->
-                track?.toSubtitleFile()?.let { subtitleFile ->
-                    subtitleCallback.invoke(subtitleFile)
-                }
-            }
+            sourceObject?.tracks?.forEach { track -> track?.toSubtitleFile()?.let { subtitleCallback.invoke(it) } }
 
-            val list = listOf(
-                sourceObject.sources to "source 1",
-                sourceObject.sources1 to "source 2",
-                sourceObject.sources2 to "source 3",
-                sourceObject.sourcesBackup to "source backup"
-            )
-
-            list.forEach { subList ->
+            listOf(sourceObject?.sources to "source 1", sourceObject?.sources1 to "source 2", sourceObject?.sources2 to "source 3", sourceObject?.sourcesBackup to "source backup").forEach { subList ->
                 subList.first?.forEach { source ->
-                    source?.toExtractorLink(
-                        this,
-                        nameTransformer(subList.second),
-                        extractorData,
-                    )
-                        ?.forEach {
-                            // Sets Zoro SID used for video loading
-//                            (this as? ZoroProvider)?.sid?.set(it.url.hashCode(), sid)
-                            callback(it)
-                        }
+                    source?.toExtractorLink(this, nameTransformer(subList.second), extractorData)?.forEach { callback(it) }
                 }
             }
         }
     }
 }
-

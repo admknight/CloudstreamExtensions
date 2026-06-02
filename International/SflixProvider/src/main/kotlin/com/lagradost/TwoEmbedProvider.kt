@@ -5,7 +5,6 @@ import com.lagradost.SflixProvider.Companion.extractRabbitStream
 import com.lagradost.cloudstream3.APIHolder.getCaptchaToken
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
-import com.lagradost.cloudstream3.map
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.metaproviders.TmdbLink
 import com.lagradost.cloudstream3.metaproviders.TmdbProvider
@@ -38,10 +37,8 @@ class TwoEmbedProvider : TmdbProvider() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val mappedData = parseJson<TmdbLink>(data)
-        val (id, site) = if (mappedData.imdbID != null) listOf(
-            mappedData.imdbID,
-            "imdb"
-        ) else listOf(mappedData.tmdbID.toString(), "tmdb")
+        val site = if (mappedData.imdbID != null) "imdb" else "tmdb"
+        val id = mappedData.imdbID ?: mappedData.tmdbID.toString()
         val isMovie = mappedData.episode == null && mappedData.season == null
         val embedUrl = if (isMovie) {
             "$mainUrl/embed/$site/movie?id=$id"
@@ -51,27 +48,22 @@ class TwoEmbedProvider : TmdbProvider() {
         }
 
         val document = app.get(embedUrl).document
-        val captchaKey =
-            document.select("script[src*=https://www.google.com/recaptcha/api.js?render=]")
-                .attr("src").substringAfter("render=")
+        val captchaKey = document.selectFirst("script[src*=https://www.google.com/recaptcha/api.js?render=]")?.attr("src")?.substringAfter("render=")
 
-        val servers =  document.select(".dropdown-menu a[data-id]").map { it.attr("data-id") }
-        servers.map { serverID ->
-            val token = getCaptchaToken(embedUrl, captchaKey)
-            val ajax = app.get("$mainUrl/ajax/embed/play?id=$serverID&_token=$token", referer = embedUrl).text
-            val mappedservers = parseJson<EmbedJson>(ajax)
-            val iframeLink = mappedservers.link
-            if (iframeLink.contains("rabbitstream")) {
-                extractRabbitStream(iframeLink, subtitleCallback, callback, false, decryptKey = SflixProvider.getKey()) { it }
-            } else {
-                loadExtractor(iframeLink, embedUrl, subtitleCallback, callback)
+        val servers = document.select(".dropdown-menu a[data-id]").map { it.attr("data-id") }
+        servers.forEach { serverID ->
+            runCatching {
+                val token = getCaptchaToken(embedUrl, captchaKey ?: "")
+                val ajax = app.get("$mainUrl/ajax/embed/play?id=$serverID&_token=$token", referer = embedUrl).text
+                val mappedservers = parseJson<EmbedJson>(ajax)
+                val iframeLink = mappedservers.link
+                if (iframeLink.contains("rabbitstream")) {
+                    extractRabbitStream(iframeLink, subtitleCallback, callback, false, decryptKey = SflixProvider.getKey()) { it }
+                } else {
+                    loadExtractor(iframeLink, embedUrl, subtitleCallback, callback)
+                }
             }
         }
         return true
     }
-
-//    override suspend fun extractorVerifierJob(extractorData: String?) {
-//        Log.d(this.name, "Starting ${this.name} job!")
-//        runSflixExtractorVerifierJob(this, extractorData, "https://rabbitstream.net/")
-//    }
 }

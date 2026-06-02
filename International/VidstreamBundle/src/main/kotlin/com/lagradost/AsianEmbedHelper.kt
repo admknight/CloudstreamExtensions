@@ -2,7 +2,6 @@ package com.lagradost
 
 import android.util.Log
 import com.lagradost.cloudstream3.SubtitleFile
-import com.lagradost.cloudstream3.map
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.loadExtractor
@@ -14,17 +13,13 @@ class AsianEmbedHelper {
             subtitleCallback: (SubtitleFile) -> Unit,
             callback: (ExtractorLink) -> Unit
         ) {
-            // Fetch links
             val doc = app.get(url).document
             val links = doc.select("div#list-server-more > ul > li.linkserver")
-            if (!links.isNullOrEmpty()) {
-                links.map {
-                    val datavid = it.attr("data-video") ?: ""
-                    //Log.i("AsianEmbed", "Result => (datavid) ${datavid}")
-                    if (datavid.isNotBlank()) {
-                        val res = loadExtractor(datavid, url, subtitleCallback, callback)
-                        Log.i("AsianEmbed", "Result => ($res) (datavid) $datavid")
-                    }
+            links.forEach {
+                val dataVid = it.attr("data-video")
+                if (dataVid.isNotBlank()) {
+                    val res = loadExtractor(dataVid, url, subtitleCallback, callback)
+                    Log.i("AsianEmbed", "Result => ($res) (datavid) $dataVid")
                 }
             }
         }

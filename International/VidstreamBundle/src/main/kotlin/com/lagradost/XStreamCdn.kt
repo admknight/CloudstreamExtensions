@@ -5,7 +5,9 @@ import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.AppUtils
 import com.lagradost.cloudstream3.utils.ExtractorApi
 import com.lagradost.cloudstream3.utils.ExtractorLink
+import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 
 class LayarKaca: XStreamCdn() {
     override val name: String = "LayarKaca-xxi"
@@ -47,7 +49,6 @@ open class XStreamCdn : ExtractorApi() {
     private data class ResponseData(
         @JsonProperty("file") val file: String,
         @JsonProperty("label") val label: String,
-        //val type: String // Mp4
     )
 
     private data class ResponseJson(
@@ -55,9 +56,7 @@ open class XStreamCdn : ExtractorApi() {
         @JsonProperty("data") val data: List<ResponseData>?
     )
 
-    override fun getExtractorUrl(id: String): String {
-        return "$domainUrl/api/source/$id"
-    }
+    override fun getExtractorUrl(id: String): String = "$domainUrl/api/source/$id"
 
     override suspend fun getUrl(url: String, referer: String?): List<ExtractorLink> {
         val headers = mapOf(
@@ -66,25 +65,22 @@ open class XStreamCdn : ExtractorApi() {
         )
         val id = url.trimEnd('/').split("/").last()
         val newUrl = "https://${domainUrl}/api/source/${id}"
-        val extractedLinksList: MutableList<ExtractorLink> = mutableListOf()
-        with(app.post(newUrl, headers = headers)) {
-            if (this.code != 200) return listOf()
-            val text = this.text
-            if (text.isEmpty()) return listOf()
-            if (text == """{"success":false,"data":"Video not found or has been removed"}""") return listOf()
-            AppUtils.parseJson<ResponseJson?>(text)?.let {
-                if (it.success && it.data != null) {
-                    it.data.forEach { data ->
-                        extractedLinksList.add(
-                            newExtractorLink(
-                                name,
-                                name = name,
-                                data.file,
-                                url,
-                                getQualityFromName(data.label),
-                            )
-                        )
-                    }
+        val extractedLinksList = mutableListOf<ExtractorLink>()
+        
+        val response = app.post(newUrl, headers = headers)
+        if (response.code != 200) return emptyList()
+        val text = response.text
+        if (text.isEmpty() || text.contains("Video not found")) return emptyList()
+        
+        AppUtils.parseJson<ResponseJson?>(text)?.let {
+            if (it.success && it.data != null) {
+                it.data.forEach { data ->
+                    extractedLinksList.add(
+                        newExtractorLink(name, name, data.file, INFER_TYPE) {
+                            this.quality = getQualityFromName(data.label)
+                            this.referer = url
+                        }
+                    )
                 }
             }
         }

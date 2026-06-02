@@ -10,29 +10,20 @@ data class ApiItem(
     val id: String? = null,
     val title: String? = null,
     val slug: String? = null,
-
     val posterPath: String? = null,
     val backdropPath: String? = null,
-
     val releaseDate: String? = null,
     val firstAirDate: String? = null,
-
     val voteAverage: String? = null,
     val viewCount: Any? = null,
-
     val quality: String? = null,
     val country: String? = null,
     val runtime: Int? = null,
-
     val createdAt: String? = null,
     val numberOfSeasons: Int? = null,
     val numberOfEpisodes: Int? = null,
-
     val contentType: String? = null,
-
     val commentCount: Int? = null,
-
-    // optional extras (safe ignore)
     val originalLanguage: String? = null,
     val popularity: Any? = null,
     val genres: List<APIGenre>? = null,
@@ -69,34 +60,25 @@ data class DetailResponse(
     val tmdbId: String? = null,
     val overview: String? = null,
     val tagline: String? = null,
-
     val posterPath: String? = null,
     val backdropPath: String? = null,
     val logoPath: String? = null,
-
     val backdrops: List<String>? = null,
-
     val releaseDate: String? = null,
     val firstAirDate: String? = null,
-
     val runtime: Int? = null,
     val voteAverage: Any? = null,
     val popularity: Any? = null,
-
     val originalLanguage: String? = null,
     val country: String? = null,
     val status: String? = null,
-
     val trailerUrl: String? = null,
     val quality: String? = null,
     val director: String? = null,
-
     val genres: List<Genre>? = null,
     val cast: List<Cast>? = null,
-
-    val seasons: List<Season>? = null, // TV only
+    val seasons: List<Season>? = null,
     val firstSeason: Season? = null,
-
     val viewCount: Any? = null,
     val isPublished: Boolean? = null
 )
@@ -119,10 +101,10 @@ data class Season(
     val seasonNumber: Int? = null,
     val name: String? = null,
     val posterPath: String? = null,
-    val episodes: List<Episode>? = null
+    val episodes: List<IdlixEpisode>? = null
 )
 
-data class newEpisode(
+data class IdlixEpisode(
     val id: String? = null,
     val episodeNumber: Int? = null,
     val name: String? = null,
@@ -171,7 +153,8 @@ data class ChallengeResponse(
 data class SolveResponse(
     val embedUrl: String? = null
 )
+
 data class LoadData(
     val id: String,
-    val type: String // "movie" or "episode"
+    val type: String
 )

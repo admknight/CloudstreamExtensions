@@ -23,9 +23,9 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 import kotlin.math.roundToInt
 
-class SuperStream : MainAPI() {
+class SuperStreamLegacy : MainAPI() {
     private val timeout = 120L
-    override var name = "SuperStream"
+    override var name = "SuperStream Legacy"
     override val hasMainPage = true
     override val hasChromecastSupport = true
     override val supportedTypes = setOf(
