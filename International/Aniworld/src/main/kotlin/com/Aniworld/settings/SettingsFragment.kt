@@ -21,7 +21,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.phisher98.BuildConfig
+import com.admknight.aniworld.BuildConfig
 
 class SettingsFragment(
     plugin: AniworldPlugin,

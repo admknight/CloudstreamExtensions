@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.stremiox
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty

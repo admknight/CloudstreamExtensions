@@ -1,4 +1,6 @@
-package com.phisher98
+package com.admknight.kisskhprovider
+
+import com.admknight.kisskhprovider.BuildConfig
 
 import com.lagradost.cloudstream3.app
 import org.json.JSONObject

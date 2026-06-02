@@ -2,7 +2,6 @@ package com.Coflix
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-
 data class Response(
     val res: String,
     val results: List<Result>,
@@ -30,23 +29,28 @@ data class Result(
 
 
 data class EpRes(
-    @param:JsonProperty("post_id")
+    @JsonProperty("post_id")
     val postId: String,
     val title: String,
-    val episodes: List<Episode>,
+    val episodes: List<CoflixEpisode>,
 )
 
-data class newEpisode(val id: Long) { this.name = val title: String ; this.season = val number: String ; this.episode = val season: String }
+data class CoflixEpisode(
+    val id: Long,
+    val title: String,
+    val number: String,
+    val season: String
+)
 
 typealias Search = List<Search2>
 
 data class Search2(
-    @param:JsonProperty("ID")
+    @JsonProperty("ID")
     val id: Long,
     val title: String,
     val excerpt: String,
     val url: String,
-    @param:JsonProperty("post_type")
+    @JsonProperty("post_type")
     val postType: String,
     val year: String,
     val rating: String,
@@ -54,6 +58,3 @@ data class Search2(
     val director: String,
     val cast: String?,
 )
-
-
-

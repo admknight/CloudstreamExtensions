@@ -52,10 +52,13 @@ cloudstream {
             
             buildConfigField("String", "TMDB_API", "\"1865f43a0549ca50d341dd9ab8b29f49\"")
             buildConfigField("String", "TMDB_API_KEY", "\"1865f43a0549ca50d341dd9ab8b29f49\"")
+            buildConfigField("String", "TMDB_KEY", "\"1865f43a0549ca50d341dd9ab8b29f49\"")
             buildConfigField("String", "TMDBIMAGEBASEURL", "\"https://image.tmdb.org/t/p/w500\"")
             buildConfigField("String", "SIMKL_CLIENT_ID", "\"\"")
+            buildConfigField("String", "SIMKL_API", "\"\"")
             buildConfigField("String", "ANICHI_API", "\"https://api.allmanga.to/graphql\"")
             buildConfigField("String", "ANICHI_APP", "\"https://allmanga.to\"")
+            buildConfigField("String", "ANICHI_ENDPOINT", "\"https://api.allmanga.to\"")
             buildConfigField("String", "ZSHOW_API", "\"https://zshow.me\"")
             buildConfigField("String", "SUPERSTREAM_THIRD_API", "\"https://third.superstream.me\"")
             buildConfigField("String", "SUPERSTREAM_FOURTH_API", "\"https://fourth.superstream.me\"")

@@ -1,5 +1,6 @@
-package com.phisher98
+package com.admknight.quickiptv
 
+import com.admknight.quickiptv.BuildConfig
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson

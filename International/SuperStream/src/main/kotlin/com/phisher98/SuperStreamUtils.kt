@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.superstream
 
 import com.lagradost.cloudstream3.utils.Qualities
 

@@ -2,6 +2,7 @@ package com.admknight.stremioaddon
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
+import com.admknight.stremioaddon.settings.SettingsFragment
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
 

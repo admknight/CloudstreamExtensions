@@ -1,6 +1,7 @@
 package com.megix
 
 import android.util.Log
+import com.admknight.cinestream.BuildConfig
 import com.lagradost.cloudstream3.app
 import org.json.JSONObject
 

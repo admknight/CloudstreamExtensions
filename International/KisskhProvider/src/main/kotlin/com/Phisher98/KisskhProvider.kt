@@ -1,5 +1,6 @@
-package com.phisher98
+package com.admknight.kisskhprovider
 
+import com.admknight.kisskhprovider.BuildConfig
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.mvvm.safeApiCall

@@ -1,4 +1,6 @@
-package com.phisher98
+package com.admknight.stremiox
+
+import com.admknight.stremiox.BuildConfig
 
 import android.util.Log
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -37,9 +39,9 @@ import com.lagradost.cloudstream3.utils.USER_PROVIDER_API
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.phisher98.StremioC.Companion.TRACKER_LIST_URLS
-import com.phisher98.SubsExtractors.invokeOpenSubs
-import com.phisher98.SubsExtractors.invokeWatchsomuch
+import com.admknight.stremiox.StremioC.Companion.TRACKER_LIST_URLS
+import com.admknight.stremiox.SubsExtractors.invokeOpenSubs
+import com.admknight.stremiox.SubsExtractors.invokeWatchsomuch
 import org.json.JSONObject
 import java.net.URLEncoder
 import java.util.Locale
@@ -64,7 +66,7 @@ class StremioC(override var mainUrl: String, override var name: String) : MainAP
         )
         private const val TRACKER_LIST_URL = "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt"
         private const val tmdbAPI = "https://api.themoviedb.org/3"
-        private const val apiKey = BuildConfig.TMDB_API
+        private const val apiKey =  BuildConfig.TMDB_API
     }
 
     private fun baseUrl(): String {

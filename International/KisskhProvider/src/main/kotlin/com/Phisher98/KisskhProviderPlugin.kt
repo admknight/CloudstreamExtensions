@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.kisskhprovider
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin

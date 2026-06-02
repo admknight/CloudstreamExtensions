@@ -295,7 +295,7 @@ object CineStreamExtractors {
 
             val match = episodeLinks.find { element ->
                 val text = element.text()
-                val regex = "(?:حلقة|Episode)\\s+$newEpisode(?!\\d)".toRegex(RegexOption.IGNORE_CASE)
+                val regex = "(?:حلقة|Episode)\\s+$episode(?!\\d)".toRegex(RegexOption.IGNORE_CASE)
                 regex.containsMatchIn(text)
             }
 

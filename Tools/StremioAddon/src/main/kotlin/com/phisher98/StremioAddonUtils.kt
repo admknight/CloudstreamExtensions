@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.stremioaddon
 
 import com.lagradost.cloudstream3.APIHolder.unixTimeMS
 import com.lagradost.cloudstream3.TvType

@@ -1,5 +1,6 @@
 package com.megix
 
+import com.admknight.cinestream.BuildConfig
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.api.Log

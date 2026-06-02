@@ -387,7 +387,7 @@ open class Cinefreak : MainAPI() {
                                         ?.takeIf { it.isNotBlank() }
                                         ?.let { TMDBBASE + it },
                                     released = ep["air_date"]?.toString(),
-                                    this.score = Score.from10(Score.from10()
+                                    rating = Score.from10(
                                         ep["vote_average"]?.toString()
                                     )
                                 )
@@ -404,7 +404,7 @@ open class Cinefreak : MainAPI() {
                         background = metaBackground,
                         genres = metaGenres,
                         videos = videos.ifEmpty { null },
-                        this.score = Score.from10(Score.from10(metaRating),)
+                        rating = Score.from10(metaRating),
                         logo = logoPath,
                         imdbId = imdbId
                     )
@@ -742,5 +742,3 @@ open class Cinefreak : MainAPI() {
         return URI(url).let { "${it.scheme}://${it.host}" }
     }
 }
-
-

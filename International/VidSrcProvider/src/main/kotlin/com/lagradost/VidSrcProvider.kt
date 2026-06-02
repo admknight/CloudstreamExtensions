@@ -2,7 +2,6 @@ package com.lagradost
 
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
-import com.lagradost.cloudstream3.extractors.VidSrcExtractor
 import com.lagradost.cloudstream3.metaproviders.TmdbLink
 import com.lagradost.cloudstream3.metaproviders.TmdbProvider
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
@@ -20,16 +19,6 @@ class VidSrcProvider : TmdbProvider() {
         TvType.TvSeries,
     )
 
-//    companion object {
-//        val extractor = VidSrcExtractor()
-//    }
-
-    override suspend fun extractorVerifierJob(extractorData: String?) {
-        if (extractorData == null) return
-
-        VidSrcExtractor.validatePass(extractorData)
-    }
-
     override suspend fun loadLinks(
         data: String,
         isCasting: Boolean,
@@ -37,25 +26,18 @@ class VidSrcProvider : TmdbProvider() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val mappedData = parseJson<TmdbLink>(data)
-        val (id, site) = if (mappedData.imdbID != null) listOf(
-            mappedData.imdbID,
-            "imdb"
-        ) else listOf(mappedData.tmdbID.toString(), "tmdb")
+        val id = mappedData.imdbID ?: mappedData.tmdbID.toString()
+        
         val isMovie = mappedData.episode == null && mappedData.season == null
         val embedUrl = if (isMovie) {
-            if (site == "imdb") "$mainUrl/embed/$id" else
-                "$mainUrl/embed/$id"
+             "$mainUrl/embed/$id"
         } else {
             val suffix = "$id/${mappedData.season ?: 1}-${mappedData.episode ?: 1}"
-            if (site == "imdb") "$mainUrl/embed/$suffix" else
-                "$mainUrl/embed/$suffix"
+             "$mainUrl/embed/$suffix"
         }
 
         loadExtractor(embedUrl, null, subtitleCallback, callback)
-//        extractor.getSafeUrl(embedUrl, null, subtitleCallback, callback)
 
         return true
     }
 }
-
-

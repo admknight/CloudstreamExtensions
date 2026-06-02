@@ -1,4 +1,4 @@
-package com.phisher98
+package com.admknight.torrastream
 
 import android.content.SharedPreferences
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties

@@ -1,4 +1,6 @@
-package com.phisher98
+package com.admknight.superstream
+
+import com.admknight.superstream.BuildConfig
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -14,9 +16,6 @@ import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.INFER_TYPE
 import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.phisher98.BuildConfig.SUPERSTREAM_FOURTH_API
-import com.phisher98.BuildConfig.SUPERSTREAM_THIRD_API
-import com.phisher98.BuildConfig.NuvFeb
 import kotlinx.coroutines.delay
 
 import org.json.JSONArray
@@ -35,9 +34,9 @@ object SuperStreamExtractor : SuperStream() {
         episode: Int? = null,
         callback: (ExtractorLink) -> Unit
     ) {
-        val searchUrl = "$SUPERSTREAM_FOURTH_API/search?keyword=$imdbId"
+        val searchUrl = "${BuildConfig.SUPERSTREAM_FOURTH_API}/search?keyword=$imdbId"
         val href = app.get(searchUrl).document.selectFirst("h2.film-name a")?.attr("href")
-            ?.let { SUPERSTREAM_FOURTH_API + it }
+            ?.let { BuildConfig.SUPERSTREAM_FOURTH_API + it }
         val mediaId = href?.let {
             app.get(it).document.selectFirst("h2.heading-name a")?.attr("href")
                 ?.substringAfterLast("/")?.toIntOrNull()
@@ -55,8 +54,8 @@ object SuperStreamExtractor : SuperStream() {
         callback: (ExtractorLink) -> Unit,
         token: String? = null
     ) {
-        val thirdAPI = SUPERSTREAM_THIRD_API
-        val fourthAPI = SUPERSTREAM_FOURTH_API
+        val thirdAPI = BuildConfig.SUPERSTREAM_THIRD_API
+        val fourthAPI = BuildConfig.SUPERSTREAM_FOURTH_API
         val (seasonSlug, episodeSlug) = getEpisodeSlug(season, episode)
         val headers = mapOf("Accept-Language" to "en")
         val videoheaders = mapOf(
@@ -239,9 +238,9 @@ object SuperStreamExtractor : SuperStream() {
         if (token.isNullOrEmpty()) return
 
         val url = if (season == null) {
-            "$NuvFeb/api/media/movie/$id?cookie=${URLEncoder.encode(token, "UTF-8")}"
+            "${BuildConfig.NuvFeb}/api/media/movie/$id?cookie=${URLEncoder.encode(token, "UTF-8")}"
         } else {
-            "$NuvFeb/api/media/tv/$id/$season/$episode?cookie=${URLEncoder.encode(token, "UTF-8")}"
+            "${BuildConfig.NuvFeb}/api/media/tv/$id/$season/$episode?cookie=${URLEncoder.encode(token, "UTF-8")}"
         }
 
         var parsed: FebResponse? = null

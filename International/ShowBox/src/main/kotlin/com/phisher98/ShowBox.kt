@@ -1,5 +1,6 @@
 package com.phisher98
 
+import com.admknight.showbox.BuildConfig
 import android.content.SharedPreferences
 import android.util.Base64
 import com.fasterxml.jackson.annotation.JsonProperty

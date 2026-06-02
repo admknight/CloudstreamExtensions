@@ -1,102 +1,64 @@
 package com.lagradost
 
 import com.lagradost.cloudstream3.*
-import com.lagradost.cloudstream3.utils.AppUtils.parseJson
-import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.newExtractorLink
-import com.lagradost.cloudstream3.utils.Qualities
+import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.jsoup.nodes.Element
 
 class EjaTv : MainAPI() {
-    override var mainUrl = "https://eja.tv"
+    override var mainUrl = "https://ejatv.com"
     override var name = "Eja.tv"
-
-    // Universal language?
-    override var lang = "en"
-    override val hasDownloadSupport = false
-
     override val hasMainPage = true
-    override val supportedTypes = setOf(
-        TvType.Live
-    )
+    override val supportedTypes = setOf(TvType.Live)
+
+    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
+        val document = app.get(mainUrl).document
+        val home = document.select("div.card").mapNotNull {
+            it.toSearchResponse()
+        }
+        return newHomePageResponse(listOf(HomePageList("Channels", home)), false)
+    }
 
     private fun Element.toSearchResponse(): LiveSearchResponse? {
         val link = this.select("div.alternative a").last() ?: return null
         val href = fixUrl(link.attr("href"))
         val img = this.selectFirst("div.thumb img")
-        val lang = this.selectFirst(".card-title > a")?.attr("href")?.removePrefix("?country=")
+        val langCode = this.selectFirst(".card-title > a")?.attr("href")?.removePrefix("?country=")
             ?.replace("int", "eu") //international -> European Union 🇪🇺
         return newLiveSearchResponse(
             // Kinda hack way to get the title
             img?.attr("alt")?.replaceFirst("Watch ", "") ?: return null,
             href,
-            this@EjaTv.name,
             TvType.Live,
-            fixUrl(img.attr("src")),
-            lang = lang
-        )
-    }
-
-    override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
-        // Maybe this based on app language or as setting?
-        val language = "English"
-        val dataMap = mapOf(
-            "News" to mapOf("language" to language, "category" to "News"),
-            "Sports" to mapOf("language" to language, "category" to "Sports"),
-            "Entertainment" to mapOf("language" to language, "category" to "Entertainment")
-        )
-        return newHomePageResponse(dataMap.map { (title, data) ->
-            val document = app.post(mainUrl, data = data).document
-            val shows = document.select("div.card-body").mapNotNull {
-                it.toSearchResponse()
-            }
-            HomePageList(
-                title,
-                shows,
-                isHorizontalImages = true
-            )
-        })
+            false
+        ) {
+            this.posterUrl = fixUrlNull(img.attr("src"))
+            this.lang = langCode
+        }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        return app.post(
-            mainUrl, data = mapOf("search" to query)
-        ).document.select("div.card-body").mapNotNull {
+        val document = app.get("$mainUrl/?s=$query").document
+        return document.select("div.card").mapNotNull {
             it.toSearchResponse()
         }
     }
 
     override suspend fun load(url: String): LoadResponse {
-        val doc = app.get(url).document
-        val sections =
-            doc.select("li.list-group-item.d-flex.justify-content-between.align-items-center")
+        val document = app.get(url).document
+        val title = document.selectFirst("h1")?.text() ?: ""
+        val poster = document.selectFirst("div.thumb img")?.attr("src")
+        val plot = document.selectFirst("div.description")?.text()
+        
+        val script = document.select("script").find { it.data().contains("var source =") }?.data()
+        val streamUrl = script?.substringAfter("var source = \"")?.substringBefore("\"") ?: ""
 
-        val link = fixUrl(sections.last()!!.select("a").attr("href"))
-
-        val title = doc.select("h5.text-center").text()
-        val poster = fixUrl(doc.select("p.text-center img").attr("src"))
-
-        val summary = sections.subList(0, 3).joinToString("<br>") {
-            val innerText = it.ownText().trim()
-            val outerText = it.select("a").text().trim()
-            "$innerText: $outerText"
+        return newLiveStreamLoadResponse(title, url, streamUrl) {
+            this.posterUrl = poster
+            this.plot = plot
         }
-
-        return newLiveStreamLoadResponse(
-            title,
-            url,
-            this.name,
-            LoadData(link, title).toJson(),
-            poster,
-            plot = summary
-        )
     }
-
-    data class LoadData(
-        val url: String,
-        val title: String
-    )
 
     override suspend fun loadLinks(
         data: String,
@@ -104,14 +66,16 @@ class EjaTv : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        val loadData = parseJson<LoadData>(data)
-
         callback.invoke(
-            newExtractorLink(this.name, loadData.title, loadData.url, INFER_TYPE) { this.referer = "" ; this.quality = Qualities.Unknown.value ; this.isM3u8 = true }
+            newExtractorLink(
+                source = name,
+                name = name,
+                url = data,
+                type = INFER_TYPE
+            ) {
+                this.referer = mainUrl
+            }
         )
         return true
     }
 }
-
-
-
