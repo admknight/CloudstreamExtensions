@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.admknight.superstream.settings.SettingsFragment
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
-import com.lagradost.SuperStreamLegacy
 
 @CloudstreamPlugin
-class SuperStreamPlugin: Plugin() {
+class SuperStreamPlugin : Plugin() {
     override fun load(context: Context) {
         val sharedPref = context.getSharedPreferences("SuperStream", Context.MODE_PRIVATE)
         registerMainAPI(SuperStream(sharedPref))
