@@ -3,28 +3,28 @@
 This branch contains the compiled `.cs3` files and the live index.
 
 ### 📊 Status
-* **Total Plugins Live:** `101` / 155
-* **Last Update:** `2026-06-02 03:15:34` UTC
+* **Total Plugins Live:** `61` / 155
+* **Last Update:** `2026-06-02 04:19:16` UTC
 * **Repo URL:** `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json` 
 
 ---
 
 ### 📂 Available Plugins by Category
 
-#### 📁 Anime (33)
-`AllWish`, `Anichi`, `AniflixProvider`, `AnimeCloud`, `AnimeDekhoProvider`, `AnimePaheProvider`, `Animeav1`, `Animedubhindi`, `Animekhor`, `AnimekisaProvider`, `Animexin`, `AsiaFlixProvider`, `Crunchyroll`, `Donghuastream`, `DoraBash`, `DubbedAnimeProvider`, `GogoanimeProvider`, `KawaiifuProvider`, `KimCartoonProvider`, `LACartoonsProvider`, `Latanime`, `MundoDonghuaProvider`, `NineAnimeProvider`, `OnePace`, `TenshiProvider`, `TokuZilla`, `TokusatsuUltimate`, `ToonHub`, `ToonTales`, `Toonstream`, `Topcartoons`, `WatchCartoonOnlineProvider`, `WcofunProvider`
+#### 📁 Anime (15)
+`AnimeCloud`, `AnimeDekhoProvider`, `Animeav1`, `Animedubhindi`, `Animekhor`, `Animexin`, `Donghuastream`, `Latanime`, `OnePace`, `TokuZilla`, `TokusatsuUltimate`, `ToonHub`, `ToonTales`, `Toonstream`, `Topcartoons`
 
-#### 📁 Bollywood (23)
-`AllMovieLandProvider`, `BanglaPlex`, `Bollyflix`, `CineStream`, `Cinefreak`, `Cinevood`, `Desicinemas`, `Fivemovierulz`, `FourKHDHub`, `HDhub4u`, `Hindmoviez`, `MassTamilanProvider`, `MovieBlast`, `MoviesDrive`, `Moviesmod`, `Mp4Moviez`, `Netmirror`, `OnlineMoviesHinditProvider`, `SkymoviesHD`, `Tamilblasters`, `Tamilian`, `UHDmoviesProvider`, `VegaMovies`
+#### 📁 Bollywood (18)
+`AllMovieLandProvider`, `BanglaPlex`, `Bollyflix`, `Cinefreak`, `Desicinemas`, `Fivemovierulz`, `FourKHDHub`, `HDhub4u`, `Hindmoviez`, `MassTamilanProvider`, `MovieBlast`, `Movierulzhd`, `MoviesDrive`, `Moviesmod`, `OnlineMoviesHinditProvider`, `Tamilian`, `UHDmoviesProvider`, `VegaMovies`
 
-#### 📁 International (34)
-`AllAnimeProvider`, `AllMoviesForYouProvider`, `AnimeflvProvider`, `Animenosub`, `Animesalt`, `AniwaveProvider`, `Aniworld`, `Ask4Movie`, `Cinemacity`, `Coflix`, `DudeFilms`, `Fibwatch`, `Goojara`, `KayiFamilyTv`, `Kickassanime`, `KisskhProvider`, `MPlayerProvider`, `Megakino`, `MovieBoxProvider`, `Movies4u`, `Netcinez`, `OHLI24`, `OneTouchTV`, `PeliculasFlixProvider`, `Pelisplushd`, `Pencurimovie`, `Pinoymoviepedia`, `Piratexplay`, `ShowBox`, `StreamPlay`, `SuperembedProvider`, `TorraStream`, `VidSrcProvider`, `YTS`
+#### 📁 International (25)
+`Animenosub`, `Animesalt`, `Cinemacity`, `DudeFilms`, `Fibwatch`, `KayiFamilyTv`, `Kickassanime`, `LayarKacaProvider`, `MPlayerProvider`, `Megakino`, `MovieBoxProvider`, `Movies4u`, `MultiMoviesProvider`, `Netcinez`, `OHLI24`, `OneTouchTV`, `Pelisplushd`, `Pencurimovie`, `Pinoymoviepedia`, `Piratexplay`, `Pmsm`, `ShowFlixProvider`, `Topstreamfilm`, `YTS`, `Zinkmovies`
 
-#### 📁 LiveTV (5)
-`EjaTv`, `IPTVPlayer`, `PublicSportsIPTV`, `QuickIPTV`, `Tvtwofourseven`
+#### 📁 LiveTV (1)
+`IPTVPlayer`
 
-#### 📁 Tools (6)
-`BingedReview`, `GDIndex`, `Jellyfin`, `RingZ`, `StremioAddon`, `StremioX`
+#### 📁 Tools (2)
+`GDIndex`, `RingZ`
 
 
 ---

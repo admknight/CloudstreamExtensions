@@ -1,65 +1,8 @@
 [
     {
-        "name": "AllWish",
-        "internalName": "AllWish",
-        "version": 6,
-        "description": "Anime from all-wish.me",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AllWish.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "All"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AllWish/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Anichi",
-        "internalName": "Anichi",
-        "version": 14,
-        "description": "Adam Knight curated source for Anichi",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Anichi.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Anichi/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "AniflixProvider",
-        "internalName": "AniflixProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AniflixProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Anime",
-            "AnimeMovie",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AniflixProvider/icon.png",
-        "status": 0,
-        "apiVersion": 1
-    },
-    {
         "name": "AnimeCloud",
         "internalName": "AnimeCloud",
-        "version": 6,
+        "version": 7,
         "description": "German (Lang) Anime",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimeCloud.cs3",
@@ -85,34 +28,11 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "Cartoon"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AnimeDekhoProvider/icon.png",
         "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "AnimePaheProvider",
-        "internalName": "AnimePaheProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimePaheProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AnimePaheProvider/icon.png",
-        "status": 0,
         "apiVersion": 1
     },
     {
@@ -175,27 +95,6 @@
         "apiVersion": 1
     },
     {
-        "name": "AnimekisaProvider",
-        "internalName": "AnimekisaProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimekisaProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AnimekisaProvider/icon.png",
-        "status": 0,
-        "apiVersion": 1
-    },
-    {
         "name": "Animexin",
         "internalName": "Animexin",
         "version": 9,
@@ -216,46 +115,6 @@
         "apiVersion": 1
     },
     {
-        "name": "AsiaFlixProvider",
-        "internalName": "AsiaFlixProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AsiaFlixProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AsianDrama",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/AsiaFlixProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Crunchyroll",
-        "internalName": "Crunchyroll",
-        "version": 5,
-        "description": "The Crunchyroll provider allows you to watch all the shows that are on Crunchyroll.",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Crunchyroll.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Crunchyroll/icon.png",
-        "status": 0,
-        "apiVersion": 1
-    },
-    {
         "name": "Donghuastream",
         "internalName": "Donghuastream",
         "version": 16,
@@ -270,125 +129,6 @@
         ],
         "language": "zh",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/Donghuastream/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "DoraBash",
-        "internalName": "DoraBash",
-        "version": 4,
-        "description": "Doremon Show in Hindi",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/DoraBash.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "Cartoon"
-        ],
-        "language": "hi",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/DoraBash/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "DubbedAnimeProvider",
-        "internalName": "DubbedAnimeProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/DubbedAnimeProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/DubbedAnimeProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "GogoanimeProvider",
-        "internalName": "GogoanimeProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/GogoanimeProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/GogoanimeProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "KawaiifuProvider",
-        "internalName": "KawaiifuProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/KawaiifuProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/KawaiifuProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "KimCartoonProvider",
-        "internalName": "KimCartoonProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/KimCartoonProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Cartoon",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/KimCartoonProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "LACartoonsProvider",
-        "internalName": "LACartoonsProvider",
-        "version": 3,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/LACartoonsProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Cartoons",
-            "TvSeries"
-        ],
-        "language": "es",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/LACartoonsProvider/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -413,47 +153,6 @@
         "apiVersion": 1
     },
     {
-        "name": "MundoDonghuaProvider",
-        "internalName": "MundoDonghuaProvider",
-        "version": 3,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MundoDonghuaProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Anime",
-            "OVA",
-            "AnimeMovie",
-            ""
-        ],
-        "language": "es",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/MundoDonghuaProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "NineAnimeProvider",
-        "internalName": "NineAnimeProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/NineAnimeProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/NineAnimeProvider/icon.png",
-        "status": 0,
-        "apiVersion": 1
-    },
-    {
         "name": "OnePace",
         "internalName": "OnePace",
         "version": 17,
@@ -464,32 +163,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Anime"
+            "Others"
         ],
         "language": "en",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/OnePace/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "TenshiProvider",
-        "internalName": "TenshiProvider",
-        "version": 2,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/TenshiProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "Movie",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/TenshiProvider/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -504,9 +181,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie",
-            "Anime"
+            "Others"
         ],
         "language": "en",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/TokuZilla/icon.png",
@@ -608,49 +283,6 @@
         "apiVersion": 1
     },
     {
-        "name": "WatchCartoonOnlineProvider",
-        "internalName": "WatchCartoonOnlineProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/WatchCartoonOnlineProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Cartoon",
-            "Anime",
-            "TvSeries",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/WatchCartoonOnlineProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "WcofunProvider",
-        "internalName": "WcofunProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/WcofunProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Anime/WcofunProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
         "name": "AllMovieLandProvider",
         "internalName": "AllMovieLandProvider",
         "version": 18,
@@ -661,9 +293,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "Cartoon"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/AllMovieLandProvider/icon.png",
@@ -700,31 +330,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie",
-            "AsianDrama",
-            "Anime"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Bollyflix/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "CineStream",
-        "internalName": "CineStream",
-        "version": 440,
-        "description": "Adam Knight curated source for CineStream",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/CineStream.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/CineStream/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -739,31 +348,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "Anime"
+            "Others"
         ],
         "language": "bn",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Cinefreak/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Cinevood",
-        "internalName": "Cinevood",
-        "version": 11,
-        "description": "unstable right now but good regional content",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Cinevood.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries"
-        ],
-        "language": "hi",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Cinevood/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -778,8 +366,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Desicinemas/icon.png",
@@ -797,8 +384,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Fivemovierulz/icon.png",
@@ -835,9 +421,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "Anime"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/HDhub4u/icon.png",
@@ -855,9 +439,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            ""
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Hindmoviez/icon.png",
@@ -875,8 +457,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Music",
-            "Movie"
+            "Others"
         ],
         "language": "ta",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/MassTamilanProvider/icon.png",
@@ -894,11 +475,28 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries"
+            "Others"
         ],
         "language": "te",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/MovieBlast/icon.png",
+        "status": 1,
+        "apiVersion": 1
+    },
+    {
+        "name": "Movierulzhd",
+        "internalName": "Movierulzhd",
+        "version": 153,
+        "description": "Includes: Hdmovie2,hdmovie6",
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Movierulzhd.cs3",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "language": "hi",
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Movierulzhd/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -913,10 +511,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie",
-            "AsianDrama",
-            "Anime"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/MoviesDrive/icon.png",
@@ -934,52 +529,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie",
-            "AsianDrama",
-            "Anime"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Moviesmod/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Mp4Moviez",
-        "internalName": "Mp4Moviez",
-        "version": 1,
-        "description": "Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez. Mp4moviez is number one entertainment hollywood bollywood website and provide free Mp4moviez full movie download facility",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Mp4Moviez.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "NSFW"
-        ],
-        "language": "hi",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Mp4Moviez/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Netmirror",
-        "internalName": "Netmirror",
-        "version": 43,
-        "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Netmirror.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries"
-        ],
-        "language": "hi",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Netmirror/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -994,51 +547,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie",
-            ""
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/OnlineMoviesHinditProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "SkymoviesHD",
-        "internalName": "SkymoviesHD",
-        "version": 1,
-        "description": "just testing",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/SkymoviesHD.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "NSFW"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/SkymoviesHD/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Tamilblasters",
-        "internalName": "Tamilblasters",
-        "version": 3,
-        "description": "Movies & Series",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Tamilblasters.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries"
-        ],
-        "language": "ta",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Tamilblasters/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1053,8 +565,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movies",
-            ""
+            "Others"
         ],
         "language": "ta",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/Tamilian/icon.png",
@@ -1072,9 +583,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            ""
+            "Others"
         ],
         "language": "en",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/UHDmoviesProvider/icon.png",
@@ -1084,7 +593,7 @@
     {
         "name": "VegaMovies",
         "internalName": "VegaMovies",
-        "version": 79,
+        "version": 80,
         "description": "Includes LuxMovies, Rogmovies",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/VegaMovies.cs3",
@@ -1092,73 +601,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie",
-            "AsianDrama",
-            "Anime"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/VegaMovies/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "AllAnimeProvider",
-        "internalName": "AllAnimeProvider",
-        "version": 4,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AllAnimeProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AllAnimeProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "AllMoviesForYouProvider",
-        "internalName": "AllMoviesForYouProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AllMoviesForYouProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "TvSeries",
-            "Movie",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AllMoviesForYouProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "AnimeflvProvider",
-        "internalName": "AnimeflvProvider",
-        "version": 5,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimeflvProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "es",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AnimeflvProvider/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1193,73 +639,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "Cartoon"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Animesalt/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "AniwaveProvider",
-        "internalName": "AniwaveProvider",
-        "version": 20,
-        "description": "Watch 9anime with the help of the Consumet API.",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AniwaveProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AniwaveProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Aniworld",
-        "internalName": "Aniworld",
-        "version": 9,
-        "description": "Include: Serienstream (Login Required under Extension Settings)",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Aniworld.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            ""
-        ],
-        "language": "de",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Aniworld/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Ask4Movie",
-        "internalName": "Ask4Movie",
-        "version": 4,
-        "description": "Uses TMDB",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Ask4Movie.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "TvSeries",
-            "Movie",
-            "AnimeMovie"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Ask4Movie/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1274,31 +657,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            ""
+            "Others"
         ],
         "language": "en",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Cinemacity/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Coflix",
-        "internalName": "Coflix",
-        "version": 13,
-        "description": "Movies,Series and Anime French Extension ",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Coflix.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries"
-        ],
-        "language": "fr",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Coflix/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1313,9 +675,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            ""
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/DudeFilms/icon.png",
@@ -1333,30 +693,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Fibwatch/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Goojara",
-        "internalName": "Goojara",
-        "version": 1,
-        "description": "Movies and Series (Mostly 720p)",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Goojara.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Goojara/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1391,10 +731,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            ""
+            "Others"
         ],
         "language": "en",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Kickassanime/icon.png",
@@ -1402,20 +739,20 @@
         "apiVersion": 1
     },
     {
-        "name": "KisskhProvider",
-        "internalName": "KisskhProvider",
-        "version": 18,
-        "description": "Adam Knight curated source for KisskhProvider",
+        "name": "LayarKacaProvider",
+        "internalName": "LayarKacaProvider",
+        "version": 6,
+        "description": "Lorem Ipsum",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/KisskhProvider.cs3",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/LayarKacaProvider.cs3",
         "authors": [
             "Adam Knight"
         ],
         "tvTypes": [
             "Others"
         ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/KisskhProvider/icon.png",
+        "language": "id",
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/LayarKacaProvider/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1430,10 +767,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "AsianDrama",
-            "TvSeries",
-            "Movie",
-            ""
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/MPlayerProvider/icon.png",
@@ -1471,8 +805,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/MovieBoxProvider/icon.png",
@@ -1490,12 +823,28 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            ""
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Movies4u/icon.png",
+        "status": 1,
+        "apiVersion": 1
+    },
+    {
+        "name": "MultiMoviesProvider",
+        "internalName": "MultiMoviesProvider",
+        "version": 48,
+        "description": "Indian Multi-language HD Provider",
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MultiMoviesProvider.cs3",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "language": "hi",
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/MultiMoviesProvider/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1529,10 +878,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "AsianDrama",
-            "TvSeries",
-            "Movie",
-            ""
+            "Others"
         ],
         "language": "ko",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/OHLI24/icon.png",
@@ -1550,31 +896,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "AsianDrama",
-            "TvSeries",
-            ""
+            "Others"
         ],
         "language": "en",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/OneTouchTV/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "PeliculasFlixProvider",
-        "internalName": "PeliculasFlixProvider",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/PeliculasFlixProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie",
-            ""
-        ],
-        "language": "es",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/PeliculasFlixProvider/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1624,7 +949,7 @@
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Pinoymoviepedia.cs3",
         "authors": [
-            "Adam Knight"
+            "Phisher98"
         ],
         "tvTypes": [
             "Movie",
@@ -1646,9 +971,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "Cartoon"
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Piratexplay/icon.png",
@@ -1656,96 +979,56 @@
         "apiVersion": 1
     },
     {
-        "name": "ShowBox",
-        "internalName": "ShowBox",
-        "version": 5,
-        "description": "Adam Knight curated source for ShowBox",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/ShowBox.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/ShowBox/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "StreamPlay",
-        "internalName": "StreamPlay",
-        "version": 646,
-        "description": "Adam Knight curated source for StreamPlay",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/StreamPlay.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/StreamPlay/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "SuperembedProvider",
-        "internalName": "SuperembedProvider",
-        "version": 4,
-        "description": "Uses TMDB",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/SuperembedProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "TvSeries",
-            "Movie",
-            ""
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/SuperembedProvider/icon.png",
-        "status": 0,
-        "apiVersion": 1
-    },
-    {
-        "name": "TorraStream",
-        "internalName": "TorraStream",
-        "version": 82,
-        "description": "Adam Knight curated source for TorraStream",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/TorraStream.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/TorraStream/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "VidSrcProvider",
-        "internalName": "VidSrcProvider",
+        "name": "Pmsm",
+        "internalName": "Pmsm",
         "version": 2,
-        "description": "Lorem Ipsum",
+        "description": "PMSM (Pencuri Movie Sub Malay)",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/VidSrcProvider.cs3",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Pmsm.cs3",
         "authors": [
             "Adam Knight"
         ],
         "tvTypes": [
-            "TvSeries",
-            "Movie",
-            ""
+            "Others"
         ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/VidSrcProvider/icon.png",
+        "language": "id",
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Pmsm/icon.png",
+        "status": 1,
+        "apiVersion": 1
+    },
+    {
+        "name": "ShowFlixProvider",
+        "internalName": "ShowFlixProvider",
+        "version": 11,
+        "description": "HD Provider for all Indian Languages",
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/ShowFlixProvider.cs3",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "language": "hi",
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/ShowFlixProvider/icon.png",
+        "status": 1,
+        "apiVersion": 1
+    },
+    {
+        "name": "Topstreamfilm",
+        "internalName": "Topstreamfilm",
+        "version": 6,
+        "description": "Filme  and Serien (German)",
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Topstreamfilm.cs3",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "language": "de",
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Topstreamfilm/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1769,20 +1052,20 @@
         "apiVersion": 1
     },
     {
-        "name": "EjaTv",
-        "internalName": "EjaTv",
+        "name": "Zinkmovies",
+        "internalName": "Zinkmovies",
         "version": 1,
-        "description": "Lorem Ipsum",
+        "description": "Adam Knight curated source for Zinkmovies",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/EjaTv.cs3",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Zinkmovies.cs3",
         "authors": [
             "Adam Knight"
         ],
         "tvTypes": [
-            "Live"
+            "Others"
         ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/EjaTv/icon.png",
+        "language": "hi",
+        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Zinkmovies/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1797,83 +1080,10 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Live",
-            ""
+            "Others"
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/IPTVPlayer/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "PublicSportsIPTV",
-        "internalName": "PublicSportsIPTV",
-        "version": 2,
-        "description": "Adam Knight curated source for PublicSportsIPTV",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/PublicSportsIPTV.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/PublicSportsIPTV/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "QuickIPTV",
-        "internalName": "QuickIPTV",
-        "version": 5,
-        "description": "Adam Knight curated source for QuickIPTV",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/QuickIPTV.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/QuickIPTV/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "Tvtwofourseven",
-        "internalName": "Tvtwofourseven",
-        "version": 1,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Tvtwofourseven.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Live"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/LiveTV/Tvtwofourseven/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "BingedReview",
-        "internalName": "BingedReview",
-        "version": 3,
-        "description": "Data about streaming and review",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/BingedReview.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Movie"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/BingedReview/icon.png",
         "status": 1,
         "apiVersion": 1
     },
@@ -1888,9 +1098,7 @@
             "Adam Knight"
         ],
         "tvTypes": [
-            "Movie",
-            "TvSeries",
-            ""
+            "Others"
         ],
         "language": "en",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/GDIndex/icon.png",
@@ -1898,32 +1106,9 @@
         "apiVersion": 1
     },
     {
-        "name": "Jellyfin",
-        "internalName": "Jellyfin",
-        "version": 3,
-        "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Jellyfin.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "AsianDrama",
-            "TvSeries",
-            "Anime",
-            "Movie",
-            "Cartoon",
-            "AnimeMovie"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/Jellyfin/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
         "name": "RingZ",
         "internalName": "RingZ",
-        "version": 6,
+        "version": 7,
         "description": "Ringz App",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/RingZ.cs3",
@@ -1937,42 +1122,6 @@
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/RingZ/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "StremioAddon",
-        "internalName": "StremioAddon",
-        "version": 11,
-        "description": "Adam Knight curated source for StremioAddon",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/StremioAddon.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioAddon/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "StremioX",
-        "internalName": "StremioX",
-        "version": 22,
-        "description": "Adam Knight curated source for StremioX",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/StremioX.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/StremioX/icon.png",
         "status": 1,
         "apiVersion": 1
     }
