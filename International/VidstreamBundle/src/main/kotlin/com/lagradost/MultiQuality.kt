@@ -3,9 +3,8 @@ package com.lagradost
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.utils.ExtractorApi
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
+import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.getQualityFromName
-import com.lagradost.cloudstream3.utils.INFER_TYPE
 import java.net.URI
 
 class MultiQuality : ExtractorApi() {
@@ -22,27 +21,39 @@ class MultiQuality : ExtractorApi() {
 
     override suspend fun getUrl(url: String, referer: String?): List<ExtractorLink> {
         val extractedLinksList: MutableList<ExtractorLink> = mutableListOf()
-        val response = app.get(url)
-        sourceRegex.findAll(response.text).forEach { sourceMatch ->
-            val extractedUrl = sourceMatch.groupValues[1]
-            if (URI(extractedUrl).path.endsWith(".m3u8")) {
-                val m3u8Response = app.get(extractedUrl)
-                m3u8Regex.findAll(m3u8Response.text).forEach { match ->
-                    extractedLinksList.add(
-                        newExtractorLink(name, name, urlRegex.find(m3u8Response.url)!!.groupValues[1] + match.groupValues[0], INFER_TYPE) {
-                            this.quality = getQualityFromName(match.groupValues[1])
-                            this.referer = url
+        with(app.get(url)) {
+            sourceRegex.findAll(this.text).forEach { sourceMatch ->
+                val extractedUrl = sourceMatch.groupValues[1]
+                // Trusting this isn't mp4, may fuck up stuff
+                if (URI(extractedUrl).path.endsWith(".m3u8")) {
+                    with(app.get(extractedUrl)) {
+                        m3u8Regex.findAll(this.text).forEach { match ->
+                            extractedLinksList.add(
+                                newExtractorLink(
+                                    name,
+                                    name = name,
+                                    urlRegex.find(this.url)!!.groupValues[1] + match.groupValues[0],
+                                    url,
+                                    getQualityFromName(match.groupValues[1]),
+                                    isM3u8 = true
+                                )
+                            )
                         }
+
+                    }
+                } else if (extractedUrl.endsWith(".mp4")) {
+                    extractedLinksList.add(
+                        newExtractorLink(
+                            name,
+                            "$name ${sourceMatch.groupValues[2]}",
+                            extractedUrl,
+                            url.replace(" ", "%20"),
+                            Qualities.Unknown.value,
+                        )
                     )
                 }
-            } else if (extractedUrl.endsWith(".mp4")) {
-                extractedLinksList.add(
-                    newExtractorLink(name, "$name ${sourceMatch.groupValues[2]}", extractedUrl, INFER_TYPE) {
-                        this.referer = url.replace(" ", "%20")
-                    }
-                )
             }
+            return extractedLinksList
         }
-        return extractedLinksList
     }
 }

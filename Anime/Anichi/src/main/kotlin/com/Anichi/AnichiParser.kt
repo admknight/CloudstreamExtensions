@@ -192,7 +192,7 @@ object AnichiParser {
 
     data class LinksQuery(@param:JsonProperty("data") val data: LinkData? = LinkData())
 
-    data class LinkData(@param:JsonProperty("episode") val episode: AnichiEpisode? = AnichiEpisode())
+    data class LinkData(@param:JsonProperty("episode") val episode: Episode? = newEpisode())
 
     data class SourceUrls(
         @param:JsonProperty("sourceUrl") val sourceUrl: String? = null,
@@ -209,7 +209,7 @@ object AnichiParser {
         @param:JsonProperty("downloadUrl") val downloadUrl: String? = null
     )
 
-    data class AnichiEpisode(
+    data class newEpisode(
             @param:JsonProperty("sourceUrls") val sourceUrls: ArrayList<SourceUrls> = arrayListOf(),
     )
 

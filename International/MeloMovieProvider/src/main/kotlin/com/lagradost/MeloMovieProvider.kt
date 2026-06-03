@@ -1,13 +1,12 @@
 package com.lagradost
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import com.fasterxml.jackson.module.kotlin.readValue
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addImdbUrl
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.getQualityFromName
-import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
@@ -16,14 +15,15 @@ class MeloMovieProvider : MainAPI() {
     override var mainUrl = "https://melomovie.com"
     override val instantLinkLoading = true
     override val hasQuickSearch = true
-    override val hasChromecastSupport = false
+    override val hasChromecastSupport = false // MKV FILES CANT BE PLAYED ON A CHROMECAST
 
     data class MeloMovieSearchResult(
         @JsonProperty("id") val id: Int,
         @JsonProperty("imdb_code") val imdbId: String,
         @JsonProperty("title") val title: String,
-        @JsonProperty("type") val type: Int,
-        @JsonProperty("year") val year: Int?,
+        @JsonProperty("type") val type: Int, // 1 = MOVIE, 2 = TV-SERIES
+        @JsonProperty("year") val year: Int?, // 1 = MOVIE, 2 = TV-SERIES
+        //"mppa" for tags
     )
 
     data class MeloMovieLink(
@@ -31,49 +31,74 @@ class MeloMovieProvider : MainAPI() {
         @JsonProperty("link") val link: String
     )
 
-    override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
+    override suspend fun quickSearch(query: String): List<SearchResponse> {
+        return search(query)
+    }
 
     override suspend fun search(query: String): List<SearchResponse> {
         val url = "$mainUrl/movie/search/?name=$query"
-        val returnValue = ArrayList<SearchResponse>()
+        val returnValue: ArrayList<SearchResponse> = ArrayList()
         val response = app.get(url).text
-        val mapped = runCatching { parseJson<List<MeloMovieSearchResult>>(response) }.getOrNull() ?: emptyList()
+        val mapped = response.let { mapper.readValue<List<MeloMovieSearchResult>>(it) }
+        if (mapped.isEmpty()) return returnValue
 
-        mapped.forEach { i ->
+        for (i in mapped) {
             val currentUrl = "$mainUrl/movie/${i.id}"
             val currentPoster = "$mainUrl/assets/images/poster/${i.imdbId}.jpg"
-            if (i.type == 2) {
-                returnValue.add(newTvSeriesSearchResponse(i.title, currentUrl, TvType.TvSeries) {
-                    this.posterUrl = currentPoster
-                    this.year = i.year
-                })
-            } else if (i.type == 1) {
-                returnValue.add(newMovieSearchResponse(i.title, currentUrl, TvType.Movie) {
-                    this.posterUrl = currentPoster
-                    this.year = i.year
-                })
+            if (i.type == 2) { // TV-SERIES
+                returnValue.add(
+                    newTvSeriesSearchResponse(
+                        i.title,
+                        currentUrl,
+                        this.name,
+                        TvType.TvSeries,
+                        currentPoster,
+                        i.year,
+                        null
+                    )
+                )
+            } else if (i.type == 1) { // MOVIE
+                returnValue.add(
+                    newMovieSearchResponse(
+                        i.title,
+                        currentUrl,
+                        this.name,
+                        TvType.Movie,
+                        currentUrl,
+                        i.year
+                    )
+                )
             }
         }
         return returnValue
     }
 
-    private fun fixMeloUrl(url: String): String {
+    // http not https, the links are not https!
+    private fun fixUrl(url: String): String {
         if (url.isEmpty()) return ""
-        if (url.startsWith("//")) return "http:$url"
-        if (!url.startsWith("http")) return "http://$url"
+
+        if (url.startsWith("//")) {
+            return "http:$url"
+        }
+        if (!url.startsWith("http")) {
+            return "http://$url"
+        }
         return url
     }
 
-    private fun serializeData(element: Element): List<MeloMovieLink> {
+    private fun serializeData(element: Element): List<MeloMovieProvider.MeloMovieLink> {
         val eps = element.select("> tbody > tr")
-        return eps.mapNotNull {
-            runCatching {
+        val parsed = eps.mapNotNull {
+            try {
                 val tds = it.select("> td")
-                val mName = tds[if (tds.size == 5) 1 else 0].text()
-                val mUrl = fixMeloUrl(tds.last()?.selectFirst("> a")?.attr("data-lnk")?.replace(" ", "%20") ?: "")
-                if (mName.isNotEmpty() && mUrl.isNotEmpty()) MeloMovieLink(mName, mUrl) else null
-            }.getOrNull()
-        }
+                val name = tds[if (tds.size == 5) 1 else 0].text()
+                val url = fixUrl(tds.last()!!.selectFirst("> a")!!.attr("data-lnk").replace(" ", "%20"))
+                MeloMovieLink(name, url)
+            } catch (e: Exception) {
+                MeloMovieLink("", "")
+            }
+        }.filter { it.link != "" && it.name != "" }
+        return parsed
     }
 
     override suspend fun loadLinks(
@@ -82,55 +107,86 @@ class MeloMovieProvider : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        val links = try { parseJson<List<MeloMovieLink>>(data) } catch (_: Exception) { emptyList() }
-        links.forEach { link ->
-            callback.invoke(newExtractorLink(this.name, link.name, link.link, INFER_TYPE) {
-                this.quality = getQualityFromName(link.name)
-            })
+        val links = parseJson<List<MeloMovieLink>>(data)
+        for (link in links) {
+            callback.invoke(
+                newExtractorLink(
+                    this.name,
+                    link.name,
+                    link.link,
+                    "",
+                    getQualityFromName(link.name),
+                    false
+                )
+            )
         }
-        return links.isNotEmpty()
+        return true
     }
 
     override suspend fun load(url: String): LoadResponse? {
         val response = app.get(url).text
-        val imdbUrl = "var imdb = \"(.*?)\"".toRegex().find(response)?.groupValues?.get(1)
-        val type = "var posttype = ([0-9]*)".toRegex().find(response)?.groupValues?.get(1)?.toIntOrNull() ?: return null
-        
-        val document = Jsoup.parse(response)
-        val poster = document.selectFirst("img.img-fluid")?.attr("src")
-        val titleInfo = document.selectFirst("div.movie_detail_title > div > div > h1")
-        val title = titleInfo?.ownText() ?: ""
-        val year = titleInfo?.selectFirst("> a")?.text()?.replace("(", "")?.replace(")", "")?.toIntOrNull()
-        val plotStr = document.selectFirst("div.col-lg-12 > p")?.text() ?: ""
 
-        if (type == 1) {
-            val serialize = document.selectFirst("table.accordion__list") ?: throw ErrorLoadingException("No links found")
-            return newMovieLoadResponse(title, url, TvType.Movie, serializeData(serialize)) {
+        //backdrop = imgurl
+        fun findUsingRegex(src: String): String? {
+            return src.toRegex().find(response)?.groups?.get(1)?.value ?: return null
+        }
+
+        val imdbUrl = findUsingRegex("var imdb = \"(.*?)\"")
+        val document = Jsoup.parse(response)
+        val poster = document.selectFirst("img.img-fluid")!!.attr("src")
+        val type = findUsingRegex("var posttype = ([0-9]*)")?.toInt() ?: return null
+        val titleInfo = document.selectFirst("div.movie_detail_title > div > div > h1")
+        val title = titleInfo!!.ownText()
+        val year =
+            titleInfo.selectFirst("> a")?.text()?.replace("(", "")?.replace(")", "")?.toIntOrNull()
+        val plot = document.selectFirst("div.col-lg-12 > p")!!.text()
+
+        if (type == 1) { // MOVIE
+            val serialize = document.selectFirst("table.accordion__list")
+                ?: throw ErrorLoadingException("No links found")
+            return newMovieLoadResponse(
+                title,
+                url,
+                TvType.Movie,
+                serializeData(serialize)
+            ) {
                 this.posterUrl = poster
                 this.year = year
-                this.plot = plotStr
+                this.plot = plot
                 addImdbUrl(imdbUrl)
             }
         } else if (type == 2) {
             val episodes = ArrayList<Episode>()
             val seasons = document.select("div.accordion__card")
-            seasons.forEach { s ->
-                val seasonNum = s.selectFirst("> div.card-header > button > span")?.text()?.replace("Season: ", "")?.toIntOrNull()
+                ?: throw ErrorLoadingException("No episodes found")
+            for (s in seasons) {
+                val season =
+                    s.selectFirst("> div.card-header > button > span")!!.text()
+                        .replace("Season: ", "").toIntOrNull()
                 val localEpisodes = s.select("> div.collapse > div > div > div.accordion__card")
-                localEpisodes.forEach { e ->
-                    val episodeNum = e.selectFirst("> div.card-header > button > span")?.text()?.replace("Episode: ", "")?.toIntOrNull()
-                    val links = e.selectFirst("> div.collapse > div > table.accordion__list") ?: return@forEach
-                    val epData = serializeData(links)
-                    episodes.add(newEpisode(epData) {
-                        this.season = seasonNum
-                        this.episode = episodeNum
+                for (e in localEpisodes) {
+                    val episode =
+                        e.selectFirst("> div.card-header > button > span")!!.text()
+                            .replace("Episode: ", "").toIntOrNull()
+                    val links =
+                        e.selectFirst("> div.collapse > div > table.accordion__list") ?: continue
+                    val data = serializeData(links)
+                    episodes.add(newEpisode(data) {
+                        this.season = season
+                        this.episode = episode
                     })
                 }
             }
-            return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes.reversed()) {
+            episodes.reverse()
+            return newTvSeriesLoadResponse(
+                title,
+                url,
+                TvType.TvSeries,
+                episodes
+            ) {
                 this.posterUrl = poster
                 this.year = year
-                this.plot = plotStr
+                this.plot = plot
                 addImdbUrl(imdbUrl)
             }
         }

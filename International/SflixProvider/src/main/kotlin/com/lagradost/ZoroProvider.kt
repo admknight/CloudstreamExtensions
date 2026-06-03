@@ -35,11 +35,9 @@ class ZoroProvider : MainAPI() {
 
     companion object {
         fun getType(t: String): TvType {
-            return when {
-                t.contains("OVA") || t.contains("Special") -> TvType.OVA
-                t.contains("Movie") -> TvType.AnimeMovie
-                else -> TvType.Anime
-            }
+            return if (t.contains("OVA") || t.contains("Special")) TvType.OVA
+            else if (t.contains("Movie")) TvType.AnimeMovie
+            else TvType.Anime
         }
 
         fun getStatus(t: String): ShowStatus {
@@ -51,18 +49,22 @@ class ZoroProvider : MainAPI() {
         }
     }
 
-    private val epRegex = Regex("Ep (\\d+)/")
-    
+    val epRegex = Regex("Ep (\\d+)/")
     private fun Element.toSearchResult(): SearchResponse? {
         val href = fixUrl(this.select("a").attr("href"))
         val title = this.select("h3.film-name").text()
         val dubSub = this.select(".film-poster > .tick.ltr").text()
+        //val episodes = this.selectFirst(".film-poster > .tick-eps")?.text()?.toIntOrNull()
 
         val dubExist = dubSub.contains("dub", ignoreCase = true)
         val subExist = dubSub.contains("sub", ignoreCase = true)
-        val episodes = this.selectFirst(".film-poster > .tick.rtl > .tick-eps")?.text()?.let { eps ->
-            epRegex.find(eps)?.groupValues?.get(1)?.toIntOrNull()
-        }
+        val episodes =
+            this.selectFirst(".film-poster > .tick.rtl > .tick-eps")?.text()?.let { eps ->
+                //println("REGEX:::: $eps")
+                // current episode / max episode
+                //Regex("Ep (\\d+)/(\\d+)")
+                epRegex.find(eps)?.groupValues?.get(1)?.toIntOrNull()
+            }
         if (href.contains("/news/") || title.trim().equals("News", ignoreCase = true)) return null
         val posterUrl = fixUrl(this.select("img").attr("data-src"))
         val type = getType(this.select("div.fd-infor > span.fdi-item").text())
@@ -74,41 +76,83 @@ class ZoroProvider : MainAPI() {
     }
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
-        val document = app.get("$mainUrl/home").document
+        val html = app.get("$mainUrl/home").text
+        val document = Jsoup.parse(html)
+
         val homePageList = ArrayList<HomePageList>()
 
         document.select("div.anif-block").forEach { block ->
             val header = block.select("div.anif-block-header").text().trim()
-            val animes = block.select("li").mapNotNull { it.toSearchResult() }
+            val animes = block.select("li").mapNotNull {
+                it.toSearchResult()
+            }
             if (animes.isNotEmpty()) homePageList.add(HomePageList(header, animes))
         }
 
         document.select("section.block_area.block_area_home").forEach { block ->
             val header = block.select("h2.cat-heading").text().trim()
-            val animes = block.select("div.flw-item").mapNotNull { it.toSearchResult() }
+            val animes = block.select("div.flw-item").mapNotNull {
+                it.toSearchResult()
+            }
             if (animes.isNotEmpty()) homePageList.add(HomePageList(header, animes))
         }
 
         return newHomePageResponse(homePageList)
     }
 
+    private data class Response(
+        @JsonProperty("status") val status: Boolean,
+        @JsonProperty("html") val html: String
+    )
+
+//    override suspend fun quickSearch(query: String): List<SearchResponse> {
+//        val url = "$mainUrl/ajax/search/suggest?keyword=${query}"
+//        val html = mapper.readValue<Response>(khttp.get(url).text).html
+//        val document = Jsoup.parse(html)
+//
+//        return document.select("a.nav-item").map {
+//            val title = it.selectFirst(".film-name")?.text().toString()
+//            val href = fixUrl(it.attr("href"))
+//            val year = it.selectFirst(".film-infor > span")?.text()?.split(",")?.get(1)?.trim()?.toIntOrNull()
+//            val image = it.select("img").attr("data-src")
+//
+//            newAnimeSearchResponse(
+//                title,
+//                href,
+//                this.name,
+//                TvType.TvSeries,
+//                image,
+//                year,
+//                null,
+//                EnumSet.of(DubStatus.Subbed),
+//                null,
+//                null
+//            )
+//
+//        }
+//    }
+
     override suspend fun search(query: String): List<SearchResponse> {
         val link = "$mainUrl/search?keyword=$query"
-        val document = app.get(link).document
+        val html = app.get(link).text
+        val document = Jsoup.parse(html)
 
         return document.select(".flw-item").map {
             val title = it.selectFirst(".film-detail > .film-name > a")?.attr("title").toString()
             val filmPoster = it.selectFirst(".film-poster")
-            val poster = filmPoster?.selectFirst("img")?.attr("data-src")
+            val poster = filmPoster!!.selectFirst("img")?.attr("data-src")
 
-            val episodes = filmPoster?.selectFirst("div.rtl > div.tick-eps")?.text()?.let { eps ->
+            val episodes = filmPoster.selectFirst("div.rtl > div.tick-eps")?.text()?.let { eps ->
+                // current episode / max episode
+                val epRegex = Regex("Ep (\\d+)/")//Regex("Ep (\\d+)/(\\d+)")
                 epRegex.find(eps)?.groupValues?.get(1)?.toIntOrNull()
             }
-            val dubsub = filmPoster?.selectFirst("div.ltr")?.text()
+            val dubsub = filmPoster.selectFirst("div.ltr")?.text()
             val dubExist = dubsub?.contains("DUB") ?: false
             val subExist = dubsub?.contains("SUB") ?: false || dubsub?.contains("RAW") ?: false
 
-            val tvType = getType(it.selectFirst(".film-detail > .fd-infor > .fdi-item")?.text().toString())
+            val tvType =
+                getType(it.selectFirst(".film-detail > .fd-infor > .fdi-item")?.text().toString())
             val href = fixUrl(it.selectFirst(".film-name a")!!.attr("href"))
 
             newAnimeSearchResponse(title, href, tvType) {
@@ -119,19 +163,15 @@ class ZoroProvider : MainAPI() {
     }
 
     private fun Element?.getActor(): Actor? {
-        val image = fixUrlNull(this?.selectFirst(".pi-avatar > img")?.attr("data-src")) ?: return null
+        val image =
+            fixUrlNull(this?.selectFirst(".pi-avatar > img")?.attr("data-src")) ?: return null
         val name = this?.selectFirst(".pi-detail > .pi-name")?.text() ?: return null
         return Actor(name = name, image = image)
     }
 
-    private data class ZoroSyncData(
+    data class ZoroSyncData(
         @JsonProperty("mal_id") val malId: String?,
         @JsonProperty("anilist_id") val aniListId: String?,
-    )
-
-    private data class ZoroResponse(
-        @JsonProperty("status") val status: Boolean,
-        @JsonProperty("html") val html: String
     )
 
     override suspend fun load(url: String): LoadResponse {
@@ -139,6 +179,7 @@ class ZoroProvider : MainAPI() {
         val document = Jsoup.parse(html)
 
         val syncData = tryParseJson<ZoroSyncData>(document.selectFirst("#syncData")?.data())
+
         val title = document.selectFirst(".anisc-detail > .film-name")?.text().toString()
         val poster = document.selectFirst(".anisc-poster img")?.attr("src")
         val tags = document.select(".anisc-info a[href*=\"/genre/\"]").map { it.text() }
@@ -148,64 +189,84 @@ class ZoroProvider : MainAPI() {
         var status: ShowStatus? = null
 
         for (info in document.select(".anisc-info > .item.item-title")) {
-            val text = info.text()
+            val text = info?.text().toString()
             when {
-                text.contains("Premiered") -> year = info.selectFirst(".name")?.text()?.split(" ")?.last()?.toIntOrNull()
-                text.contains("Japanese") -> japaneseTitle = info.selectFirst(".name")?.text()
-                text.contains("Status") -> status = getStatus(info.selectFirst(".name")?.text().toString())
+                (year != null && japaneseTitle != null && status != null) -> break
+                text.contains("Premiered") && year == null ->
+                    year =
+                        info.selectFirst(".name")?.text().toString().split(" ").last().toIntOrNull()
+
+                text.contains("Japanese") && japaneseTitle == null ->
+                    japaneseTitle = info.selectFirst(".name")?.text().toString()
+
+                text.contains("Status") && status == null ->
+                    status = getStatus(info.selectFirst(".name")?.text().toString())
             }
         }
 
         val description = document.selectFirst(".film-description.m-hide > .text")?.text()
-        val animeId = url.substringAfterLast("-")
+        val animeId = URI(url).path.split("-").last()
 
         val episodes = Jsoup.parse(
-            app.get("$mainUrl/ajax/v2/episode/list/$animeId").parsed<ZoroResponse>().html
+            parseJson<Response>(
+                app.get(
+                    "$mainUrl/ajax/v2/episode/list/$animeId"
+                ).text
+            ).html
         ).select(".ss-list > a[href].ssl-item.ep-item").map {
             newEpisode(it.attr("href")) {
-                this.name = it.attr("title")
+                this.name = it?.attr("title")
                 this.episode = it.selectFirst(".ssli-order")?.text()?.toIntOrNull()
             }
         }
 
         val actors = document.select("div.block-actors-content > div.bac-list-wrap > div.bac-item")
             .mapNotNull { head ->
-                val subItems = head.select(".per-info")
+                val subItems = head.select(".per-info") ?: return@mapNotNull null
                 if (subItems.isEmpty()) return@mapNotNull null
-                val firstItem = subItems.first()
-                val role = when (firstItem?.selectFirst(".pi-detail > .pi-cast")?.text()?.trim()) {
-                    "Supporting" -> ActorRole.Supporting
-                    "Main" -> ActorRole.Main
-                    else -> null
-                }
-                val mainActor = firstItem.getActor() ?: return@mapNotNull null
-                val voiceActor = if (subItems.size >= 2) subItems[1].getActor() else null
+                var role: ActorRole? = null
+                val mainActor = subItems.first()?.let {
+                    role = when (it.selectFirst(".pi-detail > .pi-cast")?.text()?.trim()) {
+                        "Supporting" -> ActorRole.Supporting
+                        "Main" -> ActorRole.Main
+                        else -> null
+                    }
+                    it.getActor()
+                } ?: return@mapNotNull null
+                val voiceActor = if (subItems.size >= 2) subItems[1]?.getActor() else null
                 ActorData(actor = mainActor, role = role, voiceActor = voiceActor)
             }
 
-        val recommendations = document.select("#main-content > section > .tab-content > div > .film_list-wrap > .flw-item")
+        val recommendations =
+            document.select("#main-content > section > .tab-content > div > .film_list-wrap > .flw-item")
                 .mapNotNull { head ->
-                    val filmPoster = head.selectFirst(".film-poster")
+                    val filmPoster = head?.selectFirst(".film-poster")
                     val epPoster = filmPoster?.selectFirst("img")?.attr("data-src")
-                    val a = head.selectFirst(".film-detail > .film-name > a")
+                    val a = head?.selectFirst(".film-detail > .film-name > a")
                     val epHref = a?.attr("href")
                     val epTitle = a?.attr("title")
-                    if (epHref == null || epTitle == null || epPoster == null) null
-                    else {
-                        newAnimeSearchResponse(epTitle, fixUrl(epHref), TvType.Anime) {
-                            this.posterUrl = epPoster
-                        }
+                    if (epHref == null || epTitle == null || epPoster == null) {
+                        null
+                    } else {
+                        newAnimeSearchResponse(
+                            epTitle,
+                            fixUrl(epHref),
+                            this.name,
+                            TvType.Anime,
+                            epPoster,
+                            dubStatus = null
+                        )
                     }
                 }
 
         return newAnimeLoadResponse(title, url, TvType.Anime) {
-            this.japName = japaneseTitle
-            this.engName = title
-            this.posterUrl = poster
+            japName = japaneseTitle
+            engName = title
+            posterUrl = poster
             this.year = year
             addEpisodes(DubStatus.Subbed, episodes)
-            this.showStatus = status
-            this.plot = description
+            showStatus = status
+            plot = description
             this.tags = tags
             this.recommendations = recommendations
             this.actors = actors
@@ -218,26 +279,45 @@ class ZoroProvider : MainAPI() {
         @JsonProperty("link") val link: String
     )
 
-    private var sidMap: HashMap<Int, String?> = hashMapOf()
+    /** Url hashcode to sid */
+    var sid: HashMap<Int, String?> = hashMapOf()
 
+    /**
+     * Makes an identical Options request before .ts request
+     * Adds an SID header to the .ts request.
+     * */
     override fun getVideoInterceptor(extractorLink: ExtractorLink): Interceptor {
+        // Needs to be object instead of lambda to make it compile correctly
         return object : Interceptor {
             override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
                 val request = chain.request()
-                if (request.url.toString().endsWith(".ts") && request.method != OPTIONS && !request.url.toString().contains("betterstream")) {
-                    val newRequest = chain.request().newBuilder().apply {
-                        sidMap[extractorLink.url.hashCode()]?.let { sid -> addHeader("SID", sid) }
-                    }.build()
+                if (request.url.toString().endsWith(".ts")
+                    && request.method != OPTIONS
+                    // No option requests on VidCloud
+                    && !request.url.toString().contains("betterstream")
+                ) {
+                    val newRequest =
+                        chain.request()
+                            .newBuilder().apply {
+                                sid[extractorLink.url.hashCode()]?.let { sid ->
+                                    addHeader("SID", sid)
+                                }
+                            }
+                            .build()
                     val options = request.newBuilder().method(OPTIONS, request.body).build()
                     ioSafe { app.baseClient.newCall(options).await() }
+
                     return chain.proceed(newRequest)
+                } else {
+                    return chain.proceed(chain.request())
                 }
-                return chain.proceed(chain.request())
             }
         }
     }
 
-    private suspend fun getKey(): String = app.get("https://raw.githubusercontent.com/consumet/rapidclown/main/key.txt").text
+    private suspend fun getKey(): String {
+        return app.get("https://raw.githubusercontent.com/consumet/rapidclown/main/key.txt").text
+    }
 
     override suspend fun loadLinks(
         data: String,
@@ -245,23 +325,44 @@ class ZoroProvider : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        val episodeId = data.substringAfterLast("=")
-        val servers = Jsoup.parse(
-            app.get("$mainUrl/ajax/v2/episode/servers?episodeId=$episodeId").parsed<ZoroResponse>().html
+
+        val servers: List<Pair<DubStatus, String>> = Jsoup.parse(
+            app.get("$mainUrl/ajax/v2/episode/servers?episodeId=" + data.split("=")[1])
+                .parsed<Response>().html
         ).select(".server-item[data-type][data-id]").map {
-            Pair(if (it.attr("data-type") == "sub") DubStatus.Subbed else DubStatus.Dubbed, it.attr("data-id"))
+            Pair(
+                if (it.attr("data-type") == "sub") DubStatus.Subbed else DubStatus.Dubbed,
+                it.attr("data-id")
+            )
         }
 
-        servers.distinctBy { it.second }.forEach { (dubStatus, serverId) ->
-            val linkUrl = "$mainUrl/ajax/v2/episode/sources?id=$serverId"
-            val extractorLink = app.get(linkUrl).parsed<RapidCloudResponse>().link
-            
-            if (!loadExtractor(extractorLink, "https://rapid-cloud.ru/", subtitleCallback, callback)) {
-                extractRabbitStream(extractorLink, subtitleCallback, { videoLink -> if (!videoLink.url.contains("betterstream")) callback(videoLink) }, false, decryptKey = getKey()) { sourceName ->
-                    "$sourceName - $dubStatus"
+//        val extractorData =
+//            "https://ws1.rapid-cloud.ru/socket.io/?EIO=4&transport=polling"
+
+        // Prevent duplicates
+        servers.distinctBy { it.second }.map {
+            val link =
+                "$mainUrl/ajax/v2/episode/sources?id=${it.second}"
+            val extractorLink = app.get(
+                link,
+            ).parsed<RapidCloudResponse>().link
+            val hasLoadedExtractorLink =
+                loadExtractor(extractorLink, "https://rapid-cloud.ru/", subtitleCallback, callback)
+            if (!hasLoadedExtractorLink) {
+                extractRabbitStream(
+                    extractorLink,
+                    subtitleCallback,
+                    // Blacklist VidCloud for now
+                    { videoLink -> if (!videoLink.url.contains("betterstream")) callback(videoLink) },
+                    false,
+                    null,
+                    decryptKey = getKey()
+                ) { sourceName ->
+                    sourceName + " - ${it.first}"
                 }
             }
         }
+
         return true
     }
 }

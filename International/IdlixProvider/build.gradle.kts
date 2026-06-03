@@ -1,18 +1,28 @@
+// use an integer for version numbers
 version = 11
+
 
 cloudstream {
     language = "id"
-    authors = listOf("Adam Knight")
-    description = "Lorem Ipsum"
-    status = 1
-    tvTypes = listOf(         "TvSeries",         "Movie",         "Anime",         "AsianDrama",     )
-    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/IdlixProvider/icon.png"
-    isCrossPlatform = false
-}
+    // All of these properties are optional, you can safely remove them
 
-android {
-    namespace = "com.admknight.idlix"
-    buildFeatures {
-        buildConfig = true
-    }
+    // description = "Lorem Ipsum"
+     authors = listOf("Adam Knight")
+
+    /**
+     * Status int as the following:
+     * 0: Down
+     * 1: Ok
+     * 2: Slow
+     * 3: Beta only
+     * */
+    status = 1 // will be 3 if unspecified
+    tvTypes = listOf(
+        "TvSeries",
+        "Movie",
+        "Anime",
+        "AsianDrama",
+    )
+    isCrossPlatform = false
+    iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/IdlixProvider/icon.png"
 }

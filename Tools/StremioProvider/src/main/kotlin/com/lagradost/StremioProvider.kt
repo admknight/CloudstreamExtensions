@@ -1,14 +1,15 @@
 package com.lagradost
 
 import android.util.Log
+import com.lagradost.StremioProvider.Companion.encodeUri
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
+
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
+import com.lagradost.cloudstream3.utils.Coroutines.ioSafe
 import com.lagradost.cloudstream3.utils.ExtractorLink
-import com.lagradost.cloudstream3.utils.newExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.loadExtractor
-import com.lagradost.cloudstream3.utils.INFER_TYPE
 import org.json.JSONObject
 import java.net.URLEncoder
 
@@ -20,13 +21,18 @@ class StremioProvider : MainAPI() {
     override val supportedTypes = setOf(TvType.Others)
     override val hasMainPage = true
 
-    override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse? {
+    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse? {
         val res = tryParseJson<Manifest>(app.get("${mainUrl}/manifest.json").text) ?: return null
         val lists = mutableListOf<HomePageList>()
         res.catalogs.forEach { catalog ->
-            catalog.toHomePageList(this)?.let { lists.add(it) }
+            catalog.toHomePageList(this)?.let {
+                lists.add(it)
+            }
         }
-        return newHomePageResponse(lists, false)
+        return newHomePageResponse(
+            lists,
+            false
+        )
     }
 
     override suspend fun search(query: String): List<SearchResponse>? {
@@ -50,7 +56,10 @@ class StremioProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val res = tryParseJson<StreamsResponse>(app.get(data).text) ?: return false
-        res.streams.forEach { it.runCallback(subtitleCallback, callback) }
+        res.streams.forEach { stream ->
+            stream.runCallback(subtitleCallback, callback)
+        }
+
         return true
     }
 
@@ -61,24 +70,33 @@ class StremioProvider : MainAPI() {
         val type: String?,
         val types: MutableList<String> = mutableListOf()
     ) {
-        init { if (type != null) types.add(type) }
+        init {
+            if (type != null) types.add(type)
+        }
 
         suspend fun search(query: String, provider: StremioProvider): List<SearchResponse> {
             val entries = mutableListOf<SearchResponse>()
-            types.forEach { t ->
-                val res = tryParseJson<CatalogResponse>(app.get("${provider.mainUrl}/catalog/${t.encodeUri()}/${id.encodeUri()}/search=${query.encodeUri()}.json").text) ?: return@forEach
-                res.metas.forEach { entries.add(it.toSearchResponse(provider)) }
+            types.forEach { type ->
+                val res = tryParseJson<CatalogResponse>(app.get("${provider.mainUrl}/catalog/${type.encodeUri()}/${id.encodeUri()}/search=${query.encodeUri()}.json").text) ?: return@forEach
+                res.metas.forEach {  entry ->
+                    entries.add(entry.toSearchResponse(provider))
+                }
             }
             return entries
         }
 
         suspend fun toHomePageList(provider: StremioProvider): HomePageList? {
             val entries = mutableListOf<SearchResponse>()
-            types.forEach { t ->
-                val res = tryParseJson<CatalogResponse>(app.get("${provider.mainUrl}/catalog/${t.encodeUri()}/${id.encodeUri()}.json").text) ?: return@forEach
-                res.metas.forEach { entries.add(it.toSearchResponse(provider)) }
+            types.forEach { type ->
+                val res = tryParseJson<CatalogResponse>(app.get("${provider.mainUrl}/catalog/${type.encodeUri()}/${id.encodeUri()}.json").text) ?: return@forEach
+                res.metas.forEach {  entry ->
+                    entries.add(entry.toSearchResponse(provider))
+                }
             }
-            return if (entries.isNotEmpty()) HomePageList(name ?: id, entries) else null
+            return HomePageList(
+                name ?: id,
+                entries
+            )
         }
     }
 
@@ -92,28 +110,47 @@ class StremioProvider : MainAPI() {
         val videos: List<Video>?
     ) {
         fun toSearchResponse(provider: StremioProvider): SearchResponse {
-            return provider.newMovieSearchResponse(name, this.toJson(), TvType.Others) {
+            return provider.newMovieSearchResponse(
+                name,
+                this.toJson(),
+                TvType.Others
+            ) {
                 posterUrl = poster
             }
         }
         suspend fun toLoadResponse(provider: StremioProvider): LoadResponse {
-            return if (videos.isNullOrEmpty()) {
-                provider.newMovieLoadResponse(name, "${provider.mainUrl}/meta/${type?.encodeUri()}/${id.encodeUri()}.json", TvType.Others, "${provider.mainUrl}/stream/${type?.encodeUri()}/${id.encodeUri()}.json") {
+            if (videos == null || videos.isEmpty()) {
+                return provider.newMovieLoadResponse(
+                    name,
+                    "${provider.mainUrl}/meta/${type?.encodeUri()}/${id.encodeUri()}.json",
+                    TvType.Others,
+                    "${provider.mainUrl}/stream/${type?.encodeUri()}/${id.encodeUri()}.json"
+                ) {
                     posterUrl = poster
                     plot = description
                 }
             } else {
-                provider.newTvSeriesLoadResponse(name, "${provider.mainUrl}/meta/${type?.encodeUri()}/${id.encodeUri()}.json", TvType.Others, videos.map { it.toEpisode(provider, type) }) {
+                return provider.newTvSeriesLoadResponse(
+                    name,
+                    "${provider.mainUrl}/meta/${type?.encodeUri()}/${id.encodeUri()}.json",
+                    TvType.Others,
+                    videos.map {
+                        it.toEpisode(provider, type)
+                    }
+                ) {
                     posterUrl = poster
                     plot = description
                 }
             }
+
         }
     }
 
     private data class Video(val id: String, val title: String?, val thumbnail: String?, val overview: String?) {
         fun toEpisode(provider: StremioProvider, type: String?): Episode {
-            return provider.newEpisode("${provider.mainUrl}/stream/${type?.encodeUri()}/${id.encodeUri()}.json") {
+            return provider.newEpisode(
+                "${provider.mainUrl}/stream/${type?.encodeUri()}/${id.encodeUri()}.json"
+            ) {
                 this.name = title
                 this.posterUrl = thumbnail
                 this.description = overview
@@ -134,16 +171,36 @@ class StremioProvider : MainAPI() {
     ) {
         suspend fun runCallback(subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit) {
             if (url != null) {
-                var ref: String? = null
-                runCatching {
-                    val headers = ((behaviorHints?.get("proxyHeaders") as? JSONObject)?.get("request") as? JSONObject)
-                    ref = headers?.get("referer") as? String ?: headers?.get("origin") as? String
+                var referer: String? = null
+                try {
+                    val headers = ((behaviorHints?.get("proxyHeaders") as? JSONObject)
+                        ?.get("request") as? JSONObject)
+                    referer = headers?.get("referer") as? String ?: headers?.get("origin") as? String
+                } catch (ex: Throwable) {
+                    Log.e("Stremio", Log.getStackTraceString(ex))
                 }
-                
-                callback.invoke(newExtractorLink(name ?: "", title ?: name ?: "", url, INFER_TYPE) {
-                    this.referer = ref ?: ""
-                    this.quality = Qualities.Unknown.value
-                })
+
+                if (url.endsWith(".m3u8")) {
+                    callback.invoke(
+                        newExtractorLink(
+                        name ?: "",
+                        title ?: name ?: "",
+                        url,
+                            referer ?: "",
+                        Qualities.Unknown.value,
+                        isM3u8 = true
+                    ))
+                } else {
+                    callback.invoke(
+                        newExtractorLink(
+                            name ?: "",
+                            title ?: name ?: "",
+                            url,
+                            referer ?: "",
+                            Qualities.Unknown.value,
+                            isM3u8 = false
+                        ))
+                }
             }
             if (ytId != null) {
                 loadExtractor("https://www.youtube.com/watch?v=$ytId", subtitleCallback, callback)
@@ -153,13 +210,30 @@ class StremioProvider : MainAPI() {
             }
             if (infoHash != null) {
                 val resp = app.get(TRACKER_LIST_URL).text
-                val trackers = resp.split("\n").filterIndexed { i, _ -> i % 2 == 0 }.filter { it.isNotBlank() }.joinToString("") { "&tr=$it" }
-                val sTrackers = sources.filter { it.startsWith("tracker:") }.map { it.removePrefix("tracker:") }.filter { it.isNotBlank() }.joinToString("") { "&tr=$it" }
-                val magnet = "magnet:?xt=urn:btih:${infoHash}${sTrackers}${trackers}"
+                val otherTrackers = resp
+                    .split("\n")
+                    .filterIndexed{i, s -> i%2==0}
+                    .filter{s -> !s.isNullOrEmpty()}
+                    .map{it -> "&tr=$it"}
+                    .joinToString("")
                 
-                callback.invoke(newExtractorLink(name ?: "", title ?: name ?: "", magnet, INFER_TYPE) {
-                    this.quality = Qualities.Unknown.value
-                })
+                val sourceTrackers = sources
+                    .filter{it->it.startsWith("tracker:")}
+                    .map{it->it.removePrefix("tracker:")}
+                    .filter{s -> !s.isNullOrEmpty()}
+                    .map{it -> "&tr=$it"}
+                    .joinToString("")
+
+                val magnet = "magnet:?xt=urn:btih:${infoHash}${sourceTrackers}${otherTrackers}"
+                callback.invoke(
+                    newExtractorLink(
+                        name ?: "",
+                        title ?: name ?: "",
+                        magnet,
+                        "",
+                        Qualities.Unknown.value
+                    )
+                )
             }
         }
     }
