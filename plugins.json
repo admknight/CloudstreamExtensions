@@ -413,7 +413,7 @@
     {
         "name": "HDhub4u",
         "internalName": "HDhub4u",
-        "version": 46,
+        "version": 47,
         "description": "Adam Knight curated source for HDhub4u",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/HDhub4u.cs3",
