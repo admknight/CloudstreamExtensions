@@ -340,7 +340,7 @@
     {
         "name": "Cinefreak",
         "internalName": "Cinefreak",
-        "version": 3,
+        "version": 4,
         "description": "Bangla/Hindi Movies/Series",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Cinefreak.cs3",
@@ -631,7 +631,7 @@
     {
         "name": "Animesalt",
         "internalName": "Animesalt",
-        "version": 7,
+        "version": 8,
         "description": "Anime/Cartoon in Hindi",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Animesalt.cs3",
