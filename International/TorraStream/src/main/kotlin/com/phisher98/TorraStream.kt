@@ -40,8 +40,6 @@ import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import org.json.JSONArray
 import org.json.JSONObject
-import java.net.URLEncoder
-import java.nio.charset.StandardCharsets
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -61,14 +59,13 @@ class TorraStream(private val sharedPref: SharedPreferences) : TmdbProvider() {
         const val SubtitlesAPI = "https://opensubtitles-v3.strem.io"
         const val AnimetoshoAPI = "https://feed.animetosho.org"
         const val TorrentioAnimeAPI = "https://torrentio.strem.fun/providers=nyaasi,tokyotosho,anidex%7Csort=seeders"
-        const val TorboxAPI= "https://stremio.torbox.app"
         val TRACKER_LIST_URL = listOf(
             "https://raw.githubusercontent.com/ngosang/trackerslist/refs/heads/master/trackers_best.txt",
             "https://raw.githubusercontent.com/ngosang/trackerslist/refs/heads/master/trackers_best_ip.txt",
         )
-        private const val Uindex = "https://uindex.org"
-        private const val Knaben = "https://knaben.org"
-        private const val TorrentsDB = "https://torrentsdb.com"
+        const val Uindex = "https://uindex.org"
+        const val Knaben = "https://knaben.org"
+        const val TorrentsDB = "https://torrentsdb.com"
         const val Meteorfortheweebs ="https://meteorfortheweebs.midnightignite.me"
         private const val tmdbAPI = "https://api.themoviedb.org/3"
         private const val apiKey = "1865f43a0549ca50d341dd9ab8b29f49"
@@ -354,7 +351,8 @@ class TorraStream(private val sharedPref: SharedPreferences) : TmdbProvider() {
         var episode = dataObj.episode
         val id = dataObj.imdbId
         val year = dataObj.year
-        val aniResponse = runCatching { app.get("https://api.ani.zip/mappings?imdb_id=$id") }.getOrNull()
+        val aniResponse =
+            runCatching { app.get("https://api.ani.zip/mappings?imdb_id=$id") }.getOrNull()
         val anijson = aniResponse?.text.orEmpty()
         val aniJson = runCatching { JSONObject(anijson) }.getOrNull()
         val mappings = aniJson?.optJSONObject("mappings")
@@ -371,65 +369,62 @@ class TorraStream(private val sharedPref: SharedPreferences) : TmdbProvider() {
         val meteorUrl = buildMeteorUrl(sharedPref, Meteorfortheweebs)
         val filtered = filteredCallback(sharedPref, callback)
 
-        if (!key.isNullOrEmpty() && provider!="AIO Streams") {
+        if (!key.isNullOrEmpty() && provider != "AIO Streams") {
             runAllAsync(
-                { invokeTorrentioDebian(torrentioapiUrl, id, season, episode, callback, filtered) },
-                { invokeMeteorDebian(meteorUrl, id, season, episode, callback, filtered) }
+                { invokeTorrentioDebian(torrentioapiUrl, id, season, episode, filtered) },
+                { invokeMeteorDebian(meteorUrl, id, season, episode, filtered) }
             )
         }
 
-        when (provider) {
-            "AIO Streams" if !key.isNullOrEmpty() -> {
-                runAllAsync(
-                    { invokeAIOStreamsDebian(key, id, season, episode, callback, filtered) }
-                )
+        if (!provider.isNullOrEmpty() && !key.isNullOrEmpty()) {
+            when (provider) {
+                "AIO Streams" -> {
+                    runAllAsync(
+                        { invokeAIOStreamsDebian(key, id, season, episode, callback, filtered) }
+                    )
+                }
             }
-            "TorBox" if !key.isNullOrEmpty() -> {
-                runAllAsync(
-                    { invokeDebianTorbox(TorboxAPI, key, id, season, episode, callback, filtered) }
-                )
-            }
-            else -> {
-                runAllAsync(
-                    { invokeTorrentio(torrentioapiUrl, id, season, episode, callback, filtered) },
-                    {
-                        if (!dataObj.isAnime) invokeThepiratebay(
-                            ThePirateBayApi,
-                            id,
-                            season,
-                            episode,
-                            callback
-                        )
-                    },
-                    { if (dataObj.isAnime) invokeAnimetosho(anidbEid, callback) },
-                    { invokeTorrentioAnime(TorrentioAnimeAPI, kitsuId, season, episode, filtered) },
-                    {
-                        if (!dataObj.isAnime) invokeUindex(
-                            Uindex,
-                            title,
-                            year,
-                            season,
-                            episode,
-                            callback,
-                            filtered
-                        )
-                    },
-                    { invokeTorrentsDB(TorrentsDB, id, season, episode, callback) },
-                    {
-                        if (dataObj.isAnime) invokeTorrentsDBAnime(
-                            TorrentsDB,
-                            kitsuId,
-                            season,
-                            episode,
-                            callback,
-                            filtered
-                        )
-                    },
-                    { invokeKnaben(Knaben, isAnime, title, year, season, episode, callback, filtered) },
-                    { invokeSubtitleAPI(id, season, episode, subtitleCallback) }
-                )
-            }
+        } else {
+            runAllAsync(
+                { invokeTorrentio(torrentioapiUrl, id, season, episode, callback, filtered) },
+                {
+                    if (!dataObj.isAnime) invokeThepiratebay(
+                        ThePirateBayApi,
+                        id,
+                        season,
+                        episode,
+                        callback
+                    )
+                },
+                { if (dataObj.isAnime) invokeAnimetosho(anidbEid, callback) },
+                { invokeTorrentioAnime(TorrentioAnimeAPI, kitsuId, season, episode, filtered) },
+                {
+                    if (!dataObj.isAnime) invokeUindex(
+                        Uindex,
+                        title,
+                        year,
+                        season,
+                        episode,
+                        callback,
+                        filtered
+                    )
+                },
+                { invokeTorrentsDB(TorrentsDB, id, season, episode, callback) },
+                {
+                    if (dataObj.isAnime) invokeTorrentsDBAnime(
+                        TorrentsDB,
+                        kitsuId,
+                        season,
+                        episode,
+                        callback,
+                        filtered
+                    )
+                },
+                { invokeKnaben(Knaben, isAnime, title, year, season, episode, callback, filtered) }
+            )
         }
+
+        invokeSubtitleAPI(id, season, episode, subtitleCallback)
         return true
     }
 
@@ -550,41 +545,6 @@ class TorraStream(private val sharedPref: SharedPreferences) : TmdbProvider() {
         )
 
         return "$baseUrl/$encoded"
-    }
-}
-
-suspend fun generateMagnetLink(
-    trackerUrls: List<String>,
-    hash: String?,
-): String {
-    require(hash?.isNotBlank() == true)
-
-    val trackers = mutableSetOf<String>()
-
-    trackerUrls.amap { url ->
-        runCatching {
-            app.get(url).text
-                .lineSequence()
-                .map { it.trim() }
-                .filter { it.isNotEmpty() && !it.startsWith("#") }
-                .toList()
-        }.getOrElse { emptyList() }
-    }.flatten().toMutableSet()
-
-    return buildString {
-        append("magnet:?xt=urn:btih:").append(hash)
-
-        if (hash.isNotBlank()) {
-            append("&dn=")
-            append(URLEncoder.encode(hash, StandardCharsets.UTF_8.name()))
-        }
-
-        trackers
-            .take(10) // practical limit
-            .forEach { tracker ->
-                append("&tr=")
-                append(URLEncoder.encode(tracker, StandardCharsets.UTF_8.name()))
-            }
     }
 }
 
