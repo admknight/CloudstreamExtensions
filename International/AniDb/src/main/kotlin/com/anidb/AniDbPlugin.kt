@@ -1,11 +1,11 @@
-package com.Tamilian
+package com.anidb
 
 import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 
 @CloudstreamPlugin
-class HiAnimeProviderPlugin : BasePlugin() {
+class AniDbPlugin : BasePlugin() {
     override fun load() {
-        registerMainAPI(Tamilian())
+        registerMainAPI(AniDb())
     }
 }

@@ -2241,12 +2241,6 @@ internal class Molop : ExtractorApi() {
     }
 }
 
-class showflixupnshare : VidStack() {
-    override var name: String = "VidStack"
-    override var mainUrl: String = "https://showflix.upns.one"
-}
-
-
 class Rubyvidhub : VidhideExtractor() {
     override var mainUrl = "https://rubyvidhub.com"
 }
