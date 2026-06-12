@@ -1,6 +1,5 @@
 package com.phisher98
 
-import com.google.gson.Gson
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.amap
@@ -20,7 +19,6 @@ suspend fun invokeTorrentio(
     id: String? = null,
     season: Int? = null,
     episode: Int? = null,
-    callback: (ExtractorLink) -> Unit,
     filtered: (ExtractorLink) -> Unit
 ) {
         val torrentioAPI:String = mainUrl
@@ -127,7 +125,6 @@ suspend fun invokeTorrentioAnimeDebian(
     type: TvType,
     id: Int? = null,
     episode: Int? = null,
-    callback: (ExtractorLink) -> Unit,
     filtered: (ExtractorLink) -> Unit
 ) {
     val url = if (type == TvType.Movie) {
@@ -288,35 +285,43 @@ suspend fun invokeSubtitleAPI(
 }
 
 suspend fun invokeAnimetosho(
-    id: Int? = null,
+    id: Int?,
     callback: (ExtractorLink) -> Unit
 ) {
-    val url = "$AnimetoshoAPI/json?eid=$id"
-    val jsonResponse = app.get(url).toString()
-    val parsedList = Gson().fromJson(jsonResponse, Array<AnimetoshoItem>::class.java)?.toList() ?: emptyList()
-    parsedList.sortedByDescending { it.seeders }.forEach { item ->
-        item.magnetUri.let { magnet ->
-            val formattedTitleName = item.torrentName
-                .let { title ->
-                    val tags = "\\[(.*?)]".toRegex().findAll(title)
-                        .map { match -> "[${match.groupValues[1]}]" }
-                        .joinToString(" | ")
-                    val seeder = "👤\\s*(\\d+)".toRegex().find(title)?.groupValues?.get(1) ?: ""
-                    "Animetosho | $tags | Seeder: $seeder".trim()
-                }
-            callback.invoke(
+    val url = "$AnimetoshoAPI/json/v1/episodes/$id"
+
+    val response = app.get(url)
+        .parsedSafe<AnimetoshoResponse>()
+        ?.data
+        ?.releases
+        .orEmpty()
+
+    response
+        .sortedByDescending { it.seeders }
+        .forEach { item ->
+
+            val tags = "\\[(.*?)]".toRegex()
+                .findAll(item.title)
+                .joinToString(" | ") { "[${it.groupValues[1]}]" }
+
+            val displayName = buildString {
+                append("Animetosho")
+                if (tags.isNotBlank()) append(" | $tags")
+                append(" | Seeder: ${item.seeders}")
+            }
+
+            callback(
                 newExtractorLink(
-                    "Animetosho",
-                    formattedTitleName,
-                    url = magnet,
-                    INFER_TYPE
+                    source = "Animetosho",
+                    name = displayName,
+                    url = item.magnet,
+                    type = INFER_TYPE
                 ) {
-                    this.referer = ""
-                    this.quality = getIndexQuality(item.torrentName)
+                    referer = ""
+                    quality = getIndexQuality(item.title)
                 }
             )
         }
-    }
 }
 
 suspend fun invokeTorrentioAnime(
@@ -370,7 +375,6 @@ suspend fun invokeAIOStreamsDebian(
     id: String? = null,
     season: Int? = null,
     episode: Int? = null,
-    callback: (ExtractorLink) -> Unit,
     filtered: (ExtractorLink) -> Unit
 ) {
     if (id.isNullOrEmpty()) return
@@ -412,20 +416,12 @@ suspend fun invokeAIOStreamsDebian(
     }
 }
 
-
-fun formatSourceName(sourceName: String, cache: String): String {
-    return if (cache.equals("Your Media", true) &&
-        sourceName.contains("Your Media", true)
-    ) sourceName else "$sourceName [$cache]"
-}
-
 suspend fun invokeUindex(
     uindex: String,
     title: String? = null,
     year: Int? = null,
     season: Int? = null,
     episode: Int? = null,
-    callback: (ExtractorLink) -> Unit,
     filtered: (ExtractorLink) -> Unit
 ) {
     val isTv = season != null
@@ -518,7 +514,6 @@ suspend fun invokeKnaben(
     year: Int? = null,
     season: Int? = null,
     episode: Int? = null,
-    callback: (ExtractorLink) -> Unit,
     filtered: (ExtractorLink) -> Unit
 ) {
     val isTv = season != null
@@ -660,7 +655,6 @@ suspend fun invokeTorrentsDBAnime(
     id: Int? = null,
     season: Int? = null,
     episode: Int? = null,
-    callback: (ExtractorLink) -> Unit,
     filtered: (ExtractorLink) -> Unit
 ) {
     if (id == null) return
@@ -729,7 +723,7 @@ suspend fun invokeMeteorDebian(
             "%.1f GB".format(it / 1024.0 / 1024.0 / 1024.0)
         }
 
-        val name = stream.behaviorHints.filename ?: stream.description.substringAfter("📄 ").substringBefore("\n")
+        val name = stream.behaviorHints.filename ?: stream.title.substringAfter("📄 ").substringBefore("\n")
 
         val formattedName = name
             .substringBeforeLast('.')
@@ -737,7 +731,7 @@ suspend fun invokeMeteorDebian(
             .trim()
 
         val resolution = Regex("""\d{3,4}p""").find(stream.name)?.value
-        val audio = Regex("""🔊\s*(.*)""").find(stream.description)?.groupValues?.getOrNull(1)
+        val audio = Regex("""🔊\s*(.*)""").find(stream.title)?.groupValues?.getOrNull(1)
 
         val parts = listOfNotNull(
             resolution?.let { "🎞 $it" },
@@ -773,7 +767,6 @@ suspend fun invokeMeteorAnimeDebian(
     type: TvType,
     id: Int? = null,
     episode: Int? = null,
-    callback: (ExtractorLink) -> Unit,
     filtered: (ExtractorLink) -> Unit
 ) {
 
@@ -794,7 +787,7 @@ suspend fun invokeMeteorAnimeDebian(
         }
 
         val name = stream.behaviorHints.filename
-            ?: stream.description.substringAfter("📄 ").substringBefore("\n")
+            ?: stream.title.substringAfter("📄 ").substringBefore("\n")
 
         val formattedName = name
             .substringBeforeLast('.')
@@ -802,7 +795,7 @@ suspend fun invokeMeteorAnimeDebian(
             .trim()
 
         val resolution = Regex("""\d{3,4}p""").find(stream.name)?.value
-        val audio = Regex("""🔊\s*(.*)""").find(stream.description)?.groupValues?.getOrNull(1)
+        val audio = Regex("""🔊\s*(.*)""").find(stream.title)?.groupValues?.getOrNull(1)
         val cache = Regex("""\[(.*?)]""").find(stream.name)?.groupValues?.getOrNull(1)
 
         val parts = listOfNotNull(
