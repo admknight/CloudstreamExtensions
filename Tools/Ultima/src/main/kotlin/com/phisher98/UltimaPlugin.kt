@@ -17,6 +17,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import com.lagradost.cloudstream3.CloudStreamApp
+import kotlin.time.Duration.Companion.milliseconds
 
 @CloudstreamPlugin
 class UltimaPlugin : Plugin() {
@@ -98,7 +99,7 @@ class UltimaPlugin : Plugin() {
 
         pushJob?.cancel()
         pushJob = pluginScope.launch {
-            delay(PUSH_DEBOUNCE_MS)
+            delay(PUSH_DEBOUNCE_MS.milliseconds)
             syncMutex.withLock {
                 mergeAndSyncAllCategories(ctx)
             }
@@ -295,7 +296,6 @@ class UltimaPlugin : Plugin() {
     }
 
     override fun load(context: Context) {
-        pingAnalytics("Ultima")
         // Defensive cleanup — if load() is called again (plugin reload), clean up previous state
         cleanup()
         pluginScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -472,7 +472,7 @@ class UltimaPlugin : Plugin() {
                     val backoffMs = calculateSseBackoff()
                     Log.e(TAG, "SSE connection failed: ${e.message}, reconnecting in ${backoffMs}ms")
                     pluginScope.launch {
-                        delay(backoffMs)
+                        delay(backoffMs.milliseconds)
                         startSseListener(appContext)
                     }
                 }
@@ -498,7 +498,7 @@ class UltimaPlugin : Plugin() {
                         val backoffMs = calculateSseBackoff()
                         Log.e(TAG, "SSE connection failed with HTTP code ${response.code}, reconnecting in ${backoffMs}ms")
                         pluginScope.launch {
-                            delay(backoffMs)
+                            delay(backoffMs.milliseconds)
                             startSseListener(appContext)
                         }
                         return
@@ -545,7 +545,7 @@ class UltimaPlugin : Plugin() {
                                         // Debounce SSE-triggered pulls: cancel previous and wait
                                         ssePullJob?.cancel()
                                         ssePullJob = pluginScope.launch {
-                                            delay(SSE_PULL_DEBOUNCE_MS)
+                                            delay(SSE_PULL_DEBOUNCE_MS.milliseconds)
                                             syncMutex.withLock {
                                                 pullChangedCategories(appContext)
                                             }
@@ -580,7 +580,7 @@ class UltimaPlugin : Plugin() {
                         if (shouldRetry) {
                             val backoffMs = calculateSseBackoff()
                             pluginScope.launch {
-                                delay(backoffMs)
+                                delay(backoffMs.milliseconds)
                                 startSseListener(appContext)
                             }
                         }
@@ -811,6 +811,10 @@ class UltimaPlugin : Plugin() {
                         if (hash != cloudHash && isBackup) {
                             Log.d(TAG, "Merged data different from cloud for ${category.key}, queuing push")
                             categoriesToPush[category] = Pair(data, hash)
+                        } else if (cloudMeta != null && cloudHash.isNotEmpty() && UltimaStorageManager.getCategoryHash(category) != cloudHash) {
+                            // Perfect match but local tracker is outdated. Update it to prevent re-downloads.
+                            UltimaStorageManager.setCategoryHash(category, cloudHash)
+                            UltimaStorageManager.setCategoryTimestamp(category, cloudMeta.ts)
                         }
                     }
                 }
