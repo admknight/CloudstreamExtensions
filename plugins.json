@@ -557,7 +557,7 @@
     {
         "name": "UHDmoviesProvider",
         "internalName": "UHDmoviesProvider",
-        "version": 35,
+        "version": 36,
         "description": "Indian Multi-language 4K Provider",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/UHDmoviesProvider.cs3",
