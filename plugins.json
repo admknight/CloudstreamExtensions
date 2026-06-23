@@ -709,7 +709,7 @@
     {
         "name": "CloudPlay",
         "internalName": "CloudPlay",
-        "version": 1,
+        "version": 2,
         "description": "CloudPlay Live TV Extension",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/CloudPlay.cs3",
@@ -783,7 +783,7 @@
     {
         "name": "Kickassanime",
         "internalName": "Kickassanime",
-        "version": 22,
+        "version": 23,
         "description": "Lorem Ipsum",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Kickassanime.cs3",
