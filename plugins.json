@@ -503,7 +503,7 @@
     {
         "name": "MoviesDrive",
         "internalName": "MoviesDrive",
-        "version": 31,
+        "version": 32,
         "description": "High Quality Movies and TV Shows",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MoviesDrive.cs3",
@@ -521,7 +521,7 @@
     {
         "name": "Moviesmod",
         "internalName": "Moviesmod",
-        "version": 31,
+        "version": 32,
         "description": "Includes Topmovies",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Moviesmod.cs3",
@@ -575,7 +575,7 @@
     {
         "name": "VegaMovies",
         "internalName": "VegaMovies",
-        "version": 80,
+        "version": 81,
         "description": "Includes LuxMovies, Rogmovies",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/VegaMovies.cs3",
