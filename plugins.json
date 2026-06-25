@@ -709,7 +709,7 @@
     {
         "name": "CloudPlay",
         "internalName": "CloudPlay",
-        "version": 2,
+        "version": 3,
         "description": "CloudPlay Live TV Extension",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/CloudPlay.cs3",
