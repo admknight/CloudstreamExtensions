@@ -20,7 +20,7 @@
     {
         "name": "AnimeDekhoProvider",
         "internalName": "AnimeDekhoProvider",
-        "version": 64,
+        "version": 66,
         "description": "Includes AnimeDekho,OnePace(DUB,SUB) and HindiSubAnime",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimeDekhoProvider.cs3",
@@ -575,7 +575,7 @@
     {
         "name": "VegaMovies",
         "internalName": "VegaMovies",
-        "version": 81,
+        "version": 82,
         "description": "Includes LuxMovies, Rogmovies",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/VegaMovies.cs3",
@@ -709,7 +709,7 @@
     {
         "name": "CloudPlay",
         "internalName": "CloudPlay",
-        "version": 3,
+        "version": 4,
         "description": "CloudPlay Live TV Extension",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/CloudPlay.cs3",
@@ -851,24 +851,6 @@
         ],
         "language": "de",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/Megakino/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "MovieBoxProvider",
-        "internalName": "MovieBoxProvider",
-        "version": 23,
-        "description": "Multi Language Movies and Series Provider",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MovieBoxProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "hi",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/MovieBoxProvider/icon.png",
         "status": 1,
         "apiVersion": 1
     },
