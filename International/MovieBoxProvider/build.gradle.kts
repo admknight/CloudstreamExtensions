@@ -1,10 +1,17 @@
 // use an integer for version numbers
-version = 23
+version = 25
 
 android {
     buildFeatures {
         buildConfig = true
     }
+}
+
+dependencies {
+    val cloudstream by configurations
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("com.google.android.material:material:1.14.0")
+    cloudstream("com.lagradost:cloudstream3:pre-release")
 }
 
 cloudstream {
@@ -26,6 +33,7 @@ cloudstream {
         "Movie",
         "TvSeries"
     )
+    requiresResources = true
 
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/MovieBoxProvider/icon.png"
 
