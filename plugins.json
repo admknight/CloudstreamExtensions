@@ -20,7 +20,7 @@
     {
         "name": "AnimeDekhoProvider",
         "internalName": "AnimeDekhoProvider",
-        "version": 66,
+        "version": 67,
         "description": "Includes AnimeDekho,OnePace(DUB,SUB) and HindiSubAnime",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AnimeDekhoProvider.cs3",
@@ -613,7 +613,7 @@
     {
         "name": "Anikage",
         "internalName": "Anikage",
-        "version": 1,
+        "version": 2,
         "description": "Adam Knight curated source for Anikage",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Anikage.cs3",
@@ -857,7 +857,7 @@
     {
         "name": "Movies4u",
         "internalName": "Movies4u",
-        "version": 6,
+        "version": 7,
         "description": "Movies4u",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Movies4u.cs3",
