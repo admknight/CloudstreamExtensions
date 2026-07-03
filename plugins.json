@@ -322,7 +322,7 @@
     {
         "name": "Bollyflix",
         "internalName": "Bollyflix",
-        "version": 32,
+        "version": 33,
         "description": "Movies and Series upto 4K",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Bollyflix.cs3",
@@ -503,7 +503,7 @@
     {
         "name": "MoviesDrive",
         "internalName": "MoviesDrive",
-        "version": 32,
+        "version": 33,
         "description": "High Quality Movies and TV Shows",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/MoviesDrive.cs3",
