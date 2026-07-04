@@ -591,26 +591,6 @@
         "apiVersion": 1
     },
     {
-        "name": "AniDb",
-        "internalName": "AniDb",
-        "version": 3,
-        "description": "Animes",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/AniDb.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Anime",
-            "AnimeMovie",
-            "OVA"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AniDb/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
         "name": "Anikage",
         "internalName": "Anikage",
         "version": 2,

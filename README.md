@@ -3,8 +3,8 @@
 This branch contains the compiled `.cs3` files and the live index.
 
 ### 📊 Status
-* **Total Plugins Live:** `61` / 155
-* **Last Update:** `2026-07-03 03:36:49` UTC
+* **Total Plugins Live:** `60` / 155
+* **Last Update:** `2026-07-04 03:28:52` UTC
 * **Repo URL:** `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json` 
 
 ---
@@ -17,8 +17,8 @@ This branch contains the compiled `.cs3` files and the live index.
 #### 📁 Bollywood (17)
 `AllMovieLandProvider`, `BanglaPlex`, `Bollyflix`, `Cinefreak`, `Desicinemas`, `Fivemovierulz`, `FourKHDHub`, `HDhub4u`, `Hindmoviez`, `MassTamilanProvider`, `MovieBlast`, `Movierulzhd`, `MoviesDrive`, `Moviesmod`, `OnlineMoviesHinditProvider`, `UHDmoviesProvider`, `VegaMovies`
 
-#### 📁 International (26)
-`AniDb`, `Anikage`, `Animenosub`, `Animesalt`, `Anineko`, `Cinemacity`, `CloudPlay`, `DudeFilms`, `Fibwatch`, `KayiFamilyTv`, `Kickassanime`, `LayarKacaProvider`, `MPlayerProvider`, `Megakino`, `Movies4u`, `MultiMoviesProvider`, `Netcinez`, `OHLI24`, `OneTouchTV`, `Pencurimovie`, `Pinoymoviepedia`, `Piratexplay`, `Pmsm`, `Topstreamfilm`, `YTS`, `Zinkmovies`
+#### 📁 International (25)
+`Anikage`, `Animenosub`, `Animesalt`, `Anineko`, `Cinemacity`, `CloudPlay`, `DudeFilms`, `Fibwatch`, `KayiFamilyTv`, `Kickassanime`, `LayarKacaProvider`, `MPlayerProvider`, `Megakino`, `Movies4u`, `MultiMoviesProvider`, `Netcinez`, `OHLI24`, `OneTouchTV`, `Pencurimovie`, `Pinoymoviepedia`, `Piratexplay`, `Pmsm`, `Topstreamfilm`, `YTS`, `Zinkmovies`
 
 #### 📁 LiveTV (1)
 `IPTVPlayer`
