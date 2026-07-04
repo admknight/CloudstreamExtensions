@@ -1,6 +1,8 @@
 package com.anidb
 
+import com.lagradost.api.Log
 import com.lagradost.cloudstream3.AnimeSearchResponse
+import com.lagradost.cloudstream3.CommonActivity
 import com.lagradost.cloudstream3.DubStatus
 import com.lagradost.cloudstream3.Episode
 import com.lagradost.cloudstream3.HomePageResponse
@@ -28,7 +30,85 @@ import com.lagradost.cloudstream3.toNewSearchResponseList
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.M3u8Helper.Companion.generateM3u8
 import com.lagradost.cloudstream3.utils.loadExtractor
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.withContext
+import okhttp3.Interceptor
+import okhttp3.Response
 import org.jsoup.nodes.Document
+import androidx.appcompat.app.AppCompatActivity
+import kotlin.coroutines.resume
+
+// ── Cloudflare OkHttp Interceptor ────────────────────────────────────────────
+
+/**
+ * OkHttp interceptor that injects the saved [AniDbPlugin.cfCookies] and
+ * [AniDbPlugin.cfUserAgent] on every outgoing request so that OkHttp perfectly
+ * mimics the real Android WebView that solved the CAPTCHA.
+ */
+object AniDbCFBypassInterceptor : Interceptor {
+    override fun intercept(chain: Interceptor.Chain): Response {
+        val original = chain.request()
+        val builder = original.newBuilder()
+            // Remove bot-revealing header
+            .removeHeader("X-Requested-With")
+            // Chrome fingerprint headers
+            .header("sec-ch-ua-mobile", "?1")
+            .header("sec-ch-ua-platform", "\"Android\"")
+
+        // Match the EXACT User-Agent the WebView used
+        val savedUa = AniDbPlugin.cfUserAgent
+        if (savedUa.isNotEmpty()) {
+            builder.header("User-Agent", savedUa)
+        }
+
+        // Inject saved cf_clearance cookie
+        val savedCookies = AniDbPlugin.cfCookies
+        if (savedCookies.isNotEmpty()) {
+            val existingCookie = original.header("Cookie") ?: ""
+            val base = existingCookie.split(";").map { it.trim() }
+                .filter { it.isNotEmpty() && !it.startsWith("cf_clearance=") }
+            val fresh = savedCookies.split(";").map { it.trim() }.filter { it.isNotEmpty() }
+            builder.header("Cookie", (base + fresh).distinct().joinToString("; "))
+        }
+
+        return chain.proceed(builder.build())
+    }
+}
+
+// ── CF dialog helper ──────────────────────────────────────────────────────────
+
+/**
+ * Shows [CloudflareWebViewDialog] for [url] on the UI thread and suspends the
+ * calling coroutine until:
+ *  - cookies are saved (returns true), or
+ *  - user dismisses without solving / activity unavailable (returns false).
+ */
+suspend fun showAniDbCFBypassDialogAndWait(url: String): Boolean =
+    withContext(Dispatchers.Main) {
+        suspendCancellableCoroutine { cont ->
+            val activity = CommonActivity.activity as? AppCompatActivity
+            if (activity == null || activity.isFinishing || activity.isDestroyed) {
+                Log.e("AniDB_CFBypass", "No activity available to show CF dialog")
+                cont.resume(false)
+                return@suspendCancellableCoroutine
+            }
+            var resumed = false
+            fun safeResume(success: Boolean) {
+                if (!resumed) { resumed = true; cont.resume(success) }
+            }
+            val dialog = CloudflareWebViewDialog(
+                targetUrl = url,
+                onFinished = { success -> safeResume(success) }
+            )
+            cont.invokeOnCancellation {
+                activity.runOnUiThread { runCatching { dialog.dismissAllowingStateLoss() } }
+            }
+            dialog.show(activity.supportFragmentManager, "anidb_cf_bypass_auto")
+        }
+    }
+
+// ── AniDb Provider ────────────────────────────────────────────────────────────
 
 class AniDb : MainAPI() {
     override var mainUrl = "https://anidb.app"
@@ -36,6 +116,37 @@ class AniDb : MainAPI() {
     override var supportedTypes = setOf(TvType.Anime, TvType.AnimeMovie, TvType.OVA)
     override var lang = "en"
     override val hasMainPage = true
+
+    companion object {
+        /** Phrases in a page body that indicate a Cloudflare challenge is active */
+        private val CF_BLOCKER_PHRASES = listOf(
+            "just a moment",
+            "checking your browser",
+            "ddos-guard",
+            "attention required",
+            "verify you are human",
+            "cloudflare"
+        )
+
+        fun isCloudflareBlocked(response: com.lagradost.nicehttp.NiceResponse): Boolean {
+            if (response.code == 403 || response.code == 503) return true
+            return CF_BLOCKER_PHRASES.any { response.text.lowercase().contains(it) }
+        }
+
+        suspend fun appGet(
+            url: String,
+            headers: Map<String, String> = emptyMap()
+        ): com.lagradost.nicehttp.NiceResponse {
+            val rawResponse = app.get(url, headers = headers, interceptor = AniDbCFBypassInterceptor)
+            return if (isCloudflareBlocked(rawResponse)) {
+                Log.d("AniDB", "CF challenge detected on $url – showing WebView dialog")
+                showAniDbCFBypassDialogAndWait("https://anidb.app")
+                app.get(url, headers = headers, interceptor = AniDbCFBypassInterceptor)
+            } else {
+                rawResponse
+            }
+        }
+    }
 
     override val mainPage = mainPageOf(
         "$mainUrl/browse?q=&type=&status=&season=&year=&genres=&sort=order_top_airing&page=" to "Top Airing",
@@ -50,6 +161,7 @@ class AniDb : MainAPI() {
         "$mainUrl/browse?type=Special&page=" to "Specials",
         "$mainUrl/browse?q=&type=&status=Finished+Airing&season=&year=&genres=&sort=order_favorite&page=" to "Finished Airing"
     )
+
     private fun searchResponseBuilder(res: Document): List<AnimeSearchResponse> {
         val results = mutableListOf<AnimeSearchResponse>()
         res.select("a.anime-card").forEach { item ->
@@ -70,13 +182,13 @@ class AniDb : MainAPI() {
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         val url = request.data + page.toString()
-        val res = app.get(url).document
+        val res = appGet(url).document
         val searchRes = searchResponseBuilder(res)
         return newHomePageResponse(request.name, searchRes)
     }
 
     override suspend fun search(query: String, page: Int): SearchResponseList {
-        val browseRes = app.get("$mainUrl/browse?q=$query").document
+        val browseRes = appGet("$mainUrl/browse?q=$query").document
         return searchResponseBuilder(browseRes).toNewSearchResponseList()
     }
 
@@ -84,7 +196,7 @@ class AniDb : MainAPI() {
         val slug = url.substringAfterLast("/")
         val siteId = slug.substringAfterLast("-").toIntOrNull() ?: return null
 
-        val doc = app.get(url).document
+        val doc = appGet(url).document
         val title = doc.selectFirst("h1")?.text() ?: ""
         val poster = doc.selectFirst("div.flex-shrink-0 img")?.attr("src")
             ?: doc.selectFirst("meta[property=og:image]")?.attr("content")
@@ -95,9 +207,12 @@ class AniDb : MainAPI() {
         val year = doc.selectFirst("a[href*=&year=]")?.text()?.split(" ")?.lastOrNull()?.toIntOrNull()
         val ratingText = doc.select("span.badge-gray").firstOrNull { it.text().contains(Regex("[0-9]")) }?.ownText()?.trim()
         val rating = ratingText?.replace(Regex("[^0-9.]"), "")?.toDoubleOrNull()
-        
+
         val episodesUrl = "$mainUrl/api/frontend/anime/$siteId/episodes"
-        val epResponse = app.get(episodesUrl, headers = mapOf("X-Requested-With" to "XMLHttpRequest")).parsedSafe<EpisodesResponse>()
+        val epResponse = appGet(
+            episodesUrl,
+            headers = mapOf("X-Requested-With" to "XMLHttpRequest")
+        ).parsedSafe<EpisodesResponse>()
         val episodesList = epResponse?.episodes ?: emptyList()
 
         val firstEpId = episodesList.firstOrNull()?.id
@@ -106,17 +221,28 @@ class AniDb : MainAPI() {
 
         if (firstEpId != null) {
             val langUrl = "$mainUrl/api/frontend/episode/$firstEpId/languages"
-            val langResponse = app.get(langUrl, headers = mapOf("X-Requested-With" to "XMLHttpRequest")).parsedSafe<LanguagesResponse>()
+            val langResponse = appGet(
+                langUrl,
+                headers = mapOf("X-Requested-With" to "XMLHttpRequest")
+            ).parsedSafe<LanguagesResponse>()
             val langs = langResponse?.languages ?: emptyList()
-            hasSub = langs.isEmpty() || langs.any { it.code?.lowercase() in listOf("jpn", "ja", "japanese") || it.name?.lowercase() in listOf("jpn", "ja", "japanese") }
-            hasDub = langs.any { it.code?.lowercase() in listOf("eng", "en", "english") || it.name?.lowercase() in listOf("eng", "en", "english") }
+            hasSub = langs.isEmpty() || langs.any {
+                it.code?.lowercase() in listOf("jpn", "ja", "japanese") ||
+                it.name?.lowercase() in listOf("jpn", "ja", "japanese")
+            }
+            hasDub = langs.any {
+                it.code?.lowercase() in listOf("eng", "en", "english") ||
+                it.name?.lowercase() in listOf("eng", "en", "english")
+            }
         }
 
         val subEpisodes = mutableListOf<Episode>()
         val dubEpisodes = mutableListOf<Episode>()
 
-        val malId = doc.selectFirst("a[href*=myanimelist.net/anime/]")?.attr("href")?.substringAfter("anime/")?.substringBefore("/")?.toIntOrNull()
-        val anilistId = doc.selectFirst("a[href*=anilist.co/anime/]")?.attr("href")?.substringAfter("anime/")?.substringBefore("/")?.toIntOrNull()
+        val malId = doc.selectFirst("a[href*=myanimelist.net/anime/]")?.attr("href")
+            ?.substringAfter("anime/")?.substringBefore("/")?.toIntOrNull()
+        val anilistId = doc.selectFirst("a[href*=anilist.co/anime/]")?.attr("href")
+            ?.substringAfter("anime/")?.substringBefore("/")?.toIntOrNull()
 
         val syncMetaData = if (anilistId != null) {
             app.get("https://api.ani.zip/mappings?anilist_id=$anilistId").text
@@ -127,11 +253,11 @@ class AniDb : MainAPI() {
         val animeMetaData = syncMetaData?.let { parseAnimeData(it) }
 
         val isMovie = doc.selectFirst("a[class*=badge-orange][href*=/browse?type=Movie]") != null
-        
+
         episodesList.forEachIndexed { index, ep ->
             val num = index + 1
             val metaEp = animeMetaData?.episodes?.get(num.toString())
-            
+
             val epName = metaEp?.title?.get("en") ?: metaEp?.title?.get("x-jat") ?: metaEp?.title?.get("ja") ?: "Episode $num"
             val epDesc = metaEp?.overview
             val epPoster = metaEp?.image
@@ -178,7 +304,7 @@ class AniDb : MainAPI() {
         val tvType = if (isMovie) TvType.AnimeMovie else TvType.Anime
 
         val trailerUrl = doc.selectFirst("a[href*=youtube.com/watch]")?.attr("href")
-        
+
         val statusText = doc.selectFirst("a[class*=badge][href*=/browse?status=]")?.text()
         val showStatus = when (statusText) {
             "Finished Airing" -> ShowStatus.Completed
@@ -186,7 +312,8 @@ class AniDb : MainAPI() {
             else -> null
         }
 
-        val durationText = doc.select("div.flex.flex-wrap.gap-x-6 span").firstOrNull { it.text().contains("m") || it.text().contains("h") }?.text()
+        val durationText = doc.select("div.flex.flex-wrap.gap-x-6 span")
+            .firstOrNull { it.text().contains("m") || it.text().contains("h") }?.text()
         val duration = durationText?.let {
             if (it.contains("h") && it.contains("m")) {
                 val h = it.substringBefore("h").toIntOrNull() ?: 0
@@ -234,16 +361,28 @@ class AniDb : MainAPI() {
         val audio = parts.getOrNull(2) ?: "sub"
 
         val langUrl = "$mainUrl/api/frontend/episode/$episodeId/languages"
-        val langResponse = app.get(langUrl, headers = mapOf("X-Requested-With" to "XMLHttpRequest", "Referer" to "$mainUrl/anime/$slug")).parsedSafe<LanguagesResponse>()
+        val langResponse = appGet(
+            langUrl,
+            headers = mapOf(
+                "X-Requested-With" to "XMLHttpRequest",
+                "Referer" to "$mainUrl/anime/$slug"
+            )
+        ).parsedSafe<LanguagesResponse>()
 
         val langs = langResponse?.languages ?: emptyList()
         val langsToExtract = if (audio == "movie") {
             langs
         } else {
-            val preferredCodes = if (audio == "sub") listOf("jpn", "ja", "japanese") else listOf("eng", "en", "english")
-            listOfNotNull(langs.find { it.code?.lowercase() in preferredCodes } ?: langs.find { it.name?.lowercase() in preferredCodes })
+            val preferredCodes = if (audio == "sub")
+                listOf("jpn", "ja", "japanese")
+            else
+                listOf("eng", "en", "english")
+            listOfNotNull(
+                langs.find { it.code?.lowercase() in preferredCodes }
+                    ?: langs.find { it.name?.lowercase() in preferredCodes }
+            )
         }
-        
+
         val hlsRegex = listOf(
             Regex("""file\s*:\s*["'](https?://[^"']+\.m3u8[^"']*)["']""", RegexOption.IGNORE_CASE),
             Regex("""sources\s*:\s*\[\s*\{[^}]*file\s*:\s*["'](https?://[^"']+\.m3u8[^"']*)["']""", RegexOption.IGNORE_CASE),
@@ -253,8 +392,8 @@ class AniDb : MainAPI() {
 
         langsToExtract.amap { language ->
             val embedUrl = language.embed_url ?: return@amap
-            val embedDoc = app.get(embedUrl, headers = mapOf("Referer" to "$mainUrl/")).text
-            
+            val embedDoc = appGet(embedUrl, headers = mapOf("Referer" to "$mainUrl/")).text
+
             var hlsUrl: String? = null
             for (regex in hlsRegex) {
                 val match = regex.find(embedDoc)
@@ -263,7 +402,7 @@ class AniDb : MainAPI() {
                     break
                 }
             }
-            
+
             if (hlsUrl != null) {
                 val sourceName = if (audio == "movie") "$name - ${language.name ?: "Unknown"}" else name
                 generateM3u8(
@@ -275,7 +414,7 @@ class AniDb : MainAPI() {
                 loadExtractor(embedUrl, "$mainUrl/", subtitleCallback, callback)
             }
         }
-        
+
         return true
     }
 

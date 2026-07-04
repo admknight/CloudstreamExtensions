@@ -1,6 +1,15 @@
 // use an integer for version numbers
-version = 3
+version = 5
 
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}
+
+dependencies {
+    implementation("com.google.android.material:material:1.14.0")
+}
 
 cloudstream {
     // All of these properties are optional, you can safely remove them
@@ -19,5 +28,6 @@ cloudstream {
     tvTypes = listOf("Anime", "AnimeMovie", "OVA")
     language = "en"
     iconUrl = "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/International/AniDb/icon.png"
-    isCrossPlatform = true
+    isCrossPlatform = false
+    requiresResources = true
 }
