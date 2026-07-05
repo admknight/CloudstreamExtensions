@@ -1,4 +1,4 @@
-﻿package com.phisher98
+package com.phisher98
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -303,11 +303,6 @@ class UltimaPlugin : Plugin() {
         activity = context as? AppCompatActivity
         registerMainAPI(Ultima(this))
 
-        UltimaStorageManager.currentMetaProviders.forEach { metaProvider ->
-            when (metaProvider.first) {
-                else -> {}
-            }
-        }
 
         openSettings = { ctx ->
             val act = ctx as? AppCompatActivity

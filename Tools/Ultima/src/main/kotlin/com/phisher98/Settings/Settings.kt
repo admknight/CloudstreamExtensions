@@ -94,22 +94,6 @@ class UltimaSettings(val plugin: UltimaPlugin) : BottomSheetDialogFragment() {
         }
         // #endregion - building save button and its click listener
 
-        // #region - building meta providers button and its click listener
-        val metaProvidersBtn = settings.findView<ImageView>("meta_providers_img")
-        metaProvidersBtn.setImageDrawable(getDrawable("edit_icon"))
-        metaProvidersBtn.makeTvCompatible()
-        metaProvidersBtn.setOnClickListener {
-            val configure = UltimaMetaProviders(plugin)
-            configure.show(
-                activity?.supportFragmentManager
-                    ?: throw Exception(
-                        "Unable to open meta providers settings"
-                    ),
-                ""
-            )
-            dismiss()
-        }
-        // #endregion - building meta providers button and its click listener
 
         // #region - building config extensions button and its click listener
         val configBtn = settings.findView<ImageView>("config_img")

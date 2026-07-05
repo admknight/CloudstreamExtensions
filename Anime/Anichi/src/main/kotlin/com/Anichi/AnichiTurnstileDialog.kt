@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.CookieManager
+import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
@@ -24,86 +25,118 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.lagradost.api.Log
 
 /**
- * Full-screen BottomSheet that loads [targetUrl] in a real WebView to solve Anichi's
- * Cloudflare Turnstile challenge and extracts the `cf-turnstile-response` token.
+ * Full-screen BottomSheet that loads [targetUrl] (the episode page on allmanga.to) in a real
+ * WebView. The site's own JavaScript handles the Cloudflare Turnstile challenge and then POSTs
+ * to api.allanime.day. A fetch/XHR interceptor injected into the page captures that raw API
+ * response body (which contains the encrypted `tobeparsed` field) and returns it via [onFinished].
+ *
+ * [onFinished] is called with:
+ *  - the raw JSON response body when successfully intercepted, or
+ *  - null on timeout or user dismissal.
  */
 class AnichiTurnstileDialog(
     private val targetUrl: String,
-    /** Called with the Turnstile token when found, or null if dismissed/failed. */
     private val onFinished: ((String?) -> Unit)? = null
 ) : BottomSheetDialogFragment() {
 
     companion object {
         private const val TAG = "AnichiTurnstileDialog"
-        private const val POLL_INTERVAL_MS = 2_000L
-        private const val POLL_TIMEOUT_MS  = 120_000L
-
-        private val CHALLENGE_TITLES = listOf(
-            "just a moment",
-            "just a moment...",
-            "checking your browser",
-            "attention required",
-            "ddos-guard",
-            "one more step"
-        )
-
-        fun isChallengeTitle(title: String): Boolean =
-            CHALLENGE_TITLES.any { title.lowercase().contains(it) }
+        private const val TIMEOUT_MS = 60_000L
     }
 
     private var webView: WebView? = null
     private var statusText: TextView? = null
     private var progressBar: ProgressBar? = null
-
     private val handler = Handler(Looper.getMainLooper())
-    private var tokenSaved = false
-    private var pollElapsedMs = 0L
 
-    private val tokenPollRunnable = object : Runnable {
-        override fun run() {
-            if (tokenSaved || !isAdded) return
+    @Volatile private var responseSaved = false
 
-            pollElapsedMs += POLL_INTERVAL_MS
-            updateStatus("⏳ Waiting for Turnstile token… (${pollElapsedMs / 1000}s)")
+    // ── JavaScript bridge ───────────────────────────────────────────────────────
 
-            if (pollElapsedMs == 4000L) {
-                (dialog as? BottomSheetDialog)?.behavior?.apply {
-                    skipCollapsed = true
-                    peekHeight = android.view.WindowManager.LayoutParams.MATCH_PARENT
-                    state = BottomSheetBehavior.STATE_EXPANDED
-                }
-            }
-
-            if (pollElapsedMs >= POLL_TIMEOUT_MS) {
-                updateStatus("⏱️ Timed out. Try solving the CAPTCHA then tap Bypass again.")
-                return
-            }
-
-            // Inject JS to grab the Turnstile response token from the hidden input field
-            webView?.evaluateJavascript(
-                "(function() { " +
-                "  var tokenInput = document.querySelector('[name=\"cf-turnstile-response\"]'); " +
-                "  if (tokenInput && tokenInput.value) return tokenInput.value; " +
-                "  return null; " +
-                "})();"
-            ) { result ->
-                val cleanResult = result?.trim('"', '\'')
-                if (!cleanResult.isNullOrBlank() && cleanResult != "null") {
-                    saveTokenAndDismiss(cleanResult)
-                } else {
-                    handler.postDelayed(this, POLL_INTERVAL_MS)
-                }
+    inner class ApiResponseBridge {
+        @JavascriptInterface
+        fun onApiResponse(body: String) {
+            if (responseSaved) return
+            // Only accept responses that look like an episode API reply
+            if (body.contains("tobeparsed") || body.contains("\"sourceUrls\"")) {
+                Log.d(TAG, "✅ API response intercepted from WebView (${body.length} bytes)")
+                handler.post { saveResponseAndDismiss(body) }
             }
         }
     }
 
+    /**
+     * Injected into the WebView page to wrap window.fetch and XMLHttpRequest.
+     * Any call whose URL contains "allanime.day" has its response forwarded to
+     * the Android bridge [ApiResponseBridge.onApiResponse].
+     * The guard flag `__anichiHooked` prevents double-injection on re-fires.
+     */
+    private val interceptorJs = """
+        (function() {
+            if (window.__anichiHooked) return;
+            window.__anichiHooked = true;
+
+            // ── Fetch interceptor ──────────────────────────────────────────────
+            var _origFetch = window.fetch;
+            window.fetch = function() {
+                var args = Array.prototype.slice.call(arguments);
+                var req  = args[0];
+                var url  = (typeof req === 'string') ? req : (req ? req.url : '');
+                return _origFetch.apply(this, args).then(function(resp) {
+                    if (url && url.indexOf('allanime.day') !== -1) {
+                        resp.clone().text().then(function(body) {
+                            if (window.AnichiApiBridge) {
+                                window.AnichiApiBridge.onApiResponse(body);
+                            }
+                        });
+                    }
+                    return resp;
+                });
+            };
+
+            // ── XHR interceptor ────────────────────────────────────────────────
+            var _origOpen = XMLHttpRequest.prototype.open;
+            var _origSend = XMLHttpRequest.prototype.send;
+
+            XMLHttpRequest.prototype.open = function(method, url) {
+                this._capturedUrl = url;
+                _origOpen.apply(this, arguments);
+            };
+
+            XMLHttpRequest.prototype.send = function() {
+                var self = this;
+                this.addEventListener('load', function() {
+                    if (self._capturedUrl &&
+                        self._capturedUrl.indexOf('allanime.day') !== -1 &&
+                        window.AnichiApiBridge) {
+                        window.AnichiApiBridge.onApiResponse(self.responseText || '');
+                    }
+                });
+                _origSend.apply(this, arguments);
+            };
+        })();
+    """.trimIndent()
+
+    // ── Timeout ─────────────────────────────────────────────────────────────────
+
+    private val timeoutRunnable = Runnable {
+        if (responseSaved || !isAdded) return@Runnable
+        updateStatus("⏱️ Timed out — no API response intercepted.")
+        handler.postDelayed({
+            if (isAdded && !responseSaved) {
+                onFinished?.invoke(null)
+                dismissAllowingStateLoss()
+            }
+        }, 1_500L)
+    }
+
+    // ── Dialog / View setup ─────────────────────────────────────────────────────
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState)
         (dialog as? BottomSheetDialog)?.behavior?.apply {
-            // Start hidden, slide up after 4s if interaction is needed
-            state = BottomSheetBehavior.STATE_COLLAPSED
-            skipCollapsed = false
-            peekHeight = 0
+            skipCollapsed = true
+            state = BottomSheetBehavior.STATE_EXPANDED
         }
         return dialog
     }
@@ -114,18 +147,18 @@ class AnichiTurnstileDialog(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
         )
-        val bottomSheet = dialog?.findViewById<View>(
+        val sheet = dialog?.findViewById<View>(
             com.google.android.material.R.id.design_bottom_sheet
         )
-        bottomSheet?.layoutParams?.height = ViewGroup.LayoutParams.MATCH_PARENT
-        bottomSheet?.requestLayout()
+        sheet?.layoutParams?.height = ViewGroup.LayoutParams.MATCH_PARENT
+        sheet?.requestLayout()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         val screenH = requireContext().resources.displayMetrics.heightPixels
-        val webViewHeight = (screenH * 0.70).toInt()
+        val wvHeight = (screenH * 0.82).toInt()
 
         val root = LinearLayout(requireContext()).apply {
             orientation = LinearLayout.VERTICAL
@@ -138,14 +171,14 @@ class AnichiTurnstileDialog(
         }
 
         root.addView(TextView(requireContext()).apply {
-            text = "🛡️ Anichi Cloudflare Bypass"
+            text = "🛡️ Anichi Security Check"
             textSize = 18f
             setTextColor(Color.WHITE)
             setPadding(0, 0, 0, 8)
         })
 
         statusText = TextView(requireContext()).apply {
-            text = "Loading challenge page…"
+            text = "Loading episode page…"
             textSize = 13f
             setTextColor(Color.parseColor("#A0A0B0"))
             setPadding(0, 0, 0, 4)
@@ -153,7 +186,7 @@ class AnichiTurnstileDialog(
         root.addView(statusText)
 
         root.addView(TextView(requireContext()).apply {
-            text = "Solve the Turnstile CAPTCHA. The dialog will close automatically."
+            text = "Solve the security check if prompted. Dialog closes automatically once the episode loads."
             textSize = 11f
             setTextColor(Color.parseColor("#707080"))
             setPadding(0, 0, 0, 12)
@@ -173,7 +206,7 @@ class AnichiTurnstileDialog(
         val wvContainer = FrameLayout(requireContext()).apply {
             layoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                webViewHeight
+                wvHeight
             )
         }
         webView = buildWebView()
@@ -185,7 +218,6 @@ class AnichiTurnstileDialog(
             )
         )
         root.addView(wvContainer)
-
         return root
     }
 
@@ -197,7 +229,7 @@ class AnichiTurnstileDialog(
             flush()
         }
         webView?.loadUrl(targetUrl)
-        handler.postDelayed(tokenPollRunnable, POLL_INTERVAL_MS)
+        handler.postDelayed(timeoutRunnable, TIMEOUT_MS)
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -213,50 +245,56 @@ class AnichiTurnstileDialog(
             loadsImagesAutomatically = true
         }
 
+        // Register BEFORE loading any URL so the bridge is available from page start
+        wv.addJavascriptInterface(ApiResponseBridge(), "AnichiApiBridge")
+
         wv.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
-                super.onProgressChanged(view, newProgress)
-                if (!tokenSaved) updateStatus("Loading… $newProgress%")
+                if (!responseSaved) updateStatus("Loading… $newProgress%")
             }
         }
 
         wv.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?) = false
 
+            override fun onPageStarted(
+                view: WebView?, url: String?, favicon: android.graphics.Bitmap?
+            ) {
+                super.onPageStarted(view, url, favicon)
+                // Inject as early as possible — before the page's own scripts execute
+                view?.evaluateJavascript(interceptorJs, null)
+            }
+
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                if (tokenSaved) return
-                val title = view?.title ?: ""
-                if (isChallengeTitle(title)) {
-                    updateStatus("🔄 Challenge active – solve the CAPTCHA above")
-                } else {
-                    updateStatus("✏️ Page loaded – extracting Turnstile token…")
-                }
+                if (responseSaved) return
+                // Re-inject after page finishes in case the early injection was pre-empted
+                view?.evaluateJavascript(interceptorJs, null)
+                updateStatus("✏️ Page ready — waiting for episode API call…")
             }
         }
         return wv
     }
 
-    private fun saveTokenAndDismiss(token: String) {
-        if (tokenSaved) return
-        tokenSaved = true
-        handler.removeCallbacks(tokenPollRunnable)
+    // ── Result helpers ──────────────────────────────────────────────────────────
 
-        Log.d(TAG, "✅ Extracted Turnstile Token: $token")
-        updateStatus("✅ Done! Token extracted.")
-
+    private fun saveResponseAndDismiss(body: String) {
+        if (responseSaved) return
+        responseSaved = true
+        handler.removeCallbacks(timeoutRunnable)
+        updateStatus("✅ Response captured!")
         webView?.postDelayed({
             if (isAdded) {
-                onFinished?.invoke(token)
+                onFinished?.invoke(body)
                 dismissAllowingStateLoss()
             }
-        }, 1500)
+        }, 800L)
     }
 
     override fun onDismiss(dialog: android.content.DialogInterface) {
         super.onDismiss(dialog)
-        if (!tokenSaved) {
-            handler.removeCallbacks(tokenPollRunnable)
+        if (!responseSaved) {
+            handler.removeCallbacks(timeoutRunnable)
             onFinished?.invoke(null)
         }
     }
@@ -275,7 +313,7 @@ class AnichiTurnstileDialog(
     }
 
     override fun onDestroyView() {
-        handler.removeCallbacks(tokenPollRunnable)
+        handler.removeCallbacks(timeoutRunnable)
         webView?.apply {
             stopLoading()
             destroy()

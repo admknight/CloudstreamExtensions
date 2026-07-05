@@ -10,13 +10,14 @@ import com.lagradost.cloudstream3.SearchResponse
 import com.lagradost.cloudstream3.ShowStatus
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
+import com.lagradost.cloudstream3.addSub
 import com.lagradost.cloudstream3.addEpisodes
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.mainPageOf
 import com.lagradost.cloudstream3.newAnimeLoadResponse
 import com.lagradost.cloudstream3.newEpisode
 import com.lagradost.cloudstream3.newHomePageResponse
-import com.lagradost.cloudstream3.newMovieSearchResponse
+import com.lagradost.cloudstream3.newAnimeSearchResponse
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.ExtractorLinkType
@@ -187,9 +188,16 @@ class AnizoneProvider(private val sharedPref: SharedPreferences? = null) : MainA
         val xdata = post.attr("x-data")
         val title = extractTitleFromXData(xdata)
         val url = post.selectFirst("a")?.attr("href") ?: ""
+        
+        val epsCount = post.select("div.inline.text-xs span")
+            .map { it.text().trim() }
+            .firstOrNull { it.endsWith("Eps", ignoreCase = true) }
+            ?.substringBefore(" ")
+            ?.toIntOrNull()
 
-        return newMovieSearchResponse(title, url, TvType.Movie) {
+        return newAnimeSearchResponse(title, url, TvType.Anime) {
             this.posterUrl = post.selectFirst("img")?.attr("src")
+            addSub(epsCount)
         }
     }
 
@@ -219,6 +227,7 @@ class AnizoneProvider(private val sharedPref: SharedPreferences? = null) : MainA
             throw NotImplementedError("Unable to find title")
         }
 
+        val poster = doc.selectFirst("div.mx-auto.lg\\:mx-0 > img")?.attr("src")
         val bgImage = doc.selectFirst("main img")?.attr("src")
         val synopsis = doc.selectFirst(".sr-only + div")?.text() ?: ""
 
@@ -242,27 +251,39 @@ class AnizoneProvider(private val sharedPref: SharedPreferences? = null) : MainA
         // so we iterate over it to scrap all at once.
         val epiElms = doc.select("li[x-data]")
 
-        val episodes = epiElms.map{ elt ->
-             newEpisode(
-            data = elt.selectFirst("a")?.attr("href") ?: "") {
-                 this.name = elt.selectFirst("h3")?.text()
-                     ?.substringAfter(":")?.trim()
-                 this.season = 0
-                 
-                 val spans = elt.select("span.line-clamp-1").map { it.text() }
-                 this.date = spans.find { it.matches(Regex("""\d{4}-\d{2}-\d{2}""")) }?.let {
-                     SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(it)?.time
-                 } ?: 0
-                 
-                 this.episode = spans.lastOrNull()?.toIntOrNull()
-                 this.posterUrl = elt.selectFirst("img")?.attr("src")
-             }
+        val episodes = epiElms.map { elt ->
+            val h3Text = elt.selectFirst("h3")?.text()?.trim().orEmpty()
+
+            val episodeNumber = Regex("""Episode\s+(\d+)""", RegexOption.IGNORE_CASE)
+                .find(h3Text)
+                ?.groupValues
+                ?.get(1)
+                ?.toIntOrNull()
+
+            val episodeTitle = extractTitleFromXData(elt.attr("x-data"))
+                .ifBlank {
+                    h3Text.substringAfter(":").trim()
+                }
+
+            newEpisode(
+                data = elt.selectFirst("a")?.attr("href").orEmpty()
+            ) {
+                this.name = episodeTitle
+                this.episode = episodeNumber
+                this.posterUrl = elt.selectFirst("img")?.attr("src")
+                this.description = elt.selectFirst("div.text-sm span")?.text()?.trim()
+                this.date = elt.select("span.line-clamp-1")
+                    .map { it.text() }
+                    .firstOrNull { it.matches(Regex("""\d{4}-\d{2}-\d{2}""")) }
+                    ?.let {
+                        SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(it)?.time
+                    } ?: 0
+            }
         }
 
         return newAnimeLoadResponse(title, url, TvType.Anime) {
-
-
-            this.posterUrl = bgImage
+            this.posterUrl = poster
+            this.backgroundPosterUrl = bgImage
             this.plot = synopsis
             this.tags = genres
             this.year = releasedYear?.toIntOrNull()

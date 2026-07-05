@@ -10,7 +10,7 @@ import com.lagradost.api.Log
 import com.lagradost.cloudstream3.plugins.PluginManager
 import com.lagradost.cloudstream3.plugins.PluginData
 import com.lagradost.cloudstream3.plugins.RepositoryManager
-import com.lagradost.cloudstream3.plugins.SitePlugin
+import com.lagradost.cloudstream3.plugins.PluginWrapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import java.io.File
 import kotlinx.coroutines.coroutineScope
@@ -494,13 +494,13 @@ object UltimaBackupUtils {
         }
 
         // Fetch all online plugins from configured repos (in parallel)
-        val allOnlinePlugins = mutableListOf<Pair<String, SitePlugin>>()
+        val allOnlinePlugins = mutableListOf<PluginWrapper>()
         val repositories = RepositoryManager.getRepositories()
         coroutineScope {
             val deferreds = repositories.map { repo ->
                 async(Dispatchers.IO) {
                     try {
-                        RepositoryManager.getRepoPlugins(repo.url)
+                        RepositoryManager.getRepoPlugins(repo)
                     } catch (e: Exception) {
                         Log.e(TAG, "Failed to fetch plugins for repo ${repo.url}: ${e.message}")
                         null
@@ -535,10 +535,10 @@ object UltimaBackupUtils {
             }.map { plugin ->
                 async(Dispatchers.IO) {
                     downloadSemaphore.withPermit {
-                        val match = allOnlinePlugins.find { it.second.internalName.equals(plugin.internalName, ignoreCase = true) }
+                        val match = allOnlinePlugins.find { it.plugin.internalName.equals(plugin.internalName, ignoreCase = true) }
 
                         val localFile = if (match != null) {
-                            PluginManager.getPluginPath(context, plugin.internalName, match.first)
+                            PluginManager.getPluginPath(context, plugin.internalName, match.repositoryData.url)
                         } else {
                             val cleanPath = plugin.filePath.replace('\\', '/')
                             val relativePath = if (cleanPath.contains("Extensions/")) {
@@ -549,7 +549,7 @@ object UltimaBackupUtils {
                             File(context.filesDir, relativePath)
                         }
 
-                        val targetUrl = match?.second?.url ?: plugin.url
+                        val targetUrl = match?.plugin?.url ?: plugin.url
 
                         if (localFile.exists() && localFile.length() > 0) {
                             Triple(plugin.copy(filePath = localFile.absolutePath), false, false)

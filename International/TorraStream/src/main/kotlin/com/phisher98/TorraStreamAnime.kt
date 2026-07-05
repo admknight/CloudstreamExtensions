@@ -371,6 +371,7 @@ open class TorraStreamAnime(private val sharedPref: SharedPreferences) : MainAPI
         }
     }
 
+
     data class LinkData(
         @param:JsonProperty("simklId") val simklId: Int? = null,
         @param:JsonProperty("traktId") val traktId: Int? = null,

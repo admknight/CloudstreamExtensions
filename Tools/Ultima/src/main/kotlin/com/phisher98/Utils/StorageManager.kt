@@ -24,11 +24,6 @@ object UltimaStorageManager {
             setKey("ULTIMA_EXTENSIONS_LIST", value)
         }
 
-    var currentMetaProviders: Array<Pair<String, Boolean>>
-        get() = listMetaProviders()
-        set(value) {
-            setKey("ULTIMA_CURRENT_META_PROVIDERS", value)
-        }
 
     var currentMediaProviders: Array<MediaProviderState>
         get() = listMediaProviders()
@@ -86,7 +81,6 @@ object UltimaStorageManager {
                         "ULTIMA_PROVIDER_LIST", // old key
                         "ULTIMA_EXT_NAME_ON_HOME",
                         "ULTIMA_EXTENSIONS_LIST",
-                        "ULTIMA_CURRENT_META_PROVIDERS",
                         "ULTIMA_CURRENT_MEDIA_PROVIDERS",
                         "ULTIMA_APP_SETTINGS_SYNC_CREDS",
                         "ULTIMA_LAST_LOCAL_SYNC_TIME",
@@ -126,22 +120,6 @@ object UltimaStorageManager {
     }
 
 
-    private fun listMetaProviders(): Array<Pair<String, Boolean>> {
-        val currentProviders = UltimaMetaProviderUtils.metaProviders
-        val storedProviders = getKey<Array<Pair<String, Boolean>>>("ULTIMA_CURRENT_META_PROVIDERS")
-            ?: return currentProviders
-
-        val currentNames = currentProviders.map { it.first }.sorted()
-        val storedNames = storedProviders.map { it.first }.sorted()
-
-        // If the names match (ignoring order), use the stored version
-        if (currentNames == storedNames) return storedProviders
-
-        // Merge stored flags if available, otherwise use default
-        return currentProviders.map { provider ->
-            storedProviders.find { it.first == provider.first } ?: provider
-        }.toTypedArray()
-    }
 
 
     private fun listMediaProviders(): Array<MediaProviderState> {

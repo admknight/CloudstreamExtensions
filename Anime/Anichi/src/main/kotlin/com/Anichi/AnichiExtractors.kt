@@ -50,6 +50,11 @@ import javax.crypto.spec.SecretKeySpec
 
 object AnichiExtractors : Anichi() {
 
+    /**
+     * Opens [AnichiTurnstileDialog] which loads [url] (the episode page) in a WebView,
+     * intercepts the site's POST to api.allanime.day, and returns the raw API response body
+     * (containing `tobeparsed` or `sourceUrls`), or null on timeout / user dismissal.
+     */
     suspend fun showTurnstileDialogAndWait(url: String): String? =
         withContext(Dispatchers.Main) {
             suspendCancellableCoroutine { cont ->
@@ -59,12 +64,12 @@ object AnichiExtractors : Anichi() {
                     return@suspendCancellableCoroutine
                 }
                 var resumed = false
-                fun safeResume(token: String?) {
-                    if (!resumed) { resumed = true; cont.resume(token) }
+                fun safeResume(responseBody: String?) {
+                    if (!resumed) { resumed = true; cont.resume(responseBody) }
                 }
                 val dialog = AnichiTurnstileDialog(
                     targetUrl = url,
-                    onFinished = { token -> safeResume(token) }
+                    onFinished = { responseBody -> safeResume(responseBody) }
                 )
                 cont.invokeOnCancellation {
                     activity.runOnUiThread { runCatching { dialog.dismissAllowingStateLoss() } }
@@ -84,44 +89,21 @@ object AnichiExtractors : Anichi() {
 
         val responseText = try {
             val response = app.get(fullApiUrl, headers = headers)
-            if (response.code == 403 || response.code == 503 || !response.text.trim().startsWith("{")) {
-                Log.d("Anichi", "Cloudflare block detected on GET. Triggering Turnstile Dialog...")
-                val token = showTurnstileDialogAndWait("https://allmanga.to/")
-                if (token != null) {
-                    val postBody = """
-                        {
-                          "query": "                query(\n                  ${'$'}showId: String!\n                  ${'$'}translationType: VaildTranslationTypeEnumType!\n                  ${'$'}episodeString: String!\n                  ${'$'}search: SearchInput\n                ) {\n                  episode(\n                    showId: ${'$'}showId\n                    translationType: ${'$'}translationType\n                    episodeString: ${'$'}episodeString\n                    search: ${'$'}search\n                  ) {\n                    episodeString\n                    uploadDate\n                    sourceUrls\n                    thumbnail\n                    notes\n                    versionFix\n                    show{\n                      _id\n                        name\n                        englishName\n                        nativeName\n                        airedEnd\n                        thumbnail\n                        airedStart \n                        availableEpisodes\n                                    lastEpisodeInfo\n            lastEpisodeDate\n            type\n            season\n            score\n            episodeDuration\n            disqusIds\n            episodeCount\n\ndescription\nthumbnails\nstatus\naltNames\naverageScore\nrating\nbroadcastInterval\nbanner\nstudios\navailableEpisodesDetail\nnameOnlyString\ngenres\ntags\ncountryOfOrigin\ncharacterCount\nmalId\naniListId\nfranchiseKey\nfranchiseName\n                    }\n                    pageStatus{\n                         _id\nnotes\npageId\nshowId\n    views\n    likesCount\n    commentCount\n    dislikesCount\n    reviewCount\n    userScoreCount\n    userScoreTotalValue\n    userScoreAverValue\n     viewers{\n        firstViewers{\n          viewCount\n          lastWatchedDate\n          user{\n            _id\ndisplayName\npicture\nhideMe\nbrief\ncreatedAt\nbadges\nreputation\n\n          }\n          \n        }\n      recViewers{\n        viewCount\n          lastWatchedDate\n          user{\n            _id\ndisplayName\npicture\nhideMe\nbrief\ncreatedAt\nbadges\nreputation\n\n          }\n          \n       }\n    }\n    \n                    }\n                    \n                  }\n                }\n              ",
-                          "variables": {
-                            "showId": "$hash",
-                            "translationType": "$dubStatus",
-                            "episodeString": "$episode",
-                            "search": {
-                              "allowAdult": false,
-                              "allowUnknown": false
-                            }
-                          },
-                          "extensions": {
-                            "persistedQuery": {
-                              "version": 1,
-                              "sha256Hash": "$serverHash"
-                            },
-                            "captcha": {
-                              "token": "$token",
-                              "provider": "turnstile"
-                            }
-                          }
-                        }
-                    """.trimIndent()
-                    val mediaType = "application/json; charset=utf-8".toMediaTypeOrNull()
-                    val reqBody = postBody.toRequestBody(mediaType)
-                    val postHeaders = headers + mapOf("Content-Type" to "application/json")
-                    Log.d("Anichi", "Sending POST request with Turnstile token")
-                    app.post(apiUrl, headers = postHeaders, requestBody = reqBody).text
-                } else {
-                    response.text
-                }
+            val responseBody = response.text
+            val needsCaptcha = response.code == 403
+                || response.code == 503
+                || !responseBody.trim().startsWith("{")
+                || responseBody.contains("NEED_CAPTCHA")
+
+            if (needsCaptcha) {
+                Log.d("Anichi", "NEED_CAPTCHA – opening episode WebView to intercept API response…")
+                // Load the exact episode page so the site's own JS solves Turnstile + POSTs to the API
+                val episodePageUrl = "https://allmanga.to/bangumi/$hash/p-$episode-$dubStatus"
+                val interceptedResponse = showTurnstileDialogAndWait(episodePageUrl)
+                // interceptedResponse is the raw API JSON body captured from the site's fetch
+                interceptedResponse ?: return@coroutineScope
             } else {
-                response.text
+                responseBody
             }
         } catch (e: Exception) {
             e.printStackTrace()

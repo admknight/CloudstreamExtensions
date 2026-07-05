@@ -42,7 +42,7 @@
                     android:layout_marginBottom="5dp"
                     android:padding="5dp"
                     android:focusable="true"
-                    android:nextFocusDown="@id/meta_providers_img"
+                    android:nextFocusDown="@id/config_img"
                     android:nextFocusUp="@id/save" />
 
             </LinearLayout>
@@ -58,38 +58,6 @@
             android:paddingRight="2dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:text="Configure Meta Providers"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right">
-
-                <ImageView
-                    android:id="@+id/meta_providers_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:focusable="true"
-                    android:nextFocusDown="@id/config_img"
-                    android:nextFocusUp="@id/save" />
-
-            </LinearLayout>
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,7 +85,7 @@
                     android:padding="5dp"
                     android:focusable="true"
                     android:nextFocusDown="@id/reorder_img"
-                    android:nextFocusUp="@id/meta_providers_img" />
+                    android:nextFocusUp="@id/save" />
 
             </LinearLayout>
 

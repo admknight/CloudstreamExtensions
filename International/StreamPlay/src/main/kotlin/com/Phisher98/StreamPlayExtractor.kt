@@ -5,6 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.APIHolder.capitalize
+import com.lagradost.cloudstream3.Prerelease
 import com.lagradost.cloudstream3.SubtitleFile
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.USER_AGENT
@@ -202,6 +203,7 @@ object StreamPlayExtractor : StreamPlay() {
         invokeWpmovies("ZShow", url, subtitleCallback, callback, encrypt = true)
     }
 
+    @OptIn(Prerelease::class)
     private suspend fun invokeWpmovies(
         name: String? = null,
         url: String? = null,
