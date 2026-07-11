@@ -1,12 +1,13 @@
 import org.jetbrains.kotlin.konan.properties.Properties
 
-version = 464
+version = 466
 android {
     defaultConfig {
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "SIMKL_API", "\"\"")
         buildConfigField("String", "TMDB_KEY", "\"\"")
         buildConfigField("String", "CC_COOKIE", "\"\"")
+        buildConfigField("String", "CASTLE_KEY", "\"\"")
     }
 }
 
