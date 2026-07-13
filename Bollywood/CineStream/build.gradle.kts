@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.konan.properties.Properties
 
-version = 468
+version = 469
 android {
     defaultConfig {
         android.buildFeatures.buildConfig=true
@@ -8,6 +8,10 @@ android {
         buildConfigField("String", "TMDB_KEY", "\"\"")
         buildConfigField("String", "CC_COOKIE", "\"\"")
         buildConfigField("String", "CASTLE_KEY", "\"\"")
+
+        buildConfigField("String", "MOVIEBLAST_TOKEN", "\"\"")
+        buildConfigField("String", "MOVIEBLAST_API", "\"\"")
+        buildConfigField("String", "MOVIEBLAST_KEY", "\"\"")
     }
 }
 
