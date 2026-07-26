@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.konan.properties.Properties
 
-version = 475
+version = 476
 android {
     defaultConfig {
         android.buildFeatures.buildConfig=true
@@ -11,6 +11,7 @@ android {
         buildConfigField("String", "MOVIEBLAST_TOKEN", "\"\"")
         buildConfigField("String", "MOVIEBLAST_API", "\"\"")
         buildConfigField("String", "MOVIEBLAST_KEY", "\"\"")
+        buildConfigField("String", "NETMIRROR_TOKEN", "\"\"")
     }
 }
 
