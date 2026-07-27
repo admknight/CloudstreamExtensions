@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.konan.properties.Properties
 
-version = 476
+version = 477
 android {
     defaultConfig {
         android.buildFeatures.buildConfig=true
