@@ -43,6 +43,14 @@ class NetflixMirrorProvider : MainAPI() {
         "X-Requested-With" to "XMLHttpRequest"
     )
 
+    private val net27Url = "https://net27.cc"
+    private val net27Referer = "https://videodownloader.site/"
+    private val net27Headers = mapOf(
+        "Accept" to "application/json",
+        "Referer" to net27Referer,
+        "User-Agent" to "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+    )
+
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse? {
         cookie_value = if (cookie_value.isEmpty()) bypass(newUrl) else cookie_value
         val cookies = mapOf("t_hash_t" to cookie_value, "ott" to "nf", "hd" to "on")
@@ -101,15 +109,16 @@ class NetflixMirrorProvider : MainAPI() {
         val title = data.title
         val episodes = arrayListOf<NetmirrorEpisode>()
         val isMovie = data.episodes.isEmpty() || data.episodes.first() == null
+        val tmdbId = data.tmdb_id ?: resolveTmdbId(title, data.year, isMovie)
 
         if (isMovie) {
-            episodes.add(newEpisode(LoadData(title, id)) {
+            episodes.add(newEpisode(LoadData(title, id, tmdbId)) {
                 name = title
             })
         } else {
             data.episodes.filterNotNull().mapTo(episodes) {
                 newEpisode(LoadData(
-                    title, it.id,
+                    title, it.id, tmdbId,
                     it.s.replace("S", "").toIntOrNull(),
                     it.ep.replace("E", "").toIntOrNull()
                 )) {
@@ -121,10 +130,10 @@ class NetflixMirrorProvider : MainAPI() {
                 }
             }
             if (data.nextPageShow == 1) {
-                episodes.addAll(getEpisodes(title, url, data.nextPageSeason!!, 2))
+                episodes.addAll(getEpisodes(title, url, data.nextPageSeason!!, 2, tmdbId))
             }
             data.season?.dropLast(1)?.amap {
-                episodes.addAll(getEpisodes(title, url, it.id, 1))
+                episodes.addAll(getEpisodes(title, url, it.id, 1, tmdbId))
             }
         }
 
@@ -148,7 +157,7 @@ class NetflixMirrorProvider : MainAPI() {
     }
 
     private suspend fun getEpisodes(
-        title: String, eid: String, sid: String, page: Int
+        title: String, eid: String, sid: String, page: Int, tmdbId: String?
     ): List<NetmirrorEpisode> {
         val episodes = arrayListOf<NetmirrorEpisode>()
         val cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
@@ -162,7 +171,7 @@ class NetflixMirrorProvider : MainAPI() {
             ).parsed<EpisodesData>()
             data.episodes?.mapTo(episodes) {
                 newEpisode(LoadData(
-                    title, it.id,
+                    title, it.id, tmdbId,
                     it.s.replace("S", "").toIntOrNull(),
                     it.ep.replace("E", "").toIntOrNull()
                 )) {
@@ -186,24 +195,61 @@ class NetflixMirrorProvider : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val loadData = parseJson<LoadData>(data)
-        val apiBase = resolveApiUrl()
-        val response = app.get(
-            "$apiBase/newtv/player.php?id=${loadData.id}",
-            headers = buildNewTvHeaders("nf", mapOf("Usertoken" to ""))
-        ).parsed<NewTvPlayerResponse>()
+        val tmdbId = loadData.tmdbId ?: run {
+            Log.e("NetflixMirror", "loadLinks aborted: no tmdbId for '${loadData.title}' (id=${loadData.id})")
+            return false
+        }
+        val isMovie = loadData.season == null
 
-        if (response.status != "ok" || response.video_link.isNullOrBlank()) {
-            Log.e("NetflixMirror", "loadLinks failed for '${loadData.title}' (id=${loadData.id}): status='${response.status}'")
+        val embedUrl = if (isMovie) {
+            "$net27Url/api/embed-tmdb/$tmdbId"
+        } else {
+            "$net27Url/api/embed-tmdb/$tmdbId?type=tv&s=${loadData.season}&e=${loadData.episode ?: 1}"
+        }
+
+        val response = try {
+            app.get(embedUrl, headers = net27Headers).parsed<Net27Response>()
+        } catch (e: Exception) {
+            Log.e("NetflixMirror", "embed-tmdb request failed for tmdbId=$tmdbId: ${e.message}")
             return false
         }
 
-        callback.invoke(
-            newExtractorLink(name, name, response.video_link, type = ExtractorLinkType.M3U8) {
-                this.referer = response.referer ?: apiBase
-            }
-        )
+        if (response.ok != true) {
+            Log.e("NetflixMirror", "embed-tmdb returned not-ok for tmdbId=$tmdbId")
+            return false
+        }
 
-        return true
+        var found = false
+
+        response.streams?.forEach { stream ->
+            callback.invoke(
+                newExtractorLink(name, "$name ${stream.resolution}p", stream.url, type = ExtractorLinkType.VIDEO) {
+                    this.referer = net27Referer
+                    this.quality = stream.resolution
+                }
+            )
+            found = true
+        }
+
+        if (response.streams.isNullOrEmpty() && !response.mp4.isNullOrBlank()) {
+            callback.invoke(
+                newExtractorLink(name, name, response.mp4, type = ExtractorLinkType.VIDEO) {
+                    this.referer = net27Referer
+                    this.quality = response.resolution?.toIntOrNull() ?: Qualities.Unknown.value
+                }
+            )
+            found = true
+        }
+
+        response.captions?.forEach { caption ->
+            subtitleCallback.invoke(SubtitleFile(caption.name, caption.url))
+        }
+
+        if (!found) {
+            Log.e("NetflixMirror", "embed-tmdb had no playable streams for tmdbId=$tmdbId")
+        }
+
+        return found
     }
 
     @Suppress("ObjectLiteralToLambda")
@@ -211,13 +257,10 @@ class NetflixMirrorProvider : MainAPI() {
         return object : Interceptor {
             override fun intercept(chain: Interceptor.Chain): Response {
                 val request = chain.request()
-                if (request.url.toString().contains(".m3u8")) {
-                    val newRequest = request.newBuilder()
-                        .header("Cookie", "hd=on")
-                        .build()
-                    return chain.proceed(newRequest)
-                }
-                return chain.proceed(request)
+                val newRequest = request.newBuilder()
+                    .header("Referer", net27Referer)
+                    .build()
+                return chain.proceed(newRequest)
             }
         }
     }
@@ -227,7 +270,27 @@ class NetflixMirrorProvider : MainAPI() {
     data class LoadData(
         val title: String,
         val id: String,
+        val tmdbId: String? = null,
         val season: Int? = null,
         val episode: Int? = null
+    )
+
+    data class Net27Response(
+        val ok: Boolean? = null,
+        val mp4: String? = null,
+        val resolution: String? = null,
+        val streams: List<Net27Stream>? = null,
+        val captions: List<Net27Caption>? = null
+    )
+
+    data class Net27Stream(
+        val url: String,
+        val resolution: Int
+    )
+
+    data class Net27Caption(
+        val lang: String,
+        val name: String,
+        val url: String
     )
 }

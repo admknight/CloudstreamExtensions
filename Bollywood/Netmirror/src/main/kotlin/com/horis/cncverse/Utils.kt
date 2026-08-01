@@ -224,3 +224,74 @@ data class NewTvPlayerResponse(
     val video_link: String? = null,
     val referer: String? = null
 )
+
+// --- TMDB ID resolver ---
+// net27.cc's embed-tmdb API requires a real TMDB ID, but post.php doesn't
+// return one. Resolve it by title/year against TMDB's public search API,
+// cached in memory to avoid repeat lookups.
+
+private const val TMDB_READ_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMjRkMDU1NGUwZGE4NjdhZGMwN2NiMTlmNDExYTBlYyIsIm5iZiI6MTc0ODI0MDk5MS45MzcsInN1YiI6IjY4MzQwYTVmNWY2NDcwNTNlNzA1NTIzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RRXStaFK8cRX1N26g69Qtl4GzmRS3Ebc0ygec1_kVCc"
+private val tmdbIdCache = mutableMapOf<String, String?>()
+
+suspend fun resolveTmdbId(title: String, year: String?, isMovie: Boolean): String? {
+    val cacheKey = "$title|$year|$isMovie"
+    if (tmdbIdCache.containsKey(cacheKey)) return tmdbIdCache[cacheKey]
+
+    val mediaType = if (isMovie) "movie" else "tv"
+    val result = try {
+        val url = "https://api.themoviedb.org/3/search/$mediaType" +
+            "?query=${java.net.URLEncoder.encode(title, "UTF-8")}"
+
+        val rawText = app.get(
+            url,
+            headers = mapOf(
+                "Authorization" to "Bearer $TMDB_READ_TOKEN",
+                "Accept" to "application/json"
+            )
+        ).text
+
+        val parsed = try { tryParseJson<TmdbSearchResponse>(rawText) } catch (_: Exception) { null }
+
+        when {
+            parsed == null -> {
+                Log.e("NetflixMirror", "TMDB response unparseable for title='$title': $rawText")
+                null
+            }
+            parsed.success == false -> {
+                Log.e("NetflixMirror", "TMDB API error for title='$title': ${parsed.status_message}")
+                null
+            }
+            else -> {
+                val candidates = parsed.results.orEmpty()
+                if (candidates.isEmpty()) {
+                    Log.e("NetflixMirror", "TMDB found zero results for title='$title' type='$mediaType'")
+                    null
+                } else {
+                    val match = candidates.firstOrNull { candidate ->
+                        val dateStr = if (isMovie) candidate.release_date else candidate.first_air_date
+                        !year.isNullOrBlank() && dateStr?.take(4) == year
+                    } ?: candidates.first()
+                    match.id?.toString()
+                }
+            }
+        }
+    } catch (e: Exception) {
+        Log.e("NetflixMirror", "TMDB lookup threw for title='$title': ${e.message}")
+        null
+    }
+
+    tmdbIdCache[cacheKey] = result
+    return result
+}
+
+data class TmdbSearchResponse(
+    val results: List<TmdbSearchResult>? = null,
+    val success: Boolean? = null,
+    val status_message: String? = null
+)
+
+data class TmdbSearchResult(
+    val id: Int? = null,
+    val release_date: String? = null,
+    val first_air_date: String? = null
+)
