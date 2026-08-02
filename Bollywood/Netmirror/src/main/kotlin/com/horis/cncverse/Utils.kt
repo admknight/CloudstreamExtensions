@@ -17,6 +17,7 @@ import com.lagradost.api.Log
 import org.json.JSONObject
 import java.util.UUID
 import okhttp3.Request
+import com.cncverse.BuildConfig
 
 val JSONParser = object : ResponseParser {
     val mapper: ObjectMapper = jacksonObjectMapper().configure(
@@ -230,7 +231,7 @@ data class NewTvPlayerResponse(
 // return one. Resolve it by title/year against TMDB's public search API,
 // cached in memory to avoid repeat lookups.
 
-private const val TMDB_READ_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMjRkMDU1NGUwZGE4NjdhZGMwN2NiMTlmNDExYTBlYyIsIm5iZiI6MTc0ODI0MDk5MS45MzcsInN1YiI6IjY4MzQwYTVmNWY2NDcwNTNlNzA1NTIzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RRXStaFK8cRX1N26g69Qtl4GzmRS3Ebc0ygec1_kVCc"
+private val TMDB_READ_TOKEN = BuildConfig.TMDB_READ_TOKEN
 private val tmdbIdCache = mutableMapOf<String, String?>()
 
 suspend fun resolveTmdbId(title: String, year: String?, isMovie: Boolean): String? {
