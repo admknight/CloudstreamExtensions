@@ -246,7 +246,13 @@ class NetflixMirrorProvider : MainAPI() {
         }
 
         if (!found) {
-            Log.e("NetflixMirror", "embed-tmdb had no playable streams for tmdbId=$tmdbId")
+            if (response.noSource == true) {
+                val message = response.error ?: "This title is still being added to NetMirror. Please check back in a bit."
+                Log.e("NetflixMirror", "embed-tmdb: no source for tmdbId=$tmdbId — $message")
+                throw ErrorLoadingException(message)
+            } else {
+                Log.e("NetflixMirror", "embed-tmdb had no playable streams for tmdbId=$tmdbId")
+            }
         }
 
         return found
@@ -280,7 +286,9 @@ class NetflixMirrorProvider : MainAPI() {
         val mp4: String? = null,
         val resolution: String? = null,
         val streams: List<Net27Stream>? = null,
-        val captions: List<Net27Caption>? = null
+        val captions: List<Net27Caption>? = null,
+        val noSource: Boolean? = null,
+        val error: String? = null
     )
 
     data class Net27Stream(
