@@ -12,293 +12,522 @@ import okhttp3.Response
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.APIHolder.unixTime
 import com.lagradost.api.Log
+import java.net.URLEncoder
+import com.lagradost.nicehttp.NiceResponse
 
 class NetflixMirrorProvider : MainAPI() {
-    companion object {
-        var context: Context? = null
+  companion object {
+    var context: Context? = null
+  }
+
+  override val supportedTypes = setOf(TvType.Movie, TvType.TvSeries)
+  override var lang = "hi"
+  override var mainUrl = "https://net52.cc"
+  private val newUrl = "https://net22.cc"
+  override var name = "Netflix"
+  override val hasMainPage = true
+  private var cookie_value = ""
+
+  private val headers = mapOf(
+    "Accept" to "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "Accept-Language" to "en-IN,en-US;q=0.9,en;q=0.8",
+    "Cache-Control" to "max-age=0",
+    "Connection" to "keep-alive",
+    "sec-ch-ua" to "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Android WebView\";v=\"144\"",
+    "sec-ch-ua-mobile" to "?0",
+    "sec-ch-ua-platform" to "\"Android\"",
+    "Sec-Fetch-Dest" to "document",
+    "Sec-Fetch-Mode" to "navigate",
+    "Sec-Fetch-Site" to "same-origin",
+    "Sec-Fetch-User" to "?1",
+    "Upgrade-Insecure-Requests" to "1",
+    "User-Agent" to "Mozilla/5.0 (Linux; Android 13; Pixel 5 Build/TQ3A.230901.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/144.0.7559.132 Safari/537.36 /OS.Gatu v3.0",
+    "X-Requested-With" to "XMLHttpRequest"
+  )
+
+  // Native playlist flow URLs
+  private val playUrl = "https://net77.cc/play.php"
+  private val playlistBaseUrl = "https://net52.cc/playlist.php"
+  private val nativeReferer = "https://net77.cc/home"
+  private val nativeOrigin = "https://net77.cc"
+
+  // Cookie store for native flow
+  private var nativeCookies = mutableMapOf<String, String>()
+
+  override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse? {
+    cookie_value = if (cookie_value.isEmpty()) bypass(newUrl) else cookie_value
+    val cookies = mapOf("t_hash_t" to cookie_value, "ott" to "nf", "hd" to "on")
+    val document = app.get(
+      "$mainUrl/mobile/home?app=1",
+      cookies = cookies,
+      headers = headers,
+      referer = "$mainUrl/mobile/home?app=1"
+    ).document
+    val items = document.select(".tray-container, #top10").map {
+      it.toHomePageList()
     }
+    return newHomePageResponse(items, false)
+  }
 
-    override val supportedTypes = setOf(TvType.Movie, TvType.TvSeries)
-    override var lang = "hi"
-    override var mainUrl = "https://net52.cc"
-    private val newUrl = "https://net22.cc"
-    override var name = "Netflix"
-    override val hasMainPage = true
-    private var cookie_value = ""
-
-    private val headers = mapOf(
-        "Accept" to "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Accept-Language" to "en-IN,en-US;q=0.9,en;q=0.8",
-        "Cache-Control" to "max-age=0",
-        "Connection" to "keep-alive",
-        "sec-ch-ua" to "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Android WebView\";v=\"144\"",
-        "sec-ch-ua-mobile" to "?0",
-        "sec-ch-ua-platform" to "\"Android\"",
-        "Sec-Fetch-Dest" to "document",
-        "Sec-Fetch-Mode" to "navigate",
-        "Sec-Fetch-Site" to "same-origin",
-        "Sec-Fetch-User" to "?1",
-        "Upgrade-Insecure-Requests" to "1",
-        "User-Agent" to "Mozilla/5.0 (Linux; Android 13; Pixel 5 Build/TQ3A.230901.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/144.0.7559.132 Safari/537.36 /OS.Gatu v3.0",
-        "X-Requested-With" to "XMLHttpRequest"
-    )
-
-    private val net27Url = "https://net27.cc"
-    private val net27Referer = "https://videodownloader.site/"
-    private val net27Headers = mapOf(
-        "Accept" to "application/json",
-        "Referer" to net27Referer,
-        "User-Agent" to "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
-    )
-
-    override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse? {
-        cookie_value = if (cookie_value.isEmpty()) bypass(newUrl) else cookie_value
-        val cookies = mapOf("t_hash_t" to cookie_value, "ott" to "nf", "hd" to "on")
-        val document = app.get(
-            "$mainUrl/mobile/home?app=1",
-            cookies = cookies,
-            headers = headers,
-            referer = "$mainUrl/mobile/home?app=1"
-        ).document
-        val items = document.select(".tray-container, #top10").map { it.toHomePageList() }
-        return newHomePageResponse(items, false)
+  private fun Element.toHomePageList(): HomePageList {
+    val name = select("h2, span").text()
+    val items = select("article, .top10-post").mapNotNull {
+      it.toSearchResult()
     }
+    return HomePageList(name, items, isHorizontalImages = false)
+  }
 
-    private fun Element.toHomePageList(): HomePageList {
-        val name = select("h2, span").text()
-        val items = select("article, .top10-post").mapNotNull { it.toSearchResult() }
-        return HomePageList(name, items, isHorizontalImages = false)
+  private fun Element.toSearchResult(): SearchResponse? {
+    val id = selectFirst("a")?.attr("data-post") ?: attr("data-post")
+    if (id.isNullOrBlank()) return null
+    return newAnimeSearchResponse("", Id(id).toJson()) {
+      posterUrl = "https://imgcdn.kim/poster/v/$id.jpg"
+      posterHeaders = mapOf("Referer" to "$mainUrl/home")
     }
+  }
 
-    private fun Element.toSearchResult(): SearchResponse? {
-        val id = selectFirst("a")?.attr("data-post") ?: attr("data-post")
-        if (id.isNullOrBlank()) return null
-        return newAnimeSearchResponse("", Id(id).toJson()) {
-            posterUrl = "https://imgcdn.kim/poster/v/$id.jpg"
-            posterHeaders = mapOf("Referer" to "$mainUrl/home")
+  override suspend fun search(query: String): List<SearchResponse> {
+    cookie_value = if (cookie_value.isEmpty()) bypass(newUrl) else cookie_value
+    val cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
+    val data = app.get(
+      "$mainUrl/mobile/search.php?s=$query&t=$unixTime",
+      referer = "$mainUrl/home",
+      cookies = cookies
+    ).parsed<SearchData>()
+    return data.searchResult.map {
+      newAnimeSearchResponse(it.t, Id(it.id).toJson()) {
+        posterUrl = "https://imgcdn.kim/poster/v/${it.id}.jpg"
+        posterHeaders = mapOf("Referer" to "$mainUrl/home")
+      }
+    }
+  }
+
+  override suspend fun load(url: String): LoadResponse? {
+    cookie_value = if (cookie_value.isEmpty()) bypass(newUrl) else cookie_value
+    val id = parseJson<Id>(url).id
+    val cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
+    val data = app.get(
+      "$mainUrl/mobile/post.php?id=$id&t=$unixTime",
+      headers,
+      referer = "$mainUrl/home",
+      cookies = cookies
+    ).parsed<PostData>()
+
+    val title = data.title
+    val episodes = arrayListOf<NetmirrorEpisode>()
+    val isMovie = data.episodes.isEmpty() || data.episodes.first() == null
+    val tmdbId = data.tmdb_id ?: resolveTmdbId(title, data.year, isMovie)
+
+    if (isMovie) {
+      episodes.add(newEpisode(LoadData(title, id, tmdbId)) {
+        name = title
+      })
+    } else {
+      data.episodes.filterNotNull().mapTo(episodes) {
+        newEpisode(LoadData(
+          title, it.id, tmdbId,
+          it.s.replace("S", "").toIntOrNull(),
+          it.ep.replace("E", "").toIntOrNull()
+        )) {
+          this.name = it.t
+          this.episode = it.ep.replace("E", "").toIntOrNull()
+          this.season = it.s.replace("S", "").toIntOrNull()
+          this.posterUrl = "https://imgcdn.kim/poster/v/150/${it.id}.jpg"
+          this.runTime = it.time.replace("m", "").toIntOrNull()
         }
+      }
+      if (data.nextPageShow == 1) {
+        episodes.addAll(getEpisodes(title, url, data.nextPageSeason!!, 2, tmdbId))
+      }
+      data.season?.dropLast(1)?.amap {
+        episodes.addAll(getEpisodes(title, url, it.id, 1, tmdbId))
+      }
     }
 
-    override suspend fun search(query: String): List<SearchResponse> {
-        cookie_value = if (cookie_value.isEmpty()) bypass(newUrl) else cookie_value
-        val cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
-        val data = app.get(
-            "$mainUrl/mobile/search.php?s=$query&t=$unixTime",
-            referer = "$mainUrl/home",
-            cookies = cookies
-        ).parsed<SearchData>()
-        return data.searchResult.map {
-            newAnimeSearchResponse(it.t, Id(it.id).toJson()) {
-                posterUrl = "https://imgcdn.kim/poster/v/${it.id}.jpg"
-                posterHeaders = mapOf("Referer" to "$mainUrl/home")
-            }
+    val cast = data.cast?.split(",")?.map {
+      it.trim()
+    }
+    ?.filter {
+      it.isNotEmpty()
+    }?.map {
+      ActorData(Actor(it))
+    }
+    val genre = data.genre?.split(",")?.map {
+      it.trim()
+    }?.filter {
+      it.isNotEmpty()
+    }
+    val type = if (isMovie) TvType.Movie else TvType.TvSeries
+
+    return newTvSeriesLoadResponse(title, url, type, episodes) {
+      posterUrl = "https://imgcdn.kim/poster/v/$id.jpg"
+      backgroundPosterUrl = "https://imgcdn.kim/poster/v/$id.jpg"
+      posterHeaders = mapOf("Referer" to "$mainUrl/home")
+      plot = data.desc
+      year = data.year.toIntOrNull()
+      tags = genre
+      actors = cast
+      this.score = Score.from10(data.match?.replace("IMDb ", ""))
+      this.duration = convertRuntimeToMinutes(data.runtime.toString())
+      this.contentRating = data.ua
+    }
+  }
+
+  private suspend fun getEpisodes(
+    title: String, eid: String, sid: String, page: Int, tmdbId: String?
+  ): List<NetmirrorEpisode> {
+    val episodes = arrayListOf<NetmirrorEpisode>()
+    val cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
+    var pg = page
+    while (true) {
+      val data = app.get(
+        "$mainUrl/mobile/episodes.php?s=$sid&series=$eid&t=$unixTime&page=$pg",
+        headers,
+        referer = "$mainUrl/home",
+        cookies = cookies
+      ).parsed<EpisodesData>()
+      data.episodes?.mapTo(episodes) {
+        newEpisode(LoadData(
+          title, it.id, tmdbId,
+          it.s.replace("S", "").toIntOrNull(),
+          it.ep.replace("E", "").toIntOrNull()
+        )) {
+          name = it.t
+          episode = it.ep.replace("E", "").toIntOrNull()
+          season = it.s.replace("S", "").toIntOrNull()
+          this.posterUrl = "https://imgcdn.kim/poster/v/150/${it.id}.jpg"
+          this.runTime = it.time.replace("m", "").toIntOrNull()
         }
+      }
+      if (data.nextPageShow == 0) break
+      pg++
+    }
+    return episodes
+  }
+
+  // Native play.php -> playlist.php flow with subtitles
+
+  override suspend fun loadLinks(
+    data: String,
+    isCasting: Boolean,
+    subtitleCallback: (SubtitleFile) -> Unit,
+    callback: (ExtractorLink) -> Unit
+  ): Boolean {
+    val loadData = parseJson<LoadData>(data)
+    val id = loadData.id
+
+    // Ensure we have fresh cookies for the native flow
+    ensureNativeCookies(id)
+
+    val playResp = try {
+      app.post(
+        playUrl,
+        data = mapOf("id" to id),
+        headers = mapOf(
+          "Accept" to "application/json, text/javascript, */*; q=0.01",
+          "Accept-Language" to "en-IN,en-US;q=0.9,en;q=0.8",
+          "Content-Type" to "application/x-www-form-urlencoded; charset=UTF-8",
+          "Origin" to nativeOrigin,
+          "Referer" to nativeReferer,
+          "X-Requested-With" to "XMLHttpRequest",
+          "User-Agent" to headers["User-Agent"]!!
+        ),
+        cookies = nativeCookies
+      ).parsed<PlayResponse>()
+    } catch (e: Exception) {
+      Log.e("NetflixMirror", "play.php failed for id=$id: ${e.message}")
+      // Fallback to old TMDB embed method
+      return loadLinksFallback(loadData, subtitleCallback, callback)
     }
 
-    override suspend fun load(url: String): LoadResponse? {
-        cookie_value = if (cookie_value.isEmpty()) bypass(newUrl) else cookie_value
-        val id = parseJson<Id>(url).id
-        val cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
-        val data = app.get(
-            "$mainUrl/mobile/post.php?id=$id&t=$unixTime",
-            headers,
-            referer = "$mainUrl/home",
-            cookies = cookies
-        ).parsed<PostData>()
+    val h = playResp.h ?: run {
+      Log.e("NetflixMirror", "play.php returned no h-token for id=$id")
+      return loadLinksFallback(loadData, subtitleCallback, callback)
+    }
 
-        val title = data.title
-        val episodes = arrayListOf<NetmirrorEpisode>()
-        val isMovie = data.episodes.isEmpty() || data.episodes.first() == null
-        val tmdbId = data.tmdb_id ?: resolveTmdbId(title, data.year, isMovie)
+    val tm = unixTime
+    val playlistUrl = buildString {
+      append(playlistBaseUrl)
+      append("?id=$id")
+      append("&t=${URLEncoder.encode(loadData.title, "UTF-8")}")
+      append("&tm=$tm")
+      append("&h=${URLEncoder.encode(h, "UTF-8")}")
+    }
 
-        if (isMovie) {
-            episodes.add(newEpisode(LoadData(title, id, tmdbId)) {
-                name = title
-            })
+    val playlist = try {
+      app.get(
+        playlistUrl,
+        headers = mapOf(
+          "Accept" to "application/json, text/javascript, */*; q=0.01",
+          "Accept-Language" to "en-IN,en-US;q=0.9,en;q=0.8",
+          "Referer" to nativeReferer,
+          "Origin" to nativeOrigin,
+          "X-Requested-With" to "XMLHttpRequest",
+          "User-Agent" to headers["User-Agent"]!!
+        ),
+        cookies = nativeCookies
+      ).parsed<PlaylistResponse>()
+    } catch (e: Exception) {
+      Log.e("NetflixMirror", "playlist.php failed for id=$id: ${e.message}")
+      return loadLinksFallback(loadData, subtitleCallback, callback)
+    }
+
+    var found = false
+
+    // Step 3: Register HLS sources with quality
+    playlist.sources?.forEach {
+      source ->
+      val streamUrl = if (source.file.startsWith("http")) {
+        source.file
+      } else {
+        "https://net52.cc${source.file}"
+      }
+
+      val quality = when {
+        source.label.contains("1080", true) -> Qualities.P1080.value
+        source.label.contains("720", true) -> Qualities.P720.value
+        source.label.contains("480", true) -> Qualities.P480.value
+        source.label.contains("360", true) -> Qualities.P360.value
+        source.label.contains("Full HD", true) -> Qualities.P1080.value
+        source.label.contains("Mid HD", true) -> Qualities.P720.value
+        source.label.contains("Low HD", true) -> Qualities.P480.value
+        else -> Qualities.Unknown.value
+      }
+
+      callback.invoke(
+        newExtractorLink(
+          name,
+          "$name ${source.label}",
+          streamUrl,
+          type = ExtractorLinkType.M3U8
+        ) {
+          this.referer = nativeReferer
+          this.quality = quality
+        }
+      )
+      found = true
+    }
+
+    // Step 4: Register subtitle tracks
+    playlist.tracks?.forEach {
+      track ->
+      if (track.kind.equals("captions", true) || track.kind.equals("subtitles", true)) {
+        val subUrl = if (track.file.startsWith("//")) {
+          "https:${track.file}"
+        } else if (!track.file.startsWith("http")) {
+          "https://subscdn.top${track.file}"
         } else {
-            data.episodes.filterNotNull().mapTo(episodes) {
-                newEpisode(LoadData(
-                    title, it.id, tmdbId,
-                    it.s.replace("S", "").toIntOrNull(),
-                    it.ep.replace("E", "").toIntOrNull()
-                )) {
-                    this.name = it.t
-                    this.episode = it.ep.replace("E", "").toIntOrNull()
-                    this.season = it.s.replace("S", "").toIntOrNull()
-                    this.posterUrl = "https://imgcdn.kim/poster/v/150/${it.id}.jpg"
-                    this.runTime = it.time.replace("m", "").toIntOrNull()
-                }
-            }
-            if (data.nextPageShow == 1) {
-                episodes.addAll(getEpisodes(title, url, data.nextPageSeason!!, 2, tmdbId))
-            }
-            data.season?.dropLast(1)?.amap {
-                episodes.addAll(getEpisodes(title, url, it.id, 1, tmdbId))
-            }
+          track.file
         }
 
-        val cast = data.cast?.split(",")?.map { it.trim() }
-            ?.filter { it.isNotEmpty() }?.map { ActorData(Actor(it)) }
-        val genre = data.genre?.split(",")?.map { it.trim() }?.filter { it.isNotEmpty() }
-        val type = if (isMovie) TvType.Movie else TvType.TvSeries
-
-        return newTvSeriesLoadResponse(title, url, type, episodes) {
-            posterUrl = "https://imgcdn.kim/poster/v/$id.jpg"
-            backgroundPosterUrl = "https://imgcdn.kim/poster/v/$id.jpg"
-            posterHeaders = mapOf("Referer" to "$mainUrl/home")
-            plot = data.desc
-            year = data.year.toIntOrNull()
-            tags = genre
-            actors = cast
-            this.score = Score.from10(data.match?.replace("IMDb ", ""))
-            this.duration = convertRuntimeToMinutes(data.runtime.toString())
-            this.contentRating = data.ua
-        }
+        subtitleCallback.invoke(
+          SubtitleFile(track.label, subUrl)
+        )
+      }
     }
 
-    private suspend fun getEpisodes(
-        title: String, eid: String, sid: String, page: Int, tmdbId: String?
-    ): List<NetmirrorEpisode> {
-        val episodes = arrayListOf<NetmirrorEpisode>()
-        val cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
-        var pg = page
-        while (true) {
-            val data = app.get(
-                "$mainUrl/mobile/episodes.php?s=$sid&series=$eid&t=$unixTime&page=$pg",
-                headers,
-                referer = "$mainUrl/home",
-                cookies = cookies
-            ).parsed<EpisodesData>()
-            data.episodes?.mapTo(episodes) {
-                newEpisode(LoadData(
-                    title, it.id, tmdbId,
-                    it.s.replace("S", "").toIntOrNull(),
-                    it.ep.replace("E", "").toIntOrNull()
-                )) {
-                    name = it.t
-                    episode = it.ep.replace("E", "").toIntOrNull()
-                    season = it.s.replace("S", "").toIntOrNull()
-                    this.posterUrl = "https://imgcdn.kim/epimg/150/${it.id}.jpg"
-                    this.runTime = it.time.replace("m", "").toIntOrNull()
-                }
-            }
-            if (data.nextPageShow == 0) break
-            pg++
-        }
-        return episodes
+    // If native flow found nothing, try fallback
+    if (!found) {
+      Log.w("NetflixMirror", "Native flow returned no sources for id=$id, trying fallback")
+      return loadLinksFallback(loadData, subtitleCallback, callback)
     }
 
-    override suspend fun loadLinks(
-        data: String,
-        isCasting: Boolean,
-        subtitleCallback: (SubtitleFile) -> Unit,
-        callback: (ExtractorLink) -> Unit
-    ): Boolean {
-        val loadData = parseJson<LoadData>(data)
-        val tmdbId = loadData.tmdbId ?: run {
-            Log.e("NetflixMirror", "loadLinks aborted: no tmdbId for '${loadData.title}' (id=${loadData.id})")
-            return false
-        }
-        val isMovie = loadData.season == null
+    return true
+  }
 
-        val embedUrl = if (isMovie) {
-            "$net27Url/api/embed-tmdb/$tmdbId"
-        } else {
-            "$net27Url/api/embed-tmdb/$tmdbId?type=tv&s=${loadData.season}&e=${loadData.episode ?: 1}"
-        }
+  // Fallback: TMDB embed API
+  private val net27Url = "https://net27.cc"
+  private val net27Referer = "https://videodownloader.site/"
+  private val net27Headers = mapOf(
+    "Accept" to "application/json",
+    "Referer" to net27Referer,
+    "User-Agent" to "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+  )
 
-        val response = try {
-            app.get(embedUrl, headers = net27Headers).parsed<Net27Response>()
-        } catch (e: Exception) {
-            Log.e("NetflixMirror", "embed-tmdb request failed for tmdbId=$tmdbId: ${e.message}")
-            return false
-        }
+  private suspend fun loadLinksFallback(
+    loadData: LoadData,
+    subtitleCallback: (SubtitleFile) -> Unit,
+    callback: (ExtractorLink) -> Unit
+  ): Boolean {
+    val tmdbId = loadData.tmdbId ?: run {
+      Log.e("NetflixMirror", "Fallback aborted: no tmdbId for '${loadData.title}'")
+      return false
+    }
+    val isMovie = loadData.season == null
 
-        if (response.ok != true) {
-            Log.e("NetflixMirror", "embed-tmdb returned not-ok for tmdbId=$tmdbId")
-            return false
-        }
-
-        var found = false
-
-        response.streams?.forEach { stream ->
-            callback.invoke(
-                newExtractorLink(name, "$name ${stream.resolution}p", stream.url, type = ExtractorLinkType.VIDEO) {
-                    this.referer = net27Referer
-                    this.quality = stream.resolution
-                }
-            )
-            found = true
-        }
-
-        if (response.streams.isNullOrEmpty() && !response.mp4.isNullOrBlank()) {
-            callback.invoke(
-                newExtractorLink(name, name, response.mp4, type = ExtractorLinkType.VIDEO) {
-                    this.referer = net27Referer
-                    this.quality = response.resolution?.toIntOrNull() ?: Qualities.Unknown.value
-                }
-            )
-            found = true
-        }
-
-        response.captions?.forEach { caption ->
-            subtitleCallback.invoke(SubtitleFile(caption.name, caption.url))
-        }
-
-        if (!found) {
-            if (response.noSource == true) {
-                val message = response.error ?: "This title is still being added to NetMirror. Please check back in a bit."
-                Log.e("NetflixMirror", "embed-tmdb: no source for tmdbId=$tmdbId — $message")
-                throw ErrorLoadingException(message)
-            } else {
-                Log.e("NetflixMirror", "embed-tmdb had no playable streams for tmdbId=$tmdbId")
-            }
-        }
-
-        return found
+    val embedUrl = if (isMovie) {
+      "$net27Url/api/embed-tmdb/$tmdbId"
+    } else {
+      "$net27Url/api/embed-tmdb/$tmdbId?type=tv&s=${loadData.season}&e=${loadData.episode ?: 1}"
     }
 
-    @Suppress("ObjectLiteralToLambda")
-    override fun getVideoInterceptor(extractorLink: ExtractorLink): Interceptor? {
-        return object : Interceptor {
-            override fun intercept(chain: Interceptor.Chain): Response {
-                val request = chain.request()
-                val newRequest = request.newBuilder()
-                    .header("Referer", net27Referer)
-                    .build()
-                return chain.proceed(newRequest)
-            }
-        }
+    val response = try {
+      app.get(embedUrl, headers = net27Headers).parsed<Net27Response>()
+    } catch (e: Exception) {
+      Log.e("NetflixMirror", "embed-tmdb request failed: ${e.message}")
+      return false
     }
 
-    data class Id(val id: String)
+    if (response.ok != true) {
+      Log.e("NetflixMirror", "embed-tmdb returned not-ok")
+      return false
+    }
 
-    data class LoadData(
-        val title: String,
-        val id: String,
-        val tmdbId: String? = null,
-        val season: Int? = null,
-        val episode: Int? = null
-    )
+    var found = false
 
-    data class Net27Response(
-        val ok: Boolean? = null,
-        val mp4: String? = null,
-        val resolution: String? = null,
-        val streams: List<Net27Stream>? = null,
-        val captions: List<Net27Caption>? = null,
-        val noSource: Boolean? = null,
-        val error: String? = null
-    )
+    response.streams?.forEach {
+      stream ->
+      callback.invoke(
+        newExtractorLink(name, "$name ${stream.resolution}p", stream.url, type = ExtractorLinkType.VIDEO) {
+          this.referer = net27Referer
+          this.quality = stream.resolution
+        }
+      )
+      found = true
+    }
 
-    data class Net27Stream(
-        val url: String,
-        val resolution: Int
-    )
+    if (response.streams.isNullOrEmpty() && !response.mp4.isNullOrBlank()) {
+      callback.invoke(
+        newExtractorLink(name, name, response.mp4, type = ExtractorLinkType.VIDEO) {
+          this.referer = net27Referer
+          this.quality = response.resolution?.toIntOrNull() ?: Qualities.Unknown.value
+        }
+      )
+      found = true
+    }
 
-    data class Net27Caption(
-        val lang: String,
-        val name: String,
-        val url: String
-    )
+    response.captions?.forEach {
+      caption ->
+      subtitleCallback.invoke(SubtitleFile(caption.name, caption.url))
+    }
+
+    if (!found && response.noSource == true) {
+      val message = response.error ?: "This title is still being added. Check back later."
+      throw ErrorLoadingException(message)
+    }
+
+    return found
+  }
+
+  // Cookie management for native flow
+  private suspend fun ensureNativeCookies(contentId: String) {
+    // If we already have the essential cookies, skip
+    if (nativeCookies.containsKey("user_token") &&
+      nativeCookies.containsKey("t_hash_p") &&
+      nativeCookies.containsKey("cf_clearance")
+    ) {
+      return
+    }
+
+    // Warm up cookies by visiting the home page
+    // This should trigger Cloudflare challenge and set initial cookies
+    try {
+      val homeResp = app.get(
+        "$nativeOrigin/home",
+        headers = mapOf(
+          "User-Agent" to headers["User-Agent"]!!,
+          "Accept" to "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "Accept-Language" to "en-IN,en-US;q=0.9,en;q=0.8"
+        )
+      )
+
+      // Extract cookies from response
+      extractCookiesFromResponse(homeResp)
+
+      // Also try to get the SE cookie by visiting the content page
+      val postResp = app.get(
+        "$mainUrl/mobile/post.php?id=$contentId&t=$unixTime",
+        headers = headers,
+        referer = "$mainUrl/home",
+        cookies = mapOf("t_hash_t" to cookie_value, "hd" to "on", "ott" to "nf")
+      )
+      extractCookiesFromResponse(postResp)
+
+    } catch (e: Exception) {
+      Log.w("NetflixMirror", "Cookie warmup failed: ${e.message}")
+    }
+  }
+
+  private fun extractCookiesFromResponse(response: NiceResponse) {
+    response.headers.values("Set-Cookie").forEach { cookieStr ->
+        val keyValue = cookieStr.split(";").firstOrNull()?.trim() ?: return@forEach
+        val parts = keyValue.split("=", limit = 2)
+        if (parts.size == 2) {
+            nativeCookies[parts[0]] = parts[1]
+        }
+    }
+}
+
+  @Suppress("ObjectLiteralToLambda")
+  override fun getVideoInterceptor(extractorLink: ExtractorLink): Interceptor? {
+    return object : Interceptor {
+      override fun intercept(chain: Interceptor.Chain): Response {
+        val request = chain.request()
+        val newRequest = request.newBuilder()
+        .header("Referer", nativeReferer)
+        .header("Origin", nativeOrigin)
+        .build()
+        return chain.proceed(newRequest)
+      }
+    }
+  }
+
+
+
+  // Data classes
+  data class Id(val id: String)
+
+  data class LoadData(
+    val title: String,
+    val id: String,
+    val tmdbId: String? = null,
+    val season: Int? = null,
+    val episode: Int? = null
+  )
+
+  // Native flow responses
+  data class PlayResponse(val h: String? = null)
+
+  data class PlaylistResponse(
+    val title: String? = null,
+    val image2: String? = null,
+    val sources: List<PlaylistSource>? = null,
+    val tracks: List<PlaylistTrack>? = null
+  )
+
+  data class PlaylistSource(
+    val file: String,
+    val label: String,
+    val type: String,
+    val default: String? = null
+  )
+
+  data class PlaylistTrack(
+    val kind: String,
+    val file: String,
+    val label: String,
+    val language: String? = null
+  )
+
+  // Fallback (TMDB embed) responses
+  data class Net27Response(
+    val ok: Boolean? = null,
+    val mp4: String? = null,
+    val resolution: String? = null,
+    val streams: List<Net27Stream>? = null,
+    val captions: List<Net27Caption>? = null,
+    val noSource: Boolean? = null,
+    val error: String? = null
+  )
+
+  data class Net27Stream(
+    val url: String,
+    val resolution: Int
+  )
+
+  data class Net27Caption(
+    val lang: String,
+    val name: String,
+    val url: String
+  )
 }
