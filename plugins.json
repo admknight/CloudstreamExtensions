@@ -38,7 +38,7 @@
     {
         "name": "Moviesmod",
         "internalName": "Moviesmod",
-        "version": 32,
+        "version": 33,
         "description": "Includes Topmovies",
         "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
         "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/Moviesmod.cs3",
