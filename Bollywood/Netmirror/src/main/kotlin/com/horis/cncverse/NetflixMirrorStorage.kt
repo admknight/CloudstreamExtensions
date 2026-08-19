@@ -32,4 +32,25 @@ object NetflixMirrorStorage {
         editor.remove("nf_cookie_timestamp")
         editor.apply()
     }
+
+    fun saveApiBase(url: String) {
+        val editor = prefs.edit()
+        editor.putString("nf_api_base", url)
+        editor.putLong("nf_api_base_timestamp", System.currentTimeMillis())
+        editor.apply()
+    }
+
+    fun getApiBase(): Pair<String?, Long> {
+        return Pair(
+            prefs.getString("nf_api_base", null),
+            prefs.getLong("nf_api_base_timestamp", 0L)
+        )
+    }
+
+    fun clearApiBase() {
+        val editor = prefs.edit()
+        editor.remove("nf_api_base")
+        editor.remove("nf_api_base_timestamp")
+        editor.apply()
+    }
 }

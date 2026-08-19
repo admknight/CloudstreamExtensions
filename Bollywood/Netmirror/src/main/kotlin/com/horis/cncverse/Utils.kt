@@ -12,6 +12,8 @@ import com.lagradost.nicehttp.ResponseParser
 import kotlin.reflect.KClass
 import okhttp3.FormBody
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import android.content.Context
 import com.lagradost.api.Log
 import org.json.JSONObject
@@ -127,7 +129,7 @@ suspend fun bypass(mainUrl: String): String {
             }
             .build()
         client.newCall(request).execute().use { response ->
-            response.headers("Set-Cookie")
+            response.headers.values("Set-Cookie")
                 .firstOrNull { it.startsWith("t_hash_t=") }
                 ?.substringAfter("t_hash_t=")
                 ?.substringBefore(";")
@@ -188,16 +190,43 @@ fun decodeBase64(value: String): String {
 
 private var resolvedApiUrl: String = ""
 
+/**
+ * Spaces out requests to the NetMirror backends so a burst of playback
+ * attempts doesn't trip the server's "Too Many Requests" anti-abuse block.
+ */
+object NetmirrorThrottler {
+    private const val MIN_INTERVAL_MS = 1200L
+    private var lastRequest = 0L
+    private val mutex = Mutex()
+
+    suspend fun throttle() {
+        mutex.withLock {
+            val now = System.currentTimeMillis()
+            val wait = MIN_INTERVAL_MS - (now - lastRequest)
+            if (wait > 0) delay(wait)
+            lastRequest = System.currentTimeMillis()
+        }
+    }
+}
+
 suspend fun resolveApiUrl(): String {
     if (resolvedApiUrl.isNotBlank()) return resolvedApiUrl
+    // Persistent cache (24 h) — avoids re-resolving on every app restart.
+    val (saved, savedTs) = NetflixMirrorStorage.getApiBase()
+    if (!saved.isNullOrBlank() && System.currentTimeMillis() - savedTs < 86_400_000L) {
+        resolvedApiUrl = saved
+        return resolvedApiUrl
+    }
     for (encoded in newTvDomains) {
         val base = decodeBase64(encoded).trimEnd('/')
         try {
+            NetmirrorThrottler.throttle()
             val response = app.get("$base/checknewtv.php", headers = newTvBaseHeaders)
                 .parsed<NewTvTokenResponse>()
             val tokenHash = response.token_hash
             if (!tokenHash.isNullOrBlank()) {
                 resolvedApiUrl = decodeBase64(tokenHash).trimEnd('/')
+                NetflixMirrorStorage.saveApiBase(resolvedApiUrl)
                 return resolvedApiUrl
             }
         } catch (_: Exception) {

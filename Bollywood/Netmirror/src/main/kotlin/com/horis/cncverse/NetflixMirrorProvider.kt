@@ -23,7 +23,7 @@ class NetflixMirrorProvider : MainAPI() {
   override val supportedTypes = setOf(TvType.Movie, TvType.TvSeries)
   override var lang = "hi"
   override var mainUrl = "https://net52.cc"
-  private val newUrl = "https://net22.cc"
+  private val newUrl = "https://net52.cc"
   override var name = "Netflix"
   override val hasMainPage = true
   private var cookie_value = ""
@@ -216,10 +216,36 @@ class NetflixMirrorProvider : MainAPI() {
     val loadData = parseJson<LoadData>(data)
     val id = loadData.id
 
+    // NewTV API flow (same as HotStar/Disney/Prime providers) — primary.
+    // No Cloudflare cookie wall: resolves the API base via mobiledetect.*
+    // domains -> checknewtv.php -> token_hash, then asks for the HLS link.
+    try {
+      NetmirrorThrottler.throttle()
+      val apiBase = resolveApiUrl()
+      val newTvResp = app.get(
+        "$apiBase/newtv/player.php?id=$id",
+        headers = buildNewTvHeaders("nf")
+      ).parsed<NewTvPlayerResponse>()
+
+      if (!newTvResp.video_link.isNullOrBlank()) {
+        Log.i("NetflixMirror", "NewTV flow ok for id=$id")
+        callback.invoke(
+          newExtractorLink(name, name, newTvResp.video_link, type = ExtractorLinkType.M3U8) {
+            this.referer = newTvResp.referer ?: apiBase
+          }
+        )
+        return true
+      }
+      Log.w("NetflixMirror", "NewTV flow empty for id=$id, falling back")
+    } catch (e: Exception) {
+      Log.w("NetflixMirror", "NewTV flow failed for id=$id: ${e.message}")
+    }
+
     // Ensure we have fresh cookies for the native flow
     ensureNativeCookies(id)
 
     val playResp = try {
+      NetmirrorThrottler.throttle()
       app.post(
         playUrl,
         data = mapOf("id" to id),
@@ -255,7 +281,8 @@ class NetflixMirrorProvider : MainAPI() {
     }
 
     val playlist = try {
-      app.get(
+      NetmirrorThrottler.throttle()
+      val playlistText = app.get(
         playlistUrl,
         headers = mapOf(
           "Accept" to "application/json, text/javascript, */*; q=0.01",
@@ -266,9 +293,21 @@ class NetflixMirrorProvider : MainAPI() {
           "User-Agent" to headers["User-Agent"]!!
         ),
         cookies = nativeCookies
-      ).parsed<PlaylistResponse>()
+      ).text.trim()
+      // Server sometimes wraps the playlist in a JSON array ([{...}]) and
+      // sometimes returns the object directly — handle both.
+      if (playlistText.startsWith("[")) {
+        parseJson<List<PlaylistResponse>>(playlistText).firstOrNull()
+      } else {
+        parseJson<PlaylistResponse>(playlistText)
+      }
     } catch (e: Exception) {
       Log.e("NetflixMirror", "playlist.php failed for id=$id: ${e.message}")
+      return loadLinksFallback(loadData, subtitleCallback, callback)
+    }
+
+    if (playlist == null) {
+      Log.e("NetflixMirror", "playlist.php returned empty for id=$id")
       return loadLinksFallback(loadData, subtitleCallback, callback)
     }
 
@@ -463,11 +502,26 @@ class NetflixMirrorProvider : MainAPI() {
     return object : Interceptor {
       override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
-        val newRequest = request.newBuilder()
-        .header("Referer", nativeReferer)
-        .header("Origin", nativeOrigin)
-        .build()
-        return chain.proceed(newRequest)
+        val isNativeHost = request.url.host.contains("net52") ||
+          request.url.host.contains("net77") ||
+          request.url.host.contains("net22") ||
+          request.url.host.contains("net27")
+        // Use the link's own referer (fallback flow needs videodownloader.site),
+        // defaulting to the native referer when unset.
+        val referer = extractorLink.referer?.takeIf { it.isNotBlank() } ?: nativeReferer
+        val builder = request.newBuilder()
+          .header("Referer", referer)
+        if (isNativeHost) {
+          builder.header("Origin", nativeOrigin)
+          // The native CDN requires the hotlink/cf cookies collected during warmup.
+          val cookies = mutableMapOf<String, String>()
+          if (cookie_value.isNotEmpty()) cookies["t_hash_t"] = cookie_value
+          cookies.putAll(nativeCookies)
+          if (cookies.isNotEmpty()) {
+            builder.header("Cookie", cookies.entries.joinToString("; ") { "${it.key}=${it.value}" })
+          }
+        }
+        return chain.proceed(builder.build())
       }
     }
   }
