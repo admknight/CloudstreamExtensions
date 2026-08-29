@@ -4,7 +4,7 @@ This branch contains the compiled `.cs3` files and the live index.
 
 ### 📊 Status
 * **Total Plugins Live:** `6` / 155
-* **Last Update:** `2026-08-28 10:15:11` UTC
+* **Last Update:** `2026-08-29 06:13:31` UTC
 * **Repo URL:** `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json` 
 
 ---
