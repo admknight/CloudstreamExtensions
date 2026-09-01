@@ -6,12 +6,10 @@ android {
         android.buildFeatures.buildConfig=true
         buildConfigField("String", "SIMKL_API", "\"\"")
         buildConfigField("String", "TMDB_KEY", "\"\"")
-        buildConfigField("String", "CC_COOKIE", "\"\"")
         buildConfigField("String", "CASTLE_KEY", "\"\"")
         buildConfigField("String", "MOVIEBLAST_TOKEN", "\"\"")
         buildConfigField("String", "MOVIEBLAST_API", "\"\"")
         buildConfigField("String", "MOVIEBLAST_KEY", "\"\"")
-        buildConfigField("String", "NETMIRROR_TOKEN", "\"\"")
     }
 }
 
