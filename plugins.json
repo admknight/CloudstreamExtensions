@@ -54,24 +54,6 @@
         "apiVersion": 1
     },
     {
-        "name": "OnlineMoviesHinditProvider",
-        "internalName": "OnlineMoviesHinditProvider",
-        "version": 6,
-        "description": "Use VPN",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/OnlineMoviesHinditProvider.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "hi",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/OnlineMoviesHinditProvider/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
         "name": "VegaMovies",
         "internalName": "VegaMovies",
         "version": 82,
@@ -86,24 +68,6 @@
         ],
         "language": "hi",
         "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Bollywood/VegaMovies/icon.png",
-        "status": 1,
-        "apiVersion": 1
-    },
-    {
-        "name": "GDIndex",
-        "internalName": "GDIndex",
-        "version": 6,
-        "description": "Lorem Ipsum",
-        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/GDIndex.cs3",
-        "authors": [
-            "Adam Knight"
-        ],
-        "tvTypes": [
-            "Others"
-        ],
-        "language": "en",
-        "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/Tools/GDIndex/icon.png",
         "status": 1,
         "apiVersion": 1
     }
