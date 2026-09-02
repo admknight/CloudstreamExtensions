@@ -11,6 +11,7 @@ import com.lagradost.api.Log
 
 import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 
 // Jackson
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -626,60 +627,6 @@ object CineStreamExtractors {
 
         } catch (e: Exception) {
             Log.e("Castle", "CRASHED: ${e.message}")
-        }
-    }
-
-    suspend fun invokeXpass(
-        tmdbId: Int? = null,
-        season: Int? = null,
-        episode: Int? = null,
-        subtitleCallback: (SubtitleFile) -> Unit,
-        callback: (ExtractorLink) -> Unit
-    ) {
-        val embedUrl = if(season == null) "$xpassAPI/e/movie/$tmdbId" else "$xpassAPI/e/tv/$tmdbId/$season/$episode"
-        val html = app.get(embedUrl, referer = "$xpassAPI/").text
-        val backups = extractXpassBackups(html)
-
-        Log.d("Xpass", "backups: $backups")
-
-        backups.safeAmap { (name, url) ->
-            val fullUrl  = if (url.startsWith("http")) url else xpassAPI + url
-
-            Log.d("Xpass", "fullUrl: $fullUrl")
-
-            val json     = app.get(fullUrl).text
-            val sources  = JSONObject(json)
-                .optJSONArray("playlist")
-                ?.optJSONObject(0)
-                ?.optJSONArray("sources") ?: return@safeAmap
-
-            for (i in 0 until sources.length()) {
-                val source = sources.getJSONObject(i)
-                val file   = source.optString("file").takeIf {
-                    it.isNotBlank() && it.startsWith("http")
-                } ?: continue
-                val isM3u8 = source.optString("type").contains("hls", ignoreCase = true)
-                        || file.contains(".m3u8")
-
-                if(isM3u8) {
-                    M3u8Helper.generateM3u8(
-                        "Xpass [$name]",
-                        file,
-                        "$xpassAPI/",
-                    ).forEach(callback)
-                } else {
-                    callback.invoke(
-                        newExtractorLink(
-                            "Xpass [$name]",
-                            "Xpass [$name]",
-                            file
-                        ) {
-                            this.referer = "$xpassAPI/"
-                        }
-                    )
-                }
-            }
-
         }
     }
 
@@ -1591,7 +1538,8 @@ object CineStreamExtractors {
 
         Log.d("Skymovies", "url: $url")
 
-        val (sSlug, eSlug) = getEpisodeSlug(1, episode)
+        val (sSlug, eSlug) = getEpisodeSlug(1, episode ?: 1)
+
         app.get(url).document.select("div.L a").safeAmap {
             val titleText = it.text()
 
@@ -2016,12 +1964,16 @@ object CineStreamExtractors {
         callback: (ExtractorLink) -> Unit
     ) {
         val headers = mapOf(
-            "User-Agent" to USER_AGENT,
-            "Cookie" to "__ddg2_=1234567890"
+            "User-Agent" to "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+            "Cookie" to "__ddgid_=hpbphjdici5GLR3T; __ddg2_=dwDduNWZhLGsqnEO; __ddg1_=wjyiWsat7aykGAi7bi42;"
         )
+
+        Log.d("Animepahe", "url: $url")
 
         val id = cfGet(url?.replace(".com", ".pw") ?: return, headers).document.selectFirst("meta[property=og:url]")
             ?.attr("content").toString().substringAfterLast("/")
+
+        Log.d("Animepahe", "id: $id")
 
         val animeData =
             cfGet("$animepaheAPI/api?m=release&id=$id&sort=episode_asc&page=1", headers)
@@ -2031,6 +1983,9 @@ object CineStreamExtractors {
         } else {
             animeData?.getOrNull(episode-1)?.session ?: return
         }
+
+        Log.d("Animepahe", "session: $session")
+
         val doc = cfGet("$animepaheAPI/play/$id/$session", headers).document
 
         runLimitedAsync( concurrency = 2,
@@ -3306,9 +3261,9 @@ object CineStreamExtractors {
         val url = if (season == null) "$vidfastProApi/movie/$tmdbId/" else "$vidfastProApi/tv/$tmdbId/$season/$episode/"
 
         val headers = mutableMapOf(
-            "User-Agent" to USER_AGENT,
+            "User-Agent" to "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
             "Referer" to "$vidfastProApi/",
-            "X-Requested-With" to "XMLHttpRequest",
+            // "X-Requested-With" to "XMLHttpRequest",
         )
 
         val response = app.get(url, headers = headers).text
@@ -3933,6 +3888,22 @@ object CineStreamExtractors {
 
             Log.d("Meowtv", "decResponse: $decResponse")
 
+            val parsed = tryParseJson<EncDecStreamResponse>(decResponse)?.result ?: return@safeAmap
+
+            if(parsed.url == null) return@safeAmap
+
+            callback.invoke(
+                newExtractorLink(
+                    "Meowtv",
+                    "Meowtv[$server] ${parsed.language}",
+                    parsed.url,
+                    if(parsed.url.contains(".m3u8")) ExtractorLinkType.M3U8 else INFER_TYPE
+                ) {
+                    this.quality = Qualities.P1080.value
+                    this.headers = headers
+                }
+            )
+
         }
     }
 
@@ -3943,14 +3914,9 @@ object CineStreamExtractors {
         callback: (ExtractorLink) -> Unit
     ) {
         val headers = mapOf(
-            "Accept"          to "*/*",
-            "Accept-Language" to "en-US,en;q=0.5",
             "Origin"          to "$peachifyBaseAPI",
             "Referer"         to "$peachifyBaseAPI/",
-            "Sec-Fetch-Dest"  to "empty",
-            "Sec-Fetch-Mode"  to "cors",
-            "Sec-Fetch-Site"  to "cross-site",
-            "User-Agent"      to "Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            "User-Agent"      to "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
         )
 
         val servers = listOf("multi", "hr", "holly", "air", "moviebox")
@@ -4096,25 +4062,25 @@ object CineStreamExtractors {
                 Log.d("Anikage", "sourceRes: $sourceRes")
 
                 //Handles sources
-                // sourceRes.sources?.forEach { source ->
-                //     val encodedUrl = source.url ?: return@forEach
-                //     val isM3U8 = source.isM3U8 ?: false
-                //     val proxiedUrl = "https://prox.anikage.cc/${if(isM3U8) "m3u8" else "stream"}/$encodedUrl"
+                sourceRes.sources?.forEach { source ->
+                    val encodedUrl = source.url ?: return@forEach
+                    val isM3U8 = source.isM3U8 ?: false
+                    val proxiedUrl = "https://og.bakayaro.live/${if(isM3U8) "m3u8" else "stream"}/$encodedUrl"
 
-                //     Log.d("Anikage", "proxiedUrl: $proxiedUrl")
+                    Log.d("Anikage", "proxiedUrl: $proxiedUrl")
 
-                //     callback.invoke(
-                //         newExtractorLink(
-                //             "Anikage[${server.capitalizeServer()}] ${lang.capitalizeServer()}",
-                //             "Anikage[${server.capitalizeServer()}] ${lang.capitalizeServer()}",
-                //             proxiedUrl,
-                //             if(isM3U8) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
-                //         ) {
-                //             this.quality = 1080
-                //             this.referer = "$anikageAPI/"
-                //         }
-                //     )
-                // }
+                    callback.invoke(
+                        newExtractorLink(
+                            "Anikage[${server.capitalizeServer()}] ${lang.capitalizeServer()}",
+                            "Anikage[${server.capitalizeServer()}] ${lang.capitalizeServer()}",
+                            proxiedUrl,
+                            if(isM3U8) ExtractorLinkType.M3U8 else ExtractorLinkType.VIDEO
+                        ) {
+                            this.quality = 1080
+                            this.referer = "$anikageAPI/"
+                        }
+                    )
+                }
 
                 //Handles embeds
                 sourceRes.embeds?.safeAmap { embed ->
@@ -4236,6 +4202,136 @@ object CineStreamExtractors {
 
                 loadCustomExtractor("Animedao[$type] $server", rawUrl, "$animedaoAPI/", subtitleCallback, callback)
             }
+        }
+    }
+
+    suspend fun invokeCinejoy(
+        title: String? = null,
+        imdbId: String? = null,
+        tmdbId: Int? = null,
+        year: Int? = null,
+        season: Int? = null,
+        episode: Int? = null,
+        subtitleCallback: (SubtitleFile) -> Unit,
+        callback: (ExtractorLink) -> Unit,
+    ) {
+        val isSeries = season != null && episode != null
+        val type = if (isSeries) "series" else "movie"
+
+        val headers = mapOf(
+            "Accept" to "*/*",
+            "Origin" to cinejoyBaseAPI,
+            "Referer" to "$cinejoyBaseAPI/",
+            "User-Agent" to USER_AGENT
+        )
+
+        val serversRes = app.get("$cinejoyAPI/servers", headers = headers).text
+        val parsed = tryParseJson<CinejoyServersResponse>(serversRes) ?: return
+        val servers = parsed.servers?.mapNotNull { it.name } ?: return
+
+        val encodedTitle = URLEncoder.encode(title ?: "", "UTF-8")
+
+        servers.safeAmap { server ->
+            val targetUrl = buildString {
+                append("$cinejoyAPI/?title=$encodedTitle&type=$type&year=$year&imdb=$imdbId&tmdb=$tmdbId&server=$server")
+                if (isSeries) append("&season=$season&episode=$episode")
+            }
+
+            val encReqUrl = "$multiDecryptAPI/enc-cinejoy?url=${URLEncoder.encode(targetUrl, "UTF-8")}"
+            val encResText = app.get(encReqUrl).text
+
+            Log.d("Cinejoy", "encResText: $encResText")
+
+            val encRes = tryParseJson<CinejoyEncResponse>(encResText)
+
+            if (encRes?.status != 200 || encRes.result == null) return@safeAmap
+            val encDataStr = encRes.result?.data ?: return@safeAmap
+            val state = encRes.result?.state ?: return@safeAmap
+
+            val decodedData = decodeBase64UrlSafe(encDataStr)
+            val requestBody = decodedData.toRequestBody("application/octet-stream".toMediaTypeOrNull())
+
+            val encryptedResponse = app.post(
+                "$cinejoyAPI/g",
+                requestBody = requestBody,
+                headers = headers
+            )
+
+            val encryptedBytes = encryptedResponse.okhttpResponse.body.bytes()
+
+            val b64Encrypted = encodeBase64UrlSafeNoPadding(encryptedBytes)
+
+            val decResText = app.post(
+                "$multiDecryptAPI/dec-cinejoy",
+                json = mapOf("text" to b64Encrypted, "state" to state)
+            ).text
+
+            Log.d("Cinejoy", "decResText: $decResText")
+
+            val decRes = tryParseJson<CinejoyDecResponse>(decResText)
+
+            val decData = decRes?.result?.data
+            if (decData?.error != null) {
+                Log.d("Cinejoy", "Server $server returned error: ${decData.error}")
+                return@safeAmap
+            }
+
+            val streams = decData?.stream ?: emptyList()
+
+            streams.forEach { stream ->
+                if (stream.type == "hls" && !stream.playlist.isNullOrEmpty()) {
+                    callback.invoke(
+                        newExtractorLink(
+                            "Cinejoy",
+                            "Cinejoy - ${stream.id ?: server}",
+                            stream.playlist!!,
+                            ExtractorLinkType.M3U8
+                        ) {
+                            this.referer = headers["Referer"] ?: ""
+                            this.quality = Qualities.P1080.value
+                        }
+                    )
+                }
+                else if (stream.type == "file" && stream.qualities != null) {
+                    stream.qualities!!.forEach { (qualityKey, qualityData) ->
+                        val parsedQuality = when(qualityKey) {
+                            "4k" -> Qualities.P2160.value
+                            "1080" -> Qualities.P1080.value
+                            "720" -> Qualities.P720.value
+                            "480" -> Qualities.P480.value
+                            else -> Qualities.Unknown.value
+                        }
+
+                        qualityData.url?.let { fileUrl ->
+                            if(fileUrl.contains("https")) {
+                                callback.invoke(
+                                    newExtractorLink(
+                                        "Cinejoy",
+                                        "Cinejoy - ${stream.id ?: server} ($qualityKey)",
+                                        fileUrl,
+                                        if(fileUrl.contains(".m3u8")) ExtractorLinkType.M3U8 else INFER_TYPE
+                                    ) {
+                                        this.referer = headers["Referer"] ?: ""
+                                        this.quality = parsedQuality
+                                    }
+                                )
+                            }
+                        }
+                    }
+                }
+
+                stream.captions?.forEach { caption ->
+                    caption.url?.let { captionUrl ->
+                        subtitleCallback.invoke(
+                            newSubtitleFile(
+                                lang = caption.language ?: caption.id ?: "Unknown",
+                                url = captionUrl
+                            )
+                        )
+                    }
+                }
+            }
+
         }
     }
 
