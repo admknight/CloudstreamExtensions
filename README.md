@@ -3,16 +3,13 @@
 This branch contains the compiled `.cs3` files and the live index.
 
 ### 📊 Status
-* **Total Plugins Live:** `4` / 155
-* **Last Update:** `2026-09-08 03:40:08` UTC
+* **Total Plugins Live:** `0` / 155
+* **Last Update:** `2026-09-09 03:44:51` UTC
 * **Repo URL:** `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json` 
 
 ---
 
 ### 📂 Available Plugins by Category
-
-#### 📁 Bollywood (4)
-`Bollyflix`, `MoviesDrive`, `Moviesmod`, `VegaMovies`
 
 
 ---
