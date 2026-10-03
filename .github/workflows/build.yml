@@ -28,16 +28,46 @@ jobs:
         with:
           path: source
 
-      - name: Build Aggregated Catalog
-        run: |
-          cd source
-          python3 tools/merge_upstreams.py merged
-
       - name: Checkout Builds Branch
         uses: actions/checkout@v5
         with:
           ref: builds
           path: builds
+
+      - name: Build Candidate Catalog
+        run: |
+          set +e
+          python3 source/tools/merge_upstreams.py source/merged --previous builds/plugins.json 2>&1 | tee merge-output.txt
+          status=${PIPESTATUS[0]}
+          echo "MERGE_STATUS=$status" >> "$GITHUB_ENV"
+          exit 0
+
+      - name: Build Status Summary
+        if: always()
+        run: |
+          if [ -f source/merged/STATUS.md ]; then
+            cat source/merged/STATUS.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No status report was generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload Diagnostic Status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aggregation-status-${{ github.run_id }}
+          path: |
+            source/merged/STATUS.md
+            source/merged/merge-report.json
+            merge-output.txt
+          if-no-files-found: warn
+
+      - name: Stop On Upstream Failure
+        run: |
+          if [ "${MERGE_STATUS:-1}" -ne 0 ]; then
+            echo "Candidate generation failed. Production remains unchanged."
+            exit 1
+          fi
 
       - name: Safety Gate
         run: |
@@ -45,9 +75,8 @@ jobs:
           import json
           from pathlib import Path
 
-          new_file = Path("source/merged/plugins.json")
+          new_plugins = json.loads(Path("source/merged/plugins.json").read_text())
           old_file = Path("builds/plugins.json")
-          new_plugins = json.loads(new_file.read_text())
           old_plugins = json.loads(old_file.read_text()) if old_file.exists() else []
 
           new_count = len(new_plugins)
@@ -80,38 +109,40 @@ jobs:
           cp source/merged/plugins.json builds/plugins.json
           cp source/merged/repo.json builds/repo.json
           cp source/merged/merge-report.json builds/merge-report.json
+          cp source/merged/STATUS.md builds/STATUS.md
+          cp source/merged/README.md builds/README.md
 
           python3 - << 'PY'
           import json
-          from datetime import datetime, timezone
+          import os
           from pathlib import Path
 
           report = json.loads(Path("source/merged/merge-report.json").read_text())
-          now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-
-          lines = [
-              "# Adam Knight Extensions",
+          history = Path("builds/BUILD_HISTORY.md")
+          header = [
+              "# Aggregation Build History",
               "",
-              "One-stop CloudStream catalog aggregated from maintained upstream plugin indexes.",
-              "",
-              "## Status",
-              "",
-              f"- Unique plugins: **{report['uniquePlugins']}**",
-              f"- Last update: **{now}**",
-              "- Production repository: `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json`",
-              "",
-              "## Upstream sources",
-              "",
+              "| UTC | Run | Commit | Plugins | Added | Updated | Removed | Result |",
+              "| --- | ---: | --- | ---: | ---: | ---: | ---: | --- |",
           ]
-          for source, count in report["sourceDistributionAfterDedup"].items():
-              lines.append(f"- {source}: {count}")
 
-          lines += [
-              "",
-              "The catalog is validated and deduplicated before publication. A safety gate blocks suspicious large drops instead of overwriting a healthy production index.",
-              "",
-          ]
-          Path("builds/README.md").write_text("\n".join(lines))
+          old_rows = []
+          if history.exists():
+              for line in history.read_text().splitlines():
+                  if line.startswith("| ") and not line.startswith("| UTC") and not line.startswith("| ---"):
+                      old_rows.append(line)
+
+          run_id = os.environ.get("GITHUB_RUN_ID", "")
+          sha = os.environ.get("GITHUB_SHA", "")[:8]
+          row = (
+              f"| {report['generatedAt']} | [{run_id}](https://github.com/admknight/CloudstreamExtensions/actions/runs/{run_id}) "
+              f"| {sha} | {report['uniquePlugins']} | {report['changes']['added']} "
+              f"| {report['changes']['updated']} | {report['changes']['removed']} | Published |"
+          )
+
+          rows = [row] + [r for r in old_rows if f"/runs/{run_id}" not in r]
+          rows = rows[:100]
+          history.write_text("\n".join(header + rows) + "\n")
           PY
 
       - name: Publish Builds Branch
@@ -119,7 +150,7 @@ jobs:
           cd builds
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add plugins.json repo.json merge-report.json README.md
+          git add plugins.json repo.json merge-report.json STATUS.md README.md BUILD_HISTORY.md
           if git diff --cached --quiet; then
             echo "No catalog changes to publish."
             exit 0
