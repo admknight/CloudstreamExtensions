@@ -1,138 +1,14 @@
-name: Sync Plugins
+name: Legacy Source Sync - Disabled
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
-  sync:
+  disabled:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Sync & Surgical Repair
+      - name: Legacy workflow retired
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-
-          SOURCES=(
-            "https://github.com/Hexated/CloudStream-Extensions.git"
-            "https://github.com/phisher98/cloudstream-extensions-phisher.git"
-            "https://github.com/rockhero1234/cinephile.git"
-            "https://github.com/SaurabhKaperwan/CSX.git"
-            "https://github.com/Sushan64/NetMirror-Extension.git"
-            "https://github.com/Stormunblessed/storm-ext.git"
-          )
-
-          ANIME_REGEX="Anichi|AllWish|AnimePahe|Animeav1|AnimeCloud|AnimeDekho|Animedubhindi|Animekhor|Animexin|Gogo|NineAnime|Crunchyroll|Tokusatsu|TokuZilla|Animekisa|Kawaiifu|Aniflix|DubbedAnime|AsiaFlix|KimCartoon|Topcartoon|Toon|OnePace|Donghua|DoraBash|Latanime|Tenshi|Wco|Zoro"
-          HINDI_REGEX="Netmirror|Cinevood|Mp4Moviez|Tamil|Skymovies|Bolly|Vega|Moviesmod|CineStream|AllMovieLand|Hindmovie|HDhub4u|FourKHDHub|MovieBlast|Fivemovierulz|Movierulzhd|Cinefreak|Bangla|OnlineMoviesHindi|MoviesDrive|Desicinemas|UHDmovies"
-          TOOLS_REGEX="Ultima|Stremio|Jellyfin|BingedReview|RingZ|GDIndex"
-          LIVE_REGEX="IPTV|QuickIPTV|Sports|EjaTv|Tvtwofourseven"
-
-          rm -rf Anime Bollywood International LiveTV Tools
-          mkdir -p temp_sources
-
-          for REPO_URL in "${SOURCES[@]}"; do
-            REPO_NAME=$(echo "$REPO_URL" | sed -E 's|https://[^/]+/([^/]+)/([^/]+)(\.git)?|\1_\2|' | sed 's|\.git||')
-            git clone --depth 1 "$REPO_URL" "temp_sources/$REPO_NAME"
-            
-            # CRITICAL: Skip any root repos. Only look for folders with 'src' AND 'build.gradle.kts' but NO 'settings.gradle.kts'
-            find "temp_sources/$REPO_NAME" -type d -name "src" | while read -r SRC_DIR; do
-              PLUGIN_DIR=$(dirname "$SRC_DIR")
-              if [ ! -f "$PLUGIN_DIR/build.gradle.kts" ] || [ -f "$PLUGIN_DIR/settings.gradle.kts" ] || [ -f "$PLUGIN_DIR/settings.gradle" ]; then continue; fi
-              
-              PLUGIN_NAME=$(basename "$PLUGIN_DIR")
-              if [[ "$PLUGIN_NAME" =~ ^(gradle|buildSrc|build|.github|.idea)$ ]]; then continue; fi
-
-              CATEGORY="International"
-              if [[ "$PLUGIN_NAME" =~ $ANIME_REGEX ]]; then 
-                CATEGORY="Anime"
-              elif [[ "$PLUGIN_NAME" =~ $HINDI_REGEX ]]; then 
-                CATEGORY="Bollywood"
-              elif [[ "$PLUGIN_NAME" =~ $TOOLS_REGEX ]]; then 
-                CATEGORY="Tools"
-              elif [[ "$PLUGIN_NAME" =~ $LIVE_REGEX ]]; then 
-                CATEGORY="LiveTV"
-              fi
-
-              TARGET_DIR="$CATEGORY/$PLUGIN_NAME"
-              mkdir -p "$TARGET_DIR"
-              cp -r "$PLUGIN_DIR"/* "$TARGET_DIR/"
-              
-              # --- SURGERY: STRIP LOCAL CONFIG & CONFLICTS ---
-              # Remove individual plugin and root-clashing blocks (plugins, buildscript, clean tasks)
-              sed -i '/plugins {/,/}/d' "$TARGET_DIR/build.gradle.kts"
-              sed -i '/apply(plugin =/d' "$TARGET_DIR/build.gradle.kts"
-              sed -i '/apply plugin:/d' "$TARGET_DIR/build.gradle.kts"
-              sed -i '/buildscript {/,/}/d' "$TARGET_DIR/build.gradle.kts"
-              sed -i '/task.*clean/d' "$TARGET_DIR/build.gradle.kts"
-
-              # Fix obsolete Kotlin methods
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/argamap(/runAllAsync(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.apmap/.map/g' {} +
-              
-              # Aggressive DSL Migration
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bMovieSearchResponse(/newMovieSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bTvSeriesSearchResponse(/newTvSeriesSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bAnimeSearchResponse(/newAnimeSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bLiveSearchResponse(/newLiveSearchResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bHomePageResponse(/newHomePageResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bAnimeLoadResponse(/newAnimeLoadResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bMovieLoadResponse(/newMovieLoadResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bTvSeriesLoadResponse(/newTvSeriesLoadResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bLiveStreamLoadResponse(/newLiveStreamLoadResponse(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bEpisode(/newEpisode(/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\bExtractorLink(/newExtractorLink(/g' {} +
-              
-              # Score / Rating Migration (Basic)
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/rating = \(.*\)\.toRatingInt()/score = Score.from10(\1)/g' {} +
-              find "$TARGET_DIR" -name "*.kt" -exec sed -i 's/\.toRatingInt()//g' {} +
-
-              # Safe Branding & Strip private keys
-              sed -i 's/authors = listOf(.*)/authors = listOf("Adam Knight")/' "$TARGET_DIR/build.gradle.kts"
-              sed -i -E 's/buildConfigField\s*\(\s*"String"\s*,\s*"([^"]+)"\s*,.*?\)/buildConfigField("String", "\1", "\\"\\"")/g' "$TARGET_DIR/build.gradle.kts"
-              sed -i '/val properties = Properties()/d' "$TARGET_DIR/build.gradle.kts"
-              sed -i '/properties.load(/d' "$TARGET_DIR/build.gradle.kts"
-              
-              # Ensure buildConfig is enabled in every plugin
-              if ! grep -q "buildConfig = true" "$TARGET_DIR/build.gradle.kts"; then
-                sed -i '/buildFeatures {/a \        buildConfig = true' "$TARGET_DIR/build.gradle.kts"
-              fi
-            done
-          done
-
-          # --- GLOBAL DEDUPLICATION & STABILITY PATCHING ---
-          echo "Applying Global Deduplication & Stability Patches..."
-          
-          # 1. Resolve Kisskh Redeclaration (Prefer Phisher98 version with TMDB)
-          find International/KisskhProvider -name "*KisskhProvider*.kt" | grep "lagradost" | xargs rm -f
-          
-          # 2. Resolve Netmirror Clashes (Rename internal Episode to NetmirrorEpisode)
-          find Bollywood/Netmirror -name "*.kt" -exec sed -i 's/\bEpisode\b/NetmirrorEpisode/g' {} +
-          find Bollywood/Netmirror -name "*.kt" -exec sed -i 's/com.lagradost.cloudstream3.NetmirrorEpisode/com.lagradost.cloudstream3.Episode/g' {} +
-
-          # 3. Resolve StremioAddon Duplicates
-          rm -f Tools/StremioAddon/src/main/kotlin/com/phisher98/StremioAddonProvider.kt
-          
-          # 4. Fix redundant Base64 imports clashing with Cloudstream helpers
-          find . -name "*.kt" -exec sed -i '/import java.util.Base64/d' {} +
-          find . -name "*.kt" -exec sed -i 's/Base64.getDecoder().decode/base64DecodeArray/g' {} +
-
-          # 5. Fix icons
-          find . -maxdepth 3 -name "build.gradle.kts" | while read -r G_FILE; do
-            P_DIR=$(dirname "$G_FILE")
-            P_NAME=$(basename "$P_DIR")
-            C_NAME=$(basename "$(dirname "$P_DIR")")
-            sed -i "s|iconUrl = \".*\"|iconUrl = \"https://raw.githubusercontent.com/${{ github.repository }}/master/$C_NAME/$P_NAME/icon.png\"|g" "$G_FILE"
-          done
-
-          rm -rf temp_sources
-          git add .
-          git commit -m "System Recovery: Stripped local plugins and neutralized conflicts" || echo "No changes"
-          git push origin master --force
+          echo "The legacy source-mirroring workflow is intentionally disabled."
+          echo "Production now aggregates maintained upstream plugins.json indexes."
+          echo "No source folders or production artifacts are modified by this workflow."
