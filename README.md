@@ -5,7 +5,7 @@ One-stop CloudStream catalog aggregated from maintained upstream plugin indexes.
 ## Status
 
 - Unique plugins: **124**
-- Last update: **2026-10-03 23:51:18 UTC**
+- Last update: **2026-10-03 23:51:47 UTC**
 - Production repository: `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json`
 
 ## Upstream sources
