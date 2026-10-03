@@ -1,19 +1,27 @@
-# Adam Knight Extensions
+# Adam Knight Extensions - Production
 
-One-stop CloudStream catalog aggregated from maintained upstream plugin indexes.
+Live CloudStream catalog generated from maintained upstream plugin indexes.
 
-## Status
+## Latest update
 
+- Generated: **2026-10-03 23:58:59 UTC**
 - Unique plugins: **124**
-- Last update: **2026-10-03 23:51:47 UTC**
-- Production repository: `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json`
+- Added: **0**
+- Updated: **0**
+- Removed: **0**
+- Repository URL: https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json
 
-## Upstream sources
+## Upstream status
 
-- phisher: 84
-- storm: 30
-- cinephile: 4
-- csx: 5
-- netmirror: 1
+| Source | Fetch | Upstream entries | Included after dedup | Duplicate entries dropped |
+| --- | --- | ---: | ---: | ---: |
+| [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | OK | 84 | 84 | 0 |
+| [Cinephile](https://github.com/rockhero1234/cinephile) | OK | 5 | 4 | 1 |
+| [CSX](https://github.com/SaurabhKaperwan/CSX) | OK | 5 | 5 | 0 |
+| [NetMirror Extension](https://github.com/Sushan64/NetMirror-Extension) | OK | 1 | 1 | 0 |
+| [Storm Extensions](https://github.com/Stormunblessed/storm-ext) | OK | 30 | 30 | 0 |
 
-The catalog is validated and deduplicated before publication. A safety gate blocks suspicious large drops instead of overwriting a healthy production index.
+See STATUS.md for the complete per-plugin table and BUILD_HISTORY.md for previous successful publications.
+
+Publication is blocked if an active upstream cannot be fetched or if the safety checks detect a suspicious catalog drop.
+

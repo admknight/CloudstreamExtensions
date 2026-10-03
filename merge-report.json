@@ -1,18 +1,74 @@
 {
-  "sourceCounts": {
-    "phisher": 84,
-    "cinephile": 5,
-    "csx": 5,
-    "netmirror": 1,
-    "storm": 30
-  },
+  "generatedAt": "2026-10-03 23:58:59 UTC",
+  "candidateStatus": "READY",
+  "sourceStatus": [
+    {
+      "id": "phisher",
+      "name": "Phisher Repo",
+      "repo": "https://github.com/phisher98/cloudstream-extensions-phisher",
+      "index": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+      "ok": true,
+      "rawCount": 84,
+      "includedCount": 84,
+      "duplicateDropped": 0
+    },
+    {
+      "id": "cinephile",
+      "name": "Cinephile",
+      "repo": "https://github.com/rockhero1234/cinephile",
+      "index": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+      "ok": true,
+      "rawCount": 5,
+      "includedCount": 4,
+      "duplicateDropped": 1
+    },
+    {
+      "id": "csx",
+      "name": "CSX",
+      "repo": "https://github.com/SaurabhKaperwan/CSX",
+      "index": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+      "ok": true,
+      "rawCount": 5,
+      "includedCount": 5,
+      "duplicateDropped": 0
+    },
+    {
+      "id": "netmirror",
+      "name": "NetMirror Extension",
+      "repo": "https://github.com/Sushan64/NetMirror-Extension",
+      "index": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/plugins.json",
+      "ok": true,
+      "rawCount": 1,
+      "includedCount": 1,
+      "duplicateDropped": 0
+    },
+    {
+      "id": "storm",
+      "name": "Storm Extensions",
+      "repo": "https://github.com/Stormunblessed/storm-ext",
+      "index": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+      "ok": true,
+      "rawCount": 30,
+      "includedCount": 30,
+      "duplicateDropped": 0
+    }
+  ],
+  "inactiveSources": [
+    {
+      "id": "hexated",
+      "name": "Hexated CloudStream Extensions",
+      "repo": "https://github.com/Hexated/CloudStream-Extensions",
+      "reason": "No published builds/plugins.json index is currently used by this aggregator."
+    }
+  ],
+  "previousPlugins": 124,
   "uniquePlugins": 124,
   "sourceDistributionAfterDedup": {
     "phisher": 84,
-    "storm": 30,
     "cinephile": 4,
     "csx": 5,
-    "netmirror": 1
+    "netmirror": 1,
+    "storm": 30
   },
   "duplicates": [
     {
@@ -22,5 +78,12 @@
       "droppedSource": "cinephile",
       "droppedVersion": 3
     }
-  ]
+  ],
+  "changes": {
+    "added": 0,
+    "updated": 0,
+    "unchanged": 124,
+    "removed": 0
+  },
+  "removedPlugins": []
 }
