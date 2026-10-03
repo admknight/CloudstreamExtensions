@@ -1,8 +1,8 @@
 {
-    "name": "Adam Knight Extensions",
-    "description": "Custom extensions for Cloudstream by Adam Knight",
-    "manifestVersion": 1,
-    "pluginLists": [
-        "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json"
-    ]
+  "name": "Adam Knight Extensions",
+  "description": "One-stop CloudStream repository aggregated from maintained upstream plugin indexes",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json"
+  ]
 }

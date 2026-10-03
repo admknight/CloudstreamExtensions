@@ -1,16 +1,19 @@
-# 🚀 Adam Knight Mega-Repo Dashboard (Builds)
+# Adam Knight Extensions
 
-This branch contains the compiled `.cs3` files and the live index.
+One-stop CloudStream catalog aggregated from maintained upstream plugin indexes.
 
-### 📊 Status
-* **Total Plugins Live:** `0` / 155
-* **Last Update:** `2026-10-03 04:22:59` UTC
-* **Repo URL:** `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/plugins.json` 
+## Status
 
----
+- Unique plugins: **124**
+- Last update: **2026-10-03 23:51:18 UTC**
+- Production repository: `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json`
 
-### 📂 Available Plugins by Category
+## Upstream sources
 
+- phisher: 84
+- storm: 30
+- cinephile: 4
+- csx: 5
+- netmirror: 1
 
----
-*Maintained by Adam Knight*
+The catalog is validated and deduplicated before publication. A safety gate blocks suspicious large drops instead of overwriting a healthy production index.

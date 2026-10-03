@@ -1,0 +1,26 @@
+{
+  "sourceCounts": {
+    "phisher": 84,
+    "cinephile": 5,
+    "csx": 5,
+    "netmirror": 1,
+    "storm": 30
+  },
+  "uniquePlugins": 124,
+  "sourceDistributionAfterDedup": {
+    "phisher": 84,
+    "storm": 30,
+    "cinephile": 4,
+    "csx": 5,
+    "netmirror": 1
+  },
+  "duplicates": [
+    {
+      "plugin": "Tamilblasters",
+      "keptSource": "phisher",
+      "keptVersion": 12,
+      "droppedSource": "cinephile",
+      "droppedVersion": 3
+    }
+  ]
+}
