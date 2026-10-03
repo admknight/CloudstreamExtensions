@@ -1,185 +1,128 @@
-name: Build
+name: Update Aggregated Repository
+
+concurrency:
+  group: production-aggregator
+  cancel-in-progress: false
 
 on:
-  push:
-    branches: [ master, main ]
-    paths-ignore: [ 'README.md' ]
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Sync Plugins"]
-    types:
-      - completed
+  push:
+    branches:
+      - master
+    paths:
+      - 'tools/merge_upstreams.py'
+      - '.github/workflows/build.yml'
+      - 'repo.json'
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
       contents: write
+
     steps:
-      - name: Checkout Source
-        uses: actions/checkout@v4
+      - name: Checkout Master
+        uses: actions/checkout@v5
         with:
-          path: "src"
+          path: source
+
+      - name: Build Aggregated Catalog
+        run: |
+          cd source
+          python3 tools/merge_upstreams.py merged
 
       - name: Checkout Builds Branch
-        uses: actions/checkout@v4
-        continue-on-error: true
+        uses: actions/checkout@v5
         with:
-          ref: "builds"
-          path: "builds"
+          ref: builds
+          path: builds
 
-      - name: Create builds dir if missing
-        run: mkdir -p $GITHUB_WORKSPACE/builds
-
-      - name: Setup JDK 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: 21
-          distribution: 'zulu'
-          cache: 'gradle'
-
-      - name: Build Plugins
+      - name: Safety Gate
         run: |
-          cd src
-          chmod +x gradlew
-          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          ./gradlew buildAll --continue --stacktrace
-
-      - name: Harvesting, plugins.json & Builds README Generation
-        if: always()
-        run: |
-          rm -f $GITHUB_WORKSPACE/builds/*.cs3
-          find src -name "*.cs3" -exec cp -v {} $GITHUB_WORKSPACE/builds/ \;
-          
-          python3 << 'EOF'
-          import os
+          python3 - << 'PY'
           import json
-          import re
-          from datetime import datetime
-          
-          builds_dir = os.path.join(os.environ['GITHUB_WORKSPACE'], 'builds')
-          src_dir = os.path.join(os.environ['GITHUB_WORKSPACE'], 'src')
-          plugins = []
-          categories_summary = {}
-          
-          categories = ['Anime', 'Bollywood', 'International', 'LiveTV', 'Tools']
-          
-          def extract_gradle_field(content, field):
-              match = re.search(rf'{field}\s*=\s*\"(.*?)\"', content)
-              if match: return match.group(1)
-              match = re.search(rf'{field}\s*=\s*listOf\((.*?)\)', content)
-              if match:
-                  return [x.strip().replace('"', '').replace("'", "") for x in match.group(1).split(',')]
-              match = re.search(rf'{field}\s*=\s*(\d+)', content)
-              if match: return int(match.group(1))
-              return None
+          from pathlib import Path
 
-          for cat in categories:
-              cat_path = os.path.join(src_dir, cat)
-              if not os.path.exists(cat_path): continue
-              categories_summary[cat] = []
-              
-              for plugin_name in sorted(os.listdir(cat_path)):
-                  plugin_dir = os.path.join(cat_path, plugin_name)
-                  if not os.path.isdir(plugin_dir): continue
-                  
-                  cs3_file = f"{plugin_name}.cs3"
-                  cs3_path = os.path.join(builds_dir, cs3_file)
-                  if not os.path.exists(cs3_path): continue
-                  
-                  gradle_file = os.path.join(plugin_dir, 'build.gradle.kts')
-                  
-                  # Default metadata
-                  version = 1
-                  lang = "en"
-                  authors = ["Adam Knight"]
-                  tv_types = ["Others"]
-                  description = f"Adam Knight curated source for {plugin_name}"
-                  status = 1
-                  
-                  if os.path.exists(gradle_file):
-                      with open(gradle_file, 'r') as f:
-                          content = f.read()
-                          
-                          # Extract Version
-                          v_match = re.search(r'version\s*=\s*(\d+)', content)
-                          if v_match: version = int(v_match.group(1))
-                          
-                          # Extract from cloudstream block
-                          g_lang = extract_gradle_field(content, "language")
-                          if g_lang: lang = g_lang
-                          
-                          g_authors = extract_gradle_field(content, "authors")
-                          if g_authors: authors = g_authors
-                          
-                          g_types = extract_gradle_field(content, "tvTypes")
-                          if g_types: tv_types = g_types
-                          
-                          g_desc = extract_gradle_field(content, "description")
-                          if g_desc: description = g_desc
+          new_file = Path("source/merged/plugins.json")
+          old_file = Path("builds/plugins.json")
+          new_plugins = json.loads(new_file.read_text())
+          old_plugins = json.loads(old_file.read_text()) if old_file.exists() else []
 
-                          g_status = extract_gradle_field(content, "status")
-                          if g_status is not None: status = g_status
-                  
-                  plugin_data = {
-                      "name": plugin_name,
-                      "internalName": plugin_name,
-                      "version": version,
-                      "description": description,
-                      "repositoryUrl": f"https://github.com/{os.environ['GITHUB_REPOSITORY']}",
-                      "url": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/builds/{cs3_file}",
-                      "authors": authors,
-                      "tvTypes": tv_types,
-                      "language": lang,
-                      "iconUrl": f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/master/{cat}/{plugin_name}/icon.png",
-                      "status": status,
-                      "apiVersion": 1
-                  }
-                  plugins.append(plugin_data)
-                  categories_summary[cat].append(plugin_name)
-          
-          # Write plugins.json
-          with open(os.path.join(builds_dir, 'plugins.json'), 'w') as f:
-              json.dump(plugins, f, indent=4)
-          
-          # Generate Dashboard README.md
-          now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-          header = "# 🚀 Adam Knight Mega-Repo Dashboard (Builds)\n\n"
-          header += "This branch contains the compiled `.cs3` files and the live index.\n\n"
-          header += "### 📊 Status\n"
-          header += f"* **Total Plugins Live:** `{len(plugins)}` / 155\n"
-          header += f"* **Last Update:** `{now}` UTC\n"
-          header += f"* **Repo URL:** `https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/builds/plugins.json` \n\n"
-          header += "---\n\n### 📂 Available Plugins by Category\n\n"
-          
-          body = ""
-          for cat, p_list in categories_summary.items():
-              if p_list:
-                  body += f"#### 📁 {cat} ({len(p_list)})\n"
-                  body += ", ".join([f"`{p}`" for p in p_list]) + "\n\n"
-          
-          footer = "\n---\n*Maintained by Adam Knight*"
-          
-          with open(os.path.join(builds_dir, 'README.md'), 'w') as f:
-              f.write(header + body + footer)
-              
-          print(f"Generated Dashboard with {len(plugins)} plugins.")
-          EOF
+          new_count = len(new_plugins)
+          old_count = len(old_plugins)
+          print(f"Current production count: {old_count}")
+          print(f"Candidate production count: {new_count}")
 
-          cp src/repo.json $GITHUB_WORKSPACE/builds/ || true
+          if new_count < 50:
+              raise SystemExit(f"Safety gate: refusing to publish only {new_count} plugins")
 
-      - name: Push to Builds Branch
-        if: always()
+          if old_count >= 50:
+              minimum_allowed = max(50, int(old_count * 0.80))
+              if new_count < minimum_allowed:
+                  raise SystemExit(
+                      f"Safety gate: candidate dropped from {old_count} to {new_count}; "
+                      f"minimum allowed without review is {minimum_allowed}"
+                  )
+
+          names = [(p.get("internalName") or p.get("name")) for p in new_plugins]
+          if any(not n for n in names):
+              raise SystemExit("Safety gate: plugin without name/internalName")
+          if len(names) != len(set(names)):
+              raise SystemExit("Safety gate: duplicate plugin names remain")
+
+          print("Safety gate passed.")
+          PY
+
+      - name: Prepare Builds Branch
         run: |
-          cd $GITHUB_WORKSPACE/builds
-          git init || true
+          cp source/merged/plugins.json builds/plugins.json
+          cp source/merged/repo.json builds/repo.json
+          cp source/merged/merge-report.json builds/merge-report.json
+
+          python3 - << 'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          report = json.loads(Path("source/merged/merge-report.json").read_text())
+          now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+          lines = [
+              "# Adam Knight Extensions",
+              "",
+              "One-stop CloudStream catalog aggregated from maintained upstream plugin indexes.",
+              "",
+              "## Status",
+              "",
+              f"- Unique plugins: **{report['uniquePlugins']}**",
+              f"- Last update: **{now}**",
+              "- Production repository: `https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json`",
+              "",
+              "## Upstream sources",
+              "",
+          ]
+          for source, count in report["sourceDistributionAfterDedup"].items():
+              lines.append(f"- {source}: {count}")
+
+          lines += [
+              "",
+              "The catalog is validated and deduplicated before publication. A safety gate blocks suspicious large drops instead of overwriting a healthy production index.",
+              "",
+          ]
+          Path("builds/README.md").write_text("\n".join(lines))
+          PY
+
+      - name: Publish Builds Branch
+        run: |
+          cd builds
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" || true
-          git checkout -b builds || git checkout builds
-          git add .
-          git commit -m "Dashboard Update: ${GITHUB_SHA::8}" || echo "No changes"
-          git push origin builds --force
+          git add plugins.json repo.json merge-report.json README.md
+          if git diff --cached --quiet; then
+            echo "No catalog changes to publish."
+            exit 0
+          fi
+          git commit -m "Aggregate upstream catalog: ${GITHUB_SHA::8}"
+          git push origin builds
