@@ -74,9 +74,17 @@ def comparable(plugin):
     return json.dumps(plugin, sort_keys=True, ensure_ascii=False)
 
 
+def normalize_package_url(url):
+    if not url:
+        return url
+    return str(url).replace(" ", "%20")
+
+
 def check_package_url(url):
     if not url:
         return {"ok": False, "status": None, "error": "Missing package URL"}
+
+    url = normalize_package_url(url)
 
     headers = {
         "User-Agent": "AdamKnight-CloudStream-Aggregator/3.0",
@@ -113,6 +121,7 @@ def branded_plugin(plugin):
     result = dict(plugin)
     result["authors"] = []
     result["repositoryUrl"] = AGGREGATOR_REPO
+    result["url"] = normalize_package_url(result.get("url"))
 
     description = str(result.get("description") or "").strip()
     prefix = f"Maintained by {MAINTAINER}"
