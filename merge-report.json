@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04 04:31:30 UTC",
+  "generatedAt": "2026-10-04 11:44:19 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
   "sourceHealth": {
-    "ok": 13,
+    "ok": 23,
     "failed": 0
   },
   "sourceStatus": [
@@ -16,9 +16,9 @@
       "priority": 10,
       "ok": true,
       "rawCount": 84,
-      "includedCount": 84,
+      "includedCount": 81,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 3
     },
     {
       "id": "cinephile",
@@ -57,18 +57,6 @@
       "duplicateSkipped": 0
     },
     {
-      "id": "storm",
-      "name": "Storm Extensions",
-      "repo": "https://github.com/Stormunblessed/storm-ext",
-      "index": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-      "priority": 20,
-      "ok": true,
-      "rawCount": 30,
-      "includedCount": 30,
-      "packageFailed": 0,
-      "duplicateSkipped": 0
-    },
-    {
       "id": "official",
       "name": "ReCloudStream Official Extensions",
       "repo": "https://github.com/recloudstream/extensions",
@@ -88,9 +76,9 @@
       "priority": 15,
       "ok": true,
       "rawCount": 18,
-      "includedCount": 17,
+      "includedCount": 16,
       "packageFailed": 0,
-      "duplicateSkipped": 1
+      "duplicateSkipped": 2
     },
     {
       "id": "vietnam",
@@ -112,9 +100,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 16,
-      "includedCount": 16,
+      "includedCount": 14,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 2
     },
     {
       "id": "rearabi",
@@ -124,9 +112,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 39,
-      "includedCount": 38,
+      "includedCount": 37,
       "packageFailed": 1,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 1
     },
     {
       "id": "alyss",
@@ -160,9 +148,141 @@
       "priority": 25,
       "ok": true,
       "rawCount": 18,
-      "includedCount": 16,
+      "includedCount": 15,
+      "packageFailed": 0,
+      "duplicateSkipped": 3
+    },
+    {
+      "id": "storm-redblacker8",
+      "name": "Storm-ext Fork by redblacker8",
+      "repo": "https://github.com/redblacker8/storm-ext",
+      "index": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+      "priority": 20,
+      "ok": true,
+      "rawCount": 36,
+      "includedCount": 36,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "desi",
+      "name": "Desi Extensions",
+      "repo": "https://github.com/Faisal0786/Desi",
+      "index": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 10,
+      "includedCount": 7,
+      "packageFailed": 2,
+      "duplicateSkipped": 1
+    },
+    {
+      "id": "flummox",
+      "name": "FLUMMOX Repo",
+      "repo": "https://github.com/FlummoxGamer/FLUMMOX-Repo",
+      "index": "https://raw.githubusercontent.com/FlummoxGamer/FLUMMOX-Repo/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 2,
+      "includedCount": 2,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "ayu-games",
+      "name": "Ayu CloudStream Games",
+      "repo": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+      "index": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 21,
+      "includedCount": 21,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "raghav",
+      "name": "raghav repo",
+      "repo": "https://github.com/KSHITIJ8473/raghav",
+      "index": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+      "priority": 20,
+      "ok": true,
+      "rawCount": 30,
+      "includedCount": 30,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "diegon",
+      "name": "DieGon Repository",
+      "repo": "https://github.com/DieGon7771/ItaliaInStreaming",
+      "index": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 18,
+      "includedCount": 18,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "reflex",
+      "name": "Reflex Repo",
+      "repo": "https://github.com/Reflex755/ReflexRepo",
+      "index": "https://raw.githubusercontent.com/Reflex755/ReflexRepo/refs/heads/builds/plugins.json",
+      "priority": 30,
+      "ok": true,
+      "rawCount": 2,
+      "includedCount": 2,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "cs-karma",
+      "name": "cs-karma",
+      "repo": "https://github.com/Kraptor123/cs-Karma",
+      "index": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+      "priority": 20,
+      "ok": true,
+      "rawCount": 33,
+      "includedCount": 31,
       "packageFailed": 0,
       "duplicateSkipped": 2
+    },
+    {
+      "id": "cnc",
+      "name": "CNC Repo (All Language)",
+      "repo": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+      "index": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+      "priority": 20,
+      "ok": true,
+      "rawCount": 36,
+      "includedCount": 34,
+      "packageFailed": 2,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "kekik",
+      "name": "Turkish Providers Repository | @KekikAkademi",
+      "repo": "https://github.com/maarrem/cs-Kekik",
+      "index": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+      "priority": 20,
+      "ok": true,
+      "rawCount": 43,
+      "includedCount": 43,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "cxxx",
+      "name": "CXXX",
+      "repo": "https://github.com/phisher98/CXXX",
+      "index": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+      "priority": 30,
+      "ok": true,
+      "rawCount": 70,
+      "includedCount": 66,
+      "packageFailed": 0,
+      "duplicateSkipped": 4
     }
   ],
   "inactiveSources": [
@@ -171,15 +291,45 @@
       "name": "Hexated CloudStream Extensions",
       "repo": "https://github.com/Hexated/CloudStream-Extensions",
       "reason": "No published builds/plugins.json index was available when last checked."
+    },
+    {
+      "id": "kekik-legacy",
+      "name": "Turkish Providers Repository | @KekikAkademi (legacy)",
+      "repo": "https://github.com/keyiflerolsun/Kekik-cloudstream",
+      "reason": "Archived legacy repository; superseded by the actively maintained maarrem/cs-Kekik fork."
     }
   ],
   "previousPlugins": 253,
-  "uniquePlugins": 253,
+  "uniquePlugins": 505,
   "packageHealth": {
-    "reachable": 253,
-    "failed": 3
+    "reachable": 505,
+    "failed": 7
   },
   "duplicates": [
+    {
+      "plugin": "AniKoto",
+      "selectedSource": "CNC Repo (All Language)",
+      "selectedVersion": 10,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 6,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeWorld",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 20,
+      "skippedSource": "cs-karma",
+      "skippedVersion": 5,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Anizone",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 10,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
     {
       "plugin": "BanglaPlex",
       "selectedSource": "Phisher Repo",
@@ -189,11 +339,83 @@
       "reason": "lower version"
     },
     {
+      "plugin": "FootReplays",
+      "selectedSource": "Redowan CloudStream",
+      "selectedVersion": 6,
+      "skippedSource": "cs-karma",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "FullPorner",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 2,
+      "skippedSource": "CXXX",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Hanime",
+      "selectedSource": "CXXX",
+      "selectedVersion": 7,
+      "skippedSource": "Nonton Indo",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Hqporner",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 4,
+      "skippedSource": "CXXX",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
       "plugin": "Idlix",
       "selectedSource": "Nonton Indo",
       "selectedVersion": 2,
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Krmzy",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 2,
+      "skippedSource": "Re-3arabi",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Latanime",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 9,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 5,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "LayarKaca",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 15,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MovieBox",
+      "selectedSource": "Desi Extensions",
+      "selectedVersion": 12,
+      "skippedSource": "Nonton Indo",
+      "skippedVersion": 2,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MovieBoxProvider",
+      "selectedSource": "CNC Repo (All Language)",
+      "selectedVersion": 52,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 36,
       "reason": "lower version"
     },
     {
@@ -219,6 +441,30 @@
       "skippedSource": "Cinephile",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "TheMoviesFlix",
+      "selectedSource": "raghav repo",
+      "selectedVersion": 22,
+      "skippedSource": "Redowan CloudStream",
+      "skippedVersion": 6,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Xhamster",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 1,
+      "skippedSource": "CXXX",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "XNXX",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 2,
+      "skippedSource": "CXXX",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
     }
   ],
   "failedPlugins": [
@@ -229,6 +475,30 @@
       "version": 3,
       "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3",
       "error": "InvalidURL: URL can't contain control characters. '/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3' (found at least ' ')"
+    },
+    {
+      "plugin": "CNC Verse",
+      "sourceId": "cnc",
+      "sourceName": "CNC Repo (All Language)",
+      "version": 114,
+      "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse.cs3",
+      "error": "InvalidURL: URL can't contain control characters. '/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse.cs3' (found at least ' ')"
+    },
+    {
+      "plugin": "CNC Verse Mobile",
+      "sourceId": "cnc",
+      "sourceName": "CNC Repo (All Language)",
+      "version": 10,
+      "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse Mobile.cs3",
+      "error": "InvalidURL: URL can't contain control characters. '/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse Mobile.cs3' (found at least ' ')"
+    },
+    {
+      "plugin": "Ctg Stream",
+      "sourceId": "desi",
+      "sourceName": "Desi Extensions",
+      "version": 2,
+      "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/Ctg Stream.cs3",
+      "error": "InvalidURL: URL can't contain control characters. '/Faisal0786/Desi/builds/Ctg Stream.cs3' (found at least ' ')"
     },
     {
       "plugin": "NguonCProvider",
@@ -245,13 +515,31 @@
       "version": 9,
       "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/SubNhanhProvider.cs3",
       "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "The Movie Flix",
+      "sourceId": "desi",
+      "sourceName": "Desi Extensions",
+      "version": 26,
+      "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The Movie Flix.cs3",
+      "error": "InvalidURL: URL can't contain control characters. '/Faisal0786/Desi/builds/The Movie Flix.cs3' (found at least ' ')"
     }
   ],
   "changes": {
-    "added": 0,
-    "updated": 0,
-    "unchanged": 253,
-    "removed": 0
+    "added": 261,
+    "updated": 30,
+    "unchanged": 214,
+    "removed": 9
   },
-  "removedPlugins": []
+  "removedPlugins": [
+    "AnimeflvIOProvider",
+    "AnimensionProvider",
+    "AniwatchProvider",
+    "AniwaveProvider",
+    "BflixProvider",
+    "ComamosRamenProvider",
+    "EstrenosDoramasProvider",
+    "PelisplusSOProvider",
+    "PlayhubProvider"
+  ]
 }

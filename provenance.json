@@ -26,6 +26,19 @@
     "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/9kMovies.cs3"
   },
   {
+    "plugin": "actionviewphotography",
+    "selectedVersion": 12,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98, megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/actionviewphotography.cs3"
+  },
+  {
     "plugin": "Aflaam",
     "selectedVersion": 1,
     "sourceId": "rearabi",
@@ -52,6 +65,19 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Akwam.cs3"
   },
   {
+    "plugin": "AllCalidadProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AllCalidadProvider.cs3"
+  },
+  {
     "plugin": "AllMovieLandProvider",
     "selectedVersion": 25,
     "sourceId": "phisher",
@@ -63,6 +89,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AllMovieLandProvider.cs3"
+  },
+  {
+    "plugin": "AllPornStream",
+    "selectedVersion": 6,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/AllPornStream.cs3"
   },
   {
     "plugin": "AllWish",
@@ -91,6 +130,33 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Alooytv.cs3"
   },
   {
+    "plugin": "AltaDefinizione",
+    "selectedVersion": 25,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "doGior",
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AltaDefinizione.cs3"
+  },
+  {
+    "plugin": "AniChan",
+    "selectedVersion": 14,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniChan.cs3"
+  },
+  {
     "plugin": "Anichi",
     "selectedVersion": 28,
     "sourceId": "phisher",
@@ -117,6 +183,19 @@
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Anichin.cs3"
   },
   {
+    "plugin": "Anidap",
+    "selectedVersion": 17,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Anidap.cs3"
+  },
+  {
     "plugin": "Anikage",
     "selectedVersion": 8,
     "sourceId": "phisher",
@@ -131,16 +210,29 @@
   },
   {
     "plugin": "AniKoto",
-    "selectedVersion": 6,
-    "sourceId": "phisher",
-    "sourceName": "Phisher Repo",
-    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
-    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "selectedVersion": 10,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
     "originalAuthors": [
-      "phisher98"
+      "NivinCNC"
     ],
-    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniKoto.cs3"
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/AniKoto.cs3"
+  },
+  {
+    "plugin": "AniKotoAnime",
+    "selectedVersion": 17,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "KSHITIJ8473"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniKotoAnime.cs3"
   },
   {
     "plugin": "Anilight",
@@ -208,6 +300,20 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anime4up.cs3"
   },
   {
+    "plugin": "AnimeAV",
+    "selectedVersion": 19,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor",
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeAV.cs3"
+  },
+  {
     "plugin": "Animeav1",
     "selectedVersion": 9,
     "sourceId": "phisher",
@@ -219,6 +325,34 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animeav1.cs3"
+  },
+  {
+    "plugin": "AnimeAV1Provider",
+    "selectedVersion": 1,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "PiterWeb"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AnimeAV1Provider.cs3"
+  },
+  {
+    "plugin": "AnimeciX",
+    "selectedVersion": 21,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun",
+      "inatchii",
+      "JustRelaxable"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/AnimeciX.cs3"
   },
   {
     "plugin": "AnimeCloud",
@@ -260,30 +394,17 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animedubhindi.cs3"
   },
   {
-    "plugin": "AnimeflvIOProvider",
-    "selectedVersion": 2,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-    "originalAuthors": [
-      "Stormunblessed"
-    ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeflvIOProvider.cs3"
-  },
-  {
     "plugin": "AnimeflvProvider",
-    "selectedVersion": 5,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 6,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeflvProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AnimeflvProvider.cs3"
   },
   {
     "plugin": "AnimeHayProvider",
@@ -299,6 +420,19 @@
     "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/AnimeHayProvider.cs3"
   },
   {
+    "plugin": "AnimeIdHentai",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/AnimeIdHentai.cs3"
+  },
+  {
     "plugin": "AnimeIndo",
     "selectedVersion": 1,
     "sourceId": "nontonindo",
@@ -312,17 +446,43 @@
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/AnimeIndo.cs3"
   },
   {
-    "plugin": "AnimeJlProvider",
-    "selectedVersion": 1,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "plugin": "AnimeInWeb",
+    "selectedVersion": 4,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
     "originalAuthors": [
-      "misajimenezmx"
+      "raghav"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeJlProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AnimeInWeb.cs3"
+  },
+  {
+    "plugin": "Animejara",
+    "selectedVersion": 4,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Animejara.cs3"
+  },
+  {
+    "plugin": "AnimeJlProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AnimeJlProvider.cs3"
   },
   {
     "plugin": "Animekhor",
@@ -351,19 +511,6 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animenosub.cs3"
   },
   {
-    "plugin": "AnimensionProvider",
-    "selectedVersion": 1,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-    "originalAuthors": [
-      "Stormunblessed"
-    ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimensionProvider.cs3"
-  },
-  {
     "plugin": "AnimeONProvider",
     "selectedVersion": 41,
     "sourceId": "cakestwix",
@@ -379,7 +526,7 @@
   },
   {
     "plugin": "AnimePahe",
-    "selectedVersion": 42,
+    "selectedVersion": 43,
     "sourceId": "phisher",
     "sourceName": "Phisher Repo",
     "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
@@ -430,6 +577,32 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animesalt.cs3"
   },
   {
+    "plugin": "AnimeSaturn",
+    "selectedVersion": 4,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AnimeSaturn.cs3"
+  },
+  {
+    "plugin": "AnimeSuge",
+    "selectedVersion": 10,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/AnimeSuge.cs3"
+  },
+  {
     "plugin": "AnimeUAProvider",
     "selectedVersion": 10,
     "sourceId": "cakestwix",
@@ -441,6 +614,20 @@
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeUAProvider.cs3"
+  },
+  {
+    "plugin": "AnimeUnity",
+    "selectedVersion": 17,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "doGior",
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AnimeUnity.cs3"
   },
   {
     "plugin": "AnimeVietsubProvider",
@@ -469,6 +656,33 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Animewitcher.cs3"
   },
   {
+    "plugin": "AnimeWorld",
+    "selectedVersion": 20,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "doGior",
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AnimeWorld.cs3"
+  },
+  {
+    "plugin": "AnimeWorldIndia",
+    "selectedVersion": 8,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AnimeWorldIndia.cs3"
+  },
+  {
     "plugin": "Animexin",
     "selectedVersion": 16,
     "sourceId": "phisher",
@@ -482,6 +696,45 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animexin.cs3"
   },
   {
+    "plugin": "AnimeYTX",
+    "selectedVersion": 9,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeYTX.cs3"
+  },
+  {
+    "plugin": "Animo",
+    "selectedVersion": 6,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Animo.cs3"
+  },
+  {
+    "plugin": "AniPM",
+    "selectedVersion": 4,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniPM.cs3"
+  },
+  {
     "plugin": "AniSnatch",
     "selectedVersion": 2,
     "sourceId": "phisher",
@@ -493,6 +746,32 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniSnatch.cs3"
+  },
+  {
+    "plugin": "AniStream",
+    "selectedVersion": 1,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/AniStream.cs3"
+  },
+  {
+    "plugin": "AniSuge",
+    "selectedVersion": 6,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniSuge.cs3"
   },
   {
     "plugin": "AnitubeinuaProvider",
@@ -521,30 +800,17 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniVortex.cs3"
   },
   {
-    "plugin": "AniwatchProvider",
-    "selectedVersion": 1,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "plugin": "AniWaves",
+    "selectedVersion": 7,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
     "originalAuthors": [
-      "Stormunblessed"
+      "raghav"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AniwatchProvider.cs3"
-  },
-  {
-    "plugin": "AniwaveProvider",
-    "selectedVersion": 20,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-    "originalAuthors": [
-      "Stormunblessed"
-    ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AniwaveProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniWaves.cs3"
   },
   {
     "plugin": "Aniworld",
@@ -573,6 +839,71 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anizone.cs3"
   },
   {
+    "plugin": "AreaDocumentalProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AreaDocumentalProvider.cs3"
+  },
+  {
+    "plugin": "AriaOfSorrow",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/AriaOfSorrow.cs3"
+  },
+  {
+    "plugin": "Arte",
+    "selectedVersion": 5,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "doGior, DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Arte.cs3"
+  },
+  {
+    "plugin": "Asianpinay",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Asianpinay.cs3"
+  },
+  {
+    "plugin": "AvatarAirbender",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/AvatarAirbender.cs3"
+  },
+  {
     "plugin": "BambooUAProvider",
     "selectedVersion": 13,
     "sourceId": "cakestwix",
@@ -597,6 +928,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/BanglaPlex.cs3"
+  },
+  {
+    "plugin": "BasketballReplays",
+    "selectedVersion": 4,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/BasketballReplays.cs3"
   },
   {
     "plugin": "BdixBdipTV",
@@ -703,17 +1047,44 @@
     "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixRoarZoneTV.cs3"
   },
   {
-    "plugin": "BflixProvider",
-    "selectedVersion": 8,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "plugin": "BelgeselX",
+    "selectedVersion": 12,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
     "originalAuthors": [
-      "Stormunblessed"
+      "keyiflerolsun",
+      "JustRelaxable"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/BflixProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/BelgeselX.cs3"
+  },
+  {
+    "plugin": "BilibiliProvider",
+    "selectedVersion": 36,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/BilibiliProvider.cs3"
+  },
+  {
+    "plugin": "BingeCloud",
+    "selectedVersion": 218,
+    "sourceId": "flummox",
+    "sourceName": "FLUMMOX Repo",
+    "sourceRepository": "https://github.com/FlummoxGamer/FLUMMOX-Repo",
+    "sourceIndex": "https://raw.githubusercontent.com/FlummoxGamer/FLUMMOX-Repo/builds/plugins.json",
+    "originalAuthors": [
+      "FLUMMOX"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/FlummoxGamer/FLUMMOX-Repo/builds/BingeCloud.cs3"
   },
   {
     "plugin": "BingedReview",
@@ -769,16 +1140,149 @@
   },
   {
     "plugin": "CablevisionHdProvider",
-    "selectedVersion": 4,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 7,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
-      "misajimenezmx"
+      "redblacker8"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CablevisionHdProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CablevisionHdProvider.cs3"
+  },
+  {
+    "plugin": "CalcioStreaming",
+    "selectedVersion": 20,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/CalcioStreaming.cs3"
+  },
+  {
+    "plugin": "Cam4",
+    "selectedVersion": 1,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Owen Cz"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Cam4.cs3"
+  },
+  {
+    "plugin": "CanliTV",
+    "selectedVersion": 10,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "Adippe",
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/CanliTV.cs3"
+  },
+  {
+    "plugin": "CastleTvProvider",
+    "selectedVersion": 40,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CastleTvProvider.cs3"
+  },
+  {
+    "plugin": "Castlevania",
+    "selectedVersion": 8,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Castlevania.cs3"
+  },
+  {
+    "plugin": "CatalogoGeneral",
+    "selectedVersion": 1,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CatalogoGeneral.cs3"
+  },
+  {
+    "plugin": "CatalogoHboMax",
+    "selectedVersion": 1,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CatalogoHboMax.cs3"
+  },
+  {
+    "plugin": "CatalogoInfantil",
+    "selectedVersion": 5,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CatalogoInfantil.cs3"
+  },
+  {
+    "plugin": "CatalogoNetflix",
+    "selectedVersion": 5,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CatalogoNetflix.cs3"
+  },
+  {
+    "plugin": "CB01",
+    "selectedVersion": 26,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "doGior",
+      "Bbshak",
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/CB01.cs3"
   },
   {
     "plugin": "Cee",
@@ -792,6 +1296,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Cee.cs3"
+  },
+  {
+    "plugin": "Chatrubate",
+    "selectedVersion": 4,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "luck731"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Chatrubate.cs3"
   },
   {
     "plugin": "Chikianimation",
@@ -860,16 +1377,16 @@
   },
   {
     "plugin": "CinecalidadProvider",
-    "selectedVersion": 5,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 7,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CinecalidadProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CinecalidadProvider.cs3"
   },
   {
     "plugin": "Cinefreak",
@@ -883,6 +1400,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Cinefreak.cs3"
+  },
+  {
+    "plugin": "CineHdPlusProvider",
+    "selectedVersion": 4,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CineHdPlusProvider.cs3"
   },
   {
     "plugin": "Cinemacity",
@@ -924,6 +1454,19 @@
     "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/CineStream.cs3"
   },
   {
+    "plugin": "CineTvProvider",
+    "selectedVersion": 35,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CineTvProvider.cs3"
+  },
+  {
     "plugin": "Cinevood",
     "selectedVersion": 11,
     "sourceId": "cinephile",
@@ -935,6 +1478,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/rockhero1234/cinephile",
     "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/Cinevood.cs3"
+  },
+  {
+    "plugin": "CizgiMax",
+    "selectedVersion": 8,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/CizgiMax.cs3"
   },
   {
     "plugin": "CoaninetProvider",
@@ -964,19 +1520,6 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Coflix.cs3"
   },
   {
-    "plugin": "ComamosRamenProvider",
-    "selectedVersion": 3,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-    "originalAuthors": [
-      "Stormunblessed"
-    ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/ComamosRamenProvider.cs3"
-  },
-  {
     "plugin": "Comix",
     "selectedVersion": 2,
     "sourceId": "phisher",
@@ -990,17 +1533,60 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Comix.cs3"
   },
   {
+    "plugin": "Contra",
+    "selectedVersion": 10,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Contra.cs3"
+  },
+  {
+    "plugin": "CornHubProvider",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed",
+      "Jace",
+      "Phisher98",
+      "Hexated",
+      "Coxju"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/CornHubProvider.cs3"
+  },
+  {
+    "plugin": "CricifyProvider",
+    "selectedVersion": 70,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3"
+  },
+  {
     "plugin": "CuevanaProvider",
-    "selectedVersion": 9,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 15,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CuevanaProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CuevanaProvider.cs3"
   },
   {
     "plugin": "DailymotionProvider",
@@ -1016,6 +1602,58 @@
     "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/DailymotionProvider.cs3"
   },
   {
+    "plugin": "DamiTVProvider",
+    "selectedVersion": 25,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "KSHITIJ8473"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/DamiTVProvider.cs3"
+  },
+  {
+    "plugin": "Ddizi",
+    "selectedVersion": 10,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Ddizi.cs3"
+  },
+  {
+    "plugin": "DeporTVProvider",
+    "selectedVersion": 31,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DeporTVProvider.cs3"
+  },
+  {
+    "plugin": "DesertStrike",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/DesertStrike.cs3"
+  },
+  {
     "plugin": "Desicinemas",
     "selectedVersion": 19,
     "sourceId": "phisher",
@@ -1029,6 +1667,45 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Desicinemas.cs3"
   },
   {
+    "plugin": "DesiSerialsProvider",
+    "selectedVersion": 33,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/DesiSerialsProvider.cs3"
+  },
+  {
+    "plugin": "Desisins",
+    "selectedVersion": 4,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "rockhero1234"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Desisins.cs3"
+  },
+  {
+    "plugin": "DesiXFlix",
+    "selectedVersion": 4,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "RowdyRushya"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/DesiXFlix.cs3"
+  },
+  {
     "plugin": "dima-toon",
     "selectedVersion": 1,
     "sourceId": "rearabi",
@@ -1040,6 +1717,138 @@
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/dima-toon.cs3"
+  },
+  {
+    "plugin": "DiviCast",
+    "selectedVersion": 1,
+    "sourceId": "reflex",
+    "sourceName": "Reflex Repo",
+    "sourceRepository": "https://github.com/Reflex755/ReflexRepo",
+    "sourceIndex": "https://raw.githubusercontent.com/Reflex755/ReflexRepo/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "Reflex1337",
+      "ErrorCode26"
+    ],
+    "originalRepositoryUrl": "https://github.com/Reflex755/ReflexRepo",
+    "packageUrl": "https://raw.githubusercontent.com/Reflex755/ReflexRepo/builds/DiviCast.cs3"
+  },
+  {
+    "plugin": "DiziBox",
+    "selectedVersion": 23,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziBox.cs3"
+  },
+  {
+    "plugin": "DiziKorea",
+    "selectedVersion": 29,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziKorea.cs3"
+  },
+  {
+    "plugin": "Dizilla",
+    "selectedVersion": 39,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Dizilla.cs3"
+  },
+  {
+    "plugin": "DiziMom",
+    "selectedVersion": 35,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziMom.cs3"
+  },
+  {
+    "plugin": "DiziPal",
+    "selectedVersion": 32,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun",
+      "muratcesmecioglu"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziPal.cs3"
+  },
+  {
+    "plugin": "DiziYou",
+    "selectedVersion": 23,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziYou.cs3"
+  },
+  {
+    "plugin": "DocumaniaTVProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DocumaniaTVProvider.cs3"
+  },
+  {
+    "plugin": "DocumentaryArea",
+    "selectedVersion": 2,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/DocumentaryArea.cs3"
+  },
+  {
+    "plugin": "DoFlixProvider",
+    "selectedVersion": 35,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/DoFlixProvider.cs3"
   },
   {
     "plugin": "Donghuastream",
@@ -1068,6 +1877,19 @@
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3"
   },
   {
+    "plugin": "Doom",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Doom.cs3"
+  },
+  {
     "plugin": "DoraBash",
     "selectedVersion": 14,
     "sourceId": "phisher",
@@ -1082,29 +1904,42 @@
   },
   {
     "plugin": "DoramasFlixProvider",
-    "selectedVersion": 5,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 8,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/DoramasFlixProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DoramasFlixProvider.cs3"
+  },
+  {
+    "plugin": "DoramasLatinoX",
+    "selectedVersion": 7,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/DoramasLatinoX.cs3"
   },
   {
     "plugin": "DoramasYTProvider",
-    "selectedVersion": 5,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 7,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/DoramasYTProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DoramasYTProvider.cs3"
   },
   {
     "plugin": "DoramyWorldProvider",
@@ -1118,6 +1953,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/DoramyWorldProvider.cs3"
+  },
+  {
+    "plugin": "Dubbindo",
+    "selectedVersion": 2,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Dubbindo.cs3"
   },
   {
     "plugin": "DudeFilms",
@@ -1160,6 +2008,19 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Egydead.cs3"
   },
   {
+    "plugin": "EinthusanProvider",
+    "selectedVersion": 37,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/EinthusanProvider.cs3"
+  },
+  {
     "plugin": "Elif",
     "selectedVersion": 1,
     "sourceId": "rearabi",
@@ -1200,16 +2061,29 @@
   },
   {
     "plugin": "EntrepeliculasyseriesProvider",
-    "selectedVersion": 6,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 9,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/EntrepeliculasyseriesProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/EntrepeliculasyseriesProvider.cs3"
+  },
+  {
+    "plugin": "Eporner",
+    "selectedVersion": 13,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "HindiProvider, megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Eporner.cs3"
   },
   {
     "plugin": "eseek",
@@ -1225,17 +2099,17 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/eseek.cs3"
   },
   {
-    "plugin": "EstrenosDoramasProvider",
-    "selectedVersion": 2,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "plugin": "Esheaq",
+    "selectedVersion": 21,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
     "originalAuthors": [
-      "Stormunblessed"
+      "kraptor"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/EstrenosDoramasProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Esheaq.cs3"
   },
   {
     "plugin": "Faselhd",
@@ -1277,6 +2151,19 @@
     "packageUrl": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/FilmapikProvider.cs3"
   },
   {
+    "plugin": "FilmBip",
+    "selectedVersion": 11,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmBip.cs3"
+  },
+  {
     "plugin": "Filmkita",
     "selectedVersion": 1,
     "sourceId": "cloudx",
@@ -1303,6 +2190,33 @@
     "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Filmlokal.cs3"
   },
   {
+    "plugin": "FilmMakinesi",
+    "selectedVersion": 40,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun",
+      "usdogu"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmMakinesi.cs3"
+  },
+  {
+    "plugin": "FilmModu",
+    "selectedVersion": 15,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmModu.cs3"
+  },
+  {
     "plugin": "Fivemovierulz",
     "selectedVersion": 8,
     "sourceId": "phisher",
@@ -1315,6 +2229,46 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Fivemovierulz.cs3"
+  },
+  {
+    "plugin": "FlappyBird",
+    "selectedVersion": 8,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/FlappyBird.cs3"
+  },
+  {
+    "plugin": "Flixlatam",
+    "selectedVersion": 8,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Flixlatam.cs3"
+  },
+  {
+    "plugin": "Footballia",
+    "selectedVersion": 9,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor",
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Footballia.cs3"
   },
   {
     "plugin": "FootReplays",
@@ -1343,6 +2297,72 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/FourKHDHub.cs3"
   },
   {
+    "plugin": "FreePornVideos",
+    "selectedVersion": 5,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/FreePornVideos.cs3"
+  },
+  {
+    "plugin": "FullHDFilm",
+    "selectedVersion": 35,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullHDFilm.cs3"
+  },
+  {
+    "plugin": "FullHDFilmizlesene",
+    "selectedVersion": 27,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullHDFilmizlesene.cs3"
+  },
+  {
+    "plugin": "FullPorner",
+    "selectedVersion": 2,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "Coxju, megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullPorner.cs3"
+  },
+  {
+    "plugin": "FullRaces",
+    "selectedVersion": 13,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor123",
+      "kerimmkirac"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/FullRaces.cs3"
+  },
+  {
     "plugin": "FullReplays",
     "selectedVersion": 6,
     "sourceId": "redowan",
@@ -1367,6 +2387,61 @@
     ],
     "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
     "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FullyMaza.cs3"
+  },
+  {
+    "plugin": "FXPrnHD",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Sora",
+      "keyiflerolsun",
+      "ramio23",
+      "phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/FXPrnHD.cs3"
+  },
+  {
+    "plugin": "Game2048",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Game2048.cs3"
+  },
+  {
+    "plugin": "Gnulahd",
+    "selectedVersion": 10,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3"
+  },
+  {
+    "plugin": "GoldenAudiobook",
+    "selectedVersion": 33,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/GoldenAudiobook.cs3"
   },
   {
     "plugin": "GoldenAudiobooks",
@@ -1396,17 +2471,123 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Goojara.cs3"
   },
   {
-    "plugin": "Hanime",
-    "selectedVersion": 3,
-    "sourceId": "nontonindo",
-    "sourceName": "Nonton Indo",
-    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
-    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "plugin": "GoTaku",
+    "selectedVersion": 4,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
     "originalAuthors": [
-      "ExtremeBoy"
+      "raghav"
     ],
-    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
-    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Hanime.cs3"
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/GoTaku.cs3"
+  },
+  {
+    "plugin": "GuardaPlay",
+    "selectedVersion": 1,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/GuardaPlay.cs3"
+  },
+  {
+    "plugin": "GuardaSerie",
+    "selectedVersion": 7,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/GuardaSerie.cs3"
+  },
+  {
+    "plugin": "Hahomoe",
+    "selectedVersion": 8,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "ArjixWasTaken"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Hahomoe.cs3"
+  },
+  {
+    "plugin": "Hanime",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "ArjixWasTaken",
+      "Jace"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Hanime.cs3"
+  },
+  {
+    "plugin": "Happy2hub",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Happy2hub.cs3"
+  },
+  {
+    "plugin": "HdAbla",
+    "selectedVersion": 2,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "kerimmkirac"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/HdAbla.cs3"
+  },
+  {
+    "plugin": "HDFilmCehennemi",
+    "selectedVersion": 23,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "hexated",
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/HDFilmCehennemi.cs3"
+  },
+  {
+    "plugin": "HDFullProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/HDFullProvider.cs3"
   },
   {
     "plugin": "HDhub4u",
@@ -1433,6 +2614,71 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hdmovie2.cs3"
+  },
+  {
+    "plugin": "HDOProvider",
+    "selectedVersion": 35,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/HDOProvider.cs3"
+  },
+  {
+    "plugin": "HDrezkaProvider",
+    "selectedVersion": 35,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated, NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/HDrezkaProvider.cs3"
+  },
+  {
+    "plugin": "HentaiCity",
+    "selectedVersion": 1,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "SIX"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/HentaiCity.cs3"
+  },
+  {
+    "plugin": "HentaiHaven",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Jace"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/HentaiHaven.cs3"
+  },
+  {
+    "plugin": "HentaiPro",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/HentaiPro.cs3"
   },
   {
     "plugin": "HentaiUkrProvider",
@@ -1500,6 +2746,45 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hindmoviez.cs3"
   },
   {
+    "plugin": "Hqporner",
+    "selectedVersion": 4,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "Phishe"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Hqporner.cs3"
+  },
+  {
+    "plugin": "HStream",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/HStream.cs3"
+  },
+  {
+    "plugin": "Huhu",
+    "selectedVersion": 7,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Huhu.cs3"
+  },
+  {
     "plugin": "Idlix",
     "selectedVersion": 2,
     "sourceId": "nontonindo",
@@ -1526,6 +2811,46 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IdlixProvider.cs3"
   },
   {
+    "plugin": "IfsaLog",
+    "selectedVersion": 3,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3"
+  },
+  {
+    "plugin": "InatBox",
+    "selectedVersion": 24,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "JustRelaxable",
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/InatBox.cs3"
+  },
+  {
+    "plugin": "IncestFlix",
+    "selectedVersion": 1,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Cascade"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/IncestFlix.cs3"
+  },
+  {
     "plugin": "Indomax",
     "selectedVersion": 1,
     "sourceId": "cloudx",
@@ -1550,6 +2875,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/recloudstream/extensions",
     "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InternetArchiveProvider.cs3"
+  },
+  {
+    "plugin": "InternetChicks",
+    "selectedVersion": 5,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/InternetChicks.cs3"
   },
   {
     "plugin": "InvidiousProvider",
@@ -1591,6 +2929,150 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IStreamFlare.cs3"
   },
   {
+    "plugin": "Iwatchtheoffice",
+    "selectedVersion": 3,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Iwatchtheoffice.cs3"
+  },
+  {
+    "plugin": "ixiporn",
+    "selectedVersion": 16,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/ixiporn.cs3"
+  },
+  {
+    "plugin": "IzziGoProvider",
+    "selectedVersion": 16,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/IzziGoProvider.cs3"
+  },
+  {
+    "plugin": "JackieChan",
+    "selectedVersion": 4,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/JackieChan.cs3"
+  },
+  {
+    "plugin": "JavFreeProvider",
+    "selectedVersion": 9,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Jace"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JavFreeProvider.cs3"
+  },
+  {
+    "plugin": "JavGuru",
+    "selectedVersion": 6,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Jace"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JavGuru.cs3"
+  },
+  {
+    "plugin": "JAVHd",
+    "selectedVersion": 8,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "luck731",
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JAVHd.cs3"
+  },
+  {
+    "plugin": "JavMost",
+    "selectedVersion": 6,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Jace"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JavMost.cs3"
+  },
+  {
+    "plugin": "JAVPoint",
+    "selectedVersion": 13,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JAVPoint.cs3"
+  },
+  {
+    "plugin": "Javtiful",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Javtiful.cs3"
+  },
+  {
+    "plugin": "Javx",
+    "selectedVersion": 1,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Jav"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Javx.cs3"
+  },
+  {
     "plugin": "Jellyfin",
     "selectedVersion": 7,
     "sourceId": "phisher",
@@ -1604,17 +3086,69 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Jellyfin.cs3"
   },
   {
+    "plugin": "JetFilmizle",
+    "selectedVersion": 41,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/JetFilmizle.cs3"
+  },
+  {
     "plugin": "JKAnimeProvider",
-    "selectedVersion": 8,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 9,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/JKAnimeProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/JKAnimeProvider.cs3"
+  },
+  {
+    "plugin": "JPFilms",
+    "selectedVersion": 9,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/JPFilms.cs3"
+  },
+  {
+    "plugin": "JustPlay",
+    "selectedVersion": 6,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "KSHITIJ8473"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/JustPlay.cs3"
+  },
+  {
+    "plugin": "Kalite18",
+    "selectedVersion": 2,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "kerimmkirac"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Kalite18.cs3"
   },
   {
     "plugin": "Kartoons",
@@ -1641,6 +3175,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
     "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Kawanfilm.cs3"
+  },
+  {
+    "plugin": "Kdesa",
+    "selectedVersion": 3,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "KSHITIJ8473"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Kdesa.cs3"
   },
   {
     "plugin": "Kickassanime",
@@ -1696,6 +3243,20 @@
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoVezhaProvider.cs3"
   },
   {
+    "plugin": "KissKH",
+    "selectedVersion": 5,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor",
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/KissKH.cs3"
+  },
+  {
     "plugin": "KisskhProvider",
     "selectedVersion": 22,
     "sourceId": "phisher",
@@ -1748,17 +3309,56 @@
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KlonTVProvider.cs3"
   },
   {
-    "plugin": "Krmzy",
-    "selectedVersion": 1,
-    "sourceId": "rearabi",
-    "sourceName": "Re-3arabi",
-    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
-    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "plugin": "KoreanTurk",
+    "selectedVersion": 7,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
     "originalAuthors": [
-      "Abodabodd"
+      "keyiflerolsun"
     ],
-    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
-    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Krmzy.cs3"
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/KoreanTurk.cs3"
+  },
+  {
+    "plugin": "Krmzy",
+    "selectedVersion": 2,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Krmzy.cs3"
+  },
+  {
+    "plugin": "KRX18",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/KRX18.cs3"
+  },
+  {
+    "plugin": "KultFilmler",
+    "selectedVersion": 14,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/KultFilmler.cs3"
   },
   {
     "plugin": "Kuramanime",
@@ -1788,56 +3388,70 @@
   },
   {
     "plugin": "LACartoonsProvider",
-    "selectedVersion": 3,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 5,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/LACartoonsProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/LACartoonsProvider.cs3"
+  },
+  {
+    "plugin": "LaMovieProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/LaMovieProvider.cs3"
   },
   {
     "plugin": "Latanime",
-    "selectedVersion": 5,
-    "sourceId": "phisher",
-    "sourceName": "Phisher Repo",
-    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
-    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "selectedVersion": 9,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
     "originalAuthors": [
-      "Phisher98"
+      "ByAyzen"
     ],
-    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Latanime.cs3"
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Latanime.cs3"
   },
   {
     "plugin": "LatAnimeProvider",
-    "selectedVersion": 2,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 5,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
-      "misajimenezmx"
+      "redblacker8"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/LatAnimeProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/LatAnimeProvider.cs3"
   },
   {
     "plugin": "LayarKaca",
-    "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "selectedVersion": 15,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
     "originalAuthors": [
-      "Hexated",
-      "Asm0d3usX"
+      "kraptor",
+      "Phisher98",
+      "Hexated"
     ],
-    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/LayarKaca.cs3"
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/LayarKaca.cs3"
   },
   {
     "plugin": "LayarKacaProvider",
@@ -1866,6 +3480,72 @@
     "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/LayarWarna.cs3"
   },
   {
+    "plugin": "LibraryOfLadev",
+    "selectedVersion": 3,
+    "sourceId": "reflex",
+    "sourceName": "Reflex Repo",
+    "sourceRepository": "https://github.com/Reflex755/ReflexRepo",
+    "sourceIndex": "https://raw.githubusercontent.com/Reflex755/ReflexRepo/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ErrorCode26",
+      "Reflex1337"
+    ],
+    "originalRepositoryUrl": "https://github.com/Reflex755/ReflexRepo",
+    "packageUrl": "https://raw.githubusercontent.com/Reflex755/ReflexRepo/builds/LibraryOfLadev.cs3"
+  },
+  {
+    "plugin": "LibriVoxAudiobook",
+    "selectedVersion": 33,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LibriVoxAudiobook.cs3"
+  },
+  {
+    "plugin": "LittleMermaid",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/LittleMermaid.cs3"
+  },
+  {
+    "plugin": "LIVETVProvider",
+    "selectedVersion": 37,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav,cnc"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/LIVETVProvider.cs3"
+  },
+  {
+    "plugin": "LivXowProvider",
+    "selectedVersion": 19,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LivXowProvider.cs3"
+  },
+  {
     "plugin": "Lodynet",
     "selectedVersion": 2,
     "sourceId": "rearabi",
@@ -1877,6 +3557,45 @@
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Lodynet.cs3"
+  },
+  {
+    "plugin": "Longvideos",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Longvideos.cs3"
+  },
+  {
+    "plugin": "M3UPlaylistPlayerProvider",
+    "selectedVersion": 18,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/M3UPlaylistPlayerProvider.cs3"
+  },
+  {
+    "plugin": "Mangoporn",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "HindiProvider"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Mangoporn.cs3"
   },
   {
     "plugin": "MassTamilanProvider",
@@ -1892,6 +3611,19 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MassTamilanProvider.cs3"
   },
   {
+    "plugin": "MedalOfHonor",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/MedalOfHonor.cs3"
+  },
+  {
     "plugin": "Megakino",
     "selectedVersion": 6,
     "sourceId": "phisher",
@@ -1903,6 +3635,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Megakino.cs3"
+  },
+  {
+    "plugin": "MetalSlugAdvance",
+    "selectedVersion": 7,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/MetalSlugAdvance.cs3"
   },
   {
     "plugin": "Microtv",
@@ -1931,30 +3676,82 @@
     "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/MidasXXi.cs3"
   },
   {
+    "plugin": "MinishCap",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/MinishCap.cs3"
+  },
+  {
+    "plugin": "Miruro",
+    "selectedVersion": 7,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Miruro.cs3"
+  },
+  {
+    "plugin": "MissAV",
+    "selectedVersion": 9,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "luck731"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/MissAV.cs3"
+  },
+  {
+    "plugin": "MLSBDProvider",
+    "selectedVersion": 33,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MLSBDProvider.cs3"
+  },
+  {
     "plugin": "MonoschinosProvider",
-    "selectedVersion": 6,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 8,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/MonoschinosProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/MonoschinosProvider.cs3"
   },
   {
     "plugin": "MovieBox",
-    "selectedVersion": 2,
-    "sourceId": "nontonindo",
-    "sourceName": "Nonton Indo",
-    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
-    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "selectedVersion": 12,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
     "originalAuthors": [
-      "ExtremeBoy"
+      "Faisal"
     ],
-    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
-    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/MovieBox.cs3"
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/MovieBox.cs3"
   },
   {
     "plugin": "Moviebox",
@@ -1971,16 +3768,16 @@
   },
   {
     "plugin": "MovieBoxProvider",
-    "selectedVersion": 36,
-    "sourceId": "phisher",
-    "sourceName": "Phisher Repo",
-    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
-    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "selectedVersion": 52,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
     "originalAuthors": [
-      "NivinCNC,Phisher98"
+      "NivinCNC"
     ],
-    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MovieBoxProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProvider.cs3"
   },
   {
     "plugin": "MovieboxProvider",
@@ -1994,6 +3791,32 @@
     ],
     "originalRepositoryUrl": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
     "packageUrl": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/MovieboxProvider.cs3"
+  },
+  {
+    "plugin": "MovieBoxProviderIN",
+    "selectedVersion": 54,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProviderIN.cs3"
+  },
+  {
+    "plugin": "MovieLinkBDProvider",
+    "selectedVersion": 22,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieLinkBDProvider.cs3"
   },
   {
     "plugin": "Movies4u",
@@ -2035,6 +3858,19 @@
     "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/Moviesmod.cs3"
   },
   {
+    "plugin": "MoviezwapProvider",
+    "selectedVersion": 32,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MoviezwapProvider.cs3"
+  },
+  {
     "plugin": "MoviPK",
     "selectedVersion": 4,
     "sourceId": "redowan",
@@ -2046,6 +3882,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
     "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/MoviPK.cs3"
+  },
+  {
+    "plugin": "Movix",
+    "selectedVersion": 31,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Movix.cs3"
   },
   {
     "plugin": "Mp4Moviez",
@@ -2074,6 +3923,19 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MPlayerProvider.cs3"
   },
   {
+    "plugin": "Multimovies",
+    "selectedVersion": 7,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav,phisher,csksy"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Multimovies.cs3"
+  },
+  {
     "plugin": "MultiMoviesProvider",
     "selectedVersion": 54,
     "sourceId": "phisher",
@@ -2088,16 +3950,16 @@
   },
   {
     "plugin": "MundoDonghuaProvider",
-    "selectedVersion": 3,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 4,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/MundoDonghuaProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/MundoDonghuaProvider.cs3"
   },
   {
     "plugin": "MyCimaProvider",
@@ -2111,6 +3973,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/MyCimaProvider.cs3"
+  },
+  {
+    "plugin": "Nekokun",
+    "selectedVersion": 4,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Nekokun.cs3"
   },
   {
     "plugin": "Nekopoi",
@@ -2139,6 +4014,33 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Netcinez.cs3"
   },
   {
+    "plugin": "NetflavProvider",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/NetflavProvider.cs3"
+  },
+  {
+    "plugin": "NetflixMirror",
+    "selectedVersion": 32,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "Horis, megix",
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/NetflixMirror.cs3"
+  },
+  {
     "plugin": "Netmirror",
     "selectedVersion": 46,
     "sourceId": "netmirror",
@@ -2150,6 +4052,32 @@
     ],
     "originalRepositoryUrl": "https://github.com/Sushan64/NetMirror-Extension",
     "packageUrl": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/Netmirror.cs3"
+  },
+  {
+    "plugin": "NetNaija",
+    "selectedVersion": 17,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NetNaija.cs3"
+  },
+  {
+    "plugin": "NetNaija-box",
+    "selectedVersion": 2,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NetNaija-box.cs3"
   },
   {
     "plugin": "Ngefilm",
@@ -2178,6 +4106,19 @@
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Nimegami.cs3"
   },
   {
+    "plugin": "NineAnime",
+    "selectedVersion": 6,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NineAnime.cs3"
+  },
+  {
     "plugin": "Nomat",
     "selectedVersion": 1,
     "sourceId": "cloudx",
@@ -2189,6 +4130,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
     "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Nomat.cs3"
+  },
+  {
+    "plugin": "NoodleMagazineProvider",
+    "selectedVersion": 14,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98, Coxju, megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/NoodleMagazineProvider.cs3"
   },
   {
     "plugin": "ObejrzyjTo",
@@ -2230,6 +4184,19 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OHLI24.cs3"
   },
   {
+    "plugin": "OK",
+    "selectedVersion": 8,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OK.cs3"
+  },
+  {
     "plugin": "OnePace",
     "selectedVersion": 23,
     "sourceId": "phisher",
@@ -2241,6 +4208,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OnePace.cs3"
+  },
+  {
+    "plugin": "OnePiece",
+    "selectedVersion": 16,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/OnePiece.cs3"
   },
   {
     "plugin": "OneTouchTV",
@@ -2256,6 +4236,45 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OneTouchTV.cs3"
   },
   {
+    "plugin": "OnlineSerieTV",
+    "selectedVersion": 4,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/OnlineSerieTV.cs3"
+  },
+  {
+    "plugin": "Onlyjerk",
+    "selectedVersion": 10,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Onlyjerk.cs3"
+  },
+  {
+    "plugin": "OnShort",
+    "selectedVersion": 2,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OnShort.cs3"
+  },
+  {
     "plugin": "OPhimProvider",
     "selectedVersion": 10,
     "sourceId": "vietnam",
@@ -2267,6 +4286,19 @@
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
     "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/OPhimProvider.cs3"
+  },
+  {
+    "plugin": "OpJav",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Jace"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/OpJav.cs3"
   },
   {
     "plugin": "Oploverz",
@@ -2295,6 +4327,32 @@
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Otakudesu.cs3"
   },
   {
+    "plugin": "Otakutsu",
+    "selectedVersion": 3,
+    "sourceId": "flummox",
+    "sourceName": "FLUMMOX Repo",
+    "sourceRepository": "https://github.com/FlummoxGamer/FLUMMOX-Repo",
+    "sourceIndex": "https://raw.githubusercontent.com/FlummoxGamer/FLUMMOX-Repo/builds/plugins.json",
+    "originalAuthors": [
+      "FLUMMOX"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/FlummoxGamer/FLUMMOX-Repo/builds/Otakutsu.cs3"
+  },
+  {
+    "plugin": "OttSource",
+    "selectedVersion": 7,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/OttSource.cs3"
+  },
+  {
     "plugin": "Pahe",
     "selectedVersion": 1,
     "sourceId": "nontonindo",
@@ -2308,69 +4366,69 @@
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Pahe.cs3"
   },
   {
-    "plugin": "PeliculasFlixProvider",
+    "plugin": "Paradisehill",
     "selectedVersion": 1,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Sora"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Paradisehill.cs3"
+  },
+  {
+    "plugin": "PeliculasFlixProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PeliculasFlixProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/PeliculasFlixProvider.cs3"
   },
   {
     "plugin": "PelispediaProvider",
-    "selectedVersion": 5,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 7,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelispediaProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/PelispediaProvider.cs3"
   },
   {
     "plugin": "Pelisplus4KProvider",
-    "selectedVersion": 6,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 13,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/Pelisplus4KProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/Pelisplus4KProvider.cs3"
   },
   {
     "plugin": "PelisplusHDProvider",
-    "selectedVersion": 5,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 10,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelisplusHDProvider.cs3"
-  },
-  {
-    "plugin": "PelisplusSOProvider",
-    "selectedVersion": 3,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-    "originalAuthors": [
-      "Stormunblessed"
-    ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelisplusSOProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/PelisplusHDProvider.cs3"
   },
   {
     "plugin": "Pencurimovie",
@@ -2384,6 +4442,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pencurimovie.cs3"
+  },
+  {
+    "plugin": "Perverzija",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "coxju, megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Perverzija.cs3"
   },
   {
     "plugin": "PhimLongTiengProvider",
@@ -2425,6 +4496,19 @@
     "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimTuoiThoProvider.cs3"
   },
   {
+    "plugin": "PikashowProvider",
+    "selectedVersion": 32,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PikashowProvider.cs3"
+  },
+  {
     "plugin": "Pinoymoviepedia",
     "selectedVersion": 5,
     "sourceId": "phisher",
@@ -2451,17 +4535,30 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Piratexplay.cs3"
   },
   {
-    "plugin": "PlayhubProvider",
-    "selectedVersion": 1,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "plugin": "PlayFyProvider",
+    "selectedVersion": 13,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
     "originalAuthors": [
-      "Stormunblessed"
+      "NivinCNC"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PlayhubProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayFyProvider.cs3"
+  },
+  {
+    "plugin": "PlayZTVProvider",
+    "selectedVersion": 41,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayZTVProvider.cs3"
   },
   {
     "plugin": "Pmsm",
@@ -2475,6 +4572,162 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pmsm.cs3"
+  },
+  {
+    "plugin": "Pokemon",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Pokemon.cs3"
+  },
+  {
+    "plugin": "Porn4fans",
+    "selectedVersion": 5,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Porn4fans.cs3"
+  },
+  {
+    "plugin": "Porngrey",
+    "selectedVersion": 1,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Porngrey.cs3"
+  },
+  {
+    "plugin": "PornHits",
+    "selectedVersion": 9,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98, Coxju"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/PornHits.cs3"
+  },
+  {
+    "plugin": "Pornhoarder",
+    "selectedVersion": 8,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "luck731"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Pornhoarder.cs3"
+  },
+  {
+    "plugin": "Pornken",
+    "selectedVersion": 5,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Coxju"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Pornken.cs3"
+  },
+  {
+    "plugin": "Pornmz",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Pornmz.cs3"
+  },
+  {
+    "plugin": "PornoAnne",
+    "selectedVersion": 3,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "kerimmkirac"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/PornoAnne.cs3"
+  },
+  {
+    "plugin": "Pornobae",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "HindiProvider"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Pornobae.cs3"
+  },
+  {
+    "plugin": "PornOne",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "luck731"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/PornOne.cs3"
+  },
+  {
+    "plugin": "Porntrex",
+    "selectedVersion": 4,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Coxju"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Porntrex.cs3"
+  },
+  {
+    "plugin": "PrinceOfPersia",
+    "selectedVersion": 10,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/PrinceOfPersia.cs3"
   },
   {
     "plugin": "PublicSportsIPTV",
@@ -2516,6 +4769,71 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/QuickIPTV.cs3"
   },
   {
+    "plugin": "RadioIndiaProvider",
+    "selectedVersion": 33,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/RadioIndiaProvider.cs3"
+  },
+  {
+    "plugin": "RaghavAnime",
+    "selectedVersion": 76,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RaghavAnime.cs3"
+  },
+  {
+    "plugin": "RaghavAnimeKitsu",
+    "selectedVersion": 28,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RaghavAnimeKitsu.cs3"
+  },
+  {
+    "plugin": "RareAnimesIndia",
+    "selectedVersion": 3,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RareAnimesIndia.cs3"
+  },
+  {
+    "plugin": "RareFilmm",
+    "selectedVersion": 3,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/RareFilmm.cs3"
+  },
+  {
     "plugin": "Reanime",
     "selectedVersion": 3,
     "sourceId": "phisher",
@@ -2527,6 +4845,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Reanime.cs3"
+  },
+  {
+    "plugin": "ReAnime",
+    "selectedVersion": 4,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "KSHITIJ8473"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/ReAnime.cs3"
   },
   {
     "plugin": "Rebahin",
@@ -2542,6 +4873,22 @@
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Rebahin.cs3"
   },
   {
+    "plugin": "RecTV",
+    "selectedVersion": 97,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun",
+      "yusiqo",
+      "inatchii",
+      "JustRelaxable"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/RecTV.cs3"
+  },
+  {
     "plugin": "Replaymatch",
     "selectedVersion": 2,
     "sourceId": "rearabi",
@@ -2555,6 +4902,32 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Replaymatch.cs3"
   },
   {
+    "plugin": "ReplayZone",
+    "selectedVersion": 4,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/ReplayZone.cs3"
+  },
+  {
+    "plugin": "ReyDonghuaProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/ReyDonghuaProvider.cs3"
+  },
+  {
     "plugin": "RingZ",
     "selectedVersion": 12,
     "sourceId": "phisher",
@@ -2566,6 +4939,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/RingZ.cs3"
+  },
+  {
+    "plugin": "Rtally",
+    "selectedVersion": 49,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan, NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Rtally.cs3"
   },
   {
     "plugin": "Sarangfilm",
@@ -2594,6 +4980,32 @@
     "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Savefilm.cs3"
   },
   {
+    "plugin": "SDmovies",
+    "selectedVersion": 4,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/SDmovies.cs3"
+  },
+  {
+    "plugin": "SectionOrganizer",
+    "selectedVersion": 4,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "RowdyRushya, Phisher98, DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/SectionOrganizer.cs3"
+  },
+  {
     "plugin": "SemiRebahin",
     "selectedVersion": 1,
     "sourceId": "nontonindo",
@@ -2605,6 +5017,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
     "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/SemiRebahin.cs3"
+  },
+  {
+    "plugin": "Senshi",
+    "selectedVersion": 8,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Senshi.cs3"
   },
   {
     "plugin": "SerialnoProvider",
@@ -2621,29 +5046,82 @@
   },
   {
     "plugin": "SeriesflixProvider",
-    "selectedVersion": 2,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 4,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SeriesflixProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/SeriesflixProvider.cs3"
   },
   {
     "plugin": "SeriesMetroProvider",
-    "selectedVersion": 3,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 4,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SeriesMetroProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/SeriesMetroProvider.cs3"
+  },
+  {
+    "plugin": "SeriousSam",
+    "selectedVersion": 4,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/SeriousSam.cs3"
+  },
+  {
+    "plugin": "SetFilmIzle",
+    "selectedVersion": 24,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SetFilmIzle.cs3"
+  },
+  {
+    "plugin": "Sextb",
+    "selectedVersion": 3,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "luck731"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Sextb.cs3"
+  },
+  {
+    "plugin": "SezonlukDizi",
+    "selectedVersion": 6,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun",
+      "JustRelaxable"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SezonlukDizi.cs3"
   },
   {
     "plugin": "Shahid4u",
@@ -2698,6 +5176,32 @@
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SimpsonsUATvProvider.cs3"
   },
   {
+    "plugin": "SinemaCX",
+    "selectedVersion": 18,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SinemaCX.cs3"
+  },
+  {
+    "plugin": "SKTechProvider",
+    "selectedVersion": 57,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SKTechProvider.cs3"
+  },
+  {
     "plugin": "SkymoviesHD",
     "selectedVersion": 1,
     "sourceId": "cinephile",
@@ -2711,17 +5215,135 @@
     "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/SkymoviesHD.cs3"
   },
   {
-    "plugin": "SoloLatinoProvider",
-    "selectedVersion": 1,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "plugin": "Sokuja",
+    "selectedVersion": 3,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
     "originalAuthors": [
-      "misajimenezmx"
+      "ByAyzen"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SoloLatinoProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Sokuja.cs3"
+  },
+  {
+    "plugin": "SoloLatinoProvider",
+    "selectedVersion": 8,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/SoloLatinoProvider.cs3"
+  },
+  {
+    "plugin": "spankbang",
+    "selectedVersion": 10,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/spankbang.cs3"
+  },
+  {
+    "plugin": "SportzxProvider",
+    "selectedVersion": 24,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SportzxProvider.cs3"
+  },
+  {
+    "plugin": "Streamed",
+    "selectedVersion": 29,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Streamed.cs3"
+  },
+  {
+    "plugin": "StreamedPk",
+    "selectedVersion": 12,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "RAGHAV"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/StreamedPk.cs3"
+  },
+  {
+    "plugin": "StreamedProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "redblacker8"
+    ],
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/StreamedProvider.cs3"
+  },
+  {
+    "plugin": "StreamFlixProvider",
+    "selectedVersion": 34,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/StreamFlixProvider.cs3"
+  },
+  {
+    "plugin": "StreamHubOne",
+    "selectedVersion": 61,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3"
+  },
+  {
+    "plugin": "StreamingCommunity",
+    "selectedVersion": 53,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "Nanduuu03",
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3"
   },
   {
     "plugin": "StreamPlay",
@@ -2736,6 +5358,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StreamPlay.cs3"
+  },
+  {
+    "plugin": "Stremio",
+    "selectedVersion": 14,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated, phisher98, DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Stremio.cs3"
   },
   {
     "plugin": "StremioAddon",
@@ -2764,6 +5399,84 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StremioX.cs3"
   },
   {
+    "plugin": "SubscriptionManager",
+    "selectedVersion": 16,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SubscriptionManager.cs3"
+  },
+  {
+    "plugin": "Subsplease",
+    "selectedVersion": 4,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Subsplease.cs3"
+  },
+  {
+    "plugin": "Supercartoons",
+    "selectedVersion": 2,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Supercartoons.cs3"
+  },
+  {
+    "plugin": "SuperFilmGeldi",
+    "selectedVersion": 22,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SuperFilmGeldi.cs3"
+  },
+  {
+    "plugin": "SuperJav",
+    "selectedVersion": 5,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/SuperJav.cs3"
+  },
+  {
+    "plugin": "SuperMario",
+    "selectedVersion": 14,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/SuperMario.cs3"
+  },
+  {
     "plugin": "SuperStream",
     "selectedVersion": 38,
     "sourceId": "phisher",
@@ -2777,6 +5490,19 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/SuperStream.cs3"
   },
   {
+    "plugin": "SxyPrn",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Coxju, megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/SxyPrn.cs3"
+  },
+  {
     "plugin": "SyncPlugin",
     "selectedVersion": 3,
     "sourceId": "cakestwix",
@@ -2788,6 +5514,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3"
+  },
+  {
+    "plugin": "SyncStream",
+    "selectedVersion": 11,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/SyncStream.cs3"
   },
   {
     "plugin": "Syria-live",
@@ -2816,30 +5555,134 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Tamilblasters.cs3"
   },
   {
-    "plugin": "TheMoviesFlix",
-    "selectedVersion": 6,
-    "sourceId": "redowan",
-    "sourceName": "Redowan CloudStream",
-    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
-    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "plugin": "TamilDhoolProvider",
+    "selectedVersion": 39,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
     "originalAuthors": [
-      "salman731,Redowan"
+      "NivinCNC"
     ],
-    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
-    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/TheMoviesFlix.cs3"
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/TamilDhoolProvider.cs3"
+  },
+  {
+    "plugin": "Tamilian",
+    "selectedVersion": 32,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Tamilian.cs3"
+  },
+  {
+    "plugin": "TamilToon",
+    "selectedVersion": 7,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Toon"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/TamilToon.cs3"
+  },
+  {
+    "plugin": "TamilUltraProvider",
+    "selectedVersion": 40,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/TamilUltraProvider.cs3"
+  },
+  {
+    "plugin": "TekkenAdvance",
+    "selectedVersion": 7,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/TekkenAdvance.cs3"
+  },
+  {
+    "plugin": "TheMoviesFlix",
+    "selectedVersion": 22,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TheMoviesFlix.cs3"
   },
   {
     "plugin": "TioAnimeProvider",
-    "selectedVersion": 3,
-    "sourceId": "storm",
-    "sourceName": "Storm Extensions",
-    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
-    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "selectedVersion": 4,
+    "sourceId": "storm-redblacker8",
+    "sourceName": "Storm-ext Fork by redblacker8",
+    "sourceRepository": "https://github.com/redblacker8/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
     "originalAuthors": [
       "Stormunblessed"
     ],
-    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/TioAnimeProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/TioAnimeProvider.cs3"
+  },
+  {
+    "plugin": "TLCtr",
+    "selectedVersion": 19,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TLCtr.cs3"
+  },
+  {
+    "plugin": "TollyPro",
+    "selectedVersion": 26,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/TollyPro.cs3"
+  },
+  {
+    "plugin": "TombRaider",
+    "selectedVersion": 1,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/TombRaider.cs3"
   },
   {
     "plugin": "ToonHub",
@@ -2933,6 +5776,72 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/TorraStream.cs3"
   },
   {
+    "plugin": "Torrentio",
+    "selectedVersion": 9,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "doGior",
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Torrentio.cs3"
+  },
+  {
+    "plugin": "TorrentsV1",
+    "selectedVersion": 19,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TorrentsV1.cs3"
+  },
+  {
+    "plugin": "TRanimaci",
+    "selectedVersion": 17,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TRanimaci.cs3"
+  },
+  {
+    "plugin": "TRasyalog",
+    "selectedVersion": 52,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TRasyalog.cs3"
+  },
+  {
+    "plugin": "TrendyPorn",
+    "selectedVersion": 4,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/TrendyPorn.cs3"
+  },
+  {
     "plugin": "TukTukcima",
     "selectedVersion": 1,
     "sourceId": "rearabi",
@@ -2972,6 +5881,32 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Tuniflix.cs3"
   },
   {
+    "plugin": "TurkAnime",
+    "selectedVersion": 14,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TurkAnime.cs3"
+  },
+  {
+    "plugin": "TV",
+    "selectedVersion": 5,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/TV.cs3"
+  },
+  {
     "plugin": "TVgarden",
     "selectedVersion": 1,
     "sourceId": "rearabi",
@@ -2983,6 +5918,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/TVgarden.cs3"
+  },
+  {
+    "plugin": "TVGarden",
+    "selectedVersion": 11,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/TVGarden.cs3"
   },
   {
     "plugin": "TvPhimProvider",
@@ -3009,6 +5957,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/recloudstream/extensions",
     "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/TwitchProvider.cs3"
+  },
+  {
+    "plugin": "TwoDHive",
+    "selectedVersion": 17,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TwoDHive.cs3"
   },
   {
     "plugin": "UAFlixProvider",
@@ -3063,6 +6024,19 @@
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UFDubProvider.cs3"
   },
   {
+    "plugin": "UgurFilm",
+    "selectedVersion": 13,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/UgurFilm.cs3"
+  },
+  {
     "plugin": "UHDmoviesProvider",
     "selectedVersion": 41,
     "sourceId": "phisher",
@@ -3087,6 +6061,32 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3"
+  },
+  {
+    "plugin": "Uncut99",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "rockhero1234"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Uncut99.cs3"
+  },
+  {
+    "plugin": "UncutMaza",
+    "selectedVersion": 8,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Coxju"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/UncutMaza.cs3"
   },
   {
     "plugin": "UnimayProvider",
@@ -3115,6 +6115,19 @@
     "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/VegaMovies.cs3"
   },
   {
+    "plugin": "vegamovies",
+    "selectedVersion": 37,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/vegamovies.cs3"
+  },
+  {
     "plugin": "VipPhimProvider",
     "selectedVersion": 9,
     "sourceId": "vietnam",
@@ -3141,6 +6154,46 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Viu.cs3"
   },
   {
+    "plugin": "Vlxx",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "duongnv1996",
+      "Jace"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Vlxx.cs3"
+  },
+  {
+    "plugin": "Watch2Movies",
+    "selectedVersion": 5,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Watch2Movies.cs3"
+  },
+  {
+    "plugin": "Watch32",
+    "selectedVersion": 34,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Watch32.cs3"
+  },
+  {
     "plugin": "WatchMoviesPk",
     "selectedVersion": 3,
     "sourceId": "redowan",
@@ -3152,6 +6205,59 @@
     ],
     "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
     "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/WatchMoviesPk.cs3"
+  },
+  {
+    "plugin": "WatchParty",
+    "selectedVersion": 5,
+    "sourceId": "diegon",
+    "sourceName": "DieGon Repository",
+    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "originalAuthors": [
+      "DieGon"
+    ],
+    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/WatchParty.cs3"
+  },
+  {
+    "plugin": "WatchWrestling",
+    "selectedVersion": 18,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/WatchWrestling.cs3"
+  },
+  {
+    "plugin": "Wcoflix",
+    "selectedVersion": 9,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen",
+      "kraptor"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Wcoflix.cs3"
+  },
+  {
+    "plugin": "WebteIzle",
+    "selectedVersion": 15,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "keyiflerolsun"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/WebteIzle.cs3"
   },
   {
     "plugin": "Wecima",
@@ -3180,6 +6286,19 @@
     "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/WGFilm21.cs3"
   },
   {
+    "plugin": "Whoreshub",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Whoreshub.cs3"
+  },
+  {
     "plugin": "Witanime",
     "selectedVersion": 1,
     "sourceId": "rearabi",
@@ -3193,6 +6312,19 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Witanime.cs3"
   },
   {
+    "plugin": "Xanime",
+    "selectedVersion": 1,
+    "sourceId": "raghav",
+    "sourceName": "raghav repo",
+    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
+    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "originalAuthors": [
+      "KSHITIJ8473"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Xanime.cs3"
+  },
+  {
     "plugin": "XDMovies",
     "selectedVersion": 26,
     "sourceId": "phisher",
@@ -3204,6 +6336,136 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/XDMovies.cs3"
+  },
+  {
+    "plugin": "Xhamster",
+    "selectedVersion": 1,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "SIX"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Xhamster.cs3"
+  },
+  {
+    "plugin": "Xmaza",
+    "selectedVersion": 16,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xmaza.cs3"
+  },
+  {
+    "plugin": "Xmovies4u",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xmovies4u.cs3"
+  },
+  {
+    "plugin": "Xnhau",
+    "selectedVersion": 1,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "SIX"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xnhau.cs3"
+  },
+  {
+    "plugin": "XNXX",
+    "selectedVersion": 2,
+    "sourceId": "kekik",
+    "sourceName": "Turkish Providers Repository | @KekikAkademi",
+    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
+    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "originalAuthors": [
+      "SIX"
+    ],
+    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/XNXX.cs3"
+  },
+  {
+    "plugin": "XonProvider",
+    "selectedVersion": 35,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/XonProvider.cs3"
+  },
+  {
+    "plugin": "XPrimeHub",
+    "selectedVersion": 5,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/XPrimeHub.cs3"
+  },
+  {
+    "plugin": "Xtapes",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xtapes.cs3"
+  },
+  {
+    "plugin": "Xvideos",
+    "selectedVersion": 2,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "SIX"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xvideos.cs3"
+  },
+  {
+    "plugin": "Yablom",
+    "selectedVersion": 4,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "ByAyzen"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Yablom.cs3"
   },
   {
     "plugin": "Yacintv",
@@ -3232,6 +6494,19 @@
     "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/YanHH3DProvider.cs3"
   },
   {
+    "plugin": "YesPornPlease",
+    "selectedVersion": 7,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/YesPornPlease.cs3"
+  },
+  {
     "plugin": "YlnimeProvider",
     "selectedVersion": 6,
     "sourceId": "alyss",
@@ -3243,6 +6518,32 @@
     ],
     "originalRepositoryUrl": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
     "packageUrl": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/YlnimeProvider.cs3"
+  },
+  {
+    "plugin": "YMaal",
+    "selectedVersion": 1,
+    "sourceId": "cxxx",
+    "sourceName": "CXXX",
+    "sourceRepository": "https://github.com/phisher98/CXXX",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+    "originalAuthors": [
+      "rockhero1234"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/YMaal.cs3"
+  },
+  {
+    "plugin": "YoTurkish",
+    "selectedVersion": 4,
+    "sourceId": "cs-karma",
+    "sourceName": "cs-karma",
+    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "kraptor"
+    ],
+    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/YoTurkish.cs3"
   },
   {
     "plugin": "Youtube",
@@ -3282,6 +6583,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/YTS.cs3"
+  },
+  {
+    "plugin": "Zelda",
+    "selectedVersion": 8,
+    "sourceId": "ayu-games",
+    "sourceName": "Ayu CloudStream Games",
+    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "originalAuthors": [
+      "errorcode26"
+    ],
+    "originalRepositoryUrl": null,
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Zelda.cs3"
   },
   {
     "plugin": "Zinkmovies",
