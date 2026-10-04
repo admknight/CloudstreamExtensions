@@ -15,6 +15,22 @@ AGGREGATOR_REPO = CONFIG["repositoryUrl"]
 SOURCES = CONFIG["sources"]
 INACTIVE_SOURCES = CONFIG.get("inactive", [])
 
+CATEGORY_META = [
+    ("Movies", "🎬"),
+    ("Anime", "🎌"),
+    ("Indian", "🇮🇳"),
+    ("Arabic", "🌙"),
+    ("Asian", "🌏"),
+    ("Live", "📡"),
+    ("Sports", "🏟️"),
+    ("Games", "🎮"),
+    ("Tools", "🛠️"),
+    ("Adult", "🔞"),
+    ("Other", "📦"),
+]
+CATEGORY_ORDER = [name for name, _ in CATEGORY_META]
+CATEGORY_ICONS = dict(CATEGORY_META)
+
 
 def fetch_json(url):
     req = urllib.request.Request(
@@ -27,6 +43,108 @@ def fetch_json(url):
 
 def plugin_key(plugin):
     return plugin.get("internalName") or plugin.get("name")
+
+
+def plugin_identity(plugin):
+    key = plugin_key(plugin)
+    return str(key).casefold() if key else None
+
+
+def base_display_name(plugin):
+    name = str(plugin.get("name") or plugin.get("internalName") or "").strip()
+    for category in CATEGORY_ORDER:
+        prefix = f"[{category}] "
+        if name.casefold().startswith(prefix.casefold()):
+            return name[len(prefix):].strip()
+    return name
+
+
+def clean_description(value):
+    description = str(value or "").strip()
+    for prefix in (
+        f"Maintained by {MAINTAINER} • ",
+        f"Maintained by {MAINTAINER} •",
+        f"Maintained by {MAINTAINER}",
+    ):
+        if description.casefold().startswith(prefix.casefold()):
+            description = description[len(prefix):].lstrip(" •-")
+            break
+    return description
+
+
+def classify_plugin(plugin, source_id):
+    types = {
+        str(value).strip().casefold()
+        for value in (plugin.get("tvTypes") or [])
+        if value is not None
+    }
+    language = str(plugin.get("language") or "").strip().casefold()
+    name = str(plugin.get("internalName") or plugin.get("name") or "").strip().casefold()
+    description = str(plugin.get("description") or "").strip().casefold()
+    haystack = f"{name} {description}"
+
+    adult_keywords = (
+        "porn", "hentai", "xnxx", "xhamster", "xxx", "nsfw",
+        "uncut", "erotic", "sex", "jav",
+    )
+    if source_id == "cxxx" or (
+        "nsfw" in types and any(word in haystack for word in adult_keywords)
+    ):
+        return "Adult"
+
+    if source_id == "ayu-games":
+        return "Games"
+
+    tool_keywords = (
+        "jellyfin", "m3uplaylistplayer", "sectionorganizer",
+        "stremio", "subscriptionmanager", "syncplugin",
+        "syncstream", "torrentio", "watchparty",
+    )
+    if any(word in name for word in tool_keywords):
+        return "Tools"
+
+    if "live" in types:
+        return "Live"
+
+    sports_keywords = (
+        "basketball", "football", "wrestling", "sport",
+        "race", "replay", "calcio", "cric",
+    )
+    if any(word in haystack for word in sports_keywords):
+        return "Sports"
+
+    if language in {"hi", "bn", "ta", "te"}:
+        return "Indian"
+
+    if language == "ar":
+        return "Arabic"
+
+    asian_name_keywords = ("korea", "dorama", "donghua", "asian")
+    if language in {"id", "ko", "zh", "fil", "vi"} or (
+        "asiandrama" in types and any(word in name for word in asian_name_keywords)
+    ):
+        return "Asian"
+
+    anime_types = {"anime", "animemovie", "ova"}
+    general_types = {
+        "movie", "movies", "tvseries", "tv series",
+        "documentary", "cartoon", "cartoons", "drama",
+    }
+    anime_name_signal = (
+        "anime" in name
+        or name.startswith("ani")
+        or "otaku" in name
+        or "donghua" in name
+    )
+    if types.intersection(anime_types) and (
+        anime_name_signal or not types.intersection(general_types)
+    ):
+        return "Anime"
+
+    if types.intersection(general_types | anime_types):
+        return "Movies"
+
+    return "Other"
 
 
 def version_value(plugin):
@@ -67,7 +185,7 @@ def load_previous(path):
     data = json.loads(file.read_text())
     if not isinstance(data, list):
         return {}
-    return {plugin_key(p): p for p in data if plugin_key(p)}
+    return {plugin_identity(p): p for p in data if plugin_identity(p)}
 
 
 def comparable(plugin):
@@ -117,19 +235,21 @@ def check_package_url(url):
     return {"ok": False, "status": None, "error": last_error or "Package check failed"}
 
 
-def branded_plugin(plugin):
+def branded_plugin(plugin, category):
     result = dict(plugin)
-    result["authors"] = []
+    result["authors"] = [f"{MAINTAINER} (Maintainer)"]
     result["repositoryUrl"] = AGGREGATOR_REPO
     result["url"] = normalize_package_url(result.get("url"))
 
-    description = str(result.get("description") or "").strip()
-    prefix = f"Maintained by {MAINTAINER}"
+    original_name = base_display_name(result)
+    if original_name:
+        result["name"] = f"[{category}] {original_name}"
+
+    description = clean_description(result.get("description"))
     if description:
-        if prefix.casefold() not in description.casefold():
-            result["description"] = f"{prefix} • {description}"
+        result["description"] = description
     else:
-        result["description"] = prefix
+        result.pop("description", None)
 
     return result
 
@@ -159,17 +279,56 @@ def summary_table(report):
     ]
 
 
-def plugin_table(plugin_rows):
+def plugin_table(plugin_rows, use_published_name=True):
     lines = [
-        "| # | Plugin | Ver. | Maintainer | Lang | Types | Package | Source | Change |",
-        "| ---: | --- | ---: | --- | --- | --- | --- | --- | --- |",
+        "| # | Plugin | Ver. | Lang | Types | Source | Change |",
+        "| ---: | --- | ---: | --- | --- | --- | --- |",
     ]
     for i, row in enumerate(plugin_rows, 1):
+        name = row["name"] if use_published_name else row["originalName"]
         lines.append(
-            f"| {i} | **{md(row['name'])}** | {row['version']} | {MAINTAINER} | "
-            f"{md(row['language'])} | {md(row['tvTypes'])} | ✅ Reachable | "
+            f"| {i} | **{md(name)}** | {row['version']} | "
+            f"{md(row['language'])} | {md(row['tvTypes'])} | "
             f"{md(row['sourceName'])} | {row['change']} |"
         )
+    return lines
+
+
+def category_summary_table(report):
+    lines = [
+        "| Section | CloudStream prefix | Plugins |",
+        "| --- | --- | ---: |",
+    ]
+    counts = report.get("categoryCounts", {})
+    for category in CATEGORY_ORDER:
+        count = counts.get(category, 0)
+        if not count:
+            continue
+        icon = CATEGORY_ICONS.get(category, "📦")
+        lines.append(f"| {icon} **{category}** | `[{category}]` | {count} |")
+    return lines
+
+
+def category_sections(plugin_rows):
+    grouped = defaultdict(list)
+    for row in plugin_rows:
+        grouped[row["category"]].append(row)
+
+    lines = []
+    for category in CATEGORY_ORDER:
+        rows = grouped.get(category, [])
+        if not rows:
+            continue
+        rows = sorted(rows, key=lambda row: row["originalName"].casefold())
+        icon = CATEGORY_ICONS.get(category, "📦")
+        lines += [
+            f"### {icon} {category} — {len(rows)} plugins",
+            "",
+            f"CloudStream display prefix: `[{category}]`",
+            "",
+        ]
+        lines.extend(plugin_table(rows, use_published_name=False))
+        lines.append("")
     return lines
 
 
@@ -228,6 +387,15 @@ def build_readme(report, plugin_rows):
     lines.extend(summary_table(report))
     lines += [
         "",
+        "## 🗂️ Browse by section",
+        "",
+        "Plugins are grouped with a display-name prefix in CloudStream. "
+        "The prefix changes only the visible name; the internal plugin identity remains unchanged for updates.",
+        "",
+    ]
+    lines.extend(category_summary_table(report))
+    lines += [
+        "",
         "### Source health",
         "",
     ]
@@ -243,12 +411,12 @@ def build_readme(report, plugin_rows):
     lines.extend(failed_table(report["failedPlugins"]))
     lines += [
         "",
-        "## 📦 Available plugins",
+        "## 📦 Plugins by section",
         "",
         f"**{report['uniquePlugins']} plugins are currently published and package-reachable.**",
         "",
     ]
-    lines.extend(plugin_table(plugin_rows))
+    lines.extend(category_sections(plugin_rows))
     lines += [
         "",
         "## 🔁 Duplicate handling",
@@ -372,7 +540,7 @@ def main():
             state["rawCount"] = len(plugins)
 
             for plugin in plugins:
-                key = plugin_key(plugin)
+                key = plugin_identity(plugin)
                 if not key:
                     continue
                 candidates[key].append(
@@ -432,7 +600,7 @@ def main():
             best = group[0]
             failed_plugins.append(
                 {
-                    "plugin": key,
+                    "plugin": plugin_key(best["plugin"]) or key,
                     "sourceId": best["source"]["id"],
                     "sourceName": best["source"]["name"],
                     "version": best["version"],
@@ -445,9 +613,17 @@ def main():
         selected[key] = winner
 
         original = winner["plugin"]
+        category = classify_plugin(original, winner["source"]["id"])
+        winner["category"] = category
+        original_name = base_display_name(original)
+        published_name = f"[{category}] {original_name}" if original_name else str(plugin_key(original) or key)
         provenance.append(
             {
-                "plugin": key,
+                "plugin": plugin_key(original) or key,
+                "originalName": original_name,
+                "publishedName": published_name,
+                "category": category,
+                "maintainer": f"{MAINTAINER} (Maintainer)",
                 "selectedVersion": winner["version"],
                 "sourceId": winner["source"]["id"],
                 "sourceName": winner["source"]["name"],
@@ -471,7 +647,7 @@ def main():
                 reason = "lower source priority"
             duplicate_rows.append(
                 {
-                    "plugin": key,
+                    "plugin": plugin_key(winner["plugin"]) or key,
                     "selectedSource": winner["source"]["name"],
                     "selectedVersion": winner["version"],
                     "skippedSource": item["source"]["name"],
@@ -501,7 +677,7 @@ def main():
 
     for key in sorted(selected, key=str.casefold):
         winner = selected[key]
-        output_plugin = branded_plugin(winner["plugin"])
+        output_plugin = branded_plugin(winner["plugin"], winner["category"])
         old = previous.get(key)
 
         if old is None:
@@ -517,7 +693,9 @@ def main():
         published_plugins.append(output_plugin)
         plugin_rows.append(
             {
-                "name": key,
+                "name": output_plugin.get("name", plugin_key(winner["plugin"]) or key),
+                "originalName": base_display_name(winner["plugin"]) or str(plugin_key(winner["plugin"]) or key),
+                "category": winner["category"],
                 "version": winner["version"],
                 "language": output_plugin.get("language", ""),
                 "tvTypes": tv_types_text(output_plugin),
@@ -527,14 +705,20 @@ def main():
             }
         )
 
-    published_keys = {plugin_key(p) for p in published_plugins}
-    removed = sorted(set(previous) - published_keys, key=str.casefold)
+    published_keys = {plugin_identity(p) for p in published_plugins if plugin_identity(p)}
+    removed_ids = set(previous) - published_keys
+    removed = sorted(
+        [str(plugin_key(previous[key]) or key) for key in removed_ids],
+        key=str.casefold,
+    )
 
     candidate_status = "READY"
     if failed_sources:
         candidate_status = "BLOCKED - upstream index failure"
     elif len(published_plugins) < 50:
         candidate_status = "BLOCKED - safety floor"
+
+    category_counts = Counter(row["category"] for row in plugin_rows)
 
     report = {
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
@@ -547,6 +731,11 @@ def main():
         },
         "sourceStatus": source_status,
         "inactiveSources": INACTIVE_SOURCES,
+        "categoryCounts": {
+            category: category_counts.get(category, 0)
+            for category in CATEGORY_ORDER
+            if category_counts.get(category, 0)
+        },
         "previousPlugins": len(previous),
         "uniquePlugins": len(published_plugins),
         "packageHealth": {
