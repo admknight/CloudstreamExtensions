@@ -132,7 +132,7 @@ jobs:
           old_rows = []
           if history.exists():
               for line in history.read_text().splitlines():
-                  if line.startswith("| ") and not line.startswith("| UTC") and not line.startswith("| ---"):
+                  if line.startswith("| ") and not line.startswith("| UTC") and not line.startswith("| ---") and line.count("|") >= 11:
                       old_rows.append(line)
 
           run_id = os.environ.get("GITHUB_RUN_ID", "")

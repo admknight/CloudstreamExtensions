@@ -127,15 +127,15 @@ def branded_plugin(plugin):
 
 def source_table(source_status):
     lines = [
-        "| Source | Index | Raw | Included | Duplicate-skipped |",
-        "| --- | --- | ---: | ---: | ---: |",
+        "| Source | Index | Raw | Published | Package failed | Duplicate-skipped |",
+        "| --- | --- | ---: | ---: | ---: | ---: |",
     ]
     for source in source_status:
         state = "✅ OK" if source["ok"] else "❌ FAILED"
         raw = source["rawCount"] if source["rawCount"] is not None else "-"
         lines.append(
             f"| [{md(source['name'])}]({source['repo']}) | {state} | {raw} | "
-            f"{source['includedCount']} | {source['duplicateSkipped']} |"
+            f"{source['includedCount']} | {source.get('packageFailed', 0)} | {source['duplicateSkipped']} |"
         )
     return lines
 
@@ -344,6 +344,7 @@ def main():
             "ok": False,
             "rawCount": None,
             "includedCount": 0,
+            "packageFailed": 0,
             "duplicateSkipped": 0,
         }
         try:
@@ -470,8 +471,11 @@ def main():
         if source_id:
             skipped_by_id[source_id] += 1
 
+    failed_by_source = Counter(item["sourceId"] for item in failed_plugins)
+
     for state in source_status:
         state["includedCount"] = included_by_source.get(state["id"], 0)
+        state["packageFailed"] = failed_by_source.get(state["id"], 0)
         state["duplicateSkipped"] = skipped_by_id.get(state["id"], 0)
 
     published_plugins = []
