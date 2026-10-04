@@ -237,6 +237,16 @@
       "include": [
         "OnlineMoviesHinditProvider"
       ]
+    },
+    {
+      "id": "adam-custom",
+      "name": "Adam Knight Custom Providers",
+      "repo": "https://github.com/admknight/CloudstreamExtensions",
+      "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
+      "priority": 1,
+      "include": [
+        "CinevezProvider"
+      ]
     }
   ],
   "inactive": [
