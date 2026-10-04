@@ -1,0 +1,86 @@
+name: Build Local CloudStream Plugins
+
+concurrency:
+  group: custom-plugin-build
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - 'CinevezProvider/**'
+      - 'build.gradle.kts'
+      - 'settings.gradle.kts'
+      - 'gradle.properties'
+      - '.github/workflows/custom-build.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v5
+        with:
+          path: source
+
+      - name: Checkout custom builds
+        uses: actions/checkout@v5
+        with:
+          ref: custom-builds
+          path: custom-builds
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Gradle 8.12
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.12'
+
+      - name: Build local plugins
+        run: |
+          cd "$GITHUB_WORKSPACE/source"
+          gradle make makePluginsJson
+          gradle ensureJarCompatibility
+
+      - name: Prepare custom-builds branch
+        run: |
+          cd "$GITHUB_WORKSPACE/custom-builds"
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp "$GITHUB_WORKSPACE/source"/CinevezProvider/build/*.cs3 .
+          cp "$GITHUB_WORKSPACE/source"/CinevezProvider/build/*.jar . 2>/dev/null || true
+          cp "$GITHUB_WORKSPACE/source"/build/plugins.json plugins.json
+          cat > repo.json <<'EOF'
+          {
+            "name": "Adam Knight Custom Providers",
+            "description": "Custom CloudStream providers maintained inside the Adam Knight Mega Repo",
+            "manifestVersion": 1,
+            "pluginLists": [
+              "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json"
+            ]
+          }
+          EOF
+
+      - name: Publish custom builds
+        run: |
+          cd "$GITHUB_WORKSPACE/custom-builds"
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No custom plugin changes to publish."
+          else
+            git commit -m "Custom plugin build: ${GITHUB_SHA::8}"
+            git push origin HEAD:custom-builds
+          fi
