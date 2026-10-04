@@ -2619,6 +2619,40 @@
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/DoramyWorldProvider.cs3"
   },
   {
+    "plugin": "DramaDrip",
+    "originalName": "DramaDrip",
+    "publishedName": "[Movies] DramaDrip",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 3,
+    "sourceId": "kim-recovery",
+    "sourceName": "Kim Recovery Builds",
+    "sourceRepository": "https://github.com/kim20598/cloudstream-extensions-test",
+    "sourceIndex": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
+    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/DramaDrip.cs3"
+  },
+  {
+    "plugin": "DramaFull",
+    "originalName": "DramaFull",
+    "publishedName": "[Movies] DramaFull",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "nuyuls-recovery",
+    "sourceName": "StreamPlay Recovery Builds",
+    "sourceRepository": "https://github.com/nuyuls79/StreamPlay-movie",
+    "sourceIndex": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/nuyuls79/StreamPlay-movie",
+    "packageUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/DramaFull.cs3"
+  },
+  {
     "plugin": "Dubbindo",
     "originalName": "Dubbindo",
     "publishedName": "[Asian] Dubbindo",
@@ -2822,6 +2856,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
     "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Esheaq.cs3"
+  },
+  {
+    "plugin": "Extractors",
+    "originalName": "Extractors",
+    "publishedName": "[Movies] Extractors",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 67,
+    "sourceId": "shakzz-recovery",
+    "sourceName": "Shakzz Recovery Builds",
+    "sourceRepository": "https://github.com/Shakzz890/ShakzzCutie",
+    "sourceIndex": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
+    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3"
   },
   {
     "plugin": "Faselhd",
@@ -3220,6 +3271,23 @@
     ],
     "originalRepositoryUrl": null,
     "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Game2048.cs3"
+  },
+  {
+    "plugin": "GDIndex",
+    "originalName": "GDIndex",
+    "publishedName": "[Movies] GDIndex",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 4,
+    "sourceId": "shakzz-recovery",
+    "sourceName": "Shakzz Recovery Builds",
+    "sourceRepository": "https://github.com/Shakzz890/ShakzzCutie",
+    "sourceIndex": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/plugins.json",
+    "originalAuthors": [
+      "Horis"
+    ],
+    "originalRepositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
+    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3"
   },
   {
     "plugin": "Gnulahd",
@@ -3785,6 +3853,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/IncestFlix.cs3"
+  },
+  {
+    "plugin": "IndianTVProvider",
+    "originalName": "IndianTVProvider",
+    "publishedName": "[Live] IndianTVProvider",
+    "category": "Live",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 6,
+    "sourceId": "kim-recovery",
+    "sourceName": "Kim Recovery Builds",
+    "sourceRepository": "https://github.com/kim20598/cloudstream-extensions-test",
+    "sourceIndex": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
+    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/IndianTVProvider.cs3"
   },
   {
     "plugin": "Indomax",
@@ -4813,6 +4898,21 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Megakino.cs3"
   },
   {
+    "plugin": "MegaProvider",
+    "originalName": "MegaProvider",
+    "publishedName": "[Other] MegaProvider",
+    "category": "Other",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 2,
+    "sourceId": "mega-provider",
+    "sourceName": "Mega Repository",
+    "sourceRepository": "https://github.com/self-similarity/MegaRepo",
+    "sourceIndex": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/plugins.json",
+    "originalAuthors": [],
+    "originalRepositoryUrl": "https://github.com/self-similarity/MegaRepo",
+    "packageUrl": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/MegaProvider.cs3"
+  },
+  {
     "plugin": "MetalSlugAdvance",
     "originalName": "MetalSlugAdvance",
     "publishedName": "[Games] MetalSlugAdvance",
@@ -5307,6 +5407,23 @@
     "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/NetflixMirror.cs3"
   },
   {
+    "plugin": "NetflixMirrorProvider",
+    "originalName": "NetflixMirrorProvider",
+    "publishedName": "[Movies] NetflixMirrorProvider",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 44,
+    "sourceId": "nuyuls-recovery",
+    "sourceName": "StreamPlay Recovery Builds",
+    "sourceRepository": "https://github.com/nuyuls79/StreamPlay-movie",
+    "sourceIndex": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/nuyuls79/StreamPlay-movie",
+    "packageUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/NetflixMirrorProvider.cs3"
+  },
+  {
     "plugin": "Netmirror",
     "originalName": "Netmirror",
     "publishedName": "[Indian] Netmirror",
@@ -5560,6 +5677,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OneTouchTV.cs3"
+  },
+  {
+    "plugin": "OnlineMoviesHinditProvider",
+    "originalName": "OnlineMoviesHinditProvider",
+    "publishedName": "[Indian] OnlineMoviesHinditProvider",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 6,
+    "sourceId": "manual-recovery",
+    "sourceName": "Adam Knight Curated Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/recovery_plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
+    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3"
   },
   {
     "plugin": "OnlineSerieTV",
@@ -6332,16 +6466,17 @@
     "publishedName": "[Movies] RareFilmm",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 3,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "selectedVersion": 15,
+    "sourceId": "cloudstreamhub-recovery",
+    "sourceName": "CloudStreamHub Recovery Builds",
+    "sourceRepository": "https://github.com/Emre-Kahveci/CloudStreamHub",
+    "sourceIndex": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/plugins.json",
     "originalAuthors": [
-      "keyiflerolsun"
+      "CloudStreamTR",
+      "kraptor"
     ],
-    "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/RareFilmm.cs3"
+    "originalRepositoryUrl": "https://github.com/Emre-Kahveci/CloudStreamHub",
+    "packageUrl": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/RareFilmm.cs3"
   },
   {
     "plugin": "ReAnime",
@@ -6464,6 +6599,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/RingZ.cs3"
+  },
+  {
+    "plugin": "Rowdy",
+    "originalName": "Rowdy",
+    "publishedName": "[Movies] Rowdy",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 21,
+    "sourceId": "rowdy-recovery",
+    "sourceName": "Rowdy Recovery Builds",
+    "sourceRepository": "https://github.com/RowdyRushya/rowdy-cs-extensions",
+    "sourceIndex": "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/builds/plugins.json",
+    "originalAuthors": [
+      "RowdyRushya"
+    ],
+    "originalRepositoryUrl": "https://github.com/rushi-chavan/rowdy-cs-extensions",
+    "packageUrl": "https://raw.githubusercontent.com/rushi-chavan/rowdy-cs-extensions/builds/Rowdy.cs3"
   },
   {
     "plugin": "Rtally",
@@ -7930,6 +8082,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3"
+  },
+  {
+    "plugin": "UltimaBeta",
+    "originalName": "UltimaBeta",
+    "publishedName": "[Other] UltimaBeta",
+    "category": "Other",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 7,
+    "sourceId": "kim-recovery",
+    "sourceName": "Kim Recovery Builds",
+    "sourceRepository": "https://github.com/kim20598/cloudstream-extensions-test",
+    "sourceIndex": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+    "originalAuthors": [
+      "RowdyRushya,Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
+    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/UltimaBeta.cs3"
   },
   {
     "plugin": "Uncut99",

@@ -3187,6 +3187,52 @@
     "name": "[Movies] DoramyWorldProvider"
   },
   {
+    "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/dramadrip-icon.png",
+    "jarFileSize": 180160,
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 43695,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AsianDrama"
+    ],
+    "version": 3,
+    "internalName": "DramaDrip",
+    "jarUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/DramaDrip.jar",
+    "description": "K-Drama,Dramas Extension by ModFlix Team",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/DramaDrip.cs3",
+    "name": "[Movies] DramaDrip"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=dramafull.cc&sz=%size%",
+    "jarFileSize": 69849,
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 21296,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "AsianDrama",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 1,
+    "internalName": "DramaFull",
+    "jarUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/DramaFull.jar",
+    "description": "Kdramas and Movies",
+    "url": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/DramaFull.cs3",
+    "name": "[Movies] DramaFull"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Dubbindo.cs3",
     "status": 1,
     "version": 2,
@@ -3436,6 +3482,27 @@
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://esheeq.my&size=128",
     "apiVersion": 1,
     "fileHash": "sha256-611b9d4cd00722bd5859fce476591d1dfe71d5cf2731f56ef4f54dcf86cc20f9"
+  },
+  {
+    "iconUrl": "https://github.com/Shakzz890/ShakzzCutie/raw/refs/heads/master/Extractors/icon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 39206,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "AsianDrama",
+      "Anime"
+    ],
+    "version": 67,
+    "internalName": "Extractors",
+    "description": "Must Install(For other extensions to work properly)",
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
+    "name": "[Movies] Extractors"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Faselhd.cs3",
@@ -3897,6 +3964,25 @@
     "iconUrl": "https://raw.githubusercontent.com/gabrielecirulli/2048/master/meta/apple-touch-icon.png",
     "fileSize": 24226,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/masters/GDIndex/icon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 15937,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 4,
+    "internalName": "GDIndex",
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
+    "name": "[Movies] GDIndex"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3",
@@ -4564,6 +4650,24 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=www.incestflix.com&sz=%size%",
     "apiVersion": 1,
     "fileHash": "sha256-34f0c1235004551085c88c0cfaeb648324a0bdbbc5e7f4b12e2da49562122bbd"
+  },
+  {
+    "iconUrl": "https://www.freepnglogos.com/uploads/tv-png/tv-png-box-television-set-cable-screen-icon-31.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 21427,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 6,
+    "internalName": "IndianTVProvider",
+    "description": "Indian TV",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/IndianTVProvider.cs3",
+    "name": "[Live] IndianTVProvider"
   },
   {
     "iconUrl": "https://i.ibb.co.com/6cCQ1h87/indomax.jpg",
@@ -5800,6 +5904,21 @@
     "fileHash": "sha256-3c87cb96e48142c49186aace93092077ef5f1adb4c897ee4e636ad5ef915895e"
   },
   {
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 6929,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "version": 2,
+    "internalName": "MegaProvider",
+    "description": "This plugin adds all repositories each time the app is opened. Uninstall after one run if you do not want all repositories. Does not automatically refresh the repository list.",
+    "url": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/MegaProvider.cs3",
+    "name": "[Other] MegaProvider"
+  },
+  {
     "name": "[Games] MetalSlugAdvance",
     "internalName": "MetalSlugAdvance",
     "description": "Play Metal Slug.",
@@ -6409,6 +6528,27 @@
     "name": "[Indian] NetflixMirror"
   },
   {
+    "iconUrl": "https://github.com/SaurabhKaperwan/CSX/raw/refs/heads/master/NetflixMirrorProvider/icon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 54916,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AsianDrama",
+      "Anime"
+    ],
+    "version": 44,
+    "internalName": "NetflixMirrorProvider",
+    "description": "Netflix, PrimeVideo, JioHotstar(Hotstar, Disney, Paramount, HBO, Peacock) Content in Multiple Languages",
+    "url": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/NetflixMirrorProvider.cs3",
+    "name": "[Movies] NetflixMirrorProvider"
+  },
+  {
     "iconUrl": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/refs/heads/master/Netmirror/logo.jpeg",
     "fileHash": "sha256-e64f3bf8e62dd7bc25e3fd1900524f8f730e50807744eac9c5de38367762f057",
     "apiVersion": 1,
@@ -6463,7 +6603,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "NetNaija-box - Multi Language Movies, Series and Live Sports. HD streaming with multiple dubs and subtitles.",
-    "fileSize": 140910,
+    "fileSize": 146795,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -6473,7 +6613,7 @@
     ],
     "iconUrl": "https://netnaija.film/favicon.ico",
     "apiVersion": 1,
-    "fileHash": "sha256-b4dbd067dd7c49328a2a1f05a477aa03dbe9f3e7b8a2d2932d4a5ead1246d827"
+    "fileHash": "sha256-b68239cad2b913e6a93e445ff1bd7240cdbffd78508e5cc16c1b2e90a987b554"
   },
   {
     "iconUrl": "https://i.ibb.co.com/3yVG0DbY/ngefilm.png",
@@ -6720,6 +6860,24 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=onetouchtv.xyz/&sz=%size%",
     "apiVersion": 1,
     "fileHash": "sha256-65c04eb0257ef76ec3272fa881592009f158c5d03d8202d232f600a6e3bb6333"
+  },
+  {
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 6,
+    "internalName": "OnlineMoviesHinditProvider",
+    "description": "Use VPN",
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
+    "name": "[Indian] OnlineMoviesHinditProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/OnlineSerieTV.cs3",
@@ -7637,10 +7795,11 @@
     "fileHash": "sha256-b97e462d1ce8626037c0548e1d3c037881cd235981c46dd5fb7157db381cf218"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=rarefilmm.com&sz=%size%",
+    "iconUrl": "https://www.google.com/s2/favicons?sz=128&domain=rarefilmm.com",
+    "fileHash": "sha256-bc07928af170aa08c6425f4309de837ad4c06b0825b06bcdcce6102abcc5a6b1",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 14313,
+    "fileSize": 125115,
     "status": 1,
     "language": "en",
     "authors": [
@@ -7649,10 +7808,10 @@
     "tvTypes": [
       "Movie"
     ],
-    "version": 3,
+    "version": 15,
     "internalName": "RareFilmm",
-    "description": "The Cave of Forgotten Films",
-    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/RareFilmm.cs3",
+    "description": "RareFilmm - The Cave of Forgotten Films (Rare & Classic Cinema)",
+    "url": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/RareFilmm.cs3",
     "name": "[Movies] RareFilmm"
   },
   {
@@ -7799,6 +7958,27 @@
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Ringz.png",
     "apiVersion": 1,
     "fileHash": "sha256-bf9bbd827838ef7becfce467a844628eb2caee335547e4a1930e3026a9bafd00"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/Rowdy-Avocado/Rowdycado-Extensions/master/logos/ultima.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 96013,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "version": 21,
+    "internalName": "Rowdy",
+    "description": "One stop solution for all of your media need.",
+    "url": "https://raw.githubusercontent.com/rushi-chavan/rowdy-cs-extensions/builds/Rowdy.cs3",
+    "name": "[Movies] Rowdy"
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/Rtally/icon.png",
@@ -9589,6 +9769,25 @@
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Ultima.jpg",
     "apiVersion": 1,
     "fileHash": "sha256-83a9004a34b60fba49a8a065c520dd3441ca6b47a40282ff866b58e0c59cf466"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/UltimaBeta.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 314672,
+    "status": 2,
+    "language": "en",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "All"
+    ],
+    "version": 7,
+    "internalName": "UltimaBeta",
+    "description": "(Beta)The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/UltimaBeta.cs3",
+    "name": "[Other] UltimaBeta"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Uncut99.cs3",

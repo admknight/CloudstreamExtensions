@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04 11:51:20 UTC",
+  "generatedAt": "2026-10-04 14:54:57 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
   "sourceHealth": {
-    "ok": 23,
+    "ok": 30,
     "failed": 0
   },
   "sourceStatus": [
@@ -268,9 +268,9 @@
       "priority": 20,
       "ok": true,
       "rawCount": 43,
-      "includedCount": 43,
+      "includedCount": 42,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 1
     },
     {
       "id": "cxxx",
@@ -283,6 +283,90 @@
       "includedCount": 66,
       "packageFailed": 0,
       "duplicateSkipped": 4
+    },
+    {
+      "id": "kim-recovery",
+      "name": "Kim Recovery Builds",
+      "repo": "https://github.com/kim20598/cloudstream-extensions-test",
+      "index": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+      "priority": 40,
+      "ok": true,
+      "rawCount": 71,
+      "includedCount": 3,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "nuyuls-recovery",
+      "name": "StreamPlay Recovery Builds",
+      "repo": "https://github.com/nuyuls79/StreamPlay-movie",
+      "index": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/plugins.json",
+      "priority": 40,
+      "ok": true,
+      "rawCount": 46,
+      "includedCount": 2,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "shakzz-recovery",
+      "name": "Shakzz Recovery Builds",
+      "repo": "https://github.com/Shakzz890/ShakzzCutie",
+      "index": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/plugins.json",
+      "priority": 40,
+      "ok": true,
+      "rawCount": 13,
+      "includedCount": 2,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "mega-provider",
+      "name": "Mega Repository",
+      "repo": "https://github.com/self-similarity/MegaRepo",
+      "index": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/plugins.json",
+      "priority": 50,
+      "ok": true,
+      "rawCount": 1,
+      "includedCount": 1,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "rowdy-recovery",
+      "name": "Rowdy Recovery Builds",
+      "repo": "https://github.com/RowdyRushya/rowdy-cs-extensions",
+      "index": "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/builds/plugins.json",
+      "priority": 50,
+      "ok": true,
+      "rawCount": 1,
+      "includedCount": 1,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "cloudstreamhub-recovery",
+      "name": "CloudStreamHub Recovery Builds",
+      "repo": "https://github.com/Emre-Kahveci/CloudStreamHub",
+      "index": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/plugins.json",
+      "priority": 40,
+      "ok": true,
+      "rawCount": 23,
+      "includedCount": 1,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "manual-recovery",
+      "name": "Adam Knight Curated Recovery",
+      "repo": "https://github.com/admknight/CloudstreamExtensions",
+      "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/recovery_plugins.json",
+      "priority": 90,
+      "ok": true,
+      "rawCount": 1,
+      "includedCount": 1,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
     }
   ],
   "inactiveSources": [
@@ -300,22 +384,22 @@
     }
   ],
   "categoryCounts": {
-    "Movies": 122,
+    "Movies": 128,
     "Anime": 64,
-    "Indian": 72,
+    "Indian": 73,
     "Arabic": 35,
     "Asian": 49,
-    "Live": 42,
+    "Live": 43,
     "Sports": 2,
     "Games": 21,
     "Tools": 11,
     "Adult": 74,
-    "Other": 13
+    "Other": 15
   },
   "previousPlugins": 505,
-  "uniquePlugins": 505,
+  "uniquePlugins": 515,
   "packageHealth": {
-    "reachable": 505,
+    "reachable": 515,
     "failed": 2
   },
   "duplicates": [
@@ -464,6 +548,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "RareFilmm",
+      "selectedSource": "CloudStreamHub Recovery Builds",
+      "selectedVersion": 15,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
       "plugin": "ReAnime",
       "selectedSource": "raghav repo",
       "selectedVersion": 4,
@@ -539,9 +631,9 @@
     }
   ],
   "changes": {
-    "added": 0,
-    "updated": 505,
-    "unchanged": 0,
+    "added": 10,
+    "updated": 2,
+    "unchanged": 503,
     "removed": 0
   },
   "removedPlugins": []
