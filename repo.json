@@ -4,5 +4,6 @@
   "manifestVersion": 1,
   "pluginLists": [
     "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/builds/plugins.json"
-  ]
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png"
 }
