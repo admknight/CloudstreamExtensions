@@ -1,0 +1,26 @@
+[
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=cinevez.buzz&sz=%size%",
+        "jarFileSize": 48082,
+        "fileHash": "sha256-039967a92957297b09b8581b326143be1980c6f62ba83275b8d3cc75920a980b",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+        "fileSize": 15738,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Adam Knight"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "CinevezProvider",
+        "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/CinevezProvider.jar",
+        "description": "Cinevez catalogue: browse, search and metadata. Playback is limited to supported authorized embeds.",
+        "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/CinevezProvider.cs3",
+        "name": "CinevezProvider",
+        "jarHash": "sha256-f8e4c8e63c5402eeb0761780729c87c1bf11e1bcb09d0addde4ba6e5397185a2"
+    }
+]

@@ -1,7 +1,0 @@
-.DS_Store
-.idea/
-.vscode/
-*.iml
-__pycache__/
-*.pyc
-merged/
