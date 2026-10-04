@@ -163,10 +163,12 @@ jobs:
 
       - name: Refresh Master README
         run: |
-          cp source/merged/README.md source/README.md
           cd source
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
+          git fetch origin master
+          git rebase origin/master
+          cp merged/README.md README.md
           git add README.md
           if git diff --cached --quiet; then
             echo "Master README already current."

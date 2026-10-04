@@ -12,7 +12,7 @@ The catalog is rebuilt from multiple published CloudStream repositories, dedupli
 
 In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
-    adamknight
+    admknight
 
 ### Raw URL fallback
 

@@ -111,7 +111,7 @@ def check_package_url(url):
 
 def branded_plugin(plugin):
     result = dict(plugin)
-    result.pop("authors", None)
+    result["authors"] = []
     result["repositoryUrl"] = AGGREGATOR_REPO
 
     description = str(result.get("description") or "").strip()
