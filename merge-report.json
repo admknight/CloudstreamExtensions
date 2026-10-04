@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04 11:44:19 UTC",
+  "generatedAt": "2026-10-04 11:45:28 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -112,8 +112,8 @@
       "priority": 25,
       "ok": true,
       "rawCount": 39,
-      "includedCount": 37,
-      "packageFailed": 1,
+      "includedCount": 38,
+      "packageFailed": 0,
       "duplicateSkipped": 1
     },
     {
@@ -172,8 +172,8 @@
       "priority": 25,
       "ok": true,
       "rawCount": 10,
-      "includedCount": 7,
-      "packageFailed": 2,
+      "includedCount": 9,
+      "packageFailed": 0,
       "duplicateSkipped": 1
     },
     {
@@ -256,8 +256,8 @@
       "priority": 20,
       "ok": true,
       "rawCount": 36,
-      "includedCount": 34,
-      "packageFailed": 2,
+      "includedCount": 36,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -299,11 +299,11 @@
       "reason": "Archived legacy repository; superseded by the actively maintained maarrem/cs-Kekik fork."
     }
   ],
-  "previousPlugins": 253,
-  "uniquePlugins": 505,
+  "previousPlugins": 505,
+  "uniquePlugins": 510,
   "packageHealth": {
-    "reachable": 505,
-    "failed": 7
+    "reachable": 510,
+    "failed": 2
   },
   "duplicates": [
     {
@@ -469,38 +469,6 @@
   ],
   "failedPlugins": [
     {
-      "plugin": "Aia2tv 2",
-      "sourceId": "rearabi",
-      "sourceName": "Re-3arabi",
-      "version": 3,
-      "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3",
-      "error": "InvalidURL: URL can't contain control characters. '/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3' (found at least ' ')"
-    },
-    {
-      "plugin": "CNC Verse",
-      "sourceId": "cnc",
-      "sourceName": "CNC Repo (All Language)",
-      "version": 114,
-      "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse.cs3",
-      "error": "InvalidURL: URL can't contain control characters. '/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse.cs3' (found at least ' ')"
-    },
-    {
-      "plugin": "CNC Verse Mobile",
-      "sourceId": "cnc",
-      "sourceName": "CNC Repo (All Language)",
-      "version": 10,
-      "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse Mobile.cs3",
-      "error": "InvalidURL: URL can't contain control characters. '/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse Mobile.cs3' (found at least ' ')"
-    },
-    {
-      "plugin": "Ctg Stream",
-      "sourceId": "desi",
-      "sourceName": "Desi Extensions",
-      "version": 2,
-      "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/Ctg Stream.cs3",
-      "error": "InvalidURL: URL can't contain control characters. '/Faisal0786/Desi/builds/Ctg Stream.cs3' (found at least ' ')"
-    },
-    {
       "plugin": "NguonCProvider",
       "sourceId": "vietnam",
       "sourceName": "Vietnamese CloudStream Index",
@@ -515,31 +483,13 @@
       "version": 9,
       "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/SubNhanhProvider.cs3",
       "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-      "plugin": "The Movie Flix",
-      "sourceId": "desi",
-      "sourceName": "Desi Extensions",
-      "version": 26,
-      "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The Movie Flix.cs3",
-      "error": "InvalidURL: URL can't contain control characters. '/Faisal0786/Desi/builds/The Movie Flix.cs3' (found at least ' ')"
     }
   ],
   "changes": {
-    "added": 261,
-    "updated": 30,
-    "unchanged": 214,
-    "removed": 9
+    "added": 5,
+    "updated": 0,
+    "unchanged": 505,
+    "removed": 0
   },
-  "removedPlugins": [
-    "AnimeflvIOProvider",
-    "AnimensionProvider",
-    "AniwatchProvider",
-    "AniwaveProvider",
-    "BflixProvider",
-    "ComamosRamenProvider",
-    "EstrenosDoramasProvider",
-    "PelisplusSOProvider",
-    "PlayhubProvider"
-  ]
+  "removedPlugins": []
 }

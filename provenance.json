@@ -52,6 +52,19 @@
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aflaam.cs3"
   },
   {
+    "plugin": "Aia2tv 2",
+    "selectedVersion": 3,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3"
+  },
+  {
     "plugin": "Akwam",
     "selectedVersion": 3,
     "sourceId": "rearabi",
@@ -1493,6 +1506,32 @@
     "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/CizgiMax.cs3"
   },
   {
+    "plugin": "CNC Verse",
+    "selectedVersion": 114,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse.cs3"
+  },
+  {
+    "plugin": "CNC Verse Mobile",
+    "selectedVersion": 10,
+    "sourceId": "cnc",
+    "sourceName": "CNC Repo (All Language)",
+    "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC"
+    ],
+    "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse Mobile.cs3"
+  },
+  {
     "plugin": "CoaninetProvider",
     "selectedVersion": 2,
     "sourceId": "cakestwix",
@@ -1574,6 +1613,19 @@
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3"
+  },
+  {
+    "plugin": "Ctg Stream",
+    "selectedVersion": 2,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/Ctg Stream.cs3"
   },
   {
     "plugin": "CuevanaProvider",
@@ -5618,6 +5670,19 @@
     ],
     "originalRepositoryUrl": null,
     "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/TekkenAdvance.cs3"
+  },
+  {
+    "plugin": "The Movie Flix",
+    "selectedVersion": 26,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The Movie Flix.cs3"
   },
   {
     "plugin": "TheMoviesFlix",

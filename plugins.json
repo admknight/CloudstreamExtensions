@@ -76,6 +76,26 @@
     "fileHash": "sha256-c8cbba4f4f36d76907d2b366baa480d9201b16079cef9c3bd85f20cc3049e183"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv%202.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "Asia2tv 2",
+    "internalName": "Aia2tv 2",
+    "authors": [],
+    "description": "Maintained by Adam Knight",
+    "fileSize": 14286,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AsianDrama"
+    ],
+    "iconUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQEhyYSi351HRw/company-logo_200_200/company-logo_200_200/0/1630489719119?e=2147483647&v=beta&t=Br69OJ2AwT5vdJHgl-DTvliEqOmp6VQLYwUWcFqG4u4",
+    "apiVersion": 1,
+    "fileHash": "sha256-1de87a498012cf7252b83f54eeb637a8b4cb482fe7114a1bd66b3adfbae1154e"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Akwam.cs3",
     "status": 1,
     "version": 3,
@@ -2200,6 +2220,44 @@
     "name": "CizgiMax"
   },
   {
+    "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/CNC%20Verse/icon.png",
+    "fileHash": "sha256-61dce8378f02424fb50a214f4b7b5fd62ab62c36736432627ff808b245043507",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 92713,
+    "status": 1,
+    "language": "ta",
+    "authors": [],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 114,
+    "internalName": "CNC Verse",
+    "description": "Maintained by Adam Knight • Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC%20Verse.cs3",
+    "name": "CNC Verse"
+  },
+  {
+    "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/CNC%20Verse%20Mobile/logo.jpeg",
+    "fileHash": "sha256-91a6206f1ed1fb852a9ac2d54fd1cc9dde0cee0ac59223950aeba5ac9744e4a7",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 97001,
+    "status": 1,
+    "language": "ta",
+    "authors": [],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 10,
+    "internalName": "CNC Verse Mobile",
+    "description": "Maintained by Adam Knight • NetMirror Mobile API",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC%20Verse%20Mobile.cs3",
+    "name": "CNC Verse Mobile"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=coani.net&sz=%size%",
     "fileHash": "sha256-d3b8b1fdb43b0737c713a3c763885ba3cba62cfa97595f1b3b7d275269154e93",
     "apiVersion": 1,
@@ -2307,6 +2365,27 @@
     "description": "Maintained by Adam Knight • Watch Live sports and TV channels",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3",
     "name": "CricifyProvider"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/Ctg%20Stream.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "Ctg Stream",
+    "internalName": "Ctg Stream",
+    "authors": [],
+    "description": "Maintained by Adam Knight • multi Language Provider",
+    "fileSize": 33864,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "AsianDrama",
+      "Anime",
+      "Torrent"
+    ],
+    "iconUrl": " ",
+    "apiVersion": 1,
+    "fileHash": "sha256-105d96a31185a85f9e5f0f519db1b29ea616e2d6b25c8cdf419b270bb74b22cb"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CuevanaProvider.cs3",
@@ -8083,6 +8162,26 @@
     "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Tekken%20Advance%20(USA).png",
     "fileSize": 6381028,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The%20Movie%20Flix.cs3",
+    "status": 1,
+    "version": 26,
+    "name": "The Movie Flix",
+    "internalName": "The Movie Flix",
+    "authors": [],
+    "description": "Maintained by Adam Knight • TheMoviesFlix provider for Dual Audio, Bollywood and Hollywood Movies and TV Shows",
+    "fileSize": 56992,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "Anime"
+    ],
+    "iconUrl": "https://moviesflixi.com/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-c473160b23e333dd10e92f3cb5bbb1a7322bfe993a4bc7692ff0904018c30260"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TheMoviesFlix.cs3",
