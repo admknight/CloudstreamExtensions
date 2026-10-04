@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-04 00:32:50 UTC",
+  "generatedAt": "2026-10-04 00:44:01 UTC",
   "maintainer": "Adam Knight",
-  "shortcode": "adamknight",
+  "shortcode": "admknight",
   "candidateStatus": "READY",
   "sourceHealth": {
     "ok": 13,
@@ -249,8 +249,8 @@
   ],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 253,
+    "updated": 253,
+    "unchanged": 0,
     "removed": 0
   },
   "removedPlugins": []

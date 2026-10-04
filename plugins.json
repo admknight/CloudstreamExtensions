@@ -5,6 +5,7 @@
     "version": 1,
     "name": "3isk",
     "internalName": "3isk",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 31165,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -23,6 +24,7 @@
     "version": 11,
     "name": "9kMovies",
     "internalName": "9kMovies",
+    "authors": [],
     "description": "Maintained by Adam Knight • Bangla & Hindi Movies",
     "fileSize": 16446,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -42,6 +44,7 @@
     "version": 1,
     "name": "Aflaam",
     "internalName": "Aflaam",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 15484,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -60,6 +63,7 @@
     "version": 3,
     "name": "Akwam",
     "internalName": "Akwam",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 27980,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -78,6 +82,7 @@
     "version": 25,
     "name": "AllMovieLandProvider",
     "internalName": "AllMovieLandProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight • Indian MultiLanguage Provider (Mostly Hindi)",
     "fileSize": 93111,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -97,6 +102,7 @@
     "version": 18,
     "name": "AllWish",
     "internalName": "AllWish",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime from all-wish.me",
     "fileSize": 80403,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -114,6 +120,7 @@
     "version": 1,
     "name": "Alooytv",
     "internalName": "Alooytv",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 14658,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -132,6 +139,7 @@
     "version": 28,
     "name": "Anichi",
     "internalName": "Anichi",
+    "authors": [],
     "description": "Maintained by Adam Knight • AllManga/Mkissa Source",
     "fileSize": 216855,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -153,6 +161,7 @@
     "fileSize": 22893,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie"
@@ -169,6 +178,7 @@
     "version": 8,
     "name": "Anikage",
     "internalName": "Anikage",
+    "authors": [],
     "fileSize": 67349,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
@@ -188,6 +198,7 @@
     "version": 6,
     "name": "AniKoto",
     "internalName": "AniKoto",
+    "authors": [],
     "description": "Maintained by Adam Knight • AniKoto",
     "fileSize": 89164,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -206,6 +217,7 @@
     "version": 3,
     "name": "Anilight",
     "internalName": "Anilight",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anilight Anime Provider",
     "fileSize": 67919,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -225,6 +237,7 @@
     "version": 1,
     "name": "Anime3rb",
     "internalName": "Anim3rb",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 36516,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -245,6 +258,7 @@
     "fileSize": 14645,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "AnimeMovie",
       "OVA",
@@ -262,6 +276,7 @@
     "version": 1,
     "name": "Anime-Phoenix",
     "internalName": "Anime-Phoenix",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 27126,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -281,6 +296,7 @@
     "version": 1,
     "name": "Anime4up",
     "internalName": "Anime4up",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 37890,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -300,6 +316,7 @@
     "version": 9,
     "name": "Animeav1",
     "internalName": "Animeav1",
+    "authors": [],
     "description": "Maintained by Adam Knight • (Mexican) Anime Extension",
     "fileSize": 55022,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -319,6 +336,7 @@
     "version": 11,
     "name": "AnimeCloud",
     "internalName": "AnimeCloud",
+    "authors": [],
     "description": "Maintained by Adam Knight • German (Lang) Anime",
     "fileSize": 71760,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -336,6 +354,7 @@
     "version": 70,
     "name": "AnimeDekhoProvider",
     "internalName": "AnimeDekhoProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight • Includes AnimeDekho,OnePace(DUB,SUB) and HindiSubAnime",
     "fileSize": 107624,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -355,6 +374,7 @@
     "version": 9,
     "name": "Animedubhindi",
     "internalName": "Animedubhindi",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime in Multi Lang",
     "fileSize": 94018,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -375,6 +395,7 @@
     "fileSize": 17048,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -392,6 +413,7 @@
     "fileSize": 17846,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -408,6 +430,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 31519,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime"
     ],
@@ -425,6 +448,7 @@
     "fileSize": 22082,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "AnimeMovie",
       "OVA",
@@ -444,6 +468,7 @@
     "fileSize": 12444,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "Anime"
@@ -460,6 +485,7 @@
     "version": 13,
     "name": "Animekhor",
     "internalName": "Animekhor",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime and Movies includes (Donghuaword)",
     "fileSize": 59185,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -478,6 +504,7 @@
     "version": 11,
     "name": "Animenosub",
     "internalName": "Animenosub",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime and Movies",
     "fileSize": 54532,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -498,6 +525,7 @@
     "fileSize": 15367,
     "status": 1,
     "language": "en",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -516,6 +544,7 @@
     "fileSize": 95706,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie",
@@ -533,6 +562,7 @@
     "version": 42,
     "name": "AnimePahe",
     "internalName": "AnimePahe",
+    "authors": [],
     "description": "Maintained by Adam Knight • Animes (SUB/DUB)",
     "fileSize": 150784,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -552,6 +582,7 @@
     "version": 3,
     "name": "Animerco",
     "internalName": "Animerco",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 91390,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -570,6 +601,7 @@
     "version": 1,
     "name": "AnimeRift",
     "internalName": "AnimeRift",
+    "authors": [],
     "description": "Maintained by Adam Knight • ⚠️ تنبيه: يُرجى استخدام VPN لتجنب حظر عنوان الـ IP الخاص بك",
     "fileSize": 48574,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -589,6 +621,7 @@
     "version": 18,
     "name": "Animesalt",
     "internalName": "Animesalt",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime/Cartoon in Hindi",
     "fileSize": 84492,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -610,6 +643,7 @@
     "fileSize": 28337,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie",
@@ -627,6 +661,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 33198,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime"
     ],
@@ -642,6 +677,7 @@
     "version": 3,
     "name": "AnimeWitcher",
     "internalName": "Animewitcher",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 34328,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -659,6 +695,7 @@
     "version": 16,
     "name": "Animexin",
     "internalName": "Animexin",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime and Movies",
     "fileSize": 89293,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -678,6 +715,7 @@
     "version": 2,
     "name": "AniSnatch",
     "internalName": "AniSnatch",
+    "authors": [],
     "description": "Maintained by Adam Knight • AniSnatch - Watch Anime Online Free",
     "fileSize": 127888,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -699,6 +737,7 @@
     "fileSize": 51900,
     "status": 3,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie"
@@ -715,6 +754,7 @@
     "version": 10,
     "name": "AniVortex",
     "internalName": "AniVortex",
+    "authors": [],
     "description": "Maintained by Adam Knight • AniVortex — Anime, movies & TV series streaming",
     "fileSize": 147073,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -737,6 +777,7 @@
     "fileSize": 44513,
     "status": 1,
     "language": "en",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -754,6 +795,7 @@
     "fileSize": 38597,
     "status": 1,
     "language": "en",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -770,6 +812,7 @@
     "version": 15,
     "name": "Aniworld",
     "internalName": "Aniworld",
+    "authors": [],
     "description": "Maintained by Adam Knight • Include: Serienstream (Login Required under Extension Settings)",
     "fileSize": 96880,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -789,6 +832,7 @@
     "version": 10,
     "name": "Anizone",
     "internalName": "Anizone",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anizone.to streams latest anime content in multiple language.",
     "fileSize": 67216,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -808,6 +852,7 @@
     "fileSize": 25354,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AsianDrama"
@@ -824,6 +869,7 @@
     "version": 8,
     "name": "BanglaPlex",
     "internalName": "BanglaPlex",
+    "authors": [],
     "description": "Maintained by Adam Knight • BanglaPlex",
     "fileSize": 57302,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -842,6 +888,7 @@
     "version": 10,
     "name": "BdixBdipTV",
     "internalName": "BdixBdipTV",
+    "authors": [],
     "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
     "fileSize": 16863,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -859,6 +906,7 @@
     "version": 27,
     "name": "BdixCircleftp",
     "internalName": "BdixCircleftp",
+    "authors": [],
     "description": "Maintained by Adam Knight • Only works in Bangladesh. Works even in internet Shutdown",
     "fileSize": 22123,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -884,6 +932,7 @@
     "version": 6,
     "name": "BdixCloudTV",
     "internalName": "BdixCloudTV",
+    "authors": [],
     "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
     "fileSize": 17223,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -901,6 +950,7 @@
     "version": 10,
     "name": "BdixDflix",
     "internalName": "BdixDflix",
+    "authors": [],
     "description": "Maintained by Adam Knight • Discovery BDIX Provider",
     "fileSize": 19036,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -926,6 +976,7 @@
     "version": 8,
     "name": "BdixDhakaFlix",
     "internalName": "BdixDhakaFlix",
+    "authors": [],
     "description": "Maintained by Adam Knight • Dhaka Flix BDIX Provider",
     "fileSize": 34317,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -951,6 +1002,7 @@
     "version": 3,
     "name": "BdixICCFtp",
     "internalName": "BdixICCFtp",
+    "authors": [],
     "description": "Maintained by Adam Knight • ICC BDIX Provider",
     "fileSize": 15539,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -976,6 +1028,7 @@
     "version": 6,
     "name": "BdixMyMovieBazarTV",
     "internalName": "BdixMyMovieBazarTV",
+    "authors": [],
     "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
     "fileSize": 9656,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -993,6 +1046,7 @@
     "version": 6,
     "name": "BdixRoarZoneTV",
     "internalName": "BdixRoarZoneTV",
+    "authors": [],
     "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
     "fileSize": 10702,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1011,6 +1065,7 @@
     "fileSize": 36833,
     "status": 1,
     "language": "en",
+    "authors": [],
     "version": 8,
     "internalName": "BflixProvider",
     "description": "Maintained by Adam Knight • Webview is used to load links, reload if necessary",
@@ -1023,6 +1078,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 17968,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Movie"
     ],
@@ -1038,6 +1094,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 49331,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -1054,6 +1111,7 @@
     "version": 33,
     "name": "Bollyflix",
     "internalName": "Bollyflix",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies and Series upto 4K",
     "fileSize": 38129,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1074,6 +1132,7 @@
     "version": 1,
     "name": "Brstej",
     "internalName": "Bristege",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 26137,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1092,6 +1151,7 @@
     "fileSize": 16366,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Live"
     ],
@@ -1107,6 +1167,7 @@
     "version": 1,
     "name": "Cee (🇮🇶)",
     "internalName": "Cee",
+    "authors": [],
     "description": "Maintained by Adam Knight • لا يعمل خارج العراق",
     "fileSize": 47031,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1125,6 +1186,7 @@
     "version": 2,
     "name": "Chikianimation",
     "internalName": "Chikianimation",
+    "authors": [],
     "description": "Maintained by Adam Knight • English anime and donghua from chikianimation.com",
     "fileSize": 88313,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1145,6 +1207,7 @@
     "fileSize": 18077,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Cartoon",
       "TvSeries",
@@ -1162,6 +1225,7 @@
     "version": 1,
     "name": "CimaClub",
     "internalName": "CimaClub",
+    "authors": [],
     "description": "Maintained by Adam Knight • سيرفرات الموقع بها ضعف احيانا اذا لم يفتح  غالبا المشكلة من الموقع",
     "fileSize": 17361,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1180,6 +1244,7 @@
     "version": 1,
     "name": "Cimalight",
     "internalName": "Cimalight",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 25913,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1199,6 +1264,7 @@
     "version": 1,
     "name": "Cimatn",
     "internalName": "Cimatn",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 38289,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1219,6 +1285,7 @@
     "fileSize": 10451,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -1235,6 +1302,7 @@
     "version": 16,
     "name": "Cinefreak",
     "internalName": "Cinefreak",
+    "authors": [],
     "description": "Maintained by Adam Knight • Bangla/Hindi Movies/Series",
     "fileSize": 120839,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1254,6 +1322,7 @@
     "version": 27,
     "name": "Cinemacity",
     "internalName": "Cinemacity",
+    "authors": [],
     "description": "Maintained by Adam Knight • Watch Movies & TvSeries (Multi-Lang/Audio)",
     "fileSize": 140687,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1272,6 +1341,7 @@
     "version": 4,
     "name": "Shabakaty Cinemana (🇮🇶)",
     "internalName": "cinemana",
+    "authors": [],
     "description": "Maintained by Adam Knight • لا يعمل خارج العراق او اي شبكة غير ايرثلنك",
     "fileSize": 54226,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1290,6 +1360,7 @@
     "version": 487,
     "name": "CineStream",
     "internalName": "CineStream",
+    "authors": [],
     "description": "Maintained by Adam Knight • One stop solution for Movies, Series, Anime, AsianDrama and Torrents",
     "fileSize": 695013,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1312,6 +1383,7 @@
     "fileSize": 33966,
     "status": 1,
     "language": "hi",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -1330,6 +1402,7 @@
     "fileSize": 30065,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "TvSeries"
     ],
@@ -1345,6 +1418,7 @@
     "version": 19,
     "name": "Coflix",
     "internalName": "Coflix",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies,Series and Anime French Extension",
     "fileSize": 63799,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1364,6 +1438,7 @@
     "fileSize": 34456,
     "status": 0,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "AsianDrama"
     ],
@@ -1379,6 +1454,7 @@
     "version": 2,
     "name": "Comix",
     "internalName": "Comix",
+    "authors": [],
     "description": "Maintained by Adam Knight • Comix — Read Manga, Manhwa, and Comics directly in CloudStream with custom reader.",
     "fileSize": 72346,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1398,6 +1474,7 @@
     "fileSize": 15027,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -1416,6 +1493,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 11472,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Others"
     ],
@@ -1433,6 +1511,7 @@
     "version": 19,
     "name": "Desicinemas",
     "internalName": "Desicinemas",
+    "authors": [],
     "description": "Maintained by Adam Knight • Contains BollyZone",
     "fileSize": 79698,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1451,6 +1530,7 @@
     "version": 1,
     "name": "Dima toon",
     "internalName": "dima-toon",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 19812,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1469,6 +1549,7 @@
     "version": 22,
     "name": "Donghuastream",
     "internalName": "Donghuastream",
+    "authors": [],
     "description": "Maintained by Adam Knight • Contains SeaTV (Chinese)",
     "fileSize": 76516,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1488,6 +1569,7 @@
     "fileSize": 23018,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie"
@@ -1504,6 +1586,7 @@
     "version": 14,
     "name": "DoraBash",
     "internalName": "DoraBash",
+    "authors": [],
     "description": "Maintained by Adam Knight • Doremon Show in Hindi",
     "fileSize": 128800,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1524,6 +1607,7 @@
     "fileSize": 31578,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "AsianDrama"
     ],
@@ -1540,6 +1624,7 @@
     "fileSize": 16719,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "AsianDrama"
     ],
@@ -1557,6 +1642,7 @@
     "fileSize": 20965,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "AsianDrama",
       "Movie"
@@ -1573,6 +1659,7 @@
     "version": 13,
     "name": "DudeFilms",
     "internalName": "DudeFilms",
+    "authors": [],
     "description": "Maintained by Adam Knight • Watch Movies & TvSeries (Multi-Lang)",
     "fileSize": 111028,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1592,6 +1679,7 @@
     "fileSize": 27347,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -1608,6 +1696,7 @@
     "version": 1,
     "name": "Egydead",
     "internalName": "Egydead",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 53726,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1628,6 +1717,7 @@
     "version": 1,
     "name": "Elif",
     "internalName": "Elif",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 31057,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1647,6 +1737,7 @@
     "version": 16,
     "name": "EmwBD",
     "internalName": "EmwBD",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movie website in Bangladesh",
     "fileSize": 12796,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1670,6 +1761,7 @@
     "fileSize": 36775,
     "status": 3,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -1688,6 +1780,7 @@
     "fileSize": 12649,
     "status": 0,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -1704,6 +1797,7 @@
     "version": 3,
     "name": "Eshek",
     "internalName": "eseek",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 37973,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1723,6 +1817,7 @@
     "fileSize": 17474,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "AsianDrama"
     ],
@@ -1738,6 +1833,7 @@
     "version": 3,
     "name": "Faselhd",
     "internalName": "Faselhd",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 55602,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1756,6 +1852,7 @@
     "version": 11,
     "name": "Fibwatch",
     "internalName": "Fibwatch",
+    "authors": [],
     "fileSize": 77894,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
@@ -1776,6 +1873,7 @@
     "fileSize": 34021,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries",
@@ -1795,6 +1893,7 @@
     "fileSize": 24041,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -1812,6 +1911,7 @@
     "fileSize": 20434,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -1828,6 +1928,7 @@
     "version": 8,
     "name": "Fivemovierulz",
     "internalName": "Fivemovierulz",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies & Series",
     "fileSize": 48657,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1846,6 +1947,7 @@
     "version": 6,
     "name": "FootReplays",
     "internalName": "FootReplays",
+    "authors": [],
     "description": "Maintained by Adam Knight • FootBall Matches Replays and Highlights",
     "fileSize": 11048,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1863,6 +1965,7 @@
     "version": 41,
     "name": "FourKHDHub",
     "internalName": "FourKHDHub",
+    "authors": [],
     "description": "Maintained by Adam Knight • 4K Movies Extension by HDHUB4U",
     "fileSize": 107472,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1881,6 +1984,7 @@
     "version": 6,
     "name": "FullReplays",
     "internalName": "FullReplays",
+    "authors": [],
     "description": "Maintained by Adam Knight • Watch Football Full Match Replay and Shows",
     "fileSize": 11022,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1898,6 +2002,7 @@
     "version": 7,
     "name": "FullyMaza",
     "internalName": "FullyMaza",
+    "authors": [],
     "fileSize": 11826,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
@@ -1918,6 +2023,7 @@
     "version": 1,
     "name": "GoldenAudiobooks",
     "internalName": "GoldenAudiobooks",
+    "authors": [],
     "description": "Maintained by Adam Knight • GoldenAudiobooks — Free online audiobooks streaming with chapter navigation.",
     "fileSize": 50648,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1935,6 +2041,7 @@
     "version": 5,
     "name": "Goojara",
     "internalName": "Goojara",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies and Series (Mostly 720p)",
     "fileSize": 78996,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -1955,6 +2062,7 @@
     "fileSize": 22920,
     "status": 1,
     "language": "en",
+    "authors": [],
     "tvTypes": [
       "NSFW"
     ],
@@ -1970,6 +2078,7 @@
     "version": 56,
     "name": "HDhub4u",
     "internalName": "HDhub4u",
+    "authors": [],
     "fileSize": 119457,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
@@ -1989,6 +2098,7 @@
     "version": 6,
     "name": "Hdmovie2",
     "internalName": "Hdmovie2",
+    "authors": [],
     "description": "Maintained by Adam Knight • Hdmovie2",
     "fileSize": 80829,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2009,6 +2119,7 @@
     "fileSize": 19378,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "NSFW"
     ],
@@ -2024,6 +2135,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 29337,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie"
@@ -2040,6 +2152,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 31393,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime"
     ],
@@ -2055,6 +2168,7 @@
     "version": 2,
     "name": "HiAnime",
     "internalName": "HiAnime",
+    "authors": [],
     "fileSize": 94269,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
@@ -2073,6 +2187,7 @@
     "version": 17,
     "name": "Hindmoviez",
     "internalName": "Hindmoviez",
+    "authors": [],
     "description": "Maintained by Adam Knight • Watch Movies & TvSeries (Multi-Lang)",
     "fileSize": 93534,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2093,6 +2208,7 @@
     "fileSize": 30725,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2109,6 +2225,7 @@
     "version": 16,
     "name": "IdlixProvider",
     "internalName": "IdlixProvider",
+    "authors": [],
     "fileSize": 92061,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
@@ -2130,6 +2247,7 @@
     "fileSize": 20883,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2148,6 +2266,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 28037,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Others"
     ],
@@ -2167,6 +2286,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 13695,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Others"
     ],
@@ -2184,6 +2304,7 @@
     "version": 9,
     "name": "IPTVPlayer",
     "internalName": "IPTVPlayer",
+    "authors": [],
     "description": "Maintained by Adam Knight • IPTV Player",
     "fileSize": 55491,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2201,6 +2322,7 @@
     "version": 6,
     "name": "IStreamFlare",
     "internalName": "IStreamFlare",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies/Series/Anime",
     "fileSize": 93405,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2223,6 +2345,7 @@
     "version": 7,
     "name": "Jellyfin",
     "internalName": "Jellyfin",
+    "authors": [],
     "description": "Maintained by Adam Knight • Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media",
     "fileSize": 106924,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2246,6 +2369,7 @@
     "fileSize": 24185,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -2262,6 +2386,7 @@
     "version": 5,
     "name": "Kartoons",
     "internalName": "Kartoons",
+    "authors": [],
     "description": "Maintained by Adam Knight • Kartoons (Cartoon & Animes)",
     "fileSize": 122993,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2282,6 +2407,7 @@
     "fileSize": 27616,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2298,6 +2424,7 @@
     "version": 27,
     "name": "Kickassanime",
     "internalName": "Kickassanime",
+    "authors": [],
     "fileSize": 94111,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
@@ -2319,6 +2446,7 @@
     "fileSize": 34530,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Cartoon",
@@ -2339,6 +2467,7 @@
     "fileSize": 22204,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Cartoon",
       "TvSeries",
@@ -2359,6 +2488,7 @@
     "fileSize": 25990,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Cartoon",
       "TvSeries",
@@ -2376,6 +2506,7 @@
     "version": 22,
     "name": "KisskhProvider",
     "internalName": "KisskhProvider",
+    "authors": [],
     "fileSize": 74868,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
@@ -2396,6 +2527,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 45350,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -2414,6 +2546,7 @@
     "fileSize": 20005,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2432,6 +2565,7 @@
     "fileSize": 36524,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -2450,6 +2584,7 @@
     "version": 1,
     "name": "Krmzy",
     "internalName": "Krmzy",
+    "authors": [],
     "description": "Maintained by Adam Knight • البحث لا يعمل حاليا مشكلة من الموقع",
     "fileSize": 29631,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2470,6 +2605,7 @@
     "fileSize": 24051,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "AnimeMovie",
       "OVA",
@@ -2489,6 +2625,7 @@
     "fileSize": 17889,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "AnimeMovie",
       "OVA",
@@ -2507,6 +2644,7 @@
     "fileSize": 9552,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Cartoons",
       "TvSeries"
@@ -2523,6 +2661,7 @@
     "version": 5,
     "name": "Latanime",
     "internalName": "Latanime",
+    "authors": [],
     "description": "Maintained by Adam Knight • (Mexican) Anime Extension",
     "fileSize": 50427,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2543,6 +2682,7 @@
     "fileSize": 12065,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -2560,6 +2700,7 @@
     "fileSize": 51923,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2576,6 +2717,7 @@
     "version": 10,
     "name": "LayarKacaProvider",
     "internalName": "LayarKacaProvider",
+    "authors": [],
     "fileSize": 88372,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
@@ -2596,6 +2738,7 @@
     "fileSize": 24214,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2612,6 +2755,7 @@
     "version": 2,
     "name": "LodyNet",
     "internalName": "Lodynet",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 44495,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2630,6 +2774,7 @@
     "version": 9,
     "name": "MassTamilanProvider",
     "internalName": "MassTamilanProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight • Indian Multi-language Music Provider",
     "fileSize": 52982,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2648,6 +2793,7 @@
     "version": 6,
     "name": "Megakino",
     "internalName": "Megakino",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies,Series and Anime German Extension",
     "fileSize": 55526,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2665,6 +2811,7 @@
     "version": 3,
     "name": "Microtv",
     "internalName": "Microtv",
+    "authors": [],
     "description": "Maintained by Adam Knight • Watch short vertical dramas & reels from multiple Indian short platforms",
     "fileSize": 73520,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2684,6 +2831,7 @@
     "fileSize": 23444,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2701,6 +2849,7 @@
     "fileSize": 16675,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -2719,6 +2868,7 @@
     "fileSize": 35071,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "Movie",
@@ -2737,6 +2887,7 @@
     "fileSize": 75157,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -2753,6 +2904,7 @@
     "version": 36,
     "name": "MovieBoxProvider",
     "internalName": "MovieBoxProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight • Multi Language Movies and Series Provider",
     "fileSize": 165837,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2773,6 +2925,7 @@
     "fileSize": 43001,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie",
@@ -2790,6 +2943,7 @@
     "version": 17,
     "name": "Movies4u",
     "internalName": "Movies4u",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies4u",
     "fileSize": 123199,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2808,6 +2962,7 @@
     "version": 33,
     "name": "MoviesDrive",
     "internalName": "MoviesDrive",
+    "authors": [],
     "description": "Maintained by Adam Knight • High Quality Movies and TV Shows",
     "fileSize": 47290,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2828,6 +2983,7 @@
     "version": 33,
     "name": "Moviesmod",
     "internalName": "Moviesmod",
+    "authors": [],
     "description": "Maintained by Adam Knight • Includes Topmovies",
     "fileSize": 44518,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2847,6 +3003,7 @@
     "version": 4,
     "name": "MoviPK",
     "internalName": "MoviPK",
+    "authors": [],
     "fileSize": 10567,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
@@ -2865,6 +3022,7 @@
     "version": 3,
     "name": "Mp4Moviez",
     "internalName": "Mp4Moviez",
+    "authors": [],
     "description": "Maintained by Adam Knight • Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez. Mp4moviez is number one entertainment hollywood bollywood website and provide free Mp4moviez full movie download facility",
     "fileSize": 13275,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2884,6 +3042,7 @@
     "version": 9,
     "name": "MPlayerProvider",
     "internalName": "MPlayerProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight • Indian Movies/Series/Kdrama(Hindi Dubbed)",
     "fileSize": 128756,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2903,6 +3062,7 @@
     "version": 54,
     "name": "MultiMoviesProvider",
     "internalName": "MultiMoviesProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight • Indian Multi-language HD Provider",
     "fileSize": 138506,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2923,6 +3083,7 @@
     "fileSize": 18962,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA",
@@ -2940,6 +3101,7 @@
     "version": 1,
     "name": "Mycima",
     "internalName": "MyCimaProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 45475,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2962,6 +3124,7 @@
     "fileSize": 23237,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "NSFW"
     ],
@@ -2977,6 +3140,7 @@
     "version": 5,
     "name": "Netcinez",
     "internalName": "Netcinez",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies,Series and Anime Portuguese Extension",
     "fileSize": 51915,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -2997,6 +3161,7 @@
     "fileSize": 83902,
     "status": 1,
     "language": "hi",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3014,6 +3179,7 @@
     "fileSize": 21909,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3032,6 +3198,7 @@
     "fileSize": 27349,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "AnimeMovie",
       "OVA",
@@ -3050,6 +3217,7 @@
     "fileSize": 19451,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3066,6 +3234,7 @@
     "version": 3,
     "name": "ObejrzyjTo",
     "internalName": "ObejrzyjTo",
+    "authors": [],
     "description": "Maintained by Adam Knight • Obejrzyj.to - Polski serwis z darmowymi filmami i serialami online",
     "fileSize": 148127,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3085,6 +3254,7 @@
     "fileSize": 21385,
     "status": 1,
     "language": "",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3101,6 +3271,7 @@
     "version": 7,
     "name": "OHLI24",
     "internalName": "OHLI24",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime and movies with Korean subtitles only (no Korean audio)",
     "fileSize": 55300,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3120,6 +3291,7 @@
     "version": 23,
     "name": "OnePace",
     "internalName": "OnePace",
+    "authors": [],
     "description": "Maintained by Adam Knight • One Pace",
     "fileSize": 76037,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3137,6 +3309,7 @@
     "version": 5,
     "name": "OneTouchTV",
     "internalName": "OneTouchTV",
+    "authors": [],
     "description": "Maintained by Adam Knight • Asian Dramas",
     "fileSize": 97124,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3155,6 +3328,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 45480,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -3174,6 +3348,7 @@
     "fileSize": 22516,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "AnimeMovie",
       "OVA",
@@ -3193,6 +3368,7 @@
     "fileSize": 29021,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "AnimeMovie",
       "OVA",
@@ -3212,6 +3388,7 @@
     "fileSize": 12679,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3229,6 +3406,7 @@
     "fileSize": 22983,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Movie"
     ],
@@ -3245,6 +3423,7 @@
     "fileSize": 14049,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3262,6 +3441,7 @@
     "fileSize": 14967,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries",
@@ -3281,6 +3461,7 @@
     "fileSize": 13780,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3298,6 +3479,7 @@
     "fileSize": 15778,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3314,6 +3496,7 @@
     "version": 8,
     "name": "Pencurimovie",
     "internalName": "Pencurimovie",
+    "authors": [],
     "description": "Maintained by Adam Knight • Pencurimovie",
     "fileSize": 50413,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3332,6 +3515,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 28862,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3348,6 +3532,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 30387,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3364,6 +3549,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 31043,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -3381,6 +3567,7 @@
     "version": 5,
     "name": "Pinoymoviepedia",
     "internalName": "Pinoymoviepedia",
+    "authors": [],
     "description": "Maintained by Adam Knight • Contains Bluray7",
     "fileSize": 57603,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3399,6 +3586,7 @@
     "version": 5,
     "name": "Piratexplay",
     "internalName": "Piratexplay",
+    "authors": [],
     "description": "Maintained by Adam Knight • Anime/Cartoon in Hindi",
     "fileSize": 100412,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3419,6 +3607,7 @@
     "fileSize": 34732,
     "status": 0,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Movie"
     ],
@@ -3434,6 +3623,7 @@
     "version": 8,
     "name": "Pmsm",
     "internalName": "Pmsm",
+    "authors": [],
     "description": "Maintained by Adam Knight • PMSM (Pencuri Movie Sub Malay)",
     "fileSize": 68145,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3452,6 +3642,7 @@
     "version": 5,
     "name": "PublicSportsIPTV",
     "internalName": "PublicSportsIPTV",
+    "authors": [],
     "description": "Maintained by Adam Knight • Sports Live Streams (FanCode)",
     "fileSize": 59680,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3470,6 +3661,7 @@
     "fileSize": 23941,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3486,6 +3678,7 @@
     "version": 8,
     "name": "QuickIPTV",
     "internalName": "QuickIPTV",
+    "authors": [],
     "description": "Maintained by Adam Knight • Includes PirateIPTV,Sports IPTV,Japanese IPTV,Sony IPTV",
     "fileSize": 59366,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3503,6 +3696,7 @@
     "version": 3,
     "name": "Reanime",
     "internalName": "Reanime",
+    "authors": [],
     "fileSize": 113107,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
@@ -3524,6 +3718,7 @@
     "fileSize": 18509,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3540,6 +3735,7 @@
     "version": 2,
     "name": "FullMatchShows",
     "internalName": "Replaymatch",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 29210,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3559,6 +3755,7 @@
     "version": 12,
     "name": "RingZ",
     "internalName": "RingZ",
+    "authors": [],
     "description": "Maintained by Adam Knight • Ringz App",
     "fileSize": 64957,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3579,6 +3776,7 @@
     "fileSize": 29763,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3596,6 +3794,7 @@
     "fileSize": 21933,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -3614,6 +3813,7 @@
     "fileSize": 15783,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "NSFW"
     ],
@@ -3631,6 +3831,7 @@
     "fileSize": 24080,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Cartoon",
       "TvSeries"
@@ -3648,6 +3849,7 @@
     "fileSize": 12928,
     "status": 0,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3665,6 +3867,7 @@
     "fileSize": 13785,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -3681,6 +3884,7 @@
     "version": 2,
     "name": "Shahid4u",
     "internalName": "Shahid4u",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 36553,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3699,6 +3903,7 @@
     "version": 1,
     "name": "Shahidwbas",
     "internalName": "Shahidwbas",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 18361,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3717,6 +3922,7 @@
     "version": 10,
     "name": "ShowBox",
     "internalName": "ShowBox",
+    "authors": [],
     "description": "Maintained by Adam Knight • ShowBox (Retrieve the cookie using Login with Google to properly utilize ShowBox.",
     "fileSize": 156846,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3739,6 +3945,7 @@
     "fileSize": 41170,
     "status": 3,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Cartoon",
       "TvSeries"
@@ -3756,6 +3963,7 @@
     "fileSize": 23971,
     "status": 1,
     "language": "en",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries",
@@ -3774,6 +3982,7 @@
     "fileSize": 14624,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries",
@@ -3792,6 +4001,7 @@
     "version": 685,
     "name": "StreamPlay",
     "internalName": "StreamPlay",
+    "authors": [],
     "description": "Maintained by Adam Knight • #1 best extention based on MultiAPI",
     "fileSize": 1907877,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3814,6 +4024,7 @@
     "version": 16,
     "name": "StremioAddon",
     "internalName": "StremioAddon",
+    "authors": [],
     "description": "Maintained by Adam Knight • [!] Requires Setup \n- Allows you to use any Stremio addon by pasting their manifest.json url",
     "fileSize": 119739,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3833,6 +4044,7 @@
     "version": 27,
     "name": "StremioX",
     "internalName": "StremioX",
+    "authors": [],
     "description": "Maintained by Adam Knight • [!] Requires Setup \n- StremioX allows you to use stream addons \n- StremioC allows you to use catalog addons",
     "fileSize": 216784,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3851,6 +4063,7 @@
     "version": 38,
     "name": "SuperStream",
     "internalName": "SuperStream",
+    "authors": [],
     "description": "Maintained by Adam Knight • SuperStream (Retrieve the cookie using Login with Google to properly utilize SuperStream.",
     "fileSize": 182350,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3874,6 +4087,7 @@
     "fileSize": 95301,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Others"
     ],
@@ -3889,6 +4103,7 @@
     "version": 1,
     "name": "Syrialive",
     "internalName": "Syria-live",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 16742,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3907,6 +4122,7 @@
     "version": 12,
     "name": "Tamilblasters",
     "internalName": "Tamilblasters",
+    "authors": [],
     "description": "Maintained by Adam Knight • Movies & Series",
     "fileSize": 65773,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3925,6 +4141,7 @@
     "version": 6,
     "name": "TheMoviesFlix",
     "internalName": "TheMoviesFlix",
+    "authors": [],
     "description": "Maintained by Adam Knight • 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies",
     "fileSize": 27276,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3945,6 +4162,7 @@
     "fileSize": 16070,
     "status": 1,
     "language": "es",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -3961,6 +4179,7 @@
     "version": 12,
     "name": "ToonHub",
     "internalName": "ToonHub",
+    "authors": [],
     "description": "Maintained by Adam Knight • ToonHub4u Multi Language",
     "fileSize": 61946,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3980,6 +4199,7 @@
     "version": 10,
     "name": "Toonstream",
     "internalName": "Toonstream",
+    "authors": [],
     "description": "Maintained by Adam Knight • ToonStream Multi Language",
     "fileSize": 78761,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3999,6 +4219,7 @@
     "version": 5,
     "name": "ToonTales",
     "internalName": "ToonTales",
+    "authors": [],
     "description": "Maintained by Adam Knight • ToonTales",
     "fileSize": 46584,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4016,6 +4237,7 @@
     "version": 5,
     "name": "Topcartoons",
     "internalName": "Topcartoons",
+    "authors": [],
     "description": "Maintained by Adam Knight • Top Cartoon",
     "fileSize": 46724,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4033,6 +4255,7 @@
     "version": 1,
     "name": "TopCinema",
     "internalName": "Topcinema",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 28702,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4051,6 +4274,7 @@
     "version": 9,
     "name": "Topstreamfilm",
     "internalName": "Topstreamfilm",
+    "authors": [],
     "description": "Maintained by Adam Knight • Filme  and Serien (German)",
     "fileSize": 53671,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4069,6 +4293,7 @@
     "version": 97,
     "name": "TorraStream",
     "internalName": "TorraStream",
+    "authors": [],
     "description": "Maintained by Adam Knight • #1 Best Extension – MultiAPI-Based with 4K Torrent Support (Debian) Use Extension Settings",
     "fileSize": 250040,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4090,6 +4315,7 @@
     "version": 1,
     "name": "Tuktukcima",
     "internalName": "TukTukcima",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 42735,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4108,6 +4334,7 @@
     "version": 1,
     "name": "TuniflexBlog",
     "internalName": "TuniflexBlog",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 20750,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4127,6 +4354,7 @@
     "version": 1,
     "name": "Tuniflix",
     "internalName": "Tuniflix",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 26298,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4146,6 +4374,7 @@
     "version": 1,
     "name": "TVgarden(Famelack)",
     "internalName": "TVgarden",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 15565,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4165,6 +4394,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 39106,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -4184,6 +4414,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 15239,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Live"
     ],
@@ -4203,6 +4434,7 @@
     "fileSize": 33070,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "Cartoon",
@@ -4223,6 +4455,7 @@
     "fileSize": 47325,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -4243,6 +4476,7 @@
     "fileSize": 40014,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "Cartoon",
@@ -4263,6 +4497,7 @@
     "fileSize": 12978,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie",
@@ -4283,6 +4518,7 @@
     "version": 41,
     "name": "UHDmoviesProvider",
     "internalName": "UHDmoviesProvider",
+    "authors": [],
     "description": "Maintained by Adam Knight • Indian Multi-language 4K Provider",
     "fileSize": 92605,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4301,6 +4537,7 @@
     "version": 65,
     "name": "Ultima",
     "internalName": "Ultima",
+    "authors": [],
     "description": "Maintained by Adam Knight • The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
     "fileSize": 228933,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4320,6 +4557,7 @@
     "fileSize": 29225,
     "status": 1,
     "language": "uk",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie"
@@ -4336,6 +4574,7 @@
     "version": 82,
     "name": "VegaMovies",
     "internalName": "VegaMovies",
+    "authors": [],
     "description": "Maintained by Adam Knight • Includes LuxMovies, Rogmovies",
     "fileSize": 41565,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4356,6 +4595,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 52281,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -4372,6 +4612,7 @@
     "version": 1,
     "name": "VIU",
     "internalName": "Viu",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 38046,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4391,6 +4632,7 @@
     "version": 3,
     "name": "WatchMoviesPk",
     "internalName": "WatchMoviesPk",
+    "authors": [],
     "description": "Maintained by Adam Knight • Watch Online Movies in HD Print Quality Free Download,Watch Full Movies Online Bollywood Movies Download Latest Hollywood Movies in DVD Print Quality Free",
     "fileSize": 12297,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4409,6 +4651,7 @@
     "version": 1,
     "name": "WeCima",
     "internalName": "Wecima",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 29438,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4428,6 +4671,7 @@
     "fileSize": 24012,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Movie",
       "TvSeries"
@@ -4444,6 +4688,7 @@
     "version": 1,
     "name": "Witanime",
     "internalName": "Witanime",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 73906,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4462,6 +4707,7 @@
     "version": 26,
     "name": "XDMovies",
     "internalName": "XDMovies",
+    "authors": [],
     "description": "Maintained by Adam Knight • Watch Latest Movies",
     "fileSize": 178969,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4484,6 +4730,7 @@
     "version": 1,
     "name": "Yacintv",
     "internalName": "Yacintv",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 24443,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4503,6 +4750,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 32844,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Anime",
       "AnimeMovie"
@@ -4521,6 +4769,7 @@
     "fileSize": 22691,
     "status": 1,
     "language": "id",
+    "authors": [],
     "tvTypes": [
       "Anime",
       "TvSeries",
@@ -4538,6 +4787,7 @@
     "version": 2,
     "name": "YouTube",
     "internalName": "Youtube",
+    "authors": [],
     "description": "Maintained by Adam Knight",
     "fileSize": 129346,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4562,6 +4812,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 13152,
     "status": 1,
+    "authors": [],
     "tvTypes": [
       "Other",
       "Live",
@@ -4581,6 +4832,7 @@
     "version": 11,
     "name": "YTS",
     "internalName": "YTS",
+    "authors": [],
     "description": "Maintained by Adam Knight • YTS Movies 4K Support (Torrent)",
     "fileSize": 52376,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4599,6 +4851,7 @@
     "version": 12,
     "name": "Zinkmovies",
     "internalName": "Zinkmovies",
+    "authors": [],
     "fileSize": 149679,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
