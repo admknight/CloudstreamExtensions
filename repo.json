@@ -1,6 +1,7 @@
 {
   "name": "Adam Knight Mega Repo",
   "description": "Dynamic CloudStream mega repository maintained by Adam Knight",
+  "iconUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png",
   "manifestVersion": 1,
   "pluginLists": [
     "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/builds/plugins.json"
