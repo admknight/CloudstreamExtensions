@@ -183,7 +183,7 @@ def failed_table(failed_plugins):
 
 def build_readme(report, plugin_rows):
     lines = [
-        "# 🎯 Adam Knight CloudStream Mega Repo",
+        "# 🎯 Adam Knight Mega Repo",
         "",
         "[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)",
         "",
@@ -548,7 +548,7 @@ def main():
     }
 
     repo_json = {
-        "name": "Adam Knight CloudStream Mega Repo",
+        "name": "Adam Knight Mega Repo",
         "description": "Dynamic CloudStream mega repository maintained by Adam Knight",
         "manifestVersion": 1,
         "pluginLists": [

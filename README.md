@@ -1,4 +1,4 @@
-# 🎯 Adam Knight CloudStream Mega Repo
+# 🎯 Adam Knight Mega Repo
 
 [![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)
 
