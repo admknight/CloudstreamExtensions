@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-04 23:04:26 UTC**
+Generated: **2026-10-04 23:16:16 UTC**
 
 Candidate status: **READY**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 533 | 43 | 36 | 0 | 17 | 4 | 0 |
+| 533 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## Source health
 
@@ -18,7 +18,7 @@ Candidate status: **READY**
 | [NetMirror Extension](https://github.com/Sushan64/NetMirror-Extension) | ✅ OK | 1 | 1 | 0 | 0 |
 | [ReCloudStream Official Extensions](https://github.com/recloudstream/extensions) | ✅ OK | 5 | 5 | 0 | 0 |
 | [Redowan CloudStream](https://github.com/redowan99/Redowan-CloudStream) | ✅ OK | 18 | 16 | 0 | 2 |
-| [Vietnamese CloudStream Index](https://github.com/t23-02/cloudstream) | ✅ OK | 16 | 14 | 2 | 0 |
+| [Vietnamese CloudStream Index](https://github.com/t23-02/cloudstream) | ✅ OK | 16 | 14 | 0 | 0 |
 | [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 16 | 14 | 0 | 2 |
 | [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 39 | 36 | 0 | 3 |
 | [TheAlyss Repo](https://github.com/TheAlyss/cloudstream-AlyssRepo) | ✅ OK | 3 | 2 | 0 | 1 |
@@ -45,7 +45,6 @@ Candidate status: **READY**
 | [Adam Knight Custom Providers](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 1 | 1 | 0 | 0 |
 | [doGior's Had Enough](https://github.com/doGior/doGiorsHadEnough) | ✅ OK | 15 | 9 | 0 | 6 |
 | [Gian-Fr Italian Provider](https://github.com/Gian-Fr/ItalianProvider) | ✅ OK | 2 | 2 | 0 | 0 |
-| [Kraptor cs-kraptor](https://github.com/Kraptor123/cs-kraptor) | ✅ OK | 67 | 0 | 41 | 26 |
 | [Aniyomi Compat](https://github.com/CranberrySoup/AniyomiCompatExtension) | ✅ OK | 1 | 1 | 0 | 0 |
 | [Tearrs Vietnamese Extension](https://gitlab.com/tearrs/cloudstream-vietnamese) | ✅ OK | 7 | 7 | 0 | 0 |
 
@@ -53,49 +52,7 @@ Candidate status: **READY**
 
 | Plugin | Best source checked | Version | Result |
 | --- | --- | ---: | --- |
-| Animeler | Kraptor cs-kraptor | 41 | ❌ HTTPError: HTTP Error 404: Not Found |
-| Animely | Kraptor cs-kraptor | 4 | ❌ HTTPError: HTTP Error 404: Not Found |
-| AnimPow | Kraptor cs-kraptor | 7 | ❌ HTTPError: HTTP Error 404: Not Found |
-| Anizium | Kraptor cs-kraptor | 25 | ❌ HTTPError: HTTP Error 404: Not Found |
-| AsyaAnimeleri | Kraptor cs-kraptor | 24 | ❌ HTTPError: HTTP Error 404: Not Found |
-| AsyaFanatiklerim | Kraptor cs-kraptor | 22 | ❌ HTTPError: HTTP Error 404: Not Found |
-| AsyaMinik | Kraptor cs-kraptor | 17 | ❌ HTTPError: HTTP Error 404: Not Found |
-| AsyaWatch | Kraptor cs-kraptor | 41 | ❌ HTTPError: HTTP Error 404: Not Found |
-| CizgiveDizi | Kraptor cs-kraptor | 50 | ❌ HTTPError: HTTP Error 404: Not Found |
-| DiziAsia | Kraptor cs-kraptor | 20 | ❌ HTTPError: HTTP Error 404: Not Found |
-| DiziAsya | Kraptor cs-kraptor | 27 | ❌ HTTPError: HTTP Error 404: Not Found |
-| DiziFilmORG | Kraptor cs-kraptor | 22 | ❌ HTTPError: HTTP Error 404: Not Found |
-| Dizigecesi | Kraptor cs-kraptor | 4 | ❌ HTTPError: HTTP Error 404: Not Found |
-| DiziLife | Kraptor cs-kraptor | 58 | ❌ HTTPError: HTTP Error 404: Not Found |
-| DiziPalOrijinal | Kraptor cs-kraptor | 45 | ❌ HTTPError: HTTP Error 404: Not Found |
-| Dizipod | Kraptor cs-kraptor | 12 | ❌ HTTPError: HTTP Error 404: Not Found |
-| DiziYo | Kraptor cs-kraptor | 74 | ❌ HTTPError: HTTP Error 404: Not Found |
-| DramaDizilerim | Kraptor cs-kraptor | 3 | ❌ HTTPError: HTTP Error 404: Not Found |
-| FilmEkseni | Kraptor cs-kraptor | 50 | ❌ HTTPError: HTTP Error 404: Not Found |
-| FilmHane | Kraptor cs-kraptor | 43 | ❌ HTTPError: HTTP Error 404: Not Found |
-| Filmzal | Kraptor cs-kraptor | 16 | ❌ HTTPError: HTTP Error 404: Not Found |
-| GinikoCanli | Kraptor cs-kraptor | 15 | ❌ HTTPError: HTTP Error 404: Not Found |
-| HDFilmDelisi | Kraptor cs-kraptor | 18 | ❌ HTTPError: HTTP Error 404: Not Found |
-| HDFilmizle | Kraptor cs-kraptor | 25 | ❌ HTTPError: HTTP Error 404: Not Found |
-| KickTR | Kraptor cs-kraptor | 17 | ❌ HTTPError: HTTP Error 404: Not Found |
-| KraptorPlus | Kraptor cs-kraptor | 86 | ❌ HTTPError: HTTP Error 404: Not Found |
-| MirrorVerse | Kraptor cs-kraptor | 38 | ❌ HTTPError: HTTP Error 404: Not Found |
-| NguonCProvider | Vietnamese CloudStream Index | 8 | ❌ HTTPError: HTTP Error 404: Not Found |
-| OnePaceTr | Kraptor cs-kraptor | 13 | ❌ HTTPError: HTTP Error 404: Not Found |
-| OpenAnime | Kraptor cs-kraptor | 28 | ❌ HTTPError: HTTP Error 404: Not Found |
-| SeiCode | Kraptor cs-kraptor | 25 | ❌ HTTPError: HTTP Error 404: Not Found |
-| SelcukFlix | Kraptor cs-kraptor | 49 | ❌ HTTPError: HTTP Error 404: Not Found |
-| SineWix | Kraptor cs-kraptor | 33 | ❌ HTTPError: HTTP Error 404: Not Found |
-| Sinezy | Kraptor cs-kraptor | 40 | ❌ HTTPError: HTTP Error 404: Not Found |
-| SubNhanhProvider | Vietnamese CloudStream Index | 9 | ❌ HTTPError: HTTP Error 404: Not Found |
-| TrAnimeIzle | Kraptor cs-kraptor | 15 | ❌ HTTPError: HTTP Error 404: Not Found |
-| Turkdizileri | Kraptor cs-kraptor | 33 | ❌ HTTPError: HTTP Error 404: Not Found |
-| TvDiziler | Kraptor cs-kraptor | 18 | ❌ HTTPError: HTTP Error 404: Not Found |
-| WebDramaTurkey | Kraptor cs-kraptor | 39 | ❌ HTTPError: HTTP Error 404: Not Found |
-| WFilmizle | Kraptor cs-kraptor | 23 | ❌ HTTPError: HTTP Error 404: Not Found |
-| YabanciDizi | Kraptor cs-kraptor | 18 | ❌ HTTPError: HTTP Error 404: Not Found |
-| YeniKaynak | Kraptor cs-kraptor | 11 | ❌ HTTPError: HTTP Error 404: Not Found |
-| YesilCamTv | Kraptor cs-kraptor | 9 | ❌ HTTPError: HTTP Error 404: Not Found |
+| — | — | — | ✅ No package failures |
 
 ## Published plugins
 
@@ -113,7 +70,7 @@ Candidate status: **READY**
 | 10 | **[Other] AllWish** | 18 | en | All | Phisher Repo | — |
 | 11 | **[Arabic] Alooytv** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
 | 12 | **[Movies] AltaDefinizione** | 25 | it | Movie, TvSeries, Documentary | DieGon Repository | — |
-| 13 | **[Movies] AltadefinizioneProvider** | 1 | it | Movie | Gian-Fr Italian Provider | 🆕 Added |
+| 13 | **[Movies] AltadefinizioneProvider** | 1 | it | Movie | Gian-Fr Italian Provider | — |
 | 14 | **[Anime] AniChan** | 14 | en | Anime, AnimeMovie | raghav repo | — |
 | 15 | **[Anime] Anichi** | 28 | en | AnimeMovie, Anime, OVA | Phisher Repo | — |
 | 16 | **[Asian] Anichin** | 1 | id | Anime, AnimeMovie | Nonton Indo | — |
@@ -150,7 +107,7 @@ Candidate status: **READY**
 | 47 | **[Anime] AnimeSaturn** | 4 | it | AnimeMovie, Anime, OVA | DieGon Repository | — |
 | 48 | **[Anime] AnimeSuge** | 10 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | — |
 | 49 | **[Anime] AnimeUAProvider** | 10 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | — |
-| 50 | **[Anime] AnimeUnity** | 26 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | 🔄 Updated |
+| 50 | **[Anime] AnimeUnity** | 26 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | — |
 | 51 | **[Anime] AnimeVietsubProvider** | 14 |  | Anime | Vietnamese CloudStream Index | — |
 | 52 | **[Arabic] AnimeWitcher** | 3 | ar | Anime | Re-3arabi | — |
 | 53 | **[Anime] AnimeWorld** | 20 | it | AnimeMovie, Anime, OVA | DieGon Repository | — |
@@ -166,7 +123,7 @@ Candidate status: **READY**
 | 63 | **[Indian] AniVortex** | 10 | hi | Anime, AnimeMovie, OVA, TvSeries, Movie | Phisher Repo | — |
 | 64 | **[Anime] AniWaves** | 7 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 65 | **[Anime] Aniworld** | 15 | de | AnimeMovie, Anime, OVA | Phisher Repo | — |
-| 66 | **[Other] AniyomiProvider** | 8 |  | Others | Aniyomi Compat | 🆕 Added |
+| 66 | **[Other] AniyomiProvider** | 8 |  | Others | Aniyomi Compat | — |
 | 67 | **[Anime] Anizone** | 10 | en | Anime | Phisher Repo | — |
 | 68 | **[Movies] AreaDocumentalProvider** | 1 | en | Movie, TvSeries | Storm-ext Fork by redblacker8 | — |
 | 69 | **[Games] AriaOfSorrow** | 1 | en | Others | Ayu CloudStream Games | — |
@@ -226,7 +183,7 @@ Candidate status: **READY**
 | 123 | **[Anime] Comix** | 2 | en | Others, Anime | Phisher Repo | — |
 | 124 | **[Games] Contra** | 10 | en | Others | Ayu CloudStream Games | — |
 | 125 | **[Adult] CornHubProvider** | 3 | en | NSFW | CXXX | — |
-| 126 | **[Movies] CorsaroNero** | 4 | it | Movie, Torrent | doGior's Had Enough | 🆕 Added |
+| 126 | **[Movies] CorsaroNero** | 4 | it | Movie, Torrent | doGior's Had Enough | — |
 | 127 | **[Live] CricifyProvider** | 70 | ta | Live | CNC Repo (All Language) | — |
 | 128 | **[Movies] Ctg Stream** | 2 |  | TvSeries, Movie, AsianDrama, Anime, Torrent | Desi Extensions | — |
 | 129 | **[Movies] CuevanaProvider** | 15 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
@@ -288,11 +245,11 @@ Candidate status: **READY**
 | 185 | **[Sports] FootReplays** | 6 | en | Others | Redowan CloudStream | — |
 | 186 | **[Movies] FourKHDHub** | 41 | en | Movie, TvSeries | Phisher Repo | — |
 | 187 | **[Adult] FreePornVideos** | 5 | en | NSFW | CXXX | — |
-| 188 | **[Movies] FshareProvider** | 35 |  | Anime, TvSeries, Movie | Tearrs Vietnamese Extension | 🆕 Added |
+| 188 | **[Movies] FshareProvider** | 35 |  | Anime, TvSeries, Movie | Tearrs Vietnamese Extension | — |
 | 189 | **[Movies] FullHDFilm** | 35 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
 | 190 | **[Movies] FullHDFilmizlesene** | 27 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
 | 191 | **[Adult] FullPorner** | 2 | en | NSFW | Turkish Providers Repository \| @KekikAkademi | — |
-| 192 | **[Live] FullRaces** | 14 | en | Live, Others | cs-karma | 🔄 Updated |
+| 192 | **[Live] FullRaces** | 14 | en | Live, Others | cs-karma | — |
 | 193 | **[Sports] FullReplays** | 6 | en | Others | Redowan CloudStream | — |
 | 194 | **[Movies] FullyMaza** | 7 | en | Movie, TvSeries, AnimeMovie, Cartoon | Redowan CloudStream | — |
 | 195 | **[Adult] FXPrnHD** | 3 | en | NSFW | CXXX | — |
@@ -305,7 +262,7 @@ Candidate status: **READY**
 | 202 | **[Anime] GoTaku** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 203 | **[Movies] GuardaPlay** | 1 | it | Movie, Cartoon, Documentary | DieGon Repository | — |
 | 204 | **[Movies] GuardaSerie** | 7 | it | TvSeries, Cartoon | DieGon Repository | — |
-| 205 | **[Movies] GuardaSerieProvider** | 1 | it | TvSeries | Gian-Fr Italian Provider | 🆕 Added |
+| 205 | **[Movies] GuardaSerieProvider** | 1 | it | TvSeries | Gian-Fr Italian Provider | — |
 | 206 | **[Adult] Hahomoe** | 8 | en | NSFW | CXXX | — |
 | 207 | **[Adult] Hanime** | 7 | en | NSFW | CXXX | — |
 | 208 | **[Adult] Happy2hub** | 2 | en | NSFW | CXXX | — |
@@ -330,7 +287,7 @@ Candidate status: **READY**
 | 227 | **[Asian] Idlix** | 2 | id | Movie, TvSeries | Nonton Indo | — |
 | 228 | **[Asian] IdlixProvider** | 16 | id | TvSeries, Movie, Anime, AsianDrama | Phisher Repo | — |
 | 229 | **[Other] IfsaLog** | 3 | tr | NSFW | Turkish Providers Repository \| @KekikAkademi | — |
-| 230 | **[Movies] IlCorsaroViola** | 1 | it | Movie, TvSeries, Torrent, Documentary | doGior's Had Enough | 🆕 Added |
+| 230 | **[Movies] IlCorsaroViola** | 1 | it | Movie, TvSeries, Torrent, Documentary | doGior's Had Enough | — |
 | 231 | **[Live] InatBox** | 24 | tr | Movie, TvSeries, Live | Turkish Providers Repository \| @KekikAkademi | — |
 | 232 | **[Adult] IncestFlix** | 1 | en | NSFW | CXXX | — |
 | 233 | **[Live] IndianTVProvider** | 6 |  | Live | Kim Recovery Builds | — |
@@ -338,9 +295,9 @@ Candidate status: **READY**
 | 235 | **[Other] InternetArchiveProvider** | 1 |  | Others | ReCloudStream Official Extensions | — |
 | 236 | **[Adult] InternetChicks** | 5 | en | NSFW | CXXX | — |
 | 237 | **[Other] InvidiousProvider** | 9 |  | Others | ReCloudStream Official Extensions | — |
-| 238 | **[Live] IPTV** | 1 |  | Live | doGior's Had Enough | 🆕 Added |
+| 238 | **[Live] IPTV** | 1 |  | Live | doGior's Had Enough | — |
 | 239 | **[Live] IPTVPlayer** | 9 | hi | Live | Phisher Repo | — |
-| 240 | **[Live] IPTVProvider** | 9 |  | Live | Tearrs Vietnamese Extension | 🆕 Added |
+| 240 | **[Live] IPTVProvider** | 9 |  | Live | Tearrs Vietnamese Extension | — |
 | 241 | **[Indian] IStreamFlare** | 6 | hi | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
 | 242 | **[Movies] Iwatchtheoffice** | 3 | en | Movie | cs-karma | — |
 | 243 | **[Adult] ixiporn** | 16 | en | NSFW | CXXX | — |
@@ -405,7 +362,7 @@ Candidate status: **READY**
 | 302 | **[Adult] MissAV** | 9 | en | NSFW | CXXX | — |
 | 303 | **[Indian] MLSBDProvider** | 33 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | — |
 | 304 | **[Anime] MonoschinosProvider** | 8 | mx | Anime, AnimeMovie, OVA | Storm-ext Fork by redblacker8 | — |
-| 305 | **[Other] MonPlayerProvider** | 9 |  | Others | Tearrs Vietnamese Extension | 🆕 Added |
+| 305 | **[Other] MonPlayerProvider** | 9 |  | Others | Tearrs Vietnamese Extension | — |
 | 306 | **[Indian] MovieBox** | 12 | hi | Movie, TvSeries, Anime | Desi Extensions | — |
 | 307 | **[Indian] MovieBoxProvider** | 52 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 308 | **[Indian] MovieBoxProviderIN** | 54 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
@@ -422,7 +379,7 @@ Candidate status: **READY**
 | 319 | **[Indian] MultiMoviesProvider** | 54 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
 | 320 | **[Anime] MundoDonghuaProvider** | 4 | es | Anime, OVA, AnimeMovie | Storm-ext Fork by redblacker8 | — |
 | 321 | **[Arabic] Mycima** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | — |
-| 322 | **[Other] Nebula** | 1 | en | Others | doGior's Had Enough | 🆕 Added |
+| 322 | **[Other] Nebula** | 1 | en | Others | doGior's Had Enough | — |
 | 323 | **[Asian] Nekokun** | 4 | id | Anime | cs-karma | — |
 | 324 | **[Asian] Nekopoi** | 1 | id | NSFW | Nonton Indo | — |
 | 325 | **[Movies] Netcinez** | 5 | pt-br | Movie, TvSeries | Phisher Repo | — |
@@ -516,7 +473,7 @@ Candidate status: **READY**
 | 413 | **[Arabic] Shahid4u** | 2 | ar | TvSeries, Movie | Re-3arabi | — |
 | 414 | **[Arabic] Shahidwbas** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
 | 415 | **[Movies] ShowBox** | 10 | en | AsianDrama, Anime, TvSeries, Movie | Phisher Repo | — |
-| 416 | **[Movies] SimklProvider** | 2 | en | AnimeMovie, Anime, OVA, TvSeries, Movie, Documentary, Cartoon | doGior's Had Enough | 🆕 Added |
+| 416 | **[Movies] SimklProvider** | 2 | en | AnimeMovie, Anime, OVA, TvSeries, Movie, Documentary, Cartoon | doGior's Had Enough | — |
 | 417 | **[Movies] SimpsonsUATvProvider** | 5 | uk | Cartoon, TvSeries | CakesTwix UK/UA | — |
 | 418 | **[Movies] SinemaCX** | 18 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
 | 419 | **[Live] SKTechProvider** | 57 | ta | Live | CNC Repo (All Language) | — |
@@ -525,17 +482,17 @@ Candidate status: **READY**
 | 422 | **[Movies] SoloLatinoProvider** | 8 | mx | Movie, TvSeries, Anime, Cartoon | Storm-ext Fork by redblacker8 | — |
 | 423 | **[Adult] spankbang** | 10 | en | NSFW | CXXX | — |
 | 424 | **[Live] SportzxProvider** | 24 | ta | Live | CNC Repo (All Language) | — |
-| 425 | **[Live] StreamCenter** | 10 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | 🆕 Added |
+| 425 | **[Live] StreamCenter** | 10 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | — |
 | 426 | **[Live] Streamed** | 29 | en | Live | cs-karma | — |
 | 427 | **[Live] StreamedPk** | 12 | en | Live | raghav repo | — |
 | 428 | **[Live] StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | — |
 | 429 | **[Indian] StreamFlixProvider** | 34 | ta | Movie, TvSeries, Anime | CNC Repo (All Language) | — |
-| 430 | **[Indian] StreamHubOne** | 62 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | Desi Extensions | 🔄 Updated |
+| 430 | **[Indian] StreamHubOne** | 62 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | Desi Extensions | — |
 | 431 | **[Movies] StreamingCommunity** | 53 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | — |
 | 432 | **[Movies] StreamPlay** | 686 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
 | 433 | **[Tools] Stremio** | 14 | it | TvSeries, Movie | DieGon Repository | — |
 | 434 | **[Tools] StremioAddon** | 16 | en | TvSeries, Movie, Torrent | Phisher Repo | — |
-| 435 | **[Tools] StremioProvider** | 7 |  | TvSeries, Anime, Movie | Tearrs Vietnamese Extension | 🆕 Added |
+| 435 | **[Tools] StremioProvider** | 7 |  | TvSeries, Anime, Movie | Tearrs Vietnamese Extension | — |
 | 436 | **[Tools] StremioX** | 27 | en | TvSeries, Movie | Phisher Repo | — |
 | 437 | **[Tools] SubscriptionManager** | 16 |  | Movie, TvSeries | CNC Repo (All Language) | — |
 | 438 | **[Anime] Subsplease** | 4 | en | Anime | cs-karma | — |
@@ -546,7 +503,7 @@ Candidate status: **READY**
 | 443 | **[Movies] SuperStream** | 38 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
 | 444 | **[Adult] SxyPrn** | 7 | en | NSFW | CXXX | — |
 | 445 | **[Tools] SyncPlugin** | 3 | uk | Others | CakesTwix UK/UA | — |
-| 446 | **[Other] Cross-Device Sync** | 9 |  |  | Tearrs Vietnamese Extension | 🆕 Added |
+| 446 | **[Other] Cross-Device Sync** | 9 |  |  | Tearrs Vietnamese Extension | — |
 | 447 | **[Tools] SyncStream** | 11 |  | Others | DieGon Repository | — |
 | 448 | **[Live] Syrialive** | 1 | ar | TvSeries, Live | Re-3arabi | — |
 | 449 | **[Indian] Tamilblasters** | 12 | ta | Movie, TvSeries | Phisher Repo | — |
@@ -593,10 +550,10 @@ Candidate status: **READY**
 | 490 | **[Adult] Uncut99** | 2 | hi | NSFW | CXXX | — |
 | 491 | **[Adult] UncutMaza** | 8 | hi | NSFW | CXXX | — |
 | 492 | **[Anime] UnimayProvider** | 13 | uk | Anime, AnimeMovie | CakesTwix UK/UA | — |
-| 493 | **[Live] Vavoo** | 7 |  | Live | doGior's Had Enough | 🆕 Added |
+| 493 | **[Live] Vavoo** | 7 |  | Live | doGior's Had Enough | — |
 | 494 | **[Indian] VegaMovies** | 82 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
 | 495 | **[Movies] VipPhimProvider** | 9 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 496 | **[Movies] ViStreamProvider** | 35 |  | TvSeries, Anime, Movie | Tearrs Vietnamese Extension | 🆕 Added |
+| 496 | **[Movies] ViStreamProvider** | 35 |  | TvSeries, Anime, Movie | Tearrs Vietnamese Extension | — |
 | 497 | **[Arabic] VIU** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | — |
 | 498 | **[Adult] Vlxx** | 7 | en | NSFW | CXXX | — |
 | 499 | **[Movies] Watch2Movies** | 5 | en | Movie | Turkish Providers Repository \| @KekikAkademi | — |
@@ -620,7 +577,7 @@ Candidate status: **READY**
 | 517 | **[Indian] XonProvider** | 35 | ta | TvSeries, Movie, Anime | CNC Repo (All Language) | — |
 | 518 | **[Adult] XPrimeHub** | 5 | hi | NSFW | CXXX | — |
 | 519 | **[Adult] Xtapes** | 7 | en | NSFW | CXXX | — |
-| 520 | **[Live] XtreamIPTVProvider** | 1 |  | Live | Tearrs Vietnamese Extension | 🆕 Added |
+| 520 | **[Live] XtreamIPTVProvider** | 1 |  | Live | Tearrs Vietnamese Extension | — |
 | 521 | **[Adult] Xvideos** | 2 | en | NSFW | CXXX | — |
 | 522 | **[Movies] Yablom** | 4 | fr | Movie | cs-karma | — |
 | 523 | **[Live] Yacintv** | 1 | ar | TvSeries, Live, Movie | Re-3arabi | — |
@@ -629,7 +586,7 @@ Candidate status: **READY**
 | 526 | **[Asian] YlnimeProvider** | 6 | id | Anime, TvSeries, Movie | TheAlyss Repo | — |
 | 527 | **[Adult] YMaal** | 1 | hi | NSFW | CXXX | — |
 | 528 | **[Movies] YoTurkish** | 4 | en | TvSeries | cs-karma | — |
-| 529 | **[Other] YouTube** | 15 |  | Others | doGior's Had Enough | 🔄 Updated |
+| 529 | **[Other] YouTube** | 15 |  | Others | doGior's Had Enough | — |
 | 530 | **[Live] YoutubeProvider** | 1 |  | Other, Live, TvSeries | ReCloudStream Official Extensions | — |
 | 531 | **[Movies] YTS** | 11 | en | Movie, Torrent | Phisher Repo | — |
 | 532 | **[Games] Zelda** | 8 | en | Others | Ayu CloudStream Games | — |
@@ -641,36 +598,19 @@ Candidate status: **READY**
 | --- | --- | --- |
 | AltaDefinizione | DieGon Repository v25 | doGior's Had Enough v8 (lower version) |
 | AniKoto | CNC Repo (All Language) v10 | Phisher Repo v6 (lower version) |
-| AnimeciX | Turkish Providers Repository \| @KekikAkademi v21 | Kraptor cs-kraptor v88 (package unreachable) |
 | AnimeUnity | doGior's Had Enough v26 | DieGon Repository v17 (lower version) |
 | AnimeWorld | DieGon Repository v20 | doGior's Had Enough v18 (lower version) |
 | AnimeWorld | DieGon Repository v20 | cs-karma v5 (lower version) |
 | Anizone | Phisher Repo v10 | Desi Extensions v3 (lower version) |
 | Arte | DieGon Repository v5 | doGior's Had Enough v4 (lower version) |
 | BanglaPlex | Phisher Repo v8 | Redowan CloudStream v1 (lower version) |
-| BelgeselX | Turkish Providers Repository \| @KekikAkademi v12 | Kraptor cs-kraptor v41 (package unreachable) |
 | CalcioStreaming | DieGon Repository v20 | doGior's Had Enough v15 (lower version) |
-| CizgiMax | Turkish Providers Repository \| @KekikAkademi v8 | Kraptor cs-kraptor v36 (package unreachable) |
-| Ddizi | Turkish Providers Repository \| @KekikAkademi v10 | Kraptor cs-kraptor v19 (package unreachable) |
-| DiziBox | Turkish Providers Repository \| @KekikAkademi v23 | Kraptor cs-kraptor v37 (package unreachable) |
-| DiziKorea | Turkish Providers Repository \| @KekikAkademi v29 | Kraptor cs-kraptor v35 (package unreachable) |
-| Dizilla | Turkish Providers Repository \| @KekikAkademi v39 | Kraptor cs-kraptor v111 (package unreachable) |
-| DiziMom | Turkish Providers Repository \| @KekikAkademi v35 | Kraptor cs-kraptor v61 (package unreachable) |
-| DiziPal | Turkish Providers Repository \| @KekikAkademi v32 | Kraptor cs-kraptor v89 (package unreachable) |
-| DiziYou | Turkish Providers Repository \| @KekikAkademi v23 | Kraptor cs-kraptor v49 (package unreachable) |
-| FilmMakinesi | Turkish Providers Repository \| @KekikAkademi v40 | Kraptor cs-kraptor v70 (package unreachable) |
-| FilmModu | Turkish Providers Repository \| @KekikAkademi v15 | Kraptor cs-kraptor v41 (package unreachable) |
 | FootReplays | Redowan CloudStream v6 | cs-karma v1 (lower version) |
-| FullHDFilmizlesene | Turkish Providers Repository \| @KekikAkademi v27 | Kraptor cs-kraptor v72 (package unreachable) |
 | FullPorner | Turkish Providers Repository \| @KekikAkademi v2 | CXXX v2 (lower source priority) |
 | Hanime | CXXX v7 | Nonton Indo v3 (lower version) |
-| HDFilmCehennemi | Turkish Providers Repository \| @KekikAkademi v23 | Kraptor cs-kraptor v97 (package unreachable) |
 | Hqporner | Turkish Providers Repository \| @KekikAkademi v4 | CXXX v3 (lower version) |
 | Idlix | Nonton Indo v2 | CloudX-V2 v1 (lower version) |
-| InatBox | Turkish Providers Repository \| @KekikAkademi v24 | Kraptor cs-kraptor v57 (package unreachable) |
-| JetFilmizle | Turkish Providers Repository \| @KekikAkademi v41 | Kraptor cs-kraptor v62 (package unreachable) |
 | Krmzy | cs-karma v2 | Re-3arabi v1 (lower version) |
-| KultFilmler | Turkish Providers Repository \| @KekikAkademi v14 | Kraptor cs-kraptor v31 (package unreachable) |
 | Latanime | cs-karma v9 | Phisher Repo v5 (lower version) |
 | LayarKaca | cs-karma v15 | CloudX-V2 v1 (lower version) |
 | MovieBox | Desi Extensions v12 | Nonton Indo v2 (lower version) |
@@ -679,26 +619,17 @@ Candidate status: **READY**
 | MovieBoxProvider | CNC Repo (All Language) v52 | TheAlyss Repo v9 (lower version) |
 | Mp4Moviez | Redowan CloudStream v3 | Cinephile v1 (lower version) |
 | Pencurimovie | Phisher Repo v8 | CloudX-V2 v1 (lower version) |
-| RareFilmm | CloudStreamHub Recovery Builds v15 | Kraptor cs-kraptor v20 (package unreachable) |
 | RareFilmm | CloudStreamHub Recovery Builds v15 | Turkish Providers Repository \| @KekikAkademi v3 (lower version) |
 | ReAnime | raghav repo v4 | Phisher Repo v3 (lower version) |
-| RecTV | Turkish Providers Repository \| @KekikAkademi v97 | Kraptor cs-kraptor v43 (package unreachable) |
-| SetFilmIzle | Turkish Providers Repository \| @KekikAkademi v24 | Kraptor cs-kraptor v42 (package unreachable) |
-| SezonlukDizi | Turkish Providers Repository \| @KekikAkademi v6 | Kraptor cs-kraptor v40 (package unreachable) |
-| SinemaCX | Turkish Providers Repository \| @KekikAkademi v18 | Kraptor cs-kraptor v35 (package unreachable) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | Tamilblasters | Phisher Repo v12 | Cinephile v3 (lower version) |
 | TheMoviesFlix | raghav repo v22 | Redowan CloudStream v6 (lower version) |
-| TurkAnime | Turkish Providers Repository \| @KekikAkademi v14 | Kraptor cs-kraptor v34 (package unreachable) |
 | TV | DieGon Repository v5 | doGior's Had Enough v3 (lower version) |
 | TVGarden | cs-karma v11 | Re-3arabi v1 (lower version) |
 | VegaMovies | CSX v82 | Desi Extensions v37 (lower version) |
-| WebteIzle | Turkish Providers Repository \| @KekikAkademi v15 | Kraptor cs-kraptor v53 (package unreachable) |
 | Xhamster | Turkish Providers Repository \| @KekikAkademi v1 | CXXX v1 (lower source priority) |
 | XNXX | Turkish Providers Repository \| @KekikAkademi v2 | CXXX v2 (lower source priority) |
-| YouTube | doGior's Had Enough v15 | Kraptor cs-kraptor v39 (package unreachable) |
 | YouTube | doGior's Had Enough v15 | Re-3arabi v2 (lower version) |
-| YTS | Phisher Repo v11 | Kraptor cs-kraptor v42 (package unreachable) |
 
 > Package health verifies that the published plugin package can be fetched. It is not a runtime test of the third-party provider website.
 
