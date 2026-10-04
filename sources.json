@@ -249,12 +249,6 @@
       ]
     },
     {
-      "id": "cuxplug",
-      "name": "CuxPlug",
-      "repo": "https://github.com/ycngmn/CuxPlug",
-      "index": "https://raw.githubusercontent.com/ycngmn/CuxPlug/refs/heads/builds/plugins.json"
-    },
-    {
       "id": "dogior",
       "name": "doGior's Had Enough",
       "repo": "https://github.com/doGior/doGiorsHadEnough",
