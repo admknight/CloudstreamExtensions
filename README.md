@@ -1,6 +1,6 @@
 # 🎯 Adam Knight CloudStream Mega Repo
 
-[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)
+[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)
 
 A dynamic CloudStream mega repository maintained by **Adam Knight**.
 
@@ -20,7 +20,7 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-04 00:11:04 UTC**
+Last successful refresh: **2026-10-04 00:32:50 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
