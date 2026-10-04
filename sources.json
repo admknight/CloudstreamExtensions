@@ -50,7 +50,23 @@
       "name": "Vietnamese CloudStream Index",
       "repo": "https://github.com/t23-02/cloudstream",
       "index": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
-      "priority": 30
+      "priority": 30,
+      "include": [
+        "AnimeHayProvider",
+        "AnimeVietsubProvider",
+        "BluPhimProvider",
+        "HHkungfuProvider",
+        "HHPandaProvider",
+        "KKPhimProvider",
+        "OHiTVProvider",
+        "OPhimProvider",
+        "PhimLongTiengProvider",
+        "PhimMoiProvider",
+        "PhimTuoiThoProvider",
+        "TvPhimProvider",
+        "VipPhimProvider",
+        "YanHH3DProvider"
+      ]
     },
     {
       "id": "nontonindo",
@@ -259,12 +275,6 @@
       "name": "Gian-Fr Italian Provider",
       "repo": "https://github.com/Gian-Fr/ItalianProvider",
       "index": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json"
-    },
-    {
-      "id": "cs-kraptor",
-      "name": "Kraptor cs-kraptor",
-      "repo": "https://github.com/Kraptor123/cs-kraptor",
-      "index": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/refs/heads/builds/plugins.json"
     },
     {
       "id": "aniyomi-compat",
