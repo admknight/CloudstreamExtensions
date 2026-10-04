@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04 11:45:28 UTC",
+  "generatedAt": "2026-10-04 11:51:20 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -16,9 +16,9 @@
       "priority": 10,
       "ok": true,
       "rawCount": 84,
-      "includedCount": 81,
+      "includedCount": 80,
       "packageFailed": 0,
-      "duplicateSkipped": 3
+      "duplicateSkipped": 4
     },
     {
       "id": "cinephile",
@@ -112,9 +112,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 39,
-      "includedCount": 38,
+      "includedCount": 37,
       "packageFailed": 0,
-      "duplicateSkipped": 1
+      "duplicateSkipped": 2
     },
     {
       "id": "alyss",
@@ -124,9 +124,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 3,
-      "includedCount": 3,
+      "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 1
     },
     {
       "id": "cakestwix",
@@ -148,9 +148,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 18,
-      "includedCount": 15,
+      "includedCount": 14,
       "packageFailed": 0,
-      "duplicateSkipped": 3
+      "duplicateSkipped": 4
     },
     {
       "id": "storm-redblacker8",
@@ -172,9 +172,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 10,
-      "includedCount": 9,
+      "includedCount": 8,
       "packageFailed": 0,
-      "duplicateSkipped": 1
+      "duplicateSkipped": 2
     },
     {
       "id": "flummox",
@@ -299,10 +299,23 @@
       "reason": "Archived legacy repository; superseded by the actively maintained maarrem/cs-Kekik fork."
     }
   ],
+  "categoryCounts": {
+    "Movies": 122,
+    "Anime": 64,
+    "Indian": 72,
+    "Arabic": 35,
+    "Asian": 49,
+    "Live": 42,
+    "Sports": 2,
+    "Games": 21,
+    "Tools": 11,
+    "Adult": 74,
+    "Other": 13
+  },
   "previousPlugins": 505,
-  "uniquePlugins": 510,
+  "uniquePlugins": 505,
   "packageHealth": {
-    "reachable": 510,
+    "reachable": 505,
     "failed": 2
   },
   "duplicates": [
@@ -411,11 +424,27 @@
       "reason": "lower version"
     },
     {
+      "plugin": "MovieBox",
+      "selectedSource": "Desi Extensions",
+      "selectedVersion": 12,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
       "plugin": "MovieBoxProvider",
       "selectedSource": "CNC Repo (All Language)",
       "selectedVersion": 52,
       "skippedSource": "Phisher Repo",
       "skippedVersion": 36,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MovieBoxProvider",
+      "selectedSource": "CNC Repo (All Language)",
+      "selectedVersion": 52,
+      "skippedSource": "TheAlyss Repo",
+      "skippedVersion": 9,
       "reason": "lower version"
     },
     {
@@ -435,6 +464,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "ReAnime",
+      "selectedSource": "raghav repo",
+      "selectedVersion": 4,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
       "plugin": "Tamilblasters",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 12,
@@ -448,6 +485,22 @@
       "selectedVersion": 22,
       "skippedSource": "Redowan CloudStream",
       "skippedVersion": 6,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "TVGarden",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 11,
+      "skippedSource": "Re-3arabi",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "VegaMovies",
+      "selectedSource": "CSX",
+      "selectedVersion": 82,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 37,
       "reason": "lower version"
     },
     {
@@ -486,9 +539,9 @@
     }
   ],
   "changes": {
-    "added": 5,
-    "updated": 0,
-    "unchanged": 505,
+    "added": 0,
+    "updated": 505,
+    "unchanged": 0,
     "removed": 0
   },
   "removedPlugins": []
