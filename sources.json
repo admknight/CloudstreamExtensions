@@ -32,13 +32,6 @@
       "priority": 20
     },
     {
-      "id": "storm",
-      "name": "Storm Extensions",
-      "repo": "https://github.com/Stormunblessed/storm-ext",
-      "index": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-      "priority": 20
-    },
-    {
       "id": "official",
       "name": "ReCloudStream Official Extensions",
       "repo": "https://github.com/recloudstream/extensions",
@@ -93,6 +86,83 @@
       "repo": "https://github.com/Asm0d3usX/CloudX-V2",
       "index": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
       "priority": 25
+    },
+    {
+      "id": "storm-redblacker8",
+      "name": "Storm-ext Fork by redblacker8",
+      "repo": "https://github.com/redblacker8/storm-ext",
+      "index": "https://raw.githubusercontent.com/redblacker8/storm-ext/refs/heads/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "desi",
+      "name": "Desi Extensions",
+      "repo": "https://github.com/Faisal0786/Desi",
+      "index": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "flummox",
+      "name": "FLUMMOX Repo",
+      "repo": "https://github.com/FlummoxGamer/FLUMMOX-Repo",
+      "index": "https://raw.githubusercontent.com/FlummoxGamer/FLUMMOX-Repo/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "ayu-games",
+      "name": "Ayu CloudStream Games",
+      "repo": "https://github.com/errorcode26/Ayu-CloudStream-Games",
+      "index": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "raghav",
+      "name": "raghav repo",
+      "repo": "https://github.com/KSHITIJ8473/raghav",
+      "index": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "diegon",
+      "name": "DieGon Repository",
+      "repo": "https://github.com/DieGon7771/ItaliaInStreaming",
+      "index": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "reflex",
+      "name": "Reflex Repo",
+      "repo": "https://github.com/Reflex755/ReflexRepo",
+      "index": "https://raw.githubusercontent.com/Reflex755/ReflexRepo/refs/heads/builds/plugins.json",
+      "priority": 30
+    },
+    {
+      "id": "cs-karma",
+      "name": "cs-karma",
+      "repo": "https://github.com/Kraptor123/cs-Karma",
+      "index": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "cnc",
+      "name": "CNC Repo (All Language)",
+      "repo": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+      "index": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "kekik",
+      "name": "Turkish Providers Repository | @KekikAkademi",
+      "repo": "https://github.com/maarrem/cs-Kekik",
+      "index": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "cxxx",
+      "name": "CXXX",
+      "repo": "https://github.com/phisher98/CXXX",
+      "index": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
+      "priority": 30
     }
   ],
   "inactive": [
@@ -101,6 +171,12 @@
       "name": "Hexated CloudStream Extensions",
       "repo": "https://github.com/Hexated/CloudStream-Extensions",
       "reason": "No published builds/plugins.json index was available when last checked."
+    },
+    {
+      "id": "kekik-legacy",
+      "name": "Turkish Providers Repository | @KekikAkademi (legacy)",
+      "repo": "https://github.com/keyiflerolsun/Kekik-cloudstream",
+      "reason": "Archived legacy repository; superseded by the actively maintained maarrem/cs-Kekik fork."
     }
   ]
 }
