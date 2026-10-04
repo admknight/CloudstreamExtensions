@@ -1,56 +1,155 @@
 {
-  "generatedAt": "2026-10-03 23:58:59 UTC",
+  "generatedAt": "2026-10-04 00:09:56 UTC",
+  "maintainer": "Adam Knight",
+  "shortcode": "adamknight",
   "candidateStatus": "READY",
+  "sourceHealth": {
+    "ok": 13,
+    "failed": 0
+  },
   "sourceStatus": [
     {
       "id": "phisher",
       "name": "Phisher Repo",
       "repo": "https://github.com/phisher98/cloudstream-extensions-phisher",
       "index": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+      "priority": 10,
       "ok": true,
       "rawCount": 84,
       "includedCount": 84,
-      "duplicateDropped": 0
+      "duplicateSkipped": 0
     },
     {
       "id": "cinephile",
       "name": "Cinephile",
       "repo": "https://github.com/rockhero1234/cinephile",
       "index": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+      "priority": 20,
       "ok": true,
       "rawCount": 5,
-      "includedCount": 4,
-      "duplicateDropped": 1
+      "includedCount": 3,
+      "duplicateSkipped": 2
     },
     {
       "id": "csx",
       "name": "CSX",
       "repo": "https://github.com/SaurabhKaperwan/CSX",
       "index": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+      "priority": 20,
       "ok": true,
       "rawCount": 5,
       "includedCount": 5,
-      "duplicateDropped": 0
+      "duplicateSkipped": 0
     },
     {
       "id": "netmirror",
       "name": "NetMirror Extension",
       "repo": "https://github.com/Sushan64/NetMirror-Extension",
       "index": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/plugins.json",
+      "priority": 20,
       "ok": true,
       "rawCount": 1,
       "includedCount": 1,
-      "duplicateDropped": 0
+      "duplicateSkipped": 0
     },
     {
       "id": "storm",
       "name": "Storm Extensions",
       "repo": "https://github.com/Stormunblessed/storm-ext",
       "index": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+      "priority": 20,
       "ok": true,
       "rawCount": 30,
       "includedCount": 30,
-      "duplicateDropped": 0
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "official",
+      "name": "ReCloudStream Official Extensions",
+      "repo": "https://github.com/recloudstream/extensions",
+      "index": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+      "priority": 5,
+      "ok": true,
+      "rawCount": 5,
+      "includedCount": 5,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "redowan",
+      "name": "Redowan CloudStream",
+      "repo": "https://github.com/redowan99/Redowan-CloudStream",
+      "index": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+      "priority": 15,
+      "ok": true,
+      "rawCount": 18,
+      "includedCount": 17,
+      "duplicateSkipped": 1
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnamese CloudStream Index",
+      "repo": "https://github.com/t23-02/cloudstream",
+      "index": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+      "priority": 30,
+      "ok": true,
+      "rawCount": 16,
+      "includedCount": 14,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "nontonindo",
+      "name": "Nonton Indo",
+      "repo": "https://github.com/ExtremeBoyGG/nonton-indo",
+      "index": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 16,
+      "includedCount": 16,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "rearabi",
+      "name": "Re-3arabi",
+      "repo": "https://github.com/Abodabodd/re-3arabi",
+      "index": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 39,
+      "includedCount": 38,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "alyss",
+      "name": "TheAlyss Repo",
+      "repo": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+      "index": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 3,
+      "includedCount": 3,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "cakestwix",
+      "name": "CakesTwix UK/UA",
+      "repo": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "index": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 21,
+      "includedCount": 21,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "cloudx",
+      "name": "CloudX-V2",
+      "repo": "https://github.com/Asm0d3usX/CloudX-V2",
+      "index": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+      "priority": 25,
+      "ok": true,
+      "rawCount": 18,
+      "includedCount": 16,
+      "duplicateSkipped": 2
     }
   ],
   "inactiveSources": [
@@ -58,31 +157,87 @@
       "id": "hexated",
       "name": "Hexated CloudStream Extensions",
       "repo": "https://github.com/Hexated/CloudStream-Extensions",
-      "reason": "No published builds/plugins.json index is currently used by this aggregator."
+      "reason": "No published builds/plugins.json index was available when last checked."
     }
   ],
   "previousPlugins": 124,
-  "uniquePlugins": 124,
-  "sourceDistributionAfterDedup": {
-    "phisher": 84,
-    "cinephile": 4,
-    "csx": 5,
-    "netmirror": 1,
-    "storm": 30
+  "uniquePlugins": 253,
+  "packageHealth": {
+    "reachable": 253,
+    "failed": 3
   },
   "duplicates": [
     {
+      "plugin": "BanglaPlex",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 8,
+      "skippedSource": "Redowan CloudStream",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Idlix",
+      "selectedSource": "Nonton Indo",
+      "selectedVersion": 2,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Mp4Moviez",
+      "selectedSource": "Redowan CloudStream",
+      "selectedVersion": 3,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Pencurimovie",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 8,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
       "plugin": "Tamilblasters",
-      "keptSource": "phisher",
-      "keptVersion": 12,
-      "droppedSource": "cinephile",
-      "droppedVersion": 3
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 12,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    }
+  ],
+  "failedPlugins": [
+    {
+      "plugin": "Aia2tv 2",
+      "sourceId": "rearabi",
+      "sourceName": "Re-3arabi",
+      "version": 3,
+      "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3",
+      "error": "InvalidURL: URL can't contain control characters. '/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3' (found at least ' ')"
+    },
+    {
+      "plugin": "NguonCProvider",
+      "sourceId": "vietnam",
+      "sourceName": "Vietnamese CloudStream Index",
+      "version": 8,
+      "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/NguonCProvider.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "SubNhanhProvider",
+      "sourceId": "vietnam",
+      "sourceName": "Vietnamese CloudStream Index",
+      "version": 9,
+      "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/SubNhanhProvider.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
     }
   ],
   "changes": {
-    "added": 0,
-    "updated": 0,
-    "unchanged": 124,
+    "added": 129,
+    "updated": 124,
+    "unchanged": 0,
     "removed": 0
   },
   "removedPlugins": []

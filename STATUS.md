@@ -1,168 +1,306 @@
 # Production Aggregation Status
 
-Generated: **2026-10-03 23:58:59 UTC**
+Generated: **2026-10-04 00:09:56 UTC**
 
 Candidate status: **READY**
 
-Previous production plugins: **124**  
-Candidate unique plugins: **124**
+| Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 253 | 3 | 13 | 0 | 129 | 124 | 0 |
 
-## Upstream status
+## Source health
 
-| Source | Fetch | Upstream entries | Included after dedup | Duplicate entries dropped |
+| Source | Index | Raw | Included | Duplicate-skipped |
 | --- | --- | ---: | ---: | ---: |
-| [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | OK | 84 | 84 | 0 |
-| [Cinephile](https://github.com/rockhero1234/cinephile) | OK | 5 | 4 | 1 |
-| [CSX](https://github.com/SaurabhKaperwan/CSX) | OK | 5 | 5 | 0 |
-| [NetMirror Extension](https://github.com/Sushan64/NetMirror-Extension) | OK | 1 | 1 | 0 |
-| [Storm Extensions](https://github.com/Stormunblessed/storm-ext) | OK | 30 | 30 | 0 |
+| [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | ✅ OK | 84 | 84 | 0 |
+| [Cinephile](https://github.com/rockhero1234/cinephile) | ✅ OK | 5 | 3 | 2 |
+| [CSX](https://github.com/SaurabhKaperwan/CSX) | ✅ OK | 5 | 5 | 0 |
+| [NetMirror Extension](https://github.com/Sushan64/NetMirror-Extension) | ✅ OK | 1 | 1 | 0 |
+| [Storm Extensions](https://github.com/Stormunblessed/storm-ext) | ✅ OK | 30 | 30 | 0 |
+| [ReCloudStream Official Extensions](https://github.com/recloudstream/extensions) | ✅ OK | 5 | 5 | 0 |
+| [Redowan CloudStream](https://github.com/redowan99/Redowan-CloudStream) | ✅ OK | 18 | 17 | 1 |
+| [Vietnamese CloudStream Index](https://github.com/t23-02/cloudstream) | ✅ OK | 16 | 14 | 0 |
+| [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 16 | 16 | 0 |
+| [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 39 | 38 | 0 |
+| [TheAlyss Repo](https://github.com/TheAlyss/cloudstream-AlyssRepo) | ✅ OK | 3 | 3 | 0 |
+| [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 21 | 21 | 0 |
+| [CloudX-V2](https://github.com/Asm0d3usX/CloudX-V2) | ✅ OK | 18 | 16 | 2 |
 
-## Change summary
+## Failed packages
 
-| Added | Updated | Unchanged | Removed |
-| ---: | ---: | ---: | ---: |
-| 0 | 0 | 124 | 0 |
+| Plugin | Best source checked | Version | Result |
+| --- | --- | ---: | --- |
+| Aia2tv 2 | Re-3arabi | 3 | ❌ InvalidURL: URL can't contain control characters. '/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3' (found at least ' ') |
+| NguonCProvider | Vietnamese CloudStream Index | 8 | ❌ HTTPError: HTTP Error 404: Not Found |
+| SubNhanhProvider | Vietnamese CloudStream Index | 9 | ❌ HTTPError: HTTP Error 404: Not Found |
+
+## Published plugins
+
+| # | Plugin | Ver. | Maintainer | Lang | Types | Package | Source | Change |
+| ---: | --- | ---: | --- | --- | --- | --- | --- | --- |
+| 1 | **3isk** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 2 | **9kMovies** | 11 | Adam Knight | hi | Movie, TvSeries, NSFW | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 3 | **Aflaam** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 4 | **Akwam** | 3 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 5 | **AllMovieLandProvider** | 25 | Adam Knight | hi | Movie, TvSeries, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 6 | **AllWish** | 18 | Adam Knight | en | All | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 7 | **Alooytv** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 8 | **Anichi** | 28 | Adam Knight | en | AnimeMovie, Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 9 | **Anichin** | 1 | Adam Knight | id | Anime, AnimeMovie | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 10 | **Anikage** | 8 | Adam Knight | en | AnimeMovie, Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 11 | **AniKoto** | 6 | Adam Knight | en | Anime, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 12 | **Anilight** | 3 | Adam Knight | en | AnimeMovie, Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 13 | **Anim3rb** | 1 | Adam Knight | ar | TvSeries, Anime | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 14 | **Animasu** | 1 | Adam Knight | id | AnimeMovie, OVA, Anime | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 15 | **Anime-Phoenix** | 1 | Adam Knight | ar | TvSeries, Anime, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 16 | **Anime4up** | 1 | Adam Knight | ar | TvSeries, Movie, Anime | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 17 | **Animeav1** | 9 | Adam Knight | mx | Movie, Anime, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 18 | **AnimeCloud** | 11 | Adam Knight | de | Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 19 | **AnimeDekhoProvider** | 70 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 20 | **Animedubhindi** | 9 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 21 | **AnimeflvIOProvider** | 2 | Adam Knight | es | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 22 | **AnimeflvProvider** | 5 | Adam Knight | es | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 23 | **AnimeHayProvider** | 11 | Adam Knight |  | Anime | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 24 | **AnimeIndo** | 1 | Adam Knight | id | AnimeMovie, OVA, Anime, Movie | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 25 | **AnimeJlProvider** | 1 | Adam Knight | es | Movie, Anime | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 26 | **Animekhor** | 13 | Adam Knight | zh | AnimeMovie, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 27 | **Animenosub** | 11 | Adam Knight | en | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 28 | **AnimensionProvider** | 1 | Adam Knight | en | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 29 | **AnimeONProvider** | 41 | Adam Knight | uk | Anime, AnimeMovie, OVA | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 30 | **AnimePahe** | 42 | Adam Knight | en | AnimeMovie, Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 31 | **Animerco** | 3 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 32 | **AnimeRift** | 1 | Adam Knight | ar | TvSeries, Anime, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 33 | **Animesalt** | 18 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 34 | **AnimeUAProvider** | 10 | Adam Knight | uk | Anime, AnimeMovie, OVA | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 35 | **AnimeVietsubProvider** | 14 | Adam Knight |  | Anime | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 36 | **Animewitcher** | 3 | Adam Knight | ar | Anime | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 37 | **Animexin** | 16 | Adam Knight | en | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 38 | **AniSnatch** | 2 | Adam Knight | en | Anime, AnimeMovie, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 39 | **AnitubeinuaProvider** | 21 | Adam Knight | uk | Anime, AnimeMovie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 40 | **AniVortex** | 10 | Adam Knight | hi | Anime, AnimeMovie, OVA, TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 41 | **AniwatchProvider** | 1 | Adam Knight | en | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 42 | **AniwaveProvider** | 20 | Adam Knight | en | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 43 | **Aniworld** | 15 | Adam Knight | de | AnimeMovie, Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 44 | **Anizone** | 10 | Adam Knight | en | Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 45 | **BambooUAProvider** | 13 | Adam Knight | uk | Anime, AsianDrama | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 46 | **BanglaPlex** | 8 | Adam Knight | bn | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 47 | **BdixBdipTV** | 10 | Adam Knight | bn | Live | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 48 | **BdixCircleftp** | 27 | Adam Knight | bn | Movie, TvSeries, Anime, AnimeMovie, OVA, Cartoon, AsianDrama, Others, Documentary | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 49 | **BdixCloudTV** | 6 | Adam Knight | bn | Live | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 50 | **BdixDflix** | 10 | Adam Knight | bn | Movie, TvSeries, Anime, AnimeMovie, OVA, Cartoon, AsianDrama, Others, Documentary | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 51 | **BdixDhakaFlix** | 8 | Adam Knight | bn | Movie, TvSeries, Anime, AnimeMovie, OVA, Cartoon, AsianDrama, Others, Documentary | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 52 | **BdixICCFtp** | 3 | Adam Knight | bn | Movie, TvSeries, Anime, AnimeMovie, OVA, Cartoon, AsianDrama, Others, Documentary | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 53 | **BdixMyMovieBazarTV** | 6 | Adam Knight | bn | Live | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 54 | **BdixRoarZoneTV** | 6 | Adam Knight | bn | Live | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 55 | **BflixProvider** | 8 | Adam Knight | en |  | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 56 | **BingedReview** | 3 | Adam Knight |  | Movie | ✅ Reachable | Cinephile | 🔄 Updated |
+| 57 | **BluPhimProvider** | 16 | Adam Knight |  | TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 58 | **Bollyflix** | 33 | Adam Knight | hi | TvSeries, Movie, AsianDrama, Anime | ✅ Reachable | CSX | 🔄 Updated |
+| 59 | **Bristege** | 1 | Adam Knight | ar | Anime | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 60 | **CablevisionHdProvider** | 4 | Adam Knight | es | Live | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 61 | **Cee** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 62 | **Chikianimation** | 2 | Adam Knight | zh | AnimeMovie, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 63 | **CikavaIdeyaProvider** | 5 | Adam Knight | uk | Cartoon, TvSeries, Movie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 64 | **CimaClub** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 65 | **Cimalight** | 1 | Adam Knight | ar | TvSeries, Movie, Anime | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 66 | **Cimatn** | 1 | Adam Knight | ar | TvSeries, Movie, Drama | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 67 | **CinecalidadProvider** | 5 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 68 | **Cinefreak** | 16 | Adam Knight | bn | Movie, TvSeries, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 69 | **Cinemacity** | 27 | Adam Knight | en | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 70 | **cinemana** | 4 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 71 | **CineStream** | 487 | Adam Knight | en | TvSeries, Movie, AsianDrama, Anime, Torrent | ✅ Reachable | CSX | 🔄 Updated |
+| 72 | **Cinevood** | 11 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Cinephile | 🔄 Updated |
+| 73 | **CoaninetProvider** | 2 | Adam Knight | uk | TvSeries | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 74 | **Coflix** | 19 | Adam Knight | fr | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 75 | **ComamosRamenProvider** | 3 | Adam Knight | es | AsianDrama | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 76 | **Comix** | 2 | Adam Knight | en | Others, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 77 | **CuevanaProvider** | 9 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 78 | **DailymotionProvider** | 4 | Adam Knight |  | Others | ✅ Reachable | ReCloudStream Official Extensions | 🆕 Added |
+| 79 | **Desicinemas** | 19 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 80 | **dima-toon** | 1 | Adam Knight | ar | TvSeries, Anime | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 81 | **Donghuastream** | 22 | Adam Knight | zh | Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 82 | **Donghub** | 1 | Adam Knight | id | Anime, AnimeMovie | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 83 | **DoraBash** | 14 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 84 | **DoramasFlixProvider** | 5 | Adam Knight | es | AsianDrama | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 85 | **DoramasYTProvider** | 5 | Adam Knight | es | AsianDrama | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 86 | **DoramyWorldProvider** | 2 | Adam Knight | uk | AsianDrama, Movie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 87 | **DudeFilms** | 13 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 88 | **Dutamovie** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 89 | **Egydead** | 1 | Adam Knight | ar | Movie, TvSeries, Anime, AsianDrama | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 90 | **Elif** | 1 | Adam Knight | ar | TvSeries, Anime, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 91 | **EmwBD** | 16 | Adam Knight | bn | Movie, TvSeries, AnimeMovie, AsianDrama, NSFW | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 92 | **EneyidaProvider** | 19 | Adam Knight | uk | Anime, TvSeries, Movie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 93 | **EntrepeliculasyseriesProvider** | 6 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 94 | **eseek** | 3 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 95 | **EstrenosDoramasProvider** | 2 | Adam Knight | es | AsianDrama | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 96 | **Faselhd** | 3 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 97 | **Fibwatch** | 11 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 98 | **FilmapikProvider** | 21 | Adam Knight | id | Movie, TvSeries, AsianDrama, Anime | ✅ Reachable | TheAlyss Repo | 🆕 Added |
+| 99 | **Filmkita** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 100 | **Filmlokal** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 101 | **Fivemovierulz** | 8 | Adam Knight | hi | TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 102 | **FootReplays** | 6 | Adam Knight | en | Others | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 103 | **FourKHDHub** | 41 | Adam Knight | en | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 104 | **FullReplays** | 6 | Adam Knight | en | Others | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 105 | **FullyMaza** | 7 | Adam Knight | en | Movie, TvSeries, AnimeMovie, Cartoon | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 106 | **GoldenAudiobooks** | 1 | Adam Knight | en | Others | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 107 | **Goojara** | 5 | Adam Knight | en | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 108 | **Hanime** | 3 | Adam Knight | en | NSFW | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 109 | **HDhub4u** | 56 | Adam Knight | hi | Movie, TvSeries, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 110 | **Hdmovie2** | 6 | Adam Knight | hi | TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 111 | **HentaiUkrProvider** | 6 | Adam Knight | uk | NSFW | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 112 | **HHkungfuProvider** | 5 | Adam Knight |  | Anime, AnimeMovie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 113 | **HHPandaProvider** | 12 | Adam Knight |  | Anime | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 114 | **HiAnime** | 2 | Adam Knight | en | Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 115 | **Hindmoviez** | 17 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 116 | **Idlix** | 2 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 117 | **IdlixProvider** | 16 | Adam Knight | id | TvSeries, Movie, Anime, AsianDrama | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 118 | **Indomax** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 119 | **InternetArchiveProvider** | 1 | Adam Knight |  | Others | ✅ Reachable | ReCloudStream Official Extensions | 🆕 Added |
+| 120 | **InvidiousProvider** | 9 | Adam Knight |  | Others | ✅ Reachable | ReCloudStream Official Extensions | 🆕 Added |
+| 121 | **IPTVPlayer** | 9 | Adam Knight | hi | Live | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 122 | **IStreamFlare** | 6 | Adam Knight | hi | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 123 | **Jellyfin** | 7 | Adam Knight | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 124 | **JKAnimeProvider** | 8 | Adam Knight | es | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 125 | **Kartoons** | 5 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 126 | **Kawanfilm** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 127 | **Kickassanime** | 27 | Adam Knight | en | AnimeMovie, Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 128 | **KinostrainProvider** | 2 | Adam Knight | uk | TvSeries, Cartoon, Movie, Anime | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 129 | **KinoTronProvider** | 17 | Adam Knight | uk | Cartoon, TvSeries, Movie, Anime | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 130 | **KinoVezhaProvider** | 14 | Adam Knight | uk | Cartoon, TvSeries, Movie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 131 | **KisskhProvider** | 22 | Adam Knight | en | AsianDrama, TvSeries, Anime, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 132 | **KKPhimProvider** | 10 | Adam Knight |  | Anime, TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 133 | **KlikXXi** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 134 | **KlonTVProvider** | 21 | Adam Knight | uk | Anime, TvSeries, Cartoon, Movie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 135 | **Krmzy** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 136 | **Kuramanime** | 2 | Adam Knight | id | AnimeMovie, OVA, Anime | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 137 | **Kuronime** | 1 | Adam Knight | id | AnimeMovie, OVA, Anime | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 138 | **LACartoonsProvider** | 3 | Adam Knight | es | Cartoons, TvSeries | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 139 | **Latanime** | 5 | Adam Knight | mx | Movie, Anime, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 140 | **LatAnimeProvider** | 2 | Adam Knight | es | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 141 | **LayarKaca** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 142 | **LayarKacaProvider** | 10 | Adam Knight | id | AsianDrama, TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 143 | **LayarWarna** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 144 | **Lodynet** | 2 | Adam Knight | ar | Movie, tvTypes | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 145 | **MassTamilanProvider** | 9 | Adam Knight | ta | Music, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 146 | **Megakino** | 6 | Adam Knight | de | Movie,Anime,Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 147 | **Microtv** | 3 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 148 | **MidasXXi** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 149 | **MonoschinosProvider** | 6 | Adam Knight | es | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 150 | **MovieBox** | 2 | Adam Knight | id | Anime, Movie, TvSeries | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 151 | **Moviebox** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 152 | **MovieBoxProvider** | 36 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 153 | **MovieboxProvider** | 9 | Adam Knight | id | TvSeries, Movie, AsianDrama | ✅ Reachable | TheAlyss Repo | 🆕 Added |
+| 154 | **Movies4u** | 17 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 155 | **MoviesDrive** | 33 | Adam Knight | hi | TvSeries, Movie, AsianDrama, Anime | ✅ Reachable | CSX | 🔄 Updated |
+| 156 | **Moviesmod** | 33 | Adam Knight |  | TvSeries, Movie, AsianDrama, Anime | ✅ Reachable | CSX | 🔄 Updated |
+| 157 | **MoviPK** | 4 | Adam Knight | en | Movie, TvSeries | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 158 | **Mp4Moviez** | 3 | Adam Knight | hi | Movie, TvSeries, NSFW | ✅ Reachable | Redowan CloudStream | 🔄 Updated |
+| 159 | **MPlayerProvider** | 9 | Adam Knight | hi | AsianDrama, TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 160 | **MultiMoviesProvider** | 54 | Adam Knight | hi | Movie, TvSeries, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 161 | **MundoDonghuaProvider** | 3 | Adam Knight | es | Anime, OVA, AnimeMovie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 162 | **MyCimaProvider** | 1 | Adam Knight | ar | Movie, TvSeries, Anime, AsianDrama | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 163 | **Nekopoi** | 1 | Adam Knight | id | NSFW | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 164 | **Netcinez** | 5 | Adam Knight | pt-br | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 165 | **Netmirror** | 46 | Adam Knight | hi | Movie, TvSeries | ✅ Reachable | NetMirror Extension | 🔄 Updated |
+| 166 | **Ngefilm** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 167 | **Nimegami** | 1 | Adam Knight | id | AnimeMovie, OVA, Anime | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 168 | **Nomat** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 169 | **ObejrzyjTo** | 3 | Adam Knight | pl | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 170 | **OHiTVProvider** | 2 | Adam Knight |  | TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 171 | **OHLI24** | 7 | Adam Knight | ko | AsianDrama, TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 172 | **OnePace** | 23 | Adam Knight | en | Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 173 | **OneTouchTV** | 5 | Adam Knight | en | AsianDrama, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 174 | **OPhimProvider** | 10 | Adam Knight |  | Anime, TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 175 | **Oploverz** | 1 | Adam Knight | id | AnimeMovie, OVA, Anime | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 176 | **Otakudesu** | 1 | Adam Knight | id | AnimeMovie, OVA, Anime | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 177 | **Pahe** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 178 | **PeliculasFlixProvider** | 1 | Adam Knight | es | Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 179 | **PelispediaProvider** | 5 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 180 | **Pelisplus4KProvider** | 6 | Adam Knight | es | Movie, TvSeries, AsianDrama, Anime | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 181 | **PelisplusHDProvider** | 5 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 182 | **PelisplusSOProvider** | 3 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 183 | **Pencurimovie** | 8 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 184 | **PhimLongTiengProvider** | 12 | Adam Knight |  | TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 185 | **PhimMoiProvider** | 9 | Adam Knight |  | TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 186 | **PhimTuoiThoProvider** | 5 | Adam Knight |  | Anime, TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 187 | **Pinoymoviepedia** | 5 | Adam Knight | fil | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 188 | **Piratexplay** | 5 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 189 | **PlayhubProvider** | 1 | Adam Knight | es | Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 190 | **Pmsm** | 8 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 191 | **PublicSportsIPTV** | 5 | Adam Knight | en | Live | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 192 | **Pusatmovie** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 193 | **QuickIPTV** | 8 | Adam Knight | en | Live | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 194 | **Reanime** | 3 | Adam Knight | en | AnimeMovie, Anime, OVA | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 195 | **Rebahin** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 196 | **Replaymatch** | 2 | Adam Knight | en | Movie, Others, live | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 197 | **RingZ** | 12 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 198 | **Sarangfilm** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 199 | **Savefilm** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 200 | **SemiRebahin** | 1 | Adam Knight | id | NSFW | ✅ Reachable | Nonton Indo | 🆕 Added |
+| 201 | **SerialnoProvider** | 13 | Adam Knight | uk | Cartoon, TvSeries | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 202 | **SeriesflixProvider** | 2 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 203 | **SeriesMetroProvider** | 3 | Adam Knight | es | TvSeries, Movie | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 204 | **Shahid4u** | 2 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 205 | **Shahidwbas** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 206 | **ShowBox** | 10 | Adam Knight | en | AsianDrama, Anime, TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 207 | **SimpsonsUATvProvider** | 5 | Adam Knight | uk | Cartoon, TvSeries | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 208 | **SkymoviesHD** | 1 | Adam Knight | en | Movie, TvSeries, NSFW | ✅ Reachable | Cinephile | 🔄 Updated |
+| 209 | **SoloLatinoProvider** | 1 | Adam Knight | es | Movie, TvSeries, Anime, Cartoon | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 210 | **StreamPlay** | 685 | Adam Knight | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 211 | **StremioAddon** | 16 | Adam Knight | en | TvSeries, Movie, Torrent | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 212 | **StremioX** | 27 | Adam Knight | en | TvSeries, Movie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 213 | **SuperStream** | 38 | Adam Knight | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 214 | **SyncPlugin** | 3 | Adam Knight | uk | Others | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 215 | **Syria-live** | 1 | Adam Knight | ar | TvSeries, Live | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 216 | **Tamilblasters** | 12 | Adam Knight | ta | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 217 | **TheMoviesFlix** | 6 | Adam Knight | hi | Movie, TvSeries, NSFW | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 218 | **TioAnimeProvider** | 3 | Adam Knight | es | Anime, OVA | ✅ Reachable | Storm Extensions | 🔄 Updated |
+| 219 | **ToonHub** | 12 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 220 | **Toonstream** | 10 | Adam Knight | hi | AnimeMovie, Anime, Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 221 | **ToonTales** | 5 | Adam Knight | hi | Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 222 | **Topcartoons** | 5 | Adam Knight | hi | Cartoon | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 223 | **Topcinema** | 1 | Adam Knight | ar | Movie, tvTypes | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 224 | **Topstreamfilm** | 9 | Adam Knight | de | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 225 | **TorraStream** | 97 | Adam Knight | en | Movie, Torrent, AsianDrama, TvSeries, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 226 | **TukTukcima** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 227 | **TuniflexBlog** | 1 | Adam Knight | ar | TvSeries, Anime, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 228 | **Tuniflix** | 1 | Adam Knight | ar | TvSeries, Movie, Drama | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 229 | **TVgarden** | 1 | Adam Knight | ar | TvSeries, Movie, Live | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 230 | **TvPhimProvider** | 11 | Adam Knight |  | Anime, TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 231 | **TwitchProvider** | 2 | Adam Knight |  | Live | ✅ Reachable | ReCloudStream Official Extensions | 🆕 Added |
+| 232 | **UAFlixProvider** | 20 | Adam Knight | uk | Anime, Cartoon, Movie, TvSeries | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 233 | **UakinoProvider** | 32 | Adam Knight | uk | Anime, TvSeries, Movie, AsianDrama | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 234 | **UASerialsProProvider** | 27 | Adam Knight | uk | Anime, Cartoon, Movie, TvSeries | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 235 | **UFDubProvider** | 12 | Adam Knight | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 236 | **UHDmoviesProvider** | 41 | Adam Knight | en | Movie, TvSeries | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 237 | **Ultima** | 65 | Adam Knight | en | All | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 238 | **UnimayProvider** | 13 | Adam Knight | uk | Anime, AnimeMovie | ✅ Reachable | CakesTwix UK/UA | 🆕 Added |
+| 239 | **VegaMovies** | 82 | Adam Knight | hi | TvSeries, Movie, AsianDrama, Anime | ✅ Reachable | CSX | 🔄 Updated |
+| 240 | **VipPhimProvider** | 9 | Adam Knight |  | TvSeries, Movie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 241 | **Viu** | 1 | Adam Knight | ar | TvSeries, Movie, Drama | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 242 | **WatchMoviesPk** | 3 | Adam Knight | hi | TvSeries, Movie | ✅ Reachable | Redowan CloudStream | 🆕 Added |
+| 243 | **Wecima** | 1 | Adam Knight | ar | Movie, tvTypes | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 244 | **WGFilm21** | 1 | Adam Knight | id | Movie, TvSeries | ✅ Reachable | CloudX-V2 | 🆕 Added |
+| 245 | **Witanime** | 1 | Adam Knight | ar | TvSeries, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 246 | **XDMovies** | 26 | Adam Knight | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 247 | **Yacintv** | 1 | Adam Knight | ar | TvSeries, Live, Movie | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 248 | **YanHH3DProvider** | 16 | Adam Knight |  | Anime, AnimeMovie | ✅ Reachable | Vietnamese CloudStream Index | 🆕 Added |
+| 249 | **YlnimeProvider** | 6 | Adam Knight | id | Anime, TvSeries, Movie | ✅ Reachable | TheAlyss Repo | 🆕 Added |
+| 250 | **Youtube** | 2 | Adam Knight | ar | Movie, TvSeries, Live, Anime, Music, Documentary | ✅ Reachable | Re-3arabi | 🆕 Added |
+| 251 | **YoutubeProvider** | 1 | Adam Knight |  | Other, Live, TvSeries | ✅ Reachable | ReCloudStream Official Extensions | 🆕 Added |
+| 252 | **YTS** | 11 | Adam Knight | en | Movie, Torrent | ✅ Reachable | Phisher Repo | 🔄 Updated |
+| 253 | **Zinkmovies** | 12 | Adam Knight | hi | Movie, TvSeries, Anime | ✅ Reachable | Phisher Repo | 🔄 Updated |
 
 ## Duplicate decisions
 
-| Plugin | Kept | Dropped |
+| Plugin | Selected | Skipped |
 | --- | --- | --- |
-| Tamilblasters | phisher v12 | cinephile v3 |
+| BanglaPlex | Phisher Repo v8 | Redowan CloudStream v1 (lower version) |
+| Idlix | Nonton Indo v2 | CloudX-V2 v1 (lower version) |
+| Mp4Moviez | Redowan CloudStream v3 | Cinephile v1 (lower version) |
+| Pencurimovie | Phisher Repo v8 | CloudX-V2 v1 (lower version) |
+| Tamilblasters | Phisher Repo v12 | Cinephile v3 (lower version) |
 
-## Plugin status
-
-| # | Plugin | Version | Author(s) | Language | Source | Upstream status | Change |
-| ---: | --- | ---: | --- | --- | --- | --- | --- |
-| 1 | AllMovieLandProvider | 25 | Phisher98 | hi | phisher | Active | Unchanged |
-| 2 | AllWish | 18 | Phisher98 | en | phisher | Active | Unchanged |
-| 3 | Anichi | 28 | Hexated,Phisher98 | en | phisher | Active | Unchanged |
-| 4 | Anikage | 8 | Phisher98 | en | phisher | Active | Unchanged |
-| 5 | AniKoto | 6 | phisher98 | en | phisher | Active | Unchanged |
-| 6 | Anilight | 3 | Phisher98 | en | phisher | Active | Unchanged |
-| 7 | Animeav1 | 9 | Phisher98 | mx | phisher | Active | Unchanged |
-| 8 | AnimeCloud | 11 | Phisher98 | de | phisher | Active | Unchanged |
-| 9 | AnimeDekhoProvider | 70 | Phisher98 | hi | phisher | Active | Unchanged |
-| 10 | Animedubhindi | 9 | Phisher98 | hi | phisher | Active | Unchanged |
-| 11 | AnimeflvIOProvider | 2 | Stormunblessed | es | storm | Active | Unchanged |
-| 12 | AnimeflvProvider | 5 | Stormunblessed | es | storm | Active | Unchanged |
-| 13 | AnimeJlProvider | 1 | misajimenezmx | es | storm | Active | Unchanged |
-| 14 | Animekhor | 13 | Phisher98 | zh | phisher | Active | Unchanged |
-| 15 | Animenosub | 11 | Phisher98 | en | phisher | Active | Unchanged |
-| 16 | AnimensionProvider | 1 | Stormunblessed | en | storm | Active | Unchanged |
-| 17 | AnimePahe | 42 | Cloudburst,Lorem Ipsum,Phisher98 | en | phisher | Active | Unchanged |
-| 18 | Animesalt | 18 | Phisher98 | hi | phisher | Active | Unchanged |
-| 19 | Animexin | 16 | Phisher98 | en | phisher | Active | Unchanged |
-| 20 | AniSnatch | 2 | Phisher98 | en | phisher | Active | Unchanged |
-| 21 | AniVortex | 10 | Phisher98 | hi | phisher | Active | Unchanged |
-| 22 | AniwatchProvider | 1 | Stormunblessed | en | storm | Active | Unchanged |
-| 23 | AniwaveProvider | 20 | Stormunblessed | en | storm | Active | Unchanged |
-| 24 | Aniworld | 15 | Phisher98,Hexated | de | phisher | Active | Unchanged |
-| 25 | Anizone | 10 | ycngmn | en | phisher | Active | Unchanged |
-| 26 | BanglaPlex | 8 | Phisher98 | bn | phisher | Active | Unchanged |
-| 27 | BflixProvider | 8 | Stormunblessed | en | storm | Active | Unchanged |
-| 28 | BingedReview | 3 | Dilip |  | cinephile | Active | Unchanged |
-| 29 | Bollyflix | 33 | megix | hi | csx | Active | Unchanged |
-| 30 | CablevisionHdProvider | 4 | misajimenezmx | es | storm | Active | Unchanged |
-| 31 | Chikianimation | 2 | Phisher98 | zh | phisher | Active | Unchanged |
-| 32 | CinecalidadProvider | 5 | Stormunblessed | es | storm | Active | Unchanged |
-| 33 | Cinefreak | 16 | Phisher98 | bn | phisher | Active | Unchanged |
-| 34 | Cinemacity | 27 | Phisher98 | en | phisher | Active | Unchanged |
-| 35 | CineStream | 487 | megix | en | csx | Active | Unchanged |
-| 36 | Cinevood | 11 | Dilip | hi | cinephile | Active | Unchanged |
-| 37 | Coflix | 19 | Phisher98 | fr | phisher | Active | Unchanged |
-| 38 | ComamosRamenProvider | 3 | Stormunblessed | es | storm | 0 | Unchanged |
-| 39 | Comix | 2 | phisher98 | en | phisher | Active | Unchanged |
-| 40 | CuevanaProvider | 9 | Stormunblessed | es | storm | Active | Unchanged |
-| 41 | Desicinemas | 19 | Phisher98 | hi | phisher | Active | Unchanged |
-| 42 | Donghuastream | 22 | Phisher98 | zh | phisher | Active | Unchanged |
-| 43 | DoraBash | 14 | Phisher98 | hi | phisher | Active | Unchanged |
-| 44 | DoramasFlixProvider | 5 | Stormunblessed | es | storm | Active | Unchanged |
-| 45 | DoramasYTProvider | 5 | Stormunblessed | es | storm | Active | Unchanged |
-| 46 | DudeFilms | 13 | Phisher98 | hi | phisher | Active | Unchanged |
-| 47 | EntrepeliculasyseriesProvider | 6 | Stormunblessed | es | storm | 0 | Unchanged |
-| 48 | EstrenosDoramasProvider | 2 | Stormunblessed | es | storm | Active | Unchanged |
-| 49 | Fibwatch | 11 | Phisher98 | hi | phisher | Active | Unchanged |
-| 50 | Fivemovierulz | 8 | darkdemon, Dilip | hi | phisher | Active | Unchanged |
-| 51 | FourKHDHub | 41 | Phisher98 | en | phisher | Active | Unchanged |
-| 52 | GoldenAudiobooks | 1 | phisher98, Anonymous Contributor | en | phisher | Active | Unchanged |
-| 53 | Goojara | 5 | Phisher98 | en | phisher | Active | Unchanged |
-| 54 | HDhub4u | 56 | Phisher98 | hi | phisher | Active | Unchanged |
-| 55 | Hdmovie2 | 6 | Phisher98 | hi | phisher | Active | Unchanged |
-| 56 | HiAnime | 2 | Phisher98 | en | phisher | Active | Unchanged |
-| 57 | Hindmoviez | 17 | Phisher98 | hi | phisher | Active | Unchanged |
-| 58 | IdlixProvider | 16 | Phisher98 | id | phisher | Active | Unchanged |
-| 59 | IPTVPlayer | 9 | Phisher98,Adippe | hi | phisher | Active | Unchanged |
-| 60 | IStreamFlare | 6 | Phisher98 | hi | phisher | Active | Unchanged |
-| 61 | Jellyfin | 7 | Phisher98 | en | phisher | Active | Unchanged |
-| 62 | JKAnimeProvider | 8 | Stormunblessed | es | storm | Active | Unchanged |
-| 63 | Kartoons | 5 | Phisher98 | hi | phisher | Active | Unchanged |
-| 64 | Kickassanime | 27 | Phisher98,Hexated | en | phisher | Active | Unchanged |
-| 65 | KisskhProvider | 22 | Phisher98,Hexated,Peerless | en | phisher | Active | Unchanged |
-| 66 | LACartoonsProvider | 3 | Stormunblessed | es | storm | Active | Unchanged |
-| 67 | Latanime | 5 | Phisher98 | mx | phisher | Active | Unchanged |
-| 68 | LatAnimeProvider | 2 | misajimenezmx | es | storm | Active | Unchanged |
-| 69 | LayarKacaProvider | 10 | Hexated,Phisher98 | id | phisher | Active | Unchanged |
-| 70 | MassTamilanProvider | 9 | Phisher98,LikDev-256 | ta | phisher | Active | Unchanged |
-| 71 | Megakino | 6 | Phisher98 | de | phisher | Active | Unchanged |
-| 72 | Microtv | 3 | Phisher98 | hi | phisher | Active | Unchanged |
-| 73 | MonoschinosProvider | 6 | Stormunblessed | es | storm | Active | Unchanged |
-| 74 | MovieBoxProvider | 36 | NivinCNC,Phisher98 | hi | phisher | Active | Unchanged |
-| 75 | Movies4u | 17 | Phisher98 | hi | phisher | Active | Unchanged |
-| 76 | MoviesDrive | 33 | megix | hi | csx | Active | Unchanged |
-| 77 | Moviesmod | 33 | megix |  | csx | Active | Unchanged |
-| 78 | Mp4Moviez | 1 | salman731 | hi | cinephile | Active | Unchanged |
-| 79 | MPlayerProvider | 9 | Phisher98 | hi | phisher | Active | Unchanged |
-| 80 | MultiMoviesProvider | 54 | Phisher98 | hi | phisher | Active | Unchanged |
-| 81 | MundoDonghuaProvider | 3 | Stormunblessed | es | storm | Active | Unchanged |
-| 82 | Netcinez | 5 | Phisher98 | pt-br | phisher | Active | Unchanged |
-| 83 | Netmirror | 46 | Sushan64 | hi | netmirror | Active | Unchanged |
-| 84 | ObejrzyjTo | 3 | Phisher98 | pl | phisher | Active | Unchanged |
-| 85 | OHLI24 | 7 | Phisher98 | ko | phisher | Active | Unchanged |
-| 86 | OnePace | 23 | Phisher98 | en | phisher | Active | Unchanged |
-| 87 | OneTouchTV | 5 | Phisher98 | en | phisher | Active | Unchanged |
-| 88 | PeliculasFlixProvider | 1 | Stormunblessed | es | storm | Active | Unchanged |
-| 89 | PelispediaProvider | 5 | Stormunblessed | es | storm | Active | Unchanged |
-| 90 | Pelisplus4KProvider | 6 | Stormunblessed | es | storm | Active | Unchanged |
-| 91 | PelisplusHDProvider | 5 | Stormunblessed | es | storm | Active | Unchanged |
-| 92 | PelisplusSOProvider | 3 | Stormunblessed | es | storm | Active | Unchanged |
-| 93 | Pencurimovie | 8 | Phisher98 | id | phisher | Active | Unchanged |
-| 94 | Pinoymoviepedia | 5 | Phisher98 | fil | phisher | Active | Unchanged |
-| 95 | Piratexplay | 5 | Phisher98 | hi | phisher | Active | Unchanged |
-| 96 | PlayhubProvider | 1 | Stormunblessed | es | storm | 0 | Unchanged |
-| 97 | Pmsm | 8 | Phisher98,Duro92 | id | phisher | Active | Unchanged |
-| 98 | PublicSportsIPTV | 5 | Phisher98 | en | phisher | Active | Unchanged |
-| 99 | QuickIPTV | 8 | Phisher98 | en | phisher | Active | Unchanged |
-| 100 | Reanime | 3 | Phisher98 | en | phisher | Active | Unchanged |
-| 101 | RingZ | 12 | Phisher98 | hi | phisher | Active | Unchanged |
-| 102 | SeriesflixProvider | 2 | Stormunblessed | es | storm | 0 | Unchanged |
-| 103 | SeriesMetroProvider | 3 | Stormunblessed | es | storm | Active | Unchanged |
-| 104 | ShowBox | 10 | Phisher98 | en | phisher | Active | Unchanged |
-| 105 | SkymoviesHD | 1 | Redowan | en | cinephile | Active | Unchanged |
-| 106 | SoloLatinoProvider | 1 | misajimenezmx | es | storm | Active | Unchanged |
-| 107 | StreamPlay | 685 | Phisher98, Hexated | en | phisher | Active | Unchanged |
-| 108 | StremioAddon | 16 | Hexated,phisher98,erynith | en | phisher | Active | Unchanged |
-| 109 | StremioX | 27 | Hexated,phisher98 | en | phisher | Active | Unchanged |
-| 110 | SuperStream | 38 | Phisher98 | en | phisher | Active | Unchanged |
-| 111 | Tamilblasters | 12 | rockhero1234,phisher98 | ta | phisher | Active | Unchanged |
-| 112 | TioAnimeProvider | 3 | Stormunblessed | es | storm | Active | Unchanged |
-| 113 | ToonHub | 12 | Phisher98 | hi | phisher | Active | Unchanged |
-| 114 | Toonstream | 10 | Phisher98 | hi | phisher | Active | Unchanged |
-| 115 | ToonTales | 5 | Phisher98 | hi | phisher | Active | Unchanged |
-| 116 | Topcartoons | 5 | Phisher98 | hi | phisher | Active | Unchanged |
-| 117 | Topstreamfilm | 9 | Phisher | de | phisher | Active | Unchanged |
-| 118 | TorraStream | 97 | Phisher98 | en | phisher | Active | Unchanged |
-| 119 | UHDmoviesProvider | 41 | Phisher98 | en | phisher | Active | Unchanged |
-| 120 | Ultima | 65 | RowdyRushya,Phisher98 | en | phisher | 2 | Unchanged |
-| 121 | VegaMovies | 82 | megix | hi | csx | Active | Unchanged |
-| 122 | XDMovies | 26 | Phisher98 | en | phisher | Active | Unchanged |
-| 123 | YTS | 11 | Phisher98 | en | phisher | Active | Unchanged |
-| 124 | Zinkmovies | 12 | Phisher98 | hi | phisher | Active | Unchanged |
-
-## Known source not currently aggregated
-
-| Source | Status | Reason |
-| --- | --- | --- |
-| [Hexated CloudStream Extensions](https://github.com/Hexated/CloudStream-Extensions) | Not aggregated | No published builds/plugins.json index is currently used by this aggregator. |
-
-> This repository aggregates published upstream indexes. It does not compile or rewrite upstream plugin source code.
+> Package health verifies that the published plugin package can be fetched. It is not a runtime test of the third-party provider website.
 

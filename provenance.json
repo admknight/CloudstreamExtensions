@@ -1,0 +1,3299 @@
+[
+  {
+    "plugin": "3isk",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/3isk.cs3"
+  },
+  {
+    "plugin": "9kMovies",
+    "selectedVersion": 11,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/9kMovies.cs3"
+  },
+  {
+    "plugin": "Aflaam",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aflaam.cs3"
+  },
+  {
+    "plugin": "Akwam",
+    "selectedVersion": 3,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Akwam.cs3"
+  },
+  {
+    "plugin": "AllMovieLandProvider",
+    "selectedVersion": 25,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AllMovieLandProvider.cs3"
+  },
+  {
+    "plugin": "AllWish",
+    "selectedVersion": 18,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AllWish.cs3"
+  },
+  {
+    "plugin": "Alooytv",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Alooytv.cs3"
+  },
+  {
+    "plugin": "Anichi",
+    "selectedVersion": 28,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated,Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anichi.cs3"
+  },
+  {
+    "plugin": "Anichin",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Anichin.cs3"
+  },
+  {
+    "plugin": "Anikage",
+    "selectedVersion": 8,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anikage.cs3"
+  },
+  {
+    "plugin": "AniKoto",
+    "selectedVersion": 6,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniKoto.cs3"
+  },
+  {
+    "plugin": "Anilight",
+    "selectedVersion": 3,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anilight.cs3"
+  },
+  {
+    "plugin": "Anim3rb",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anim3rb.cs3"
+  },
+  {
+    "plugin": "Animasu",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Animasu.cs3"
+  },
+  {
+    "plugin": "Anime-Phoenix",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anime-Phoenix.cs3"
+  },
+  {
+    "plugin": "Anime4up",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anime4up.cs3"
+  },
+  {
+    "plugin": "Animeav1",
+    "selectedVersion": 9,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animeav1.cs3"
+  },
+  {
+    "plugin": "AnimeCloud",
+    "selectedVersion": 11,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AnimeCloud.cs3"
+  },
+  {
+    "plugin": "AnimeDekhoProvider",
+    "selectedVersion": 70,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AnimeDekhoProvider.cs3"
+  },
+  {
+    "plugin": "Animedubhindi",
+    "selectedVersion": 9,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animedubhindi.cs3"
+  },
+  {
+    "plugin": "AnimeflvIOProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeflvIOProvider.cs3"
+  },
+  {
+    "plugin": "AnimeflvProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeflvProvider.cs3"
+  },
+  {
+    "plugin": "AnimeHayProvider",
+    "selectedVersion": 11,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/AnimeHayProvider.cs3"
+  },
+  {
+    "plugin": "AnimeIndo",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/AnimeIndo.cs3"
+  },
+  {
+    "plugin": "AnimeJlProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "misajimenezmx"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeJlProvider.cs3"
+  },
+  {
+    "plugin": "Animekhor",
+    "selectedVersion": 13,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animekhor.cs3"
+  },
+  {
+    "plugin": "Animenosub",
+    "selectedVersion": 11,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animenosub.cs3"
+  },
+  {
+    "plugin": "AnimensionProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimensionProvider.cs3"
+  },
+  {
+    "plugin": "AnimeONProvider",
+    "selectedVersion": 41,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix",
+      "deleteBlack666"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeONProvider.cs3"
+  },
+  {
+    "plugin": "AnimePahe",
+    "selectedVersion": 42,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Cloudburst,Lorem Ipsum,Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AnimePahe.cs3"
+  },
+  {
+    "plugin": "Animerco",
+    "selectedVersion": 3,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Animerco.cs3"
+  },
+  {
+    "plugin": "AnimeRift",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/AnimeRift.cs3"
+  },
+  {
+    "plugin": "Animesalt",
+    "selectedVersion": 18,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animesalt.cs3"
+  },
+  {
+    "plugin": "AnimeUAProvider",
+    "selectedVersion": 10,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeUAProvider.cs3"
+  },
+  {
+    "plugin": "AnimeVietsubProvider",
+    "selectedVersion": 14,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/AnimeVietsubProvider.cs3"
+  },
+  {
+    "plugin": "Animewitcher",
+    "selectedVersion": 3,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Animewitcher.cs3"
+  },
+  {
+    "plugin": "Animexin",
+    "selectedVersion": 16,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animexin.cs3"
+  },
+  {
+    "plugin": "AniSnatch",
+    "selectedVersion": 2,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniSnatch.cs3"
+  },
+  {
+    "plugin": "AnitubeinuaProvider",
+    "selectedVersion": 21,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnitubeinuaProvider.cs3"
+  },
+  {
+    "plugin": "AniVortex",
+    "selectedVersion": 10,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniVortex.cs3"
+  },
+  {
+    "plugin": "AniwatchProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AniwatchProvider.cs3"
+  },
+  {
+    "plugin": "AniwaveProvider",
+    "selectedVersion": 20,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AniwaveProvider.cs3"
+  },
+  {
+    "plugin": "Aniworld",
+    "selectedVersion": 15,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98,Hexated"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Aniworld.cs3"
+  },
+  {
+    "plugin": "Anizone",
+    "selectedVersion": 10,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "ycngmn"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anizone.cs3"
+  },
+  {
+    "plugin": "BambooUAProvider",
+    "selectedVersion": 13,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/BambooUAProvider.cs3"
+  },
+  {
+    "plugin": "BanglaPlex",
+    "selectedVersion": 8,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/BanglaPlex.cs3"
+  },
+  {
+    "plugin": "BdixBdipTV",
+    "selectedVersion": 10,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixBdipTV.cs3"
+  },
+  {
+    "plugin": "BdixCircleftp",
+    "selectedVersion": 27,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixCircleftp.cs3"
+  },
+  {
+    "plugin": "BdixCloudTV",
+    "selectedVersion": 6,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixCloudTV.cs3"
+  },
+  {
+    "plugin": "BdixDflix",
+    "selectedVersion": 10,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixDflix.cs3"
+  },
+  {
+    "plugin": "BdixDhakaFlix",
+    "selectedVersion": 8,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixDhakaFlix.cs3"
+  },
+  {
+    "plugin": "BdixICCFtp",
+    "selectedVersion": 3,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixICCFtp.cs3"
+  },
+  {
+    "plugin": "BdixMyMovieBazarTV",
+    "selectedVersion": 6,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixMyMovieBazarTV.cs3"
+  },
+  {
+    "plugin": "BdixRoarZoneTV",
+    "selectedVersion": 6,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixRoarZoneTV.cs3"
+  },
+  {
+    "plugin": "BflixProvider",
+    "selectedVersion": 8,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/BflixProvider.cs3"
+  },
+  {
+    "plugin": "BingedReview",
+    "selectedVersion": 3,
+    "sourceId": "cinephile",
+    "sourceName": "Cinephile",
+    "sourceRepository": "https://github.com/rockhero1234/cinephile",
+    "sourceIndex": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+    "originalAuthors": [
+      "Dilip"
+    ],
+    "originalRepositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/BingedReview.cs3"
+  },
+  {
+    "plugin": "BluPhimProvider",
+    "selectedVersion": 16,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/BluPhimProvider.cs3"
+  },
+  {
+    "plugin": "Bollyflix",
+    "selectedVersion": 33,
+    "sourceId": "csx",
+    "sourceName": "CSX",
+    "sourceRepository": "https://github.com/SaurabhKaperwan/CSX",
+    "sourceIndex": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/Bollyflix.cs3"
+  },
+  {
+    "plugin": "Bristege",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Bristege.cs3"
+  },
+  {
+    "plugin": "CablevisionHdProvider",
+    "selectedVersion": 4,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "misajimenezmx"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CablevisionHdProvider.cs3"
+  },
+  {
+    "plugin": "Cee",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Cee.cs3"
+  },
+  {
+    "plugin": "Chikianimation",
+    "selectedVersion": 2,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Chikianimation.cs3"
+  },
+  {
+    "plugin": "CikavaIdeyaProvider",
+    "selectedVersion": 5,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CikavaIdeyaProvider.cs3"
+  },
+  {
+    "plugin": "CimaClub",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/CimaClub.cs3"
+  },
+  {
+    "plugin": "Cimalight",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Cimalight.cs3"
+  },
+  {
+    "plugin": "Cimatn",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Cimatn.cs3"
+  },
+  {
+    "plugin": "CinecalidadProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CinecalidadProvider.cs3"
+  },
+  {
+    "plugin": "Cinefreak",
+    "selectedVersion": 16,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Cinefreak.cs3"
+  },
+  {
+    "plugin": "Cinemacity",
+    "selectedVersion": 27,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Cinemacity.cs3"
+  },
+  {
+    "plugin": "cinemana",
+    "selectedVersion": 4,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/cinemana.cs3"
+  },
+  {
+    "plugin": "CineStream",
+    "selectedVersion": 487,
+    "sourceId": "csx",
+    "sourceName": "CSX",
+    "sourceRepository": "https://github.com/SaurabhKaperwan/CSX",
+    "sourceIndex": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/CineStream.cs3"
+  },
+  {
+    "plugin": "Cinevood",
+    "selectedVersion": 11,
+    "sourceId": "cinephile",
+    "sourceName": "Cinephile",
+    "sourceRepository": "https://github.com/rockhero1234/cinephile",
+    "sourceIndex": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+    "originalAuthors": [
+      "Dilip"
+    ],
+    "originalRepositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/Cinevood.cs3"
+  },
+  {
+    "plugin": "CoaninetProvider",
+    "selectedVersion": 2,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix",
+      "Partizanin"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CoaninetProvider.cs3"
+  },
+  {
+    "plugin": "Coflix",
+    "selectedVersion": 19,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Coflix.cs3"
+  },
+  {
+    "plugin": "ComamosRamenProvider",
+    "selectedVersion": 3,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/ComamosRamenProvider.cs3"
+  },
+  {
+    "plugin": "Comix",
+    "selectedVersion": 2,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Comix.cs3"
+  },
+  {
+    "plugin": "CuevanaProvider",
+    "selectedVersion": 9,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CuevanaProvider.cs3"
+  },
+  {
+    "plugin": "DailymotionProvider",
+    "selectedVersion": 4,
+    "sourceId": "official",
+    "sourceName": "ReCloudStream Official Extensions",
+    "sourceRepository": "https://github.com/recloudstream/extensions",
+    "sourceIndex": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+    "originalAuthors": [
+      "Luna712"
+    ],
+    "originalRepositoryUrl": "https://github.com/recloudstream/extensions",
+    "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/DailymotionProvider.cs3"
+  },
+  {
+    "plugin": "Desicinemas",
+    "selectedVersion": 19,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Desicinemas.cs3"
+  },
+  {
+    "plugin": "dima-toon",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/dima-toon.cs3"
+  },
+  {
+    "plugin": "Donghuastream",
+    "selectedVersion": 22,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Donghuastream.cs3"
+  },
+  {
+    "plugin": "Donghub",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3"
+  },
+  {
+    "plugin": "DoraBash",
+    "selectedVersion": 14,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/DoraBash.cs3"
+  },
+  {
+    "plugin": "DoramasFlixProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/DoramasFlixProvider.cs3"
+  },
+  {
+    "plugin": "DoramasYTProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/DoramasYTProvider.cs3"
+  },
+  {
+    "plugin": "DoramyWorldProvider",
+    "selectedVersion": 2,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/DoramyWorldProvider.cs3"
+  },
+  {
+    "plugin": "DudeFilms",
+    "selectedVersion": 13,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/DudeFilms.cs3"
+  },
+  {
+    "plugin": "Dutamovie",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated",
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Dutamovie.cs3"
+  },
+  {
+    "plugin": "Egydead",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Egydead.cs3"
+  },
+  {
+    "plugin": "Elif",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Elif.cs3"
+  },
+  {
+    "plugin": "EmwBD",
+    "selectedVersion": 16,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/EmwBD.cs3"
+  },
+  {
+    "plugin": "EneyidaProvider",
+    "selectedVersion": 19,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/EneyidaProvider.cs3"
+  },
+  {
+    "plugin": "EntrepeliculasyseriesProvider",
+    "selectedVersion": 6,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/EntrepeliculasyseriesProvider.cs3"
+  },
+  {
+    "plugin": "eseek",
+    "selectedVersion": 3,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/eseek.cs3"
+  },
+  {
+    "plugin": "EstrenosDoramasProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/EstrenosDoramasProvider.cs3"
+  },
+  {
+    "plugin": "Faselhd",
+    "selectedVersion": 3,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Faselhd.cs3"
+  },
+  {
+    "plugin": "Fibwatch",
+    "selectedVersion": 11,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Fibwatch.cs3"
+  },
+  {
+    "plugin": "FilmapikProvider",
+    "selectedVersion": 21,
+    "sourceId": "alyss",
+    "sourceName": "TheAlyss Repo",
+    "sourceRepository": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+    "sourceIndex": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/plugins.json",
+    "originalAuthors": [
+      "TheAlyss"
+    ],
+    "originalRepositoryUrl": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+    "packageUrl": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/FilmapikProvider.cs3"
+  },
+  {
+    "plugin": "Filmkita",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Filmkita.cs3"
+  },
+  {
+    "plugin": "Filmlokal",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Filmlokal.cs3"
+  },
+  {
+    "plugin": "Fivemovierulz",
+    "selectedVersion": 8,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "darkdemon",
+      "Dilip"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Fivemovierulz.cs3"
+  },
+  {
+    "plugin": "FootReplays",
+    "selectedVersion": 6,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FootReplays.cs3"
+  },
+  {
+    "plugin": "FourKHDHub",
+    "selectedVersion": 41,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/FourKHDHub.cs3"
+  },
+  {
+    "plugin": "FullReplays",
+    "selectedVersion": 6,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FullReplays.cs3"
+  },
+  {
+    "plugin": "FullyMaza",
+    "selectedVersion": 7,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FullyMaza.cs3"
+  },
+  {
+    "plugin": "GoldenAudiobooks",
+    "selectedVersion": 1,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "phisher98",
+      "Anonymous Contributor"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/GoldenAudiobooks.cs3"
+  },
+  {
+    "plugin": "Goojara",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Goojara.cs3"
+  },
+  {
+    "plugin": "Hanime",
+    "selectedVersion": 3,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Hanime.cs3"
+  },
+  {
+    "plugin": "HDhub4u",
+    "selectedVersion": 56,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/HDhub4u.cs3"
+  },
+  {
+    "plugin": "Hdmovie2",
+    "selectedVersion": 6,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hdmovie2.cs3"
+  },
+  {
+    "plugin": "HentaiUkrProvider",
+    "selectedVersion": 6,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/HentaiUkrProvider.cs3"
+  },
+  {
+    "plugin": "HHkungfuProvider",
+    "selectedVersion": 5,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/HHkungfuProvider.cs3"
+  },
+  {
+    "plugin": "HHPandaProvider",
+    "selectedVersion": 12,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/HHPandaProvider.cs3"
+  },
+  {
+    "plugin": "HiAnime",
+    "selectedVersion": 2,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/HiAnime.cs3"
+  },
+  {
+    "plugin": "Hindmoviez",
+    "selectedVersion": 17,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hindmoviez.cs3"
+  },
+  {
+    "plugin": "Idlix",
+    "selectedVersion": 2,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Idlix.cs3"
+  },
+  {
+    "plugin": "IdlixProvider",
+    "selectedVersion": 16,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IdlixProvider.cs3"
+  },
+  {
+    "plugin": "Indomax",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Indomax.cs3"
+  },
+  {
+    "plugin": "InternetArchiveProvider",
+    "selectedVersion": 1,
+    "sourceId": "official",
+    "sourceName": "ReCloudStream Official Extensions",
+    "sourceRepository": "https://github.com/recloudstream/extensions",
+    "sourceIndex": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+    "originalAuthors": [
+      "Luna712"
+    ],
+    "originalRepositoryUrl": "https://github.com/recloudstream/extensions",
+    "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InternetArchiveProvider.cs3"
+  },
+  {
+    "plugin": "InvidiousProvider",
+    "selectedVersion": 9,
+    "sourceId": "official",
+    "sourceName": "ReCloudStream Official Extensions",
+    "sourceRepository": "https://github.com/recloudstream/extensions",
+    "sourceIndex": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+    "originalAuthors": [
+      "Cloudburst"
+    ],
+    "originalRepositoryUrl": "https://github.com/recloudstream/extensions",
+    "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InvidiousProvider.cs3"
+  },
+  {
+    "plugin": "IPTVPlayer",
+    "selectedVersion": 9,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98,Adippe"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IPTVPlayer.cs3"
+  },
+  {
+    "plugin": "IStreamFlare",
+    "selectedVersion": 6,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IStreamFlare.cs3"
+  },
+  {
+    "plugin": "Jellyfin",
+    "selectedVersion": 7,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Jellyfin.cs3"
+  },
+  {
+    "plugin": "JKAnimeProvider",
+    "selectedVersion": 8,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/JKAnimeProvider.cs3"
+  },
+  {
+    "plugin": "Kartoons",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Kartoons.cs3"
+  },
+  {
+    "plugin": "Kawanfilm",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Kawanfilm.cs3"
+  },
+  {
+    "plugin": "Kickassanime",
+    "selectedVersion": 27,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98,Hexated"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Kickassanime.cs3"
+  },
+  {
+    "plugin": "KinostrainProvider",
+    "selectedVersion": 2,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix",
+      "Partizanin"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinostrainProvider.cs3"
+  },
+  {
+    "plugin": "KinoTronProvider",
+    "selectedVersion": 17,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoTronProvider.cs3"
+  },
+  {
+    "plugin": "KinoVezhaProvider",
+    "selectedVersion": 14,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoVezhaProvider.cs3"
+  },
+  {
+    "plugin": "KisskhProvider",
+    "selectedVersion": 22,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98,Hexated,Peerless"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/KisskhProvider.cs3"
+  },
+  {
+    "plugin": "KKPhimProvider",
+    "selectedVersion": 10,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/KKPhimProvider.cs3"
+  },
+  {
+    "plugin": "KlikXXi",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/KlikXXi.cs3"
+  },
+  {
+    "plugin": "KlonTVProvider",
+    "selectedVersion": 21,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KlonTVProvider.cs3"
+  },
+  {
+    "plugin": "Krmzy",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Krmzy.cs3"
+  },
+  {
+    "plugin": "Kuramanime",
+    "selectedVersion": 2,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Kuramanime.cs3"
+  },
+  {
+    "plugin": "Kuronime",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Kuronime.cs3"
+  },
+  {
+    "plugin": "LACartoonsProvider",
+    "selectedVersion": 3,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/LACartoonsProvider.cs3"
+  },
+  {
+    "plugin": "Latanime",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Latanime.cs3"
+  },
+  {
+    "plugin": "LatAnimeProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "misajimenezmx"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/LatAnimeProvider.cs3"
+  },
+  {
+    "plugin": "LayarKaca",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated",
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/LayarKaca.cs3"
+  },
+  {
+    "plugin": "LayarKacaProvider",
+    "selectedVersion": 10,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated,Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/LayarKacaProvider.cs3"
+  },
+  {
+    "plugin": "LayarWarna",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/LayarWarna.cs3"
+  },
+  {
+    "plugin": "Lodynet",
+    "selectedVersion": 2,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Lodynet.cs3"
+  },
+  {
+    "plugin": "MassTamilanProvider",
+    "selectedVersion": 9,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98,LikDev-256"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MassTamilanProvider.cs3"
+  },
+  {
+    "plugin": "Megakino",
+    "selectedVersion": 6,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Megakino.cs3"
+  },
+  {
+    "plugin": "Microtv",
+    "selectedVersion": 3,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Microtv.cs3"
+  },
+  {
+    "plugin": "MidasXXi",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/MidasXXi.cs3"
+  },
+  {
+    "plugin": "MonoschinosProvider",
+    "selectedVersion": 6,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/MonoschinosProvider.cs3"
+  },
+  {
+    "plugin": "MovieBox",
+    "selectedVersion": 2,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/MovieBox.cs3"
+  },
+  {
+    "plugin": "Moviebox",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Moviebox.cs3"
+  },
+  {
+    "plugin": "MovieBoxProvider",
+    "selectedVersion": 36,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "NivinCNC,Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MovieBoxProvider.cs3"
+  },
+  {
+    "plugin": "MovieboxProvider",
+    "selectedVersion": 9,
+    "sourceId": "alyss",
+    "sourceName": "TheAlyss Repo",
+    "sourceRepository": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+    "sourceIndex": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/plugins.json",
+    "originalAuthors": [
+      "TheAlyss"
+    ],
+    "originalRepositoryUrl": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+    "packageUrl": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/MovieboxProvider.cs3"
+  },
+  {
+    "plugin": "Movies4u",
+    "selectedVersion": 17,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Movies4u.cs3"
+  },
+  {
+    "plugin": "MoviesDrive",
+    "selectedVersion": 33,
+    "sourceId": "csx",
+    "sourceName": "CSX",
+    "sourceRepository": "https://github.com/SaurabhKaperwan/CSX",
+    "sourceIndex": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/MoviesDrive.cs3"
+  },
+  {
+    "plugin": "Moviesmod",
+    "selectedVersion": 33,
+    "sourceId": "csx",
+    "sourceName": "CSX",
+    "sourceRepository": "https://github.com/SaurabhKaperwan/CSX",
+    "sourceIndex": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/Moviesmod.cs3"
+  },
+  {
+    "plugin": "MoviPK",
+    "selectedVersion": 4,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "MoviPK"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/MoviPK.cs3"
+  },
+  {
+    "plugin": "Mp4Moviez",
+    "selectedVersion": 3,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "salman731"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/Mp4Moviez.cs3"
+  },
+  {
+    "plugin": "MPlayerProvider",
+    "selectedVersion": 9,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MPlayerProvider.cs3"
+  },
+  {
+    "plugin": "MultiMoviesProvider",
+    "selectedVersion": 54,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MultiMoviesProvider.cs3"
+  },
+  {
+    "plugin": "MundoDonghuaProvider",
+    "selectedVersion": 3,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/MundoDonghuaProvider.cs3"
+  },
+  {
+    "plugin": "MyCimaProvider",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/MyCimaProvider.cs3"
+  },
+  {
+    "plugin": "Nekopoi",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Nekopoi.cs3"
+  },
+  {
+    "plugin": "Netcinez",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Netcinez.cs3"
+  },
+  {
+    "plugin": "Netmirror",
+    "selectedVersion": 46,
+    "sourceId": "netmirror",
+    "sourceName": "NetMirror Extension",
+    "sourceRepository": "https://github.com/Sushan64/NetMirror-Extension",
+    "sourceIndex": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/plugins.json",
+    "originalAuthors": [
+      "Sushan64"
+    ],
+    "originalRepositoryUrl": "https://github.com/Sushan64/NetMirror-Extension",
+    "packageUrl": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/Netmirror.cs3"
+  },
+  {
+    "plugin": "Ngefilm",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Ngefilm.cs3"
+  },
+  {
+    "plugin": "Nimegami",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Nimegami.cs3"
+  },
+  {
+    "plugin": "Nomat",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Nomat.cs3"
+  },
+  {
+    "plugin": "ObejrzyjTo",
+    "selectedVersion": 3,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ObejrzyjTo.cs3"
+  },
+  {
+    "plugin": "OHiTVProvider",
+    "selectedVersion": 2,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/OHiTVProvider.cs3"
+  },
+  {
+    "plugin": "OHLI24",
+    "selectedVersion": 7,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OHLI24.cs3"
+  },
+  {
+    "plugin": "OnePace",
+    "selectedVersion": 23,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OnePace.cs3"
+  },
+  {
+    "plugin": "OneTouchTV",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OneTouchTV.cs3"
+  },
+  {
+    "plugin": "OPhimProvider",
+    "selectedVersion": 10,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/OPhimProvider.cs3"
+  },
+  {
+    "plugin": "Oploverz",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Oploverz.cs3"
+  },
+  {
+    "plugin": "Otakudesu",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Otakudesu.cs3"
+  },
+  {
+    "plugin": "Pahe",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Pahe.cs3"
+  },
+  {
+    "plugin": "PeliculasFlixProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PeliculasFlixProvider.cs3"
+  },
+  {
+    "plugin": "PelispediaProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelispediaProvider.cs3"
+  },
+  {
+    "plugin": "Pelisplus4KProvider",
+    "selectedVersion": 6,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/Pelisplus4KProvider.cs3"
+  },
+  {
+    "plugin": "PelisplusHDProvider",
+    "selectedVersion": 5,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelisplusHDProvider.cs3"
+  },
+  {
+    "plugin": "PelisplusSOProvider",
+    "selectedVersion": 3,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelisplusSOProvider.cs3"
+  },
+  {
+    "plugin": "Pencurimovie",
+    "selectedVersion": 8,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pencurimovie.cs3"
+  },
+  {
+    "plugin": "PhimLongTiengProvider",
+    "selectedVersion": 12,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimLongTiengProvider.cs3"
+  },
+  {
+    "plugin": "PhimMoiProvider",
+    "selectedVersion": 9,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimMoiProvider.cs3"
+  },
+  {
+    "plugin": "PhimTuoiThoProvider",
+    "selectedVersion": 5,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimTuoiThoProvider.cs3"
+  },
+  {
+    "plugin": "Pinoymoviepedia",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pinoymoviepedia.cs3"
+  },
+  {
+    "plugin": "Piratexplay",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Piratexplay.cs3"
+  },
+  {
+    "plugin": "PlayhubProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PlayhubProvider.cs3"
+  },
+  {
+    "plugin": "Pmsm",
+    "selectedVersion": 8,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98,Duro92"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pmsm.cs3"
+  },
+  {
+    "plugin": "PublicSportsIPTV",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/PublicSportsIPTV.cs3"
+  },
+  {
+    "plugin": "Pusatmovie",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Pusatmovie.cs3"
+  },
+  {
+    "plugin": "QuickIPTV",
+    "selectedVersion": 8,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/QuickIPTV.cs3"
+  },
+  {
+    "plugin": "Reanime",
+    "selectedVersion": 3,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Reanime.cs3"
+  },
+  {
+    "plugin": "Rebahin",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Rebahin.cs3"
+  },
+  {
+    "plugin": "Replaymatch",
+    "selectedVersion": 2,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Replaymatch.cs3"
+  },
+  {
+    "plugin": "RingZ",
+    "selectedVersion": 12,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/RingZ.cs3"
+  },
+  {
+    "plugin": "Sarangfilm",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3"
+  },
+  {
+    "plugin": "Savefilm",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Savefilm.cs3"
+  },
+  {
+    "plugin": "SemiRebahin",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/SemiRebahin.cs3"
+  },
+  {
+    "plugin": "SerialnoProvider",
+    "selectedVersion": 13,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SerialnoProvider.cs3"
+  },
+  {
+    "plugin": "SeriesflixProvider",
+    "selectedVersion": 2,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SeriesflixProvider.cs3"
+  },
+  {
+    "plugin": "SeriesMetroProvider",
+    "selectedVersion": 3,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SeriesMetroProvider.cs3"
+  },
+  {
+    "plugin": "Shahid4u",
+    "selectedVersion": 2,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Shahid4u.cs3"
+  },
+  {
+    "plugin": "Shahidwbas",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Shahidwbas.cs3"
+  },
+  {
+    "plugin": "ShowBox",
+    "selectedVersion": 10,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ShowBox.cs3"
+  },
+  {
+    "plugin": "SimpsonsUATvProvider",
+    "selectedVersion": 5,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "deleteBlack666"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SimpsonsUATvProvider.cs3"
+  },
+  {
+    "plugin": "SkymoviesHD",
+    "selectedVersion": 1,
+    "sourceId": "cinephile",
+    "sourceName": "Cinephile",
+    "sourceRepository": "https://github.com/rockhero1234/cinephile",
+    "sourceIndex": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+    "originalAuthors": [
+      "Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/SkymoviesHD.cs3"
+  },
+  {
+    "plugin": "SoloLatinoProvider",
+    "selectedVersion": 1,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "misajimenezmx"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SoloLatinoProvider.cs3"
+  },
+  {
+    "plugin": "StreamPlay",
+    "selectedVersion": 685,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98",
+      "Hexated"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StreamPlay.cs3"
+  },
+  {
+    "plugin": "StremioAddon",
+    "selectedVersion": 16,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated,phisher98,erynith"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StremioAddon.cs3"
+  },
+  {
+    "plugin": "StremioX",
+    "selectedVersion": 27,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Hexated,phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StremioX.cs3"
+  },
+  {
+    "plugin": "SuperStream",
+    "selectedVersion": 38,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/SuperStream.cs3"
+  },
+  {
+    "plugin": "SyncPlugin",
+    "selectedVersion": 3,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3"
+  },
+  {
+    "plugin": "Syria-live",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Syria-live.cs3"
+  },
+  {
+    "plugin": "Tamilblasters",
+    "selectedVersion": 12,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "rockhero1234,phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Tamilblasters.cs3"
+  },
+  {
+    "plugin": "TheMoviesFlix",
+    "selectedVersion": 6,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "salman731,Redowan"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/TheMoviesFlix.cs3"
+  },
+  {
+    "plugin": "TioAnimeProvider",
+    "selectedVersion": 3,
+    "sourceId": "storm",
+    "sourceName": "Storm Extensions",
+    "sourceRepository": "https://github.com/Stormunblessed/storm-ext",
+    "sourceIndex": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+    "originalAuthors": [
+      "Stormunblessed"
+    ],
+    "originalRepositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "packageUrl": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/TioAnimeProvider.cs3"
+  },
+  {
+    "plugin": "ToonHub",
+    "selectedVersion": 12,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ToonHub.cs3"
+  },
+  {
+    "plugin": "Toonstream",
+    "selectedVersion": 10,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Toonstream.cs3"
+  },
+  {
+    "plugin": "ToonTales",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ToonTales.cs3"
+  },
+  {
+    "plugin": "Topcartoons",
+    "selectedVersion": 5,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Topcartoons.cs3"
+  },
+  {
+    "plugin": "Topcinema",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Topcinema.cs3"
+  },
+  {
+    "plugin": "Topstreamfilm",
+    "selectedVersion": 9,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Topstreamfilm.cs3"
+  },
+  {
+    "plugin": "TorraStream",
+    "selectedVersion": 97,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/TorraStream.cs3"
+  },
+  {
+    "plugin": "TukTukcima",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/TukTukcima.cs3"
+  },
+  {
+    "plugin": "TuniflexBlog",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/TuniflexBlog.cs3"
+  },
+  {
+    "plugin": "Tuniflix",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Tuniflix.cs3"
+  },
+  {
+    "plugin": "TVgarden",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/TVgarden.cs3"
+  },
+  {
+    "plugin": "TvPhimProvider",
+    "selectedVersion": 11,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/TvPhimProvider.cs3"
+  },
+  {
+    "plugin": "TwitchProvider",
+    "selectedVersion": 2,
+    "sourceId": "official",
+    "sourceName": "ReCloudStream Official Extensions",
+    "sourceRepository": "https://github.com/recloudstream/extensions",
+    "sourceIndex": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+    "originalAuthors": [
+      "CranberrySoup"
+    ],
+    "originalRepositoryUrl": "https://github.com/recloudstream/extensions",
+    "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/TwitchProvider.cs3"
+  },
+  {
+    "plugin": "UAFlixProvider",
+    "selectedVersion": 20,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UAFlixProvider.cs3"
+  },
+  {
+    "plugin": "UakinoProvider",
+    "selectedVersion": 32,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UakinoProvider.cs3"
+  },
+  {
+    "plugin": "UASerialsProProvider",
+    "selectedVersion": 27,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UASerialsProProvider.cs3"
+  },
+  {
+    "plugin": "UFDubProvider",
+    "selectedVersion": 12,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UFDubProvider.cs3"
+  },
+  {
+    "plugin": "UHDmoviesProvider",
+    "selectedVersion": 41,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/UHDmoviesProvider.cs3"
+  },
+  {
+    "plugin": "Ultima",
+    "selectedVersion": 65,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "RowdyRushya,Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3"
+  },
+  {
+    "plugin": "UnimayProvider",
+    "selectedVersion": 13,
+    "sourceId": "cakestwix",
+    "sourceName": "CakesTwix UK/UA",
+    "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "sourceIndex": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+    "originalAuthors": [
+      "CakesTwix"
+    ],
+    "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UnimayProvider.cs3"
+  },
+  {
+    "plugin": "VegaMovies",
+    "selectedVersion": 82,
+    "sourceId": "csx",
+    "sourceName": "CSX",
+    "sourceRepository": "https://github.com/SaurabhKaperwan/CSX",
+    "sourceIndex": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+    "originalAuthors": [
+      "megix"
+    ],
+    "originalRepositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "packageUrl": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/VegaMovies.cs3"
+  },
+  {
+    "plugin": "VipPhimProvider",
+    "selectedVersion": 9,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/VipPhimProvider.cs3"
+  },
+  {
+    "plugin": "Viu",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Viu.cs3"
+  },
+  {
+    "plugin": "WatchMoviesPk",
+    "selectedVersion": 3,
+    "sourceId": "redowan",
+    "sourceName": "Redowan CloudStream",
+    "sourceRepository": "https://github.com/redowan99/Redowan-CloudStream",
+    "sourceIndex": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+    "originalAuthors": [
+      "salman731"
+    ],
+    "originalRepositoryUrl": "https://github.com/redowan99/Redowan-CloudStream",
+    "packageUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/WatchMoviesPk.cs3"
+  },
+  {
+    "plugin": "Wecima",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Wecima.cs3"
+  },
+  {
+    "plugin": "WGFilm21",
+    "selectedVersion": 1,
+    "sourceId": "cloudx",
+    "sourceName": "CloudX-V2",
+    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
+    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "originalAuthors": [
+      "Asm0d3usX"
+    ],
+    "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/WGFilm21.cs3"
+  },
+  {
+    "plugin": "Witanime",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Witanime.cs3"
+  },
+  {
+    "plugin": "XDMovies",
+    "selectedVersion": 26,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/XDMovies.cs3"
+  },
+  {
+    "plugin": "Yacintv",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Yacintv.cs3"
+  },
+  {
+    "plugin": "YanHH3DProvider",
+    "selectedVersion": 16,
+    "sourceId": "vietnam",
+    "sourceName": "Vietnamese CloudStream Index",
+    "sourceRepository": "https://github.com/t23-02/cloudstream",
+    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/YanHH3DProvider.cs3"
+  },
+  {
+    "plugin": "YlnimeProvider",
+    "selectedVersion": 6,
+    "sourceId": "alyss",
+    "sourceName": "TheAlyss Repo",
+    "sourceRepository": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+    "sourceIndex": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/plugins.json",
+    "originalAuthors": [
+      "TheAlyss"
+    ],
+    "originalRepositoryUrl": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+    "packageUrl": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/YlnimeProvider.cs3"
+  },
+  {
+    "plugin": "Youtube",
+    "selectedVersion": 2,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Youtube.cs3"
+  },
+  {
+    "plugin": "YoutubeProvider",
+    "selectedVersion": 1,
+    "sourceId": "official",
+    "sourceName": "ReCloudStream Official Extensions",
+    "sourceRepository": "https://github.com/recloudstream/extensions",
+    "sourceIndex": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+    "originalAuthors": [
+      "KaifTaufiq"
+    ],
+    "originalRepositoryUrl": "https://github.com/recloudstream/extensions",
+    "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/YoutubeProvider.cs3"
+  },
+  {
+    "plugin": "YTS",
+    "selectedVersion": 11,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/YTS.cs3"
+  },
+  {
+    "plugin": "Zinkmovies",
+    "selectedVersion": 12,
+    "sourceId": "phisher",
+    "sourceName": "Phisher Repo",
+    "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "sourceIndex": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+    "originalAuthors": [
+      "Phisher98"
+    ],
+    "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Zinkmovies.cs3"
+  }
+]

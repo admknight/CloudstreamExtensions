@@ -1,16 +1,86 @@
 [
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/3isk.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "3isk",
+    "internalName": "3isk",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 31165,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://3esk.onl/wp-content/uploads/2021/01/3isk-logo.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-00ead28e610d86add9fc0e3fd937c1dfe863b66b0c5686e28bebf8039c7ab86a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/9kMovies.cs3",
+    "status": 1,
+    "version": 11,
+    "name": "9kMovies",
+    "internalName": "9kMovies",
+    "description": "Maintained by Adam Knight • Bangla & Hindi Movies",
+    "fileSize": 16446,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "NSFW"
+    ],
+    "iconUrl": "https://9kmovies.llc/wp-content/uploads/2026/06/9kmovies-logo1.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-f1db082792182fa5b2ee25c13e963268666a6fa855a0de7cadb7348fef92907f"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aflaam.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Aflaam",
+    "internalName": "Aflaam",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 15484,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://aflaam.com/style/assets/images/logo.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-c8cbba4f4f36d76907d2b366baa480d9201b16079cef9c3bd85f20cc3049e183"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Akwam.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "Akwam",
+    "internalName": "Akwam",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 27980,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vuGLv4zY3XpoN2jza2unCQ95xFfypfe-h3k3xteMbGxl7taw-ziXyNg&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-cd29b55725e0db70296c1831ea6c6136889f14eb01e57eb6c32afc998e93ecb2"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AllMovieLandProvider.cs3",
     "status": 1,
     "version": 25,
     "name": "AllMovieLandProvider",
     "internalName": "AllMovieLandProvider",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Indian MultiLanguage Provider (Mostly Hindi)",
+    "description": "Maintained by Adam Knight • Indian MultiLanguage Provider (Mostly Hindi)",
     "fileSize": 93111,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -27,12 +97,9 @@
     "version": 18,
     "name": "AllWish",
     "internalName": "AllWish",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime from all-wish.me",
+    "description": "Maintained by Adam Knight • Anime from all-wish.me",
     "fileSize": 80403,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "All"
@@ -42,17 +109,32 @@
     "fileHash": "sha256-372aee9da18f83d5a4c0dbc73f640878c8554ae7dee14d02eda0ef1a50664ae3"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Alooytv.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Alooytv",
+    "internalName": "Alooytv",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 14658,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://fitnur.com/uploads/avatars/c5ae8dadf88bcea9549657ec451a1563.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-96607f1f5b4e32f5ce688a75b459ab77d8bad97d08b1a2a2bc5f5dcd54035197"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anichi.cs3",
     "status": 1,
     "version": 28,
     "name": "Anichi",
     "internalName": "Anichi",
-    "authors": [
-      "Hexated,Phisher98"
-    ],
-    "description": "AllManga/Mkissa Source",
+    "description": "Maintained by Adam Knight • AllManga/Mkissa Source",
     "fileSize": 216855,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -64,16 +146,31 @@
     "fileHash": "sha256-702b49b6ad03eeaa221a1fcfe7fd72360d11bdeae031d7124e039aafc38b943e"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://anichin.cafe&sz=%size%",
+    "fileHash": "sha256-981e00e01ac0f40fe7e40802d289bdc889af285086b6f385db3e03b1c697eee0",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 22893,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 1,
+    "internalName": "Anichin",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Anichin.cs3",
+    "name": "Anichin",
+    "description": "Maintained by Adam Knight"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anikage.cs3",
     "status": 1,
     "version": 8,
     "name": "Anikage",
     "internalName": "Anikage",
-    "authors": [
-      "Phisher98"
-    ],
     "fileSize": 67349,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -82,7 +179,8 @@
     ],
     "iconUrl": "https://a.favicon.im/anikage.cc?larger=true",
     "apiVersion": 1,
-    "fileHash": "sha256-6d1da7c5793d8645e84b4a0df7a56ba2b39dc95cfa897bfa33b33fdf322c7559"
+    "fileHash": "sha256-6d1da7c5793d8645e84b4a0df7a56ba2b39dc95cfa897bfa33b33fdf322c7559",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniKoto.cs3",
@@ -90,12 +188,9 @@
     "version": 6,
     "name": "AniKoto",
     "internalName": "AniKoto",
-    "authors": [
-      "phisher98"
-    ],
-    "description": "AniKoto",
+    "description": "Maintained by Adam Knight • AniKoto",
     "fileSize": 89164,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Anime",
@@ -111,12 +206,9 @@
     "version": 3,
     "name": "Anilight",
     "internalName": "Anilight",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anilight Anime Provider",
+    "description": "Maintained by Adam Knight • Anilight Anime Provider",
     "fileSize": 67919,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -128,17 +220,89 @@
     "fileHash": "sha256-202c7d94668dbb7dcf5187d9bfda6af317a946b4c55410565633e19b064bca3b"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anim3rb.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Anime3rb",
+    "internalName": "Anim3rb",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 36516,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "https://images.anime3rb.com/favicon/apple-touch-icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-99b3077c567fe62084729d04529f0a0ba831dae8376992b7b0be23f785880f71"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://animasuid.com&sz=%size%",
+    "fileHash": "sha256-ef9bcd8bced2111065a6698fddc8813707cbffd9e411039dcb0c2a6301e722ec",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 14645,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime"
+    ],
+    "version": 1,
+    "internalName": "Animasu",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Animasu.cs3",
+    "name": "Animasu",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anime-Phoenix.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Anime-Phoenix",
+    "internalName": "Anime-Phoenix",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 27126,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "iconUrl": "https://yt3.googleusercontent.com/mBIIR5cqQC4Y-o7HaxbkJfs305X6tbHLSNPk6MRMCDJsH8xP0SfGhK-CBDpSmH95wSff9z99sg=s900-c-k-c0x00ffffff-no-rj",
+    "apiVersion": 1,
+    "fileHash": "sha256-758b3bb9eab01fee2704b281413960512014c45c3612184c20fe62e1ee984ed1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anime4up.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Anime4up",
+    "internalName": "Anime4up",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 37890,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "Anime"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkVDfHjqUpRyrWJjW8wUHH87BhSO6B9uxI-B80sAy_AQ&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-30ae4aaab6596ed950a55d5a41dfd44d42721c7d1e9af0fea2eabc61a40ece06"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animeav1.cs3",
     "status": 1,
     "version": 9,
     "name": "Animeav1",
     "internalName": "Animeav1",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "(Mexican) Anime Extension",
+    "description": "Maintained by Adam Knight • (Mexican) Anime Extension",
     "fileSize": 55022,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
       "Movie",
@@ -155,12 +319,9 @@
     "version": 11,
     "name": "AnimeCloud",
     "internalName": "AnimeCloud",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "German (Lang) Anime",
+    "description": "Maintained by Adam Knight • German (Lang) Anime",
     "fileSize": 71760,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
       "Anime"
@@ -175,12 +336,9 @@
     "version": 70,
     "name": "AnimeDekhoProvider",
     "internalName": "AnimeDekhoProvider",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Includes AnimeDekho,OnePace(DUB,SUB) and HindiSubAnime",
+    "description": "Maintained by Adam Knight • Includes AnimeDekho,OnePace(DUB,SUB) and HindiSubAnime",
     "fileSize": 107624,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -197,12 +355,9 @@
     "version": 9,
     "name": "Animedubhindi",
     "internalName": "Animedubhindi",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime in Multi Lang",
+    "description": "Maintained by Adam Knight • Anime in Multi Lang",
     "fileSize": 94018,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -216,13 +371,10 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animeflv.io&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 17048,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -230,18 +382,16 @@
     "version": 2,
     "internalName": "AnimeflvIOProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeflvIOProvider.cs3",
-    "name": "AnimeflvIOProvider"
+    "name": "AnimeflvIOProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animeflv.net&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 17846,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -249,18 +399,51 @@
     "version": 5,
     "internalName": "AnimeflvProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeflvProvider.cs3",
-    "name": "AnimeflvProvider"
+    "name": "AnimeflvProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=animehay.in&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 31519,
+    "status": 1,
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 11,
+    "internalName": "AnimeHayProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/AnimeHayProvider.cs3",
+    "name": "AnimeHayProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://anime-indo.lol&sz=%size%",
+    "fileHash": "sha256-1101f01383716c135d0cfe27e2199a56400456a6f4ec94135e1ca03a14cf3910",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 22082,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime",
+      "Movie"
+    ],
+    "version": 1,
+    "internalName": "AnimeIndo",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/AnimeIndo.cs3",
+    "name": "AnimeIndo",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.anime-jl.net/favicon.ico",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 12444,
     "status": 1,
     "language": "es",
-    "authors": [
-      "misajimenezmx"
-    ],
     "tvTypes": [
       "Movie",
       "Anime"
@@ -268,7 +451,8 @@
     "version": 1,
     "internalName": "AnimeJlProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimeJlProvider.cs3",
-    "name": "AnimeJlProvider"
+    "name": "AnimeJlProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animekhor.cs3",
@@ -276,12 +460,9 @@
     "version": 13,
     "name": "Animekhor",
     "internalName": "Animekhor",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime and Movies includes (Donghuaword)",
+    "description": "Maintained by Adam Knight • Anime and Movies includes (Donghuaword)",
     "fileSize": 59185,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "zh",
     "tvTypes": [
       "AnimeMovie",
@@ -297,12 +478,9 @@
     "version": 11,
     "name": "Animenosub",
     "internalName": "Animenosub",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime and Movies",
+    "description": "Maintained by Adam Knight • Anime and Movies",
     "fileSize": 54532,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -316,13 +494,10 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animension.to&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 15367,
     "status": 1,
     "language": "en",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -330,7 +505,27 @@
     "version": 1,
     "internalName": "AnimensionProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AnimensionProvider.cs3",
-    "name": "AnimensionProvider"
+    "name": "AnimensionProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://animeon.club/assets/images/short-logo.png",
+    "fileHash": "sha256-307d0654c3b73927b1bf7338038b7fa2f39559776a02ed6f35d5038eb30754e7",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 95706,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "version": 41,
+    "internalName": "AnimeONProvider",
+    "description": "Maintained by Adam Knight • AnimeON - Дивитися аніме україньскою",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeONProvider.cs3",
+    "name": "AnimeONProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AnimePahe.cs3",
@@ -338,12 +533,9 @@
     "version": 42,
     "name": "AnimePahe",
     "internalName": "AnimePahe",
-    "authors": [
-      "Cloudburst,Lorem Ipsum,Phisher98"
-    ],
-    "description": "Animes (SUB/DUB)",
+    "description": "Maintained by Adam Knight • Animes (SUB/DUB)",
     "fileSize": 150784,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -355,17 +547,51 @@
     "fileHash": "sha256-4345226de8221195cd1495a7507338d6f6b663ca8ec61daa6156a32294947858"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Animerco.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "Animerco",
+    "internalName": "Animerco",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 91390,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Abodabodd/Oldarabrepo/refs/heads/main/img/file_0000000042f861f49090744dc097ee2f.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-795b94f18654b53250a61513711ace519593a3583bfc48a6cf2e0d5af43bbf7f"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/AnimeRift.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "AnimeRift",
+    "internalName": "AnimeRift",
+    "description": "Maintained by Adam Knight • ⚠️ تنبيه: يُرجى استخدام VPN لتجنب حظر عنوان الـ IP الخاص بك",
+    "fileSize": 48574,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/refs/heads/main/AnimeRift/icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-9ba88208f3fcd51845046737380453ec02dc1d4b48bab326ca7f329d8136e27f"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animesalt.cs3",
     "status": 1,
     "version": 18,
     "name": "Animesalt",
     "internalName": "Animesalt",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime/Cartoon in Hindi",
+    "description": "Maintained by Adam Knight • Anime/Cartoon in Hindi",
     "fileSize": 84492,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -377,17 +603,65 @@
     "fileHash": "sha256-31a729b5dde63a821432832feb5a93733dcb002a4663125d8c2dd52d633ded19"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=animeua.club&sz=%size%",
+    "fileHash": "sha256-0b21a92476a98a26ae209ad7c7477ebc47f498a088b463f13a283de7c4b27c1f",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 28337,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "version": 10,
+    "internalName": "AnimeUAProvider",
+    "description": "Maintained by Adam Knight • Тут на вас чекають різноманітні жанри, в яких ви зможете переживати разом із героями все їхнє життя від моментів радості та закоханості з жанру романтики до неймовірних пригод фентазійних серіалів.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeUAProvider.cs3",
+    "name": "AnimeUAProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=animevietsub.app&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 33198,
+    "status": 1,
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 14,
+    "internalName": "AnimeVietsubProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/AnimeVietsubProvider.cs3",
+    "name": "AnimeVietsubProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Animewitcher.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "AnimeWitcher",
+    "internalName": "Animewitcher",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 34328,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Anime"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Abodabodd/Oldarabrepo/refs/heads/main/img/anime_witcher_round_icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-4c639f9392d46e45f4ee84e8799c810cc1d11fba2f13ff7e32865c71987c2fb4"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animexin.cs3",
     "status": 1,
     "version": 16,
     "name": "Animexin",
     "internalName": "Animexin",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime and Movies",
+    "description": "Maintained by Adam Knight • Anime and Movies",
     "fileSize": 89293,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -404,12 +678,9 @@
     "version": 2,
     "name": "AniSnatch",
     "internalName": "AniSnatch",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "AniSnatch - Watch Anime Online Free",
+    "description": "Maintained by Adam Knight • AniSnatch - Watch Anime Online Free",
     "fileSize": 127888,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Anime",
@@ -421,17 +692,32 @@
     "fileHash": "sha256-ff09369ffdcbe1a27dd20c798367465c3b68de9e24d70f15f9cf979e8c110559"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=anitube.in.ua&sz=%size%",
+    "fileHash": "sha256-434ffe1e4637dba06b4333749248f5001788b7c9fbfd3784cab5d862cdba7429",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 51900,
+    "status": 3,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 21,
+    "internalName": "AnitubeinuaProvider",
+    "description": "Maintained by Adam Knight • На нашому сайті ви можете подивитися аніме онлайн українською безкоштовно. Великий список аніме онлайн тільки у нас.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnitubeinuaProvider.cs3",
+    "name": "AnitubeinuaProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AniVortex.cs3",
     "status": 1,
     "version": 10,
     "name": "AniVortex",
     "internalName": "AniVortex",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "AniVortex — Anime, movies & TV series streaming",
+    "description": "Maintained by Adam Knight • AniVortex — Anime, movies & TV series streaming",
     "fileSize": 147073,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Anime",
@@ -447,13 +733,10 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animension.to&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 44513,
     "status": 1,
     "language": "en",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -461,25 +744,23 @@
     "version": 1,
     "internalName": "AniwatchProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AniwatchProvider.cs3",
-    "name": "AniwatchProvider"
+    "name": "AniwatchProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=aniwave.to&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 38597,
     "status": 1,
     "language": "en",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
     ],
     "version": 20,
     "internalName": "AniwaveProvider",
-    "description": "Watch 9anime with the help of the Consumet API.",
+    "description": "Maintained by Adam Knight • Watch 9anime with the help of the Consumet API.",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/AniwaveProvider.cs3",
     "name": "AniwaveProvider"
   },
@@ -489,12 +770,9 @@
     "version": 15,
     "name": "Aniworld",
     "internalName": "Aniworld",
-    "authors": [
-      "Phisher98,Hexated"
-    ],
-    "description": "Include: Serienstream (Login Required under Extension Settings)",
+    "description": "Maintained by Adam Knight • Include: Serienstream (Login Required under Extension Settings)",
     "fileSize": 96880,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
       "AnimeMovie",
@@ -511,12 +789,9 @@
     "version": 10,
     "name": "Anizone",
     "internalName": "Anizone",
-    "authors": [
-      "ycngmn"
-    ],
-    "description": "Anizone.to streams latest anime content in multiple language.",
+    "description": "Maintained by Adam Knight • Anizone.to streams latest anime content in multiple language.",
     "fileSize": 67216,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Anime"
@@ -526,17 +801,32 @@
     "fileHash": "sha256-453b68948de8a5aa5b7de0acc7067df582c30f627a79a468ca7d4169ecafa0f7"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=bambooua.com&sz=%size%",
+    "fileHash": "sha256-2064b87ba4aec1a1750728ec2ce4c3ca11109040d0d44d99d78738196e0027ca",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 25354,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "AsianDrama"
+    ],
+    "version": 13,
+    "internalName": "BambooUAProvider",
+    "description": "Maintained by Adam Knight • BambooUA - Ми команда, що дарує переклади азійських фільмів / шоу / кліпів / дорам українською мовою. Приєднуйтеся до нас! З нами ти завжди будеш першим!",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/BambooUAProvider.cs3",
+    "name": "BambooUAProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/BanglaPlex.cs3",
     "status": 1,
     "version": 8,
     "name": "BanglaPlex",
     "internalName": "BanglaPlex",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "BanglaPlex",
+    "description": "Maintained by Adam Knight • BanglaPlex",
     "fileSize": 57302,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "bn",
     "tvTypes": [
       "Movie",
@@ -547,38 +837,216 @@
     "fileHash": "sha256-04e34875178311c4fe66f3fc3230bc43ef1f5ba85ff6ef096510a587f4f24838"
   },
   {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixBdipTV.cs3",
+    "status": 1,
+    "version": 10,
+    "name": "BdixBdipTV",
+    "internalName": "BdixBdipTV",
+    "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
+    "fileSize": 16863,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "http://tv.bdiptv.net/assets/images/Live1.jpeg",
+    "apiVersion": 1,
+    "fileHash": "sha256-8f7264480478dd08fcd9ed584b2484c8588f7fdc0927abbd92d57fdfa9164d76"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixCircleftp.cs3",
+    "status": 1,
+    "version": 27,
+    "name": "BdixCircleftp",
+    "internalName": "BdixCircleftp",
+    "description": "Maintained by Adam Knight • Only works in Bangladesh. Works even in internet Shutdown",
+    "fileSize": 22123,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "OVA",
+      "Cartoon",
+      "AsianDrama",
+      "Others",
+      "Documentary"
+    ],
+    "iconUrl": "http://new.circleftp.net/static/media/logo.fce2c9029060a10687b8.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-71823213530de9f96a5faba45ec513da8dd5614a126380df484eb391cc1ce04d"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixCloudTV.cs3",
+    "status": 1,
+    "version": 6,
+    "name": "BdixCloudTV",
+    "internalName": "BdixCloudTV",
+    "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
+    "fileSize": 17223,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "http://172.19.178.180/assets/logos/Cloudtv.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-774c9e863c2697223ac33c6e3c884b86363085c433ee857c657254e25312cf71"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixDflix.cs3",
+    "status": 1,
+    "version": 10,
+    "name": "BdixDflix",
+    "internalName": "BdixDflix",
+    "description": "Maintained by Adam Knight • Discovery BDIX Provider",
+    "fileSize": 19036,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "OVA",
+      "Cartoon",
+      "AsianDrama",
+      "Others",
+      "Documentary"
+    ],
+    "iconUrl": "https://dflix.discoveryftp.net/assets/images/icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-27448c29f726c03a1c0f444572be3b9613a665e1954e2138b541f14eb608f1c2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixDhakaFlix.cs3",
+    "status": 1,
+    "version": 8,
+    "name": "BdixDhakaFlix",
+    "internalName": "BdixDhakaFlix",
+    "description": "Maintained by Adam Knight • Dhaka Flix BDIX Provider",
+    "fileSize": 34317,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "OVA",
+      "Cartoon",
+      "AsianDrama",
+      "Others",
+      "Documentary"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/refs/heads/master/BdixDhakaFlix/icon.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-eaafcac71dab51a4dd851785ce64e6a5df32627f6e2c6ea6db388d4db735a2ce"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixICCFtp.cs3",
+    "status": 0,
+    "version": 3,
+    "name": "BdixICCFtp",
+    "internalName": "BdixICCFtp",
+    "description": "Maintained by Adam Knight • ICC BDIX Provider",
+    "fileSize": 15539,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "OVA",
+      "Cartoon",
+      "AsianDrama",
+      "Others",
+      "Documentary"
+    ],
+    "iconUrl": "http://10.16.100.244/images/logo-purple.svg",
+    "apiVersion": 1,
+    "fileHash": "sha256-24b6b4c6675df04301b79beb50710f74ab34f944126a954a6d807027feeb90e6"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixMyMovieBazarTV.cs3",
+    "status": 0,
+    "version": 6,
+    "name": "BdixMyMovieBazarTV",
+    "internalName": "BdixMyMovieBazarTV",
+    "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
+    "fileSize": 9656,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://mymoviebazar.net/assets/commons/header/logo1.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-9d71ca9a22e4ec0acd17a83befb9d49641cb1e947caaf62bce298ed7b980f89b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/BdixRoarZoneTV.cs3",
+    "status": 0,
+    "version": 6,
+    "name": "BdixRoarZoneTV",
+    "internalName": "BdixRoarZoneTV",
+    "description": "Maintained by Adam Knight • BDIX Live Tv in Bangladesh",
+    "fileSize": 10702,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://roarzone.info/logo.webp",
+    "apiVersion": 1,
+    "fileHash": "sha256-e2b11a4238d0ead35e6f0755e171f9e6708614f763dcd72b9d6c329551300620"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=bflix.ru&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 36833,
     "status": 1,
     "language": "en",
-    "authors": [
-      "Stormunblessed"
-    ],
     "version": 8,
     "internalName": "BflixProvider",
-    "description": "Webview is used to load links, reload if necessary",
+    "description": "Maintained by Adam Knight • Webview is used to load links, reload if necessary",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/BflixProvider.cs3",
     "name": "BflixProvider"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/refs/heads/master/BingedReview/icon.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 17968,
     "status": 1,
-    "authors": [
-      "Dilip"
-    ],
     "tvTypes": [
       "Movie"
     ],
     "version": 3,
     "internalName": "BingedReview",
-    "description": "Data about streaming and review",
+    "description": "Maintained by Adam Knight • Data about streaming and review",
     "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/BingedReview.cs3",
     "name": "BingedReview"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=bluphim.art&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 49331,
+    "status": 1,
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 16,
+    "internalName": "BluPhimProvider",
+    "description": "Maintained by Adam Knight • FullHD",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/BluPhimProvider.cs3",
+    "name": "BluPhimProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/Bollyflix.cs3",
@@ -586,12 +1054,9 @@
     "version": 33,
     "name": "Bollyflix",
     "internalName": "Bollyflix",
-    "authors": [
-      "megix"
-    ],
-    "description": "Movies and Series upto 4K",
+    "description": "Maintained by Adam Knight • Movies and Series upto 4K",
     "fileSize": 38129,
-    "repositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "TvSeries",
@@ -604,22 +1069,55 @@
     "fileHash": "sha256-507b486b195b98903b0cec0fca811c27fdff6cf200f6f94a662c64dd8abe0e59"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Bristege.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Brstej",
+    "internalName": "Bristege",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 26137,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Anime"
+    ],
+    "iconUrl": "https://amd.brstej.com/22.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-17c6074460176b5547d0d242c09727c427bedae8bfe2529693e60f0b0348cb31"
+  },
+  {
     "iconUrl": "https://www.cablevisionhd.com/imge/cablevisionhd.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 16366,
     "status": 1,
     "language": "es",
-    "authors": [
-      "misajimenezmx"
-    ],
     "tvTypes": [
       "Live"
     ],
     "version": 4,
     "internalName": "CablevisionHdProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CablevisionHdProvider.cs3",
-    "name": "CablevisionHdProvider"
+    "name": "CablevisionHdProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Cee.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Cee (🇮🇶)",
+    "internalName": "Cee",
+    "description": "Maintained by Adam Knight • لا يعمل خارج العراق",
+    "fileSize": 47031,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEnHalnMz2EfG48BZUI6iC86seq09uafFngG8gz1OWQ&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-131f942fa11bc89677543280a02ae2a9e2e19bc5c4d73fa3636ae8c5444c4f46"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Chikianimation.cs3",
@@ -627,12 +1125,9 @@
     "version": 2,
     "name": "Chikianimation",
     "internalName": "Chikianimation",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "English anime and donghua from chikianimation.com",
+    "description": "Maintained by Adam Knight • English anime and donghua from chikianimation.com",
     "fileSize": 88313,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "zh",
     "tvTypes": [
       "AnimeMovie",
@@ -643,15 +1138,87 @@
     "fileHash": "sha256-f74e542dc44f554df021bf6bd932f910c0718f504286cc6b4bad29284230e65b"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cikava-ideya.top&sz=%size%",
+    "fileHash": "sha256-962b89e58f398be2c72ab742bf95ffe5dcdbc107c023f48d631f4ffda5e7d1ba",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 18077,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Cartoon",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 5,
+    "internalName": "CikavaIdeyaProvider",
+    "description": "Maintained by Adam Knight • А це ідея)",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CikavaIdeyaProvider.cs3",
+    "name": "CikavaIdeyaProvider"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/CimaClub.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "CimaClub",
+    "internalName": "CimaClub",
+    "description": "Maintained by Adam Knight • سيرفرات الموقع بها ضعف احيانا اذا لم يفتح  غالبا المشكلة من الموقع",
+    "fileSize": 17361,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX1z-0NYyzyEiFs4q7X9c8SSBR6kJtVl7f7A&s",
+    "apiVersion": 1,
+    "fileHash": "sha256-2cfbf3abb5892b22f299ac8b5ca7711c073ed38a930c91748e696fbfdd885052"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Cimalight.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Cimalight",
+    "internalName": "Cimalight",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 25913,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "Anime"
+    ],
+    "iconUrl": "https://yt3.googleusercontent.com/n2PDvQiQVV00JjGsg66dvMZKmyoolvCeu59Xe40pmEvhiMNE1tHqKsoEY1IpfdNNXdlle4It=s900-c-k-c0x00ffffff-no-rj",
+    "apiVersion": 1,
+    "fileHash": "sha256-41def442115b7018006e81b3184a3ab99ba75552900a9e043ac257a1bd18651a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Cimatn.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Cimatn",
+    "internalName": "Cimatn",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 38289,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "Drama"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-7OxHmLaqTWIj7eJv55zxus1xKVp5ssQPAKYjydt7Lg&s",
+    "apiVersion": 1,
+    "fileHash": "sha256-1540f9de487a50bf0b67d2a79de14314439fda95c1b2df51ca385b6c15402a50"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cinecalidad.lol&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 10451,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -659,7 +1226,8 @@
     "version": 5,
     "internalName": "CinecalidadProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CinecalidadProvider.cs3",
-    "name": "CinecalidadProvider"
+    "name": "CinecalidadProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Cinefreak.cs3",
@@ -667,12 +1235,9 @@
     "version": 16,
     "name": "Cinefreak",
     "internalName": "Cinefreak",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Bangla/Hindi Movies/Series",
+    "description": "Maintained by Adam Knight • Bangla/Hindi Movies/Series",
     "fileSize": 120839,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "bn",
     "tvTypes": [
       "Movie",
@@ -689,12 +1254,9 @@
     "version": 27,
     "name": "Cinemacity",
     "internalName": "Cinemacity",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Watch Movies & TvSeries (Multi-Lang/Audio)",
+    "description": "Maintained by Adam Knight • Watch Movies & TvSeries (Multi-Lang/Audio)",
     "fileSize": 140687,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Movie",
@@ -705,17 +1267,32 @@
     "fileHash": "sha256-4b7a2cbc97d9d2d5b7de7859c000a6e4552973969f682613a1c35282f93ee6c9"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/cinemana.cs3",
+    "status": 1,
+    "version": 4,
+    "name": "Shabakaty Cinemana (🇮🇶)",
+    "internalName": "cinemana",
+    "description": "Maintained by Adam Knight • لا يعمل خارج العراق او اي شبكة غير ايرثلنك",
+    "fileSize": 54226,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZlAGH56cEnNEL93W3QqZWpUe8XR8i90olTA&s",
+    "apiVersion": 1,
+    "fileHash": "sha256-5e1efeda9d8770f78eeefab77fc1c0454379496156cdfa8f939277124c1c2ece"
+  },
+  {
     "url": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/CineStream.cs3",
     "status": 1,
     "version": 487,
     "name": "CineStream",
     "internalName": "CineStream",
-    "authors": [
-      "megix"
-    ],
-    "description": "One stop solution for Movies, Series, Anime, AsianDrama and Torrents",
+    "description": "Maintained by Adam Knight • One stop solution for Movies, Series, Anime, AsianDrama and Torrents",
     "fileSize": 695013,
-    "repositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "TvSeries",
@@ -731,22 +1308,36 @@
   {
     "iconUrl": "https://i.ibb.co/nMdxZgkR/8-CM3-5q-ARZYELDWg6-Erqfg-NYpo-Sdh-Yw-HRB5-CMhf-Vgg-Ygn-PMHCVYWQf-EEJMt9gwd6-EFP5t-LYgd-LAm-Zerm-KCX.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 33966,
     "status": 1,
     "language": "hi",
-    "authors": [
-      "Dilip"
-    ],
     "tvTypes": [
       "Movie",
       "TvSeries"
     ],
     "version": 11,
     "internalName": "Cinevood",
-    "description": "unstable right now but good regional content",
+    "description": "Maintained by Adam Knight • unstable right now but good regional content",
     "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/Cinevood.cs3",
     "name": "Cinevood"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=coani.net&sz=%size%",
+    "fileHash": "sha256-d3b8b1fdb43b0737c713a3c763885ba3cba62cfa97595f1b3b7d275269154e93",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 30065,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 2,
+    "internalName": "CoaninetProvider",
+    "description": "Maintained by Adam Knight • COANI — це платформа для перегляду аніме та дунхуа, створена фанатами для фанатів. Ми поєднуємо зручний перегляд, розумні інструменти та живу спільноту в одному місці.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CoaninetProvider.cs3",
+    "name": "CoaninetProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Coflix.cs3",
@@ -754,12 +1345,9 @@
     "version": 19,
     "name": "Coflix",
     "internalName": "Coflix",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Movies,Series and Anime French Extension ",
+    "description": "Maintained by Adam Knight • Movies,Series and Anime French Extension",
     "fileSize": 63799,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "fr",
     "tvTypes": [
       "Movie",
@@ -772,20 +1360,18 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=comamosramen.com&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 34456,
     "status": 0,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "AsianDrama"
     ],
     "version": 3,
     "internalName": "ComamosRamenProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/ComamosRamenProvider.cs3",
-    "name": "ComamosRamenProvider"
+    "name": "ComamosRamenProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Comix.cs3",
@@ -793,12 +1379,9 @@
     "version": 2,
     "name": "Comix",
     "internalName": "Comix",
-    "authors": [
-      "phisher98"
-    ],
-    "description": "Comix — Read Manga, Manhwa, and Comics directly in CloudStream with custom reader.",
+    "description": "Maintained by Adam Knight • Comix — Read Manga, Manhwa, and Comics directly in CloudStream with custom reader.",
     "fileSize": 72346,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Others",
@@ -811,13 +1394,10 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cuevana3.me&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 15027,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -825,7 +1405,27 @@
     "version": 9,
     "internalName": "CuevanaProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/CuevanaProvider.cs3",
-    "name": "CuevanaProvider"
+    "name": "CuevanaProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.dailymotion.com&sz=%size%",
+    "jarFileSize": 49791,
+    "fileHash": "sha256-9036525a64e8b3c8fe04f94e9fe89a744c13d69af684ed0d2ad2a7eb0f332cd9",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 11472,
+    "status": 1,
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 4,
+    "internalName": "DailymotionProvider",
+    "jarUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/DailymotionProvider.jar",
+    "description": "Maintained by Adam Knight • Watch content from Dailymotion",
+    "url": "https://raw.githubusercontent.com/recloudstream/extensions/builds/DailymotionProvider.cs3",
+    "name": "DailymotionProvider",
+    "jarHash": "sha256-542c325f2e1e1f61db60952d161325b62ff58712b1b2020e6df50727fdd03bf2"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Desicinemas.cs3",
@@ -833,12 +1433,9 @@
     "version": 19,
     "name": "Desicinemas",
     "internalName": "Desicinemas",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Contains BollyZone",
+    "description": "Maintained by Adam Knight • Contains BollyZone",
     "fileSize": 79698,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -849,17 +1446,32 @@
     "fileHash": "sha256-c4df1a385632b1f45611e53ba64e61b949974b41192e5c53315e992396427682"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/dima-toon.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Dima toon",
+    "internalName": "dima-toon",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 19812,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "https://www.dima-toon.com/wp-content/uploads/2025/10/DimaToonlogo11.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-048fc02cd74f7d43a2618a563a17c3727a2a801accb20f9e1cf13ef6e68619ef"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Donghuastream.cs3",
     "status": 1,
     "version": 22,
     "name": "Donghuastream",
     "internalName": "Donghuastream",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Contains SeaTV (Chinese)",
+    "description": "Maintained by Adam Knight • Contains SeaTV (Chinese)",
     "fileSize": 76516,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "zh",
     "tvTypes": [
       "Anime"
@@ -869,17 +1481,32 @@
     "fileHash": "sha256-2d525804fcfa3a6139fceedf5e14dba0e50bffb77889cf0637ce2b6cdf3452e6"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghub.vip&sz=%size%",
+    "fileHash": "sha256-11f223106e969f5164c493d1a08e7687c04b2ee6ecd65d8232d5445d2585ae19",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 23018,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 1,
+    "internalName": "Donghub",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
+    "name": "Donghub",
+    "description": "Maintained by Adam Knight"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/DoraBash.cs3",
     "status": 1,
     "version": 14,
     "name": "DoraBash",
     "internalName": "DoraBash",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Doremon Show in Hindi",
+    "description": "Maintained by Adam Knight • Doremon Show in Hindi",
     "fileSize": 128800,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -893,38 +1520,52 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=doramasflix.co&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 31578,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "AsianDrama"
     ],
     "version": 5,
     "internalName": "DoramasFlixProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/DoramasFlixProvider.cs3",
-    "name": "DoramasFlixProvider"
+    "name": "DoramasFlixProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=doramasyt.com&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 16719,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "AsianDrama"
     ],
     "version": 5,
     "internalName": "DoramasYTProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/DoramasYTProvider.cs3",
-    "name": "DoramasYTProvider"
+    "name": "DoramasYTProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrZAw8JCRhrw1pDMb5_nYDPYQOPVC4T1JDH3PpLB5Bf35ts32ohXNFsRic&s=10",
+    "fileHash": "sha256-27e86014f09c4d29febc2d753d6cbb1af1ec39a49d7b41da09ff429afbf99f09",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 20965,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "AsianDrama",
+      "Movie"
+    ],
+    "version": 2,
+    "internalName": "DoramyWorldProvider",
+    "description": "Maintained by Adam Knight • СВІТ ДОРАМ – платформа для українського шанувальника азійської культури, яка відкрилася 22 лютого 2021.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/DoramyWorldProvider.cs3",
+    "name": "DoramyWorldProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/DudeFilms.cs3",
@@ -932,12 +1573,9 @@
     "version": 13,
     "name": "DudeFilms",
     "internalName": "DudeFilms",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Watch Movies & TvSeries (Multi-Lang)",
+    "description": "Maintained by Adam Knight • Watch Movies & TvSeries (Multi-Lang)",
     "fileSize": 111028,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -948,15 +1586,108 @@
     "fileHash": "sha256-d2c745ac60de946dda6735a76feb08518179abae3cfc9669c22b8229c86afd40"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/SwTXWck9/dutamovie.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 27347,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Dutamovie",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Dutamovie.cs3",
+    "name": "Dutamovie"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Egydead.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Egydead",
+    "internalName": "Egydead",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 53726,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AsianDrama"
+    ],
+    "iconUrl": "https://yt3.googleusercontent.com/ytc/AIdro_kgVTM6DJtx3tcS4gkPOOPnwFXKNhsrFyMRigWOlWomuQ=s900-c-k-c0x00ffffff-no-rj",
+    "apiVersion": 1,
+    "fileHash": "sha256-837684d369f62ef16deda7e23eb460eac3aae6b8f14183aef700bd203e9ccb3d"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Elif.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Elif",
+    "internalName": "Elif",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 31057,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq14Sk88U37tIhiRndbNczqn0ectswZly90f1oCa_zbg&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-c64058bd30c7e7b6feb0ab6cbcfbf46109529d2e2c3804d12885a9f402e3f8a2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/EmwBD.cs3",
+    "status": 0,
+    "version": 16,
+    "name": "EmwBD",
+    "internalName": "EmwBD",
+    "description": "Maintained by Adam Knight • Movie website in Bangladesh",
+    "fileSize": 12796,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "bn",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AnimeMovie",
+      "AsianDrama",
+      "NSFW"
+    ],
+    "iconUrl": "https://www.emwbd.xyz/wp-content/uploads/2024/07/cropped-20240718_170236-192x192.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-f0b2b9d3f4c1ba22a828157e6cb7ee2ca6137f5f8ab9d4ec8259d6e0bde62c96"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=eneyida.tv&sz=%size%",
+    "fileHash": "sha256-94a6c0bfc948a7291afd0f7895710af097c43bcc18016031f4b924b2d405a37d",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 36775,
+    "status": 3,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 19,
+    "internalName": "EneyidaProvider",
+    "description": "Maintained by Adam Knight • Мета проекту «Енеїда» - популяризація української мови, демонстрація її різнобарвності та сучасності. Ми плануємо робити це через ретрансляцію якісного кіно, мультфільмів, телесеріалів та різноманітних телешоу в якісному українському перекладі. Тож, у добрий шлях дорогі конфіденти!.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/EneyidaProvider.cs3",
+    "name": "EneyidaProvider"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=entrepeliculasyseries.nz&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 12649,
     "status": 0,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -964,25 +1695,60 @@
     "version": 6,
     "internalName": "EntrepeliculasyseriesProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/EntrepeliculasyseriesProvider.cs3",
-    "name": "EntrepeliculasyseriesProvider"
+    "name": "EntrepeliculasyseriesProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/eseek.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "Eshek",
+    "internalName": "eseek",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 37973,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://gesseh.net/wp-content/uploads/2024/10/keesatlogo.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-70bf9c63b28da3e848ede393cf592fa51d10f42b5518fac3e6c063662c17b166"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=estrenosdoramas.net&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 17474,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "AsianDrama"
     ],
     "version": 2,
     "internalName": "EstrenosDoramasProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/EstrenosDoramasProvider.cs3",
-    "name": "EstrenosDoramasProvider"
+    "name": "EstrenosDoramasProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Faselhd.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "Faselhd",
+    "internalName": "Faselhd",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 55602,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03aoQBNDy_Hkm5MUGGvluPvK7To7BdGiSnzQn7WJ3fQ&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-ffdcb7efc760f82032f2d2822a8c1e985e0bba8e763be3925b2884a9b6a81de9"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Fibwatch.cs3",
@@ -990,11 +1756,8 @@
     "version": 11,
     "name": "Fibwatch",
     "internalName": "Fibwatch",
-    "authors": [
-      "Phisher98"
-    ],
     "fileSize": 77894,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -1002,7 +1765,62 @@
     ],
     "iconUrl": "https://f.pondit.xyz/fibwatch-logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-7d5a5a824f897d955f3ff4a344218ead2bb56b972cebf29d65e9880552705de7"
+    "fileHash": "sha256-7d5a5a824f897d955f3ff4a344218ead2bb56b972cebf29d65e9880552705de7",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://filmapik.dev/wp-content/uploads/2026/06/cropped-apple-icon-180x180-1-1-270x270.webp",
+    "fileHash": "sha256-ca01b88c5e084657e6d5614ff84d4ff2079b5a4d07c7003d02cfd1e2c8dd2c56",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 34021,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AsianDrama",
+      "Anime"
+    ],
+    "version": 21,
+    "internalName": "FilmapikProvider",
+    "description": "Maintained by Adam Knight • Nonton Film & Series Subtitle Indonesia dari Filmapik",
+    "url": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/FilmapikProvider.cs3",
+    "name": "FilmapikProvider"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/Jjzsxm9F/cropped-lk21-1.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 24041,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Filmkita",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Filmkita.cs3",
+    "name": "Filmkita"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/Cs2n4h1v/filmlokal.jpg",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 20434,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Filmlokal",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Filmlokal.cs3",
+    "name": "Filmlokal"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Fivemovierulz.cs3",
@@ -1010,13 +1828,9 @@
     "version": 8,
     "name": "Fivemovierulz",
     "internalName": "Fivemovierulz",
-    "authors": [
-      "darkdemon",
-      "Dilip"
-    ],
-    "description": "Movies & Series",
+    "description": "Maintained by Adam Knight • Movies & Series",
     "fileSize": 48657,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "TvSeries",
@@ -1027,17 +1841,31 @@
     "fileHash": "sha256-0534d9df34265b48aa4be26c156e6146d9f6ce900b63738fdd35f6919cbcab9f"
   },
   {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FootReplays.cs3",
+    "status": 0,
+    "version": 6,
+    "name": "FootReplays",
+    "internalName": "FootReplays",
+    "description": "Maintained by Adam Knight • FootBall Matches Replays and Highlights",
+    "fileSize": 11048,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "Others"
+    ],
+    "iconUrl": "https://www.footreplays.com/wp-content/uploads/2024/11/cropped-footreplays-favicon-192x192.webp",
+    "apiVersion": 1,
+    "fileHash": "sha256-4bd17710924bea32c9db205a8774fe7e86cc087231818a336afcc05795ff25d0"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/FourKHDHub.cs3",
     "status": 1,
     "version": 41,
     "name": "FourKHDHub",
     "internalName": "FourKHDHub",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "4K Movies Extension by HDHUB4U",
+    "description": "Maintained by Adam Knight • 4K Movies Extension by HDHUB4U",
     "fileSize": 107472,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Movie",
@@ -1048,18 +1876,51 @@
     "fileHash": "sha256-f55f8f3dbe50637f47f651734a3afde6a1a5e86bbc002a8c386ec8aeb7f9781f"
   },
   {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FullReplays.cs3",
+    "status": 0,
+    "version": 6,
+    "name": "FullReplays",
+    "internalName": "FullReplays",
+    "description": "Maintained by Adam Knight • Watch Football Full Match Replay and Shows",
+    "fileSize": 11022,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "Others"
+    ],
+    "iconUrl": "https://www.fullreplays.com/wp-content/uploads/2023/05/logo-ball-150x150.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-162230f11f5d95232e35d172e4fb985839217d2563963a718349741d776b0f8b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FullyMaza.cs3",
+    "status": 0,
+    "version": 7,
+    "name": "FullyMaza",
+    "internalName": "FullyMaza",
+    "fileSize": 11826,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AnimeMovie",
+      "Cartoon"
+    ],
+    "iconUrl": "https://fibwatch.online/themes/default/img/fibwatch-logo-new.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-a7b89b264d96fc938eb7c5db91d8fa957131e476ea0b7dc357594e6c47ec9380",
+    "description": "Maintained by Adam Knight"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/GoldenAudiobooks.cs3",
     "status": 1,
     "version": 1,
     "name": "GoldenAudiobooks",
     "internalName": "GoldenAudiobooks",
-    "authors": [
-      "phisher98",
-      "Anonymous Contributor"
-    ],
-    "description": "GoldenAudiobooks — Free online audiobooks streaming with chapter navigation.",
+    "description": "Maintained by Adam Knight • GoldenAudiobooks — Free online audiobooks streaming with chapter navigation.",
     "fileSize": 50648,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Others"
@@ -1074,12 +1935,9 @@
     "version": 5,
     "name": "Goojara",
     "internalName": "Goojara",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Movies and Series (Mostly 720p)",
+    "description": "Maintained by Adam Knight • Movies and Series (Mostly 720p)",
     "fileSize": 78996,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Movie",
@@ -1090,16 +1948,30 @@
     "fileHash": "sha256-e41b2608e4ed2df19c6e6d60f75ac34aff85b392ec1c24a5ef1984698c70acbc"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://hanime.tv&sz=%size%",
+    "fileHash": "sha256-5cb6a110dd26818969b660bbf18a8d56cd95719186bce51069205264baf89d25",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 22920,
+    "status": 1,
+    "language": "en",
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 3,
+    "internalName": "Hanime",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Hanime.cs3",
+    "name": "Hanime",
+    "description": "Maintained by Adam Knight"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/HDhub4u.cs3",
     "status": 1,
     "version": 56,
     "name": "HDhub4u",
     "internalName": "HDhub4u",
-    "authors": [
-      "Phisher98"
-    ],
     "fileSize": 119457,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -1108,7 +1980,8 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/HDHUB.png",
     "apiVersion": 1,
-    "fileHash": "sha256-6a308da17b16798b9319bef8b820117bf79365c958c1aba7fdd7227dbf9cad05"
+    "fileHash": "sha256-6a308da17b16798b9319bef8b820117bf79365c958c1aba7fdd7227dbf9cad05",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hdmovie2.cs3",
@@ -1116,12 +1989,9 @@
     "version": 6,
     "name": "Hdmovie2",
     "internalName": "Hdmovie2",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Hdmovie2",
+    "description": "Maintained by Adam Knight • Hdmovie2",
     "fileSize": 80829,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "TvSeries",
@@ -1132,16 +2002,61 @@
     "fileHash": "sha256-7a743282ec27b67f072acd7b30de31a8eff1788a27cee23a868c3910a0ca9ce8"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=hentaiukr.com&sz=%size%",
+    "fileHash": "sha256-9d3f670d5ac65fc41e281c7ae57c84186e9d258fff72c1f664de6a90c7c1a568",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 19378,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 6,
+    "internalName": "HentaiUkrProvider",
+    "description": "Maintained by Adam Knight • Сайт виконаний на некомерційній основі з вірою у Українську спільноту.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/HentaiUkrProvider.cs3",
+    "name": "HentaiUkrProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=hhkungfu.chat&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 29337,
+    "status": 1,
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 5,
+    "internalName": "HHkungfuProvider",
+    "description": "Maintained by Adam Knight • Hoạt hình Trung Quốc vietsub",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/HHkungfuProvider.cs3",
+    "name": "HHkungfuProvider"
+  },
+  {
+    "iconUrl": "https://hhpanda.city/static/favicon-16x16.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 31393,
+    "status": 1,
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 12,
+    "internalName": "HHPandaProvider",
+    "description": "Maintained by Adam Knight • Anime, Hoạt hình Trung Quốc",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/HHPandaProvider.cs3",
+    "name": "HHPandaProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/HiAnime.cs3",
     "status": 1,
     "version": 2,
     "name": "HiAnime",
     "internalName": "HiAnime",
-    "authors": [
-      "Phisher98"
-    ],
     "fileSize": 94269,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Anime",
@@ -1149,7 +2064,8 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=hianime.at&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-43f3874dfc1340ddb140648d4c16c7d3d2eb22dd576879bfcca16aea7d3514e6"
+    "fileHash": "sha256-43f3874dfc1340ddb140648d4c16c7d3d2eb22dd576879bfcca16aea7d3514e6",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hindmoviez.cs3",
@@ -1157,12 +2073,9 @@
     "version": 17,
     "name": "Hindmoviez",
     "internalName": "Hindmoviez",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Watch Movies & TvSeries (Multi-Lang)",
+    "description": "Maintained by Adam Knight • Watch Movies & TvSeries (Multi-Lang)",
     "fileSize": 93534,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -1173,16 +2086,31 @@
     "fileHash": "sha256-0619e39f520bdeae6dcc25861ff1a66278eeac93b50208ff373546f062593583"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://sweetiepieparenting.com&sz=%size%",
+    "fileHash": "sha256-ecb22e19b3ab9f4ff093569eef3564d17022496ef26fd797466ae41898b17a7d",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 30725,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 2,
+    "internalName": "Idlix",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Idlix.cs3",
+    "name": "Idlix",
+    "description": "Maintained by Adam Knight"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IdlixProvider.cs3",
     "status": 1,
     "version": 16,
     "name": "IdlixProvider",
     "internalName": "IdlixProvider",
-    "authors": [
-      "Phisher98"
-    ],
     "fileSize": 92061,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
       "TvSeries",
@@ -1192,7 +2120,63 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/idlix.png",
     "apiVersion": 1,
-    "fileHash": "sha256-332395846879d696da3f944ce89a1d90eda204f1c9fc2b01f6921c6f9e4eb67c"
+    "fileHash": "sha256-332395846879d696da3f944ce89a1d90eda204f1c9fc2b01f6921c6f9e4eb67c",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/6cCQ1h87/indomax.jpg",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 20883,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Indomax",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Indomax.cs3",
+    "name": "Indomax"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=archive.org&sz=%size%",
+    "jarFileSize": 125513,
+    "fileHash": "sha256-54f3de560bebeff2e4a10d1163f6146313c59061d21c3a230125611f01b531eb",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 28037,
+    "status": 1,
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 1,
+    "internalName": "InternetArchiveProvider",
+    "jarUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InternetArchiveProvider.jar",
+    "description": "Maintained by Adam Knight • Watch content from the Internet Archive at archive.org",
+    "url": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InternetArchiveProvider.cs3",
+    "name": "InternetArchiveProvider",
+    "jarHash": "sha256-765f2f7664630c343420019ee86345451f5c950177b0f0319623282bde9bd58f"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=invidious.io&sz=%size%",
+    "jarFileSize": 62289,
+    "fileHash": "sha256-a0a2ff7e8484f69118598d347458774935733399ba0f76ef0d4921886a7db4a9",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 13695,
+    "status": 1,
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 9,
+    "internalName": "InvidiousProvider",
+    "jarUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InvidiousProvider.jar",
+    "description": "Maintained by Adam Knight • Watch content from any invidious instance",
+    "url": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InvidiousProvider.cs3",
+    "name": "InvidiousProvider",
+    "jarHash": "sha256-d38e909bceba6c65c47a028a8aadfe83d09da976ffaef9cb2dd35a7c227b8453"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IPTVPlayer.cs3",
@@ -1200,12 +2184,9 @@
     "version": 9,
     "name": "IPTVPlayer",
     "internalName": "IPTVPlayer",
-    "authors": [
-      "Phisher98,Adippe"
-    ],
-    "description": "IPTV Player",
+    "description": "Maintained by Adam Knight • IPTV Player",
     "fileSize": 55491,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Live"
@@ -1220,12 +2201,9 @@
     "version": 6,
     "name": "IStreamFlare",
     "internalName": "IStreamFlare",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Movies/Series/Anime",
+    "description": "Maintained by Adam Knight • Movies/Series/Anime",
     "fileSize": 93405,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AsianDrama",
@@ -1245,12 +2223,9 @@
     "version": 7,
     "name": "Jellyfin",
     "internalName": "Jellyfin",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media",
+    "description": "Maintained by Adam Knight • Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media",
     "fileSize": 106924,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AsianDrama",
@@ -1267,13 +2242,10 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=jkanime.net&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 24185,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -1281,7 +2253,8 @@
     "version": 8,
     "internalName": "JKAnimeProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/JKAnimeProvider.cs3",
-    "name": "JKAnimeProvider"
+    "name": "JKAnimeProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Kartoons.cs3",
@@ -1289,12 +2262,9 @@
     "version": 5,
     "name": "Kartoons",
     "internalName": "Kartoons",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Kartoons (Cartoon & Animes)",
+    "description": "Maintained by Adam Knight • Kartoons (Cartoon & Animes)",
     "fileSize": 122993,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -1306,16 +2276,30 @@
     "fileHash": "sha256-c0a0f060ae9447a2a0423b6d9cb1ddeea4b62281b5a9190bdaaba035de28a197"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/KjQdk4YC/kawanfilm.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 27616,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Kawanfilm",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Kawanfilm.cs3",
+    "name": "Kawanfilm"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Kickassanime.cs3",
     "status": 1,
     "version": 27,
     "name": "Kickassanime",
     "internalName": "Kickassanime",
-    "authors": [
-      "Phisher98,Hexated"
-    ],
     "fileSize": 94111,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -1324,7 +2308,67 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/KAA.png",
     "apiVersion": 1,
-    "fileHash": "sha256-990f553c59a1c2b1f554b616f261ed20915cd1cae078887354be7a10bf1a7945"
+    "fileHash": "sha256-990f553c59a1c2b1f554b616f261ed20915cd1cae078887354be7a10bf1a7945",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=kinostrain.com&sz=%size%",
+    "fileHash": "sha256-4485c2a3c747e76be9dbf3edbf3557cba5b1ed74759bb59415e25861e464ec6c",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 34530,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "TvSeries",
+      "Cartoon",
+      "Movie",
+      "Anime"
+    ],
+    "version": 2,
+    "internalName": "KinostrainProvider",
+    "description": "Maintained by Adam Knight • kinostrain — Дивись фільми і серіали онлайн українською безкоштовно та у HD якості. Новинки 2025–2026, бойовики, комедії, мелодрами та аніме.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinostrainProvider.cs3",
+    "name": "KinostrainProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=kinotron.top&sz=%size%",
+    "fileHash": "sha256-3a099e9ae79f040f6594a6a693f988d5e3131761c76a6685f0a4bad2c7512ab2",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 22204,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Cartoon",
+      "TvSeries",
+      "Movie",
+      "Anime"
+    ],
+    "version": 17,
+    "internalName": "KinoTronProvider",
+    "description": "Maintained by Adam Knight • Твій KinoTron, де фільми завжди українською.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoTronProvider.cs3",
+    "name": "KinoTronProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=kinovezha.com&sz=%size%",
+    "fileHash": "sha256-187b37733d72eaf8a14a97329a981466c213567e724892a4f94509c55e9021d1",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 25990,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Cartoon",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 14,
+    "internalName": "KinoVezhaProvider",
+    "description": "Maintained by Adam Knight • Наша мета — популяризація нашої рідної мови, шляхом збору в одному місці величезної колекції найкращих і найпопулярніших фільмів, серіалів, мультфільмів та мультсеріалів українською мовою, які ви можете дивитися онлайн в HD якості безкоштовно. Приємного перегляду!",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoVezhaProvider.cs3",
+    "name": "KinoVezhaProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/KisskhProvider.cs3",
@@ -1332,11 +2376,8 @@
     "version": 22,
     "name": "KisskhProvider",
     "internalName": "KisskhProvider",
-    "authors": [
-      "Phisher98,Hexated,Peerless"
-    ],
     "fileSize": 74868,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AsianDrama",
@@ -1346,18 +2387,126 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=kisskh.co&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-d12fcb2dd92483301db8f662913ca3275bba0f8ef0fced7095dda75fc68f3eda"
+    "fileHash": "sha256-d12fcb2dd92483301db8f662913ca3275bba0f8ef0fced7095dda75fc68f3eda",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=kkphim.vip&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 45350,
+    "status": 1,
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 10,
+    "internalName": "KKPhimProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/KKPhimProvider.cs3",
+    "name": "KKPhimProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/QF8w02RR/klikxxi.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 20005,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "KlikXXi",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/KlikXXi.cs3",
+    "name": "KlikXXi"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=klon.tv&sz=%size%",
+    "fileHash": "sha256-70bc3a94436cde33598efdd3a62bf10f3183470ce6dd49e4a4f1d9cbaec421f9",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 36524,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Cartoon",
+      "Movie"
+    ],
+    "version": 21,
+    "internalName": "KlonTVProvider",
+    "description": "Maintained by Adam Knight • Команда Klon.TV створила безкоштовний онлайн-сервіс, щоб кожен наш глядач з легкістю та без зайвих суперечок вибрав цікавий фільм, або одразу продовжив дивитися улюблений серіал. Минула та пора, коли треба стежити за афішами твого міста, і вгадувати якість майбутньої стрічки. Також вже можна забути про трату часу на довгу дорогу в кінотеатр, півгодинного перегляду трейлерів перед показом, сусідами, що чавкають, яким не зрозуміти, що фільм треба іноді й слухати, а не тільки дивитися. Вибравши наш сервіс для перегляду фільмів онлайн безкоштовно, ви будете приємно здивовані: українське озвучення, перегляд без реєстрації, ніякої реклами на весь екран, і багато інших цікавих можливостей. Klon.TV - цінує кожного глядача, і зробить все можливе, щоб Ви до нас повернулися:).",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KlonTVProvider.cs3",
+    "name": "KlonTVProvider"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Krmzy.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Krmzy",
+    "internalName": "Krmzy",
+    "description": "Maintained by Adam Knight • البحث لا يعمل حاليا مشكلة من الموقع",
+    "fileSize": 29631,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwTnAJOvyri3uHzHxjkEdlaBBKs8MAvIuJtFmCoo9u5qYiuFpHZjcl6tDi&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-785b7fc9326398763dd7343b90658e28b5aae1f7ce3fa1de72fc09a67e6b99e6"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://kuramanime.ink&sz=%size%",
+    "fileHash": "sha256-cd0ce1ef80451d60bb623d89670ab4e5a5e6abc80a31363bafe317d2a379bab3",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 24051,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime"
+    ],
+    "version": 2,
+    "internalName": "Kuramanime",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Kuramanime.cs3",
+    "name": "Kuramanime",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://kuronime.sbs&sz=%size%",
+    "fileHash": "sha256-6228d9c1b85bd3773a93dce45038d9b0251c27a26870b4663b3e3e24cfab8f41",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 17889,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime"
+    ],
+    "version": 1,
+    "internalName": "Kuronime",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Kuronime.cs3",
+    "name": "Kuronime",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=lacartoons.com&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 9552,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Cartoons",
       "TvSeries"
@@ -1365,7 +2514,8 @@
     "version": 3,
     "internalName": "LACartoonsProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/LACartoonsProvider.cs3",
-    "name": "LACartoonsProvider"
+    "name": "LACartoonsProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Latanime.cs3",
@@ -1373,12 +2523,9 @@
     "version": 5,
     "name": "Latanime",
     "internalName": "Latanime",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "(Mexican) Anime Extension",
+    "description": "Maintained by Adam Knight • (Mexican) Anime Extension",
     "fileSize": 50427,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
       "Movie",
@@ -1392,13 +2539,10 @@
   {
     "iconUrl": "https://latanime.org/public/img/logito.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 12065,
     "status": 1,
     "language": "es",
-    "authors": [
-      "misajimenezmx"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -1406,7 +2550,25 @@
     "version": 2,
     "internalName": "LatAnimeProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/LatAnimeProvider.cs3",
-    "name": "LatAnimeProvider"
+    "name": "LatAnimeProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/9HDVpFFT/layarkaca.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 51923,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "LayarKaca",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/LayarKaca.cs3",
+    "name": "LayarKaca"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/LayarKacaProvider.cs3",
@@ -1414,11 +2576,8 @@
     "version": 10,
     "name": "LayarKacaProvider",
     "internalName": "LayarKacaProvider",
-    "authors": [
-      "Hexated,Phisher98"
-    ],
     "fileSize": 88372,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
       "AsianDrama",
@@ -1427,7 +2586,43 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=d21.team&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-552b35b509f38f0efd867bd66022265b36c0b6d12456755a31d8d3f703cc9aca"
+    "fileHash": "sha256-552b35b509f38f0efd867bd66022265b36c0b6d12456755a31d8d3f703cc9aca",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/6RGz8QkY/layarwarna.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 24214,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "LayarWarna",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/LayarWarna.cs3",
+    "name": "LayarWarna"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Lodynet.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "LodyNet",
+    "internalName": "Lodynet",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 44495,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Movie",
+      "tvTypes"
+    ],
+    "iconUrl": "https://lodynet.watch/wp-content/themes/Lodynet2020/Img/Logo.webp",
+    "apiVersion": 1,
+    "fileHash": "sha256-56a9ab9dc9f8e2c05ce66a0a572591581e47575711c378c1d1929c7244ca9f73"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MassTamilanProvider.cs3",
@@ -1435,12 +2630,9 @@
     "version": 9,
     "name": "MassTamilanProvider",
     "internalName": "MassTamilanProvider",
-    "authors": [
-      "Phisher98,LikDev-256"
-    ],
-    "description": "Indian Multi-language Music Provider",
+    "description": "Maintained by Adam Knight • Indian Multi-language Music Provider",
     "fileSize": 52982,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ta",
     "tvTypes": [
       "Music",
@@ -1456,12 +2648,9 @@
     "version": 6,
     "name": "Megakino",
     "internalName": "Megakino",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Movies,Series and Anime German Extension ",
+    "description": "Maintained by Adam Knight • Movies,Series and Anime German Extension",
     "fileSize": 55526,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
       "Movie,Anime,Cartoon"
@@ -1476,12 +2665,9 @@
     "version": 3,
     "name": "Microtv",
     "internalName": "Microtv",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Watch short vertical dramas & reels from multiple Indian short platforms",
+    "description": "Maintained by Adam Knight • Watch short vertical dramas & reels from multiple Indian short platforms",
     "fileSize": 73520,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -1492,15 +2678,29 @@
     "fileHash": "sha256-1e0754c5e0b2c831c25b4dffc6de8bc3cbf9a0db47fe0265cfabcee5c2bfeb39"
   },
   {
+    "iconUrl": "https://midasxxi.com/wp-content/uploads/2024/01/cropped-favicon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 23444,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "MidasXXi",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/MidasXXi.cs3",
+    "name": "MidasXXi"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=monoschinos2.com&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 16675,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -1508,7 +2708,44 @@
     "version": 6,
     "internalName": "MonoschinosProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/MonoschinosProvider.cs3",
-    "name": "MonoschinosProvider"
+    "name": "MonoschinosProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://themoviebox.org&sz=%size%",
+    "fileHash": "sha256-5d266a5d91536114e52668a75ed7a191884df7e6a4ffa50041ff9ea5f5f2352a",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 35071,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Anime",
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 2,
+    "internalName": "MovieBox",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/MovieBox.cs3",
+    "name": "MovieBox",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/YFbP1FSr/icon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 75157,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Moviebox",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Moviebox.cs3",
+    "name": "Moviebox"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MovieBoxProvider.cs3",
@@ -1516,12 +2753,9 @@
     "version": 36,
     "name": "MovieBoxProvider",
     "internalName": "MovieBoxProvider",
-    "authors": [
-      "NivinCNC,Phisher98"
-    ],
-    "description": "Multi Language Movies and Series Provider",
+    "description": "Maintained by Adam Knight • Multi Language Movies and Series Provider",
     "fileSize": 165837,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -1532,17 +2766,33 @@
     "fileHash": "sha256-0e7db88a4b668c6c22160025cb331aab3627fd42c166f723eedfa0de20b7a498"
   },
   {
+    "iconUrl": "https://movieboxph.app/wp-content/uploads/2025/11/Movie-Box-icon.webp",
+    "fileHash": "sha256-100ebdd45ba56cdeaefafa20f27b3ab83e470dd22c541e2764ce335250db27a4",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 43001,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "AsianDrama"
+    ],
+    "version": 9,
+    "internalName": "MovieboxProvider",
+    "description": "Maintained by Adam Knight • MovieBox - Streaming Movie Subtitle Indonesia",
+    "url": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/MovieboxProvider.cs3",
+    "name": "MovieboxProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Movies4u.cs3",
     "status": 1,
     "version": 17,
     "name": "Movies4u",
     "internalName": "Movies4u",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Movies4u",
+    "description": "Maintained by Adam Knight • Movies4u",
     "fileSize": 123199,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -1558,12 +2808,9 @@
     "version": 33,
     "name": "MoviesDrive",
     "internalName": "MoviesDrive",
-    "authors": [
-      "megix"
-    ],
-    "description": "High Quality Movies and TV Shows",
+    "description": "Maintained by Adam Knight • High Quality Movies and TV Shows",
     "fileSize": 47290,
-    "repositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "TvSeries",
@@ -1581,12 +2828,9 @@
     "version": 33,
     "name": "Moviesmod",
     "internalName": "Moviesmod",
-    "authors": [
-      "megix"
-    ],
-    "description": "Includes Topmovies",
+    "description": "Maintained by Adam Knight • Includes Topmovies",
     "fileSize": 44518,
-    "repositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "tvTypes": [
       "TvSeries",
       "Movie",
@@ -1598,25 +2842,41 @@
     "fileHash": "sha256-9433fd970480a53f52f3ec4b49d3213c7bda5a26b109dc80ef82cd2ec13a37a7"
   },
   {
-    "iconUrl": "https://i.ibb.co/v4VNd4bf/mp4moviez-2025.png",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/rockhero1234/cinephile",
-    "fileSize": 13867,
-    "status": 1,
-    "language": "hi",
-    "authors": [
-      "salman731"
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/MoviPK.cs3",
+    "status": 0,
+    "version": 4,
+    "name": "MoviPK",
+    "internalName": "MoviPK",
+    "fileSize": 10567,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
     ],
+    "iconUrl": "https://www.movi.pk/wp-content/uploads/2023/06/apple-touch-icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-f051f5ecf103825c1941a3cbc64e67e209d2d66c0bf90b0d3235464e224b19fa",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/Mp4Moviez.cs3",
+    "status": 1,
+    "version": 3,
+    "name": "Mp4Moviez",
+    "internalName": "Mp4Moviez",
+    "description": "Maintained by Adam Knight • Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez. Mp4moviez is number one entertainment hollywood bollywood website and provide free Mp4moviez full movie download facility",
+    "fileSize": 13275,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
     "tvTypes": [
       "Movie",
       "TvSeries",
       "NSFW"
     ],
-    "version": 1,
-    "internalName": "Mp4Moviez",
-    "description": "Download Mp4Moviez free full movies, high quality movies, latest movies from Mp4Moviez. Mp4moviez is number one entertainment hollywood bollywood website and provide free Mp4moviez full movie download facility",
-    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/Mp4Moviez.cs3",
-    "name": "Mp4Moviez"
+    "iconUrl": "https://www.mp4moviez.glass/images/mp4moviez.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-3b2254838b38792f54f0b014fc8a4401a7e83f90d3d8ca12043a36b1c9c8c9b1"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MPlayerProvider.cs3",
@@ -1624,12 +2884,9 @@
     "version": 9,
     "name": "MPlayerProvider",
     "internalName": "MPlayerProvider",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Indian Movies/Series/Kdrama(Hindi Dubbed)",
+    "description": "Maintained by Adam Knight • Indian Movies/Series/Kdrama(Hindi Dubbed)",
     "fileSize": 128756,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AsianDrama",
@@ -1646,12 +2903,9 @@
     "version": 54,
     "name": "MultiMoviesProvider",
     "internalName": "MultiMoviesProvider",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Indian Multi-language HD Provider",
+    "description": "Maintained by Adam Knight • Indian Multi-language HD Provider",
     "fileSize": 138506,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -1665,13 +2919,10 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=mundodonghua.com&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 18962,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA",
@@ -1680,7 +2931,45 @@
     "version": 3,
     "internalName": "MundoDonghuaProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/MundoDonghuaProvider.cs3",
-    "name": "MundoDonghuaProvider"
+    "name": "MundoDonghuaProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/MyCimaProvider.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Mycima",
+    "internalName": "MyCimaProvider",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 45475,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AsianDrama"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxoF3lscri32oVf0iQlhbjFEoUn2xg3OmQIx4wYdDmqw&s",
+    "apiVersion": 1,
+    "fileHash": "sha256-ff8e09bb07cb94fad7216e8c6a29bdff3d5758e6f7f1c4b68bacad18935bfe5a"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://nekopoi.care&sz=%size%",
+    "fileHash": "sha256-7ae4ade3ea563f9311c1b531f7afe247963e096b638d75caa8b8a4c06ac35790",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 23237,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 1,
+    "internalName": "Nekopoi",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Nekopoi.cs3",
+    "name": "Nekopoi",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Netcinez.cs3",
@@ -1688,12 +2977,9 @@
     "version": 5,
     "name": "Netcinez",
     "internalName": "Netcinez",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Movies,Series and Anime Portuguese Extension ",
+    "description": "Maintained by Adam Knight • Movies,Series and Anime Portuguese Extension",
     "fileSize": 51915,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "pt-br",
     "tvTypes": [
       "Movie",
@@ -1707,22 +2993,72 @@
     "iconUrl": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/refs/heads/master/Netmirror/logo.jpeg",
     "fileHash": "sha256-e64f3bf8e62dd7bc25e3fd1900524f8f730e50807744eac9c5de38367762f057",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Sushan64/NetMirror-Extension",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 83902,
     "status": 1,
     "language": "hi",
-    "authors": [
-      "Sushan64"
-    ],
     "tvTypes": [
       "Movie",
       "TvSeries"
     ],
     "version": 46,
     "internalName": "Netmirror",
-    "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
+    "description": "Maintained by Adam Knight • Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
     "url": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/Netmirror.cs3",
     "name": "Netmirror"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/3yVG0DbY/ngefilm.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 21909,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Ngefilm",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Ngefilm.cs3",
+    "name": "Ngefilm"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://nimegami.id&sz=%size%",
+    "fileHash": "sha256-bf0d7d3c455f21db0e75b19c9dd9edef3b80987608ab14133ed8041bf79390ce",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 27349,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime"
+    ],
+    "version": 1,
+    "internalName": "Nimegami",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Nimegami.cs3",
+    "name": "Nimegami",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/Z1YVFHNS/nomat.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 19451,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Nomat",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Nomat.cs3",
+    "name": "Nomat"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ObejrzyjTo.cs3",
@@ -1730,12 +3066,9 @@
     "version": 3,
     "name": "ObejrzyjTo",
     "internalName": "ObejrzyjTo",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Obejrzyj.to - Polski serwis z darmowymi filmami i serialami online",
+    "description": "Maintained by Adam Knight • Obejrzyj.to - Polski serwis z darmowymi filmami i serialami online",
     "fileSize": 148127,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "pl",
     "tvTypes": [
       "Movie",
@@ -1746,17 +3079,31 @@
     "fileHash": "sha256-35c45317f2ee67fff58a9c4f0960c5f26b65e1f5027859a49fc74930b16fae31"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=ohitv.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 21385,
+    "status": 1,
+    "language": "",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 2,
+    "internalName": "OHiTVProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/OHiTVProvider.cs3",
+    "name": "OHiTVProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/OHLI24.cs3",
     "status": 1,
     "version": 7,
     "name": "OHLI24",
     "internalName": "OHLI24",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime and movies with Korean subtitles only (no Korean audio)",
+    "description": "Maintained by Adam Knight • Anime and movies with Korean subtitles only (no Korean audio)",
     "fileSize": 55300,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ko",
     "tvTypes": [
       "AsianDrama",
@@ -1773,12 +3120,9 @@
     "version": 23,
     "name": "OnePace",
     "internalName": "OnePace",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "One Pace",
+    "description": "Maintained by Adam Knight • One Pace",
     "fileSize": 76037,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Anime"
@@ -1793,12 +3137,9 @@
     "version": 5,
     "name": "OneTouchTV",
     "internalName": "OneTouchTV",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Asian Dramas",
+    "description": "Maintained by Adam Knight • Asian Dramas",
     "fileSize": 97124,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AsianDrama",
@@ -1809,33 +3150,101 @@
     "fileHash": "sha256-65c04eb0257ef76ec3272fa881592009f158c5d03d8202d232f600a6e3bb6333"
   },
   {
+    "iconUrl": "https://ophim17.cc/icon_ophim.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 45480,
+    "status": 1,
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 10,
+    "internalName": "OPhimProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/OPhimProvider.cs3",
+    "name": "OPhimProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://oploverz.ch&sz=%size%",
+    "fileHash": "sha256-2ae1e94f8c1e3b17ca692124c7c52ac8c505850b2e3a61e60c711b75a94ded3d",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 22516,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime"
+    ],
+    "version": 1,
+    "internalName": "Oploverz",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Oploverz.cs3",
+    "name": "Oploverz",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://otakudesu.blog&sz=%size%",
+    "fileHash": "sha256-eb5519243324e2407c2bbba4140e88f2525b793d128fa3578e33ad115fe170aa",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 29021,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime"
+    ],
+    "version": 1,
+    "internalName": "Otakudesu",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Otakudesu.cs3",
+    "name": "Otakudesu",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://pahe.ink&sz=%size%",
+    "fileHash": "sha256-65abeaf10095a297f0893ae82aa366dd73f2771478d6d01ad9212743f127a733",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 12679,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Pahe",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Pahe.cs3",
+    "name": "Pahe",
+    "description": "Maintained by Adam Knight"
+  },
+  {
     "iconUrl": "https://peliculasflix.co/img/logo.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 22983,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Movie"
     ],
     "version": 1,
     "internalName": "PeliculasFlixProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PeliculasFlixProvider.cs3",
-    "name": "PeliculasFlixProvider"
+    "name": "PeliculasFlixProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=pelispedia.is&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 14049,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -1843,18 +3252,16 @@
     "version": 5,
     "internalName": "PelispediaProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelispediaProvider.cs3",
-    "name": "PelispediaProvider"
+    "name": "PelispediaProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=pelisplus.to&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 14967,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Movie",
       "TvSeries",
@@ -1864,18 +3271,16 @@
     "version": 6,
     "internalName": "Pelisplus4KProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/Pelisplus4KProvider.cs3",
-    "name": "Pelisplus4KProvider"
+    "name": "Pelisplus4KProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=pelisplushd.nu&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 13780,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -1883,18 +3288,16 @@
     "version": 5,
     "internalName": "PelisplusHDProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelisplusHDProvider.cs3",
-    "name": "PelisplusHDProvider"
+    "name": "PelisplusHDProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://pelisplusgo.vip/favicon.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 15778,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -1902,7 +3305,8 @@
     "version": 3,
     "internalName": "PelisplusSOProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PelisplusSOProvider.cs3",
-    "name": "PelisplusSOProvider"
+    "name": "PelisplusSOProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pencurimovie.cs3",
@@ -1910,12 +3314,9 @@
     "version": 8,
     "name": "Pencurimovie",
     "internalName": "Pencurimovie",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Pencurimovie ",
+    "description": "Maintained by Adam Knight • Pencurimovie",
     "fileSize": 50413,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
       "Movie",
@@ -1926,17 +3327,63 @@
     "fileHash": "sha256-046a84cfe91c8a66cd09393f07c57846f4ba182064108f94c70579a4c56a403a"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=phimlongtieng.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 28862,
+    "status": 1,
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 12,
+    "internalName": "PhimLongTiengProvider",
+    "description": "Maintained by Adam Knight • Phim TVB, phim xưa",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimLongTiengProvider.cs3",
+    "name": "PhimLongTiengProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=phimmoichillk.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 30387,
+    "status": 1,
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 9,
+    "internalName": "PhimMoiProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimMoiProvider.cs3",
+    "name": "PhimMoiProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://phimtuoitho.site/uploads/system_logo/favicon_66e1bd1b3276b.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 31043,
+    "status": 1,
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 5,
+    "internalName": "PhimTuoiThoProvider",
+    "description": "Maintained by Adam Knight • Phim hoạt hình tuổi thơ",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimTuoiThoProvider.cs3",
+    "name": "PhimTuoiThoProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pinoymoviepedia.cs3",
     "status": 1,
     "version": 5,
     "name": "Pinoymoviepedia",
     "internalName": "Pinoymoviepedia",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Contains Bluray7",
+    "description": "Maintained by Adam Knight • Contains Bluray7",
     "fileSize": 57603,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "fil",
     "tvTypes": [
       "Movie",
@@ -1952,12 +3399,9 @@
     "version": 5,
     "name": "Piratexplay",
     "internalName": "Piratexplay",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Anime/Cartoon in Hindi",
+    "description": "Maintained by Adam Knight • Anime/Cartoon in Hindi",
     "fileSize": 100412,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -1971,20 +3415,18 @@
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=playhublite.com&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 34732,
     "status": 0,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Movie"
     ],
     "version": 1,
     "internalName": "PlayhubProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/PlayhubProvider.cs3",
-    "name": "PlayhubProvider"
+    "name": "PlayhubProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Pmsm.cs3",
@@ -1992,12 +3434,9 @@
     "version": 8,
     "name": "Pmsm",
     "internalName": "Pmsm",
-    "authors": [
-      "Phisher98,Duro92"
-    ],
-    "description": "PMSM (Pencuri Movie Sub Malay)",
+    "description": "Maintained by Adam Knight • PMSM (Pencuri Movie Sub Malay)",
     "fileSize": 68145,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
       "Movie",
@@ -2013,12 +3452,9 @@
     "version": 5,
     "name": "PublicSportsIPTV",
     "internalName": "PublicSportsIPTV",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Sports Live Streams (FanCode)",
+    "description": "Maintained by Adam Knight • Sports Live Streams (FanCode)",
     "fileSize": 59680,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Live"
@@ -2028,17 +3464,31 @@
     "fileHash": "sha256-8d267d49111ce68b9bd6b0e3d6ae8df483053b408d91c21171170feba0209816"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/qFdDYpcD/pusatmovie.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 23941,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Pusatmovie",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Pusatmovie.cs3",
+    "name": "Pusatmovie"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/QuickIPTV.cs3",
     "status": 1,
     "version": 8,
     "name": "QuickIPTV",
     "internalName": "QuickIPTV",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Includes PirateIPTV,Sports IPTV,Japanese IPTV,Sony IPTV",
+    "description": "Maintained by Adam Knight • Includes PirateIPTV,Sports IPTV,Japanese IPTV,Sony IPTV",
     "fileSize": 59366,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Live"
@@ -2053,11 +3503,8 @@
     "version": 3,
     "name": "Reanime",
     "internalName": "Reanime",
-    "authors": [
-      "Phisher98"
-    ],
     "fileSize": 113107,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AnimeMovie",
@@ -2066,7 +3513,45 @@
     ],
     "iconUrl": "https://reanime.to/favicon.ico",
     "apiVersion": 1,
-    "fileHash": "sha256-b98b547555906d832c3693d63b94c1c8000bfd16c7e8714f7945b683209b4383"
+    "fileHash": "sha256-b98b547555906d832c3693d63b94c1c8000bfd16c7e8714f7945b683209b4383",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=http://159.89.250.250&sz=%size%",
+    "fileHash": "sha256-dd1c17e92b6365022f1add388299f8c509881f6854bafb492c2a3a894066373d",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 18509,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Rebahin",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Rebahin.cs3",
+    "name": "Rebahin",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Replaymatch.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "FullMatchShows",
+    "internalName": "Replaymatch",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 29210,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "Others",
+      "live"
+    ],
+    "iconUrl": "https://fullmatchshows.com/wp-content/uploads/2024/04/LOGOSASO.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-9702287e1acdbc6556a5f43350aac49df0fc323c2bb50ecc55f0f9173851e147"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/RingZ.cs3",
@@ -2074,12 +3559,9 @@
     "version": 12,
     "name": "RingZ",
     "internalName": "RingZ",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Ringz App",
+    "description": "Maintained by Adam Knight • Ringz App",
     "fileSize": 64957,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -2091,15 +3573,81 @@
     "fileHash": "sha256-bf9bbd827838ef7becfce467a844628eb2caee335547e4a1930e3026a9bafd00"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/bMKwcDtH/sarangfilm.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 29763,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Sarangfilm",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
+    "name": "Sarangfilm"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/HptN2Q7m/savefilm.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 21933,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Savefilm",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Savefilm.cs3",
+    "name": "Savefilm"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=http://167.71.237.49&sz=%size%",
+    "fileHash": "sha256-35de2780258d4f502f20f3ab15852964f63bb35a3b1dcb5d553f8505acfbc188",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 15783,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 1,
+    "internalName": "SemiRebahin",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/SemiRebahin.cs3",
+    "name": "SemiRebahin",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=serialno.tv&sz=%size%",
+    "fileHash": "sha256-4ef555409081ea839b9fc9b68f389ca88496b7cc257287a77e2f1657a23600f7",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 24080,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Cartoon",
+      "TvSeries"
+    ],
+    "version": 13,
+    "internalName": "SerialnoProvider",
+    "description": "Maintained by Adam Knight • Відкриваємо світ серіалів, фентезі, містики, екшну, драми та ще безлічі інших жанрів українською мовою - все це Серіально.ТВ. Можна багато чого писати, але сенсу особливо немає. Ви тут, а значить прийшли дивитися серіали. То ж, вперед!:)",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SerialnoProvider.cs3",
+    "name": "SerialnoProvider"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=seriesflix.video&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 12928,
     "status": 0,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -2107,18 +3655,16 @@
     "version": 2,
     "internalName": "SeriesflixProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SeriesflixProvider.cs3",
-    "name": "SeriesflixProvider"
+    "name": "SeriesflixProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=seriesmetro.net&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 13785,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "TvSeries",
       "Movie"
@@ -2126,7 +3672,44 @@
     "version": 3,
     "internalName": "SeriesMetroProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SeriesMetroProvider.cs3",
-    "name": "SeriesMetroProvider"
+    "name": "SeriesMetroProvider",
+    "description": "Maintained by Adam Knight"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Shahid4u.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "Shahid4u",
+    "internalName": "Shahid4u",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 36553,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Ig85ZYdRsjDw--peeI2RsBqOWmvnmvKKsT4UONdPMQ&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-4b96b8b6f45a5e2f630ae2ef8d5f8e40f2037a927dbc5275eae30dc7b63b35af"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Shahidwbas.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Shahidwbas",
+    "internalName": "Shahidwbas",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 18361,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://cdn.wccftech.com/wp-content/uploads/2018/01/Youtube-music.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-f89172fe028aa79efa3ca5a4c48ddb5080548fb430528ee2f42a56f89280895d"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ShowBox.cs3",
@@ -2134,12 +3717,9 @@
     "version": 10,
     "name": "ShowBox",
     "internalName": "ShowBox",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "ShowBox (Retrieve the cookie using Login with Google to properly utilize ShowBox.",
+    "description": "Maintained by Adam Knight • ShowBox (Retrieve the cookie using Login with Google to properly utilize ShowBox.",
     "fileSize": 156846,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AsianDrama",
@@ -2152,15 +3732,30 @@
     "fileHash": "sha256-ee3a79970ebc85c46f1e4eb12ec21bdc9c3f9b64945d050212f2cfaf6d805821"
   },
   {
+    "iconUrl": "https://simpsonsua.tv/templates/simpsonsua/images/favicon.ico",
+    "fileHash": "sha256-615e75b2fcda1af0c950aa70991573c427e3acfbee0b4642374d63ef127eae7d",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 41170,
+    "status": 3,
+    "language": "uk",
+    "tvTypes": [
+      "Cartoon",
+      "TvSeries"
+    ],
+    "version": 5,
+    "internalName": "SimpsonsUATvProvider",
+    "description": "Maintained by Adam Knight • Сайт СІМПСОНИ UA - на якому можна дивитися Сімпсони всі сезони  українською мовою онлайн",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SimpsonsUATvProvider.cs3",
+    "name": "SimpsonsUATvProvider"
+  },
+  {
     "iconUrl": "https://skymovieshd.mba/images/logo2.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 23971,
     "status": 1,
     "language": "en",
-    "authors": [
-      "Redowan"
-    ],
     "tvTypes": [
       "Movie",
       "TvSeries",
@@ -2168,20 +3763,17 @@
     ],
     "version": 1,
     "internalName": "SkymoviesHD",
-    "description": "just testing",
+    "description": "Maintained by Adam Knight • just testing",
     "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/SkymoviesHD.cs3",
     "name": "SkymoviesHD"
   },
   {
     "iconUrl": "https://sololatino.net/wp-content/uploads/2020/10/cropped-logo-final-192x192.png",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 14624,
     "status": 1,
     "language": "es",
-    "authors": [
-      "misajimenezmx"
-    ],
     "tvTypes": [
       "Movie",
       "TvSeries",
@@ -2191,7 +3783,8 @@
     "version": 1,
     "internalName": "SoloLatinoProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/SoloLatinoProvider.cs3",
-    "name": "SoloLatinoProvider"
+    "name": "SoloLatinoProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StreamPlay.cs3",
@@ -2199,13 +3792,9 @@
     "version": 685,
     "name": "StreamPlay",
     "internalName": "StreamPlay",
-    "authors": [
-      "Phisher98",
-      "Hexated"
-    ],
-    "description": "#1 best extention based on MultiAPI",
+    "description": "Maintained by Adam Knight • #1 best extention based on MultiAPI",
     "fileSize": 1907877,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AsianDrama",
@@ -2225,12 +3814,9 @@
     "version": 16,
     "name": "StremioAddon",
     "internalName": "StremioAddon",
-    "authors": [
-      "Hexated,phisher98,erynith"
-    ],
-    "description": "[!] Requires Setup \n- Allows you to use any Stremio addon by pasting their manifest.json url",
+    "description": "Maintained by Adam Knight • [!] Requires Setup \n- Allows you to use any Stremio addon by pasting their manifest.json url",
     "fileSize": 119739,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "TvSeries",
@@ -2247,12 +3833,9 @@
     "version": 27,
     "name": "StremioX",
     "internalName": "StremioX",
-    "authors": [
-      "Hexated,phisher98"
-    ],
-    "description": "[!] Requires Setup \n- StremioX allows you to use stream addons \n- StremioC allows you to use catalog addons",
+    "description": "Maintained by Adam Knight • [!] Requires Setup \n- StremioX allows you to use stream addons \n- StremioC allows you to use catalog addons",
     "fileSize": 216784,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "TvSeries",
@@ -2268,12 +3851,9 @@
     "version": 38,
     "name": "SuperStream",
     "internalName": "SuperStream",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "SuperStream (Retrieve the cookie using Login with Google to properly utilize SuperStream.",
+    "description": "Maintained by Adam Knight • SuperStream (Retrieve the cookie using Login with Google to properly utilize SuperStream.",
     "fileSize": 182350,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AsianDrama",
@@ -2288,17 +3868,48 @@
     "fileHash": "sha256-8a5e3ddc22ab0e7206453993fe334ba4de9f3c4e1b1d4e177ae2e9ac6b45087e"
   },
   {
+    "fileHash": "sha256-016f946d7bcf8ee65dbc952f62f173eb5af9e1151478f4dcd3aa66de337aed82",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 95301,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 3,
+    "internalName": "SyncPlugin",
+    "description": "Maintained by Adam Knight • Синхронізація CloudStream між пристроями (закладки, продовження перегляду, налаштування, пошук, розширення). Працює з власним сервером CloudStream Sync Server.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3",
+    "name": "SyncPlugin"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Syria-live.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Syrialive",
+    "internalName": "Syria-live",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 16742,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Live"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF607wnarFL8Ob8KLPahUPJzcLjbtg1pEH0A&s",
+    "apiVersion": 1,
+    "fileHash": "sha256-48b9fa4a88c0372a6c2c756a5502bf21e8f01c7215ab2dc3daebfe259eb8e955"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Tamilblasters.cs3",
     "status": 1,
     "version": 12,
     "name": "Tamilblasters",
     "internalName": "Tamilblasters",
-    "authors": [
-      "rockhero1234,phisher98"
-    ],
-    "description": "Movies & Series",
+    "description": "Maintained by Adam Knight • Movies & Series",
     "fileSize": 65773,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ta",
     "tvTypes": [
       "Movie",
@@ -2309,15 +3920,31 @@
     "fileHash": "sha256-ed41b4ef991acfdb687f95163d5c55ff966627925943043949104fd03a245f22"
   },
   {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/TheMoviesFlix.cs3",
+    "status": 0,
+    "version": 6,
+    "name": "TheMoviesFlix",
+    "internalName": "TheMoviesFlix",
+    "description": "Maintained by Adam Knight • 720p Movies, 1080p movies, Dual Audio Movies, Hindi Dubbed Series, Hollywood Movies",
+    "fileSize": 27276,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "NSFW"
+    ],
+    "iconUrl": "https://themoviesflix.it.com/wp-content/uploads/2024/12/cropped-cropped-favicon-32x32-1-180x180.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-3b3ed8c66f49f836b3c7a717e9a285f16d41769aa1c477a1e7e1d3f2753dc448"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=tioanime.com&sz=%size%",
     "apiVersion": 1,
-    "repositoryUrl": "https://github.com/Stormunblessed/storm-ext",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "fileSize": 16070,
     "status": 1,
     "language": "es",
-    "authors": [
-      "Stormunblessed"
-    ],
     "tvTypes": [
       "Anime",
       "OVA"
@@ -2325,7 +3952,8 @@
     "version": 3,
     "internalName": "TioAnimeProvider",
     "url": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/TioAnimeProvider.cs3",
-    "name": "TioAnimeProvider"
+    "name": "TioAnimeProvider",
+    "description": "Maintained by Adam Knight"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ToonHub.cs3",
@@ -2333,12 +3961,9 @@
     "version": 12,
     "name": "ToonHub",
     "internalName": "ToonHub",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "ToonHub4u Multi Language",
+    "description": "Maintained by Adam Knight • ToonHub4u Multi Language",
     "fileSize": 61946,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -2355,12 +3980,9 @@
     "version": 10,
     "name": "Toonstream",
     "internalName": "Toonstream",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "ToonStream Multi Language",
+    "description": "Maintained by Adam Knight • ToonStream Multi Language",
     "fileSize": 78761,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "AnimeMovie",
@@ -2377,12 +3999,9 @@
     "version": 5,
     "name": "ToonTales",
     "internalName": "ToonTales",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "ToonTales",
+    "description": "Maintained by Adam Knight • ToonTales",
     "fileSize": 46584,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Cartoon"
@@ -2397,12 +4016,9 @@
     "version": 5,
     "name": "Topcartoons",
     "internalName": "Topcartoons",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Top Cartoon",
+    "description": "Maintained by Adam Knight • Top Cartoon",
     "fileSize": 46724,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Cartoon"
@@ -2412,17 +4028,32 @@
     "fileHash": "sha256-08150a14f37461979a599aa92525f89a424bd3c9b1b257d91039f8955171f26a"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Topcinema.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "TopCinema",
+    "internalName": "Topcinema",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 28702,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Movie",
+      "tvTypes"
+    ],
+    "iconUrl": "https://web8.topcinema.cam/wp-content/uploads/2023/05/cropped-icon-32x32.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-04fe8195714a8ef8c38545ad8c135b219dfa2b1e2728ba70da82aa509964f69c"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Topstreamfilm.cs3",
     "status": 1,
     "version": 9,
     "name": "Topstreamfilm",
     "internalName": "Topstreamfilm",
-    "authors": [
-      "Phisher"
-    ],
-    "description": "Filme  and Serien (German)",
+    "description": "Maintained by Adam Knight • Filme  and Serien (German)",
     "fileSize": 53671,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
       "Movie",
@@ -2438,12 +4069,9 @@
     "version": 97,
     "name": "TorraStream",
     "internalName": "TorraStream",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "#1 Best Extension – MultiAPI-Based with 4K Torrent Support (Debian) Use Extension Settings",
+    "description": "Maintained by Adam Knight • #1 Best Extension – MultiAPI-Based with 4K Torrent Support (Debian) Use Extension Settings",
     "fileSize": 250040,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Movie",
@@ -2457,17 +4085,207 @@
     "fileHash": "sha256-8d0ad70b4df174e0d769285f172ee8b474443c6220425a89548a92157e87d633"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/TukTukcima.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Tuktukcima",
+    "internalName": "TukTukcima",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 42735,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ10TEG3tTtkEF9_g3IslEP3xs0wx9EVhBs7b_H5M1gpg&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-544bdb138d7644b6da28471fba9f56b50cc57fb877a310a0108f891ab0ab855e"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/TuniflexBlog.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "TuniflexBlog",
+    "internalName": "TuniflexBlog",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 20750,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo47ccjaIfUnxJjGujQd6qTKTZH70W6LFeaFXht5TE8w&s",
+    "apiVersion": 1,
+    "fileHash": "sha256-fb5f3d6a382d5f161d8c0bcaad709a494c3b8acb0579bb491f6c2dcb28771224"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Tuniflix.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Tuniflix",
+    "internalName": "Tuniflix",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 26298,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "Drama"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe95deIIAAbyR9ArSievPWdM2QwiVG9bbQ6Y1uDIbRBpathzSs45b8uQ4&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-14a4553a97f20063f294bf38ab70317e54e496d94a4923ebad830dc966e63f88"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/TVgarden.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "TVgarden(Famelack)",
+    "internalName": "TVgarden",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 15565,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "Live"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Lci-tXtOtWaHcEp9An7bqIkXs4yzH7EcfA&s",
+    "apiVersion": 1,
+    "fileHash": "sha256-2e81fb135538fb427a6ea20d7a9a4472d240826136088c0deb09352a5c24ee5e"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tvphim.us&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 39106,
+    "status": 1,
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 11,
+    "internalName": "TvPhimProvider",
+    "description": "Maintained by Adam Knight • 720p thuyết minh phim giọng hay",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/TvPhimProvider.cs3",
+    "name": "TvPhimProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=twitch.tv&sz=%size%",
+    "jarFileSize": 56997,
+    "fileHash": "sha256-a7cc95f77bbd00a311d122201c63babe70b63fb398641fa28bf2b2c77346150a",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 15239,
+    "status": 1,
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 2,
+    "internalName": "TwitchProvider",
+    "jarUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/TwitchProvider.jar",
+    "description": "Maintained by Adam Knight • Watch livestreams from Twitch",
+    "url": "https://raw.githubusercontent.com/recloudstream/extensions/builds/TwitchProvider.cs3",
+    "name": "TwitchProvider",
+    "jarHash": "sha256-88086809ed6ccc21cca611ce2ba4f2563b1082486ffda3daa6350da9126b548b"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=uafix.net&sz=%size%",
+    "fileHash": "sha256-1cdc6bb5ba82d1001acce9a8fd2e961217cb2e5731c8a9b9a34dd9f3539615fd",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 33070,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "Cartoon",
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 20,
+    "internalName": "UAFlixProvider",
+    "description": "Maintained by Adam Knight • UAFLIX - фільми і серіали NETFLIX українською",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UAFlixProvider.cs3",
+    "name": "UAFlixProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=uakino.club&sz=%size%",
+    "fileHash": "sha256-bed2490e90a24b564ac19efd457e1d107bd7806343cd74f9f98348acaa65c13c",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 47325,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie",
+      "AsianDrama"
+    ],
+    "version": 32,
+    "internalName": "UakinoProvider",
+    "description": "Maintained by Adam Knight • Дивіться фільми та серіали онлайн в HD якості. У нас можна дивитися кіно онлайн безкоштовно, у високій якості та з якісним українським дубляжем.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UakinoProvider.cs3",
+    "name": "UakinoProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=uaserials.pro&sz=%size%",
+    "fileHash": "sha256-a06c33d55d3c097a2640bc978a919c57671e56d40c9338638d97877c907ab79e",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 40014,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "Cartoon",
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 27,
+    "internalName": "UASerialsProProvider",
+    "description": "Maintained by Adam Knight • UASerials.pro — твої улюблені серіали українською мовою онлайн.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UASerialsProProvider.cs3",
+    "name": "UASerialsProProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=ufdub.com&sz=%size%",
+    "fileHash": "sha256-2d946f34add283b744a2d22a2e34c9e588ef090e845c3a1e139db7c203ddb64e",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 12978,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "AsianDrama",
+      "Cartoon",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 12,
+    "internalName": "UFDubProvider",
+    "description": "Maintained by Adam Knight • UFDUB.com - Це команда любителів, що озвучують з душею те, що бажають глядачі й учасники проєкту! 🧡",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UFDubProvider.cs3",
+    "name": "UFDubProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/UHDmoviesProvider.cs3",
     "status": 1,
     "version": 41,
     "name": "UHDmoviesProvider",
     "internalName": "UHDmoviesProvider",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Indian Multi-language 4K Provider",
+    "description": "Maintained by Adam Knight • Indian Multi-language 4K Provider",
     "fileSize": 92605,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Movie",
@@ -2483,12 +4301,9 @@
     "version": 65,
     "name": "Ultima",
     "internalName": "Ultima",
-    "authors": [
-      "RowdyRushya,Phisher98"
-    ],
-    "description": "The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
+    "description": "Maintained by Adam Knight • The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
     "fileSize": 228933,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "All"
@@ -2498,17 +4313,32 @@
     "fileHash": "sha256-83a9004a34b60fba49a8a065c520dd3441ca6b47a40282ff866b58e0c59cf466"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=unimay.media&sz=%size%",
+    "fileHash": "sha256-4b5acaddd25334606ca232c761374340842f2cfb03adbd3d616195246c3c1f10",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 29225,
+    "status": 1,
+    "language": "uk",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 13,
+    "internalName": "UnimayProvider",
+    "description": "Maintained by Adam Knight • Unimay Media є однією з провідних команд, що спеціалізується на локалізації та озвученні аніме для україномовної аудиторії.",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UnimayProvider.cs3",
+    "name": "UnimayProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/VegaMovies.cs3",
     "status": 1,
     "version": 82,
     "name": "VegaMovies",
     "internalName": "VegaMovies",
-    "authors": [
-      "megix"
-    ],
-    "description": "Includes LuxMovies, Rogmovies",
+    "description": "Maintained by Adam Knight • Includes LuxMovies, Rogmovies",
     "fileSize": 41565,
-    "repositoryUrl": "https://github.com/SaurabhKaperwan/CSX",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "TvSeries",
@@ -2521,17 +4351,120 @@
     "fileHash": "sha256-b78635ef4f2f66c134184552fe5e4956cc02ec1c5ce6d6811cccfd3747367883"
   },
   {
+    "iconUrl": "https://www.vipphim.biz/assets/other/favicon/vip-phim/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 52281,
+    "status": 1,
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 9,
+    "internalName": "VipPhimProvider",
+    "description": "Maintained by Adam Knight • FullHD",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/VipPhimProvider.cs3",
+    "name": "VipPhimProvider"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Viu.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "VIU",
+    "internalName": "Viu",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 38046,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "Drama"
+    ],
+    "iconUrl": "https://img.utdstc.com/icon/a99/c9e/a99c9ee56e731144b335282e9981a54a7584be93fc9644ad7a03b45552307876:200",
+    "apiVersion": 1,
+    "fileHash": "sha256-9ff5e88654aa3d58257d681042b74119e55e0f6417b4774532797e923ca63e40"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/WatchMoviesPk.cs3",
+    "status": 0,
+    "version": 3,
+    "name": "WatchMoviesPk",
+    "internalName": "WatchMoviesPk",
+    "description": "Maintained by Adam Knight • Watch Online Movies in HD Print Quality Free Download,Watch Full Movies Online Bollywood Movies Download Latest Hollywood Movies in DVD Print Quality Free",
+    "fileSize": 12297,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://www.watch-movies.com.pk/wp-content/uploads/2022/05/logo.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-0f93211265df4f50eb787705c5c22f457e0db08c11cdf3fd332a26cf0aca1ad1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Wecima.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "WeCima",
+    "internalName": "Wecima",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 29438,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Movie",
+      "tvTypes"
+    ],
+    "iconUrl": "https://wecima.ac/static/img/favicon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-98b3b61a6e305f48c154cbca21d6bc162d6514dab8ab6d8253978a1422924fdb"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/zHLLPyVd/wgfilm21.webp",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 24012,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "WGFilm21",
+    "description": "Maintained by Adam Knight • 📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/WGFilm21.cs3",
+    "name": "WGFilm21"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Witanime.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Witanime",
+    "internalName": "Witanime",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 73906,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AH2oC7LwumXRpHM8_WLpIFvDIfmS67jkjlhsCKpPaZdqcneigzUQX4g&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-82920869d407a954b22353155231f4f5aa345d39d5ad3a09ce0f73318d3e0f2d"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/XDMovies.cs3",
     "status": 1,
     "version": 26,
     "name": "XDMovies",
     "internalName": "XDMovies",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "Watch Latest Movies",
+    "description": "Maintained by Adam Knight • Watch Latest Movies",
     "fileSize": 178969,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "AsianDrama",
@@ -2546,17 +4479,111 @@
     "fileHash": "sha256-3dfb44a7123bdd4356c7d085a6e42bd4d0e26bff0cab7c3b4f01e38639b3f791"
   },
   {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Yacintv.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Yacintv",
+    "internalName": "Yacintv",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 24443,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "TvSeries",
+      "Live",
+      "Movie"
+    ],
+    "iconUrl": "https://yt3.googleusercontent.com/ulm35tweg3do5istps0TgCjMmJSVczGUL2NIrXMwI1DDRi5ty29BIzQSUHVgqZN5CSo1PHhiA6M=s900-c-k-c0x00ffffff-no-rj",
+    "apiVersion": 1,
+    "fileHash": "sha256-440fb181a313ab67f7d420f4a657eb02dcd65a0aa75df28db4e3994b5ba72c1d"
+  },
+  {
+    "iconUrl": "https://yanhh3d.net/storage/settings/August2024/YOoAwtlobLbwKhiFwRZv.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 32844,
+    "status": 1,
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 16,
+    "internalName": "YanHH3DProvider",
+    "description": "Maintained by Adam Knight • Hoạt hình Trung Quốc thuyết minh",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/YanHH3DProvider.cs3",
+    "name": "YanHH3DProvider"
+  },
+  {
+    "iconUrl": "https://ylnime.com/banner.jpg",
+    "fileHash": "sha256-35cd7aabe68f44433485b63e383c5518f43b5f75178a7a65e4ecadeeaeedcc5e",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 22691,
+    "status": 1,
+    "language": "id",
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 6,
+    "internalName": "YlnimeProvider",
+    "description": "Maintained by Adam Knight • Nonton Anime Subtitle Indonesia dari YLnime",
+    "url": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/YlnimeProvider.cs3",
+    "name": "YlnimeProvider"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Youtube.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "YouTube",
+    "internalName": "Youtube",
+    "description": "Maintained by Adam Knight",
+    "fileSize": 129346,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "ar",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Live",
+      "Anime",
+      "Music",
+      "Documentary"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Abodabodd/Oldarabrepo/refs/heads/main/img/IMG_%D9%A2%D9%A0%D9%A2%D9%A5%D9%A1%D9%A2%D9%A0%D9%A6_%D9%A1%D9%A7%D9%A2%D9%A6%D9%A1%D9%A6.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-dc1d7eed7ec6bdf47ff36d1ee60b1062e974399ee2995563f62229114b63e530"
+  },
+  {
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/3840px-YouTube_full-color_icon_%282017%29.svg.png",
+    "jarFileSize": 46472,
+    "fileHash": "sha256-a246eb1584cec9e69ba8c50136b9e8dc11a2fc0ab225710c31ad66c2ec4f4efe",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 13152,
+    "status": 1,
+    "tvTypes": [
+      "Other",
+      "Live",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "YoutubeProvider",
+    "jarUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/YoutubeProvider.jar",
+    "description": "Maintained by Adam Knight • Watch Youtube in Cloudstream",
+    "url": "https://raw.githubusercontent.com/recloudstream/extensions/builds/YoutubeProvider.cs3",
+    "name": "YoutubeProvider",
+    "jarHash": "sha256-0d83e79f196464e50b8b1aa4c13683b2428fc3556651a0d190981c1149b3ea41"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/YTS.cs3",
     "status": 1,
     "version": 11,
     "name": "YTS",
     "internalName": "YTS",
-    "authors": [
-      "Phisher98"
-    ],
-    "description": "YTS Movies 4K Support (Torrent)",
+    "description": "Maintained by Adam Knight • YTS Movies 4K Support (Torrent)",
     "fileSize": 52376,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
       "Movie",
@@ -2572,11 +4599,8 @@
     "version": 12,
     "name": "Zinkmovies",
     "internalName": "Zinkmovies",
-    "authors": [
-      "Phisher98"
-    ],
     "fileSize": 149679,
-    "repositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
       "Movie",
@@ -2585,6 +4609,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/zing.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-8dc1f68778ca66e99cb9a74b7c99ae91da975ba3fed65b514f480fb7d401c36b"
+    "fileHash": "sha256-8dc1f68778ca66e99cb9a74b7c99ae91da975ba3fed65b514f480fb7d401c36b",
+    "description": "Maintained by Adam Knight"
   }
 ]
