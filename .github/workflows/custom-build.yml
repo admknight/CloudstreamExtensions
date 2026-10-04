@@ -41,7 +41,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v2
 
       - name: Setup Gradle 8.12
         uses: gradle/actions/setup-gradle@v4
