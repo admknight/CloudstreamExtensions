@@ -183,11 +183,19 @@ def failed_table(failed_plugins):
 
 def build_readme(report, plugin_rows):
     lines = [
-        "# 🎯 Adam Knight Mega Repo",
+        '<p align="center">',
+        '  <img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Mega Repo" width="180">',
+        '</p>',
         "",
-        "[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)",
+        '<h1 align="center">Adam Knight Mega Repo</h1>',
         "",
-        f"A dynamic CloudStream mega repository maintained by **{MAINTAINER}**.",
+        '<p align="center">',
+        '  <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml">',
+        '    <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master&amp;event=push&amp;v=20261004-2" alt="Update Aggregated Repository">',
+        '  </a>',
+        '</p>',
+        "",
+        f'<p align="center">A dynamic CloudStream mega repository maintained by <strong>{MAINTAINER}</strong>.</p>',
         "",
         "The catalog is rebuilt from multiple published CloudStream repositories, deduplicated, package-checked, and only then published.",
         "",
