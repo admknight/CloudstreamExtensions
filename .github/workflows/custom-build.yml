@@ -58,6 +58,22 @@ jobs:
           cp "$GITHUB_WORKSPACE/source"/CinevezProvider/build/*.cs3 .
           cp "$GITHUB_WORKSPACE/source"/CinevezProvider/build/*.jar . 2>/dev/null || true
           cp "$GITHUB_WORKSPACE/source"/build/plugins.json plugins.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("plugins.json")
+          plugins = json.loads(path.read_text())
+          for plugin in plugins:
+              for key in ("url", "jarUrl"):
+                  value = plugin.get(key)
+                  if value:
+                      plugin[key] = value.replace(
+                          "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/",
+                          "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/"
+                      )
+          path.write_text(json.dumps(plugins, indent=2) + "\n")
+          PY
           cat > repo.json <<'EOF'
           {
             "name": "Adam Knight Custom Providers",
