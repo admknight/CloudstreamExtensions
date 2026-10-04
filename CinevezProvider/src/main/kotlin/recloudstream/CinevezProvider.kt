@@ -13,6 +13,7 @@ import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.fixUrl
 import com.lagradost.cloudstream3.fixUrlNull
+import com.lagradost.cloudstream3.getQualityFromString
 import com.lagradost.cloudstream3.mainPageOf
 import com.lagradost.cloudstream3.newHomePageResponse
 import com.lagradost.cloudstream3.newMovieLoadResponse
@@ -20,7 +21,6 @@ import com.lagradost.cloudstream3.newMovieSearchResponse
 import com.lagradost.cloudstream3.toNewSearchResponseList
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.StringUtils.encodeUri
-import com.lagradost.cloudstream3.utils.getQualityFromName
 import com.lagradost.cloudstream3.utils.loadExtractor
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
@@ -202,7 +202,7 @@ class CinevezProvider : MainAPI() {
 
         return newMovieSearchResponse(title, href, TvType.Movie) {
             posterUrl = fixUrlNull(poster)
-            quality = qualityName?.let { getQualityFromName(it) }
+            quality = getQualityFromString(qualityName)
         }
     }
 
