@@ -185,7 +185,7 @@ def build_readme(report, plugin_rows):
     lines = [
         "# 🎯 Adam Knight CloudStream Mega Repo",
         "",
-        "[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)",
+        "[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)",
         "",
         f"A dynamic CloudStream mega repository maintained by **{MAINTAINER}**.",
         "",
