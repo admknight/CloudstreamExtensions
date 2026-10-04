@@ -247,6 +247,42 @@
       "include": [
         "CinevezProvider"
       ]
+    },
+    {
+      "id": "cuxplug",
+      "name": "CuxPlug",
+      "repo": "https://github.com/ycngmn/CuxPlug",
+      "index": "https://raw.githubusercontent.com/ycngmn/CuxPlug/refs/heads/builds/plugins.json"
+    },
+    {
+      "id": "dogior",
+      "name": "doGior's Had Enough",
+      "repo": "https://github.com/doGior/doGiorsHadEnough",
+      "index": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json"
+    },
+    {
+      "id": "gian-fr",
+      "name": "Gian-Fr Italian Provider",
+      "repo": "https://github.com/Gian-Fr/ItalianProvider",
+      "index": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json"
+    },
+    {
+      "id": "cs-kraptor",
+      "name": "Kraptor cs-kraptor",
+      "repo": "https://github.com/Kraptor123/cs-kraptor",
+      "index": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/refs/heads/builds/plugins.json"
+    },
+    {
+      "id": "aniyomi-compat",
+      "name": "Aniyomi Compat",
+      "repo": "https://github.com/CranberrySoup/AniyomiCompatExtension",
+      "index": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/plugins.json"
+    },
+    {
+      "id": "tearrs-vietnamese",
+      "name": "Tearrs Vietnamese Extension",
+      "repo": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+      "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json"
     }
   ],
   "inactive": [
