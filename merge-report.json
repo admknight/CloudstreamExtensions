@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04 14:54:57 UTC",
+  "generatedAt": "2026-10-04 17:37:16 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
   "sourceHealth": {
-    "ok": 30,
+    "ok": 31,
     "failed": 0
   },
   "sourceStatus": [
@@ -367,6 +367,18 @@
       "includedCount": 1,
       "packageFailed": 0,
       "duplicateSkipped": 0
+    },
+    {
+      "id": "adam-custom",
+      "name": "Adam Knight Custom Providers",
+      "repo": "https://github.com/admknight/CloudstreamExtensions",
+      "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
+      "priority": 1,
+      "ok": true,
+      "rawCount": 1,
+      "includedCount": 1,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
     }
   ],
   "inactiveSources": [
@@ -386,7 +398,7 @@
   "categoryCounts": {
     "Movies": 128,
     "Anime": 64,
-    "Indian": 73,
+    "Indian": 74,
     "Arabic": 35,
     "Asian": 49,
     "Live": 43,
@@ -396,10 +408,10 @@
     "Adult": 74,
     "Other": 15
   },
-  "previousPlugins": 505,
-  "uniquePlugins": 515,
+  "previousPlugins": 515,
+  "uniquePlugins": 516,
   "packageHealth": {
-    "reachable": 515,
+    "reachable": 516,
     "failed": 2
   },
   "duplicates": [
@@ -631,9 +643,9 @@
     }
   ],
   "changes": {
-    "added": 10,
-    "updated": 2,
-    "unchanged": 503,
+    "added": 1,
+    "updated": 4,
+    "unchanged": 511,
     "removed": 0
   },
   "removedPlugins": []

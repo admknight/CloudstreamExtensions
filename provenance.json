@@ -1032,7 +1032,7 @@
     "publishedName": "[Anime] AnitubeinuaProvider",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 21,
+    "selectedVersion": 22,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -1930,6 +1930,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CineTvProvider.cs3"
+  },
+  {
+    "plugin": "CinevezProvider",
+    "originalName": "CinevezProvider",
+    "publishedName": "[Indian] CinevezProvider",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "adam-custom",
+    "sourceName": "Adam Knight Custom Providers",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
+    "originalAuthors": [
+      "Adam Knight"
+    ],
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/CinevezProvider.cs3"
   },
   {
     "plugin": "Cinevood",
@@ -3519,7 +3536,7 @@
     "publishedName": "[Indian] HDhub4u",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 56,
+    "selectedVersion": 57,
     "sourceId": "phisher",
     "sourceName": "Phisher Repo",
     "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
@@ -7152,7 +7169,7 @@
     "publishedName": "[Movies] StreamPlay",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 685,
+    "selectedVersion": 686,
     "sourceId": "phisher",
     "sourceName": "Phisher Repo",
     "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
