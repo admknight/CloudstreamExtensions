@@ -1,8 +1,16 @@
-# 🎯 Adam Knight Mega Repo
+<p align="center">
+  <img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Mega Repo" width="180">
+</p>
 
-[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)
+<h1 align="center">Adam Knight Mega Repo</h1>
 
-A dynamic CloudStream mega repository maintained by **Adam Knight**.
+<p align="center">
+  <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml">
+    <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master&amp;event=push&amp;v=20261004-2" alt="Update Aggregated Repository">
+  </a>
+</p>
+
+<p align="center">A dynamic CloudStream mega repository maintained by <strong>Adam Knight</strong>.</p>
 
 The catalog is rebuilt from multiple published CloudStream repositories, deduplicated, package-checked, and only then published.
 
@@ -20,7 +28,7 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-04 00:51:16 UTC**
+Last successful refresh: **2026-10-04 00:54:50 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
