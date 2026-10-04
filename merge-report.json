@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04 00:09:56 UTC",
+  "generatedAt": "2026-10-04 00:11:04 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "adamknight",
   "candidateStatus": "READY",
@@ -17,6 +17,7 @@
       "ok": true,
       "rawCount": 84,
       "includedCount": 84,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -28,6 +29,7 @@
       "ok": true,
       "rawCount": 5,
       "includedCount": 3,
+      "packageFailed": 0,
       "duplicateSkipped": 2
     },
     {
@@ -39,6 +41,7 @@
       "ok": true,
       "rawCount": 5,
       "includedCount": 5,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -50,6 +53,7 @@
       "ok": true,
       "rawCount": 1,
       "includedCount": 1,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -61,6 +65,7 @@
       "ok": true,
       "rawCount": 30,
       "includedCount": 30,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -72,6 +77,7 @@
       "ok": true,
       "rawCount": 5,
       "includedCount": 5,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -83,6 +89,7 @@
       "ok": true,
       "rawCount": 18,
       "includedCount": 17,
+      "packageFailed": 0,
       "duplicateSkipped": 1
     },
     {
@@ -94,6 +101,7 @@
       "ok": true,
       "rawCount": 16,
       "includedCount": 14,
+      "packageFailed": 2,
       "duplicateSkipped": 0
     },
     {
@@ -105,6 +113,7 @@
       "ok": true,
       "rawCount": 16,
       "includedCount": 16,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -116,6 +125,7 @@
       "ok": true,
       "rawCount": 39,
       "includedCount": 38,
+      "packageFailed": 1,
       "duplicateSkipped": 0
     },
     {
@@ -127,6 +137,7 @@
       "ok": true,
       "rawCount": 3,
       "includedCount": 3,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -138,6 +149,7 @@
       "ok": true,
       "rawCount": 21,
       "includedCount": 21,
+      "packageFailed": 0,
       "duplicateSkipped": 0
     },
     {
@@ -149,6 +161,7 @@
       "ok": true,
       "rawCount": 18,
       "includedCount": 16,
+      "packageFailed": 0,
       "duplicateSkipped": 2
     }
   ],
@@ -160,7 +173,7 @@
       "reason": "No published builds/plugins.json index was available when last checked."
     }
   ],
-  "previousPlugins": 124,
+  "previousPlugins": 253,
   "uniquePlugins": 253,
   "packageHealth": {
     "reachable": 253,
@@ -235,9 +248,9 @@
     }
   ],
   "changes": {
-    "added": 129,
-    "updated": 124,
-    "unchanged": 0,
+    "added": 0,
+    "updated": 0,
+    "unchanged": 253,
     "removed": 0
   },
   "removedPlugins": []
