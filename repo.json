@@ -1,6 +1,6 @@
 {
-  "name": "Adam Knight Extensions",
-  "description": "One-stop CloudStream repository aggregated from maintained upstream plugin indexes",
+  "name": "Adam Knight CloudStream Mega Repo",
+  "description": "Dynamic CloudStream mega repository maintained by Adam Knight",
   "manifestVersion": 1,
   "pluginLists": [
     "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/builds/plugins.json"

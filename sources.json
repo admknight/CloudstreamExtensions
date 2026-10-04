@@ -1,0 +1,106 @@
+{
+  "maintainer": "Adam Knight",
+  "shortcode": "adamknight",
+  "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+  "sources": [
+    {
+      "id": "phisher",
+      "name": "Phisher Repo",
+      "repo": "https://github.com/phisher98/cloudstream-extensions-phisher",
+      "index": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
+      "priority": 10
+    },
+    {
+      "id": "cinephile",
+      "name": "Cinephile",
+      "repo": "https://github.com/rockhero1234/cinephile",
+      "index": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "csx",
+      "name": "CSX",
+      "repo": "https://github.com/SaurabhKaperwan/CSX",
+      "index": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "netmirror",
+      "name": "NetMirror Extension",
+      "repo": "https://github.com/Sushan64/NetMirror-Extension",
+      "index": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "storm",
+      "name": "Storm Extensions",
+      "repo": "https://github.com/Stormunblessed/storm-ext",
+      "index": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
+      "priority": 20
+    },
+    {
+      "id": "official",
+      "name": "ReCloudStream Official Extensions",
+      "repo": "https://github.com/recloudstream/extensions",
+      "index": "https://raw.githubusercontent.com/recloudstream/extensions/builds/plugins.json",
+      "priority": 5
+    },
+    {
+      "id": "redowan",
+      "name": "Redowan CloudStream",
+      "repo": "https://github.com/redowan99/Redowan-CloudStream",
+      "index": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/plugins.json",
+      "priority": 15
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnamese CloudStream Index",
+      "repo": "https://github.com/t23-02/cloudstream",
+      "index": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+      "priority": 30
+    },
+    {
+      "id": "nontonindo",
+      "name": "Nonton Indo",
+      "repo": "https://github.com/ExtremeBoyGG/nonton-indo",
+      "index": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "rearabi",
+      "name": "Re-3arabi",
+      "repo": "https://github.com/Abodabodd/re-3arabi",
+      "index": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "alyss",
+      "name": "TheAlyss Repo",
+      "repo": "https://github.com/TheAlyss/cloudstream-AlyssRepo",
+      "index": "https://raw.githubusercontent.com/TheAlyss/cloudstream-AlyssRepo/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "cakestwix",
+      "name": "CakesTwix UK/UA",
+      "repo": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "index": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/refs/heads/builds/plugins.json",
+      "priority": 25
+    },
+    {
+      "id": "cloudx",
+      "name": "CloudX-V2",
+      "repo": "https://github.com/Asm0d3usX/CloudX-V2",
+      "index": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+      "priority": 25
+    }
+  ],
+  "inactive": [
+    {
+      "id": "hexated",
+      "name": "Hexated CloudStream Extensions",
+      "repo": "https://github.com/Hexated/CloudStream-Extensions",
+      "reason": "No published builds/plugins.json index was available when last checked."
+    }
+  ]
+}

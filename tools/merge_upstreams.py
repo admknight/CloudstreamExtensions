@@ -1,60 +1,27 @@
 #!/usr/bin/env python3
 import argparse
 import json
-import sys
 import urllib.request
+from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
-SOURCES = [
-    {
-        "id": "phisher",
-        "name": "Phisher Repo",
-        "repo": "https://github.com/phisher98/cloudstream-extensions-phisher",
-        "index": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
-    },
-    {
-        "id": "cinephile",
-        "name": "Cinephile",
-        "repo": "https://github.com/rockhero1234/cinephile",
-        "index": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
-    },
-    {
-        "id": "csx",
-        "name": "CSX",
-        "repo": "https://github.com/SaurabhKaperwan/CSX",
-        "index": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/plugins.json",
-    },
-    {
-        "id": "netmirror",
-        "name": "NetMirror Extension",
-        "repo": "https://github.com/Sushan64/NetMirror-Extension",
-        "index": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/plugins.json",
-    },
-    {
-        "id": "storm",
-        "name": "Storm Extensions",
-        "repo": "https://github.com/Stormunblessed/storm-ext",
-        "index": "https://raw.githubusercontent.com/Stormunblessed/storm-ext/builds/plugins.json",
-    },
-]
-
-INACTIVE_SOURCES = [
-    {
-        "id": "hexated",
-        "name": "Hexated CloudStream Extensions",
-        "repo": "https://github.com/Hexated/CloudStream-Extensions",
-        "reason": "No published builds/plugins.json index is currently used by this aggregator.",
-    }
-]
+ROOT = Path(__file__).resolve().parents[1]
+CONFIG = json.loads((ROOT / "sources.json").read_text())
+MAINTAINER = CONFIG["maintainer"]
+SHORTCODE = CONFIG["shortcode"]
+AGGREGATOR_REPO = CONFIG["repositoryUrl"]
+SOURCES = CONFIG["sources"]
+INACTIVE_SOURCES = CONFIG.get("inactive", [])
 
 
 def fetch_json(url):
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "CloudstreamExtensions-Aggregator/2.0"},
+        headers={"User-Agent": "AdamKnight-CloudStream-Aggregator/3.0"},
     )
-    with urllib.request.urlopen(req, timeout=60) as response:
+    with urllib.request.urlopen(req, timeout=45) as response:
         return json.load(response)
 
 
@@ -63,9 +30,8 @@ def plugin_key(plugin):
 
 
 def version_value(plugin):
-    value = plugin.get("version", 0)
     try:
-        return int(value)
+        return int(plugin.get("version", 0))
     except (TypeError, ValueError):
         return 0
 
@@ -76,11 +42,20 @@ def md(value):
     return str(value).replace("|", "\\|").replace("\n", " ").strip()
 
 
-def authors_text(plugin):
+def tv_types_text(plugin):
+    values = plugin.get("tvTypes")
+    if isinstance(values, list):
+        return ", ".join(str(x) for x in values)
+    return str(values or "")
+
+
+def original_authors(plugin):
     authors = plugin.get("authors")
     if isinstance(authors, list):
-        return ", ".join(str(x) for x in authors)
-    return str(authors or "")
+        return [str(x) for x in authors]
+    if authors:
+        return [str(authors)]
+    return []
 
 
 def load_previous(path):
@@ -99,22 +74,215 @@ def comparable(plugin):
     return json.dumps(plugin, sort_keys=True, ensure_ascii=False)
 
 
-def source_summary_table(source_status):
+def check_package_url(url):
+    if not url:
+        return {"ok": False, "status": None, "error": "Missing package URL"}
+
+    headers = {
+        "User-Agent": "AdamKnight-CloudStream-Aggregator/3.0",
+        "Accept": "*/*",
+    }
+    last_error = None
+
+    for _ in range(2):
+        try:
+            req = urllib.request.Request(url, headers=headers, method="HEAD")
+            with urllib.request.urlopen(req, timeout=15) as response:
+                status = getattr(response, "status", 200)
+                if 200 <= status < 400:
+                    return {"ok": True, "status": status, "error": None}
+        except Exception as exc:
+            last_error = f"{type(exc).__name__}: {exc}"
+
+        try:
+            range_headers = dict(headers)
+            range_headers["Range"] = "bytes=0-0"
+            req = urllib.request.Request(url, headers=range_headers, method="GET")
+            with urllib.request.urlopen(req, timeout=20) as response:
+                status = getattr(response, "status", 200)
+                response.read(1)
+                if 200 <= status < 400:
+                    return {"ok": True, "status": status, "error": None}
+        except Exception as exc:
+            last_error = f"{type(exc).__name__}: {exc}"
+
+    return {"ok": False, "status": None, "error": last_error or "Package check failed"}
+
+
+def branded_plugin(plugin):
+    result = dict(plugin)
+    result.pop("authors", None)
+    result["repositoryUrl"] = AGGREGATOR_REPO
+
+    description = str(result.get("description") or "").strip()
+    prefix = f"Maintained by {MAINTAINER}"
+    if description:
+        if prefix.casefold() not in description.casefold():
+            result["description"] = f"{prefix} • {description}"
+    else:
+        result["description"] = prefix
+
+    return result
+
+
+def source_table(source_status):
     lines = [
-        "| Source | Fetch | Upstream entries | Included after dedup | Duplicate entries dropped |",
+        "| Source | Index | Raw | Included | Duplicate-skipped |",
         "| --- | --- | ---: | ---: | ---: |",
     ]
-    for item in source_status:
-        status = "OK" if item["ok"] else "FAILED"
-        raw = item.get("rawCount", "-")
-        included = item.get("includedCount", 0)
-        dropped = item.get("duplicateDropped", 0)
-        name = f"[{md(item['name'])}]({item['repo']})"
-        lines.append(f"| {name} | {status} | {raw} | {included} | {dropped} |")
+    for source in source_status:
+        state = "✅ OK" if source["ok"] else "❌ FAILED"
+        raw = source["rawCount"] if source["rawCount"] is not None else "-"
+        lines.append(
+            f"| [{md(source['name'])}]({source['repo']}) | {state} | {raw} | "
+            f"{source['includedCount']} | {source['duplicateSkipped']} |"
+        )
     return lines
 
 
-def build_status_markdown(report, plugin_rows):
+def summary_table(report):
+    return [
+        "| Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |",
+        "| ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        f"| {report['uniquePlugins']} | {report['packageHealth']['failed']} | "
+        f"{report['sourceHealth']['ok']} | {report['sourceHealth']['failed']} | "
+        f"{report['changes']['added']} | {report['changes']['updated']} | {report['changes']['removed']} |",
+    ]
+
+
+def plugin_table(plugin_rows):
+    lines = [
+        "| # | Plugin | Ver. | Maintainer | Lang | Types | Package | Source | Change |",
+        "| ---: | --- | ---: | --- | --- | --- | --- | --- | --- |",
+    ]
+    for i, row in enumerate(plugin_rows, 1):
+        lines.append(
+            f"| {i} | **{md(row['name'])}** | {row['version']} | {MAINTAINER} | "
+            f"{md(row['language'])} | {md(row['tvTypes'])} | ✅ Reachable | "
+            f"{md(row['sourceName'])} | {row['change']} |"
+        )
+    return lines
+
+
+def failed_table(failed_plugins):
+    lines = [
+        "| Plugin | Best source checked | Version | Result |",
+        "| --- | --- | ---: | --- |",
+    ]
+    if not failed_plugins:
+        lines.append("| — | — | — | ✅ No package failures |")
+        return lines
+
+    for item in failed_plugins:
+        lines.append(
+            f"| {md(item['plugin'])} | {md(item['sourceName'])} | {item['version']} | "
+            f"❌ {md(item['error'])} |"
+        )
+    return lines
+
+
+def build_readme(report, plugin_rows):
+    lines = [
+        "# 🎯 Adam Knight CloudStream Mega Repo",
+        "",
+        "[![Update Aggregated Repository](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg)](https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml)",
+        "",
+        f"A dynamic CloudStream mega repository maintained by **{MAINTAINER}**.",
+        "",
+        "The catalog is rebuilt from multiple published CloudStream repositories, deduplicated, package-checked, and only then published.",
+        "",
+        "## 🌐 Quick installation",
+        "",
+        "### Preferred: shortcode",
+        "",
+        "In CloudStream go to **Settings → Extensions → Add Repository** and enter:",
+        "",
+        f"    {SHORTCODE}",
+        "",
+        "### Raw URL fallback",
+        "",
+        "    https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json",
+        "",
+        "## 📊 Current dashboard",
+        "",
+        f"Last successful refresh: **{report['generatedAt']}**",
+        "",
+    ]
+    lines.extend(summary_table(report))
+    lines += [
+        "",
+        "### Source health",
+        "",
+    ]
+    lines.extend(source_table(report["sourceStatus"]))
+    lines += [
+        "",
+        "### Package failures",
+        "",
+        "A package is considered reachable when its published .cs3 URL responds successfully. "
+        "This verifies package availability, not whether the underlying provider website still works at runtime.",
+        "",
+    ]
+    lines.extend(failed_table(report["failedPlugins"]))
+    lines += [
+        "",
+        "## 📦 Available plugins",
+        "",
+        f"**{report['uniquePlugins']} plugins are currently published and package-reachable.**",
+        "",
+    ]
+    lines.extend(plugin_table(plugin_rows))
+    lines += [
+        "",
+        "## 🔁 Duplicate handling",
+        "",
+        "When the same plugin is published by more than one source, the highest version is preferred; "
+        "source priority breaks version ties. Unreachable candidates are skipped in favor of a reachable alternative when possible.",
+        "",
+    ]
+    if report["duplicates"]:
+        lines += [
+            "| Plugin | Selected | Skipped |",
+            "| --- | --- | --- |",
+        ]
+        for d in report["duplicates"]:
+            lines.append(
+                f"| {md(d['plugin'])} | {md(d['selectedSource'])} v{d['selectedVersion']} | "
+                f"{md(d['skippedSource'])} v{d['skippedVersion']} ({md(d['reason'])}) |"
+            )
+    else:
+        lines.append("No duplicates in the current candidate set.")
+
+    lines += [
+        "",
+        "## 🧭 Status files",
+        "",
+        "- STATUS.md on the builds branch — detailed current health report",
+        "- BUILD_HISTORY.md on the builds branch — successful publication history",
+        "- merge-report.json on the builds branch — machine-readable build report",
+        "- provenance.json on the builds branch — original source/author provenance retained for maintenance",
+        "",
+        "## 🛡️ Publication safety",
+        "",
+        "Production is not overwritten when an active source index fails. A large unexpected catalog drop is also blocked by the safety gate, so the last known-good catalog remains live.",
+        "",
+        "## 🧰 Repository architecture",
+        "",
+        "This is an aggregator, not a source-code fork. Published CloudStream package URLs are consumed from upstream indexes; "
+        "the installer-facing catalog is branded as maintained by Adam Knight, while original provenance is retained separately for maintenance and attribution.",
+        "",
+        "## ⚖️ Disclaimer",
+        "",
+        "This repository is an index/aggregation project and does not host video or media content. "
+        "Package reachability does not guarantee that every third-party provider website is operational at runtime.",
+        "",
+        f"*Maintained by {MAINTAINER}*",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def build_status(report, plugin_rows):
     lines = [
         "# Production Aggregation Status",
         "",
@@ -122,104 +290,31 @@ def build_status_markdown(report, plugin_rows):
         "",
         f"Candidate status: **{report['candidateStatus']}**",
         "",
-        f"Previous production plugins: **{report['previousPlugins']}**  ",
-        f"Candidate unique plugins: **{report['uniquePlugins']}**",
-        "",
-        "## Upstream status",
-        "",
     ]
-    lines.extend(source_summary_table(report["sourceStatus"]))
-    lines += [
-        "",
-        "## Change summary",
-        "",
-        "| Added | Updated | Unchanged | Removed |",
-        "| ---: | ---: | ---: | ---: |",
-        f"| {report['changes']['added']} | {report['changes']['updated']} | {report['changes']['unchanged']} | {report['changes']['removed']} |",
-        "",
-    ]
-
+    lines.extend(summary_table(report))
+    lines += ["", "## Source health", ""]
+    lines.extend(source_table(report["sourceStatus"]))
+    lines += ["", "## Failed packages", ""]
+    lines.extend(failed_table(report["failedPlugins"]))
+    lines += ["", "## Published plugins", ""]
+    lines.extend(plugin_table(plugin_rows))
+    lines += ["", "## Duplicate decisions", ""]
     if report["duplicates"]:
         lines += [
-            "## Duplicate decisions",
-            "",
-            "| Plugin | Kept | Dropped |",
+            "| Plugin | Selected | Skipped |",
             "| --- | --- | --- |",
         ]
         for d in report["duplicates"]:
             lines.append(
-                f"| {md(d['plugin'])} | {md(d['keptSource'])} v{d['keptVersion']} | "
-                f"{md(d['droppedSource'])} v{d['droppedVersion']} |"
+                f"| {md(d['plugin'])} | {md(d['selectedSource'])} v{d['selectedVersion']} | "
+                f"{md(d['skippedSource'])} v{d['skippedVersion']} ({md(d['reason'])}) |"
             )
-        lines.append("")
-
-    if report["removedPlugins"]:
-        lines += [
-            "## Removed from candidate",
-            "",
-            "| Plugin | Previous version |",
-            "| --- | ---: |",
-        ]
-        for item in report["removedPlugins"]:
-            lines.append(f"| {md(item['plugin'])} | {item['version']} |")
-        lines.append("")
-
-    lines += [
-        "## Plugin status",
-        "",
-        "| # | Plugin | Version | Author(s) | Language | Source | Upstream status | Change |",
-        "| ---: | --- | ---: | --- | --- | --- | --- | --- |",
-    ]
-    for idx, row in enumerate(plugin_rows, 1):
-        lines.append(
-            f"| {idx} | {md(row['name'])} | {row['version']} | {md(row['authors'])} | "
-            f"{md(row['language'])} | {md(row['source'])} | {md(row['upstreamStatus'])} | {row['change']} |"
-        )
-
+    else:
+        lines.append("No duplicates.")
     lines += [
         "",
-        "## Known source not currently aggregated",
-        "",
-        "| Source | Status | Reason |",
-        "| --- | --- | --- |",
-    ]
-    for source in INACTIVE_SOURCES:
-        lines.append(
-            f"| [{md(source['name'])}]({source['repo']}) | Not aggregated | {md(source['reason'])} |"
-        )
-
-    lines += [
-        "",
-        "> This repository aggregates published upstream indexes. It does not compile or rewrite upstream plugin source code.",
-        "",
-    ]
-    return "\n".join(lines)
-
-
-def build_readme(report):
-    lines = [
-        "# Adam Knight Extensions - Production",
-        "",
-        "Live CloudStream catalog generated from maintained upstream plugin indexes.",
-        "",
-        "## Latest update",
-        "",
-        f"- Generated: **{report['generatedAt']}**",
-        f"- Unique plugins: **{report['uniquePlugins']}**",
-        f"- Added: **{report['changes']['added']}**",
-        f"- Updated: **{report['changes']['updated']}**",
-        f"- Removed: **{report['changes']['removed']}**",
-        "- Repository URL: https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json",
-        "",
-        "## Upstream status",
-        "",
-    ]
-    lines.extend(source_summary_table(report["sourceStatus"]))
-    lines += [
-        "",
-        "See STATUS.md for the complete per-plugin table and BUILD_HISTORY.md for previous successful publications.",
-        "",
-        "Publication is blocked if an active upstream cannot be fetched or if the safety checks detect a suspicious catalog drop.",
+        "> Package health verifies that the published plugin package can be fetched. "
+        "It is not a runtime test of the third-party provider website.",
         "",
     ]
     return "\n".join(lines)
@@ -235,155 +330,222 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     previous = load_previous(args.previous)
 
-    merged = {}
+    candidates = defaultdict(list)
     source_status = []
-    duplicates = []
     failed_sources = []
 
     for source in SOURCES:
-        status = {
+        state = {
             "id": source["id"],
             "name": source["name"],
             "repo": source["repo"],
             "index": source["index"],
+            "priority": source.get("priority", 100),
             "ok": False,
             "rawCount": None,
             "includedCount": 0,
-            "duplicateDropped": 0,
+            "duplicateSkipped": 0,
         }
         try:
             plugins = fetch_json(source["index"])
             if not isinstance(plugins, list):
                 raise RuntimeError("upstream response is not a plugin list")
-            status["ok"] = True
-            status["rawCount"] = len(plugins)
+            state["ok"] = True
+            state["rawCount"] = len(plugins)
 
             for plugin in plugins:
                 key = plugin_key(plugin)
                 if not key:
                     continue
-
-                candidate = dict(plugin)
-                candidate_source = source["id"]
-
-                if key not in merged:
-                    merged[key] = {"plugin": candidate, "source": candidate_source}
-                    continue
-
-                current = merged[key]
-                keep_candidate = version_value(candidate) > version_value(current["plugin"])
-                if keep_candidate:
-                    winner_plugin = candidate
-                    winner_source = candidate_source
-                    loser_plugin = current["plugin"]
-                    loser_source = current["source"]
-                    merged[key] = {"plugin": candidate, "source": candidate_source}
-                else:
-                    winner_plugin = current["plugin"]
-                    winner_source = current["source"]
-                    loser_plugin = candidate
-                    loser_source = candidate_source
-
-                duplicates.append(
+                candidates[key].append(
                     {
-                        "plugin": key,
-                        "keptSource": winner_source,
-                        "keptVersion": version_value(winner_plugin),
-                        "droppedSource": loser_source,
-                        "droppedVersion": version_value(loser_plugin),
+                        "plugin": dict(plugin),
+                        "source": source,
+                        "version": version_value(plugin),
                     }
                 )
         except Exception as exc:
-            status["error"] = f"{type(exc).__name__}: {exc}"
+            state["error"] = f"{type(exc).__name__}: {exc}"
             failed_sources.append(source["id"])
 
-        source_status.append(status)
+        source_status.append(state)
 
-    included_by_source = {}
-    for entry in merged.values():
-        included_by_source[entry["source"]] = included_by_source.get(entry["source"], 0) + 1
+    unique_urls = {}
+    for group in candidates.values():
+        for item in group:
+            url = item["plugin"].get("url")
+            if url and url not in unique_urls:
+                unique_urls[url] = None
 
-    dropped_by_source = {}
-    for item in duplicates:
-        dropped = item["droppedSource"]
-        dropped_by_source[dropped] = dropped_by_source.get(dropped, 0) + 1
+    with ThreadPoolExecutor(max_workers=24) as executor:
+        future_map = {executor.submit(check_package_url, url): url for url in unique_urls}
+        for future in as_completed(future_map):
+            url = future_map[future]
+            try:
+                unique_urls[url] = future.result()
+            except Exception as exc:
+                unique_urls[url] = {
+                    "ok": False,
+                    "status": None,
+                    "error": f"{type(exc).__name__}: {exc}",
+                }
 
-    for item in source_status:
-        item["includedCount"] = included_by_source.get(item["id"], 0)
-        item["duplicateDropped"] = dropped_by_source.get(item["id"], 0)
+    selected = {}
+    duplicate_rows = []
+    failed_plugins = []
+    provenance = []
 
-    plugins = []
+    for key in sorted(candidates, key=str.casefold):
+        group = sorted(
+            candidates[key],
+            key=lambda item: (-item["version"], item["source"].get("priority", 100)),
+        )
+
+        winner = None
+        for item in group:
+            url = item["plugin"].get("url")
+            health = unique_urls.get(url) if url else {"ok": False, "error": "Missing package URL"}
+            item["health"] = health
+            if health and health.get("ok"):
+                winner = item
+                break
+
+        if winner is None:
+            best = group[0]
+            failed_plugins.append(
+                {
+                    "plugin": key,
+                    "sourceId": best["source"]["id"],
+                    "sourceName": best["source"]["name"],
+                    "version": best["version"],
+                    "url": best["plugin"].get("url"),
+                    "error": (best.get("health") or {}).get("error", "No reachable candidate"),
+                }
+            )
+            continue
+
+        selected[key] = winner
+
+        original = winner["plugin"]
+        provenance.append(
+            {
+                "plugin": key,
+                "selectedVersion": winner["version"],
+                "sourceId": winner["source"]["id"],
+                "sourceName": winner["source"]["name"],
+                "sourceRepository": winner["source"]["repo"],
+                "sourceIndex": winner["source"]["index"],
+                "originalAuthors": original_authors(original),
+                "originalRepositoryUrl": original.get("repositoryUrl"),
+                "packageUrl": original.get("url"),
+            }
+        )
+
+        for item in group:
+            if item is winner:
+                continue
+            health = item.get("health") or unique_urls.get(item["plugin"].get("url"), {})
+            if not health.get("ok"):
+                reason = "package unreachable"
+            elif item["version"] < winner["version"]:
+                reason = "lower version"
+            else:
+                reason = "lower source priority"
+            duplicate_rows.append(
+                {
+                    "plugin": key,
+                    "selectedSource": winner["source"]["name"],
+                    "selectedVersion": winner["version"],
+                    "skippedSource": item["source"]["name"],
+                    "skippedVersion": item["version"],
+                    "reason": reason,
+                }
+            )
+
+    included_by_source = Counter(item["source"]["id"] for item in selected.values())
+    name_to_id = {source["name"]: source["id"] for source in SOURCES}
+    skipped_by_id = Counter()
+    for item in duplicate_rows:
+        source_id = name_to_id.get(item["skippedSource"])
+        if source_id:
+            skipped_by_id[source_id] += 1
+
+    for state in source_status:
+        state["includedCount"] = included_by_source.get(state["id"], 0)
+        state["duplicateSkipped"] = skipped_by_id.get(state["id"], 0)
+
+    published_plugins = []
     plugin_rows = []
     added = updated = unchanged = 0
 
-    for key in sorted(merged, key=str.casefold):
-        entry = merged[key]
-        plugin = entry["plugin"]
-        source = entry["source"]
+    for key in sorted(selected, key=str.casefold):
+        winner = selected[key]
+        output_plugin = branded_plugin(winner["plugin"])
         old = previous.get(key)
 
         if old is None:
-            change = "Added"
+            change = "🆕 Added"
             added += 1
-        elif comparable(old) != comparable(plugin):
-            change = "Updated"
+        elif comparable(old) != comparable(output_plugin):
+            change = "🔄 Updated"
             updated += 1
         else:
-            change = "Unchanged"
+            change = "—"
             unchanged += 1
 
-        plugins.append(plugin)
-        upstream_status = plugin.get("status")
-        if upstream_status == 1:
-            upstream_status = "Active"
-        elif upstream_status is None:
-            upstream_status = "Not stated"
-
+        published_plugins.append(output_plugin)
         plugin_rows.append(
             {
                 "name": key,
-                "version": version_value(plugin),
-                "authors": authors_text(plugin),
-                "language": plugin.get("language", ""),
-                "source": source,
-                "upstreamStatus": upstream_status,
+                "version": winner["version"],
+                "language": output_plugin.get("language", ""),
+                "tvTypes": tv_types_text(output_plugin),
+                "sourceId": winner["source"]["id"],
+                "sourceName": winner["source"]["name"],
                 "change": change,
             }
         )
 
-    removed_plugins = []
-    for key in sorted(set(previous) - set(merged), key=str.casefold):
-        removed_plugins.append(
-            {"plugin": key, "version": version_value(previous[key])}
-        )
+    published_keys = {plugin_key(p) for p in published_plugins}
+    removed = sorted(set(previous) - published_keys, key=str.casefold)
 
     candidate_status = "READY"
     if failed_sources:
-        candidate_status = "BLOCKED - upstream fetch failure"
-    elif len(plugins) < 50:
+        candidate_status = "BLOCKED - upstream index failure"
+    elif len(published_plugins) < 50:
         candidate_status = "BLOCKED - safety floor"
 
     report = {
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "maintainer": MAINTAINER,
+        "shortcode": SHORTCODE,
         "candidateStatus": candidate_status,
+        "sourceHealth": {
+            "ok": sum(1 for x in source_status if x["ok"]),
+            "failed": sum(1 for x in source_status if not x["ok"]),
+        },
         "sourceStatus": source_status,
         "inactiveSources": INACTIVE_SOURCES,
         "previousPlugins": len(previous),
-        "uniquePlugins": len(plugins),
-        "sourceDistributionAfterDedup": included_by_source,
-        "duplicates": duplicates,
+        "uniquePlugins": len(published_plugins),
+        "packageHealth": {
+            "reachable": len(published_plugins),
+            "failed": len(failed_plugins),
+        },
+        "duplicates": duplicate_rows,
+        "failedPlugins": failed_plugins,
         "changes": {
             "added": added,
             "updated": updated,
             "unchanged": unchanged,
-            "removed": len(removed_plugins),
+            "removed": len(removed),
         },
-        "removedPlugins": removed_plugins,
+        "removedPlugins": removed,
     }
 
     repo_json = {
-        "name": "Adam Knight Extensions",
-        "description": "One-stop CloudStream repository aggregated from maintained upstream plugin indexes",
+        "name": "Adam Knight CloudStream Mega Repo",
+        "description": "Dynamic CloudStream mega repository maintained by Adam Knight",
         "manifestVersion": 1,
         "pluginLists": [
             "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/builds/plugins.json"
@@ -391,25 +553,28 @@ def main():
     }
 
     (output_dir / "plugins.json").write_text(
-        json.dumps(plugins, indent=2, ensure_ascii=False) + "\n"
+        json.dumps(published_plugins, indent=2, ensure_ascii=False) + "\n"
     )
     (output_dir / "repo.json").write_text(json.dumps(repo_json, indent=2) + "\n")
     (output_dir / "merge-report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False) + "\n"
     )
-    (output_dir / "STATUS.md").write_text(build_status_markdown(report, plugin_rows) + "\n")
-    (output_dir / "README.md").write_text(build_readme(report) + "\n")
+    (output_dir / "provenance.json").write_text(
+        json.dumps(provenance, indent=2, ensure_ascii=False) + "\n"
+    )
+    (output_dir / "STATUS.md").write_text(build_status(report, plugin_rows) + "\n")
+    (output_dir / "README.md").write_text(build_readme(report, plugin_rows) + "\n")
 
     print(json.dumps(report, indent=2, ensure_ascii=False))
 
     if failed_sources:
         raise RuntimeError(
-            "Publication blocked because these upstreams could not be fetched: "
+            "Publication blocked because these source indexes could not be fetched: "
             + ", ".join(failed_sources)
         )
-    if len(plugins) < 50:
+    if len(published_plugins) < 50:
         raise RuntimeError(
-            f"Safety check failed: only {len(plugins)} unique plugins were merged"
+            f"Safety check failed: only {len(published_plugins)} reachable plugins remain"
         )
 
 
