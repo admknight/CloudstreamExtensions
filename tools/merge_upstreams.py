@@ -539,9 +539,17 @@ def main():
             state["ok"] = True
             state["rawCount"] = len(plugins)
 
+            include = {
+                str(value).casefold()
+                for value in (source.get("include") or [])
+                if value is not None
+            }
+
             for plugin in plugins:
                 key = plugin_identity(plugin)
                 if not key:
+                    continue
+                if include and key not in include:
                     continue
                 candidates[key].append(
                     {

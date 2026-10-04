@@ -163,6 +163,80 @@
       "repo": "https://github.com/phisher98/CXXX",
       "index": "https://raw.githubusercontent.com/phisher98/CXXX/builds/plugins.json",
       "priority": 30
+    },
+    {
+      "id": "kim-recovery",
+      "name": "Kim Recovery Builds",
+      "repo": "https://github.com/kim20598/cloudstream-extensions-test",
+      "index": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+      "priority": 40,
+      "include": [
+        "DramaDrip",
+        "IndianTVProvider",
+        "UltimaBeta"
+      ]
+    },
+    {
+      "id": "nuyuls-recovery",
+      "name": "StreamPlay Recovery Builds",
+      "repo": "https://github.com/nuyuls79/StreamPlay-movie",
+      "index": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/plugins.json",
+      "priority": 40,
+      "include": [
+        "DramaFull",
+        "NetflixMirrorProvider"
+      ]
+    },
+    {
+      "id": "shakzz-recovery",
+      "name": "Shakzz Recovery Builds",
+      "repo": "https://github.com/Shakzz890/ShakzzCutie",
+      "index": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/plugins.json",
+      "priority": 40,
+      "include": [
+        "Extractors",
+        "GDIndex"
+      ]
+    },
+    {
+      "id": "mega-provider",
+      "name": "Mega Repository",
+      "repo": "https://github.com/self-similarity/MegaRepo",
+      "index": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/plugins.json",
+      "priority": 50,
+      "include": [
+        "MegaProvider"
+      ]
+    },
+    {
+      "id": "rowdy-recovery",
+      "name": "Rowdy Recovery Builds",
+      "repo": "https://github.com/RowdyRushya/rowdy-cs-extensions",
+      "index": "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/builds/plugins.json",
+      "priority": 50,
+      "include": [
+        "Rowdy"
+      ]
+    },
+    {
+      "id": "cloudstreamhub-recovery",
+      "name": "CloudStreamHub Recovery Builds",
+      "repo": "https://github.com/Emre-Kahveci/CloudStreamHub",
+      "index": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/plugins.json",
+      "priority": 40,
+      "include": [
+        "RareFilmm"
+      ]
+    },
+    {
+      "id": "manual-recovery",
+      "name": "Adam Knight Curated Recovery",
+      "repo": "https://github.com/admknight/CloudstreamExtensions",
+      "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/recovery_plugins.json",
+      "priority": 90,
+      "include": [
+        "OnlineMoviesHinditProvider"
+      ]
     }
   ],
   "inactive": [
