@@ -249,6 +249,24 @@
     "fileHash": "sha256-4ccdc344ed2f5ed48136751a3eccbbca9926eabb6f08a9fdf44f45edebe1628d"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=altadefinizione.vodka&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 10734,
+    "status": 1,
+    "language": "it",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 1,
+    "internalName": "AltadefinizioneProvider",
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/AltadefinizioneProvider.cs3",
+    "name": "[Movies] AltadefinizioneProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniChan.cs3",
     "status": 1,
     "version": 14,
@@ -1006,16 +1024,16 @@
     "name": "[Anime] AnimeUAProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AnimeUnity.cs3",
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/AnimeUnity.cs3",
     "status": 1,
-    "version": 17,
+    "version": 26,
     "name": "[Anime] AnimeUnity",
     "internalName": "AnimeUnity",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "description": "Anime da AnimeUnity",
-    "fileSize": 40291,
+    "description": "Anime from AnimeUnity",
+    "fileSize": 134701,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "it",
     "tvTypes": [
@@ -1023,9 +1041,9 @@
       "Anime",
       "OVA"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/master/AnimeUnity/animeunity_icon.png",
+    "iconUrl": "https://www.animeunity.so/apple-touch-icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-e46e0dc3e3990a78a62bb2a74208864e699096ce845ec48a1c6feeb2989e7be6"
+    "fileHash": "sha256-a0570b1cab821b39aaa3e46749b0a016d92d8498bf31a124a01af9c7e2c82343"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animevietsub.app&sz=%size%",
@@ -1346,6 +1364,24 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=aniworld.to&sz=%size%",
     "apiVersion": 1,
     "fileHash": "sha256-6d1f50c300105f2abd572b5c9c433294e6a58b6e1ea4b456d09b2d27d0939e4f"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=aniyomi.org&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 36701,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 8,
+    "internalName": "AniyomiProvider",
+    "description": "Use Aniyomi Extensions in CloudStream!\nNot guaranteed to work perfectly.",
+    "url": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/AniyomiProvider.cs3",
+    "name": "[Other] AniyomiProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anizone.cs3",
@@ -2589,6 +2625,27 @@
     "fileHash": "sha256-88ed4ef2a597f419151b603d67421442ea73c87ab5736816c2bbc2a84f80c34a"
   },
   {
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/CorsaroNero.cs3",
+    "status": 0,
+    "version": 4,
+    "name": "[Movies] CorsaroNero",
+    "internalName": "CorsaroNero",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Torrents from Il Corsaro Nero. If something doesn't work the torrent has probably not enough seeds",
+    "fileSize": 32147,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "it",
+    "tvTypes": [
+      "Movie",
+      "Torrent"
+    ],
+    "iconUrl": "https://ilcorsaronero.link/assets/images/icon-dca0f2c8f780ee155024c67b63f5ebc5.svg",
+    "apiVersion": 1,
+    "fileHash": "sha256-0435049c33d57ba5e12a2e77b539a6f9bcacb9e2662be304a3a0e986af70e88a"
+  },
+  {
     "iconUrl": "https://cricfy.pro/wp-content/uploads/2024/11/cropped-cricfytv-2.png",
     "fileHash": "sha256-38ab7771b21deec043c7a495875c977571b803aefbdd57e3c618306bb27033b9",
     "apiVersion": 1,
@@ -3830,6 +3887,27 @@
     "fileHash": "sha256-a42dc6842c2de98ab98a65a662aa6f69ad60608b5397faf36cdd15ffc2653753"
   },
   {
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/FshareProvider.cs3",
+    "status": 1,
+    "version": 35,
+    "name": "[Movies] FshareProvider",
+    "internalName": "FshareProvider",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Download FullHD, 2K, 4K with Fshare Vip account",
+    "fileSize": 176879,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "iconUrl": "https://play-lh.googleusercontent.com/TOTj0uMWp7cXkjXDXkcTZnPigUmpLRRiH956lHRJxStlY7ucxmtwMs_Kr2wOWYm0fSY=w240-h480-rw",
+    "apiVersion": 1,
+    "fileHash": "sha256-2d30c914d5d105040890193a8c44f2e980b6a8ae184c76e493d507804af43f9f"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=fullhdfilm.us&sz=%size%",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -3890,14 +3968,14 @@
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/FullRaces.cs3",
     "status": 1,
-    "version": 13,
+    "version": 14,
     "name": "[Live] FullRaces",
     "internalName": "FullRaces",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Formula 1 is one of the most popular and dramatic sports in the world. You can watch Formula One races replays videos online and enjoy every moment of this exciting sports event. We offer to watch F1 Full Races replays FREE in HD",
-    "fileSize": 42757,
+    "fileSize": 47066,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -3906,7 +3984,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=fullraces.com&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-dfd6ce5f70d3a26c1a12e05939ecbc289edec285fc873374a66606ed806650db"
+    "fileHash": "sha256-c1d96d8217df9f25f7ee94ffed1cd6ddee949833168948153aba02658c46b955"
   },
   {
     "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FullReplays.cs3",
@@ -4155,6 +4233,24 @@
     "iconUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/master/GuardaSerie/GuardaSerie_icon.png",
     "apiVersion": 1,
     "fileHash": "sha256-f826d46e4c44d5ad60fbdf31ae061eab3ac58639de3d78c3af086f456444b84a"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=guardaserie.ceo&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 10898,
+    "status": 1,
+    "language": "it",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "GuardaSerieProvider",
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/GuardaSerieProvider.cs3",
+    "name": "[Movies] GuardaSerieProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Hahomoe.cs3",
@@ -4635,6 +4731,29 @@
     "name": "[Other] IfsaLog"
   },
   {
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/IlCorsaroViola.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "[Movies] IlCorsaroViola",
+    "internalName": "IlCorsaroViola",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Torrents from Il Corsaro Viola",
+    "fileSize": 45226,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "it",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Torrent",
+      "Documentary"
+    ],
+    "iconUrl": "https://i.imgur.com/OPM9e9p.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-189750d23df33b723669995522024fda5ee0ddfd873c3bae333132dc3dcb1822"
+  },
+  {
     "iconUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3vCp6N1K4bECoYRQD-cisJF2_6V_Hk01ZhDmoPR2JuM8O5qr4MqrPO1munM9cRlleBBSK6odYhLtDBWv4E3vhPhynlmS5hVVtJZShHoGA5REQ8_3v8SIlccTEqzVQu2UJyNYQdJNrKIfWy66RQeT0D-CcmFCbHPz5023H6p2v5fv4NVloZ5Rqo_yGrIY/s320/iNat-Box-App.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -4778,6 +4897,25 @@
     "jarHash": "sha256-d38e909bceba6c65c47a028a8aadfe83d09da976ffaef9cb2dd35a7c227b8453"
   },
   {
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/IPTV.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "[Live] IPTV",
+    "internalName": "IPTV",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "General IPTV player. Add a list in the settings and you'll see it in the plugins list in the home",
+    "fileSize": 40065,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://www.shutterstock.com/image-vector/iptv-vector-line-icon-ip-260nw-1841427610.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-097ead934efa159b6bca81c416fd4d4f109d972b3a826947253d2c6f32ccf953"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IPTVPlayer.cs3",
     "status": 1,
     "version": 9,
@@ -4796,6 +4934,24 @@
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/IPTV.png",
     "apiVersion": 1,
     "fileHash": "sha256-e4c0a43406c81e1f8281e2c5c4e44ff1b754386f172752ba6583516a5f227329"
+  },
+  {
+    "iconUrl": "https://www.shutterstock.com/image-vector/iptv-vector-line-icon-ip-260nw-1841427610.jpg",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 30703,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 9,
+    "internalName": "IPTVProvider",
+    "description": "Cần nhập link IPTV để xem",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/IPTVProvider.cs3",
+    "name": "[Live] IPTVProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IStreamFlare.cs3",
@@ -6108,6 +6264,24 @@
     "fileHash": "sha256-c74a4d3fd87fc546aab0cfa10011226b50645b344ac8fc10b646ecf9067fa78c"
   },
   {
+    "iconUrl": "https://monplayer.org/images/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 55806,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 9,
+    "internalName": "MonPlayerProvider",
+    "description": "Dùng được những link ghim trên nhóm tele",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/MonPlayerProvider.cs3",
+    "name": "[Other] MonPlayerProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/MovieBox.cs3",
     "status": 1,
     "version": 12,
@@ -6452,6 +6626,26 @@
     "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxoF3lscri32oVf0iQlhbjFEoUn2xg3OmQIx4wYdDmqw&s",
     "apiVersion": 1,
     "fileHash": "sha256-ff8e09bb07cb94fad7216e8c6a29bdff3d5758e6f7f1c4b68bacad18935bfe5a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/Nebula.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "[Other] Nebula",
+    "internalName": "Nebula",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Plugin to watch the free videos and ONLY THE FREE VIDEOS from nebula.tv",
+    "fileSize": 24084,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "Others"
+    ],
+    "iconUrl": "https://nebula.tv/apple-touch-icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-113e9ef9a8f2f2a71500c74e250b9525572d1be5ab9e145fa619f8fc9eca98a8"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Nekokun.cs3",
@@ -8355,6 +8549,32 @@
     "fileHash": "sha256-ee3a79970ebc85c46f1e4eb12ec21bdc9c3f9b64945d050212f2cfaf6d805821"
   },
   {
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/SimklProvider.cs3",
+    "status": 1,
+    "version": 2,
+    "name": "[Movies] SimklProvider",
+    "internalName": "SimklProvider",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "No Streaming. This is just to open the info page of a show from the simkl library",
+    "fileSize": 11786,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "AnimeMovie",
+      "Anime",
+      "OVA",
+      "TvSeries",
+      "Movie",
+      "Documentary",
+      "Cartoon"
+    ],
+    "iconUrl": "https://eu.simkl.in/img_favicon/v2/favicon-192x192.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-a11f30544c4c0754aed0cd649c8c2205c0907a7edc6b45621217338f46043f9e"
+  },
+  {
     "iconUrl": "https://simpsonsua.tv/templates/simpsonsua/images/favicon.ico",
     "fileHash": "sha256-615e75b2fcda1af0c950aa70991573c427e3acfbee0b4642374d63ef127eae7d",
     "apiVersion": 1,
@@ -8520,6 +8740,32 @@
     "name": "[Live] SportzxProvider"
   },
   {
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/StreamCenter.cs3",
+    "status": 1,
+    "version": 10,
+    "name": "[Live] StreamCenter",
+    "internalName": "StreamCenter",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Film, Serie TV, Anime e TV in un unico posto.",
+    "fileSize": 1667603,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "it",
+    "tvTypes": [
+      "TvSeries",
+      "Movie",
+      "AsianDrama",
+      "Anime",
+      "Torrent",
+      "Live",
+      "Others"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/master/StreamCenter/icon.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-bb45078f6ed06beae1fd61d820f7512f24d3bedecbe1cbf23fd7638f59dc0c5f"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Streamed.cs3",
     "status": 1,
     "version": 29,
@@ -8604,14 +8850,14 @@
   {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
     "status": 1,
-    "version": 61,
+    "version": 62,
     "name": "[Indian] StreamHubOne",
     "internalName": "StreamHubOne",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "StreamHub One - Multilingual provider",
-    "fileSize": 989716,
+    "fileSize": 990502,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -8623,7 +8869,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/images%20(1).jpeg",
     "apiVersion": 1,
-    "fileHash": "sha256-e4914d6073281f9bf075c3a61b2bf92c980791d05918420cbcd121cd46f19fca"
+    "fileHash": "sha256-968f6b6ce5d1d547903f070f3b9ba6585270a8802d61b8f5f09bd8d23af8f496"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3",
@@ -8715,6 +8961,26 @@
     "iconUrl": "https://files.catbox.moe/ol63rm.png",
     "apiVersion": 1,
     "fileHash": "sha256-1b3c6dccda9be646c92d641e602e6fa1505151f9bf5cd430d64215544d0b5f9a"
+  },
+  {
+    "iconUrl": "https://www.stremio.com/website/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 109635,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "version": 7,
+    "internalName": "StremioProvider",
+    "description": "Addon use Streamio",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
+    "name": "[Tools] StremioProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StremioX.cs3",
@@ -8918,6 +9184,21 @@
     "description": "Синхронізація CloudStream між пристроями (закладки, продовження перегляду, налаштування, пошук, розширення). Працює з власним сервером CloudStream Sync Server.",
     "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3",
     "name": "[Tools] SyncPlugin"
+  },
+  {
+    "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 42324,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "version": 9,
+    "internalName": "SyncProvider",
+    "description": "Đồng bộ cài đặt và lịch sử xem giữa các thiết bị",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/SyncProvider.cs3",
+    "name": "[Other] Cross-Device Sync"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/SyncStream.cs3",
@@ -9875,6 +10156,25 @@
     "name": "[Anime] UnimayProvider"
   },
   {
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/Vavoo.cs3",
+    "status": 1,
+    "version": 7,
+    "name": "[Live] Vavoo",
+    "internalName": "Vavoo",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "⚠️ W.I.P. ⚠️ TV channels from vavoo.to",
+    "fileSize": 36264,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "tvTypes": [
+      "Live"
+    ],
+    "iconUrl": "https://vavoo.tv/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-7344294448821ac3215ae67b0a1527b0078f5f92774ce10a1015fb7e09f36863"
+  },
+  {
     "url": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/VegaMovies.cs3",
     "status": 1,
     "version": 82,
@@ -9915,6 +10215,26 @@
     "description": "FullHD",
     "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/VipPhimProvider.cs3",
     "name": "[Movies] VipPhimProvider"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=uncutmaza.cc&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 313377,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "version": 35,
+    "internalName": "ViStreamProvider",
+    "description": "Download FullHD, 2K, 4K from torrent and cloud driver",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
+    "name": "[Movies] ViStreamProvider"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Viu.cs3",
@@ -10385,6 +10705,24 @@
     "fileHash": "sha256-bf0a5c0071420d61095e366cdb977cb521f359599eac720868db276fc5336520"
   },
   {
+    "iconUrl": "https://play-lh.googleusercontent.com/gMB8Eq9g9Uq6CXiOHcqatXpx-6HTexAzcQibTgpqAE756Fnt1Jyyp0j7S3UDKPztkA=w480-h960-rw",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 28540,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 1,
+    "internalName": "XtreamIPTVProvider",
+    "description": "Cần nhập link Xtream IPTV, tài khoản và mật khẩu để xem",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
+    "name": "[Live] XtreamIPTVProvider"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xvideos.cs3",
     "status": 1,
     "version": 2,
@@ -10546,28 +10884,23 @@
     "fileHash": "sha256-8b613d44af2acd30aca70ea98bb454556bfba191bf2557550ee332518dd3f00a"
   },
   {
-    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Youtube.cs3",
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/YouTube.cs3",
     "status": 1,
-    "version": 2,
-    "name": "[Live] YouTube",
-    "internalName": "Youtube",
+    "version": 15,
+    "name": "[Other] YouTube",
+    "internalName": "YouTube",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 129346,
+    "description": "Videos, playlists and channels from YouTube",
+    "fileSize": 45230,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "language": "ar",
     "tvTypes": [
-      "Movie",
-      "TvSeries",
-      "Live",
-      "Anime",
-      "Music",
-      "Documentary"
+      "Others"
     ],
-    "iconUrl": "https://raw.githubusercontent.com/Abodabodd/Oldarabrepo/refs/heads/main/img/IMG_%D9%A2%D9%A0%D9%A2%D9%A5%D9%A1%D9%A2%D9%A0%D9%A6_%D9%A1%D9%A7%D9%A2%D9%A6%D9%A1%D9%A6.jpg",
+    "iconUrl": "https://www.youtube.com/s/desktop/711fd789/img/logos/favicon_144x144.png",
     "apiVersion": 1,
-    "fileHash": "sha256-dc1d7eed7ec6bdf47ff36d1ee60b1062e974399ee2995563f62229114b63e530"
+    "fileHash": "sha256-577aad4b037e48ea46c6663a49b47d681014227866eb1980327ba071642c5198"
   },
   {
     "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/3840px-YouTube_full-color_icon_%282017%29.svg.png",

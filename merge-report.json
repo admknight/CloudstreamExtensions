@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-04 17:37:16 UTC",
+  "generatedAt": "2026-10-04 23:04:26 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
   "sourceHealth": {
-    "ok": 31,
+    "ok": 36,
     "failed": 0
   },
   "sourceStatus": [
@@ -112,9 +112,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 39,
-      "includedCount": 37,
+      "includedCount": 36,
       "packageFailed": 0,
-      "duplicateSkipped": 2
+      "duplicateSkipped": 3
     },
     {
       "id": "alyss",
@@ -220,9 +220,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 18,
-      "includedCount": 18,
+      "includedCount": 17,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 1
     },
     {
       "id": "reflex",
@@ -379,6 +379,66 @@
       "includedCount": 1,
       "packageFailed": 0,
       "duplicateSkipped": 0
+    },
+    {
+      "id": "dogior",
+      "name": "doGior's Had Enough",
+      "repo": "https://github.com/doGior/doGiorsHadEnough",
+      "index": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+      "priority": 100,
+      "ok": true,
+      "rawCount": 15,
+      "includedCount": 9,
+      "packageFailed": 0,
+      "duplicateSkipped": 6
+    },
+    {
+      "id": "gian-fr",
+      "name": "Gian-Fr Italian Provider",
+      "repo": "https://github.com/Gian-Fr/ItalianProvider",
+      "index": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json",
+      "priority": 100,
+      "ok": true,
+      "rawCount": 2,
+      "includedCount": 2,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "cs-kraptor",
+      "name": "Kraptor cs-kraptor",
+      "repo": "https://github.com/Kraptor123/cs-kraptor",
+      "index": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/refs/heads/builds/plugins.json",
+      "priority": 100,
+      "ok": true,
+      "rawCount": 67,
+      "includedCount": 0,
+      "packageFailed": 41,
+      "duplicateSkipped": 26
+    },
+    {
+      "id": "aniyomi-compat",
+      "name": "Aniyomi Compat",
+      "repo": "https://github.com/CranberrySoup/AniyomiCompatExtension",
+      "index": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/plugins.json",
+      "priority": 100,
+      "ok": true,
+      "rawCount": 1,
+      "includedCount": 1,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
+    },
+    {
+      "id": "tearrs-vietnamese",
+      "name": "Tearrs Vietnamese Extension",
+      "repo": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+      "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+      "priority": 100,
+      "ok": true,
+      "rawCount": 7,
+      "includedCount": 7,
+      "packageFailed": 0,
+      "duplicateSkipped": 0
     }
   ],
   "inactiveSources": [
@@ -396,31 +456,63 @@
     }
   ],
   "categoryCounts": {
-    "Movies": 128,
+    "Movies": 135,
     "Anime": 64,
     "Indian": 74,
     "Arabic": 35,
     "Asian": 49,
-    "Live": 43,
+    "Live": 47,
     "Sports": 2,
     "Games": 21,
-    "Tools": 11,
+    "Tools": 12,
     "Adult": 74,
-    "Other": 15
+    "Other": 20
   },
-  "previousPlugins": 515,
-  "uniquePlugins": 516,
+  "previousPlugins": 516,
+  "uniquePlugins": 533,
   "packageHealth": {
-    "reachable": 516,
-    "failed": 2
+    "reachable": 533,
+    "failed": 43
   },
   "duplicates": [
+    {
+      "plugin": "AltaDefinizione",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 25,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 8,
+      "reason": "lower version"
+    },
     {
       "plugin": "AniKoto",
       "selectedSource": "CNC Repo (All Language)",
       "selectedVersion": 10,
       "skippedSource": "Phisher Repo",
       "skippedVersion": 6,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeciX",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 21,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 88,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "AnimeUnity",
+      "selectedSource": "doGior's Had Enough",
+      "selectedVersion": 26,
+      "skippedSource": "DieGon Repository",
+      "skippedVersion": 17,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeWorld",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 20,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 18,
       "reason": "lower version"
     },
     {
@@ -440,6 +532,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "Arte",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 5,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 4,
+      "reason": "lower version"
+    },
+    {
       "plugin": "BanglaPlex",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 8,
@@ -448,12 +548,116 @@
       "reason": "lower version"
     },
     {
+      "plugin": "BelgeselX",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 12,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 41,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "CalcioStreaming",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 20,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 15,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "CizgiMax",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 8,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 36,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "Ddizi",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 10,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 19,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "DiziBox",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 23,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 37,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "DiziKorea",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 29,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 35,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "Dizilla",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 39,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 111,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "DiziMom",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 35,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 61,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "DiziPal",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 32,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 89,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "DiziYou",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 23,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 49,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "FilmMakinesi",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 40,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 70,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "FilmModu",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 15,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 41,
+      "reason": "package unreachable"
+    },
+    {
       "plugin": "FootReplays",
       "selectedSource": "Redowan CloudStream",
       "selectedVersion": 6,
       "skippedSource": "cs-karma",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "FullHDFilmizlesene",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 27,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 72,
+      "reason": "package unreachable"
     },
     {
       "plugin": "FullPorner",
@@ -472,6 +676,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "HDFilmCehennemi",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 23,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 97,
+      "reason": "package unreachable"
+    },
+    {
       "plugin": "Hqporner",
       "selectedSource": "Turkish Providers Repository | @KekikAkademi",
       "selectedVersion": 4,
@@ -488,12 +700,36 @@
       "reason": "lower version"
     },
     {
+      "plugin": "InatBox",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 24,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 57,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "JetFilmizle",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 41,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 62,
+      "reason": "package unreachable"
+    },
+    {
       "plugin": "Krmzy",
       "selectedSource": "cs-karma",
       "selectedVersion": 2,
       "skippedSource": "Re-3arabi",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "KultFilmler",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 14,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 31,
+      "reason": "package unreachable"
     },
     {
       "plugin": "Latanime",
@@ -563,6 +799,14 @@
       "plugin": "RareFilmm",
       "selectedSource": "CloudStreamHub Recovery Builds",
       "selectedVersion": 15,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 20,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "RareFilmm",
+      "selectedSource": "CloudStreamHub Recovery Builds",
+      "selectedVersion": 15,
       "skippedSource": "Turkish Providers Repository | @KekikAkademi",
       "skippedVersion": 3,
       "reason": "lower version"
@@ -573,6 +817,46 @@
       "selectedVersion": 4,
       "skippedSource": "Phisher Repo",
       "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "RecTV",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 97,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 43,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "SetFilmIzle",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 24,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 42,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "SezonlukDizi",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 6,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 40,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "SinemaCX",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 18,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 35,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "StreamingCommunity",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 53,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 34,
       "reason": "lower version"
     },
     {
@@ -592,6 +876,22 @@
       "reason": "lower version"
     },
     {
+      "plugin": "TurkAnime",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 14,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 34,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "TV",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 5,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
       "plugin": "TVGarden",
       "selectedSource": "cs-karma",
       "selectedVersion": 11,
@@ -608,6 +908,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "WebteIzle",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 15,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 53,
+      "reason": "package unreachable"
+    },
+    {
       "plugin": "Xhamster",
       "selectedSource": "Turkish Providers Repository | @KekikAkademi",
       "selectedVersion": 1,
@@ -622,9 +930,249 @@
       "skippedSource": "CXXX",
       "skippedVersion": 2,
       "reason": "lower source priority"
+    },
+    {
+      "plugin": "YouTube",
+      "selectedSource": "doGior's Had Enough",
+      "selectedVersion": 15,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 39,
+      "reason": "package unreachable"
+    },
+    {
+      "plugin": "YouTube",
+      "selectedSource": "doGior's Had Enough",
+      "selectedVersion": 15,
+      "skippedSource": "Re-3arabi",
+      "skippedVersion": 2,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "YTS",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 11,
+      "skippedSource": "Kraptor cs-kraptor",
+      "skippedVersion": 42,
+      "reason": "package unreachable"
     }
   ],
   "failedPlugins": [
+    {
+      "plugin": "Animeler",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 41,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Animeler.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "Animely",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 4,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Animely.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "AnimPow",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 7,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/AnimPow.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "Anizium",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 25,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Anizium.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "AsyaAnimeleri",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 24,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/AsyaAnimeleri.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "AsyaFanatiklerim",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 22,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/AsyaFanatiklerim.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "AsyaMinik",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 17,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/AsyaMinik.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "AsyaWatch",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 41,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/AsyaWatch.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "CizgiveDizi",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 50,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/CizgiveDizi.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "DiziAsia",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 20,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/DiziAsia.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "DiziAsya",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 27,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/DiziAsya.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "DiziFilmORG",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 22,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/DiziFilmORG.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "Dizigecesi",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 4,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Dizigecesi.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "DiziLife",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 58,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/DiziLife.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "DiziPalOrijinal",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 45,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/DiziPalOrijinal.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "Dizipod",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 12,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Dizipod.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "DiziYo",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 74,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/DiziYo.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "DramaDizilerim",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 3,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/DramaDizilerim.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "FilmEkseni",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 50,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/FilmEkseni.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "FilmHane",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 43,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/FilmHane.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "Filmzal",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 16,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Filmzal.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "GinikoCanli",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 15,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/GinikoCanli.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "HDFilmDelisi",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 18,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/HDFilmDelisi.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "HDFilmizle",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 25,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/HDFilmizle.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "KickTR",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 17,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/KickTR.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "KraptorPlus",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 86,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/KraptorPlus.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "MirrorVerse",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 38,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/MirrorVerse.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
     {
       "plugin": "NguonCProvider",
       "sourceId": "vietnam",
@@ -634,18 +1182,130 @@
       "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
+      "plugin": "OnePaceTr",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 13,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/OnePaceTr.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "OpenAnime",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 28,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/OpenAnime.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "SeiCode",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 25,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/SeiCode.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "SelcukFlix",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 49,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/SelcukFlix.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "SineWix",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 33,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/SineWix.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "Sinezy",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 40,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Sinezy.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
       "plugin": "SubNhanhProvider",
       "sourceId": "vietnam",
       "sourceName": "Vietnamese CloudStream Index",
       "version": 9,
       "url": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/SubNhanhProvider.cs3",
       "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "TrAnimeIzle",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 15,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/TrAnimeIzle.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "Turkdizileri",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 33,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/Turkdizileri.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "TvDiziler",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 18,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/TvDiziler.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "WebDramaTurkey",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 39,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/WebDramaTurkey.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "WFilmizle",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 23,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/WFilmizle.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "YabanciDizi",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 18,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/YabanciDizi.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "YeniKaynak",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 11,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/YeniKaynak.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "plugin": "YesilCamTv",
+      "sourceId": "cs-kraptor",
+      "sourceName": "Kraptor cs-kraptor",
+      "version": 9,
+      "url": "https://raw.githubusercontent.com/Kraptor123/cs-kraptor/builds/YesilCamTv.cs3",
+      "error": "HTTPError: HTTP Error 404: Not Found"
     }
   ],
   "changes": {
-    "added": 1,
+    "added": 17,
     "updated": 4,
-    "unchanged": 511,
+    "unchanged": 512,
     "removed": 0
   },
   "removedPlugins": []

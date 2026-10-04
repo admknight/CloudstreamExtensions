@@ -205,6 +205,24 @@
     "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AltaDefinizione.cs3"
   },
   {
+    "plugin": "AltadefinizioneProvider",
+    "originalName": "AltadefinizioneProvider",
+    "publishedName": "[Movies] AltadefinizioneProvider",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "gian-fr",
+    "sourceName": "Gian-Fr Italian Provider",
+    "sourceRepository": "https://github.com/Gian-Fr/ItalianProvider",
+    "sourceIndex": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json",
+    "originalAuthors": [
+      "Gian-Fr",
+      "Adippe"
+    ],
+    "originalRepositoryUrl": "https://github.com/Gian-Fr/ItalianProvider",
+    "packageUrl": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/AltadefinizioneProvider.cs3"
+  },
+  {
     "plugin": "AniChan",
     "originalName": "AniChan",
     "publishedName": "[Anime] AniChan",
@@ -826,17 +844,16 @@
     "publishedName": "[Anime] AnimeUnity",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 17,
-    "sourceId": "diegon",
-    "sourceName": "DieGon Repository",
-    "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
-    "sourceIndex": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/plugins.json",
+    "selectedVersion": 26,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
     "originalAuthors": [
-      "doGior",
-      "DieGon"
+      "doGior"
     ],
-    "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
-    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AnimeUnity.cs3"
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/AnimeUnity.cs3"
   },
   {
     "plugin": "AnimeVietsubProvider",
@@ -1093,6 +1110,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Aniworld.cs3"
+  },
+  {
+    "plugin": "AniyomiProvider",
+    "originalName": "AniyomiProvider",
+    "publishedName": "[Other] AniyomiProvider",
+    "category": "Other",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 8,
+    "sourceId": "aniyomi-compat",
+    "sourceName": "Aniyomi Compat",
+    "sourceRepository": "https://github.com/CranberrySoup/AniyomiCompatExtension",
+    "sourceIndex": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/plugins.json",
+    "originalAuthors": [
+      "CranberrySoup"
+    ],
+    "originalRepositoryUrl": "https://github.com/CranberrySoup/AniyomiCompatExtension",
+    "packageUrl": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/AniyomiProvider.cs3"
   },
   {
     "plugin": "Anizone",
@@ -2105,6 +2139,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/CornHubProvider.cs3"
+  },
+  {
+    "plugin": "CorsaroNero",
+    "originalName": "CorsaroNero",
+    "publishedName": "[Movies] CorsaroNero",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 4,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+    "originalAuthors": [
+      "doGior"
+    ],
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/CorsaroNero.cs3"
   },
   {
     "plugin": "CricifyProvider",
@@ -3150,6 +3201,23 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/FreePornVideos.cs3"
   },
   {
+    "plugin": "FshareProvider",
+    "originalName": "FshareProvider",
+    "publishedName": "[Movies] FshareProvider",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 35,
+    "sourceId": "tearrs-vietnamese",
+    "sourceName": "Tearrs Vietnamese Extension",
+    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/FshareProvider.cs3"
+  },
+  {
     "plugin": "FullHDFilm",
     "originalName": "FullHDFilm",
     "publishedName": "[Movies] FullHDFilm",
@@ -3206,7 +3274,7 @@
     "publishedName": "[Live] FullRaces",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 13,
+    "selectedVersion": 14,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -3425,6 +3493,24 @@
     ],
     "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
     "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/GuardaSerie.cs3"
+  },
+  {
+    "plugin": "GuardaSerieProvider",
+    "originalName": "GuardaSerieProvider",
+    "publishedName": "[Movies] GuardaSerieProvider",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "gian-fr",
+    "sourceName": "Gian-Fr Italian Provider",
+    "sourceRepository": "https://github.com/Gian-Fr/ItalianProvider",
+    "sourceIndex": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json",
+    "originalAuthors": [
+      "Gian-Fr",
+      "Adippe"
+    ],
+    "originalRepositoryUrl": "https://github.com/Gian-Fr/ItalianProvider",
+    "packageUrl": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/GuardaSerieProvider.cs3"
   },
   {
     "plugin": "Hahomoe",
@@ -3837,6 +3923,23 @@
     "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3"
   },
   {
+    "plugin": "IlCorsaroViola",
+    "originalName": "IlCorsaroViola",
+    "publishedName": "[Movies] IlCorsaroViola",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+    "originalAuthors": [
+      "doGior"
+    ],
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/IlCorsaroViola.cs3"
+  },
+  {
     "plugin": "InatBox",
     "originalName": "InatBox",
     "publishedName": "[Live] InatBox",
@@ -3957,6 +4060,24 @@
     "packageUrl": "https://raw.githubusercontent.com/recloudstream/extensions/builds/InvidiousProvider.cs3"
   },
   {
+    "plugin": "IPTV",
+    "originalName": "IPTV",
+    "publishedName": "[Live] IPTV",
+    "category": "Live",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+    "originalAuthors": [
+      "anhdaden",
+      "dogior"
+    ],
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/IPTV.cs3"
+  },
+  {
     "plugin": "IPTVPlayer",
     "originalName": "IPTVPlayer",
     "publishedName": "[Live] IPTVPlayer",
@@ -3972,6 +4093,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IPTVPlayer.cs3"
+  },
+  {
+    "plugin": "IPTVProvider",
+    "originalName": "IPTVProvider",
+    "publishedName": "[Live] IPTVProvider",
+    "category": "Live",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 9,
+    "sourceId": "tearrs-vietnamese",
+    "sourceName": "Tearrs Vietnamese Extension",
+    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/IPTVProvider.cs3"
   },
   {
     "plugin": "IStreamFlare",
@@ -5066,6 +5204,23 @@
     "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/MonoschinosProvider.cs3"
   },
   {
+    "plugin": "MonPlayerProvider",
+    "originalName": "MonPlayerProvider",
+    "publishedName": "[Other] MonPlayerProvider",
+    "category": "Other",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 9,
+    "sourceId": "tearrs-vietnamese",
+    "sourceName": "Tearrs Vietnamese Extension",
+    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/MonPlayerProvider.cs3"
+  },
+  {
     "plugin": "MovieBox",
     "originalName": "MovieBox",
     "publishedName": "[Indian] MovieBox",
@@ -5336,6 +5491,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
     "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/MyCimaProvider.cs3"
+  },
+  {
+    "plugin": "Nebula",
+    "originalName": "Nebula",
+    "publishedName": "[Other] Nebula",
+    "category": "Other",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+    "originalAuthors": [
+      "doGior"
+    ],
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/Nebula.cs3"
   },
   {
     "plugin": "Nekokun",
@@ -6925,6 +7097,23 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ShowBox.cs3"
   },
   {
+    "plugin": "SimklProvider",
+    "originalName": "SimklProvider",
+    "publishedName": "[Movies] SimklProvider",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 2,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+    "originalAuthors": [
+      "doGior"
+    ],
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/SimklProvider.cs3"
+  },
+  {
     "plugin": "SimpsonsUATvProvider",
     "originalName": "SimpsonsUATvProvider",
     "publishedName": "[Movies] SimpsonsUATvProvider",
@@ -7061,6 +7250,23 @@
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SportzxProvider.cs3"
   },
   {
+    "plugin": "StreamCenter",
+    "originalName": "StreamCenter",
+    "publishedName": "[Live] StreamCenter",
+    "category": "Live",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 10,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+    "originalAuthors": [
+      "Italiani"
+    ],
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/StreamCenter.cs3"
+  },
+  {
     "plugin": "Streamed",
     "originalName": "Streamed",
     "publishedName": "[Live] Streamed",
@@ -7134,7 +7340,7 @@
     "publishedName": "[Indian] StreamHubOne",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 61,
+    "selectedVersion": 62,
     "sourceId": "desi",
     "sourceName": "Desi Extensions",
     "sourceRepository": "https://github.com/Faisal0786/Desi",
@@ -7214,6 +7420,24 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StremioAddon.cs3"
+  },
+  {
+    "plugin": "StremioProvider",
+    "originalName": "StremioProvider",
+    "publishedName": "[Tools] StremioProvider",
+    "category": "Tools",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 7,
+    "sourceId": "tearrs-vietnamese",
+    "sourceName": "Tearrs Vietnamese Extension",
+    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden",
+      "hexated"
+    ],
+    "originalRepositoryUrl": "https://codeberg.org/frezza147/test",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3"
   },
   {
     "plugin": "StremioX",
@@ -7384,6 +7608,24 @@
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3"
+  },
+  {
+    "plugin": "SyncProvider",
+    "originalName": "Cross-Device Sync",
+    "publishedName": "[Other] Cross-Device Sync",
+    "category": "Other",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 9,
+    "sourceId": "tearrs-vietnamese",
+    "sourceName": "Tearrs Vietnamese Extension",
+    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden",
+      "RowdyRushya"
+    ],
+    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/SyncProvider.cs3"
   },
   {
     "plugin": "SyncStream",
@@ -8169,6 +8411,23 @@
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UnimayProvider.cs3"
   },
   {
+    "plugin": "Vavoo",
+    "originalName": "Vavoo",
+    "publishedName": "[Live] Vavoo",
+    "category": "Live",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 7,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
+    "originalAuthors": [
+      "doGior"
+    ],
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/Vavoo.cs3"
+  },
+  {
     "plugin": "VegaMovies",
     "originalName": "VegaMovies",
     "publishedName": "[Indian] VegaMovies",
@@ -8201,6 +8460,24 @@
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
     "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/VipPhimProvider.cs3"
+  },
+  {
+    "plugin": "ViStreamProvider",
+    "originalName": "ViStreamProvider",
+    "publishedName": "[Movies] ViStreamProvider",
+    "category": "Movies",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 35,
+    "sourceId": "tearrs-vietnamese",
+    "sourceName": "Tearrs Vietnamese Extension",
+    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden",
+      "hexated"
+    ],
+    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3"
   },
   {
     "plugin": "Viu",
@@ -8596,6 +8873,23 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xtapes.cs3"
   },
   {
+    "plugin": "XtreamIPTVProvider",
+    "originalName": "XtreamIPTVProvider",
+    "publishedName": "[Live] XtreamIPTVProvider",
+    "category": "Live",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "tearrs-vietnamese",
+    "sourceName": "Tearrs Vietnamese Extension",
+    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3"
+  },
+  {
     "plugin": "Xvideos",
     "originalName": "Xvideos",
     "publishedName": "[Adult] Xvideos",
@@ -8732,21 +9026,21 @@
     "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/YoTurkish.cs3"
   },
   {
-    "plugin": "Youtube",
+    "plugin": "YouTube",
     "originalName": "YouTube",
-    "publishedName": "[Live] YouTube",
-    "category": "Live",
+    "publishedName": "[Other] YouTube",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 2,
-    "sourceId": "rearabi",
-    "sourceName": "Re-3arabi",
-    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
-    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "selectedVersion": 15,
+    "sourceId": "dogior",
+    "sourceName": "doGior's Had Enough",
+    "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
+    "sourceIndex": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/plugins.json",
     "originalAuthors": [
-      "Abodabodd"
+      "doGior"
     ],
-    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
-    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Youtube.cs3"
+    "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/YouTube.cs3"
   },
   {
     "plugin": "YoutubeProvider",
