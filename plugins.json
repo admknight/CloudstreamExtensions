@@ -1,5 +1,29 @@
 [
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cinemalux.baby&sz=%size%",
+    "jarFileSize": 43885,
+    "fileHash": "sha256-6336a19ad64090acec634111a3c495684302996144289431a85a3eea7fad5bed",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 14061,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "Adam Knight"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 36,
+    "internalName": "Cinemaluxe",
+    "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinemaluxe.jar",
+    "description": "Cinemaluxe catalogue, search and metadata for the current CinemaLux domain. Playback is limited to directly exposed supported public embeds.",
+    "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinemaluxe.cs3",
+    "name": "Cinemaluxe",
+    "jarHash": "sha256-a8898c81bfc3d0be749fc62cde6df51f3c263db902f7252913e135416d0a7ee6"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cinevez.buzz&sz=%size%",
     "jarFileSize": 48082,
     "fileHash": "sha256-039967a92957297b09b8581b326143be1980c6f62ba83275b8d3cc75920a980b",
