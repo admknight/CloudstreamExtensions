@@ -3269,6 +3269,23 @@
     "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/FshareProvider.cs3"
   },
   {
+    "plugin": "Full4Movies",
+    "originalName": "Full4Movies",
+    "publishedName": "[Indian] Full4Movies",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 17,
+    "sourceId": "adam-custom",
+    "sourceName": "Adam Knight Custom Providers",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
+    "originalAuthors": [
+      "Adam Knight"
+    ],
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Full4Movies.cs3"
+  },
+  {
     "plugin": "FullHDFilm",
     "originalName": "FullHDFilm",
     "publishedName": "[Movies] FullHDFilm",
