@@ -28,11 +28,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-05 23:49:45 UTC**
+Last successful refresh: **2026-10-05 23:54:03 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 536 | 0 | 35 | 0 | 1 | 0 | 0 |
+| 537 | 0 | 35 | 0 | 1 | 0 | 0 |
 
 ## 🗂️ Browse by section
 
@@ -42,7 +42,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | --- | --- | ---: |
 | 🎬 **Movies** | `[Movies]` | 135 |
 | 🎌 **Anime** | `[Anime]` | 64 |
-| 🇮🇳 **Indian** | `[Indian]` | 77 |
+| 🇮🇳 **Indian** | `[Indian]` | 78 |
 | 🌙 **Arabic** | `[Arabic]` | 35 |
 | 🌏 **Asian** | `[Asian]` | 49 |
 | 📡 **Live** | `[Live]` | 47 |
@@ -86,7 +86,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [Rowdy Recovery Builds](https://github.com/RowdyRushya/rowdy-cs-extensions) | ✅ OK | 1 | 1 | 0 | 0 |
 | [CloudStreamHub Recovery Builds](https://github.com/Emre-Kahveci/CloudStreamHub) | ✅ OK | 23 | 1 | 0 | 0 |
 | [Adam Knight Curated Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 1 | 1 | 0 | 0 |
-| [Adam Knight Custom Providers](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 2 | 2 | 0 | 0 |
+| [Adam Knight Custom Providers](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 3 | 3 | 0 | 0 |
 | [doGior's Had Enough](https://github.com/doGior/doGiorsHadEnough) | ✅ OK | 15 | 9 | 0 | 6 |
 | [Gian-Fr Italian Provider](https://github.com/Gian-Fr/ItalianProvider) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Aniyomi Compat](https://github.com/CranberrySoup/AniyomiCompatExtension) | ✅ OK | 1 | 1 | 0 | 0 |
@@ -102,7 +102,7 @@ A package is considered reachable when its published .cs3 URL responds successfu
 
 ## 📦 Plugins by section
 
-**536 plugins are currently published and package-reachable.**
+**537 plugins are currently published and package-reachable.**
 
 ### 🎬 Movies — 135 plugins
 
@@ -317,7 +317,7 @@ CloudStream display prefix: `[Anime]`
 | 63 | **Xanime** | 1 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 64 | **YanHH3DProvider** | 16 |  | Anime, AnimeMovie | Vietnamese CloudStream Index | — |
 
-### 🇮🇳 Indian — 77 plugins
+### 🇮🇳 Indian — 78 plugins
 
 CloudStream display prefix: `[Indian]`
 
@@ -340,7 +340,7 @@ CloudStream display prefix: `[Indian]`
 | 15 | **Bollyflix** | 33 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
 | 16 | **CastleTvProvider** | 40 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 17 | **Cinefreak** | 17 | bn | Movie, TvSeries, Anime | Phisher Repo | — |
-| 18 | **Cinemaluxe** | 36 | hi | Movie, TvSeries | Adam Knight Custom Providers | 🆕 Added |
+| 18 | **Cinemaluxe** | 36 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 19 | **CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 20 | **CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 21 | **Cinevood** | 11 | hi | Movie, TvSeries | Cinephile | — |
@@ -398,8 +398,9 @@ CloudStream display prefix: `[Indian]`
 | 73 | **Topcartoons** | 5 | hi | Cartoon | Phisher Repo | — |
 | 74 | **VegaMovies** | 82 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
 | 75 | **WatchMoviesPk** | 3 | hi | TvSeries, Movie | Redowan CloudStream | — |
-| 76 | **XonProvider** | 35 | ta | TvSeries, Movie, Anime | CNC Repo (All Language) | — |
-| 77 | **Zinkmovies** | 12 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
+| 76 | **World4uFree** | 14 | hi | Movie, TvSeries | Adam Knight Custom Providers | 🆕 Added |
+| 77 | **XonProvider** | 35 | ta | TvSeries, Movie, Anime | CNC Repo (All Language) | — |
+| 78 | **Zinkmovies** | 12 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
 
 ### 🌙 Arabic — 35 plugins
 
