@@ -46,5 +46,29 @@
     "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/CinevezProvider.cs3",
     "name": "CinevezProvider",
     "jarHash": "sha256-f8e4c8e63c5402eeb0761780729c87c1bf11e1bcb09d0addde4ba6e5397185a2"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=worldfree4u.blog&sz=%size%",
+    "jarFileSize": 45128,
+    "fileHash": "sha256-f3ea169f0d464bb8826e420ae75e1a25b370f5a89928f4049ea0ecfe7abc0042",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 14786,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "Adam Knight"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 14,
+    "internalName": "World4uFree",
+    "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/World4uFree.jar",
+    "description": "World4uFree catalogue, search and metadata for the current Worldfree4u domain. Playback is limited to directly exposed supported public embeds.",
+    "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/World4uFree.cs3",
+    "name": "World4uFree",
+    "jarHash": "sha256-b785a154a8682048c27cba3159ea3502f9d918ce951f49dc521695e892b5e56d"
   }
 ]
