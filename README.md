@@ -28,11 +28,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-05 23:43:52 UTC**
+Last successful refresh: **2026-10-05 23:44:45 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 535 | 0 | 35 | 0 | 2 | 11 | 0 |
+| 535 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## 🗂️ Browse by section
 
@@ -171,7 +171,7 @@ CloudStream display prefix: `[Movies]`
 | 59 | **IlCorsaroViola** | 1 | it | Movie, TvSeries, Torrent, Documentary | doGior's Had Enough | — |
 | 60 | **Iwatchtheoffice** | 3 | en | Movie | cs-karma | — |
 | 61 | **JetFilmizle** | 41 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 62 | **JustPlay** | 9 | en | Movie, TvSeries | raghav repo | 🔄 Updated |
+| 62 | **JustPlay** | 9 | en | Movie, TvSeries | raghav repo | — |
 | 63 | **Kdesa** | 3 | en | Movie, TvSeries, Anime | raghav repo | — |
 | 64 | **KinostrainProvider** | 2 | uk | TvSeries, Cartoon, Movie, Anime | CakesTwix UK/UA | — |
 | 65 | **KinoTronProvider** | 17 | uk | Cartoon, TvSeries, Movie, Anime | CakesTwix UK/UA | — |
@@ -186,8 +186,8 @@ CloudStream display prefix: `[Movies]`
 | 74 | **LibraryOfLadev** | 3 | en | Movie | Reflex Repo | — |
 | 75 | **Moviesmod** | 33 |  | TvSeries, Movie, AsianDrama, Anime | CSX | — |
 | 76 | **MoviPK** | 4 | en | Movie, TvSeries | Redowan CloudStream | — |
-| 77 | **Movix** | 32 | fr | Movie, TvSeries, Anime | cs-karma | 🔄 Updated |
-| 78 | **Multimovies** | 8 | en | Movie, TvSeries, Anime | raghav repo | 🔄 Updated |
+| 77 | **Movix** | 32 | fr | Movie, TvSeries, Anime | cs-karma | — |
+| 78 | **Multimovies** | 8 | en | Movie, TvSeries, Anime | raghav repo | — |
 | 79 | **Netcinez** | 5 | pt-br | Movie, TvSeries | Phisher Repo | — |
 | 80 | **NetflixMirrorProvider** | 44 |  | Movie, TvSeries, AsianDrama, Anime | StreamPlay Recovery Builds | — |
 | 81 | **NetNaija** | 17 | en | Movie, TvSeries, Anime, AnimeMovie, OVA | raghav repo | — |
@@ -218,7 +218,7 @@ CloudStream display prefix: `[Movies]`
 | 106 | **SkymoviesHD** | 1 | en | Movie, TvSeries, NSFW | Cinephile | — |
 | 107 | **SoloLatinoProvider** | 8 | mx | Movie, TvSeries, Anime, Cartoon | Storm-ext Fork by redblacker8 | — |
 | 108 | **StreamingCommunity** | 53 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | — |
-| 109 | **StreamPlay** | 686 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | 🔄 Updated |
+| 109 | **StreamPlay** | 686 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
 | 110 | **Supercartoons** | 2 | en | Cartoon | cs-karma | — |
 | 111 | **SuperFilmGeldi** | 22 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
 | 112 | **SuperStream** | 38 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
@@ -278,7 +278,7 @@ CloudStream display prefix: `[Anime]`
 | 24 | **AnimeVietsubProvider** | 14 |  | Anime | Vietnamese CloudStream Index | — |
 | 25 | **AnimeWorld** | 20 | it | AnimeMovie, Anime, OVA | DieGon Repository | — |
 | 26 | **Animexin** | 16 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
-| 27 | **AnimeYTX** | 10 | mx | Anime | cs-karma | 🔄 Updated |
+| 27 | **AnimeYTX** | 10 | mx | Anime | cs-karma | — |
 | 28 | **Animo** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 29 | **AniPM** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 30 | **AniSnatch** | 2 | en | Anime, AnimeMovie, OVA | Phisher Repo | — |
@@ -323,7 +323,7 @@ CloudStream display prefix: `[Indian]`
 
 | # | Plugin | Ver. | Lang | Types | Source | Change |
 | ---: | --- | ---: | --- | --- | --- | --- |
-| 1 | **18+** | 1 | hi | NSFW | Desi Extensions | 🆕 Added |
+| 1 | **18+** | 1 | hi | NSFW | Desi Extensions | — |
 | 2 | **9kMovies** | 11 | hi | Movie, TvSeries, NSFW | Redowan CloudStream | — |
 | 3 | **AllMovieLandProvider** | 25 | hi | Movie, TvSeries, Cartoon | Phisher Repo | — |
 | 4 | **AnimeDekhoProvider** | 70 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
@@ -339,7 +339,7 @@ CloudStream display prefix: `[Indian]`
 | 14 | **BilibiliProvider** | 36 | ta | Anime, Movies, TvSeries, Documentary | CNC Repo (All Language) | — |
 | 15 | **Bollyflix** | 33 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
 | 16 | **CastleTvProvider** | 40 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
-| 17 | **Cinefreak** | 17 | bn | Movie, TvSeries, Anime | Phisher Repo | 🔄 Updated |
+| 17 | **Cinefreak** | 17 | bn | Movie, TvSeries, Anime | Phisher Repo | — |
 | 18 | **CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 19 | **CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 20 | **Cinevood** | 11 | hi | Movie, TvSeries | Cinephile | — |
@@ -353,7 +353,7 @@ CloudStream display prefix: `[Indian]`
 | 28 | **EinthusanProvider** | 37 | ta | Movie | CNC Repo (All Language) | — |
 | 29 | **EmwBD** | 16 | bn | Movie, TvSeries, AnimeMovie, AsianDrama, NSFW | Redowan CloudStream | — |
 | 30 | **Fibwatch** | 11 | hi | Movie, TvSeries | Phisher Repo | — |
-| 31 | **FilmFly** | 22 | hi | Movie, TvSeries, Anime | Desi Extensions | 🆕 Added |
+| 31 | **FilmFly** | 22 | hi | Movie, TvSeries, Anime | Desi Extensions | — |
 | 32 | **Fivemovierulz** | 8 | hi | TvSeries, Movie | Phisher Repo | — |
 | 33 | **HDhub4u** | 57 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
 | 34 | **Hdmovie2** | 6 | hi | TvSeries, Movie | Phisher Repo | — |
@@ -373,7 +373,7 @@ CloudStream display prefix: `[Indian]`
 | 48 | **MoviezwapProvider** | 32 | te | Movie | CNC Repo (All Language) | — |
 | 49 | **Mp4Moviez** | 3 | hi | Movie, TvSeries, NSFW | Redowan CloudStream | — |
 | 50 | **MPlayerProvider** | 9 | hi | AsianDrama, TvSeries, Movie | Phisher Repo | — |
-| 51 | **MultiMoviesProvider** | 55 | hi | Movie, TvSeries, Anime | Phisher Repo | 🔄 Updated |
+| 51 | **MultiMoviesProvider** | 55 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
 | 52 | **NetflixMirror** | 32 | hi | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
 | 53 | **Netmirror** | 46 | hi | Movie, TvSeries | NetMirror Extension | — |
 | 54 | **OnlineMoviesHinditProvider** | 6 | hi | TvSeries, Movie | Adam Knight Curated Recovery | — |
@@ -406,7 +406,7 @@ CloudStream display prefix: `[Arabic]`
 
 | # | Plugin | Ver. | Lang | Types | Source | Change |
 | ---: | --- | ---: | --- | --- | --- | --- |
-| 1 | **3isk** | 1 | ar | TvSeries, Movie | Re-3arabi | 🔄 Updated |
+| 1 | **3isk** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
 | 2 | **Aflaam** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
 | 3 | **Akwam** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
 | 4 | **Alooytv** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
@@ -425,7 +425,7 @@ CloudStream display prefix: `[Arabic]`
 | 17 | **Dima toon** | 1 | ar | TvSeries, Anime | Re-3arabi | — |
 | 18 | **Egydead** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | — |
 | 19 | **Elif** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
-| 20 | **Esheaq** | 21 | ar | Movie, TvSeries | cs-karma | 🔄 Updated |
+| 20 | **Esheaq** | 21 | ar | Movie, TvSeries | cs-karma | — |
 | 21 | **Eshek** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
 | 22 | **Faselhd** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
 | 23 | **Krmzy** | 2 | ar | TvSeries | cs-karma | — |
@@ -517,7 +517,7 @@ CloudStream display prefix: `[Live]`
 | 11 | **DeporTVProvider** | 31 | mx | Live | Storm-ext Fork by redblacker8 | — |
 | 12 | **Footballia** | 9 | en | Live | cs-karma | — |
 | 13 | **FullMatchShows** | 2 | en | Movie, Others, live | Re-3arabi | — |
-| 14 | **FullRaces** | 15 | en | Live, Others | cs-karma | 🔄 Updated |
+| 14 | **FullRaces** | 15 | en | Live, Others | cs-karma | — |
 | 15 | **Huhu** | 7 |  | Live | DieGon Repository | — |
 | 16 | **InatBox** | 24 | tr | Movie, TvSeries, Live | Turkish Providers Repository \| @KekikAkademi | — |
 | 17 | **IndianTVProvider** | 6 |  | Live | Kim Recovery Builds | — |
@@ -711,7 +711,7 @@ CloudStream display prefix: `[Other]`
 | 14 | **MegaProvider** | 2 | en |  | Mega Repository | — |
 | 15 | **MonPlayerProvider** | 9 |  | Others | Tearrs Vietnamese Extension | — |
 | 16 | **Nebula** | 1 | en | Others | doGior's Had Enough | — |
-| 17 | **OnShort** | 3 | en | AsianDrama | cs-karma | 🔄 Updated |
+| 17 | **OnShort** | 3 | en | AsianDrama | cs-karma | — |
 | 18 | **Ultima** | 65 | en | All | Phisher Repo | — |
 | 19 | **UltimaBeta** | 7 | en | All | Kim Recovery Builds | — |
 | 20 | **YouTube** | 15 |  | Others | doGior's Had Enough | — |
