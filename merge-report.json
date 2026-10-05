@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05 23:44:45 UTC",
+  "generatedAt": "2026-10-05 23:49:45 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -375,8 +375,8 @@
       "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
       "priority": 1,
       "ok": true,
-      "rawCount": 1,
-      "includedCount": 1,
+      "rawCount": 2,
+      "includedCount": 2,
       "packageFailed": 0,
       "duplicateSkipped": 0
     },
@@ -446,7 +446,7 @@
   "categoryCounts": {
     "Movies": 135,
     "Anime": 64,
-    "Indian": 76,
+    "Indian": 77,
     "Arabic": 35,
     "Asian": 49,
     "Live": 47,
@@ -457,9 +457,9 @@
     "Other": 20
   },
   "previousPlugins": 535,
-  "uniquePlugins": 535,
+  "uniquePlugins": 536,
   "packageHealth": {
-    "reachable": 535,
+    "reachable": 536,
     "failed": 0
   },
   "duplicates": [
@@ -746,7 +746,7 @@
   ],
   "failedPlugins": [],
   "changes": {
-    "added": 0,
+    "added": 1,
     "updated": 0,
     "unchanged": 535,
     "removed": 0

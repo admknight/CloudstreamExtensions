@@ -1932,6 +1932,23 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Cinemacity.cs3"
   },
   {
+    "plugin": "Cinemaluxe",
+    "originalName": "Cinemaluxe",
+    "publishedName": "[Indian] Cinemaluxe",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 36,
+    "sourceId": "adam-custom",
+    "sourceName": "Adam Knight Custom Providers",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
+    "originalAuthors": [
+      "Adam Knight"
+    ],
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinemaluxe.cs3"
+  },
+  {
     "plugin": "cinemana",
     "originalName": "Shabakaty Cinemana (🇮🇶)",
     "publishedName": "[Arabic] Shabakaty Cinemana (🇮🇶)",
