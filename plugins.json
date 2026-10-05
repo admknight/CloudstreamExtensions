@@ -1,5 +1,25 @@
 [
   {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/18+.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "[Indian] 18+",
+    "internalName": "18+",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Desi Viral Indian Content Provider",
+    "fileSize": 11261,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "NSFW"
+    ],
+    "iconUrl": "https://fsi52.com/favicon-32x32.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-6b4854f9edd563dbe2090e6cbd60933d012dae74f1f2efe2ad638900d21ee2f9"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/3isk.cs3",
     "status": 1,
     "version": 1,
@@ -8,7 +28,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 31165,
+    "fileSize": 31166,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ar",
     "tvTypes": [
@@ -17,7 +37,7 @@
     ],
     "iconUrl": "https://3esk.onl/wp-content/uploads/2021/01/3isk-logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-00ead28e610d86add9fc0e3fd937c1dfe863b66b0c5686e28bebf8039c7ab86a"
+    "fileHash": "sha256-4cfc2ee656e3027e99593ca637015e80e620e968ed433f10999f41bac11a4492"
   },
   {
     "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/9kMovies.cs3",
@@ -1150,14 +1170,14 @@
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeYTX.cs3",
     "status": 1,
-    "version": 9,
+    "version": 10,
     "name": "[Anime] AnimeYTX",
     "internalName": "AnimeYTX",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Únete a la familia de AnimeYT.es y disfruta del anime online gratis. Disfruta con tus amigos del contenido más popular de la animación japonesa.",
-    "fileSize": 52269,
+    "fileSize": 52609,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -1165,7 +1185,7 @@
     ],
     "iconUrl": "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://animeyt.cc&size=128",
     "apiVersion": 1,
-    "fileHash": "sha256-f912ec57c85b928ddd6a9626bb4fedeb82e3ab76f71b5b3c17dcc925d8ded227"
+    "fileHash": "sha256-0e465f5dfa9bd3bed6022335321daa933c89630fb565f29ccb64cc8c636ebd22"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Animo.cs3",
@@ -2292,14 +2312,14 @@
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Cinefreak.cs3",
     "status": 1,
-    "version": 16,
+    "version": 17,
     "name": "[Indian] Cinefreak",
     "internalName": "Cinefreak",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Bangla/Hindi Movies/Series",
-    "fileSize": 120839,
+    "fileSize": 124078,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "bn",
     "tvTypes": [
@@ -2309,7 +2329,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/cinefreak.png",
     "apiVersion": 1,
-    "fileHash": "sha256-8d9c6d484c78c35bdcebe0e96d8adb82da3bda7152281a55250c641fcc339675"
+    "fileHash": "sha256-9c9ea66e1b6be84115ba17e18d1eb52e6995e8848e925edb1ad8e7d141b1cb6b"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CineHdPlusProvider.cs3",
@@ -3553,7 +3573,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "قصة عشق الأصلي لأحدث المسلسلات التركية والدراما المترجمة علي قصه عشق ، يمكنك من خلال موقع قصة عشق مشاهدة كل جديد في عالم الدراما التركية",
-    "fileSize": 17197,
+    "fileSize": 17199,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ar",
     "tvTypes": [
@@ -3562,7 +3582,7 @@
     ],
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://esheeq.my&size=128",
     "apiVersion": 1,
-    "fileHash": "sha256-611b9d4cd00722bd5859fce476591d1dfe71d5cf2731f56ef4f54dcf86cc20f9"
+    "fileHash": "sha256-826f9fa3b1a1886559f6274eb38d5e40c2cf963020c1b29233e22558d92292b3"
   },
   {
     "iconUrl": "https://github.com/Shakzz890/ShakzzCutie/raw/refs/heads/master/Extractors/icon.png",
@@ -3666,6 +3686,28 @@
     "description": "Binlerce yerli yabancı dizi arşivi, tüm sezonlar, kesintisiz bölümler. Filmbip heryerde seninle!",
     "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmBip.cs3",
     "name": "[Movies] FilmBip"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/FilmFly.cs3",
+    "status": 1,
+    "version": 22,
+    "name": "[Indian] FilmFly",
+    "internalName": "FilmFly",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "FilmyFly Provider for Bollywood, South Hindi Dubbed, Hollywood Movies & Web Series",
+    "fileSize": 29910,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "",
+    "apiVersion": 1,
+    "fileHash": "sha256-26502ec2f06262050a43bef8fb4b44c2d892938e904c00e8a26d24c9896b6c78"
   },
   {
     "iconUrl": "https://i.ibb.co.com/Jjzsxm9F/cropped-lk21-1.png",
@@ -3968,14 +4010,14 @@
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/FullRaces.cs3",
     "status": 1,
-    "version": 14,
+    "version": 15,
     "name": "[Live] FullRaces",
     "internalName": "FullRaces",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Formula 1 is one of the most popular and dramatic sports in the world. You can watch Formula One races replays videos online and enjoy every moment of this exciting sports event. We offer to watch F1 Full Races replays FREE in HD",
-    "fileSize": 47066,
+    "fileSize": 54111,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -3984,7 +4026,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=fullraces.com&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-c1d96d8217df9f25f7ee94ffed1cd6ddee949833168948153aba02658c46b955"
+    "fileHash": "sha256-c292f779282f526ccca6f21bd8adafccb5d733ef2c00d20058c8bce32d9ce015"
   },
   {
     "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/FullReplays.cs3",
@@ -5283,14 +5325,14 @@
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/JustPlay.cs3",
     "status": 1,
-    "version": 6,
+    "version": 9,
     "name": "[Movies] JustPlay",
     "internalName": "JustPlay",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "description": "Movies and series from multiple sources",
-    "fileSize": 272554,
+    "description": "Movies and series from multiple sources with a Manage Sources screen that filters download and stream links",
+    "fileSize": 372225,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5299,7 +5341,7 @@
     ],
     "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknDTJSN2AhrHzfxF75gr9-qG4x-JzwHRnvPDjZP2aa-93KRaXPF1_ZQdm&s=10",
     "apiVersion": 1,
-    "fileHash": "sha256-47585a704a8f74a2b14b7201528e5080b173374d0ced82baf26d0e00bba05e51"
+    "fileHash": "sha256-73fdabfede39c3d016159091eea85d59fa5fcb59d2bb7c8e1e1059dff78421e2"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=www.kalite18.net&sz=%size%",
@@ -6477,14 +6519,14 @@
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Movix.cs3",
     "status": 1,
-    "version": 31,
+    "version": 32,
     "name": "[Movies] Movix",
     "internalName": "Movix",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Explorez les films, séries, collections, alertes et recommandations Movix.",
-    "fileSize": 171190,
+    "fileSize": 184697,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "fr",
     "tvTypes": [
@@ -6494,7 +6536,7 @@
     ],
     "iconUrl": "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://movix.fun/&size=128",
     "apiVersion": 1,
-    "fileHash": "sha256-58e02ed47a33521752195f95fd7a0a7accde30c851c4e55e326e660d33f4a642"
+    "fileHash": "sha256-496660b4e9d444dbaaa86b45d92fe77de93b8c814454acc88cd2895937239b28"
   },
   {
     "url": "https://raw.githubusercontent.com/redowan99/Redowan-CloudStream/builds/Mp4Moviez.cs3",
@@ -6543,14 +6585,14 @@
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Multimovies.cs3",
     "status": 1,
-    "version": 7,
+    "version": 8,
     "name": "[Movies] Multimovies",
     "internalName": "Multimovies",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "description": "Multimovies - Movies, TV Shows & Anime. All sources: Cineverse, GD Mirror, Vidout, Nxsha (multi-server) and more",
-    "fileSize": 120090,
+    "description": "Multimovies - Movies, TV Shows & Anime. Sources: Cineverse (multi-server), GD Mirror, Vidout, Vidsync, Bingr, Filmu, VidBolt",
+    "fileSize": 132396,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -6558,21 +6600,21 @@
       "TvSeries",
       "Anime"
     ],
-    "iconUrl": "https://multimovies.casa/wp-content/uploads/2024/01/cropped-CompressJPEG.online_512x512_image.png",
+    "iconUrl": "https://multimovies.garden/assets/img/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-2caee4bd3581054584c11cd14dd68c7e15d454641e1bd665b2bfb9ec3af4d831"
+    "fileHash": "sha256-6a596472416e58ee417a1ef001249da0d922b31fe9ab7da1572f030f8749ed84"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/MultiMoviesProvider.cs3",
     "status": 1,
-    "version": 54,
+    "version": 55,
     "name": "[Indian] MultiMoviesProvider",
     "internalName": "MultiMoviesProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Indian Multi-language HD Provider",
-    "fileSize": 138506,
+    "fileSize": 151434,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -6582,7 +6624,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/MultiMoviesProvider/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-3ff243f468611d0995c5186811aeeabacfad1739ca0b4fe96a678b1e5afcddba"
+    "fileHash": "sha256-ce2eda6e5c023df55eed57488aafded9533808642a7cb891b8c4c9ce2a328e24"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/MundoDonghuaProvider.cs3",
@@ -7144,14 +7186,14 @@
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OnShort.cs3",
     "status": 1,
-    "version": 2,
+    "version": 3,
     "name": "[Other] OnShort",
     "internalName": "OnShort",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Discover dubbed and subtitled short dramas from multiple platforms and open every available episode on ONShort.",
-    "fileSize": 22078,
+    "fileSize": 21396,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -7159,7 +7201,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?sz=64&domain=https://onshort.net",
     "apiVersion": 1,
-    "fileHash": "sha256-e7db73e98313edb13f010adb433f650d9f554f848ef05d1b48edd6e9dbaea26e"
+    "fileHash": "sha256-6e87e9b6ad2422698829c07e4262f987605fb71339434061d898faf78e589aad"
   },
   {
     "iconUrl": "https://ophim17.cc/icon_ophim.png",
@@ -8904,7 +8946,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "#1 best extention based on MultiAPI",
-    "fileSize": 1920719,
+    "fileSize": 1932040,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -8917,7 +8959,7 @@
     ],
     "iconUrl": "https://i3.wp.com/yt3.googleusercontent.com/ytc/AIdro_nCBArSmvOc6o-k2hTYpLtQMPrKqGtAw_nC20rxm70akA=s900-c-k-c0x00ffffff-no-rj?ssl=1",
     "apiVersion": 1,
-    "fileHash": "sha256-0d0e141755af58814af275e57b2514a8d453f86f8b9c3dc9a7c8fcb90366f6bd"
+    "fileHash": "sha256-47eb93026809c343e29874440ce6014d8be1bab761515b50cc1c99500b8c7c49"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Stremio.cs3",

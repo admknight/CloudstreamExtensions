@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05 04:17:14 UTC",
+  "generatedAt": "2026-10-05 23:43:52 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -171,10 +171,10 @@
       "index": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
       "priority": 25,
       "ok": true,
-      "rawCount": 10,
-      "includedCount": 8,
+      "rawCount": 13,
+      "includedCount": 10,
       "packageFailed": 0,
-      "duplicateSkipped": 2
+      "duplicateSkipped": 3
     },
     {
       "id": "flummox",
@@ -446,7 +446,7 @@
   "categoryCounts": {
     "Movies": 135,
     "Anime": 64,
-    "Indian": 74,
+    "Indian": 76,
     "Arabic": 35,
     "Asian": 49,
     "Live": 47,
@@ -457,9 +457,9 @@
     "Other": 20
   },
   "previousPlugins": 533,
-  "uniquePlugins": 533,
+  "uniquePlugins": 535,
   "packageHealth": {
-    "reachable": 533,
+    "reachable": 535,
     "failed": 0
   },
   "duplicates": [
@@ -632,6 +632,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "MoviesDrive",
+      "selectedSource": "CSX",
+      "selectedVersion": 33,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 18,
+      "reason": "lower version"
+    },
+    {
       "plugin": "Mp4Moviez",
       "selectedSource": "Redowan CloudStream",
       "selectedVersion": 3,
@@ -738,9 +746,9 @@
   ],
   "failedPlugins": [],
   "changes": {
-    "added": 0,
-    "updated": 1,
-    "unchanged": 532,
+    "added": 2,
+    "updated": 11,
+    "unchanged": 522,
     "removed": 0
   },
   "removedPlugins": []
