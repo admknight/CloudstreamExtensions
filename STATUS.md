@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-04 23:16:16 UTC**
+Generated: **2026-10-05 04:17:14 UTC**
 
 Candidate status: **READY**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 533 | 0 | 35 | 0 | 0 | 0 | 0 |
+| 533 | 0 | 35 | 0 | 0 | 1 | 0 |
 
 ## Source health
 
@@ -409,7 +409,7 @@ Candidate status: **READY**
 | 349 | **[Adult] OpJav** | 7 | en | NSFW | CXXX | — |
 | 350 | **[Asian] Oploverz** | 1 | id | AnimeMovie, OVA, Anime | Nonton Indo | — |
 | 351 | **[Asian] Otakudesu** | 1 | id | AnimeMovie, OVA, Anime | Nonton Indo | — |
-| 352 | **[Anime] Otakutsu** | 3 | en | Anime, AnimeMovie | FLUMMOX Repo | — |
+| 352 | **[Anime] Otakutsu** | 4 | en | Anime, AnimeMovie | FLUMMOX Repo | 🔄 Updated |
 | 353 | **[Indian] OttSource** | 7 | hi | Movie, TvSeries | Desi Extensions | — |
 | 354 | **[Asian] Pahe** | 1 | id | Movie, TvSeries | Nonton Indo | — |
 | 355 | **[Adult] Paradisehill** | 1 | en | NSFW | CXXX | — |

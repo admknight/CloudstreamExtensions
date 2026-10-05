@@ -28,11 +28,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-04 23:16:16 UTC**
+Last successful refresh: **2026-10-05 04:17:14 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 533 | 0 | 35 | 0 | 0 | 0 | 0 |
+| 533 | 0 | 35 | 0 | 0 | 1 | 0 |
 
 ## 🗂️ Browse by section
 
@@ -302,7 +302,7 @@ CloudStream display prefix: `[Anime]`
 | 48 | **MundoDonghuaProvider** | 4 | es | Anime, OVA, AnimeMovie | Storm-ext Fork by redblacker8 | — |
 | 49 | **NineAnime** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 50 | **OnePace** | 23 | en | Anime | Phisher Repo | — |
-| 51 | **Otakutsu** | 3 | en | Anime, AnimeMovie | FLUMMOX Repo | — |
+| 51 | **Otakutsu** | 4 | en | Anime, AnimeMovie | FLUMMOX Repo | 🔄 Updated |
 | 52 | **RaghavAnime** | 76 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 53 | **RaghavAnimeKitsu** | 28 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 54 | **ReAnime** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | — |
