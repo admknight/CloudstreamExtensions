@@ -1881,6 +1881,23 @@
     "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CinecalidadProvider.cs3"
   },
   {
+    "plugin": "Cinedoze",
+    "originalName": "Cinedoze",
+    "publishedName": "[Indian] Cinedoze",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "adam-custom",
+    "sourceName": "Adam Knight Custom Providers",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
+    "originalAuthors": [
+      "Adam Knight"
+    ],
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinedoze.cs3"
+  },
+  {
     "plugin": "Cinefreak",
     "originalName": "Cinefreak",
     "publishedName": "[Indian] Cinefreak",
