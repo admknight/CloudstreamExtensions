@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-06 02:39:46 UTC",
-  "providerCount": 7,
+  "generatedAt": "2026-10-06 03:04:45 UTC",
+  "providerCount": 6,
   "summary": {
-    "ok": 6,
+    "ok": 5,
     "restricted": 0,
     "failed": 1
   },
@@ -34,16 +34,6 @@
       "state": "ok",
       "httpStatus": 200,
       "finalUrl": "https://cinevez.buzz",
-      "error": "",
-      "attempts": 1
-    },
-    {
-      "module": "Cinevood",
-      "source": "Cinevood/src/main/kotlin/recloudstream/CinevoodProvider.kt",
-      "url": "https://cinevood.net",
-      "state": "ok",
-      "httpStatus": 200,
-      "finalUrl": "https://cinevood.net",
       "error": "",
       "attempts": 1
     },
