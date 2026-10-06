@@ -15,7 +15,10 @@
       "name": "Cinephile",
       "repo": "https://github.com/rockhero1234/cinephile",
       "index": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
-      "priority": 20
+      "priority": 20,
+      "exclude": [
+        "Cinevood"
+      ]
     },
     {
       "id": "csx",
