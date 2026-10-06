@@ -1,6 +1,6 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-06 03:06:53 UTC**
+Generated: **2026-10-06 05:05:17 UTC**
 
 Production catalog: **539 reachable plugins** · **35 healthy sources** · **0 package failures**
 
@@ -8,16 +8,12 @@ Production catalog: **539 reachable plugins** · **35 healthy sources** · **0 p
 
 - Added: **0**
 - Updated: **0**
-- Removed: **1**
+- Removed: **0**
 - Unchanged: **539**
 
-## Removed plugins
+## Catalog changes
 
-- **Cinevood** v14 — Adam Knight Custom Providers
-
-## Custom provider changes
-
-- **Cinevood** v14 — removed
+No plugin or source changes were detected in this production refresh.
 
 ## Production health
 
