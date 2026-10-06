@@ -28,11 +28,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 00:04:34 UTC**
+Last successful refresh: **2026-10-06 00:09:16 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 540 | 0 | 35 | 0 | 1 | 0 | 0 |
+| 540 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## 🗂️ Browse by section
 
@@ -362,7 +362,7 @@ CloudStream display prefix: `[Indian]`
 | 37 | **Hdmovie2** | 6 | hi | TvSeries, Movie | Phisher Repo | — |
 | 38 | **HDOProvider** | 35 | ta | Movies, TvSeries | CNC Repo (All Language) | — |
 | 39 | **Hindmoviez** | 17 | hi | Movie, TvSeries | Phisher Repo | — |
-| 40 | **India4Movies** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | 🆕 Added |
+| 40 | **India4Movies** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 41 | **IStreamFlare** | 6 | hi | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
 | 42 | **Kartoons** | 5 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
 | 43 | **MassTamilanProvider** | 9 | ta | Music, Movie | Phisher Repo | — |
