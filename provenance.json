@@ -2034,23 +2034,6 @@
     "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/CinevezProvider.cs3"
   },
   {
-    "plugin": "Cinevood",
-    "originalName": "Cinevood",
-    "publishedName": "[Indian] Cinevood",
-    "category": "Indian",
-    "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 14,
-    "sourceId": "adam-custom",
-    "sourceName": "Adam Knight Custom Providers",
-    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
-    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
-    "originalAuthors": [
-      "Adam Knight"
-    ],
-    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.cs3"
-  },
-  {
     "plugin": "CizgiMax",
     "originalName": "CizgiMax",
     "publishedName": "[Movies] CizgiMax",
