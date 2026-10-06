@@ -1,0 +1,66 @@
+name: Publish Stable Release
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'release-notes/v1.0.0.md'
+      - '.github/workflows/release.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: stable-release-v1
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Check existing release
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "v1.0.0 already exists; leaving it unchanged."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download production snapshot
+        if: steps.existing.outputs.exists != 'true'
+        run: |
+          set -euo pipefail
+          base="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds"
+          for file in repo.json plugins.json merge-report.json provenance.json; do
+            curl --fail --location --retry 3 --retry-delay 2 "$base/$file" -o "$file"
+          done
+
+      - name: Publish v1.0.0
+        if: steps.existing.outputs.exists != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v1.0.0 \
+            --target master \
+            --title "Adam Knight Mega Repo v1.0 — First Stable Release" \
+            --notes-file release-notes/v1.0.0.md \
+            --latest \
+            repo.json \
+            plugins.json \
+            merge-report.json \
+            provenance.json
+
+      - name: Verify release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view v1.0.0 --json tagName,name,url,isLatest
