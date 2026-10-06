@@ -20,6 +20,9 @@
   <a href="https://github.com/admknight/CloudstreamExtensions/forks">
     <img src="https://img.shields.io/github/forks/admknight/CloudstreamExtensions?style=flat-square" alt="GitHub forks">
   </a>
+  <a href="https://github.com/admknight/CloudstreamExtensions/releases/latest">
+    <img src="https://img.shields.io/github/v/release/admknight/CloudstreamExtensions?display_name=tag&style=flat-square" alt="Latest release">
+  </a>
 </p>
 
 <p align="center">A dynamic CloudStream extensions and plugins repository maintained by <strong>Adam Knight</strong>.</p>
@@ -27,6 +30,8 @@
 Adam Knight Mega Repo is a searchable, automatically updated **CloudStream plugin repository** that aggregates published CloudStream extensions into one installer-friendly catalog. It is intended for users looking for CloudStream plugins, extension repositories, anime/movie/TV providers, live TV tools, games, and multilingual sources in a single maintained repo.
 
 The catalog is rebuilt from multiple published CloudStream repositories, deduplicated, package-checked, runtime-monitored for custom providers, and only then published.
+
+> 🎉 **Stable milestone:** [Adam Knight Mega Repo v1.0.0](https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0) establishes the first production-ready baseline for the automated Mega Repo.
 
 ### Why use this CloudStream repository?
 
@@ -51,7 +56,7 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 00:18:43 UTC**
+Last successful refresh: **2026-10-06 00:42:53 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
