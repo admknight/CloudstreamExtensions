@@ -92,7 +92,7 @@
     "version": 14,
     "internalName": "Cinevood",
     "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.jar",
-    "description": "Cinevood catalogue, search and metadata for the current CineVood domain. Playback is intentionally not implemented.",
+    "description": "Cinevood catalogue, search and metadata via the stable official CineVood domain. Playback is intentionally not implemented.",
     "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.cs3",
     "name": "Cinevood",
     "jarHash": "sha256-13cd0d80841aac4d5201cb4745d65ab4e7aba229bf1d986a4592c22243b96f28"
