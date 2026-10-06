@@ -1,16 +1,26 @@
 name: Publish Stable Release
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'release-notes/v1.0.0.md'
-      - '.github/workflows/release.yml'
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag, for example v1.1.0"
+        required: true
+        default: "v1.1.0"
+        type: string
+      title:
+        description: "Release title (leave blank to use the tag)"
+        required: false
+        default: ""
+        type: string
+      confirm:
+        description: "I reviewed the generated production notes and want to publish this stable release"
+        required: true
+        default: false
+        type: boolean
 
 concurrency:
-  group: stable-release-v1
+  group: stable-release
   cancel-in-progress: false
 
 jobs:
@@ -20,47 +30,81 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
+      - name: Require explicit approval
+        env:
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          if [ "$CONFIRM" != "true" ]; then
+            echo "Stable release was not explicitly approved."
+            exit 1
+          fi
+
+      - name: Checkout master
         uses: actions/checkout@v5
+        with:
+          path: source
+
+      - name: Checkout production snapshot
+        uses: actions/checkout@v5
+        with:
+          ref: builds
+          path: builds
+
+      - name: Validate generated release notes
+        run: |
+          set -euo pipefail
+          test -s builds/RELEASE_NOTES.md
+          test -s builds/release-diff.json
+          test -s builds/repo.json
+          test -s builds/plugins.json
+          test -s builds/merge-report.json
+          test -s builds/provenance.json
+          cat builds/RELEASE_NOTES.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Check existing release
         id: existing
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        working-directory: source
         run: |
-          if gh release view v1.0.0 >/dev/null 2>&1; then
+          if gh release view "$TAG" >/dev/null 2>&1; then
             echo "exists=true" >> "$GITHUB_OUTPUT"
-            echo "v1.0.0 already exists; leaving it unchanged."
+            echo "$TAG already exists; leaving it unchanged."
           else
             echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Download production snapshot
-        if: steps.existing.outputs.exists != 'true'
-        run: |
-          set -euo pipefail
-          base="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds"
-          for file in repo.json plugins.json merge-report.json provenance.json; do
-            curl --fail --location --retry 3 --retry-delay 2 "$base/$file" -o "$file"
-          done
-
-      - name: Publish v1.0.0
+      - name: Publish stable release
         if: steps.existing.outputs.exists != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+          TITLE: ${{ inputs.title }}
+        working-directory: source
         run: |
-          gh release create v1.0.0 \
+          set -euo pipefail
+          release_title="$TITLE"
+          if [ -z "$release_title" ]; then
+            release_title="Adam Knight Mega Repo $TAG"
+          fi
+
+          gh release create "$TAG" \
             --target master \
-            --title "Adam Knight Mega Repo v1.0 — First Stable Release" \
-            --notes-file release-notes/v1.0.0.md \
+            --title "$release_title" \
+            --notes-file ../builds/RELEASE_NOTES.md \
             --latest \
-            repo.json \
-            plugins.json \
-            merge-report.json \
-            provenance.json
+            ../builds/repo.json \
+            ../builds/plugins.json \
+            ../builds/merge-report.json \
+            ../builds/provenance.json \
+            ../builds/release-diff.json \
+            ../builds/RELEASE_NOTES.md
 
       - name: Verify release
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        working-directory: source
         run: |
-          gh release view v1.0.0 --json tagName,name,url,isDraft,isPrerelease,publishedAt,assets
+          gh release view "$TAG" --json tagName,name,url,isDraft,isPrerelease,publishedAt,assets
