@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CloudStream Plugins & Extensions Repository | Adam Knight Mega Repo</title>
+  <meta name="description" content="Adam Knight Mega Repo is an automatically updated CloudStream plugins and extensions repository with hundreds of package-checked providers from multiple maintained sources.">
+  <link rel="canonical" href="https://admknight.github.io/CloudstreamExtensions/">
+  <link rel="icon" href="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png">
+  <meta property="og:title" content="Adam Knight Mega Repo — CloudStream Plugins & Extensions">
+  <meta property="og:description" content="A maintained CloudStream extensions repository with automated updates, deduplication, package checks and custom provider health monitoring.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://admknight.github.io/CloudstreamExtensions/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Adam Knight Mega Repo",
+    "alternateName": "CloudStream Extensions & Plugins Repository",
+    "url": "https://admknight.github.io/CloudstreamExtensions/",
+    "description": "An automatically updated CloudStream plugins and extensions repository with package checking, deduplication and custom provider health monitoring.",
+    "sameAs": [
+      "https://github.com/admknight/CloudstreamExtensions"
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme: dark; --bg:#0d1117; --panel:#161b22; --text:#e6edf3; --muted:#8b949e; --line:#30363d; --accent:#58a6ff; --ok:#3fb950; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+    main { max-width:980px; margin:auto; padding:48px 24px 72px; }
+    header { text-align:center; padding:24px 0 40px; }
+    header img { width:128px; height:128px; border-radius:24px; }
+    h1 { font-size:clamp(2rem,5vw,3.4rem); line-height:1.1; margin:20px 0 12px; }
+    h2 { margin-top:38px; }
+    p.lead { max-width:760px; margin:0 auto; color:var(--muted); font-size:1.1rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:24px; }
+    .button { display:inline-block; padding:10px 16px; border:1px solid var(--line); border-radius:8px; text-decoration:none; color:var(--text); background:var(--panel); }
+    .button.primary { border-color:var(--accent); color:white; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:20px; }
+    .card { border:1px solid var(--line); border-radius:10px; background:var(--panel); padding:18px; }
+    .card strong { color:white; }
+    code { background:#21262d; border:1px solid var(--line); border-radius:6px; padding:2px 6px; }
+    pre { background:#21262d; border:1px solid var(--line); border-radius:8px; padding:14px; overflow:auto; }
+    a { color:var(--accent); }
+    footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
+    .status { color:var(--ok); font-weight:700; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Mega Repo icon">
+    <h1>CloudStream Plugins & Extensions Repository</h1>
+    <p class="lead">Adam Knight Mega Repo combines published CloudStream extensions into one maintained, installer-friendly repository with automated updates, duplicate resolution, package checking and custom-provider monitoring.</p>
+    <div class="actions">
+      <a class="button primary" href="https://github.com/admknight/CloudstreamExtensions">View on GitHub</a>
+      <a class="button" href="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json">Repository manifest</a>
+      <a class="button" href="https://github.com/admknight/CloudstreamExtensions/tree/builds">Browse production catalog</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Install the Mega Repo in CloudStream</h2>
+    <p>In CloudStream, open <strong>Settings → Extensions → Add Repository</strong> and use the shortcode:</p>
+    <pre>admknight</pre>
+    <p>You can also use the raw repository manifest:</p>
+    <pre>https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json</pre>
+  </section>
+
+  <section>
+    <h2>What this CloudStream repository provides</h2>
+    <div class="grid">
+      <div class="card"><strong>Hundreds of extensions</strong><br>Movies, TV, anime, live TV, sports, tools, games and multilingual providers from many published repositories.</div>
+      <div class="card"><strong>Automatic daily updates</strong><br>The production catalog is rebuilt on schedule and when repository configuration changes.</div>
+      <div class="card"><strong>Package verification</strong><br>Published <code>.cs3</code> packages are checked before they are included in the live catalog.</div>
+      <div class="card"><strong>Duplicate resolution</strong><br>When the same plugin appears in several sources, version and source-priority rules select the preferred reachable package.</div>
+      <div class="card"><strong>Custom providers</strong><br>Locally maintained CloudStream providers are built on a dedicated branch and automatically merged into the main catalog.</div>
+      <div class="card"><strong>Safety gates</strong><br>Unexpected catalog drops or upstream failures are blocked from replacing the last known-good production catalog.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Repository branches</h2>
+    <p><strong>master</strong> contains source configuration, custom provider source code and automation. <strong>builds</strong> contains the production CloudStream catalog. <strong>custom-builds</strong> contains compiled custom providers.</p>
+    <p class="status">Automated health monitoring is enabled for custom provider websites.</p>
+  </section>
+
+  <section>
+    <h2>For CloudStream users and maintainers</h2>
+    <p>This project is useful if you are searching for a maintained CloudStream plugin repository, a CloudStream extensions list, a single repo URL for multiple providers, or an automatically refreshed index that preserves source provenance and avoids dead package entries.</p>
+    <p>See the main GitHub README for the current plugin dashboard, category counts, source health, package health, build history and provenance information.</p>
+  </section>
+
+  <footer>
+    <p>Maintained by Adam Knight. This project is an extension index/build project and does not host video or media content. Package availability does not guarantee that every third-party provider website is operational at runtime.</p>
+  </footer>
+</main>
+</body>
+</html>

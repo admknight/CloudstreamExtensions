@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://admknight.github.io/CloudstreamExtensions/sitemap.xml
