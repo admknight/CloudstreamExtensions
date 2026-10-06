@@ -96,8 +96,18 @@ jobs:
             echo "No custom plugin changes to publish."
           else
             git commit -m "Custom plugin build: ${GITHUB_SHA::8}"
-            git push origin HEAD:custom-builds
-            echo "CUSTOM_PUBLISHED=true" >> "$GITHUB_ENV"
+            for attempt in 1 2 3; do
+              if git push origin HEAD:custom-builds; then
+                echo "CUSTOM_PUBLISHED=true" >> "$GITHUB_ENV"
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Failed to push custom-builds after 3 attempts."
+                exit 1
+              fi
+              echo "Custom-build push failed (attempt $attempt/3); retrying..."
+              sleep $((attempt * 10))
+            done
           fi
 
       - name: Trigger production aggregation
@@ -106,4 +116,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cd "$GITHUB_WORKSPACE/source"
-          gh workflow run build.yml --ref master
+          for attempt in 1 2 3; do
+            if gh workflow run build.yml --ref master; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Failed to trigger production aggregation after 3 attempts."
+              exit 1
+            fi
+            echo "Aggregation trigger failed (attempt $attempt/3); retrying..."
+            sleep $((attempt * 10))
+          done

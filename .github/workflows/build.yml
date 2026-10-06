@@ -159,7 +159,17 @@ jobs:
             echo "No catalog changes to publish."
           else
             git commit -m "Mega catalog update: ${GITHUB_SHA::8}"
-            git push origin builds
+            for attempt in 1 2 3; do
+              if git push origin builds; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Failed to push builds branch after 3 attempts."
+                exit 1
+              fi
+              echo "Push failed (attempt $attempt/3); retrying..."
+              sleep $((attempt * 10))
+            done
           fi
 
       - name: Refresh Master README
@@ -175,5 +185,15 @@ jobs:
             echo "Master README already current."
           else
             git commit -m "docs: refresh mega-repo dashboard [skip ci]"
-            git push origin HEAD:master
+            for attempt in 1 2 3; do
+              if git push origin HEAD:master; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Failed to push master README after 3 attempts."
+                exit 1
+              fi
+              echo "README push failed (attempt $attempt/3); retrying..."
+              sleep $((attempt * 10))
+            done
           fi

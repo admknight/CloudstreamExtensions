@@ -1,0 +1,54 @@
+name: Check Custom Provider Health
+
+on:
+  schedule:
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - '*/src/main/kotlin/**'
+      - 'tools/custom_provider_health.py'
+      - '.github/workflows/health.yml'
+
+concurrency:
+  group: custom-provider-health
+  cancel-in-progress: true
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Check provider websites
+        run: |
+          python3 tools/custom_provider_health.py \
+            --root . \
+            --json custom-provider-health.json \
+            --markdown CUSTOM_PROVIDER_HEALTH.md
+
+      - name: Publish health summary
+        if: always()
+        run: |
+          if [ -f CUSTOM_PROVIDER_HEALTH.md ]; then
+            cat CUSTOM_PROVIDER_HEALTH.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No health report was generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: custom-provider-health-${{ github.run_id }}
+          path: |
+            CUSTOM_PROVIDER_HEALTH.md
+            custom-provider-health.json
+          if-no-files-found: warn
