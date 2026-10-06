@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06 02:36:43 UTC",
+  "generatedAt": "2026-10-06 02:59:24 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -755,9 +755,197 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 539,
+    "updated": 0,
+    "unchanged": 540,
     "removed": 0
   },
+  "changeDetails": {
+    "added": [],
+    "recovered": [],
+    "updated": [],
+    "removed": []
+  },
+  "sourceChanges": {
+    "added": [
+      {
+        "id": "adam-custom",
+        "name": "Adam Knight Custom Providers",
+        "repo": "https://github.com/admknight/CloudstreamExtensions"
+      },
+      {
+        "id": "alyss",
+        "name": "TheAlyss Repo",
+        "repo": "https://github.com/TheAlyss/cloudstream-AlyssRepo"
+      },
+      {
+        "id": "aniyomi-compat",
+        "name": "Aniyomi Compat",
+        "repo": "https://github.com/CranberrySoup/AniyomiCompatExtension"
+      },
+      {
+        "id": "ayu-games",
+        "name": "Ayu CloudStream Games",
+        "repo": "https://github.com/errorcode26/Ayu-CloudStream-Games"
+      },
+      {
+        "id": "cakestwix",
+        "name": "CakesTwix UK/UA",
+        "repo": "https://github.com/CakesTwix/cloudstream-extensions-uk"
+      },
+      {
+        "id": "cinephile",
+        "name": "Cinephile",
+        "repo": "https://github.com/rockhero1234/cinephile"
+      },
+      {
+        "id": "cloudstreamhub-recovery",
+        "name": "CloudStreamHub Recovery Builds",
+        "repo": "https://github.com/Emre-Kahveci/CloudStreamHub"
+      },
+      {
+        "id": "cloudx",
+        "name": "CloudX-V2",
+        "repo": "https://github.com/Asm0d3usX/CloudX-V2"
+      },
+      {
+        "id": "cnc",
+        "name": "CNC Repo (All Language)",
+        "repo": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension"
+      },
+      {
+        "id": "cs-karma",
+        "name": "cs-karma",
+        "repo": "https://github.com/Kraptor123/cs-Karma"
+      },
+      {
+        "id": "csx",
+        "name": "CSX",
+        "repo": "https://github.com/SaurabhKaperwan/CSX"
+      },
+      {
+        "id": "cxxx",
+        "name": "CXXX",
+        "repo": "https://github.com/phisher98/CXXX"
+      },
+      {
+        "id": "desi",
+        "name": "Desi Extensions",
+        "repo": "https://github.com/Faisal0786/Desi"
+      },
+      {
+        "id": "diegon",
+        "name": "DieGon Repository",
+        "repo": "https://github.com/DieGon7771/ItaliaInStreaming"
+      },
+      {
+        "id": "dogior",
+        "name": "doGior's Had Enough",
+        "repo": "https://github.com/doGior/doGiorsHadEnough"
+      },
+      {
+        "id": "flummox",
+        "name": "FLUMMOX Repo",
+        "repo": "https://github.com/FlummoxGamer/FLUMMOX-Repo"
+      },
+      {
+        "id": "gian-fr",
+        "name": "Gian-Fr Italian Provider",
+        "repo": "https://github.com/Gian-Fr/ItalianProvider"
+      },
+      {
+        "id": "kekik",
+        "name": "Turkish Providers Repository | @KekikAkademi",
+        "repo": "https://github.com/maarrem/cs-Kekik"
+      },
+      {
+        "id": "kim-recovery",
+        "name": "Kim Recovery Builds",
+        "repo": "https://github.com/kim20598/cloudstream-extensions-test"
+      },
+      {
+        "id": "manual-recovery",
+        "name": "Adam Knight Curated Recovery",
+        "repo": "https://github.com/admknight/CloudstreamExtensions"
+      },
+      {
+        "id": "mega-provider",
+        "name": "Mega Repository",
+        "repo": "https://github.com/self-similarity/MegaRepo"
+      },
+      {
+        "id": "netmirror",
+        "name": "NetMirror Extension",
+        "repo": "https://github.com/Sushan64/NetMirror-Extension"
+      },
+      {
+        "id": "nontonindo",
+        "name": "Nonton Indo",
+        "repo": "https://github.com/ExtremeBoyGG/nonton-indo"
+      },
+      {
+        "id": "nuyuls-recovery",
+        "name": "StreamPlay Recovery Builds",
+        "repo": "https://github.com/nuyuls79/StreamPlay-movie"
+      },
+      {
+        "id": "official",
+        "name": "ReCloudStream Official Extensions",
+        "repo": "https://github.com/recloudstream/extensions"
+      },
+      {
+        "id": "phisher",
+        "name": "Phisher Repo",
+        "repo": "https://github.com/phisher98/cloudstream-extensions-phisher"
+      },
+      {
+        "id": "raghav",
+        "name": "raghav repo",
+        "repo": "https://github.com/KSHITIJ8473/raghav"
+      },
+      {
+        "id": "rearabi",
+        "name": "Re-3arabi",
+        "repo": "https://github.com/Abodabodd/re-3arabi"
+      },
+      {
+        "id": "redowan",
+        "name": "Redowan CloudStream",
+        "repo": "https://github.com/redowan99/Redowan-CloudStream"
+      },
+      {
+        "id": "reflex",
+        "name": "Reflex Repo",
+        "repo": "https://github.com/Reflex755/ReflexRepo"
+      },
+      {
+        "id": "rowdy-recovery",
+        "name": "Rowdy Recovery Builds",
+        "repo": "https://github.com/RowdyRushya/rowdy-cs-extensions"
+      },
+      {
+        "id": "shakzz-recovery",
+        "name": "Shakzz Recovery Builds",
+        "repo": "https://github.com/Shakzz890/ShakzzCutie"
+      },
+      {
+        "id": "storm-redblacker8",
+        "name": "Storm-ext Fork by redblacker8",
+        "repo": "https://github.com/redblacker8/storm-ext"
+      },
+      {
+        "id": "tearrs-vietnamese",
+        "name": "Tearrs Vietnamese Extension",
+        "repo": "https://gitlab.com/tearrs/cloudstream-vietnamese"
+      },
+      {
+        "id": "vietnam",
+        "name": "Vietnamese CloudStream Index",
+        "repo": "https://github.com/t23-02/cloudstream"
+      }
+    ],
+    "removed": [],
+    "healthChanged": []
+  },
+  "customProviderChanges": [],
   "removedPlugins": []
 }
