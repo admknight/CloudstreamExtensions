@@ -74,7 +74,7 @@
     <div class="live"><i></i> LIVE PRODUCTION</div>
     <h1>CloudStream Plugins & Extensions Mega Repo</h1>
     <p>One maintained CloudStream repository with automated upstream aggregation, version-aware deduplication, package verification, custom builds, health monitoring and publication safety gates.</p>
-    <div class="hero-actions"><a class="btn primary" href="https://github.com/admknight/CloudstreamExtensions">View source</a><a class="btn" href="https://github.com/admknight/CloudstreamExtensions/releases/latest">Latest release</a><a class="btn" href="#dashboard">Live dashboard ↓</a></div>
+    <div class="hero-actions"><a class="btn primary" href="https://github.com/admknight/CloudstreamExtensions">View source</a><a class="btn" href="https://github.com/admknight/CloudstreamExtensions/releases/latest">Latest release</a><button class="btn" id="share-project" type="button">Share project</button><a class="btn" href="https://github.com/admknight/CloudstreamExtensions/issues/new?template=source-suggestion.yml">Suggest source</a><a class="btn" href="https://github.com/admknight/CloudstreamExtensions/issues/new?template=broken-plugin.yml">Report issue</a></div>
 
     <div class="install">
       <div class="install-label">CLOUDSTREAM REPOSITORY SHORTCODE</div>
@@ -198,6 +198,7 @@ async function loadRelease(){
   }catch(e){console.warn("Release unavailable",e)}
 }
 document.querySelectorAll("[data-copy]").forEach(btn=>btn.addEventListener("click",async()=>{const text=$(btn.dataset.copy).textContent;try{await navigator.clipboard.writeText(text);const old=btn.textContent;btn.textContent="Copied!";btn.classList.add("copied");setTimeout(()=>{btn.textContent=old;btn.classList.remove("copied")},1400)}catch{btn.textContent="Select & copy"}}));
+const shareBtn=$("share-project");if(shareBtn)shareBtn.addEventListener("click",async()=>{const data={title:"Adam Knight Mega Repo",text:"CloudStream extensions Mega Repo — 540 plugins, 35 sources, automated and verified.",url:"https://admknight.github.io/CloudstreamExtensions/"};const old=shareBtn.textContent;try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}}catch(e){if(e?.name!=="AbortError"){try{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}catch{shareBtn.textContent="Copy link"}}}setTimeout(()=>shareBtn.textContent=old,1500)});
 addEventListener("scroll",()=>{const max=document.documentElement.scrollHeight-innerHeight;$("scroll-progress").style.width=(max?scrollY/max*100:0)+"%"},{passive:true});
 reveal();loadReport();loadCustom();loadRelease();
 </script>
