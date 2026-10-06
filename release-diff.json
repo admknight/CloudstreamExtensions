@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-10-06 02:59:40 UTC",
+  "candidateStatus": "READY",
+  "catalog": {
+    "plugins": 540,
+    "healthySources": 35,
+    "failedSources": 0,
+    "reachablePackages": 540,
+    "packageFailures": 0
+  },
+  "changes": {
+    "added": 0,
+    "updated": 0,
+    "unchanged": 540,
+    "removed": 0
+  },
+  "changeDetails": {
+    "added": [],
+    "recovered": [],
+    "updated": [],
+    "removed": []
+  },
+  "sourceChanges": {
+    "added": [],
+    "removed": [],
+    "healthChanged": []
+  },
+  "customProviderChanges": []
+}
