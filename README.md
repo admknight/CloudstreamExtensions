@@ -8,6 +8,9 @@
   <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml">
     <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master&amp;event=push&amp;v=20261004-2" alt="Update Aggregated Repository">
   </a>
+  <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">
+    <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Custom Provider Health">
+  </a>
 </p>
 
 <p align="center">A dynamic CloudStream mega repository maintained by <strong>Adam Knight</strong>.</p>
@@ -28,7 +31,7 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 00:09:16 UTC**
+Last successful refresh: **2026-10-06 00:12:21 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -763,6 +766,13 @@ When the same plugin is published by more than one source, the highest version i
 | Xhamster | Turkish Providers Repository \| @KekikAkademi v1 | CXXX v1 (lower source priority) |
 | XNXX | Turkish Providers Repository \| @KekikAkademi v2 | CXXX v2 (lower source priority) |
 | YouTube | doGior's Had Enough v15 | Re-3arabi v2 (lower version) |
+
+## 🤖 Automation & monitoring
+
+- Production aggregation runs every day at **00:00 UTC** and on relevant configuration changes.
+- Custom-provider website health runs every day at **01:30 UTC** and on custom provider source changes.
+- Publication pushes retry automatically up to **3 times** before a workflow is marked failed.
+- Runtime health is advisory: a temporary provider-site outage is reported but does not remove or overwrite the last known-good production catalog.
 
 ## 🧭 Status files
 
