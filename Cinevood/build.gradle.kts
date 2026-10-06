@@ -1,4 +1,4 @@
-version = 12
+version = 13
 
 cloudstream {
     language = "hi"
@@ -6,6 +6,6 @@ cloudstream {
     authors = listOf("Adam Knight")
     status = 1
     tvTypes = listOf("Movie", "TvSeries", "Anime", "AsianDrama")
-    iconUrl = "https://www.google.com/s2/favicons?domain=cinevood.bingo&sz=%size%"
+    iconUrl = "https://www.google.com/s2/favicons?domain=cinevood.rocks&sz=%size%"
     isCrossPlatform = true
 }

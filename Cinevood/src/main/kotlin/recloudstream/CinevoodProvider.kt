@@ -23,7 +23,7 @@ import org.jsoup.nodes.Element
 import java.net.URI
 
 class CinevoodProvider : MainAPI() {
-    override var mainUrl = "https://cinevood.bingo"
+    override var mainUrl = "https://cinevood.rocks"
     override var name = "Cinevood"
     override var lang = "hi"
     override val hasMainPage = true
@@ -164,7 +164,7 @@ class CinevoodProvider : MainAPI() {
         val href = fixUrl(hrefRaw)
         val uri = runCatching { URI(href) }.getOrNull() ?: return null
         val host = uri.host?.lowercase().orEmpty()
-        if (host != "cinevood.bingo" && !host.endsWith(".cinevood.bingo")) return null
+        if (host != "cinevood.rocks" && !host.endsWith(".cinevood.rocks")) return null
 
         val path = uri.path.orEmpty().trimEnd('/')
         if (path.isBlank()) return null
