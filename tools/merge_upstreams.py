@@ -188,6 +188,42 @@ def load_previous(path):
     return {plugin_identity(p): p for p in data if plugin_identity(p)}
 
 
+def load_json_object(path):
+    if not path:
+        return {}
+    file = Path(path)
+    if not file.exists():
+        return {}
+    try:
+        data = json.loads(file.read_text())
+        return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
+def load_previous_provenance(path):
+    if not path:
+        return {}
+    file = Path(path)
+    if not file.exists():
+        return {}
+    try:
+        data = json.loads(file.read_text())
+    except Exception:
+        return {}
+    if not isinstance(data, list):
+        return {}
+
+    result = {}
+    for row in data:
+        if not isinstance(row, dict):
+            continue
+        key = str(row.get("plugin") or row.get("originalName") or "").strip().casefold()
+        if key:
+            result[key] = row
+    return result
+
+
 def comparable(plugin):
     return json.dumps(plugin, sort_keys=True, ensure_ascii=False)
 
@@ -503,6 +539,121 @@ def build_readme(report, plugin_rows):
     return "\n".join(lines)
 
 
+def release_item_line(item, mode):
+    name = md(item.get("plugin") or item.get("name") or "Unknown")
+    source = md(item.get("sourceName") or item.get("toSource") or "Unknown source")
+    if mode == "updated":
+        old_version = item.get("fromVersion", "?")
+        new_version = item.get("toVersion", "?")
+        old_source = md(item.get("fromSource") or "")
+        source_text = source
+        if old_source and old_source != source:
+            source_text = f"{old_source} → {source}"
+        return f"- **{name}** v{old_version} → v{new_version} — {source_text}"
+    version = item.get("version", "?")
+    return f"- **{name}** v{version} — {source}"
+
+
+def build_release_notes(report):
+    details = report.get("changeDetails", {})
+    source_changes = report.get("sourceChanges", {})
+    custom_changes = report.get("customProviderChanges", [])
+    changes = report.get("changes", {})
+
+    lines = [
+        "# Adam Knight Mega Repo — Production Change Notes",
+        "",
+        f"Generated: **{report['generatedAt']}**",
+        "",
+        f"Production catalog: **{report['uniquePlugins']} reachable plugins** · "
+        f"**{report['sourceHealth']['ok']} healthy sources** · "
+        f"**{report['packageHealth']['failed']} package failures**",
+        "",
+        "## Summary",
+        "",
+        f"- Added: **{changes.get('added', 0)}**",
+        f"- Updated: **{changes.get('updated', 0)}**",
+        f"- Removed: **{changes.get('removed', 0)}**",
+        f"- Unchanged: **{changes.get('unchanged', 0)}**",
+        "",
+    ]
+
+    recovered = details.get("recovered", [])
+    added = details.get("added", [])
+    updated = details.get("updated", [])
+    removed = details.get("removed", [])
+
+    if recovered:
+        lines += ["## Recovered plugins", ""]
+        lines.extend(release_item_line(x, "added") for x in recovered)
+        lines.append("")
+
+    if added:
+        lines += ["## Added plugins", ""]
+        lines.extend(release_item_line(x, "added") for x in added)
+        lines.append("")
+
+    if updated:
+        lines += ["## Updated plugins", ""]
+        lines.extend(release_item_line(x, "updated") for x in updated)
+        lines.append("")
+
+    if removed:
+        lines += ["## Removed plugins", ""]
+        lines.extend(release_item_line(x, "removed") for x in removed)
+        lines.append("")
+
+    source_added = source_changes.get("added", [])
+    source_removed = source_changes.get("removed", [])
+    source_health = source_changes.get("healthChanged", [])
+    if source_added or source_removed or source_health:
+        lines += ["## Source changes", ""]
+        for row in source_added:
+            lines.append(f"- Added source: **{md(row.get('name'))}** (`{md(row.get('id'))}`)")
+        for row in source_removed:
+            lines.append(f"- Removed source: **{md(row.get('name'))}** (`{md(row.get('id'))}`)")
+        for row in source_health:
+            before = "healthy" if row.get("fromOk") else "failed"
+            after = "healthy" if row.get("toOk") else "failed"
+            lines.append(f"- **{md(row.get('name'))}** health changed: {before} → {after}")
+        lines.append("")
+
+    if custom_changes:
+        lines += ["## Custom provider changes", ""]
+        for row in custom_changes:
+            action = row.get("action")
+            if action == "updated":
+                lines.append(release_item_line(row, "updated"))
+            else:
+                lines.append(f"- **{md(row.get('plugin'))}** v{row.get('version', '?')} — {action}")
+        lines.append("")
+
+    has_meaningful = any([
+        recovered, added, updated, removed,
+        source_added, source_removed, source_health, custom_changes,
+    ])
+    if not has_meaningful:
+        lines += [
+            "## Catalog changes",
+            "",
+            "No plugin or source changes were detected in this production refresh.",
+            "",
+        ]
+
+    lines += [
+        "## Production health",
+        "",
+        f"- Reachable packages: **{report['packageHealth']['reachable']}**",
+        f"- Package failures: **{report['packageHealth']['failed']}**",
+        f"- Healthy sources: **{report['sourceHealth']['ok']}**",
+        f"- Failed sources: **{report['sourceHealth']['failed']}**",
+        "",
+        "> These notes are generated automatically from the production diff. Stable releases still require explicit manual approval.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def build_status(report, plugin_rows):
     lines = [
         "# Production Aggregation Status",
@@ -545,11 +696,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("output_dir", nargs="?", default="merged")
     parser.add_argument("--previous", default=None)
+    parser.add_argument("--previous-report", default=None)
+    parser.add_argument("--previous-provenance", default=None)
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     previous = load_previous(args.previous)
+    previous_report = load_json_object(args.previous_report)
+    previous_provenance = load_previous_provenance(args.previous_provenance)
 
     candidates = defaultdict(list)
     source_status = []
@@ -718,18 +873,49 @@ def main():
     published_plugins = []
     plugin_rows = []
     added = updated = unchanged = 0
+    added_details = []
+    recovered_details = []
+    updated_details = []
+    previous_removed = {
+        str(value).strip().casefold()
+        for value in (previous_report.get("removedPlugins") or [])
+        if value is not None
+    }
 
     for key in sorted(selected, key=str.casefold):
         winner = selected[key]
         output_plugin = branded_plugin(winner["plugin"], winner["category"])
         old = previous.get(key)
 
+        detail_base = {
+            "plugin": plugin_key(winner["plugin"]) or key,
+            "name": base_display_name(winner["plugin"]) or str(plugin_key(winner["plugin"]) or key),
+            "version": winner["version"],
+            "sourceId": winner["source"]["id"],
+            "sourceName": winner["source"]["name"],
+            "category": winner["category"],
+        }
+
         if old is None:
             change = "🆕 Added"
             added += 1
+            if key in previous_removed:
+                recovered_details.append(dict(detail_base))
+            else:
+                added_details.append(dict(detail_base))
         elif comparable(old) != comparable(output_plugin):
             change = "🔄 Updated"
             updated += 1
+            old_provenance = previous_provenance.get(key, {})
+            updated_details.append({
+                **detail_base,
+                "fromVersion": version_value(old),
+                "toVersion": winner["version"],
+                "fromSourceId": old_provenance.get("sourceId"),
+                "fromSource": old_provenance.get("sourceName"),
+                "toSourceId": winner["source"]["id"],
+                "toSource": winner["source"]["name"],
+            })
         else:
             change = "—"
             unchanged += 1
@@ -755,6 +941,58 @@ def main():
         [str(plugin_key(previous[key]) or key) for key in removed_ids],
         key=str.casefold,
     )
+    removed_details = []
+    for key in sorted(removed_ids, key=str.casefold):
+        old = previous[key]
+        old_provenance = previous_provenance.get(key, {})
+        removed_details.append({
+            "plugin": plugin_key(old) or key,
+            "name": base_display_name(old) or str(plugin_key(old) or key),
+            "version": version_value(old),
+            "sourceId": old_provenance.get("sourceId"),
+            "sourceName": old_provenance.get("sourceName") or "Unknown source",
+            "category": old_provenance.get("category"),
+        })
+
+    current_sources = {row["id"]: row for row in source_status}
+    previous_sources = {
+        row.get("id"): row
+        for row in (previous_report.get("sourceStatus") or [])
+        if isinstance(row, dict) and row.get("id")
+    }
+    source_added = [
+        {"id": source_id, "name": current_sources[source_id].get("name"), "repo": current_sources[source_id].get("repo")}
+        for source_id in sorted(set(current_sources) - set(previous_sources))
+    ]
+    source_removed = [
+        {"id": source_id, "name": previous_sources[source_id].get("name"), "repo": previous_sources[source_id].get("repo")}
+        for source_id in sorted(set(previous_sources) - set(current_sources))
+    ]
+    source_health_changed = []
+    for source_id in sorted(set(current_sources).intersection(previous_sources)):
+        before = bool(previous_sources[source_id].get("ok"))
+        after = bool(current_sources[source_id].get("ok"))
+        if before != after:
+            source_health_changed.append({
+                "id": source_id,
+                "name": current_sources[source_id].get("name"),
+                "fromOk": before,
+                "toOk": after,
+            })
+
+    custom_provider_changes = []
+    for row in recovered_details:
+        if row.get("sourceId") == "adam-custom":
+            custom_provider_changes.append({**row, "action": "recovered"})
+    for row in added_details:
+        if row.get("sourceId") == "adam-custom":
+            custom_provider_changes.append({**row, "action": "added"})
+    for row in updated_details:
+        if row.get("toSourceId") == "adam-custom" or row.get("fromSourceId") == "adam-custom":
+            custom_provider_changes.append({**row, "action": "updated"})
+    for row in removed_details:
+        if row.get("sourceId") == "adam-custom":
+            custom_provider_changes.append({**row, "action": "removed"})
 
     candidate_status = "READY"
     if failed_sources:
@@ -794,6 +1032,18 @@ def main():
             "unchanged": unchanged,
             "removed": len(removed),
         },
+        "changeDetails": {
+            "added": added_details,
+            "recovered": recovered_details,
+            "updated": updated_details,
+            "removed": removed_details,
+        },
+        "sourceChanges": {
+            "added": source_added,
+            "removed": source_removed,
+            "healthChanged": source_health_changed,
+        },
+        "customProviderChanges": custom_provider_changes,
         "removedPlugins": removed,
     }
 
@@ -817,6 +1067,25 @@ def main():
     (output_dir / "provenance.json").write_text(
         json.dumps(provenance, indent=2, ensure_ascii=False) + "\n"
     )
+    release_diff = {
+        "generatedAt": report["generatedAt"],
+        "candidateStatus": report["candidateStatus"],
+        "catalog": {
+            "plugins": report["uniquePlugins"],
+            "healthySources": report["sourceHealth"]["ok"],
+            "failedSources": report["sourceHealth"]["failed"],
+            "reachablePackages": report["packageHealth"]["reachable"],
+            "packageFailures": report["packageHealth"]["failed"],
+        },
+        "changes": report["changes"],
+        "changeDetails": report["changeDetails"],
+        "sourceChanges": report["sourceChanges"],
+        "customProviderChanges": report["customProviderChanges"],
+    }
+    (output_dir / "release-diff.json").write_text(
+        json.dumps(release_diff, indent=2, ensure_ascii=False) + "\n"
+    )
+    (output_dir / "RELEASE_NOTES.md").write_text(build_release_notes(report) + "\n")
     (output_dir / "STATUS.md").write_text(build_status(report, plugin_rows) + "\n")
     (output_dir / "README.md").write_text(build_readme(report, plugin_rows) + "\n")
 
