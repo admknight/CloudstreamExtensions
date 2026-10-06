@@ -4060,6 +4060,23 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/IncestFlix.cs3"
   },
   {
+    "plugin": "India4Movies",
+    "originalName": "India4Movies",
+    "publishedName": "[Indian] India4Movies",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "adam-custom",
+    "sourceName": "Adam Knight Custom Providers",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
+    "originalAuthors": [
+      "Adam Knight"
+    ],
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/India4Movies.cs3"
+  },
+  {
     "plugin": "IndianTVProvider",
     "originalName": "IndianTVProvider",
     "publishedName": "[Live] IndianTVProvider",

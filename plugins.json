@@ -4909,6 +4909,30 @@
     "fileHash": "sha256-34f0c1235004551085c88c0cfaeb648324a0bdbbc5e7f4b12e2da49562122bbd"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=india4movies.net&sz=%size%",
+    "jarFileSize": 38707,
+    "fileHash": "sha256-5672f3897927063961c521155adfd82e14b95ccd8be6a649862985b9bda78164",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 12865,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "India4Movies",
+    "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/India4Movies.jar",
+    "description": "India4Movies catalogue, search and metadata for the current India4Movies frontend.",
+    "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/India4Movies.cs3",
+    "name": "[Indian] India4Movies",
+    "jarHash": "sha256-b9a94bd6d728ed3794b757e7989f0cfab9d941b9db49bc0b0dbdf03a0c9dc08f"
+  },
+  {
     "iconUrl": "https://www.freepnglogos.com/uploads/tv-png/tv-png-box-television-set-cable-screen-icon-31.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
