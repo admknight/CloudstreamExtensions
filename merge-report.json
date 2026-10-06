@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06 03:04:21 UTC",
+  "generatedAt": "2026-10-06 03:04:39 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -30,7 +30,7 @@
       "rawCount": 5,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 3
+      "duplicateSkipped": 2
     },
     {
       "id": "csx",
@@ -533,14 +533,6 @@
       "selectedVersion": 20,
       "skippedSource": "doGior's Had Enough",
       "skippedVersion": 15,
-      "reason": "lower version"
-    },
-    {
-      "plugin": "Cinevood",
-      "selectedSource": "Adam Knight Custom Providers",
-      "selectedVersion": 14,
-      "skippedSource": "Cinephile",
-      "skippedVersion": 11,
       "reason": "lower version"
     },
     {
