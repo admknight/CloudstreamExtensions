@@ -1,0 +1,11 @@
+version = 12
+
+cloudstream {
+    language = "hi"
+    description = "Cinevood catalogue, search and metadata for the current CineVood domain. Playback is intentionally not implemented."
+    authors = listOf("Adam Knight")
+    status = 1
+    tvTypes = listOf("Movie", "TvSeries", "Anime", "AsianDrama")
+    iconUrl = "https://www.google.com/s2/favicons?domain=cinevood.bingo&sz=%size%"
+    isCrossPlatform = true
+}
