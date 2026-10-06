@@ -39,7 +39,10 @@ jobs:
       - name: Build Candidate Catalog
         run: |
           set +e
-          python3 source/tools/merge_upstreams.py source/merged --previous builds/plugins.json 2>&1 | tee merge-output.txt
+          python3 source/tools/merge_upstreams.py source/merged \
+            --previous builds/plugins.json \
+            --previous-report builds/merge-report.json \
+            --previous-provenance builds/provenance.json 2>&1 | tee merge-output.txt
           status=${PIPESTATUS[0]}
           echo "MERGE_STATUS=$status" >> "$GITHUB_ENV"
           exit 0
@@ -62,6 +65,8 @@ jobs:
             source/merged/STATUS.md
             source/merged/merge-report.json
             source/merged/provenance.json
+            source/merged/RELEASE_NOTES.md
+            source/merged/release-diff.json
             merge-output.txt
           if-no-files-found: warn
 
@@ -113,6 +118,8 @@ jobs:
           cp source/merged/repo.json builds/repo.json
           cp source/merged/merge-report.json builds/merge-report.json
           cp source/merged/provenance.json builds/provenance.json
+          cp source/merged/RELEASE_NOTES.md builds/RELEASE_NOTES.md
+          cp source/merged/release-diff.json builds/release-diff.json
           cp source/merged/STATUS.md builds/STATUS.md
           cp source/merged/README.md builds/README.md
 
@@ -154,7 +161,7 @@ jobs:
           cd builds
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add plugins.json repo.json merge-report.json provenance.json STATUS.md README.md BUILD_HISTORY.md
+          git add plugins.json repo.json merge-report.json provenance.json RELEASE_NOTES.md release-diff.json STATUS.md README.md BUILD_HISTORY.md
           if git diff --cached --quiet; then
             echo "No catalog changes to publish."
           else
