@@ -3,6 +3,7 @@ import argparse
 import json
 import re
 import socket
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -25,48 +26,65 @@ def discover(root: Path):
         })
     return rows
 
-def check(item, timeout):
-    req = Request(
-        item["url"],
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
-        },
-        method="GET",
-    )
+def check(item, timeout, attempts=3):
     result = dict(item)
-    try:
-        with urlopen(req, timeout=timeout) as response:
-            status = getattr(response, "status", None) or response.getcode()
-            response.read(2048)
+    last_error = ""
+    for attempt in range(1, attempts + 1):
+        req = Request(
+            item["url"],
+            headers={
+                "User-Agent": USER_AGENT,
+                "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+            },
+            method="GET",
+        )
+        try:
+            with urlopen(req, timeout=timeout) as response:
+                status = getattr(response, "status", None) or response.getcode()
+                response.read(2048)
+                result.update({
+                    "state": "ok" if 200 <= status < 400 else "fail",
+                    "httpStatus": status,
+                    "finalUrl": response.geturl(),
+                    "error": "",
+                    "attempts": attempt,
+                })
+                return result
+        except HTTPError as exc:
+            state = "restricted" if exc.code in (401, 403, 429) else "fail"
             result.update({
-                "state": "ok" if 200 <= status < 400 else "fail",
-                "httpStatus": status,
-                "finalUrl": response.geturl(),
-                "error": "",
+                "state": state,
+                "httpStatus": exc.code,
+                "finalUrl": exc.geturl() or item["url"],
+                "error": f"HTTP {exc.code}: {exc.reason}",
+                "attempts": attempt,
             })
-    except HTTPError as exc:
-        state = "restricted" if exc.code in (401, 403, 429) else "fail"
-        result.update({
-            "state": state,
-            "httpStatus": exc.code,
-            "finalUrl": exc.geturl() or item["url"],
-            "error": f"HTTP {exc.code}: {exc.reason}",
-        })
-    except (URLError, socket.timeout, TimeoutError) as exc:
-        result.update({
-            "state": "fail",
-            "httpStatus": None,
-            "finalUrl": item["url"],
-            "error": str(getattr(exc, "reason", exc)),
-        })
-    except Exception as exc:
-        result.update({
-            "state": "fail",
-            "httpStatus": None,
-            "finalUrl": item["url"],
-            "error": f"{type(exc).__name__}: {exc}",
-        })
+            if state == "restricted" or exc.code in (404, 410):
+                return result
+            last_error = result["error"]
+        except (URLError, socket.timeout, TimeoutError) as exc:
+            last_error = str(getattr(exc, "reason", exc))
+            result.update({
+                "state": "fail",
+                "httpStatus": None,
+                "finalUrl": item["url"],
+                "error": last_error,
+                "attempts": attempt,
+            })
+        except Exception as exc:
+            last_error = f"{type(exc).__name__}: {exc}"
+            result.update({
+                "state": "fail",
+                "httpStatus": None,
+                "finalUrl": item["url"],
+                "error": last_error,
+                "attempts": attempt,
+            })
+
+        if attempt < attempts:
+            time.sleep(attempt * 2)
+
+    result["error"] = last_error or result.get("error", "Unknown failure")
     return result
 
 def render_markdown(results, generated_at):
@@ -83,8 +101,8 @@ def render_markdown(results, generated_at):
         "",
         "> This is an advisory website-availability check only. It does not modify production and does not prove playback works.",
         "",
-        "| Provider | State | HTTP | Configured URL | Final URL / Error |",
-        "| --- | --- | ---: | --- | --- |",
+        "| Provider | State | HTTP | Attempts | Configured URL | Final URL / Error |",
+        "| --- | --- | ---: | ---: | --- | --- |",
     ]
     for row in results:
         state = row["state"]
@@ -93,7 +111,7 @@ def render_markdown(results, generated_at):
         detail = str(detail).replace("|", "\\|")
         url = row["url"].replace("|", "\\|")
         lines.append(
-            f"| {row['module']} | {icon.get(state, '❔')} {state} | {http} | {url} | {detail} |"
+            f"| {row['module']} | {icon.get(state, '❔')} {state} | {http} | {row.get('attempts', 1)} | {url} | {detail} |"
         )
     lines += [
         "",
