@@ -16,12 +16,7 @@ def discover(root: Path):
         module = path.parts[0]
         row = modules.setdefault(
             module,
-            {
-                "module": module,
-                "sources": [],
-                "text": "",
-                "mainUrls": [],
-            },
+            {"module": module, "sources": [], "text": "", "mainUrls": []},
         )
         row["sources"].append(str(path))
         row["text"] += "\n" + text
@@ -47,16 +42,16 @@ def discover(root: Path):
         )
 
         if not has_load:
-            status = "incomplete"
+            state = "incomplete"
             reason = "load() is not implemented"
         elif not has_load_links:
-            status = "incomplete"
+            state = "incomplete"
             reason = "loadLinks() is not implemented"
         elif not (uses_load_extractor or emits_direct or uses_m3u8_helper):
-            status = "review"
+            state = "review"
             reason = "loadLinks() exists but no standard extractor/direct-link emission pattern was detected"
         else:
-            status = "implemented"
+            state = "implemented"
             reason = ""
 
         if uses_load_extractor and (emits_direct or uses_m3u8_helper):
@@ -68,22 +63,27 @@ def discover(root: Path):
         else:
             mechanism = "unknown"
 
-        rows.append(
-            {
-                **row,
-                "hasLoad": has_load,
-                "hasLoadLinks": has_load_links,
-                "usesLoadExtractor": uses_load_extractor,
-                "emitsDirectLinks": emits_direct,
-                "usesM3u8Helper": uses_m3u8_helper,
-                "explicitLinkType": typed_links,
-                "allowlistFiltered": allowlist_filtered,
-                "playbackMechanism": mechanism,
-                "architectureState": status,
-                "reason": reason,
-            }
-        )
+        rows.append({
+            **row,
+            "hasLoad": has_load,
+            "hasLoadLinks": has_load_links,
+            "usesLoadExtractor": uses_load_extractor,
+            "emitsDirectLinks": emits_direct,
+            "usesM3u8Helper": uses_m3u8_helper,
+            "explicitLinkType": typed_links,
+            "allowlistFiltered": allowlist_filtered,
+            "playbackMechanism": mechanism,
+            "architectureState": state,
+            "reason": reason,
+        })
     return rows
+
+def incomplete_modules(rows):
+    return {
+        row["module"].casefold()
+        for row in rows
+        if row["architectureState"] == "incomplete"
+    }
 
 def render_markdown(rows):
     implemented = sum(1 for x in rows if x["architectureState"] == "implemented")
@@ -132,11 +132,7 @@ def filter_plugins(path: Path, rows):
     if not isinstance(plugins, list):
         raise ValueError("plugins.json must contain a JSON array")
 
-    blocked = {
-        row["module"].casefold()
-        for row in rows
-        if row["architectureState"] == "incomplete"
-    }
+    blocked = incomplete_modules(rows)
     kept = []
     removed = []
 
@@ -150,12 +146,27 @@ def filter_plugins(path: Path, rows):
     path.write_text(json.dumps(kept, indent=2) + "\n", encoding="utf-8")
     return removed
 
+def filter_artifacts(directory: Path, rows):
+    blocked = incomplete_modules(rows)
+    removed = []
+    if not directory.exists():
+        return removed
+
+    for path in directory.iterdir():
+        if not path.is_file() or path.suffix.lower() not in {".cs3", ".jar"}:
+            continue
+        if path.stem.casefold() in blocked:
+            path.unlink()
+            removed.append(path.name)
+    return sorted(removed)
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", default=".")
     parser.add_argument("--json", dest="json_path", default="provider-architecture.json")
     parser.add_argument("--markdown", dest="markdown_path", default="PROVIDER_ARCHITECTURE.md")
     parser.add_argument("--filter-plugins", default="")
+    parser.add_argument("--filter-artifacts-dir", default="")
     parser.add_argument("--fail-on-incomplete", action="store_true")
     args = parser.parse_args()
 
@@ -170,15 +181,24 @@ def main():
         "providers": rows,
     }
 
-    removed = []
+    removed_plugins = []
     if args.filter_plugins:
-        removed = filter_plugins(Path(args.filter_plugins), rows)
-        payload["filteredPlugins"] = removed
+        removed_plugins = filter_plugins(Path(args.filter_plugins), rows)
+        payload["filteredPlugins"] = removed_plugins
+
+    removed_artifacts = []
+    if args.filter_artifacts_dir:
+        removed_artifacts = filter_artifacts(Path(args.filter_artifacts_dir), rows)
+        payload["filteredArtifacts"] = removed_artifacts
 
     Path(args.json_path).write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     Path(args.markdown_path).write_text(render_markdown(rows) + "\n", encoding="utf-8")
 
-    print(json.dumps({**payload["summary"], "filtered": removed}))
+    print(json.dumps({
+        **payload["summary"],
+        "filteredPlugins": removed_plugins,
+        "filteredArtifacts": removed_artifacts,
+    }))
 
     if args.fail_on_incomplete and payload["summary"]["incomplete"]:
         return 2
