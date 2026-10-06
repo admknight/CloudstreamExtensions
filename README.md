@@ -56,7 +56,7 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 02:59:40 UTC**
+Last successful refresh: **2026-10-06 03:00:56 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -806,6 +806,8 @@ When the same plugin is published by more than one source, the highest version i
 - BUILD_HISTORY.md on the builds branch — successful publication history
 - merge-report.json on the builds branch — machine-readable build report
 - provenance.json on the builds branch — original source/author provenance retained for maintenance
+- RELEASE_NOTES.md on the builds branch — auto-generated notes for the latest production diff
+- release-diff.json on the builds branch — machine-readable plugin/source/custom-provider change details
 
 ## 🛡️ Publication safety
 
