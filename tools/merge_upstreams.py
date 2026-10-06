@@ -737,12 +737,19 @@ def main():
                 for value in (source.get("include") or [])
                 if value is not None
             }
+            exclude = {
+                str(value).casefold()
+                for value in (source.get("exclude") or [])
+                if value is not None
+            }
 
             for plugin in plugins:
                 key = plugin_identity(plugin)
                 if not key:
                     continue
                 if include and key not in include:
+                    continue
+                if key in exclude:
                     continue
                 candidates[key].append(
                     {
