@@ -11,7 +11,7 @@
   <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">
     <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Provider Health">
   </a>
-  <img src="https://img.shields.io/badge/custom%20plugins-6-2ea44f?style=flat-square" alt="6 custom plugins">
+  <img src="https://img.shields.io/badge/custom%20plugins-7-2ea44f?style=flat-square" alt="7 custom plugins">
   <a href="https://github.com/admknight/CloudstreamExtensions/stargazers">
     <img src="https://img.shields.io/github/stars/admknight/CloudstreamExtensions?style=flat-square" alt="GitHub stars">
   </a>
@@ -33,16 +33,17 @@ In CloudStream: **Settings → Extensions → Add Repository** and enter:
 
 ## Custom providers
 
-**6 custom CloudStream plugins are currently published on this branch.**
+**7 custom CloudStream plugins are currently published on this branch.**
 
 | # | Provider | Version | Lang | Types | Description |
 | ---: | --- | ---: | --- | --- | --- |
 | 1 | **Cinedoze** | 1 | hi | Movie, TvSeries | Cinedoze catalogue, search and metadata for the current CineDoze domain. |
 | 2 | **Cinemaluxe** | 36 | hi | Movie, TvSeries | Cinemaluxe catalogue, search and metadata for the current CinemaLux domain. Playback is limited to directly exposed supported public embeds. |
 | 3 | **CinevezProvider** | 1 | hi | Movie, TvSeries | Cinevez catalogue: browse, search and metadata. Playback is limited to supported authorized embeds. |
-| 4 | **Full4Movies** | 17 | hi | Movie, TvSeries | Full4Movies catalogue, search and metadata for the current FullMoviesMX domain. |
-| 5 | **India4Movies** | 1 | hi | Movie, TvSeries | India4Movies catalogue, search and metadata for the current India4Movies frontend. |
-| 6 | **World4uFree** | 14 | hi | Movie, TvSeries | World4uFree catalogue, search and metadata for the current Worldfree4u domain. Playback is limited to directly exposed supported public embeds. |
+| 4 | **Cinevood** | 12 | hi | Movie, TvSeries, Anime, AsianDrama | Cinevood catalogue, search and metadata for the current CineVood domain. Playback is intentionally not implemented. |
+| 5 | **Full4Movies** | 17 | hi | Movie, TvSeries | Full4Movies catalogue, search and metadata for the current FullMoviesMX domain. |
+| 6 | **India4Movies** | 1 | hi | Movie, TvSeries | India4Movies catalogue, search and metadata for the current India4Movies frontend. |
+| 7 | **World4uFree** | 14 | hi | Movie, TvSeries | World4uFree catalogue, search and metadata for the current Worldfree4u domain. Playback is limited to directly exposed supported public embeds. |
 
 ## Automation
 
