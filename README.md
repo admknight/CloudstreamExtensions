@@ -56,11 +56,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 00:42:53 UTC**
+Last successful refresh: **2026-10-06 02:27:26 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 540 | 0 | 35 | 0 | 0 | 0 | 0 |
+| 540 | 0 | 35 | 0 | 0 | 1 | 0 |
 
 ## 🗂️ Browse by section
 
@@ -85,7 +85,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | Source | Index | Raw | Published | Package failed | Duplicate-skipped |
 | --- | --- | ---: | ---: | ---: | ---: |
 | [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | ✅ OK | 84 | 80 | 0 | 4 |
-| [Cinephile](https://github.com/rockhero1234/cinephile) | ✅ OK | 5 | 3 | 0 | 2 |
+| [Cinephile](https://github.com/rockhero1234/cinephile) | ✅ OK | 5 | 2 | 0 | 3 |
 | [CSX](https://github.com/SaurabhKaperwan/CSX) | ✅ OK | 5 | 5 | 0 | 0 |
 | [NetMirror Extension](https://github.com/Sushan64/NetMirror-Extension) | ✅ OK | 1 | 1 | 0 | 0 |
 | [ReCloudStream Official Extensions](https://github.com/recloudstream/extensions) | ✅ OK | 5 | 5 | 0 | 0 |
@@ -114,7 +114,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [Rowdy Recovery Builds](https://github.com/RowdyRushya/rowdy-cs-extensions) | ✅ OK | 1 | 1 | 0 | 0 |
 | [CloudStreamHub Recovery Builds](https://github.com/Emre-Kahveci/CloudStreamHub) | ✅ OK | 23 | 1 | 0 | 0 |
 | [Adam Knight Curated Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 1 | 1 | 0 | 0 |
-| [Adam Knight Custom Providers](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 6 | 6 | 0 | 0 |
+| [Adam Knight Custom Providers](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 7 | 7 | 0 | 0 |
 | [doGior's Had Enough](https://github.com/doGior/doGiorsHadEnough) | ✅ OK | 15 | 9 | 0 | 6 |
 | [Gian-Fr Italian Provider](https://github.com/Gian-Fr/ItalianProvider) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Aniyomi Compat](https://github.com/CranberrySoup/AniyomiCompatExtension) | ✅ OK | 1 | 1 | 0 | 0 |
@@ -372,7 +372,7 @@ CloudStream display prefix: `[Indian]`
 | 19 | **Cinemaluxe** | 36 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 20 | **CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 21 | **CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
-| 22 | **Cinevood** | 11 | hi | Movie, TvSeries | Cinephile | — |
+| 22 | **Cinevood** | 12 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | 🔄 Updated |
 | 23 | **CNC Verse** | 114 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 24 | **CNC Verse Mobile** | 10 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 25 | **Desicinemas** | 19 | hi | Movie, TvSeries | Phisher Repo | — |
@@ -765,6 +765,7 @@ When the same plugin is published by more than one source, the highest version i
 | Arte | DieGon Repository v5 | doGior's Had Enough v4 (lower version) |
 | BanglaPlex | Phisher Repo v8 | Redowan CloudStream v1 (lower version) |
 | CalcioStreaming | DieGon Repository v20 | doGior's Had Enough v15 (lower version) |
+| Cinevood | Adam Knight Custom Providers v12 | Cinephile v11 (lower version) |
 | FootReplays | Redowan CloudStream v6 | cs-karma v1 (lower version) |
 | FullPorner | Turkish Providers Repository \| @KekikAkademi v2 | CXXX v2 (lower source priority) |
 | Hanime | CXXX v7 | Nonton Indo v3 (lower version) |
