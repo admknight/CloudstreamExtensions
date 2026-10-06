@@ -25,10 +25,10 @@ Primary goal: make the project easier to maintain as the catalog and community g
 
 Tracked work:
 
-- [#4 — Add health history and trend data](https://github.com/admknight/CloudstreamExtensions/issues/4)
-- [#5 — Automate release notes from production diffs](https://github.com/admknight/CloudstreamExtensions/issues/5)
-- [#6 — Add source quality and stability scoring](https://github.com/admknight/CloudstreamExtensions/issues/6)
-- [#7 — Detect custom-provider domain drift and redirects](https://github.com/admknight/CloudstreamExtensions/issues/7)
+- [x] [#4 — Add health history and trend data](https://github.com/admknight/CloudstreamExtensions/issues/4)
+- [ ] [#5 — Automate release notes from production diffs](https://github.com/admknight/CloudstreamExtensions/issues/5)
+- [ ] [#6 — Add source quality and stability scoring](https://github.com/admknight/CloudstreamExtensions/issues/6)
+- [ ] [#7 — Detect custom-provider domain drift and redirects](https://github.com/admknight/CloudstreamExtensions/issues/7)
 
 v1.1 should preserve the current last-known-good publication model. Observability features should inform maintenance decisions rather than silently removing sources/providers.
 
