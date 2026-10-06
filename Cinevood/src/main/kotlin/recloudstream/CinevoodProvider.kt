@@ -23,7 +23,7 @@ import org.jsoup.nodes.Element
 import java.net.URI
 
 class CinevoodProvider : MainAPI() {
-    override var mainUrl = "https://cinevood.rocks"
+    override var mainUrl = "https://cinevood.net"
     override var name = "Cinevood"
     override var lang = "hi"
     override val hasMainPage = true
@@ -161,10 +161,20 @@ class CinevoodProvider : MainAPI() {
         val hrefRaw = anchor.attr("href").trim()
         if (hrefRaw.isBlank() || hrefRaw == "#") return null
 
-        val href = fixUrl(hrefRaw)
+        val href = anchor.absUrl("href").takeIf { it.isNotBlank() } ?: fixUrl(hrefRaw)
         val uri = runCatching { URI(href) }.getOrNull() ?: return null
         val host = uri.host?.lowercase().orEmpty()
-        if (host != "cinevood.rocks" && !host.endsWith(".cinevood.rocks")) return null
+        val officialHosts = setOf(
+            "cinevood.net",
+            "www.cinevood.net",
+            "cinevood.rocks",
+            "www.cinevood.rocks",
+            "cinevood.bingo",
+            "www.cinevood.bingo",
+            "cinevood.forum",
+            "www.cinevood.forum",
+        )
+        if (host !in officialHosts) return null
 
         val path = uri.path.orEmpty().trimEnd('/')
         if (path.isBlank()) return null
@@ -193,7 +203,7 @@ class CinevoodProvider : MainAPI() {
 
         if (cleanedTitle.length < 3) return null
 
-        val poster = image?.imageUrl()
+        val poster = image?.absUrl("src")?.takeIf { it.isNotBlank() } ?: image?.imageUrl()
         val qualityName = Regex(
             """(?i)\b(2160p|1080p|720p|480p|360p|4k|web-dl|webrip|bluray|hdrip|hdtc|hdcam)\b"""
         ).find(card?.text().orEmpty() + " " + cleanedTitle)?.value
