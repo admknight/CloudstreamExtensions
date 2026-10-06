@@ -38,6 +38,7 @@ jobs:
         if: always()
         run: |
           if [ -f CUSTOM_PROVIDER_HEALTH.md ]; then
+            cat CUSTOM_PROVIDER_HEALTH.md
             cat CUSTOM_PROVIDER_HEALTH.md >> "$GITHUB_STEP_SUMMARY"
           else
             echo "No health report was generated." >> "$GITHUB_STEP_SUMMARY"
