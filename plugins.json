@@ -1,5 +1,29 @@
 [
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cinedoze.tv&sz=%size%",
+    "jarFileSize": 34533,
+    "fileHash": "sha256-0872740274f35b456822cc8e5e37c95b0a448b795c6fdbd16f5b50f86b537c4d",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 11271,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "Adam Knight"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Cinedoze",
+    "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinedoze.jar",
+    "description": "Cinedoze catalogue, search and metadata for the current CineDoze domain.",
+    "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinedoze.cs3",
+    "name": "Cinedoze",
+    "jarHash": "sha256-399eb05b247296144e0880f22cdf45edb1f59f16739a2e428b40797aad77bf41"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cinemalux.baby&sz=%size%",
     "jarFileSize": 43885,
     "fileHash": "sha256-6336a19ad64090acec634111a3c495684302996144289431a85a3eea7fad5bed",
