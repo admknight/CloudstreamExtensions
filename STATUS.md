@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-06 00:04:34 UTC**
+Generated: **2026-10-06 00:09:16 UTC**
 
 Candidate status: **READY**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 540 | 0 | 35 | 0 | 1 | 0 | 0 |
+| 540 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## Source health
 
@@ -295,7 +295,7 @@ Candidate status: **READY**
 | 235 | **[Movies] IlCorsaroViola** | 1 | it | Movie, TvSeries, Torrent, Documentary | doGior's Had Enough | — |
 | 236 | **[Live] InatBox** | 24 | tr | Movie, TvSeries, Live | Turkish Providers Repository \| @KekikAkademi | — |
 | 237 | **[Adult] IncestFlix** | 1 | en | NSFW | CXXX | — |
-| 238 | **[Indian] India4Movies** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | 🆕 Added |
+| 238 | **[Indian] India4Movies** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 239 | **[Live] IndianTVProvider** | 6 |  | Live | Kim Recovery Builds | — |
 | 240 | **[Asian] Indomax** | 1 | id | Movie, TvSeries | CloudX-V2 | — |
 | 241 | **[Other] InternetArchiveProvider** | 1 |  | Others | ReCloudStream Official Extensions | — |
