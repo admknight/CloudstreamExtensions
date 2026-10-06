@@ -56,11 +56,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 02:30:34 UTC**
+Last successful refresh: **2026-10-06 02:32:23 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 540 | 0 | 35 | 0 | 0 | 1 | 0 |
+| 540 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## 🗂️ Browse by section
 
@@ -372,7 +372,7 @@ CloudStream display prefix: `[Indian]`
 | 19 | **Cinemaluxe** | 36 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 20 | **CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 21 | **CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
-| 22 | **Cinevood** | 13 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | 🔄 Updated |
+| 22 | **Cinevood** | 13 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | — |
 | 23 | **CNC Verse** | 114 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 24 | **CNC Verse Mobile** | 10 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 25 | **Desicinemas** | 19 | hi | Movie, TvSeries | Phisher Repo | — |
