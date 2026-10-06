@@ -56,11 +56,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 02:32:23 UTC**
+Last successful refresh: **2026-10-06 02:36:43 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 540 | 0 | 35 | 0 | 0 | 0 | 0 |
+| 540 | 0 | 35 | 0 | 0 | 1 | 0 |
 
 ## 🗂️ Browse by section
 
@@ -372,7 +372,7 @@ CloudStream display prefix: `[Indian]`
 | 19 | **Cinemaluxe** | 36 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 20 | **CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 21 | **CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
-| 22 | **Cinevood** | 13 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | — |
+| 22 | **Cinevood** | 14 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | 🔄 Updated |
 | 23 | **CNC Verse** | 114 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 24 | **CNC Verse Mobile** | 10 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 25 | **Desicinemas** | 19 | hi | Movie, TvSeries | Phisher Repo | — |
@@ -765,7 +765,7 @@ When the same plugin is published by more than one source, the highest version i
 | Arte | DieGon Repository v5 | doGior's Had Enough v4 (lower version) |
 | BanglaPlex | Phisher Repo v8 | Redowan CloudStream v1 (lower version) |
 | CalcioStreaming | DieGon Repository v20 | doGior's Had Enough v15 (lower version) |
-| Cinevood | Adam Knight Custom Providers v13 | Cinephile v11 (lower version) |
+| Cinevood | Adam Knight Custom Providers v14 | Cinephile v11 (lower version) |
 | FootReplays | Redowan CloudStream v6 | cs-karma v1 (lower version) |
 | FullPorner | Turkish Providers Repository \| @KekikAkademi v2 | CXXX v2 (lower source priority) |
 | Hanime | CXXX v7 | Nonton Indo v3 (lower version) |

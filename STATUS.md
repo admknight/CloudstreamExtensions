@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-06 02:32:23 UTC**
+Generated: **2026-10-06 02:36:43 UTC**
 
 Candidate status: **READY**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 540 | 0 | 35 | 0 | 0 | 0 | 0 |
+| 540 | 0 | 35 | 0 | 0 | 1 | 0 |
 
 ## Source health
 
@@ -177,7 +177,7 @@ Candidate status: **READY**
 | 117 | **[Movies] CineStream** | 487 | en | TvSeries, Movie, AsianDrama, Anime, Torrent | CSX | — |
 | 118 | **[Indian] CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 119 | **[Indian] CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
-| 120 | **[Indian] Cinevood** | 13 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | — |
+| 120 | **[Indian] Cinevood** | 14 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | 🔄 Updated |
 | 121 | **[Movies] CizgiMax** | 8 | tr | Cartoon | Turkish Providers Repository \| @KekikAkademi | — |
 | 122 | **[Indian] CNC Verse** | 114 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 123 | **[Indian] CNC Verse Mobile** | 10 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
@@ -612,7 +612,7 @@ Candidate status: **READY**
 | Arte | DieGon Repository v5 | doGior's Had Enough v4 (lower version) |
 | BanglaPlex | Phisher Repo v8 | Redowan CloudStream v1 (lower version) |
 | CalcioStreaming | DieGon Repository v20 | doGior's Had Enough v15 (lower version) |
-| Cinevood | Adam Knight Custom Providers v13 | Cinephile v11 (lower version) |
+| Cinevood | Adam Knight Custom Providers v14 | Cinephile v11 (lower version) |
 | FootReplays | Redowan CloudStream v6 | cs-karma v1 (lower version) |
 | FullPorner | Turkish Providers Repository \| @KekikAkademi v2 | CXXX v2 (lower source priority) |
 | Hanime | CXXX v7 | Nonton Indo v3 (lower version) |

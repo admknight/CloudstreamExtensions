@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06 02:32:23 UTC",
+  "generatedAt": "2026-10-06 02:36:43 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -538,7 +538,7 @@
     {
       "plugin": "Cinevood",
       "selectedSource": "Adam Knight Custom Providers",
-      "selectedVersion": 13,
+      "selectedVersion": 14,
       "skippedSource": "Cinephile",
       "skippedVersion": 11,
       "reason": "lower version"
@@ -755,8 +755,8 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 540,
+    "updated": 1,
+    "unchanged": 539,
     "removed": 0
   },
   "removedPlugins": []
