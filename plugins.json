@@ -96,6 +96,30 @@
     "jarHash": "sha256-5038547d5702f4a6149432a631d659eeb8950b0f514f41e96eb945bf7823f4a1"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=india4movies.net&sz=%size%",
+    "jarFileSize": 38707,
+    "fileHash": "sha256-5672f3897927063961c521155adfd82e14b95ccd8be6a649862985b9bda78164",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 12865,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "Adam Knight"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "India4Movies",
+    "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/India4Movies.jar",
+    "description": "India4Movies catalogue, search and metadata for the current India4Movies frontend.",
+    "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/India4Movies.cs3",
+    "name": "India4Movies",
+    "jarHash": "sha256-b9a94bd6d728ed3794b757e7989f0cfab9d941b9db49bc0b0dbdf03a0c9dc08f"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=worldfree4u.blog&sz=%size%",
     "jarFileSize": 45128,
     "fileHash": "sha256-f3ea169f0d464bb8826e420ae75e1a25b370f5a89928f4049ea0ecfe7abc0042",
