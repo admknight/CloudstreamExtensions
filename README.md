@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Mega Repo" width="180">
 </p>
 
-<h1 align="center">Adam Knight Mega Repo</h1>
+<h1 align="center">Adam Knight Mega Repo — CloudStream Extensions & Plugins</h1>
 
 <p align="center">
   <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml">
@@ -11,11 +11,31 @@
   <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">
     <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Custom Provider Health">
   </a>
+  <img src="https://img.shields.io/badge/plugins-540-2ea44f?style=flat-square" alt="540 plugins">
+  <img src="https://img.shields.io/badge/sources-35-blue?style=flat-square" alt="35 active sources">
+  <img src="https://img.shields.io/badge/package%20failures-0-brightgreen?style=flat-square" alt="0 package failures">
+  <a href="https://github.com/admknight/CloudstreamExtensions/stargazers">
+    <img src="https://img.shields.io/github/stars/admknight/CloudstreamExtensions?style=flat-square" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/admknight/CloudstreamExtensions/forks">
+    <img src="https://img.shields.io/github/forks/admknight/CloudstreamExtensions?style=flat-square" alt="GitHub forks">
+  </a>
 </p>
 
-<p align="center">A dynamic CloudStream mega repository maintained by <strong>Adam Knight</strong>.</p>
+<p align="center">A dynamic CloudStream extensions and plugins repository maintained by <strong>Adam Knight</strong>.</p>
 
-The catalog is rebuilt from multiple published CloudStream repositories, deduplicated, package-checked, and only then published.
+Adam Knight Mega Repo is a searchable, automatically updated **CloudStream plugin repository** that aggregates published CloudStream extensions into one installer-friendly catalog. It is intended for users looking for CloudStream plugins, extension repositories, anime/movie/TV providers, live TV tools, games, and multilingual sources in a single maintained repo.
+
+The catalog is rebuilt from multiple published CloudStream repositories, deduplicated, package-checked, runtime-monitored for custom providers, and only then published.
+
+### Why use this CloudStream repository?
+
+- One repository URL for hundreds of CloudStream extensions.
+- Daily automated updates from configured upstream repositories.
+- Duplicate/version resolution so the best reachable package is selected.
+- Package reachability checks and publication safety gates.
+- Custom provider builds with separate health monitoring.
+
 
 ## 🌐 Quick installation
 
@@ -31,7 +51,7 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 00:12:21 UTC**
+Last successful refresh: **2026-10-06 00:17:07 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
