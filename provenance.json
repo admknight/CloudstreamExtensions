@@ -2039,16 +2039,16 @@
     "publishedName": "[Indian] Cinevood",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 11,
-    "sourceId": "cinephile",
-    "sourceName": "Cinephile",
-    "sourceRepository": "https://github.com/rockhero1234/cinephile",
-    "sourceIndex": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+    "selectedVersion": 12,
+    "sourceId": "adam-custom",
+    "sourceName": "Adam Knight Custom Providers",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
     "originalAuthors": [
-      "Dilip"
+      "Adam Knight"
     ],
-    "originalRepositoryUrl": "https://github.com/rockhero1234/cinephile",
-    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/Cinevood.cs3"
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.cs3"
   },
   {
     "plugin": "CizgiMax",

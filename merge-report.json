@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06 00:42:53 UTC",
+  "generatedAt": "2026-10-06 02:27:26 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -28,9 +28,9 @@
       "priority": 20,
       "ok": true,
       "rawCount": 5,
-      "includedCount": 3,
+      "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 2
+      "duplicateSkipped": 3
     },
     {
       "id": "csx",
@@ -375,8 +375,8 @@
       "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json",
       "priority": 1,
       "ok": true,
-      "rawCount": 6,
-      "includedCount": 6,
+      "rawCount": 7,
+      "includedCount": 7,
       "packageFailed": 0,
       "duplicateSkipped": 0
     },
@@ -533,6 +533,14 @@
       "selectedVersion": 20,
       "skippedSource": "doGior's Had Enough",
       "skippedVersion": 15,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Cinevood",
+      "selectedSource": "Adam Knight Custom Providers",
+      "selectedVersion": 12,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 11,
       "reason": "lower version"
     },
     {
@@ -747,8 +755,8 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 540,
+    "updated": 1,
+    "unchanged": 539,
     "removed": 0
   },
   "removedPlugins": []

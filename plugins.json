@@ -2511,10 +2511,12 @@
     "jarHash": "sha256-f8e4c8e63c5402eeb0761780729c87c1bf11e1bcb09d0addde4ba6e5397185a2"
   },
   {
-    "iconUrl": "https://i.ibb.co/nMdxZgkR/8-CM3-5q-ARZYELDWg6-Erqfg-NYpo-Sdh-Yw-HRB5-CMhf-Vgg-Ygn-PMHCVYWQf-EEJMt9gwd6-EFP5t-LYgd-LAm-Zerm-KCX.png",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cinevood.bingo&sz=%size%",
+    "jarFileSize": 38685,
+    "fileHash": "sha256-dfda9d0bc8c53be4552464c0c52f1575f3cd073dd79ef1daad19f67236c7376a",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 33966,
+    "fileSize": 13084,
     "status": 1,
     "language": "hi",
     "authors": [
@@ -2522,13 +2524,17 @@
     ],
     "tvTypes": [
       "Movie",
-      "TvSeries"
+      "TvSeries",
+      "Anime",
+      "AsianDrama"
     ],
-    "version": 11,
+    "version": 12,
     "internalName": "Cinevood",
-    "description": "unstable right now but good regional content",
-    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/Cinevood.cs3",
-    "name": "[Indian] Cinevood"
+    "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.jar",
+    "description": "Cinevood catalogue, search and metadata for the current CineVood domain. Playback is intentionally not implemented.",
+    "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.cs3",
+    "name": "[Indian] Cinevood",
+    "jarHash": "sha256-5dc4d83abe9a679713bb1c7eb10a3abb36b6fb30c2908504c6839baa56714842"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cizgimax.online&sz=%size%",
