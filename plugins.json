@@ -72,12 +72,12 @@
     "jarHash": "sha256-f8e4c8e63c5402eeb0761780729c87c1bf11e1bcb09d0addde4ba6e5397185a2"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=cinevood.rocks&sz=%size%",
-    "jarFileSize": 38685,
-    "fileHash": "sha256-ec88d79c7713384ce3cb220a4b805b57a21cba87ec45e2e372b66110a1a1cfcd",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cinevood.net&sz=%size%",
+    "jarFileSize": 39448,
+    "fileHash": "sha256-9470d0a6a9329b881b0d13de5adfe0b50834ca1fcdb7b76e22bf04ce8c75d66d",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 13086,
+    "fileSize": 13297,
     "status": 1,
     "language": "hi",
     "authors": [
@@ -89,13 +89,13 @@
       "Anime",
       "AsianDrama"
     ],
-    "version": 13,
+    "version": 14,
     "internalName": "Cinevood",
     "jarUrl": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.jar",
     "description": "Cinevood catalogue, search and metadata for the current CineVood domain. Playback is intentionally not implemented.",
     "url": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/Cinevood.cs3",
     "name": "Cinevood",
-    "jarHash": "sha256-4ebdb2fa6c55bf946a1ff990e2e799c67cfabdd77ce797a2a9116d492695ebb1"
+    "jarHash": "sha256-13cd0d80841aac4d5201cb4745d65ab4e7aba229bf1d986a4592c22243b96f28"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=fullmoviesmx.com&sz=%size%",
