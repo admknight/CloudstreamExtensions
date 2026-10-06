@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06 02:27:26 UTC",
+  "generatedAt": "2026-10-06 02:30:34 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY",
@@ -538,7 +538,7 @@
     {
       "plugin": "Cinevood",
       "selectedSource": "Adam Knight Custom Providers",
-      "selectedVersion": 12,
+      "selectedVersion": 13,
       "skippedSource": "Cinephile",
       "skippedVersion": 11,
       "reason": "lower version"
