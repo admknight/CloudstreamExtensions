@@ -5,99 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="J8DJi_a0WwOQTBhdbj1OCqEwSFCZiyhdD8SK8HP2m0g" />
   <title>CloudStream Plugins & Extensions Repository | Adam Knight Mega Repo</title>
-  <meta name="description" content="Adam Knight Mega Repo is an automatically updated CloudStream plugins and extensions repository with hundreds of package-checked providers from multiple maintained sources.">
+  <meta name="description" content="Adam Knight Mega Repo is an automatically updated CloudStream plugins and extensions repository with package checks, deduplication, custom providers and health monitoring.">
   <link rel="canonical" href="https://admknight.github.io/CloudstreamExtensions/">
   <link rel="icon" href="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png">
+  <meta name="theme-color" content="#090e17">
   <meta property="og:title" content="Adam Knight Mega Repo — CloudStream Plugins & Extensions">
-  <meta property="og:description" content="A maintained CloudStream extensions repository with automated updates, deduplication, package checks and custom provider health monitoring.">
+  <meta property="og:description" content="Live CloudStream repository dashboard with automated updates, package verification, deduplication and custom provider monitoring.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://admknight.github.io/CloudstreamExtensions/">
   <meta property="og:image" content="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Adam Knight Mega Repo",
-    "alternateName": "CloudStream Extensions & Plugins Repository",
-    "url": "https://admknight.github.io/CloudstreamExtensions/",
-    "description": "An automatically updated CloudStream plugins and extensions repository with package checking, deduplication and custom provider health monitoring.",
-    "sameAs": [
-      "https://github.com/admknight/CloudstreamExtensions"
-    ]
+    "@context":"https://schema.org",
+    "@type":"SoftwareSourceCode",
+    "name":"Adam Knight Mega Repo",
+    "codeRepository":"https://github.com/admknight/CloudstreamExtensions",
+    "url":"https://admknight.github.io/CloudstreamExtensions/",
+    "author":{"@type":"Person","name":"Adam Knight","url":"https://admknight.github.io/"},
+    "description":"Automatically updated CloudStream plugins and extensions repository with package checking, deduplication and custom provider health monitoring."
   }
   </script>
   <style>
-    :root { color-scheme: dark; --bg:#0d1117; --panel:#161b22; --text:#e6edf3; --muted:#8b949e; --line:#30363d; --accent:#58a6ff; --ok:#3fb950; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    main { max-width:980px; margin:auto; padding:48px 24px 72px; }
-    header { text-align:center; padding:24px 0 40px; }
-    header img { width:128px; height:128px; border-radius:24px; }
-    h1 { font-size:clamp(2rem,5vw,3.4rem); line-height:1.1; margin:20px 0 12px; }
-    h2 { margin-top:38px; }
-    p.lead { max-width:760px; margin:0 auto; color:var(--muted); font-size:1.1rem; }
-    .actions { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:24px; }
-    .button { display:inline-block; padding:10px 16px; border:1px solid var(--line); border-radius:8px; text-decoration:none; color:var(--text); background:var(--panel); }
-    .button.primary { border-color:var(--accent); color:white; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:20px; }
-    .card { border:1px solid var(--line); border-radius:10px; background:var(--panel); padding:18px; }
-    .card strong { color:white; }
-    code { background:#21262d; border:1px solid var(--line); border-radius:6px; padding:2px 6px; }
-    pre { background:#21262d; border:1px solid var(--line); border-radius:8px; padding:14px; overflow:auto; }
-    a { color:var(--accent); }
-    footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
-    .status { color:var(--ok); font-weight:700; }
+    :root{color-scheme:dark;--bg:#090e17;--panel:#111927;--panel2:#0d1522;--line:#22304a;--text:#edf4fb;--muted:#8fa0b7;--blue:#43a7ff;--cyan:#55def7;--green:#55d98b;--red:#ff6b78;--amber:#f2c15b;--radius:17px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+      radial-gradient(circle at 15% 0%,rgba(35,123,235,.13),transparent 28rem),
+      radial-gradient(circle at 90% 28%,rgba(85,222,247,.07),transparent 26rem),
+      linear-gradient(180deg,#070b12,var(--bg) 40%,#070b12);color:var(--text);line-height:1.6}
+    a{color:inherit}
+    .scroll-progress{position:fixed;z-index:99;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));box-shadow:0 0 15px rgba(85,222,247,.45)}
+    .orb{position:fixed;width:32rem;height:32rem;border-radius:50%;filter:blur(100px);opacity:.07;pointer-events:none;z-index:-1;animation:drift 14s ease-in-out infinite alternate}.orb.a{left:-14rem;top:14%;background:#227fff}.orb.b{right:-15rem;top:50%;background:#55def7;animation-delay:-5s}
+    @keyframes drift{to{transform:translate(45px,35px) scale(1.08)}}
+    .shell{width:min(1120px,calc(100% - 36px));margin:0 auto}
+    nav{height:76px;border-bottom:1px solid rgba(255,255,255,.055);display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:820}.brand img{width:36px;height:36px;border-radius:9px}.navlinks{display:flex;align-items:center;gap:20px}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:700}.navlinks a:hover{color:var(--text)}
+    .hero{padding:76px 0 42px;text-align:center}.hero img{width:112px;height:112px;border-radius:25px;box-shadow:0 18px 55px rgba(0,0,0,.3);animation:float 4.8s ease-in-out infinite}@keyframes float{50%{transform:translateY(-6px) rotate(-1deg)}}
+    .live{display:inline-flex;align-items:center;gap:8px;margin:21px 0 14px;padding:6px 10px;border:1px solid rgba(85,217,139,.22);background:rgba(85,217,139,.07);color:#b9f1cf;border-radius:999px;font-size:.75rem;font-weight:850;letter-spacing:.08em}.live i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(85,217,139,.5);animation:pulse 2s infinite}@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(85,217,139,0)}}
+    h1{font-size:clamp(2.7rem,7vw,5.6rem);letter-spacing:-.055em;line-height:.97;margin:0 auto 19px;max-width:900px}.hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:1.08rem}.hero-actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:rgba(255,255,255,.025);font-weight:780;font-size:.9rem;transition:.18s ease}.btn:hover{transform:translateY(-1px);border-color:#3d597f}.btn.primary{background:linear-gradient(135deg,#1776d6,#2f9ff1);border-color:#3aa4f3;color:white}
+    section{padding-top:88px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.eyebrow{color:var(--cyan);font-size:.72rem;letter-spacing:.14em;font-weight:850;margin:0 0 8px}.section-head h2{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.04em;line-height:1.05;margin:0}.section-head p{color:var(--muted);margin:8px 0 0}
+    .install{max-width:850px;margin:36px auto 0;border:1px solid var(--line);background:linear-gradient(145deg,rgba(17,25,39,.96),rgba(9,15,25,.96));border-radius:17px;padding:21px;box-shadow:0 20px 70px rgba(0,0,0,.18)}.install-label{color:#a6b4c7;font-size:.78rem;font-weight:800;margin-bottom:8px}.copyrow{display:flex;gap:9px}.codebox{flex:1;min-width:0;font:700 .91rem ui-monospace,SFMono-Regular,Menlo,monospace;padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:#090f19;color:#dce8f5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.copybtn{border:1px solid var(--line);border-radius:9px;background:#172235;color:var(--text);font-weight:800;padding:0 14px;cursor:pointer}.copybtn.copied{border-color:rgba(85,217,139,.5);color:#aef0c8}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.stat{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(150deg,rgba(17,25,39,.95),rgba(11,18,30,.92));border-radius:14px;padding:21px}.stat strong{display:block;font-size:2rem;letter-spacing:-.05em}.stat span{color:var(--muted);font-size:.82rem}.stat:after{content:"";position:absolute;inset:auto 15% 0;height:1px;background:linear-gradient(90deg,transparent,rgba(85,222,247,.4),transparent);transform:scaleX(0);transition:.35s}.stat:hover:after{transform:scaleX(1)}
+    .health-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.panel{border:1px solid var(--line);background:linear-gradient(150deg,rgba(17,25,39,.94),rgba(10,16,27,.91));border-radius:15px;padding:22px}.panel h3{margin:0 0 17px}.health-item{margin:17px 0}.health-label{display:flex;justify-content:space-between;gap:15px;font-size:.85rem;margin-bottom:8px}.health-label span:last-child{color:var(--muted)}.track{height:9px;background:#0a111c;border:1px solid var(--line);border-radius:999px;overflow:hidden}.fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#29a868,var(--green));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}.health-meta{margin-top:19px;color:var(--muted);font-size:.82rem}
+    .release-card{display:flex;flex-direction:column;height:100%}.release-badge{align-self:flex-start;color:#bfead0;background:rgba(85,217,139,.08);border:1px solid rgba(85,217,139,.22);font-size:.72rem;font-weight:850;border-radius:999px;padding:5px 8px}.release-title{font-size:1.25rem;font-weight:850;margin:15px 0 7px}.release-date{color:var(--muted);font-size:.84rem}.release-card .btn{margin-top:auto;align-self:flex-start}
+    .pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;position:relative}.pipe{position:relative;border:1px solid var(--line);background:var(--panel2);border-radius:13px;padding:17px;text-align:center;min-height:105px;display:flex;flex-direction:column;justify-content:center}.pipe strong{font-size:.9rem}.pipe span{color:var(--muted);font-size:.73rem;margin-top:4px}.pipe:not(:last-child):after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);z-index:2;color:var(--cyan);font-weight:900;animation:flow 1.4s ease-in-out infinite}@keyframes flow{50%{transform:translate(3px,-50%);opacity:.55}}
+    .categories{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.cat{border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:rgba(255,255,255,.018)}.cat-head{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:8px}.cat-head span:last-child{color:var(--muted)}.cat-track{height:5px;border-radius:999px;background:#09111c;overflow:hidden}.cat-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:999px;transition:width .9s ease}
+    .providers{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.provider{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:13px;padding:17px;background:linear-gradient(145deg,rgba(17,25,39,.94),rgba(10,16,27,.91));text-decoration:none;transition:.18s}.provider:hover{transform:translateY(-2px);border-color:#395474}.provider-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.provider-name{font-weight:830}.version{font-size:.7rem;color:#b6c5d8;border:1px solid var(--line);border-radius:999px;padding:3px 7px}.provider p{font-size:.81rem;color:var(--muted);margin:10px 0 0}.provider small{display:block;color:#6f829d;margin-top:11px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.feature{border:1px solid var(--line);border-radius:13px;padding:19px;background:rgba(255,255,255,.018)}.feature strong{display:block;margin-bottom:6px}.feature span{color:var(--muted);font-size:.87rem}
+    footer{margin-top:95px;padding:28px 0 42px;border-top:1px solid rgba(255,255,255,.055);display:flex;justify-content:space-between;gap:20px;color:#71849e;font-size:.82rem}footer a{color:#a8bad0;text-decoration:none}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.health-grid{grid-template-columns:1fr}.pipeline{grid-template-columns:repeat(3,1fr)}.pipe:nth-child(3):after{display:none}.providers{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.navlinks a:not(.home-link){display:none}.hero{padding-top:58px}.hero img{width:94px;height:94px}.copyrow{flex-direction:column}.copybtn{height:40px}.pipeline{grid-template-columns:1fr 1fr}.pipe:nth-child(2n):after{display:none}.providers,.categories,.features{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats .stat{padding:17px}footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
-<main>
-  <header>
+<div id="scroll-progress" class="scroll-progress"></div><div class="orb a"></div><div class="orb b"></div>
+<nav class="shell">
+  <a class="brand" href="https://admknight.github.io/"><img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt=""><span>Adam Knight</span></a>
+  <div class="navlinks"><a class="home-link" href="https://admknight.github.io/">Portfolio</a><a href="#health">Health</a><a href="#providers">Custom Providers</a><a href="https://github.com/admknight/CloudstreamExtensions">GitHub ↗</a></div>
+</nav>
+
+<main class="shell">
+  <header class="hero">
     <img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Mega Repo icon">
-    <h1>CloudStream Plugins & Extensions Repository</h1>
-    <p class="lead">Adam Knight Mega Repo combines published CloudStream extensions into one maintained, installer-friendly repository with automated updates, duplicate resolution, package checking and custom-provider monitoring.</p>
-    <div class="actions">
-      <a class="button primary" href="https://github.com/admknight/CloudstreamExtensions">View on GitHub</a>
-      <a class="button" href="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json">Repository manifest</a>
-      <a class="button" href="https://github.com/admknight/CloudstreamExtensions/tree/builds">Browse production catalog</a>
+    <div class="live"><i></i> LIVE PRODUCTION</div>
+    <h1>CloudStream Plugins & Extensions Mega Repo</h1>
+    <p>One maintained CloudStream repository with automated upstream aggregation, version-aware deduplication, package verification, custom builds, health monitoring and publication safety gates.</p>
+    <div class="hero-actions"><a class="btn primary" href="https://github.com/admknight/CloudstreamExtensions">View source</a><a class="btn" href="https://github.com/admknight/CloudstreamExtensions/releases/latest">Latest release</a><a class="btn" href="#dashboard">Live dashboard ↓</a></div>
+
+    <div class="install">
+      <div class="install-label">CLOUDSTREAM REPOSITORY SHORTCODE</div>
+      <div class="copyrow"><div class="codebox" id="shortcode">admknight</div><button class="copybtn" data-copy="shortcode">Copy</button></div>
+      <div class="install-label" style="margin-top:15px">RAW REPOSITORY MANIFEST</div>
+      <div class="copyrow"><div class="codebox" id="manifest">https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json</div><button class="copybtn" data-copy="manifest">Copy</button></div>
     </div>
   </header>
 
-  <section>
-    <h2>Install the Mega Repo in CloudStream</h2>
-    <p>In CloudStream, open <strong>Settings → Extensions → Add Repository</strong> and use the shortcode:</p>
-    <pre>admknight</pre>
-    <p>You can also use the raw repository manifest:</p>
-    <pre>https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json</pre>
+  <section id="dashboard">
+    <div class="section-head"><div><p class="eyebrow">LIVE PRODUCTION</p><h2>Repository dashboard</h2><p>Values are loaded from the current production build report.</p></div></div>
+    <div class="stats">
+      <div class="stat"><strong id="plugins">540</strong><span>Reachable plugins</span></div>
+      <div class="stat"><strong id="sources">35</strong><span>Healthy sources</span></div>
+      <div class="stat"><strong id="failures">0</strong><span>Package failures</span></div>
+      <div class="stat"><strong id="custom-count">6</strong><span>Custom providers</span></div>
+    </div>
   </section>
 
-  <section>
-    <h2>What this CloudStream repository provides</h2>
-    <div class="grid">
-      <div class="card"><strong>Hundreds of extensions</strong><br>Movies, TV, anime, live TV, sports, tools, games and multilingual providers from many published repositories.</div>
-      <div class="card"><strong>Automatic daily updates</strong><br>The production catalog is rebuilt on schedule and when repository configuration changes.</div>
-      <div class="card"><strong>Package verification</strong><br>Published <code>.cs3</code> packages are checked before they are included in the live catalog.</div>
-      <div class="card"><strong>Duplicate resolution</strong><br>When the same plugin appears in several sources, version and source-priority rules select the preferred reachable package.</div>
-      <div class="card"><strong>Custom providers</strong><br>Locally maintained CloudStream providers are built on a dedicated branch and automatically merged into the main catalog.</div>
-      <div class="card"><strong>Safety gates</strong><br>Unexpected catalog drops or upstream failures are blocked from replacing the last known-good production catalog.</div>
+  <section id="health">
+    <div class="section-head"><div><p class="eyebrow">SYSTEM HEALTH</p><h2>Publication health</h2><p>Reachability and source status from the generated production report.</p></div></div>
+    <div class="health-grid">
+      <div class="panel">
+        <h3>Current health</h3>
+        <div class="health-item"><div class="health-label"><strong>Sources</strong><span id="source-health-label">35 / 35 healthy</span></div><div class="track"><div class="fill" id="source-fill"></div></div></div>
+        <div class="health-item"><div class="health-label"><strong>Packages</strong><span id="package-health-label">540 / 540 reachable</span></div><div class="track"><div class="fill" id="package-fill"></div></div></div>
+        <div class="health-meta">Last production report: <strong id="generated-at">loading…</strong></div>
+      </div>
+      <div class="panel release-card">
+        <span class="release-badge">STABLE RELEASE</span>
+        <div class="release-title" id="release-title">v1.0.0 — First Stable Release</div>
+        <div class="release-date" id="release-date">Loading release information…</div>
+        <a class="btn" id="release-link" href="https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0">Open release ↗</a>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Repository branches</h2>
-    <p><strong>master</strong> contains source configuration, custom provider source code and automation. <strong>builds</strong> contains the production CloudStream catalog. <strong>custom-builds</strong> contains compiled custom providers.</p>
-    <p class="status">Automated health monitoring is enabled for custom provider websites.</p>
+    <div class="section-head"><div><p class="eyebrow">AUTOMATION PIPELINE</p><h2>How production is built</h2><p>The catalog is not published until the automated checks pass.</p></div></div>
+    <div class="pipeline">
+      <div class="pipe"><strong>Upstreams</strong><span>35 configured sources</span></div>
+      <div class="pipe"><strong>Aggregate</strong><span>Fetch published indexes</span></div>
+      <div class="pipe"><strong>Deduplicate</strong><span>Version + priority rules</span></div>
+      <div class="pipe"><strong>Verify</strong><span>Package reachability</span></div>
+      <div class="pipe"><strong>Safety Gate</strong><span>Protect last-known-good</span></div>
+      <div class="pipe"><strong>Publish</strong><span>Production builds branch</span></div>
+    </div>
   </section>
 
   <section>
-    <h2>For CloudStream users and maintainers</h2>
-    <p>This project is useful if you are searching for a maintained CloudStream plugin repository, a CloudStream extensions list, a single repo URL for multiple providers, or an automatically refreshed index that preserves source provenance and avoids dead package entries.</p>
-    <p>See the main GitHub README for the current plugin dashboard, category counts, source health, package health, build history and provenance information.</p>
+    <div class="section-head"><div><p class="eyebrow">CATALOG MIX</p><h2>Categories</h2><p>Current plugin distribution across the production catalog.</p></div></div>
+    <div id="categories" class="categories"></div>
   </section>
 
-  <footer>
-    <p>Maintained by Adam Knight. This project is an extension index/build project and does not host video or media content. Package availability does not guarantee that every third-party provider website is operational at runtime.</p>
-  </footer>
+  <section id="providers">
+    <div class="section-head"><div><p class="eyebrow">LOCAL BUILDS</p><h2>Custom providers</h2><p>Compiled automatically on the dedicated <code>custom-builds</code> branch.</p></div><a class="btn" href="https://github.com/admknight/CloudstreamExtensions/tree/custom-builds">Browse branch ↗</a></div>
+    <div id="provider-grid" class="providers"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><div><p class="eyebrow">WHY THIS REPO</p><h2>Built for resilience</h2></div></div>
+    <div class="features">
+      <div class="feature"><strong>Automatic daily updates</strong><span>Configured upstream repositories are refreshed without manual catalog maintenance.</span></div>
+      <div class="feature"><strong>Duplicate resolution</strong><span>The preferred reachable plugin is selected using version and source-priority rules.</span></div>
+      <div class="feature"><strong>Package verification</strong><span>Published packages are checked before they enter the live production catalog.</span></div>
+      <div class="feature"><strong>Safety gates</strong><span>Suspicious catalog drops and upstream failures cannot silently replace known-good production.</span></div>
+      <div class="feature"><strong>Custom build pipeline</strong><span>Local provider modules are discovered, compiled, published and merged automatically.</span></div>
+      <div class="feature"><strong>Health monitoring</strong><span>Custom provider websites are checked separately without destructive auto-removal.</span></div>
+    </div>
+  </section>
 </main>
+
+<footer class="shell"><span>Maintained by Adam Knight · This project indexes extensions and does not host media content.</span><span><a href="https://admknight.github.io/">Portfolio</a> · <a href="https://github.com/admknight/CloudstreamExtensions">GitHub</a></span></footer>
+
+<script>
+const REPORT="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/merge-report.json";
+const CUSTOM="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json";
+const RELEASE="https://api.github.com/repos/admknight/CloudstreamExtensions/releases/latest";
+const $=id=>document.getElementById(id);
+
+function animateNumber(el,target){
+  if(!el)return;if(matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=target;return}
+  const start=performance.now(),duration=800;function tick(now){const p=Math.min(1,(now-start)/duration),e=1-Math.pow(1-p,3);el.textContent=Math.round(target*e);if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)
+}
+function reveal(){
+  const els=document.querySelectorAll("section:not(.reveal), .stat:not(.reveal), .provider:not(.reveal)");
+  els.forEach(el=>el.classList.add("reveal"));
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.08});
+  els.forEach(el=>io.observe(el))
+}
+function categoryBars(counts){
+  const box=$("categories");if(!box)return;
+  const entries=Object.entries(counts||{}).sort((a,b)=>b[1]-a[1]),max=Math.max(...entries.map(x=>x[1]),1);
+  box.innerHTML=entries.map(([name,count])=>'<div class="cat"><div class="cat-head"><strong>'+name+'</strong><span>'+count+'</span></div><div class="cat-track"><div class="cat-fill" data-w="'+((count/max)*100).toFixed(1)+'"></div></div></div>').join("");
+  requestAnimationFrame(()=>document.querySelectorAll(".cat-fill").forEach(el=>el.style.width=el.dataset.w+"%"))
+}
+async function loadReport(){
+  try{
+    const r=await fetch(REPORT,{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();
+    animateNumber($("plugins"),d.uniquePlugins||0);animateNumber($("sources"),d.sourceHealth?.ok||0);animateNumber($("failures"),d.packageHealth?.failed||0);
+    const sOk=d.sourceHealth?.ok||0,sFail=d.sourceHealth?.failed||0,sTotal=sOk+sFail;
+    const pOk=d.packageHealth?.reachable||0,pFail=d.packageHealth?.failed||0,pTotal=pOk+pFail;
+    $("source-health-label").textContent=sOk+" / "+sTotal+" healthy";$("package-health-label").textContent=pOk+" / "+pTotal+" reachable";
+    $("generated-at").textContent=d.generatedAt||"Unknown";
+    requestAnimationFrame(()=>{$("source-fill").style.width=(sTotal?sOk/sTotal*100:0)+"%";$("package-fill").style.width=(pTotal?pOk/pTotal*100:0)+"%"});
+    categoryBars(d.categoryCounts)
+  }catch(e){console.warn("Report unavailable",e)}
+}
+async function loadCustom(){
+  try{
+    const r=await fetch(CUSTOM,{cache:"no-store"});if(!r.ok)throw new Error(r.status);const data=await r.json();animateNumber($("custom-count"),data.length);
+    $("provider-grid").innerHTML=data.map(p=>'<a class="provider" href="'+p.url+'"><div class="provider-top"><span class="provider-name">'+p.name+'</span><span class="version">v'+p.version+'</span></div><p>'+((p.description||"Custom CloudStream provider.").replace(/</g,"&lt;"))+'</p><small>'+((p.language||"").toUpperCase())+' · '+(p.tvTypes||[]).join(" / ")+'</small></a>').join("");reveal()
+  }catch(e){console.warn("Custom providers unavailable",e)}
+}
+async function loadRelease(){
+  try{
+    const r=await fetch(RELEASE,{headers:{"Accept":"application/vnd.github+json"}});if(!r.ok)throw new Error(r.status);const d=await r.json();
+    $("release-title").textContent=(d.tag_name||"Latest")+" — "+(d.name||"Stable release").replace(/^Adam Knight Mega Repo\s*/,"");
+    $("release-date").textContent=d.published_at?"Published "+new Date(d.published_at).toLocaleDateString("en",{year:"numeric",month:"short",day:"numeric"}):"Latest stable release";
+    $("release-link").href=d.html_url||$("release-link").href
+  }catch(e){console.warn("Release unavailable",e)}
+}
+document.querySelectorAll("[data-copy]").forEach(btn=>btn.addEventListener("click",async()=>{const text=$(btn.dataset.copy).textContent;try{await navigator.clipboard.writeText(text);const old=btn.textContent;btn.textContent="Copied!";btn.classList.add("copied");setTimeout(()=>{btn.textContent=old;btn.classList.remove("copied")},1400)}catch{btn.textContent="Select & copy"}}));
+addEventListener("scroll",()=>{const max=document.documentElement.scrollHeight-innerHeight;$("scroll-progress").style.width=(max?scrollY/max*100:0)+"%"},{passive:true});
+reveal();loadReport();loadCustom();loadRelease();
+</script>
 </body>
 </html>
