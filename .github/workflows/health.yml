@@ -21,18 +21,30 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+
+      - name: Checkout health history
+        uses: actions/checkout@v5
+        with:
+          ref: health-history
+          path: health-history
+          fetch-depth: 1
 
       - name: Check provider websites
         run: |
           python3 tools/custom_provider_health.py \
             --root . \
             --json custom-provider-health.json \
-            --markdown CUSTOM_PROVIDER_HEALTH.md
+            --markdown CUSTOM_PROVIDER_HEALTH.md \
+            --history-in health-history/history.json \
+            --history-out health-history/history.json \
+            --latest-out health-history/latest.json \
+            --trends-out health-history/trends.json \
+            --max-history 180
 
       - name: Publish health summary
         if: always()
@@ -44,6 +56,31 @@ jobs:
             echo "No health report was generated." >> "$GITHUB_STEP_SUMMARY"
           fi
 
+      - name: Persist health history
+        if: always()
+        run: |
+          set -euo pipefail
+          cd health-history
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add history.json latest.json trends.json
+          if git diff --cached --quiet; then
+            echo "No health-history changes to publish."
+            exit 0
+          fi
+          git commit -m "health: record provider snapshot"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:health-history; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; refreshing branch."
+            git fetch origin health-history
+            git rebase origin/health-history
+            sleep $((attempt * 2))
+          done
+          echo "Failed to publish health history after retries."
+          exit 1
+
       - name: Upload health report
         if: always()
         uses: actions/upload-artifact@v4
@@ -52,4 +89,6 @@ jobs:
           path: |
             CUSTOM_PROVIDER_HEALTH.md
             custom-provider-health.json
+            health-history/latest.json
+            health-history/trends.json
           if-no-files-found: warn

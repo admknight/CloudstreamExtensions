@@ -50,14 +50,15 @@
     .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.stat{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(150deg,rgba(17,25,39,.95),rgba(11,18,30,.92));border-radius:14px;padding:21px}.stat strong{display:block;font-size:2rem;letter-spacing:-.05em}.stat span{color:var(--muted);font-size:.82rem}.stat:after{content:"";position:absolute;inset:auto 15% 0;height:1px;background:linear-gradient(90deg,transparent,rgba(85,222,247,.4),transparent);transform:scaleX(0);transition:.35s}.stat:hover:after{transform:scaleX(1)}
     .health-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.panel{border:1px solid var(--line);background:linear-gradient(150deg,rgba(17,25,39,.94),rgba(10,16,27,.91));border-radius:15px;padding:22px}.panel h3{margin:0 0 17px}.health-item{margin:17px 0}.health-label{display:flex;justify-content:space-between;gap:15px;font-size:.85rem;margin-bottom:8px}.health-label span:last-child{color:var(--muted)}.track{height:9px;background:#0a111c;border:1px solid var(--line);border-radius:999px;overflow:hidden}.fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#29a868,var(--green));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}.health-meta{margin-top:19px;color:var(--muted);font-size:.82rem}
     .release-card{display:flex;flex-direction:column;height:100%}.release-badge{align-self:flex-start;color:#bfead0;background:rgba(85,217,139,.08);border:1px solid rgba(85,217,139,.22);font-size:.72rem;font-weight:850;border-radius:999px;padding:5px 8px}.release-title{font-size:1.25rem;font-weight:850;margin:15px 0 7px}.release-date{color:var(--muted);font-size:.84rem}.release-card .btn{margin-top:auto;align-self:flex-start}
+    .trend-grid{display:grid;grid-template-columns:.7fr .7fr 1.6fr;gap:16px;margin-top:16px}.trend-card{min-height:150px}.trend-period{color:var(--cyan);font-size:.72rem;letter-spacing:.12em;font-weight:850}.trend-value{display:block;font-size:2.35rem;letter-spacing:-.05em;margin:8px 0 2px}.trend-meta{color:var(--muted);font-size:.8rem}.provider-trends{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}.provider-trend{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:#0b1320;font-size:.78rem}.provider-trend span:last-child{color:#b8c8da;font-weight:800}
     .pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;position:relative}.pipe{position:relative;border:1px solid var(--line);background:var(--panel2);border-radius:13px;padding:17px;text-align:center;min-height:105px;display:flex;flex-direction:column;justify-content:center}.pipe strong{font-size:.9rem}.pipe span{color:var(--muted);font-size:.73rem;margin-top:4px}.pipe:not(:last-child):after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);z-index:2;color:var(--cyan);font-weight:900;animation:flow 1.4s ease-in-out infinite}@keyframes flow{50%{transform:translate(3px,-50%);opacity:.55}}
     .categories{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.cat{border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:rgba(255,255,255,.018)}.cat-head{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:8px}.cat-head span:last-child{color:var(--muted)}.cat-track{height:5px;border-radius:999px;background:#09111c;overflow:hidden}.cat-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:999px;transition:width .9s ease}
     .providers{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.provider{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:13px;padding:17px;background:linear-gradient(145deg,rgba(17,25,39,.94),rgba(10,16,27,.91));text-decoration:none;transition:.18s}.provider:hover{transform:translateY(-2px);border-color:#395474}.provider-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.provider-name{font-weight:830}.version{font-size:.7rem;color:#b6c5d8;border:1px solid var(--line);border-radius:999px;padding:3px 7px}.provider p{font-size:.81rem;color:var(--muted);margin:10px 0 0}.provider small{display:block;color:#6f829d;margin-top:11px}
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.feature{border:1px solid var(--line);border-radius:13px;padding:19px;background:rgba(255,255,255,.018)}.feature strong{display:block;margin-bottom:6px}.feature span{color:var(--muted);font-size:.87rem}
     footer{margin-top:95px;padding:28px 0 42px;border-top:1px solid rgba(255,255,255,.055);display:flex;justify-content:space-between;gap:20px;color:#71849e;font-size:.82rem}footer a{color:#a8bad0;text-decoration:none}
     .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.health-grid{grid-template-columns:1fr}.pipeline{grid-template-columns:repeat(3,1fr)}.pipe:nth-child(3):after{display:none}.providers{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
-    @media(max-width:620px){.navlinks a:not(.home-link){display:none}.hero{padding-top:58px}.hero img{width:94px;height:94px}.copyrow{flex-direction:column}.copybtn{height:40px}.pipeline{grid-template-columns:1fr 1fr}.pipe:nth-child(2n):after{display:none}.providers,.categories,.features{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats .stat{padding:17px}footer{flex-direction:column}}
+    @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.health-grid{grid-template-columns:1fr}.trend-grid{grid-template-columns:1fr 1fr}.trend-grid .trend-card:last-child{grid-column:1/-1}.pipeline{grid-template-columns:repeat(3,1fr)}.pipe:nth-child(3):after{display:none}.providers{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.navlinks a:not(.home-link){display:none}.hero{padding-top:58px}.hero img{width:94px;height:94px}.copyrow{flex-direction:column}.copybtn{height:40px}.trend-grid{grid-template-columns:1fr}.trend-grid .trend-card:last-child{grid-column:auto}.provider-trends{grid-template-columns:1fr}.pipeline{grid-template-columns:1fr 1fr}.pipe:nth-child(2n):after{display:none}.providers,.categories,.features{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats .stat{padding:17px}footer{flex-direction:column}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   </style>
 </head>
@@ -110,6 +111,22 @@
         <a class="btn" id="release-link" href="https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0">Open release ↗</a>
       </div>
     </div>
+    <div class="trend-grid">
+      <div class="panel trend-card">
+        <div class="trend-period">7-DAY TREND</div>
+        <strong class="trend-value" id="trend-7-value">—</strong>
+        <div class="trend-meta" id="trend-7-meta">Collecting health history…</div>
+      </div>
+      <div class="panel trend-card">
+        <div class="trend-period">30-DAY TREND</div>
+        <strong class="trend-value" id="trend-30-value">—</strong>
+        <div class="trend-meta" id="trend-30-meta">Collecting health history…</div>
+      </div>
+      <div class="panel trend-card">
+        <div class="trend-period">PROVIDER STABILITY · 30 DAYS</div>
+        <div id="provider-trends" class="provider-trends"><span class="trend-meta">Waiting for first persistent snapshot…</span></div>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -153,6 +170,7 @@
 const REPORT="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/merge-report.json";
 const CUSTOM="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/plugins.json";
 const RELEASE="https://api.github.com/repos/admknight/CloudstreamExtensions/releases/latest";
+const HEALTH_TRENDS="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/health-history/trends.json";
 const $=id=>document.getElementById(id);
 
 function animateNumber(el,target){
@@ -197,10 +215,26 @@ async function loadRelease(){
     $("release-link").href=d.html_url||$("release-link").href
   }catch(e){console.warn("Release unavailable",e)}
 }
+async function loadHealthTrends(){
+  try{
+    const r=await fetch(HEALTH_TRENDS,{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();
+    const seven=d.windows?.["7d"],thirty=d.windows?.["30d"];
+    if(seven?.healthyPct!=null){
+      $("trend-7-value").textContent=seven.healthyPct.toFixed(1)+"%";
+      $("trend-7-meta").textContent=seven.snapshotCount+" snapshots · "+seven.ok+"/"+seven.checks+" healthy checks";
+    }
+    if(thirty?.healthyPct!=null){
+      $("trend-30-value").textContent=thirty.healthyPct.toFixed(1)+"%";
+      $("trend-30-meta").textContent=thirty.snapshotCount+" snapshots · "+thirty.ok+"/"+thirty.checks+" healthy checks";
+      const rows=(thirty.providers||[]).map(p=>'<div class="provider-trend"><span>'+p.module+'</span><span>'+(p.healthyPct==null?"—":p.healthyPct.toFixed(1)+"%")+'</span></div>').join("");
+      $("provider-trends").innerHTML=rows||'<span class="trend-meta">No provider trend data yet.</span>';
+    }
+  }catch(e){console.warn("Health trends unavailable",e)}
+}
 document.querySelectorAll("[data-copy]").forEach(btn=>btn.addEventListener("click",async()=>{const text=$(btn.dataset.copy).textContent;try{await navigator.clipboard.writeText(text);const old=btn.textContent;btn.textContent="Copied!";btn.classList.add("copied");setTimeout(()=>{btn.textContent=old;btn.classList.remove("copied")},1400)}catch{btn.textContent="Select & copy"}}));
 const shareBtn=$("share-project");if(shareBtn)shareBtn.addEventListener("click",async()=>{const data={title:"Adam Knight Mega Repo",text:"CloudStream extensions Mega Repo — 540 plugins, 35 sources, automated and verified.",url:"https://admknight.github.io/CloudstreamExtensions/"};const old=shareBtn.textContent;try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}}catch(e){if(e?.name!=="AbortError"){try{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}catch{shareBtn.textContent="Copy link"}}}setTimeout(()=>shareBtn.textContent=old,1500)});
 addEventListener("scroll",()=>{const max=document.documentElement.scrollHeight-innerHeight;$("scroll-progress").style.width=(max?scrollY/max*100:0)+"%"},{passive:true});
-reveal();loadReport();loadCustom();loadRelease();
+reveal();loadReport();loadCustom();loadRelease();loadHealthTrends();
 </script>
 </body>
 </html>

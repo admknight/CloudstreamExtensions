@@ -4,13 +4,14 @@ import json
 import re
 import socket
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 MAIN_URL_RE = re.compile(r'override\s+var\s+mainUrl\s*=\s*"([^"]+)"')
 USER_AGENT = "Mozilla/5.0 (CloudstreamExtensions health check; +https://github.com/admknight/CloudstreamExtensions)"
+TIME_FORMAT = "%Y-%m-%d %H:%M:%S UTC"
 
 def discover(root: Path):
     rows = []
@@ -124,18 +125,137 @@ def render_markdown(results, generated_at):
     ]
     return "\n".join(lines)
 
+def parse_time(value):
+    try:
+        return datetime.strptime(value, TIME_FORMAT).replace(tzinfo=timezone.utc)
+    except Exception:
+        return None
+
+def load_history(path):
+    if not path:
+        return {"version": 1, "updatedAt": None, "snapshots": []}
+    p = Path(path)
+    if not p.exists():
+        return {"version": 1, "updatedAt": None, "snapshots": []}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+        if not isinstance(data, dict) or not isinstance(data.get("snapshots"), list):
+            raise ValueError("Invalid history structure")
+        return data
+    except Exception:
+        return {"version": 1, "updatedAt": None, "snapshots": []}
+
+def compact_provider(row):
+    return {
+        "module": row.get("module"),
+        "state": row.get("state"),
+        "httpStatus": row.get("httpStatus"),
+        "configuredUrl": row.get("url"),
+        "finalUrl": row.get("finalUrl"),
+        "attempts": row.get("attempts"),
+        "error": row.get("error") or "",
+    }
+
+def make_snapshot(payload):
+    return {
+        "generatedAt": payload["generatedAt"],
+        "summary": payload["summary"],
+        "providers": [compact_provider(x) for x in payload["providers"]],
+    }
+
+def build_window(snapshots, now, days):
+    cutoff = now - timedelta(days=days)
+    selected = []
+    for snap in snapshots:
+        stamp = parse_time(snap.get("generatedAt", ""))
+        if stamp and stamp >= cutoff:
+            selected.append(snap)
+
+    provider_stats = {}
+    total = {"checks": 0, "ok": 0, "restricted": 0, "failed": 0}
+    for snap in selected:
+        for row in snap.get("providers", []):
+            module = row.get("module") or "Unknown"
+            stats = provider_stats.setdefault(
+                module,
+                {"checks": 0, "ok": 0, "restricted": 0, "failed": 0},
+            )
+            state = row.get("state")
+            stats["checks"] += 1
+            total["checks"] += 1
+            if state == "ok":
+                stats["ok"] += 1
+                total["ok"] += 1
+            elif state == "restricted":
+                stats["restricted"] += 1
+                total["restricted"] += 1
+            else:
+                stats["failed"] += 1
+                total["failed"] += 1
+
+    def percentages(stats):
+        checks = stats["checks"]
+        healthy = round((stats["ok"] / checks) * 100, 1) if checks else None
+        reachable = round(((stats["ok"] + stats["restricted"]) / checks) * 100, 1) if checks else None
+        return healthy, reachable
+
+    providers = []
+    for module, stats in sorted(provider_stats.items()):
+        healthy, reachable = percentages(stats)
+        providers.append({
+            "module": module,
+            **stats,
+            "healthyPct": healthy,
+            "reachablePct": reachable,
+        })
+
+    healthy, reachable = percentages(total)
+    return {
+        "days": days,
+        "snapshotCount": len(selected),
+        **total,
+        "healthyPct": healthy,
+        "reachablePct": reachable,
+        "providers": providers,
+    }
+
+def build_trends(snapshots, now):
+    recent = []
+    for snap in snapshots[-10:]:
+        summary = snap.get("summary") or {}
+        recent.append({
+            "generatedAt": snap.get("generatedAt"),
+            "ok": summary.get("ok", 0),
+            "restricted": summary.get("restricted", 0),
+            "failed": summary.get("failed", 0),
+        })
+    return {
+        "generatedAt": now.strftime(TIME_FORMAT),
+        "windows": {
+            "7d": build_window(snapshots, now, 7),
+            "30d": build_window(snapshots, now, 30),
+        },
+        "recent": recent,
+    }
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", default=".")
     parser.add_argument("--timeout", type=int, default=15)
     parser.add_argument("--json", dest="json_path", default="custom-provider-health.json")
     parser.add_argument("--markdown", dest="markdown_path", default="CUSTOM_PROVIDER_HEALTH.md")
+    parser.add_argument("--history-in", default="")
+    parser.add_argument("--history-out", default="")
+    parser.add_argument("--latest-out", default="")
+    parser.add_argument("--trends-out", default="")
+    parser.add_argument("--max-history", type=int, default=180)
     args = parser.parse_args()
 
     root = Path(args.root)
     discovered = discover(root)
     results = [check(item, args.timeout) for item in discovered]
-    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    now = datetime.now(timezone.utc)
+    generated_at = now.strftime(TIME_FORMAT)
 
     payload = {
         "generatedAt": generated_at,
@@ -150,6 +270,39 @@ def main():
 
     Path(args.json_path).write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     Path(args.markdown_path).write_text(render_markdown(results, generated_at) + "\n", encoding="utf-8")
+
+    if args.history_out or args.latest_out or args.trends_out:
+        history = load_history(args.history_in)
+        snapshots = history.get("snapshots", [])
+        snapshot = make_snapshot(payload)
+        snapshots = [x for x in snapshots if x.get("generatedAt") != generated_at]
+        snapshots.append(snapshot)
+        snapshots = sorted(
+            snapshots,
+            key=lambda x: parse_time(x.get("generatedAt", "")) or datetime.min.replace(tzinfo=timezone.utc),
+        )[-max(1, args.max_history):]
+
+        history_payload = {
+            "version": 1,
+            "updatedAt": generated_at,
+            "snapshots": snapshots,
+        }
+
+        if args.history_out:
+            Path(args.history_out).write_text(
+                json.dumps(history_payload, indent=2) + "\n",
+                encoding="utf-8",
+            )
+        if args.latest_out:
+            Path(args.latest_out).write_text(
+                json.dumps(payload, indent=2) + "\n",
+                encoding="utf-8",
+            )
+        if args.trends_out:
+            Path(args.trends_out).write_text(
+                json.dumps(build_trends(snapshots, now), indent=2) + "\n",
+                encoding="utf-8",
+            )
 
     print(json.dumps(payload["summary"]))
     return 0
