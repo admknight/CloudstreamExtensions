@@ -1,0 +1,81 @@
+name: Broken plugin or provider
+description: Report a plugin/package or provider that is not working as expected.
+title: "[Broken] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Adam Knight Mega Repo.
+
+        Please provide enough detail to reproduce the problem. Do not include passwords, tokens, cookies, personal data, or requests to bypass DRM, CAPTCHA, access controls, or anti-bot protections.
+
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin / provider name
+      placeholder: Example: PluginName
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      placeholder: Example: v12
+    validations:
+      required: false
+
+  - type: dropdown
+    id: failure_type
+    attributes:
+      label: What is failing?
+      options:
+        - Package cannot be installed or updated
+        - Plugin loads but provider website is unavailable
+        - Search or catalog is not loading
+        - Metadata/details are not loading
+        - Playback/link handling issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Describe the behavior and any visible error message.
+      placeholder: Tell us what you expected and what happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Search for ...
+        3. Select ...
+        4. Error occurs ...
+    validations:
+      required: false
+
+  - type: input
+    id: app
+    attributes:
+      label: CloudStream version / device
+      placeholder: Example: CloudStream 4.x, Android 14
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked that this issue has not already been reported.
+          required: true
+        - label: I have not included credentials, private data, or requests to bypass protected access controls.
+          required: true
