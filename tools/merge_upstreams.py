@@ -361,6 +361,9 @@ def build_readme(report, plugin_rows):
         '  <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml">',
         '    <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/build.yml/badge.svg?branch=master&amp;event=push&amp;v=20261004-2" alt="Update Aggregated Repository">',
         '  </a>',
+        '  <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">',
+        '    <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Custom Provider Health">',
+        '  </a>',
         '</p>',
         "",
         f'<p align="center">A dynamic CloudStream mega repository maintained by <strong>{MAINTAINER}</strong>.</p>',
@@ -439,6 +442,13 @@ def build_readme(report, plugin_rows):
         lines.append("No duplicates in the current candidate set.")
 
     lines += [
+        "",
+        "## 🤖 Automation & monitoring",
+        "",
+        "- Production aggregation runs every day at **00:00 UTC** and on relevant configuration changes.",
+        "- Custom-provider website health runs every day at **01:30 UTC** and on custom provider source changes.",
+        "- Publication pushes retry automatically up to **3 times** before a workflow is marked failed.",
+        "- Runtime health is advisory: a temporary provider-site outage is reported but does not remove or overwrite the last known-good production catalog.",
         "",
         "## 🧭 Status files",
         "",
