@@ -1,5 +1,79 @@
 {
   "version": 1,
-  "updatedAt": null,
-  "snapshots": []
+  "updatedAt": "2026-10-06 02:39:46 UTC",
+  "snapshots": [
+    {
+      "generatedAt": "2026-10-06 02:39:46 UTC",
+      "summary": {
+        "ok": 6,
+        "restricted": 0,
+        "failed": 1
+      },
+      "providers": [
+        {
+          "module": "Cinedoze",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://cinedoze.tv",
+          "finalUrl": "https://cinedoze.tv",
+          "attempts": 1,
+          "error": ""
+        },
+        {
+          "module": "Cinemaluxe",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://cinemalux.baby",
+          "finalUrl": "https://cinemalux.baby",
+          "attempts": 1,
+          "error": ""
+        },
+        {
+          "module": "CinevezProvider",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://cinevez.buzz",
+          "finalUrl": "https://cinevez.buzz",
+          "attempts": 1,
+          "error": ""
+        },
+        {
+          "module": "Cinevood",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://cinevood.net",
+          "finalUrl": "https://cinevood.net",
+          "attempts": 1,
+          "error": ""
+        },
+        {
+          "module": "Full4Movies",
+          "state": "fail",
+          "httpStatus": null,
+          "configuredUrl": "https://fullmoviesmx.com",
+          "finalUrl": "https://fullmoviesmx.com",
+          "attempts": 3,
+          "error": "[Errno -2] Name or service not known"
+        },
+        {
+          "module": "India4Movies",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://go3.india4movies.net",
+          "finalUrl": "https://go5.india4movies.net/",
+          "attempts": 1,
+          "error": ""
+        },
+        {
+          "module": "World4uFree",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://worldfree4u.blog",
+          "finalUrl": "https://worldfree4u.blog",
+          "attempts": 1,
+          "error": ""
+        }
+      ]
+    }
+  ]
 }

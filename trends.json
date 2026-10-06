@@ -1,8 +1,163 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-10-06 02:39:46 UTC",
   "windows": {
-    "7d": null,
-    "30d": null
+    "7d": {
+      "days": 7,
+      "snapshotCount": 1,
+      "checks": 7,
+      "ok": 6,
+      "restricted": 0,
+      "failed": 1,
+      "healthyPct": 85.7,
+      "reachablePct": 85.7,
+      "providers": [
+        {
+          "module": "Cinedoze",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "Cinemaluxe",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "CinevezProvider",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "Cinevood",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "Full4Movies",
+          "checks": 1,
+          "ok": 0,
+          "restricted": 0,
+          "failed": 1,
+          "healthyPct": 0.0,
+          "reachablePct": 0.0
+        },
+        {
+          "module": "India4Movies",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "World4uFree",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        }
+      ]
+    },
+    "30d": {
+      "days": 30,
+      "snapshotCount": 1,
+      "checks": 7,
+      "ok": 6,
+      "restricted": 0,
+      "failed": 1,
+      "healthyPct": 85.7,
+      "reachablePct": 85.7,
+      "providers": [
+        {
+          "module": "Cinedoze",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "Cinemaluxe",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "CinevezProvider",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "Cinevood",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "Full4Movies",
+          "checks": 1,
+          "ok": 0,
+          "restricted": 0,
+          "failed": 1,
+          "healthyPct": 0.0,
+          "reachablePct": 0.0
+        },
+        {
+          "module": "India4Movies",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        },
+        {
+          "module": "World4uFree",
+          "checks": 1,
+          "ok": 1,
+          "restricted": 0,
+          "failed": 0,
+          "healthyPct": 100.0,
+          "reachablePct": 100.0
+        }
+      ]
+    }
   },
-  "recent": []
+  "recent": [
+    {
+      "generatedAt": "2026-10-06 02:39:46 UTC",
+      "ok": 6,
+      "restricted": 0,
+      "failed": 1
+    }
+  ]
 }

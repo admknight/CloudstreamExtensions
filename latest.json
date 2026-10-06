@@ -1,10 +1,81 @@
 {
-  "generatedAt": null,
-  "providerCount": 0,
+  "generatedAt": "2026-10-06 02:39:46 UTC",
+  "providerCount": 7,
   "summary": {
-    "ok": 0,
+    "ok": 6,
     "restricted": 0,
-    "failed": 0
+    "failed": 1
   },
-  "providers": []
+  "providers": [
+    {
+      "module": "Cinedoze",
+      "source": "Cinedoze/src/main/kotlin/recloudstream/CinedozeProvider.kt",
+      "url": "https://cinedoze.tv",
+      "state": "ok",
+      "httpStatus": 200,
+      "finalUrl": "https://cinedoze.tv",
+      "error": "",
+      "attempts": 1
+    },
+    {
+      "module": "Cinemaluxe",
+      "source": "Cinemaluxe/src/main/kotlin/recloudstream/CinemaluxeProvider.kt",
+      "url": "https://cinemalux.baby",
+      "state": "ok",
+      "httpStatus": 200,
+      "finalUrl": "https://cinemalux.baby",
+      "error": "",
+      "attempts": 1
+    },
+    {
+      "module": "CinevezProvider",
+      "source": "CinevezProvider/src/main/kotlin/recloudstream/CinevezProvider.kt",
+      "url": "https://cinevez.buzz",
+      "state": "ok",
+      "httpStatus": 200,
+      "finalUrl": "https://cinevez.buzz",
+      "error": "",
+      "attempts": 1
+    },
+    {
+      "module": "Cinevood",
+      "source": "Cinevood/src/main/kotlin/recloudstream/CinevoodProvider.kt",
+      "url": "https://cinevood.net",
+      "state": "ok",
+      "httpStatus": 200,
+      "finalUrl": "https://cinevood.net",
+      "error": "",
+      "attempts": 1
+    },
+    {
+      "module": "Full4Movies",
+      "source": "Full4Movies/src/main/kotlin/recloudstream/Full4MoviesProvider.kt",
+      "url": "https://fullmoviesmx.com",
+      "state": "fail",
+      "httpStatus": null,
+      "finalUrl": "https://fullmoviesmx.com",
+      "error": "[Errno -2] Name or service not known",
+      "attempts": 3
+    },
+    {
+      "module": "India4Movies",
+      "source": "India4Movies/src/main/kotlin/recloudstream/India4MoviesProvider.kt",
+      "url": "https://go3.india4movies.net",
+      "state": "ok",
+      "httpStatus": 200,
+      "finalUrl": "https://go5.india4movies.net/",
+      "error": "",
+      "attempts": 1
+    },
+    {
+      "module": "World4uFree",
+      "source": "World4uFree/src/main/kotlin/recloudstream/World4uFreeProvider.kt",
+      "url": "https://worldfree4u.blog",
+      "state": "ok",
+      "httpStatus": 200,
+      "finalUrl": "https://worldfree4u.blog",
+      "error": "",
+      "attempts": 1
+    }
+  ]
 }
