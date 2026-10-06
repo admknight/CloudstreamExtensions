@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live project dashboard
+    url: https://admknight.github.io/CloudstreamExtensions/
+    about: Check current catalog, source health, package health, and custom providers.
+  - name: Latest stable release
+    url: https://github.com/admknight/CloudstreamExtensions/releases/latest
+    about: Review the latest stable release and frozen production snapshot.
