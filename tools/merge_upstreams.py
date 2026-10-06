@@ -518,6 +518,8 @@ def build_readme(report, plugin_rows):
         "- BUILD_HISTORY.md on the builds branch — successful publication history",
         "- merge-report.json on the builds branch — machine-readable build report",
         "- provenance.json on the builds branch — original source/author provenance retained for maintenance",
+        "- RELEASE_NOTES.md on the builds branch — auto-generated notes for the latest production diff",
+        "- release-diff.json on the builds branch — machine-readable plugin/source/custom-provider change details",
         "",
         "## 🛡️ Publication safety",
         "",
