@@ -85,6 +85,89 @@ jobs:
             ]
           }
           EOF
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          plugins = json.loads(Path("plugins.json").read_text())
+          rows = []
+          for i, plugin in enumerate(sorted(plugins, key=lambda p: (p.get("name") or p.get("internalName") or "").lower()), 1):
+              name = plugin.get("name") or plugin.get("internalName") or "Unknown"
+              version = plugin.get("version", "—")
+              language = plugin.get("language") or "—"
+              types = ", ".join(plugin.get("tvTypes") or []) or "—"
+              description = (plugin.get("description") or "").replace("|", "\\|")
+              rows.append(f"| {i} | **{name}** | {version} | {language} | {types} | {description} |")
+
+          count = len(plugins)
+          readme = [
+              '<p align="center">',
+              '  <img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="Adam Knight Custom CloudStream Providers" width="160">',
+              '</p>',
+              '',
+              '<h1 align="center">Adam Knight Custom CloudStream Providers</h1>',
+              '',
+              '<p align="center">',
+              '  <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/custom-build.yml">',
+              '    <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/custom-build.yml/badge.svg?branch=master" alt="Custom Provider Build">',
+              '  </a>',
+              '  <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">',
+              '    <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Provider Health">',
+              '  </a>',
+              f'  <img src="https://img.shields.io/badge/custom%20plugins-{count}-2ea44f?style=flat-square" alt="{count} custom plugins">',
+              '  <a href="https://github.com/admknight/CloudstreamExtensions/stargazers">',
+              '    <img src="https://img.shields.io/github/stars/admknight/CloudstreamExtensions?style=flat-square" alt="GitHub stars">',
+              '  </a>',
+              '</p>',
+              '',
+              'This branch contains the **compiled custom CloudStream extensions** maintained as part of the Adam Knight Mega Repo. '
+              'It is generated automatically from source modules on the `master` branch; files here should not be edited manually.',
+              '',
+              '## Install',
+              '',
+              '### Full Mega Repo (recommended)',
+              '',
+              'In CloudStream: **Settings → Extensions → Add Repository** and enter:',
+              '',
+              '    admknight',
+              '',
+              '### Custom providers feed only',
+              '',
+              '    https://raw.githubusercontent.com/admknight/CloudstreamExtensions/custom-builds/repo.json',
+              '',
+              '## Custom providers',
+              '',
+              f'**{count} custom CloudStream plugins are currently published on this branch.**',
+              '',
+              '| # | Provider | Version | Lang | Types | Description |',
+              '| ---: | --- | ---: | --- | --- | --- |',
+              *rows,
+              '',
+              '## Automation',
+              '',
+              '- Source code lives on the `master` branch.',
+              '- GitHub Actions compiles all discovered custom provider modules.',
+              '- Successful builds publish `.cs3`, `.jar`, `plugins.json`, and this README automatically.',
+              '- The custom feed automatically triggers the production Mega Repo aggregation.',
+              '- A separate scheduled workflow checks configured provider websites and reports runtime availability.',
+              '',
+              '## Branch files',
+              '',
+              '- `repo.json` — CloudStream repository manifest.',
+              '- `plugins.json` — generated custom plugin catalog.',
+              '- `*.cs3` — installable CloudStream plugin packages.',
+              '- `*.jar` — generated plugin JARs.',
+              '',
+              '## Disclaimer',
+              '',
+              'This project is an extension index/build project and does not host video or media content. '
+              'Package availability and website health checks do not guarantee that every third-party provider feature will work at runtime.',
+              '',
+              '*Maintained by Adam Knight*',
+              '',
+          ]
+          Path("README.md").write_text("\n".join(readme))
+          PY
 
       - name: Publish custom builds
         run: |
