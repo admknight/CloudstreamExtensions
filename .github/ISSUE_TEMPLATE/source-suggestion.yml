@@ -1,0 +1,63 @@
+name: Suggest a repository / source
+description: Suggest a maintained CloudStream repository for possible aggregation.
+title: "[Source Suggestion] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggestions are reviewed for maintainability, published package availability, duplication, reachability, and compatibility with the Mega Repo safety rules.
+
+        Sources that require bypassing DRM, CAPTCHA, protected access controls, or anti-bot systems will not be added on that basis.
+
+  - type: input
+    id: name
+    attributes:
+      label: Repository / source name
+      placeholder: Example Repository
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repository URL
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+
+  - type: input
+    id: index
+    attributes:
+      label: Published plugins.json URL
+      description: If available, provide the direct published plugin index.
+      placeholder: https://raw.githubusercontent.com/owner/repository/builds/plugins.json
+    validations:
+      required: false
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why should it be included?
+      placeholder: Describe what the repository adds, languages/categories covered, and why it is useful.
+    validations:
+      required: true
+
+  - type: input
+    id: maintained
+    attributes:
+      label: Maintenance status
+      placeholder: Example: Active, last updated recently
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked that this repository/source is not already included.
+          required: true
+        - label: The suggestion is for publicly published CloudStream extension packages or source code.
+          required: true
