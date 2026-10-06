@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-06 02:30:34 UTC**
+Generated: **2026-10-06 02:32:23 UTC**
 
 Candidate status: **READY**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 540 | 0 | 35 | 0 | 0 | 1 | 0 |
+| 540 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## Source health
 
@@ -177,7 +177,7 @@ Candidate status: **READY**
 | 117 | **[Movies] CineStream** | 487 | en | TvSeries, Movie, AsianDrama, Anime, Torrent | CSX | — |
 | 118 | **[Indian] CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 119 | **[Indian] CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
-| 120 | **[Indian] Cinevood** | 13 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | 🔄 Updated |
+| 120 | **[Indian] Cinevood** | 13 | hi | Movie, TvSeries, Anime, AsianDrama | Adam Knight Custom Providers | — |
 | 121 | **[Movies] CizgiMax** | 8 | tr | Cartoon | Turkish Providers Repository \| @KekikAkademi | — |
 | 122 | **[Indian] CNC Verse** | 114 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 123 | **[Indian] CNC Verse Mobile** | 10 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
