@@ -1903,7 +1903,7 @@
     "publishedName": "[Indian] Cinefreak",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 17,
+    "selectedVersion": 18,
     "sourceId": "phisher",
     "sourceName": "Phisher Repo",
     "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
@@ -2207,23 +2207,6 @@
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3"
-  },
-  {
-    "plugin": "Ctg Stream",
-    "originalName": "Ctg Stream",
-    "publishedName": "[Movies] Ctg Stream",
-    "category": "Movies",
-    "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 2,
-    "sourceId": "desi",
-    "sourceName": "Desi Extensions",
-    "sourceRepository": "https://github.com/Faisal0786/Desi",
-    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
-    "originalAuthors": [
-      "Faisal"
-    ],
-    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
-    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/Ctg Stream.cs3"
   },
   {
     "plugin": "CuevanaProvider",
@@ -3962,7 +3945,7 @@
     "publishedName": "[Asian] IdlixProvider",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 16,
+    "selectedVersion": 17,
     "sourceId": "phisher",
     "sourceName": "Phisher Repo",
     "sourceRepository": "https://github.com/phisher98/cloudstream-extensions-phisher",
@@ -4708,6 +4691,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
     "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KlonTVProvider.cs3"
+  },
+  {
+    "plugin": "KmMovies",
+    "originalName": "KmMovies",
+    "publishedName": "[Indian] KmMovies",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 3,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/KmMovies.cs3"
   },
   {
     "plugin": "KoreanTurk",
@@ -6753,6 +6753,23 @@
     "packageUrl": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/RareFilmm.cs3"
   },
   {
+    "plugin": "Rate",
+    "originalName": ".Extension Rating تقييم الاضافات",
+    "publishedName": "[Arabic] .Extension Rating تقييم الاضافات",
+    "category": "Arabic",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "rearabi",
+    "sourceName": "Re-3arabi",
+    "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
+    "sourceIndex": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
+    "originalAuthors": [
+      "Abodabodd"
+    ],
+    "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Rate.cs3"
+  },
+  {
     "plugin": "ReAnime",
     "originalName": "ReAnime",
     "publishedName": "[Anime] ReAnime",
@@ -7340,7 +7357,7 @@
     "publishedName": "[Live] StreamCenter",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 11,
     "sourceId": "dogior",
     "sourceName": "doGior's Had Enough",
     "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
@@ -7803,7 +7820,7 @@
     "publishedName": "[Indian] TamilToon",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 7,
+    "selectedVersion": 8,
     "sourceId": "desi",
     "sourceName": "Desi Extensions",
     "sourceRepository": "https://github.com/Faisal0786/Desi",
@@ -7854,7 +7871,7 @@
     "publishedName": "[Indian] The Movie Flix",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 26,
+    "selectedVersion": 27,
     "sourceId": "desi",
     "sourceName": "Desi Extensions",
     "sourceRepository": "https://github.com/Faisal0786/Desi",
@@ -8093,7 +8110,7 @@
     "publishedName": "[Movies] TorrentsV1",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 19,
+    "selectedVersion": 21,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -8690,7 +8707,7 @@
     "publishedName": "[Movies] Wcoflix",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 9,
+    "selectedVersion": 10,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",

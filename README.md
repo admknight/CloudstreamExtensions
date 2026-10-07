@@ -11,7 +11,7 @@
   <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">
     <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Custom Provider Health">
   </a>
-  <img src="https://img.shields.io/badge/plugins-539-2ea44f?style=flat-square" alt="539 plugins">
+  <img src="https://img.shields.io/badge/plugins-540-2ea44f?style=flat-square" alt="540 plugins">
   <img src="https://img.shields.io/badge/sources-35-blue?style=flat-square" alt="35 active sources">
   <img src="https://img.shields.io/badge/package%20failures-0-brightgreen?style=flat-square" alt="0 package failures">
   <a href="https://github.com/admknight/CloudstreamExtensions/stargazers">
@@ -56,11 +56,11 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-06 05:05:17 UTC**
+Last successful refresh: **2026-10-07 04:32:22 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 539 | 0 | 35 | 0 | 0 | 0 | 0 |
+| 540 | 0 | 35 | 0 | 2 | 14 | 1 |
 
 ## 🗂️ Browse by section
 
@@ -68,10 +68,10 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 
 | Section | CloudStream prefix | Plugins |
 | --- | --- | ---: |
-| 🎬 **Movies** | `[Movies]` | 135 |
+| 🎬 **Movies** | `[Movies]` | 134 |
 | 🎌 **Anime** | `[Anime]` | 64 |
-| 🇮🇳 **Indian** | `[Indian]` | 80 |
-| 🌙 **Arabic** | `[Arabic]` | 35 |
+| 🇮🇳 **Indian** | `[Indian]` | 81 |
+| 🌙 **Arabic** | `[Arabic]` | 36 |
 | 🌏 **Asian** | `[Asian]` | 49 |
 | 📡 **Live** | `[Live]` | 47 |
 | 🏟️ **Sports** | `[Sports]` | 2 |
@@ -92,12 +92,12 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [Redowan CloudStream](https://github.com/redowan99/Redowan-CloudStream) | ✅ OK | 18 | 16 | 0 | 2 |
 | [Vietnamese CloudStream Index](https://github.com/t23-02/cloudstream) | ✅ OK | 16 | 14 | 0 | 0 |
 | [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 16 | 14 | 0 | 2 |
-| [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 39 | 36 | 0 | 3 |
+| [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 40 | 37 | 0 | 3 |
 | [TheAlyss Repo](https://github.com/TheAlyss/cloudstream-AlyssRepo) | ✅ OK | 3 | 2 | 0 | 1 |
 | [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 21 | 21 | 0 | 0 |
 | [CloudX-V2](https://github.com/Asm0d3usX/CloudX-V2) | ✅ OK | 18 | 14 | 0 | 4 |
 | [Storm-ext Fork by redblacker8](https://github.com/redblacker8/storm-ext) | ✅ OK | 36 | 36 | 0 | 0 |
-| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 13 | 10 | 0 | 3 |
+| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 14 | 10 | 0 | 4 |
 | [FLUMMOX Repo](https://github.com/FlummoxGamer/FLUMMOX-Repo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Ayu CloudStream Games](https://github.com/errorcode26/Ayu-CloudStream-Games) | ✅ OK | 21 | 21 | 0 | 0 |
 | [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 30 | 30 | 0 | 0 |
@@ -130,9 +130,9 @@ A package is considered reachable when its published .cs3 URL responds successfu
 
 ## 📦 Plugins by section
 
-**539 plugins are currently published and package-reachable.**
+**540 plugins are currently published and package-reachable.**
 
-### 🎬 Movies — 135 plugins
+### 🎬 Movies — 134 plugins
 
 CloudStream display prefix: `[Movies]`
 
@@ -161,118 +161,117 @@ CloudStream display prefix: `[Movies]`
 | 21 | **CoaninetProvider** | 2 | uk | TvSeries | CakesTwix UK/UA | — |
 | 22 | **Coflix** | 19 | fr | Movie, TvSeries | Phisher Repo | — |
 | 23 | **CorsaroNero** | 4 | it | Movie, Torrent | doGior's Had Enough | — |
-| 24 | **Ctg Stream** | 2 |  | TvSeries, Movie, AsianDrama, Anime, Torrent | Desi Extensions | — |
-| 25 | **CuevanaProvider** | 15 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
-| 26 | **Ddizi** | 10 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 27 | **DiviCast** | 1 | en | Movie, TvSeries | Reflex Repo | — |
-| 28 | **DiziBox** | 23 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 29 | **Dizilla** | 39 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 30 | **DiziMom** | 35 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 31 | **DiziPal** | 32 | tr | TvSeries, Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 32 | **DiziYou** | 23 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 33 | **DocumaniaTVProvider** | 2 | es | Documentary, Movie | Storm-ext Fork by redblacker8 | — |
-| 34 | **DocumentaryArea** | 2 | en | Documentary | cs-karma | — |
-| 35 | **DoramyWorldProvider** | 2 | uk | AsianDrama, Movie | CakesTwix UK/UA | — |
-| 36 | **DramaDrip** | 3 | en | Movie, TvSeries, AsianDrama | Kim Recovery Builds | — |
-| 37 | **DramaFull** | 1 | en | AsianDrama, TvSeries, Movie | StreamPlay Recovery Builds | — |
-| 38 | **EneyidaProvider** | 19 | uk | Anime, TvSeries, Movie | CakesTwix UK/UA | — |
-| 39 | **EntrepeliculasyseriesProvider** | 9 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
-| 40 | **Extractors** | 67 |  | TvSeries, Movie, AsianDrama, Anime | Shakzz Recovery Builds | — |
-| 41 | **FilmBip** | 11 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 42 | **FilmMakinesi** | 40 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 43 | **FilmModu** | 15 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 44 | **Flixlatam** | 8 | mx | Movie | cs-karma | — |
-| 45 | **FourKHDHub** | 41 | en | Movie, TvSeries | Phisher Repo | — |
-| 46 | **FshareProvider** | 35 |  | Anime, TvSeries, Movie | Tearrs Vietnamese Extension | — |
-| 47 | **FullHDFilm** | 35 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 48 | **FullHDFilmizlesene** | 27 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 49 | **FullyMaza** | 7 | en | Movie, TvSeries, AnimeMovie, Cartoon | Redowan CloudStream | — |
-| 50 | **GDIndex** | 4 | en | Movie, TvSeries | Shakzz Recovery Builds | — |
-| 51 | **Gnulahd** | 10 | mx | Movie, Anime, TvSeries | cs-karma | — |
-| 52 | **Goojara** | 5 | en | Movie, TvSeries | Phisher Repo | — |
-| 53 | **GuardaPlay** | 1 | it | Movie, Cartoon, Documentary | DieGon Repository | — |
-| 54 | **GuardaSerie** | 7 | it | TvSeries, Cartoon | DieGon Repository | — |
-| 55 | **GuardaSerieProvider** | 1 | it | TvSeries | Gian-Fr Italian Provider | — |
-| 56 | **HDFilmCehennemi** | 23 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 57 | **HDFullProvider** | 5 | es | Movie, TvSeries | Storm-ext Fork by redblacker8 | — |
-| 58 | **HDrezkaProvider** | 35 | ru | AsianDrama, Anime, TvSeries, Movie | CNC Repo (All Language) | — |
-| 59 | **IlCorsaroViola** | 1 | it | Movie, TvSeries, Torrent, Documentary | doGior's Had Enough | — |
-| 60 | **Iwatchtheoffice** | 3 | en | Movie | cs-karma | — |
-| 61 | **JetFilmizle** | 41 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 62 | **JustPlay** | 9 | en | Movie, TvSeries | raghav repo | — |
-| 63 | **Kdesa** | 3 | en | Movie, TvSeries, Anime | raghav repo | — |
-| 64 | **KinostrainProvider** | 2 | uk | TvSeries, Cartoon, Movie, Anime | CakesTwix UK/UA | — |
-| 65 | **KinoTronProvider** | 17 | uk | Cartoon, TvSeries, Movie, Anime | CakesTwix UK/UA | — |
-| 66 | **KinoVezhaProvider** | 14 | uk | Cartoon, TvSeries, Movie | CakesTwix UK/UA | — |
-| 67 | **KisskhProvider** | 22 | en | AsianDrama, TvSeries, Anime, Movie | Phisher Repo | — |
-| 68 | **KKPhimProvider** | 10 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 69 | **KlonTVProvider** | 21 | uk | Anime, TvSeries, Cartoon, Movie | CakesTwix UK/UA | — |
-| 70 | **KultFilmler** | 14 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 71 | **LACartoonsProvider** | 5 | es | Cartoons, TvSeries | Storm-ext Fork by redblacker8 | — |
-| 72 | **LaMovieProvider** | 2 | mx | TvSeries, Movie, Anime | Storm-ext Fork by redblacker8 | — |
-| 73 | **Latanime** | 9 | mx | Movie | cs-karma | — |
-| 74 | **LibraryOfLadev** | 3 | en | Movie | Reflex Repo | — |
-| 75 | **Moviesmod** | 33 |  | TvSeries, Movie, AsianDrama, Anime | CSX | — |
-| 76 | **MoviPK** | 4 | en | Movie, TvSeries | Redowan CloudStream | — |
-| 77 | **Movix** | 32 | fr | Movie, TvSeries, Anime | cs-karma | — |
-| 78 | **Multimovies** | 8 | en | Movie, TvSeries, Anime | raghav repo | — |
-| 79 | **Netcinez** | 5 | pt-br | Movie, TvSeries | Phisher Repo | — |
-| 80 | **NetflixMirrorProvider** | 44 |  | Movie, TvSeries, AsianDrama, Anime | StreamPlay Recovery Builds | — |
-| 81 | **NetNaija** | 17 | en | Movie, TvSeries, Anime, AnimeMovie, OVA | raghav repo | — |
-| 82 | **ObejrzyjTo** | 3 | pl | Movie, TvSeries | Phisher Repo | — |
-| 83 | **OHiTVProvider** | 2 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 84 | **OK** | 8 | ru | Movie, TvSeries | cs-karma | — |
-| 85 | **OneTouchTV** | 5 | en | AsianDrama, TvSeries | Phisher Repo | — |
-| 86 | **OnlineSerieTV** | 4 | it | Movie, TvSeries, Cartoon, Anime, Documentary | DieGon Repository | — |
-| 87 | **OPhimProvider** | 10 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 88 | **PeliculasFlixProvider** | 2 | es | Movie | Storm-ext Fork by redblacker8 | — |
-| 89 | **PelispediaProvider** | 7 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
-| 90 | **Pelisplus4KProvider** | 13 | mx | Movie, TvSeries, AsianDrama, Anime | Storm-ext Fork by redblacker8 | — |
-| 91 | **PelisplusHDProvider** | 10 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
-| 92 | **PhimLongTiengProvider** | 12 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 93 | **PhimMoiProvider** | 9 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 94 | **PhimTuoiThoProvider** | 5 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 95 | **RareFilmm** | 15 | en | Movie | CloudStreamHub Recovery Builds | — |
-| 96 | **Rowdy** | 21 | en | Movie, TvSeries, Anime | Rowdy Recovery Builds | — |
-| 97 | **SerialnoProvider** | 13 | uk | Cartoon, TvSeries | CakesTwix UK/UA | — |
-| 98 | **SeriesflixProvider** | 4 | es | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
-| 99 | **SeriesMetroProvider** | 4 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
-| 100 | **SetFilmIzle** | 24 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 101 | **SezonlukDizi** | 6 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 102 | **ShowBox** | 10 | en | AsianDrama, Anime, TvSeries, Movie | Phisher Repo | — |
-| 103 | **SimklProvider** | 2 | en | AnimeMovie, Anime, OVA, TvSeries, Movie, Documentary, Cartoon | doGior's Had Enough | — |
-| 104 | **SimpsonsUATvProvider** | 5 | uk | Cartoon, TvSeries | CakesTwix UK/UA | — |
-| 105 | **SinemaCX** | 18 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 106 | **SkymoviesHD** | 1 | en | Movie, TvSeries, NSFW | Cinephile | — |
-| 107 | **SoloLatinoProvider** | 8 | mx | Movie, TvSeries, Anime, Cartoon | Storm-ext Fork by redblacker8 | — |
-| 108 | **StreamingCommunity** | 53 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | — |
-| 109 | **StreamPlay** | 686 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
-| 110 | **Supercartoons** | 2 | en | Cartoon | cs-karma | — |
-| 111 | **SuperFilmGeldi** | 22 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 112 | **SuperStream** | 38 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
-| 113 | **TheMoviesFlix** | 22 | en | Movie, TvSeries | raghav repo | — |
-| 114 | **TLCtr** | 19 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 115 | **Topstreamfilm** | 9 | de | Movie, TvSeries | Phisher Repo | — |
-| 116 | **TorraStream** | 97 | en | Movie, Torrent, AsianDrama, TvSeries, Anime | Phisher Repo | — |
-| 117 | **TorrentsV1** | 19 | en | Anime, AnimeMovie, OVA, Movie, TvSeries, Torrent | raghav repo | — |
-| 118 | **TRasyalog** | 52 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 119 | **TvPhimProvider** | 11 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 120 | **UAFlixProvider** | 20 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | — |
-| 121 | **UakinoProvider** | 32 | uk | Anime, TvSeries, Movie, AsianDrama | CakesTwix UK/UA | — |
-| 122 | **UASerialsProProvider** | 27 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | — |
-| 123 | **UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | — |
-| 124 | **UgurFilm** | 13 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 125 | **UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | — |
-| 126 | **VipPhimProvider** | 9 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
-| 127 | **ViStreamProvider** | 35 |  | TvSeries, Anime, Movie | Tearrs Vietnamese Extension | — |
-| 128 | **Watch2Movies** | 5 | en | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 129 | **Watch32** | 34 | en | Movie, TvSeries | CNC Repo (All Language) | — |
-| 130 | **Wcoflix** | 9 | en | Anime, Cartoon | cs-karma | — |
-| 131 | **WebteIzle** | 15 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
-| 132 | **XDMovies** | 26 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
-| 133 | **Yablom** | 4 | fr | Movie | cs-karma | — |
-| 134 | **YoTurkish** | 4 | en | TvSeries | cs-karma | — |
-| 135 | **YTS** | 11 | en | Movie, Torrent | Phisher Repo | — |
+| 24 | **CuevanaProvider** | 15 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
+| 25 | **Ddizi** | 10 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 26 | **DiviCast** | 1 | en | Movie, TvSeries | Reflex Repo | — |
+| 27 | **DiziBox** | 23 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 28 | **Dizilla** | 39 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 29 | **DiziMom** | 35 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 30 | **DiziPal** | 32 | tr | TvSeries, Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 31 | **DiziYou** | 23 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 32 | **DocumaniaTVProvider** | 2 | es | Documentary, Movie | Storm-ext Fork by redblacker8 | — |
+| 33 | **DocumentaryArea** | 2 | en | Documentary | cs-karma | — |
+| 34 | **DoramyWorldProvider** | 2 | uk | AsianDrama, Movie | CakesTwix UK/UA | — |
+| 35 | **DramaDrip** | 3 | en | Movie, TvSeries, AsianDrama | Kim Recovery Builds | — |
+| 36 | **DramaFull** | 1 | en | AsianDrama, TvSeries, Movie | StreamPlay Recovery Builds | — |
+| 37 | **EneyidaProvider** | 19 | uk | Anime, TvSeries, Movie | CakesTwix UK/UA | — |
+| 38 | **EntrepeliculasyseriesProvider** | 9 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
+| 39 | **Extractors** | 67 |  | TvSeries, Movie, AsianDrama, Anime | Shakzz Recovery Builds | — |
+| 40 | **FilmBip** | 11 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 41 | **FilmMakinesi** | 40 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 42 | **FilmModu** | 15 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 43 | **Flixlatam** | 8 | mx | Movie | cs-karma | — |
+| 44 | **FourKHDHub** | 41 | en | Movie, TvSeries | Phisher Repo | — |
+| 45 | **FshareProvider** | 35 |  | Anime, TvSeries, Movie | Tearrs Vietnamese Extension | — |
+| 46 | **FullHDFilm** | 35 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 47 | **FullHDFilmizlesene** | 27 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 48 | **FullyMaza** | 7 | en | Movie, TvSeries, AnimeMovie, Cartoon | Redowan CloudStream | — |
+| 49 | **GDIndex** | 4 | en | Movie, TvSeries | Shakzz Recovery Builds | — |
+| 50 | **Gnulahd** | 10 | mx | Movie, Anime, TvSeries | cs-karma | — |
+| 51 | **Goojara** | 5 | en | Movie, TvSeries | Phisher Repo | — |
+| 52 | **GuardaPlay** | 1 | it | Movie, Cartoon, Documentary | DieGon Repository | — |
+| 53 | **GuardaSerie** | 7 | it | TvSeries, Cartoon | DieGon Repository | — |
+| 54 | **GuardaSerieProvider** | 1 | it | TvSeries | Gian-Fr Italian Provider | — |
+| 55 | **HDFilmCehennemi** | 23 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 56 | **HDFullProvider** | 5 | es | Movie, TvSeries | Storm-ext Fork by redblacker8 | — |
+| 57 | **HDrezkaProvider** | 35 | ru | AsianDrama, Anime, TvSeries, Movie | CNC Repo (All Language) | — |
+| 58 | **IlCorsaroViola** | 1 | it | Movie, TvSeries, Torrent, Documentary | doGior's Had Enough | — |
+| 59 | **Iwatchtheoffice** | 3 | en | Movie | cs-karma | — |
+| 60 | **JetFilmizle** | 41 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 61 | **JustPlay** | 9 | en | Movie, TvSeries | raghav repo | — |
+| 62 | **Kdesa** | 3 | en | Movie, TvSeries, Anime | raghav repo | — |
+| 63 | **KinostrainProvider** | 2 | uk | TvSeries, Cartoon, Movie, Anime | CakesTwix UK/UA | — |
+| 64 | **KinoTronProvider** | 17 | uk | Cartoon, TvSeries, Movie, Anime | CakesTwix UK/UA | — |
+| 65 | **KinoVezhaProvider** | 14 | uk | Cartoon, TvSeries, Movie | CakesTwix UK/UA | — |
+| 66 | **KisskhProvider** | 22 | en | AsianDrama, TvSeries, Anime, Movie | Phisher Repo | — |
+| 67 | **KKPhimProvider** | 10 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 68 | **KlonTVProvider** | 21 | uk | Anime, TvSeries, Cartoon, Movie | CakesTwix UK/UA | — |
+| 69 | **KultFilmler** | 14 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 70 | **LACartoonsProvider** | 5 | es | Cartoons, TvSeries | Storm-ext Fork by redblacker8 | — |
+| 71 | **LaMovieProvider** | 2 | mx | TvSeries, Movie, Anime | Storm-ext Fork by redblacker8 | — |
+| 72 | **Latanime** | 9 | mx | Movie | cs-karma | — |
+| 73 | **LibraryOfLadev** | 3 | en | Movie | Reflex Repo | — |
+| 74 | **Moviesmod** | 33 |  | TvSeries, Movie, AsianDrama, Anime | CSX | — |
+| 75 | **MoviPK** | 4 | en | Movie, TvSeries | Redowan CloudStream | — |
+| 76 | **Movix** | 32 | fr | Movie, TvSeries, Anime | cs-karma | — |
+| 77 | **Multimovies** | 8 | en | Movie, TvSeries, Anime | raghav repo | — |
+| 78 | **Netcinez** | 5 | pt-br | Movie, TvSeries | Phisher Repo | — |
+| 79 | **NetflixMirrorProvider** | 44 |  | Movie, TvSeries, AsianDrama, Anime | StreamPlay Recovery Builds | — |
+| 80 | **NetNaija** | 17 | en | Movie, TvSeries, Anime, AnimeMovie, OVA | raghav repo | — |
+| 81 | **ObejrzyjTo** | 3 | pl | Movie, TvSeries | Phisher Repo | — |
+| 82 | **OHiTVProvider** | 2 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 83 | **OK** | 8 | ru | Movie, TvSeries | cs-karma | — |
+| 84 | **OneTouchTV** | 5 | en | AsianDrama, TvSeries | Phisher Repo | — |
+| 85 | **OnlineSerieTV** | 4 | it | Movie, TvSeries, Cartoon, Anime, Documentary | DieGon Repository | — |
+| 86 | **OPhimProvider** | 10 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 87 | **PeliculasFlixProvider** | 2 | es | Movie | Storm-ext Fork by redblacker8 | — |
+| 88 | **PelispediaProvider** | 7 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
+| 89 | **Pelisplus4KProvider** | 13 | mx | Movie, TvSeries, AsianDrama, Anime | Storm-ext Fork by redblacker8 | — |
+| 90 | **PelisplusHDProvider** | 10 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
+| 91 | **PhimLongTiengProvider** | 12 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 92 | **PhimMoiProvider** | 9 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 93 | **PhimTuoiThoProvider** | 5 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 94 | **RareFilmm** | 15 | en | Movie | CloudStreamHub Recovery Builds | — |
+| 95 | **Rowdy** | 21 | en | Movie, TvSeries, Anime | Rowdy Recovery Builds | — |
+| 96 | **SerialnoProvider** | 13 | uk | Cartoon, TvSeries | CakesTwix UK/UA | — |
+| 97 | **SeriesflixProvider** | 4 | es | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
+| 98 | **SeriesMetroProvider** | 4 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | — |
+| 99 | **SetFilmIzle** | 24 | tr | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 100 | **SezonlukDizi** | 6 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 101 | **ShowBox** | 10 | en | AsianDrama, Anime, TvSeries, Movie | Phisher Repo | — |
+| 102 | **SimklProvider** | 2 | en | AnimeMovie, Anime, OVA, TvSeries, Movie, Documentary, Cartoon | doGior's Had Enough | — |
+| 103 | **SimpsonsUATvProvider** | 5 | uk | Cartoon, TvSeries | CakesTwix UK/UA | — |
+| 104 | **SinemaCX** | 18 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 105 | **SkymoviesHD** | 1 | en | Movie, TvSeries, NSFW | Cinephile | — |
+| 106 | **SoloLatinoProvider** | 8 | mx | Movie, TvSeries, Anime, Cartoon | Storm-ext Fork by redblacker8 | — |
+| 107 | **StreamingCommunity** | 53 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | — |
+| 108 | **StreamPlay** | 686 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | 🔄 Updated |
+| 109 | **Supercartoons** | 2 | en | Cartoon | cs-karma | — |
+| 110 | **SuperFilmGeldi** | 22 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 111 | **SuperStream** | 38 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
+| 112 | **TheMoviesFlix** | 22 | en | Movie, TvSeries | raghav repo | — |
+| 113 | **TLCtr** | 19 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 114 | **Topstreamfilm** | 9 | de | Movie, TvSeries | Phisher Repo | — |
+| 115 | **TorraStream** | 97 | en | Movie, Torrent, AsianDrama, TvSeries, Anime | Phisher Repo | — |
+| 116 | **TorrentsV1** | 21 | en | Anime, AnimeMovie, OVA, Movie, TvSeries, Torrent | raghav repo | 🔄 Updated |
+| 117 | **TRasyalog** | 52 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 118 | **TvPhimProvider** | 11 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 119 | **UAFlixProvider** | 20 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | — |
+| 120 | **UakinoProvider** | 32 | uk | Anime, TvSeries, Movie, AsianDrama | CakesTwix UK/UA | — |
+| 121 | **UASerialsProProvider** | 27 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | — |
+| 122 | **UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | — |
+| 123 | **UgurFilm** | 13 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 124 | **UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | — |
+| 125 | **VipPhimProvider** | 9 |  | TvSeries, Movie | Vietnamese CloudStream Index | — |
+| 126 | **ViStreamProvider** | 35 |  | TvSeries, Anime, Movie | Tearrs Vietnamese Extension | — |
+| 127 | **Watch2Movies** | 5 | en | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 128 | **Watch32** | 34 | en | Movie, TvSeries | CNC Repo (All Language) | — |
+| 129 | **Wcoflix** | 10 | en | Anime, Cartoon | cs-karma | 🔄 Updated |
+| 130 | **WebteIzle** | 15 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | — |
+| 131 | **XDMovies** | 26 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
+| 132 | **Yablom** | 4 | fr | Movie | cs-karma | — |
+| 133 | **YoTurkish** | 4 | en | TvSeries | cs-karma | — |
+| 134 | **YTS** | 11 | en | Movie, Torrent | Phisher Repo | — |
 
 ### 🎌 Anime — 64 plugins
 
@@ -302,7 +301,7 @@ CloudStream display prefix: `[Anime]`
 | 20 | **AnimeSaturn** | 4 | it | AnimeMovie, Anime, OVA | DieGon Repository | — |
 | 21 | **AnimeSuge** | 10 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | — |
 | 22 | **AnimeUAProvider** | 10 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | — |
-| 23 | **AnimeUnity** | 26 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | — |
+| 23 | **AnimeUnity** | 26 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | 🔄 Updated |
 | 24 | **AnimeVietsubProvider** | 14 |  | Anime | Vietnamese CloudStream Index | — |
 | 25 | **AnimeWorld** | 20 | it | AnimeMovie, Anime, OVA | DieGon Repository | — |
 | 26 | **Animexin** | 16 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
@@ -345,7 +344,7 @@ CloudStream display prefix: `[Anime]`
 | 63 | **Xanime** | 1 | en | Anime, AnimeMovie, OVA | raghav repo | — |
 | 64 | **YanHH3DProvider** | 16 |  | Anime, AnimeMovie | Vietnamese CloudStream Index | — |
 
-### 🇮🇳 Indian — 80 plugins
+### 🇮🇳 Indian — 81 plugins
 
 CloudStream display prefix: `[Indian]`
 
@@ -368,7 +367,7 @@ CloudStream display prefix: `[Indian]`
 | 15 | **Bollyflix** | 33 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
 | 16 | **CastleTvProvider** | 40 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 17 | **Cinedoze** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
-| 18 | **Cinefreak** | 17 | bn | Movie, TvSeries, Anime | Phisher Repo | — |
+| 18 | **Cinefreak** | 18 | bn | Movie, TvSeries, Anime | Phisher Repo | 🔄 Updated |
 | 19 | **Cinemaluxe** | 36 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 20 | **CineTvProvider** | 35 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
 | 21 | **CinevezProvider** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
@@ -382,7 +381,7 @@ CloudStream display prefix: `[Indian]`
 | 29 | **EinthusanProvider** | 37 | ta | Movie | CNC Repo (All Language) | — |
 | 30 | **EmwBD** | 16 | bn | Movie, TvSeries, AnimeMovie, AsianDrama, NSFW | Redowan CloudStream | — |
 | 31 | **Fibwatch** | 11 | hi | Movie, TvSeries | Phisher Repo | — |
-| 32 | **FilmFly** | 22 | hi | Movie, TvSeries, Anime | Desi Extensions | — |
+| 32 | **FilmFly** | 22 | hi | Movie, TvSeries, Anime | Desi Extensions | 🔄 Updated |
 | 33 | **Fivemovierulz** | 8 | hi | TvSeries, Movie | Phisher Repo | — |
 | 34 | **Full4Movies** | 17 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 35 | **HDhub4u** | 57 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
@@ -392,87 +391,89 @@ CloudStream display prefix: `[Indian]`
 | 39 | **India4Movies** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
 | 40 | **IStreamFlare** | 6 | hi | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | — |
 | 41 | **Kartoons** | 5 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
-| 42 | **MassTamilanProvider** | 9 | ta | Music, Movie | Phisher Repo | — |
-| 43 | **Microtv** | 3 | hi | Movie, TvSeries | Phisher Repo | — |
-| 44 | **MLSBDProvider** | 33 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | — |
-| 45 | **MovieBox** | 12 | hi | Movie, TvSeries, Anime | Desi Extensions | — |
-| 46 | **MovieBoxProvider** | 52 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
-| 47 | **MovieBoxProviderIN** | 54 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
-| 48 | **MovieLinkBDProvider** | 22 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | — |
-| 49 | **Movies4u** | 17 | hi | Movie, TvSeries | Phisher Repo | — |
-| 50 | **MoviesDrive** | 33 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
-| 51 | **MoviezwapProvider** | 32 | te | Movie | CNC Repo (All Language) | — |
-| 52 | **Mp4Moviez** | 3 | hi | Movie, TvSeries, NSFW | Redowan CloudStream | — |
-| 53 | **MPlayerProvider** | 9 | hi | AsianDrama, TvSeries, Movie | Phisher Repo | — |
-| 54 | **MultiMoviesProvider** | 55 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
-| 55 | **NetflixMirror** | 32 | hi | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 56 | **Netmirror** | 46 | hi | Movie, TvSeries | NetMirror Extension | — |
-| 57 | **OnlineMoviesHinditProvider** | 6 | hi | TvSeries, Movie | Adam Knight Curated Recovery | — |
-| 58 | **OttSource** | 7 | hi | Movie, TvSeries | Desi Extensions | — |
-| 59 | **PikashowProvider** | 32 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
-| 60 | **Piratexplay** | 5 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
-| 61 | **RareAnimesIndia** | 3 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | — |
-| 62 | **RingZ** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
-| 63 | **Rtally** | 49 | ta | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | CNC Repo (All Language) | — |
-| 64 | **SDmovies** | 4 | hi | TvSeries, Movie, AsianDrama, Anime, Torrent | Desi Extensions | — |
-| 65 | **StreamFlixProvider** | 34 | ta | Movie, TvSeries, Anime | CNC Repo (All Language) | — |
-| 66 | **StreamHubOne** | 62 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | Desi Extensions | — |
-| 67 | **Tamilblasters** | 12 | ta | Movie, TvSeries | Phisher Repo | — |
-| 68 | **TamilDhoolProvider** | 39 | ta | TvSeries | CNC Repo (All Language) | — |
-| 69 | **Tamilian** | 32 | ta | Movies | CNC Repo (All Language) | — |
-| 70 | **TamilToon** | 7 | hi | Movie, TvSeries, Anime, AsianDrama | Desi Extensions | — |
-| 71 | **The Movie Flix** | 26 | hi | TvSeries, Movie, Anime | Desi Extensions | — |
-| 72 | **ToonHub** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
-| 73 | **Toonstream** | 10 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
-| 74 | **ToonTales** | 5 | hi | Cartoon | Phisher Repo | — |
-| 75 | **Topcartoons** | 5 | hi | Cartoon | Phisher Repo | — |
-| 76 | **VegaMovies** | 82 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
-| 77 | **WatchMoviesPk** | 3 | hi | TvSeries, Movie | Redowan CloudStream | — |
-| 78 | **World4uFree** | 14 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
-| 79 | **XonProvider** | 35 | ta | TvSeries, Movie, Anime | CNC Repo (All Language) | — |
-| 80 | **Zinkmovies** | 12 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
+| 42 | **KmMovies** | 3 | hi | Movie, TvSeries, Anime | Desi Extensions | 🆕 Added |
+| 43 | **MassTamilanProvider** | 9 | ta | Music, Movie | Phisher Repo | — |
+| 44 | **Microtv** | 3 | hi | Movie, TvSeries | Phisher Repo | — |
+| 45 | **MLSBDProvider** | 33 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | — |
+| 46 | **MovieBox** | 12 | hi | Movie, TvSeries, Anime | Desi Extensions | — |
+| 47 | **MovieBoxProvider** | 52 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
+| 48 | **MovieBoxProviderIN** | 54 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
+| 49 | **MovieLinkBDProvider** | 22 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | — |
+| 50 | **Movies4u** | 17 | hi | Movie, TvSeries | Phisher Repo | — |
+| 51 | **MoviesDrive** | 33 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
+| 52 | **MoviezwapProvider** | 32 | te | Movie | CNC Repo (All Language) | — |
+| 53 | **Mp4Moviez** | 3 | hi | Movie, TvSeries, NSFW | Redowan CloudStream | — |
+| 54 | **MPlayerProvider** | 9 | hi | AsianDrama, TvSeries, Movie | Phisher Repo | — |
+| 55 | **MultiMoviesProvider** | 55 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
+| 56 | **NetflixMirror** | 32 | hi | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 57 | **Netmirror** | 46 | hi | Movie, TvSeries | NetMirror Extension | — |
+| 58 | **OnlineMoviesHinditProvider** | 6 | hi | TvSeries, Movie | Adam Knight Curated Recovery | — |
+| 59 | **OttSource** | 7 | hi | Movie, TvSeries | Desi Extensions | — |
+| 60 | **PikashowProvider** | 32 | ta | Movie, TvSeries | CNC Repo (All Language) | — |
+| 61 | **Piratexplay** | 5 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
+| 62 | **RareAnimesIndia** | 3 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | — |
+| 63 | **RingZ** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
+| 64 | **Rtally** | 49 | ta | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | CNC Repo (All Language) | — |
+| 65 | **SDmovies** | 4 | hi | TvSeries, Movie, AsianDrama, Anime, Torrent | Desi Extensions | — |
+| 66 | **StreamFlixProvider** | 34 | ta | Movie, TvSeries, Anime | CNC Repo (All Language) | — |
+| 67 | **StreamHubOne** | 62 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | Desi Extensions | 🔄 Updated |
+| 68 | **Tamilblasters** | 12 | ta | Movie, TvSeries | Phisher Repo | — |
+| 69 | **TamilDhoolProvider** | 39 | ta | TvSeries | CNC Repo (All Language) | — |
+| 70 | **Tamilian** | 32 | ta | Movies | CNC Repo (All Language) | — |
+| 71 | **TamilToon** | 8 | hi | Movie, TvSeries, Anime, AsianDrama | Desi Extensions | 🔄 Updated |
+| 72 | **The Movie Flix** | 27 | hi | TvSeries, Movie, Anime | Desi Extensions | 🔄 Updated |
+| 73 | **ToonHub** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
+| 74 | **Toonstream** | 10 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | — |
+| 75 | **ToonTales** | 5 | hi | Cartoon | Phisher Repo | — |
+| 76 | **Topcartoons** | 5 | hi | Cartoon | Phisher Repo | — |
+| 77 | **VegaMovies** | 82 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | — |
+| 78 | **WatchMoviesPk** | 3 | hi | TvSeries, Movie | Redowan CloudStream | — |
+| 79 | **World4uFree** | 14 | hi | Movie, TvSeries | Adam Knight Custom Providers | — |
+| 80 | **XonProvider** | 35 | ta | TvSeries, Movie, Anime | CNC Repo (All Language) | — |
+| 81 | **Zinkmovies** | 12 | hi | Movie, TvSeries, Anime | Phisher Repo | — |
 
-### 🌙 Arabic — 35 plugins
+### 🌙 Arabic — 36 plugins
 
 CloudStream display prefix: `[Arabic]`
 
 | # | Plugin | Ver. | Lang | Types | Source | Change |
 | ---: | --- | ---: | --- | --- | --- | --- |
-| 1 | **3isk** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
-| 2 | **Aflaam** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
-| 3 | **Akwam** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
-| 4 | **Alooytv** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
-| 5 | **Anime-Phoenix** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
-| 6 | **Anime3rb** | 1 | ar | TvSeries, Anime | Re-3arabi | — |
-| 7 | **Anime4up** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | — |
-| 8 | **Animerco** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
-| 9 | **AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
-| 10 | **AnimeWitcher** | 3 | ar | Anime | Re-3arabi | — |
-| 11 | **Asia2tv 2** | 3 | ar | Movie, TvSeries, AsianDrama | Re-3arabi | — |
-| 12 | **Brstej** | 1 | ar | Anime | Re-3arabi | — |
-| 13 | **Cee (🇮🇶)** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
-| 14 | **CimaClub** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
-| 15 | **Cimalight** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | — |
-| 16 | **Cimatn** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | — |
-| 17 | **Dima toon** | 1 | ar | TvSeries, Anime | Re-3arabi | — |
-| 18 | **Egydead** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | — |
-| 19 | **Elif** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
-| 20 | **Esheaq** | 21 | ar | Movie, TvSeries | cs-karma | — |
-| 21 | **Eshek** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
-| 22 | **Faselhd** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
-| 23 | **Krmzy** | 2 | ar | TvSeries | cs-karma | — |
-| 24 | **LodyNet** | 2 | ar | Movie, tvTypes | Re-3arabi | — |
-| 25 | **Mycima** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | — |
-| 26 | **Shabakaty Cinemana (🇮🇶)** | 4 | ar | TvSeries, Movie | Re-3arabi | — |
-| 27 | **Shahid4u** | 2 | ar | TvSeries, Movie | Re-3arabi | — |
-| 28 | **Shahidwbas** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
-| 29 | **TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | — |
-| 30 | **Tuktukcima** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
-| 31 | **TuniflexBlog** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
-| 32 | **Tuniflix** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | — |
-| 33 | **VIU** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | — |
-| 34 | **WeCima** | 1 | ar | Movie, tvTypes | Re-3arabi | — |
-| 35 | **Witanime** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
+| 1 | **.Extension Rating تقييم الاضافات** | 1 | ar | TvSeries, Movie | Re-3arabi | 🆕 Added |
+| 2 | **3isk** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
+| 3 | **Aflaam** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
+| 4 | **Akwam** | 3 | ar | TvSeries, Movie | Re-3arabi | 🔄 Updated |
+| 5 | **Alooytv** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
+| 6 | **Anime-Phoenix** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
+| 7 | **Anime3rb** | 1 | ar | TvSeries, Anime | Re-3arabi | — |
+| 8 | **Anime4up** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | — |
+| 9 | **Animerco** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
+| 10 | **AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
+| 11 | **AnimeWitcher** | 3 | ar | Anime | Re-3arabi | — |
+| 12 | **Asia2tv 2** | 3 | ar | Movie, TvSeries, AsianDrama | Re-3arabi | — |
+| 13 | **Brstej** | 1 | ar | Anime | Re-3arabi | — |
+| 14 | **Cee (🇮🇶)** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
+| 15 | **CimaClub** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
+| 16 | **Cimalight** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | — |
+| 17 | **Cimatn** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | — |
+| 18 | **Dima toon** | 1 | ar | TvSeries, Anime | Re-3arabi | — |
+| 19 | **Egydead** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | — |
+| 20 | **Elif** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
+| 21 | **Esheaq** | 21 | ar | Movie, TvSeries | cs-karma | — |
+| 22 | **Eshek** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
+| 23 | **Faselhd** | 3 | ar | TvSeries, Movie | Re-3arabi | — |
+| 24 | **Krmzy** | 2 | ar | TvSeries | cs-karma | — |
+| 25 | **LodyNet** | 2 | ar | Movie, tvTypes | Re-3arabi | — |
+| 26 | **Mycima** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | — |
+| 27 | **Shabakaty Cinemana (🇮🇶)** | 4 | ar | TvSeries, Movie | Re-3arabi | — |
+| 28 | **Shahid4u** | 2 | ar | TvSeries, Movie | Re-3arabi | — |
+| 29 | **Shahidwbas** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
+| 30 | **TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | 🔄 Updated |
+| 31 | **Tuktukcima** | 1 | ar | TvSeries, Movie | Re-3arabi | 🔄 Updated |
+| 32 | **TuniflexBlog** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | — |
+| 33 | **Tuniflix** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | — |
+| 34 | **VIU** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | — |
+| 35 | **WeCima** | 1 | ar | Movie, tvTypes | Re-3arabi | — |
+| 36 | **Witanime** | 1 | ar | TvSeries, Movie | Re-3arabi | — |
 
 ### 🌏 Asian — 49 plugins
 
@@ -498,7 +499,7 @@ CloudStream display prefix: `[Asian]`
 | 16 | **Filmkita** | 1 | id | Movie, TvSeries | CloudX-V2 | — |
 | 17 | **Filmlokal** | 1 | id | Movie, TvSeries | CloudX-V2 | — |
 | 18 | **Idlix** | 2 | id | Movie, TvSeries | Nonton Indo | — |
-| 19 | **IdlixProvider** | 16 | id | TvSeries, Movie, Anime, AsianDrama | Phisher Repo | — |
+| 19 | **IdlixProvider** | 17 | id | TvSeries, Movie, Anime, AsianDrama | Phisher Repo | 🔄 Updated |
 | 20 | **Indomax** | 1 | id | Movie, TvSeries | CloudX-V2 | — |
 | 21 | **Kawanfilm** | 1 | id | Movie, TvSeries | CloudX-V2 | — |
 | 22 | **KlikXXi** | 1 | id | Movie, TvSeries | CloudX-V2 | — |
@@ -569,7 +570,7 @@ CloudStream display prefix: `[Live]`
 | 31 | **ReplayZone** | 4 | en | Live | raghav repo | — |
 | 32 | **SKTechProvider** | 57 | ta | Live | CNC Repo (All Language) | — |
 | 33 | **SportzxProvider** | 24 | ta | Live | CNC Repo (All Language) | — |
-| 34 | **StreamCenter** | 10 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | — |
+| 34 | **StreamCenter** | 11 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | 🔄 Updated |
 | 35 | **Streamed** | 29 | en | Live | cs-karma | — |
 | 36 | **StreamedPk** | 12 | en | Live | raghav repo | — |
 | 37 | **StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | — |
@@ -757,6 +758,7 @@ When the same plugin is published by more than one source, the highest version i
 | --- | --- | --- |
 | AltaDefinizione | DieGon Repository v25 | doGior's Had Enough v8 (lower version) |
 | AniKoto | CNC Repo (All Language) v10 | Phisher Repo v6 (lower version) |
+| Animedubhindi | Phisher Repo v9 | Desi Extensions v1 (lower version) |
 | AnimeUnity | doGior's Had Enough v26 | DieGon Repository v17 (lower version) |
 | AnimeWorld | DieGon Repository v20 | doGior's Had Enough v18 (lower version) |
 | AnimeWorld | DieGon Repository v20 | cs-karma v5 (lower version) |
@@ -786,7 +788,7 @@ When the same plugin is published by more than one source, the highest version i
 | TheMoviesFlix | raghav repo v22 | Redowan CloudStream v6 (lower version) |
 | TV | DieGon Repository v5 | doGior's Had Enough v3 (lower version) |
 | TVGarden | cs-karma v11 | Re-3arabi v1 (lower version) |
-| VegaMovies | CSX v82 | Desi Extensions v37 (lower version) |
+| VegaMovies | CSX v82 | Desi Extensions v38 (lower version) |
 | Xhamster | Turkish Providers Repository \| @KekikAkademi v1 | CXXX v1 (lower source priority) |
 | XNXX | Turkish Providers Repository \| @KekikAkademi v2 | CXXX v2 (lower source priority) |
 | YouTube | doGior's Had Enough v15 | Re-3arabi v2 (lower version) |
