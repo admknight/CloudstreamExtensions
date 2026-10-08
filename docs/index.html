@@ -88,10 +88,10 @@
   <section id="dashboard">
     <div class="section-head"><div><p class="eyebrow">LIVE PRODUCTION</p><h2>Repository dashboard</h2><p>Values are loaded from the current production build report.</p></div></div>
     <div class="stats">
-      <div class="stat"><strong id="plugins">540</strong><span>Reachable plugins</span></div>
-      <div class="stat"><strong id="sources">35</strong><span>Healthy sources</span></div>
-      <div class="stat"><strong id="failures">0</strong><span>Package failures</span></div>
-      <div class="stat"><strong id="custom-count">6</strong><span>Custom providers</span></div>
+      <div class="stat"><strong id="plugins">—</strong><span>Reachable plugins</span></div>
+      <div class="stat"><strong id="sources">—</strong><span>Healthy sources</span></div>
+      <div class="stat"><strong id="failures">—</strong><span>Package failures</span></div>
+      <div class="stat"><strong id="custom-count">—</strong><span>Custom providers</span></div>
     </div>
   </section>
 
@@ -100,8 +100,8 @@
     <div class="health-grid">
       <div class="panel">
         <h3>Current health</h3>
-        <div class="health-item"><div class="health-label"><strong>Sources</strong><span id="source-health-label">35 / 35 healthy</span></div><div class="track"><div class="fill" id="source-fill"></div></div></div>
-        <div class="health-item"><div class="health-label"><strong>Packages</strong><span id="package-health-label">540 / 540 reachable</span></div><div class="track"><div class="fill" id="package-fill"></div></div></div>
+        <div class="health-item"><div class="health-label"><strong>Sources</strong><span id="source-health-label">Loading source health…</span></div><div class="track"><div class="fill" id="source-fill"></div></div></div>
+        <div class="health-item"><div class="health-label"><strong>Packages</strong><span id="package-health-label">Loading package health…</span></div><div class="track"><div class="fill" id="package-fill"></div></div></div>
         <div class="health-meta">Last production report: <strong id="generated-at">loading…</strong></div>
       </div>
       <div class="panel release-card">
@@ -132,7 +132,7 @@
   <section>
     <div class="section-head"><div><p class="eyebrow">AUTOMATION PIPELINE</p><h2>How production is built</h2><p>The catalog is not published until the automated checks pass.</p></div></div>
     <div class="pipeline">
-      <div class="pipe"><strong>Upstreams</strong><span>35 configured sources</span></div>
+      <div class="pipe"><strong>Upstreams</strong><span>Configured sources</span></div>
       <div class="pipe"><strong>Aggregate</strong><span>Fetch published indexes</span></div>
       <div class="pipe"><strong>Deduplicate</strong><span>Version + priority rules</span></div>
       <div class="pipe"><strong>Verify</strong><span>Package reachability</span></div>
@@ -232,7 +232,7 @@ async function loadHealthTrends(){
   }catch(e){console.warn("Health trends unavailable",e)}
 }
 document.querySelectorAll("[data-copy]").forEach(btn=>btn.addEventListener("click",async()=>{const text=$(btn.dataset.copy).textContent;try{await navigator.clipboard.writeText(text);const old=btn.textContent;btn.textContent="Copied!";btn.classList.add("copied");setTimeout(()=>{btn.textContent=old;btn.classList.remove("copied")},1400)}catch{btn.textContent="Select & copy"}}));
-const shareBtn=$("share-project");if(shareBtn)shareBtn.addEventListener("click",async()=>{const data={title:"Adam Knight Mega Repo",text:"CloudStream extensions Mega Repo — 540 plugins, 35 sources, automated and verified.",url:"https://admknight.github.io/CloudstreamExtensions/"};const old=shareBtn.textContent;try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}}catch(e){if(e?.name!=="AbortError"){try{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}catch{shareBtn.textContent="Copy link"}}}setTimeout(()=>shareBtn.textContent=old,1500)});
+const shareBtn=$("share-project");if(shareBtn)shareBtn.addEventListener("click",async()=>{const data={title:"Adam Knight Mega Repo",text:"CloudStream extensions Mega Repo — automatically maintained package catalog with aggregation, verification and health reporting.",url:"https://admknight.github.io/CloudstreamExtensions/"};const old=shareBtn.textContent;try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}}catch(e){if(e?.name!=="AbortError"){try{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}catch{shareBtn.textContent="Copy link"}}}setTimeout(()=>shareBtn.textContent=old,1500)});
 addEventListener("scroll",()=>{const max=document.documentElement.scrollHeight-innerHeight;$("scroll-progress").style.width=(max?scrollY/max*100:0)+"%"},{passive:true});
 reveal();loadReport();loadCustom();loadRelease();loadHealthTrends();
 </script>
