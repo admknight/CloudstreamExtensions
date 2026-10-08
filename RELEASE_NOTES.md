@@ -1,45 +1,35 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-07 04:32:22 UTC**
+Generated: **2026-10-08 04:43:07 UTC**
 
-Production catalog: **540 reachable plugins** · **35 healthy sources** · **0 package failures**
+Production catalog: **542 reachable plugins** · **35 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **2**
-- Updated: **14**
-- Removed: **1**
-- Unchanged: **524**
+- Updated: **8**
+- Removed: **0**
+- Unchanged: **532**
 
 ## Added plugins
 
-- **KmMovies** v3 — Desi Extensions
-- **Rate** v1 — Re-3arabi
+- **AnimeVilla** v3 — Desi Extensions
+- **WatchDrama** v1 — Desi Extensions
 
 ## Updated plugins
 
-- **Akwam** v3 → v3 — Re-3arabi
-- **AnimeUnity** v26 → v26 — doGior's Had Enough
-- **Cinefreak** v17 → v18 — Phisher Repo
-- **FilmFly** v22 → v22 — Desi Extensions
-- **IdlixProvider** v16 → v17 — Phisher Repo
-- **StreamCenter** v10 → v11 — doGior's Had Enough
-- **StreamHubOne** v62 → v62 — Desi Extensions
-- **StreamPlay** v686 → v686 — Phisher Repo
-- **TamilToon** v7 → v8 — Desi Extensions
-- **The Movie Flix** v26 → v27 — Desi Extensions
-- **Topcinema** v1 → v1 — Re-3arabi
-- **TorrentsV1** v19 → v21 — raghav repo
-- **TukTukcima** v1 → v1 — Re-3arabi
-- **Wcoflix** v9 → v10 — cs-karma
-
-## Removed plugins
-
-- **Ctg Stream** v2 — Desi Extensions
+- **18+** v1 → v2 — Desi Extensions
+- **AnimeDekhoProvider** v70 → v71 — Phisher Repo
+- **EntrepeliculasyseriesProvider** v9 → v10 — Storm-ext Fork by redblacker8
+- **Fibwatch** v11 → v12 — Phisher Repo
+- **KlonTVProvider** v21 → v22 — CakesTwix UK/UA
+- **PelisplusHDProvider** v10 → v11 — Storm-ext Fork by redblacker8
+- **Rate** v1 → v1 — Re-3arabi
+- **SoloLatinoProvider** v8 → v9 — Storm-ext Fork by redblacker8
 
 ## Production health
 
-- Reachable packages: **540**
+- Reachable packages: **542**
 - Package failures: **0**
 - Healthy sources: **35**
 - Failed sources: **0**
