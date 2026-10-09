@@ -9007,30 +9007,6 @@
     "name": "[Indian] StreamFlixProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
-    "status": 1,
-    "version": 62,
-    "name": "[Indian] StreamHubOne",
-    "internalName": "StreamHubOne",
-    "authors": [
-      "Adam Knight (Maintainer)"
-    ],
-    "description": "StreamHub One - Multilingual provider",
-    "fileSize": 1046364,
-    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "language": "hi",
-    "tvTypes": [
-      "Movie",
-      "TvSeries",
-      "Anime",
-      "AnimeMovie",
-      "AsianDrama"
-    ],
-    "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/images%20(1).jpeg",
-    "apiVersion": 1,
-    "fileHash": "sha256-e3fb6bccccd1f31d775872b4a481889b0d7407b6fcff97265d9169779b429094"
-  },
-  {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3",
     "status": 1,
     "version": 53,

@@ -7454,23 +7454,6 @@
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/StreamFlixProvider.cs3"
   },
   {
-    "plugin": "StreamHubOne",
-    "originalName": "StreamHubOne",
-    "publishedName": "[Indian] StreamHubOne",
-    "category": "Indian",
-    "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 62,
-    "sourceId": "desi",
-    "sourceName": "Desi Extensions",
-    "sourceRepository": "https://github.com/Faisal0786/Desi",
-    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
-    "originalAuthors": [
-      "Faisal"
-    ],
-    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
-    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3"
-  },
-  {
     "plugin": "StreamingCommunity",
     "originalName": "StreamingCommunity",
     "publishedName": "[Movies] StreamingCommunity",
