@@ -1,0 +1,80 @@
+name: One-time verified cleanup of completed branches
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/one-time-completed-branch-cleanup.yml'
+      - 'tools/prune_completed_branches_once.py'
+      - 'tests/test_prune_completed_branches_once.py'
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/one-time-completed-branch-cleanup.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: one-time-merged-branch-cleanup
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate exact branch and PR safety conditions
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/prune_completed_branches_once.py
+          python3 -m unittest discover -s tests -p test_prune_completed_branches_once.py -v
+      - name: Review current live branch eligibility without deleting
+        if: github.repository == 'admknight/CloudstreamExtensions'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 tools/prune_completed_branches_once.py > branch-cleanup-audit.json
+          cat branch-cleanup-audit.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verified-branch-cleanup-preflight
+          path: branch-cleanup-audit.json
+          if-no-files-found: ignore
+
+  cleanup:
+    needs: audit
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'admknight/CloudstreamExtensions'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove only unchanged heads of already-merged pull requests
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 tools/prune_completed_branches_once.py --apply > branch-cleanup-result.json
+          cat branch-cleanup-result.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verified-branch-cleanup-result
+          path: branch-cleanup-result.json
+          if-no-files-found: ignore
