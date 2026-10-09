@@ -32,3 +32,29 @@ Artifacts contain `immutable-recovery.json` with `immutableMatches`, `matchedCur
 A separate publication change must validate that a recovery lock matches the same package identity, original URL, source provenance, published SHA-256, length and version from one consistent catalog snapshot. It must freshly download the pinned artifact to verify bytes, preserve the user-visible plugin identity and be tested inside the CloudStream repository installer. Publication metadata, source counts, release diff, health status, and post-build integrity auditing must be reconciled atomically before deployment. **Do not use this index to approve a different/new binary.**
 
 The still-unresolved upstream incidents and the draft [guarded recovery PR #20](https://github.com/admknight/CloudstreamExtensions/pull/20) remain separate.
+
+## Byte-identical fallback consumption in catalog reviews
+
+A second, separately tested component, `tools/verified_immutable_fallback.py`, can
+consume the recovered fingerprints **in read-only catalog previews**. It requires
+that the inventory's published plugin and provenance SHA-256 snapshots match
+exactly the previous catalog used for the merge. Every lock is checked against
+the same original package URL, repository, plugin identity, source, version,
+fileSize and pre-existing fileHash; a mismatched or stale lock is rejected.
+
+For a new candidate that fails the normal trust gate, the selection algorithm
+may substitute a **full commit-pinned URL to the byte-identical previous
+binary**, provided that binary is independently downloaded and verified again
+in the current run. No new/different upstream package is thereby approved.
+The corresponding provenance packageUrl is changed to the same commit URL,
+while authors, original source attribution, internal plugin identity and
+version remain unchanged. The reconciler records the **URL change** rather
+than pretending that this selected plugin is unchanged.
+
+The daily read-only `full-integrity-review.yml` job now creates the immutable
+index against its own pinned `builds` checkout, consumes it during per-plugin
+selection, and generates both strict quarantine and compatibility previews.
+The outputs still say `releaseAuthorized: false`. **No update to published
+plugin URLs, manifests, source lists or CloudStream installers is made by this
+workflow.** A rollback is not deployed until a separate release gate confirms
+runtime install behavior and grants publication permissions.
