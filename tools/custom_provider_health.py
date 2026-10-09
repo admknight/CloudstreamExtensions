@@ -159,7 +159,7 @@ def render_markdown(results, generated_at):
     for row in results:
         state = row["state"]
         http = row["httpStatus"] if row["httpStatus"] is not None else "—"
-        detail = row["error"] or row.get("finalUrl") or row["url"]
+        detail = row.get("error") or row.get("finalUrl") or row["url"]
         detail = str(detail).replace("|", "\\|")
         url = row["url"].replace("|", "\\|")
         drift_note = (row.get("configuredHost", "") + " → " + row.get("finalHost", "")) if row.get("hostChanged") else "—"
