@@ -11,6 +11,9 @@ on:
       - 'tools/sync_integrity_issues.py'
       - 'tools/audit_package_integrity.py'
       - 'tests/test_verify_candidate_integrity.py'
+      - 'tests/test_integrity_recovery.py'
+      - '.github/workflows/post-recovery-audit.yml'
+      - '.github/workflows/audit-package-integrity.yml'
       - 'tests/test_audit_package_integrity.py'
       - 'trusted_binary_approvals.json'
   workflow_dispatch:
@@ -31,9 +34,14 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_audit_package_integrity.py' -v
           python3 -m unittest discover -s tests -p 'test_verify_candidate_integrity.py' -v
+          python3 -m unittest discover -s tests -p 'test_integrity_recovery.py' -v
       - name: Python syntax checks
         run: |
           python3 -m py_compile tools/audit_package_integrity.py tools/verify_candidate_integrity.py tools/plan_integrity_recovery.py tools/sync_integrity_issues.py
+      - name: Parse GitHub Actions YAML definitions
+        run: |
+          ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "YAML parse completed"'
+
       - name: Validate reviewed approvals schema
         run: |
           python3 - <<'PY'
