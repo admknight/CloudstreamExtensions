@@ -3176,10 +3176,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghive.vip&sz=%size%",
-    "fileHash": "sha256-26a4809b5dc58b23f1d36bedc951a7a3523d7f005272ab9dfa4763d16ff06902",
+    "fileHash": "sha256-836fa09519a8ac309688481b7baac6e539038393b29b2edb8268a52b002d9f3a",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 22912,
+    "fileSize": 25108,
     "status": 1,
     "language": "id",
     "authors": [
@@ -3189,9 +3189,9 @@
       "Anime",
       "AnimeMovie"
     ],
-    "version": 3,
+    "version": 4,
     "internalName": "Donghub",
-    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3",
     "name": "[Asian] Donghub"
   },
   {
@@ -3615,7 +3615,7 @@
     "iconUrl": "https://github.com/Shakzz890/ShakzzCutie/raw/refs/heads/master/Extractors/icon.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 39206,
+    "fileSize": 39894,
     "status": 1,
     "authors": [
       "Adam Knight (Maintainer)"
@@ -3629,8 +3629,9 @@
     "version": 67,
     "internalName": "Extractors",
     "description": "Must Install(For other extensions to work properly)",
-    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
-    "name": "[Movies] Extractors"
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/Extractors.cs3",
+    "name": "[Movies] Extractors",
+    "fileHash": "sha256-b6c73e188efa1d49796b7beec71e1ab3cadda8f308c987dbe23e9e183efb4abd"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Faselhd.cs3",
@@ -4164,7 +4165,7 @@
     "iconUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/masters/GDIndex/icon.ico",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 15937,
+    "fileSize": 17206,
     "status": 1,
     "language": "en",
     "authors": [
@@ -4176,8 +4177,9 @@
     ],
     "version": 4,
     "internalName": "GDIndex",
-    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
-    "name": "[Movies] GDIndex"
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3",
+    "name": "[Movies] GDIndex",
+    "fileHash": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3",
@@ -7234,8 +7236,10 @@
     "version": 6,
     "internalName": "OnlineMoviesHinditProvider",
     "description": "Use VPN",
-    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
-    "name": "[Indian] OnlineMoviesHinditProvider"
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/OnlineMoviesHinditProvider.cs3",
+    "name": "[Indian] OnlineMoviesHinditProvider",
+    "fileSize": 12001,
+    "fileHash": "sha256-5f8a774e0cd991f885642ce72459d856c6ca122d6298fe337a2fea816b08f93e"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/OnlineSerieTV.cs3",
@@ -8386,7 +8390,7 @@
     "iconUrl": "https://i.ibb.co.com/bMKwcDtH/sarangfilm.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 29763,
+    "fileSize": 28666,
     "status": 1,
     "language": "id",
     "authors": [
@@ -8399,8 +8403,9 @@
     "version": 1,
     "internalName": "Sarangfilm",
     "description": "📺 Streaming Movie and TV Series",
-    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
-    "name": "[Asian] Sarangfilm"
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
+    "name": "[Asian] Sarangfilm",
+    "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7"
   },
   {
     "iconUrl": "https://i.ibb.co.com/HptN2Q7m/savefilm.png",
@@ -9008,7 +9013,7 @@
     "name": "[Indian] StreamFlixProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3",
     "status": 1,
     "version": 62,
     "name": "[Indian] StreamHubOne",
@@ -9126,7 +9131,7 @@
     "iconUrl": "https://www.stremio.com/website/favicon.ico",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 109635,
+    "fileSize": 131077,
     "status": 1,
     "authors": [
       "Adam Knight (Maintainer)"
@@ -9139,8 +9144,9 @@
     "version": 7,
     "internalName": "StremioProvider",
     "description": "Addon use Streamio",
-    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
-    "name": "[Tools] StremioProvider"
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/StremioProvider.cs3",
+    "name": "[Tools] StremioProvider",
+    "fileHash": "sha256-5d7c4d6f65b974f82d2edf454b3343d309b1dc04b627cb9e519beff66799d7a7"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StremioX.cs3",
@@ -10381,7 +10387,7 @@
     "iconUrl": "https://www.google.com/s2/favicons?domain=uncutmaza.cc&sz=%size%",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 313377,
+    "fileSize": 312346,
     "status": 1,
     "authors": [
       "Adam Knight (Maintainer)"
@@ -10394,8 +10400,9 @@
     "version": 35,
     "internalName": "ViStreamProvider",
     "description": "Download FullHD, 2K, 4K from torrent and cloud driver",
-    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
-    "name": "[Movies] ViStreamProvider"
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/ViStreamProvider.cs3",
+    "name": "[Movies] ViStreamProvider",
+    "fileHash": "sha256-2f83a4ffacc087efe993e2719d9e6e2f187bc6289b1ffd3e3e35f6928ed8337a"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Viu.cs3",
@@ -10915,7 +10922,7 @@
     "iconUrl": "https://play-lh.googleusercontent.com/gMB8Eq9g9Uq6CXiOHcqatXpx-6HTexAzcQibTgpqAE756Fnt1Jyyp0j7S3UDKPztkA=w480-h960-rw",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 28540,
+    "fileSize": 29257,
     "status": 1,
     "authors": [
       "Adam Knight (Maintainer)"
@@ -10926,8 +10933,9 @@
     "version": 1,
     "internalName": "XtreamIPTVProvider",
     "description": "Cần nhập link Xtream IPTV, tài khoản và mật khẩu để xem",
-    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
-    "name": "[Live] XtreamIPTVProvider"
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/XtreamIPTVProvider.cs3",
+    "name": "[Live] XtreamIPTVProvider",
+    "fileHash": "sha256-3d30e8f45432043394c399339556fe206c7a563d6cc2caf07160a606dec24782"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Xvideos.cs3",

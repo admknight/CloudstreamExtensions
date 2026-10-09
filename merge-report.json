@@ -1,16 +1,30 @@
 {
-  "generatedAt": "2026-10-09 19:12:33 UTC",
+  "generatedAt": "2026-10-09 20:44:01 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY - GUARDED, 8 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "releaseAuthorized": false,
   "previewPolicy": "compatibility",
   "previewOfCandidateStatus": "READY",
   "sourceHealth": {
-    "ok": 35,
+    "ok": 36,
     "failed": 0
   },
   "sourceStatus": [
+    {
+      "id": "local-pinned-recovery",
+      "name": "MegaRepo Verified Immutable Recovery",
+      "repo": "https://github.com/admknight/CloudstreamExtensions",
+      "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
+      "priority": 0,
+      "ok": true,
+      "rawCount": 8,
+      "includedCount": 8,
+      "packageFailed": 0,
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
+    },
     {
       "id": "phisher",
       "name": "Phisher Repo",
@@ -117,11 +131,11 @@
       "priority": 25,
       "ok": true,
       "rawCount": 18,
-      "includedCount": 16,
+      "includedCount": 15,
       "packageFailed": 0,
-      "duplicateSkipped": 2,
-      "integrityExceptions": 1,
-      "deferredUnverified": 1
+      "duplicateSkipped": 3,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "rearabi",
@@ -173,11 +187,11 @@
       "priority": 25,
       "ok": true,
       "rawCount": 18,
-      "includedCount": 14,
+      "includedCount": 13,
       "packageFailed": 0,
-      "duplicateSkipped": 4,
-      "integrityExceptions": 1,
-      "deferredUnverified": 1
+      "duplicateSkipped": 5,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "storm-redblacker8",
@@ -200,11 +214,11 @@
       "index": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
       "priority": 25,
       "ok": true,
-      "rawCount": 16,
+      "rawCount": 17,
       "includedCount": 12,
       "packageFailed": 0,
       "duplicateSkipped": 4,
-      "integrityExceptions": 0,
+      "integrityExceptions": 2,
       "deferredUnverified": 0
     },
     {
@@ -369,11 +383,11 @@
       "priority": 40,
       "ok": true,
       "rawCount": 13,
-      "includedCount": 2,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
-      "integrityExceptions": 2,
-      "deferredUnverified": 2
+      "duplicateSkipped": 2,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "mega-provider",
@@ -425,11 +439,11 @@
       "priority": 90,
       "ok": true,
       "rawCount": 1,
-      "includedCount": 1,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
-      "integrityExceptions": 1,
-      "deferredUnverified": 1
+      "duplicateSkipped": 1,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "adam-custom",
@@ -495,11 +509,11 @@
       "priority": 100,
       "ok": true,
       "rawCount": 7,
-      "includedCount": 6,
+      "includedCount": 3,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
-      "integrityExceptions": 3,
-      "deferredUnverified": 3
+      "duplicateSkipped": 3,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     }
   ],
   "categoryCounts": {
@@ -518,20 +532,20 @@
   "previousPlugins": 543,
   "uniquePlugins": 543,
   "packageHealth": {
-    "reachable": 543,
+    "reachable": 544,
     "failed": 0
   },
   "integrityHealth": {
-    "candidateChecked": 543,
-    "candidateAccepted": 535,
-    "immutableOldRetained": 0,
-    "pinnedPreviousRecovered": 0,
-    "unverifiedPreviousCarried": 8,
+    "candidateChecked": 544,
+    "candidateAccepted": 542,
+    "immutableOldRetained": 1,
+    "pinnedPreviousRecovered": 1,
+    "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 8,
+    "changedOrFailedCandidates": 2,
     "sizeOnlyLegacyCandidateAccepted": 104,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": true
+    "releaseEligibleWithWarnings": false
   },
   "duplicates": [
     {
@@ -615,6 +629,22 @@
       "reason": "lower version"
     },
     {
+      "plugin": "Donghub",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Nonton Indo",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Extractors",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 67,
+      "skippedSource": "Shakzz Recovery Builds",
+      "skippedVersion": 67,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "FootReplays",
       "selectedSource": "Redowan CloudStream",
       "selectedVersion": 6,
@@ -628,6 +658,14 @@
       "selectedVersion": 2,
       "skippedSource": "CXXX",
       "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "GDIndex",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Shakzz Recovery Builds",
+      "skippedVersion": 4,
       "reason": "lower source priority"
     },
     {
@@ -727,6 +765,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "OnlineMoviesHinditProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 6,
+      "skippedSource": "Adam Knight Curated Recovery",
+      "skippedVersion": 6,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Pencurimovie",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 8,
@@ -751,6 +797,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "Sarangfilm",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Sokuja",
       "selectedSource": "Nonton Indo",
       "selectedVersion": 4,
@@ -765,6 +819,14 @@
       "skippedSource": "doGior's Had Enough",
       "skippedVersion": 34,
       "reason": "lower version"
+    },
+    {
+      "plugin": "StremioProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Tamilblasters",
@@ -807,6 +869,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "ViStreamProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 35,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 35,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Xhamster",
       "selectedSource": "Turkish Providers Repository | @KekikAkademi",
       "selectedVersion": 1,
@@ -820,6 +890,14 @@
       "selectedVersion": 2,
       "skippedSource": "CXXX",
       "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "XtreamIPTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 1,
       "reason": "lower source priority"
     },
     {
@@ -913,6 +991,22 @@
       "reason": "lower version"
     },
     {
+      "plugin": "Donghub",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Nonton Indo",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Extractors",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 67,
+      "skippedSource": "Shakzz Recovery Builds",
+      "skippedVersion": 67,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "FootReplays",
       "selectedSource": "Redowan CloudStream",
       "selectedVersion": 6,
@@ -926,6 +1020,14 @@
       "selectedVersion": 2,
       "skippedSource": "CXXX",
       "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "GDIndex",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Shakzz Recovery Builds",
+      "skippedVersion": 4,
       "reason": "lower source priority"
     },
     {
@@ -1025,6 +1127,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "OnlineMoviesHinditProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 6,
+      "skippedSource": "Adam Knight Curated Recovery",
+      "skippedVersion": 6,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Pencurimovie",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 8,
@@ -1049,6 +1159,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "Sarangfilm",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Sokuja",
       "selectedSource": "Nonton Indo",
       "selectedVersion": 4,
@@ -1063,6 +1181,14 @@
       "skippedSource": "doGior's Had Enough",
       "skippedVersion": 34,
       "reason": "lower version"
+    },
+    {
+      "plugin": "StremioProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Tamilblasters",
@@ -1105,6 +1231,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "ViStreamProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 35,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 35,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Xhamster",
       "selectedSource": "Turkish Providers Repository | @KekikAkademi",
       "selectedVersion": 1,
@@ -1121,6 +1255,14 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "XtreamIPTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "YouTube",
       "selectedSource": "doGior's Had Enough",
       "selectedVersion": 15,
@@ -1132,224 +1274,196 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 543,
+    "updated": 9,
+    "unchanged": 534,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "Donghub",
+        "name": "Donghub",
+        "version": 4,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Asian",
+        "fromVersion": 3,
+        "toVersion": 4,
+        "fromSourceId": "nontonindo",
+        "fromSource": "Nonton Indo",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Extractors",
+        "name": "Extractors",
+        "version": 67,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 67,
+        "toVersion": 67,
+        "fromSourceId": "shakzz-recovery",
+        "fromSource": "Shakzz Recovery Builds",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "GDIndex",
+        "name": "GDIndex",
+        "version": 4,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 4,
+        "toVersion": 4,
+        "fromSourceId": "shakzz-recovery",
+        "fromSource": "Shakzz Recovery Builds",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "OnlineMoviesHinditProvider",
+        "name": "OnlineMoviesHinditProvider",
+        "version": 6,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Indian",
+        "fromVersion": 6,
+        "toVersion": 6,
+        "fromSourceId": "manual-recovery",
+        "fromSource": "Adam Knight Curated Recovery",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Sarangfilm",
+        "name": "Sarangfilm",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Asian",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "cloudx",
+        "fromSource": "CloudX-V2",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "StreamHubOne",
+        "name": "StreamHubOne",
+        "version": 62,
+        "sourceId": "desi",
+        "sourceName": "Desi Extensions",
+        "category": "Indian",
+        "fromVersion": 62,
+        "toVersion": 62,
+        "fromSourceId": "desi",
+        "fromSource": "Desi Extensions",
+        "toSourceId": "desi",
+        "toSource": "Desi Extensions"
+      },
+      {
+        "plugin": "StremioProvider",
+        "name": "StremioProvider",
+        "version": 7,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Tools",
+        "fromVersion": 7,
+        "toVersion": 7,
+        "fromSourceId": "tearrs-vietnamese",
+        "fromSource": "Tearrs Vietnamese Extension",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "ViStreamProvider",
+        "name": "ViStreamProvider",
+        "version": 35,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 35,
+        "toVersion": 35,
+        "fromSourceId": "tearrs-vietnamese",
+        "fromSource": "Tearrs Vietnamese Extension",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "XtreamIPTVProvider",
+        "name": "XtreamIPTVProvider",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Live",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "tearrs-vietnamese",
+        "fromSource": "Tearrs Vietnamese Extension",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
-    "added": [],
+    "added": [
+      {
+        "id": "local-pinned-recovery",
+        "name": "MegaRepo Verified Immutable Recovery",
+        "repo": "https://github.com/admknight/CloudstreamExtensions"
+      }
+    ],
     "removed": [],
     "healthChanged": []
   },
   "customProviderChanges": [],
   "removedPlugins": [],
-  "deferredUnverified": [
-    {
-      "plugin": "Donghub",
-      "sourceId": "nontonindo",
-      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    },
-    {
-      "plugin": "Extractors",
-      "sourceId": "shakzz-recovery",
-      "reason": "download verification failed: fileSize",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    },
-    {
-      "plugin": "GDIndex",
-      "sourceId": "shakzz-recovery",
-      "reason": "download verification failed: fileSize",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    },
-    {
-      "plugin": "OnlineMoviesHinditProvider",
-      "sourceId": "manual-recovery",
-      "reason": "no valid declared fileSize; package length is not verified",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    },
-    {
-      "plugin": "Sarangfilm",
-      "sourceId": "cloudx",
-      "reason": "download verification failed: fileSize",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    },
-    {
-      "plugin": "StremioProvider",
-      "sourceId": "tearrs-vietnamese",
-      "reason": "download verification failed: fileSize",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    },
-    {
-      "plugin": "ViStreamProvider",
-      "sourceId": "tearrs-vietnamese",
-      "reason": "download verification failed: fileSize",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    },
-    {
-      "plugin": "XtreamIPTVProvider",
-      "sourceId": "tearrs-vietnamese",
-      "reason": "download verification failed: fileSize",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    }
-  ],
+  "deferredUnverified": [],
   "quarantineIncidents": [
     {
-      "plugin": "donghub",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "nontonindo",
-      "previousSourceId": "nontonindo",
-      "candidateUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
+      "plugin": "netmovie",
+      "disposition": "withheld_new",
+      "candidateSourceId": "desi",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/NetMovie.cs3",
+      "previousUrl": null,
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 25108,
-      "observedActualSHA256": "sha256-836fa09519a8ac309688481b7baac6e539038393b29b2edb8268a52b002d9f3a",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "observedActualSize": 32088,
+      "observedActualSHA256": "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
       "fallbackVerified": false,
       "fallbackPin": null,
       "fallbackThroughRecoveryLock": false
     },
     {
-      "plugin": "extractors",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "shakzz-recovery",
-      "previousSourceId": "shakzz-recovery",
-      "candidateUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
-      "candidateReason": "download verification failed: fileSize",
-      "observedVerification": "mismatch",
-      "observedActualSize": 39894,
-      "observedActualSHA256": "sha256-b6c73e188efa1d49796b7beec71e1ab3cadda8f308c987dbe23e9e183efb4abd",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
-    },
-    {
-      "plugin": "gdindex",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "shakzz-recovery",
-      "previousSourceId": "shakzz-recovery",
-      "candidateUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
-      "candidateReason": "download verification failed: fileSize",
-      "observedVerification": "mismatch",
-      "observedActualSize": 17206,
-      "observedActualSHA256": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
-    },
-    {
-      "plugin": "onlinemovieshinditprovider",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "manual-recovery",
-      "previousSourceId": "manual-recovery",
-      "candidateUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
-      "candidateReason": "no valid declared fileSize; package length is not verified",
-      "observedVerification": "size_only_no_checksum",
-      "observedActualSize": 12001,
-      "observedActualSHA256": "sha256-5f8a774e0cd991f885642ce72459d856c6ca122d6298fe337a2fea816b08f93e",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
-    },
-    {
-      "plugin": "sarangfilm",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "cloudx",
-      "previousSourceId": "cloudx",
-      "candidateUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
-      "candidateReason": "download verification failed: fileSize",
-      "observedVerification": "mismatch",
-      "observedActualSize": 28666,
-      "observedActualSHA256": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
-    },
-    {
-      "plugin": "stremioprovider",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "tearrs-vietnamese",
-      "previousSourceId": "tearrs-vietnamese",
-      "candidateUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
-      "previousUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
-      "candidateReason": "download verification failed: fileSize",
-      "observedVerification": "mismatch",
-      "observedActualSize": 131077,
-      "observedActualSHA256": "sha256-5d7c4d6f65b974f82d2edf454b3343d309b1dc04b627cb9e519beff66799d7a7",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
-    },
-    {
-      "plugin": "vistreamprovider",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "tearrs-vietnamese",
-      "previousSourceId": "tearrs-vietnamese",
-      "candidateUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
-      "previousUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
-      "candidateReason": "download verification failed: fileSize",
-      "observedVerification": "mismatch",
-      "observedActualSize": 312346,
-      "observedActualSHA256": "sha256-2f83a4ffacc087efe993e2719d9e6e2f187bc6289b1ffd3e3e35f6928ed8337a",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
-    },
-    {
-      "plugin": "xtreamiptvprovider",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "tearrs-vietnamese",
-      "previousSourceId": "tearrs-vietnamese",
-      "candidateUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
-      "previousUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
-      "candidateReason": "download verification failed: fileSize",
-      "observedVerification": "mismatch",
-      "observedActualSize": 29257,
-      "observedActualSHA256": "sha256-3d30e8f45432043394c399339556fe206c7a563d6cc2caf07160a606dec24782",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
+      "plugin": "streamhubone",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "desi",
+      "previousSourceId": "desi",
+      "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 1099831,
+      "observedActualSHA256": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3",
+      "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "001314ef624e523dbd6f57a74595281d1646a8240f8f2bd661ab5dca85192f7c",
+  "originalSourceReportDigest": "218ca095d3201f6f2f0aa3238348d71faee390d437281f5f1d42f3beaca409bb",
   "inputSnapshotDigests": {
-    "candidate": "82e671790f9c5e3ba0d8c64dcf1345f7319c78d0d008e857ab948ff93514e0a5",
+    "candidate": "29962d685b36fda9d3dae504566159cea5c4711c72e7504cc27965310aa2b040",
     "previous": "32fabfe20f6425eb913db24ab871b5b5aa2abdd90fec80cef204570c221f21da",
-    "candidateProvenance": "bde814b0888ab5c78b18a2ca37c4278a2130fb661db8f8f502451fdd832de6b6",
+    "candidateProvenance": "708332b74186528b9e66e0eb30df7a419875c3255e9040409962856a58ee67cd",
     "previousProvenance": "8c2f664784d6b1eac524363f0dd4ed2333f83d7f4f09be27c4388c86081f36b3"
   },
   "releaseEligible": true,

@@ -2607,16 +2607,16 @@
     "publishedName": "[Asian] Donghub",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 3,
-    "sourceId": "nontonindo",
-    "sourceName": "Nonton Indo",
-    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
-    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "selectedVersion": 4,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "ExtremeBoy"
     ],
     "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
-    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3"
   },
   {
     "plugin": "Doom",
@@ -2966,15 +2966,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 67,
-    "sourceId": "shakzz-recovery",
-    "sourceName": "Shakzz Recovery Builds",
-    "sourceRepository": "https://github.com/Shakzz890/ShakzzCutie",
-    "sourceIndex": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "megix"
     ],
     "originalRepositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
-    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/Extractors.cs3"
   },
   {
     "plugin": "Faselhd",
@@ -3432,15 +3432,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 4,
-    "sourceId": "shakzz-recovery",
-    "sourceName": "Shakzz Recovery Builds",
-    "sourceRepository": "https://github.com/Shakzz890/ShakzzCutie",
-    "sourceIndex": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Horis"
     ],
     "originalRepositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
-    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3"
   },
   {
     "plugin": "Gnulahd",
@@ -5976,15 +5976,15 @@
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 6,
-    "sourceId": "manual-recovery",
-    "sourceName": "Adam Knight Curated Recovery",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
     "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
-    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/recovery_plugins.json",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "megix"
     ],
     "originalRepositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
-    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/OnlineMoviesHinditProvider.cs3"
   },
   {
     "plugin": "OnlineSerieTV",
@@ -6949,15 +6949,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3"
   },
   {
     "plugin": "Savefilm",
@@ -7468,7 +7468,7 @@
       "Faisal"
     ],
     "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
-    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3"
   },
   {
     "plugin": "StreamingCommunity",
@@ -7547,16 +7547,15 @@
     "category": "Tools",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 7,
-    "sourceId": "tearrs-vietnamese",
-    "sourceName": "Tearrs Vietnamese Extension",
-    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
-      "anhdaden",
-      "hexated"
+      "Adam Knight (Maintainer)"
     ],
-    "originalRepositoryUrl": "https://codeberg.org/frezza147/test",
-    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/StremioProvider.cs3"
   },
   {
     "plugin": "StremioX",
@@ -8587,16 +8586,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 35,
-    "sourceId": "tearrs-vietnamese",
-    "sourceName": "Tearrs Vietnamese Extension",
-    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
-      "anhdaden",
-      "hexated"
+      "Adam Knight (Maintainer)"
     ],
-    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/ViStreamProvider.cs3"
   },
   {
     "plugin": "Viu",
@@ -9032,15 +9030,15 @@
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "tearrs-vietnamese",
-    "sourceName": "Tearrs Vietnamese Extension",
-    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
-      "anhdaden"
+      "Adam Knight (Maintainer)"
     ],
-    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3"
+    "originalRepositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/XtreamIPTVProvider.cs3"
   },
   {
     "plugin": "Xvideos",
