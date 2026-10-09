@@ -113,7 +113,7 @@ def audit_and_prune(apply=False):
     }
     results = []
     for number, name, sha in targets():
-        encoded = quote(name, safe="")
+        encoded = quote(name, safe="/")
         try:
             branch = gh_json(f"repos/{REPO}/branches/{encoded}")
         except RuntimeError as err:
