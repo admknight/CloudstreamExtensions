@@ -82,8 +82,8 @@ def _evidence(finding, run_id):
         + "### Latest candidate-integrity observation (unverified release)\n\n"
         + "Source: [" + str(run_id) + "](https://github.com/" + REPO
         + "/actions/runs/" + str(run_id) + ")\n\n"
-        + "\`\`\`json\n" + data.replace("\`\`\`", "\` \` \`")
-        + "\n\`\`\`\n\n"
+        + "```json\n" + data.replace("```", "` ` `")
+        + "\n```\n\n"
         + "A matching observed checksum is NOT approval of a changed upstream "
           "binary. This record is generated from a read-only full-catalog review; "
           "published metadata and previous plugin entries are unchanged.\n\n"
