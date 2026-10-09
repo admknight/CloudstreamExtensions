@@ -1,0 +1,45 @@
+name: Validate Full Integrity Incident Sync
+
+on:
+  pull_request:
+    paths:
+      - 'tools/sync_candidate_integrity_issues.py'
+      - 'tools/sync_integrity_issues.py'
+      - 'tools/validate_integrity_review_origin.py'
+      - 'tests/test_sync_candidate_integrity_issues.py'
+      - '.github/workflows/sync-full-integrity-incidents.yml'
+      - '.github/workflows/test-full-integrity-incident-sync.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline original issue and new candidate-sync regression tests
+        run: |
+          python3 -m unittest discover -s tests -p test_integrity_recovery.py -v
+          python3 -m unittest discover -s tests -p test_sync_candidate_integrity_issues.py -v
+          python3 -m py_compile tools/sync_candidate_integrity_issues.py tools/sync_integrity_issues.py tools/validate_integrity_review_origin.py
+      - name: Verify workflow definitions and read/write boundaries
+        run: |
+          ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |f| YAML.load_file(f) }; puts "Workflow YAML parsed."'
+          python3 - <<'PY'
+          from pathlib import Path
+          full=Path('.github/workflows/full-integrity-review.yml').read_text()
+          sync=Path('.github/workflows/sync-full-integrity-incidents.yml').read_text()
+          assert 'contents: read' in full
+          assert ('contents:'+' write') not in full
+          assert 'issues: write' in sync and 'actions: read' in sync
+          assert 'contents: read' in sync
+          assert ('contents:'+' write') not in sync
+          assert ('gh '+'workflow run') not in sync
+          assert ('git'+' push') not in sync
+          print('Only issue mutation in the trusted issue-sync job is allowed.')
+          PY
