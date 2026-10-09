@@ -103,7 +103,28 @@ class IncidentTests(unittest.TestCase):
             return any(x[2]=="close" for x in calls)
         self.assertFalse(check("rotation", 91))
         self.assertFalse(check("all", 1))
-        self.assertTrue(check("all", 543))
+        self.assertFalse(check("all", 543))  # Closure requires separate per-plugin verification
+
+    def test_full_pass_preserves_candidate_only_issue(self):
+        candidate = {
+            "number": 49,
+            "title": "[Integrity] megarepo-integrity:unpublished-provider-123",
+            "body": MARKER + "\nUnpublished candidate still requires release verification",
+            "state": "OPEN",
+        }
+        calls = []
+        def runner(args):
+            calls.append(args)
+            return json.dumps([candidate]) if args[2] == "list" else ""
+        report = {
+            "pass": True, "publishedCount": 543,
+            "scan": {"mode": "all", "checked": 543},
+            "metadataDrift": [], "packageProblems": [], "sourceErrors": []
+        }
+        changes = sync(report, runner)
+        self.assertEqual(changes, [])
+        self.assertEqual(len(calls), 1)
+        self.assertFalse(any("close" in args for args in calls))
 
     def test_issue_data_never_becomes_shell_script(self):
         report = failed()
