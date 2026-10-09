@@ -4,6 +4,12 @@ All notable project-level changes to **Adam Knight Mega Repo** are documented he
 
 The live CloudStream catalog updates continuously from configured upstream repositories. This changelog focuses on repository architecture, automation, custom providers, and stable milestones rather than every upstream plugin version change.
 
+## Companion tools since v1.0.0
+
+- The independent [Personal Bundles](https://github.com/admknight/cloudstream-personal-bundles) Cloudflare Worker creates selected-only CloudStream repository URLs using published MegaRepo metadata without modifying the full catalog.
+- The website and README now distinguish the full catalog, selected-only Personal Repository Builder, and discovery-only Extension Explorer.
+- The separate Builder maintains its own versioning and release history; this entry does not change the main MegaRepo v1.0.0 milestone or its catalog manifest.
+
 ## [1.0.0] - 2026-10-06
 
 ### First stable release
