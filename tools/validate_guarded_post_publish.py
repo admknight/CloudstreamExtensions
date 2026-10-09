@@ -63,6 +63,10 @@ def validate_post_publish(audit, report, plugins, provenance):
                 unexpected.append({"plugin": key, "category": field})
     if unexpected:
         raise ValueError("Unexpected integrity anomalies: " + json.dumps(unexpected[:30]))
+    if audit.get("pass") is True and known:
+        raise ValueError("Full audit claimed success despite recorded mismatches")
+    if audit.get("pass") is not True and not known:
+        raise ValueError("Full audit failed with no attributable known deferred exceptions")
     return {
         "result": "GUARDED_PUBLICATION_VERIFIED_WITH_KNOWN_OPEN_EXCEPTIONS"
                   if allowed else "GUARDED_PUBLICATION_VERIFIED_NO_DEFERRED_EXCEPTIONS",
