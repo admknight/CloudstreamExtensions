@@ -8,6 +8,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit
 
 MAIN_URL_RE = re.compile(r'override\s+var\s+mainUrl\s*=\s*"([^"]+)"')
 USER_AGENT = "Mozilla/5.0 (CloudstreamExtensions health check; +https://github.com/admknight/CloudstreamExtensions)"
@@ -26,6 +27,43 @@ def discover(root: Path):
             "url": match.group(1).strip(),
         })
     return rows
+
+def navigation_details(original, final):
+    """Describe observed redirects without changing the configured site URL."""
+    try:
+        old = urlsplit(original or "")
+        new = urlsplit(final or "")
+        old_host = (old.hostname or "").lower()
+        new_host = (new.hostname or "").lower()
+        if not old_host or not new_host:
+            return {"redirected": False, "hostChanged": False,
+                    "configuredHost": old_host, "finalHost": new_host}
+        return {
+            "redirected": original.rstrip("/") != final.rstrip("/"),
+            "hostChanged": old_host != new_host,
+            "configuredHost": old_host,
+            "finalHost": new_host,
+        }
+    except ValueError:
+        return {"redirected": False, "hostChanged": False,
+                "configuredHost": "", "finalHost": ""}
+
+
+def classify_network_error(exc):
+    reason = getattr(exc, "reason", exc)
+    if isinstance(reason, socket.gaierror):
+        return "dns_error"
+    if isinstance(reason, (socket.timeout, TimeoutError)):
+        return "timeout"
+    message = str(reason).lower()
+    if any(mark in message for mark in
+           ("name or service not known", "nodename nor servname",
+            "getaddrinfo failed", "temporary failure in name resolution")):
+        return "dns_error"
+    if "timed out" in message or "timeout" in message:
+        return "timeout"
+    return "network_error"
+
 
 def check(item, timeout, attempts=3):
     result = dict(item)
@@ -49,7 +87,9 @@ def check(item, timeout, attempts=3):
                     "finalUrl": response.geturl(),
                     "error": "",
                     "attempts": attempt,
+                    "outcome": "ok" if 200 <= status < 400 else "http_error",
                 })
+                result.update(navigation_details(item["url"], result["finalUrl"]))
                 return result
         except HTTPError as exc:
             state = "restricted" if exc.code in (401, 403, 429) else "fail"
@@ -59,7 +99,9 @@ def check(item, timeout, attempts=3):
                 "finalUrl": exc.geturl() or item["url"],
                 "error": f"HTTP {exc.code}: {exc.reason}",
                 "attempts": attempt,
+                "outcome": "http_restricted" if state == "restricted" else "http_error",
             })
+            result.update(navigation_details(item["url"], result["finalUrl"]))
             if state == "restricted" or exc.code in (404, 410):
                 return result
             last_error = result["error"]
@@ -71,7 +113,9 @@ def check(item, timeout, attempts=3):
                 "finalUrl": item["url"],
                 "error": last_error,
                 "attempts": attempt,
+                "outcome": classify_network_error(exc),
             })
+            result.update(navigation_details(item["url"], result["finalUrl"]))
         except Exception as exc:
             last_error = f"{type(exc).__name__}: {exc}"
             result.update({
@@ -80,7 +124,9 @@ def check(item, timeout, attempts=3):
                 "finalUrl": item["url"],
                 "error": last_error,
                 "attempts": attempt,
+                "outcome": "unexpected_error",
             })
+            result.update(navigation_details(item["url"], result["finalUrl"]))
 
         if attempt < attempts:
             time.sleep(attempt * 2)
@@ -93,26 +139,32 @@ def render_markdown(results, generated_at):
     ok = sum(1 for x in results if x["state"] == "ok")
     restricted = sum(1 for x in results if x["state"] == "restricted")
     failed = sum(1 for x in results if x["state"] == "fail")
+    drift = sum(bool(x.get("hostChanged")) for x in results)
+    redirected = sum(bool(x.get("redirected")) for x in results)
+    dns = sum(x.get("outcome") == "dns_error" for x in results)
+    timeouts = sum(x.get("outcome") == "timeout" for x in results)
     lines = [
         "# Custom Provider Runtime Health",
         "",
         f"Generated: **{generated_at}**",
         "",
         f"Providers checked: **{len(results)}** · Healthy: **{ok}** · Restricted/anti-bot response: **{restricted}** · Failed: **{failed}**",
+        f"Observed redirects: **{redirected}** · Hostname changes: **{drift}** · DNS failures: **{dns}** · Timeouts: **{timeouts}**",
         "",
         "> This is an advisory website-availability check only. It does not modify production and does not prove playback works.",
         "",
-        "| Provider | State | HTTP | Attempts | Configured URL | Final URL / Error |",
-        "| --- | --- | ---: | ---: | --- | --- |",
+        "| Provider | State | Outcome | HTTP | Host drift | Configured URL | Final URL / Error |",
+        "| --- | --- | --- | ---: | --- | --- | --- |",
     ]
     for row in results:
         state = row["state"]
         http = row["httpStatus"] if row["httpStatus"] is not None else "—"
-        detail = row["error"] or row.get("finalUrl") or row["url"]
+        detail = row.get("error") or row.get("finalUrl") or row["url"]
         detail = str(detail).replace("|", "\\|")
         url = row["url"].replace("|", "\\|")
+        drift_note = (row.get("configuredHost", "") + " → " + row.get("finalHost", "")) if row.get("hostChanged") else "—"
         lines.append(
-            f"| {row['module']} | {icon.get(state, '❔')} {state} | {http} | {row.get('attempts', 1)} | {url} | {detail} |"
+            f"| {row['module']} | {icon.get(state, '❔')} {state} | {row.get('outcome', 'unknown')} | {http} | {drift_note} | {url} | {detail} |"
         )
     lines += [
         "",
@@ -121,6 +173,8 @@ def render_markdown(results, generated_at):
         "- **ok**: the configured provider URL returned a normal 2xx/3xx HTTP response.",
         "- **restricted**: the site responded with 401/403/429; it is reachable but may be blocking automated requests.",
         "- **fail**: the URL returned another error, timed out, or could not be reached.",
+        "- **host drift**: a request ended on a different hostname. This is advisory, not an automatically approved new base URL.",
+        "- **outcome**: HTTP restrictions, HTTP errors, DNS failures, network failures and timeouts are distinguished.",
         "",
     ]
     return "\n".join(lines)
@@ -154,6 +208,11 @@ def compact_provider(row):
         "finalUrl": row.get("finalUrl"),
         "attempts": row.get("attempts"),
         "error": row.get("error") or "",
+        "outcome": row.get("outcome") or "unknown",
+        "redirected": bool(row.get("redirected")),
+        "hostChanged": bool(row.get("hostChanged")),
+        "configuredHost": row.get("configuredHost") or "",
+        "finalHost": row.get("finalHost") or "",
     }
 
 def make_snapshot(payload):
@@ -172,15 +231,27 @@ def build_window(snapshots, now, days):
             selected.append(snap)
 
     provider_stats = {}
-    total = {"checks": 0, "ok": 0, "restricted": 0, "failed": 0}
+    total = {"checks": 0, "ok": 0, "restricted": 0, "failed": 0,
+             "redirected": 0, "hostChanged": 0, "dnsErrors": 0, "timeouts": 0}
     for snap in selected:
         for row in snap.get("providers", []):
             module = row.get("module") or "Unknown"
             stats = provider_stats.setdefault(
                 module,
-                {"checks": 0, "ok": 0, "restricted": 0, "failed": 0},
+                {"checks": 0, "ok": 0, "restricted": 0, "failed": 0,
+                 "redirected": 0, "hostChanged": 0, "dnsErrors": 0, "timeouts": 0},
             )
             state = row.get("state")
+            navigation = navigation_details(row.get("configuredUrl") or row.get("url"), row.get("finalUrl"))
+            for name, active in (
+                ("redirected", bool(row.get("redirected", navigation["redirected"]))),
+                ("hostChanged", bool(row.get("hostChanged", navigation["hostChanged"]))),
+                ("dnsErrors", row.get("outcome") == "dns_error"),
+                ("timeouts", row.get("outcome") == "timeout"),
+            ):
+                if active:
+                    stats[name] += 1
+                    total[name] += 1
             stats["checks"] += 1
             total["checks"] += 1
             if state == "ok":
@@ -228,6 +299,8 @@ def build_trends(snapshots, now):
             "ok": summary.get("ok", 0),
             "restricted": summary.get("restricted", 0),
             "failed": summary.get("failed", 0),
+            "hostChanged": summary.get("hostChanged", 0),
+            "redirected": summary.get("redirected", 0),
         })
     return {
         "generatedAt": now.strftime(TIME_FORMAT),
@@ -264,6 +337,10 @@ def main():
             "ok": sum(1 for x in results if x["state"] == "ok"),
             "restricted": sum(1 for x in results if x["state"] == "restricted"),
             "failed": sum(1 for x in results if x["state"] == "fail"),
+            "redirected": sum(bool(x.get("redirected")) for x in results),
+            "hostChanged": sum(bool(x.get("hostChanged")) for x in results),
+            "dnsErrors": sum(x.get("outcome") == "dns_error" for x in results),
+            "timeouts": sum(x.get("outcome") == "timeout" for x in results),
         },
         "providers": results,
     }
