@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08 07:48:26 UTC",
+  "generatedAt": "2026-10-09 07:45:10 UTC",
   "providerCount": 6,
   "summary": {
     "ok": 5,
@@ -23,7 +23,7 @@
       "url": "https://cinemalux.baby",
       "state": "ok",
       "httpStatus": 200,
-      "finalUrl": "https://cinemalux.baby",
+      "finalUrl": "https://cinemalux.beauty/",
       "error": "",
       "attempts": 1
     },
@@ -53,7 +53,7 @@
       "url": "https://go3.india4movies.net",
       "state": "ok",
       "httpStatus": 200,
-      "finalUrl": "https://go5.india4movies.net/",
+      "finalUrl": "https://go6.india4movies.net/",
       "error": "",
       "attempts": 1
     },
