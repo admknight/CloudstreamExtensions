@@ -13,6 +13,8 @@ on:
       - 'tools/reconcile_integrity_review.py'
       - 'tools/verified_immutable_fallback.py'
       - 'tools/index_immutable_recovery.py'
+      - 'tools/check_local_recovery_readiness.py'
+      - 'tests/test_check_local_recovery_readiness.py'
       - 'trusted_binary_approvals.json'
   pull_request:
     paths:
@@ -25,6 +27,8 @@ on:
       - 'tools/verify_candidate_integrity.py'
       - 'tests/test_verify_candidate_integrity.py'
       - 'tests/test_immutable_fallback_selection.py'
+      - 'tools/check_local_recovery_readiness.py'
+      - 'tests/test_check_local_recovery_readiness.py'
       - 'trusted_binary_approvals.json'
   workflow_dispatch:
 
@@ -50,7 +54,8 @@ jobs:
           python3 -m unittest discover -s tests -p test_per_plugin_selection.py -v
           python3 -m unittest discover -s tests -p test_reconcile_integrity_review.py -v
           python3 -m unittest discover -s tests -p test_immutable_fallback_selection.py -v
-          python3 -m py_compile tools/verify_candidate_integrity.py tools/plan_per_plugin_selection.py tools/reconcile_integrity_review.py tools/verified_immutable_fallback.py
+          python3 -m unittest discover -s tests -p test_check_local_recovery_readiness.py -v
+          python3 -m py_compile tools/verify_candidate_integrity.py tools/plan_per_plugin_selection.py tools/reconcile_integrity_review.py tools/verified_immutable_fallback.py tools/check_local_recovery_readiness.py
       - name: Parse workflow YAML
         run: |
           ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "Workflow YAML parsed."'
@@ -111,6 +116,29 @@ jobs:
             --recovery-index pinned-recovery-evidence.json \
             --output-dir review-preview \
             --workers 8
+      - name: Record local recovery readiness without approving any binary
+        run: |
+          set -euo pipefail
+          python3 source/tools/check_local_recovery_readiness.py \
+            --verification review-preview/verification-report.json \
+            --selection review-preview/integrity-selection.json \
+            --approvals source/trusted_binary_approvals.json \
+            --output review-preview/local-recovery-readiness.json
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          summary=json.loads(Path('review-preview/local-recovery-readiness.json').read_text())
+          selection=json.loads(Path('review-preview/integrity-selection.json').read_text())
+          assert summary['mode']=='READ_ONLY_LOCAL_RECOVERY_READINESS'
+          assert summary['releaseAuthorized'] is False
+          assert summary['blockedCandidateCount']==selection['blockedCandidateCount']
+          assert all(item['safeToPublishCandidate'] is False for item in summary['incidents'])
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write('### Local recovery readiness (advisory only)\n\n')
+              out.write(f"- Blocked candidate packages: **{summary['blockedCandidateCount']}**\n")
+              out.write(f"- Without matching review records: **{summary['withoutMatchingReviewCount']}**\n")
+              out.write('- No binary approval, source override, or production publication performed.\n')
+          PY
       - name: Rebuild all derived catalog metadata in both preview policies
         run: |
           set -euo pipefail
@@ -221,6 +249,7 @@ jobs:
           path: |
             review-preview/integrity-selection.json
             review-preview/verification-report.json
+            review-preview/local-recovery-readiness.json
             review-preview/preview.plugins.json
             review-preview/preview.provenance.json
             candidate/merge-report.json
