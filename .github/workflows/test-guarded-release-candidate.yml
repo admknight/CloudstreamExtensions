@@ -1,0 +1,146 @@
+name: Validate Guarded Publication Candidate (No Writes)
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/test-guarded-release-candidate.yml'
+      - 'tools/finalize_guarded_release.py'
+      - 'tests/test_finalize_guarded_release.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run guarded publication reconciliation regressions
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests -p 'test_finalize_guarded_release.py' -v
+          python3 -m py_compile tools/finalize_guarded_release.py
+      - name: YAML and read-only workflow check
+        run: |
+          ruby -e 'require "yaml"; YAML.load_file(".github/workflows/test-guarded-release-candidate.yml")'
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('.github/workflows/test-guarded-release-candidate.yml').read_text()
+          assert "permissions:\n  contents: read" in s
+          assert ('contents:'+' write') not in s
+          assert ('git'+' push') not in s
+          print('Guarded publication candidate CI has no repository write access.')
+          PY
+
+  live-candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 38
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: published
+          persist-credentials: false
+      - name: Generate independent candidate
+        run: |
+          set -euo pipefail
+          python3 source/tools/merge_upstreams.py source/merged \
+            --previous published/plugins.json \
+            --previous-report published/merge-report.json \
+            --previous-provenance published/provenance.json
+      - name: Recover previous immutable byte fingerprints
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 source/tools/index_immutable_recovery.py \
+            --published published/plugins.json \
+            --provenance published/provenance.json \
+            --output immutable-recovery.json \
+            --max-history 16 \
+            --workers 6
+      - name: Create trusted per-plugin selection
+        run: |
+          set -euo pipefail
+          python3 source/tools/plan_per_plugin_selection.py \
+            --candidate source/merged/plugins.json \
+            --previous published/plugins.json \
+            --candidate-provenance source/merged/provenance.json \
+            --previous-provenance published/provenance.json \
+            --approvals source/trusted_binary_approvals.json \
+            --recovery-index immutable-recovery.json \
+            --output-dir integrity-selection \
+            --workers 8
+      - name: Finalize consistent guarded catalog (review only)
+        run: |
+          set -euo pipefail
+          python3 source/tools/finalize_guarded_release.py \
+            --candidate-dir source/merged \
+            --previous-dir published \
+            --selection-dir integrity-selection \
+            --output-dir release-candidate \
+            --max-deferred 24
+      - name: Assert real 543-entry release candidates remain complete
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          read=lambda p:json.loads(Path(p).read_text())
+          previous=read("published/plugins.json")
+          current=read("release-candidate/plugins.json")
+          sources=read("release-candidate/provenance.json")
+          report=read("release-candidate/merge-report.json")
+          diff=read("release-candidate/release-diff.json")
+          evidence=read("release-candidate/guarded-release-assurance.json")
+          selection=read("integrity-selection/integrity-selection.json")
+          pin=read("immutable-recovery.json")
+          key=lambda p:str(p.get("internalName") or p.get("name") or "").casefold()
+          oldkeys={key(p) for p in previous}
+          nowkeys={key(p) for p in current}
+          assert oldkeys<=nowkeys
+          assert len(current)==len(nowkeys)==len(sources)
+          assert len(current)==report["uniquePlugins"]==diff["catalog"]["plugins"]
+          assert report["changes"]["removed"]==0
+          assert sum(report["changes"].values())==len(current)
+          assert sum(x["includedCount"] for x in report["sourceStatus"])==len(current)
+          assert sum(report["categoryCounts"].values())==len(current)
+          assert report["sourceHealth"]["failed"]==0
+          assert report["releaseEligible"] is True
+          assert evidence["releaseEligible"] is True
+          assert evidence["actualPublicationPerformed"] is False
+          assert report["integrityHealth"]["unverifiedPreviousCarried"]<=24
+          assert report["integrityHealth"]["changedOrFailedCandidates"]==selection["blockedCandidateCount"]
+          assert pin["immutableMatches"]+pin["unmatchedCount"]==len(previous)
+          assert report["integrityHealth"]["pinnedPreviousRecovered"]==selection["selection"]["retainedThroughRecoveryLock"]
+          assert read("release-candidate/repo.json")==read("published/repo.json")
+          assert "## Integrity status" in Path("release-candidate/README.md").read_text()
+          print(f"Old identities preserved: {len(oldkeys)} / {len(nowkeys)}")
+          print(f"Deferred upstream changes: {evidence['deferredUnverifiedCount']}")
+          print(f"Safe historical binary pins: {evidence['immutableRecoveredCount']}")
+          print("Production has NOT been modified.")
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a") as out:
+              out.write("## Guarded candidate (not published)\n\n")
+              out.write(f"- Existing plugin identities retained: **{len(oldkeys)}**\n")
+              out.write(f"- Selected catalog entries: **{len(current)}**\n")
+              out.write(f"- Deferred unsafe upgrades: **{evidence['deferredUnverifiedCount']}**\n")
+              out.write(f"- Identical old-byte pinned URL fallbacks: **{evidence['immutableRecoveredCount']}**\n")
+              out.write("- **Zero publication or repository changes were performed.**\n")
+          PY
+      - name: Preserve complete reviewed candidate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guarded-publication-evidence-${{ github.run_id }}
+          path: |
+            release-candidate/
+            integrity-selection/integrity-selection.json
+            integrity-selection/verification-report.json
+            immutable-recovery.json
+          if-no-files-found: warn
+          retention-days: 21
