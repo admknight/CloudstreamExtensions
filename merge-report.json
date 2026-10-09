@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09 22:12:49 UTC",
+  "generatedAt": "2026-10-09 22:19:13 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
@@ -18,8 +18,8 @@
       "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
       "priority": 0,
       "ok": true,
-      "rawCount": 24,
-      "includedCount": 24,
+      "rawCount": 103,
+      "includedCount": 103,
       "packageFailed": 0,
       "duplicateSkipped": 1,
       "integrityExceptions": 0,
@@ -117,9 +117,9 @@
       "priority": 30,
       "ok": true,
       "rawCount": 16,
-      "includedCount": 14,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 14,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -243,9 +243,9 @@
       "priority": 25,
       "ok": true,
       "rawCount": 21,
-      "includedCount": 21,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 21,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -327,9 +327,9 @@
       "priority": 20,
       "ok": true,
       "rawCount": 43,
-      "includedCount": 42,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 1,
+      "duplicateSkipped": 43,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -369,9 +369,9 @@
       "priority": 40,
       "ok": true,
       "rawCount": 46,
-      "includedCount": 2,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 2,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -521,10 +521,9 @@
     "Arabic": 36,
     "Adult": 74,
     "Movies": 135,
-    "Other": 20,
+    "Other": 41,
     "Anime": 66,
     "Asian": 50,
-    "Games": 21,
     "Live": 47,
     "Sports": 2,
     "Tools": 12
@@ -543,7 +542,7 @@
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
     "changedOrFailedCandidates": 1,
-    "sizeOnlyLegacyCandidateAccepted": 95,
+    "sizeOnlyLegacyCandidateAccepted": 16,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
   },
@@ -573,12 +572,28 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AnimeciX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 21,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 21,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Animedubhindi",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 9,
       "skippedSource": "Desi Extensions",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeHayProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 11,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 11,
+      "reason": "lower source priority"
     },
     {
       "plugin": "AnimeTH",
@@ -595,6 +610,14 @@
       "skippedSource": "DieGon Repository",
       "skippedVersion": 17,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeVietsubProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
     },
     {
       "plugin": "AnimeWorld",
@@ -629,12 +652,28 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AriaOfSorrow",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Arte",
       "selectedSource": "DieGon Repository",
       "selectedVersion": 5,
       "skippedSource": "doGior's Had Enough",
       "skippedVersion": 4,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AvatarAirbender",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
     },
     {
       "plugin": "BanglaPlex",
@@ -645,11 +684,27 @@
       "reason": "lower version"
     },
     {
+      "plugin": "BelgeselX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "BingedReview",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 3,
       "skippedSource": "Cinephile",
       "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "BluPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 16,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 16,
       "reason": "lower source priority"
     },
     {
@@ -661,11 +716,115 @@
       "reason": "lower version"
     },
     {
+      "plugin": "CanliTV",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Castlevania",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "CizgiMax",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Contra",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Ddizi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DesertStrike",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziBox",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 23,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 23,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziKorea",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 29,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 29,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Dizilla",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 39,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 39,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziMom",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 35,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 35,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziPal",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 32,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 32,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziYou",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 23,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 23,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Donghub",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 4,
       "skippedSource": "Nonton Indo",
       "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Doom",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
       "reason": "lower source priority"
     },
     {
@@ -677,11 +836,51 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "DramaFull",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "StreamPlay Recovery Builds",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Extractors",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 67,
       "skippedSource": "Shakzz Recovery Builds",
       "skippedVersion": 67,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FilmBip",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 11,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 11,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FilmMakinesi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 40,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 40,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FilmModu",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 15,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 15,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FlappyBird",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 8,
       "reason": "lower source priority"
     },
     {
@@ -693,11 +892,43 @@
       "reason": "lower version"
     },
     {
+      "plugin": "FullHDFilm",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 35,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 35,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FullHDFilmizlesene",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 27,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 27,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "FullPorner",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FullPorner",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 2,
       "skippedSource": "CXXX",
       "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Game2048",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
       "reason": "lower source priority"
     },
     {
@@ -725,8 +956,48 @@
       "reason": "lower version"
     },
     {
+      "plugin": "HdAbla",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "HDFilmCehennemi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 23,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 23,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "HHkungfuProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 5,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 5,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "HHPandaProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Hqporner",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Hqporner",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 4,
       "skippedSource": "CXXX",
       "skippedVersion": 3,
@@ -739,6 +1010,22 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "IfsaLog",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "InatBox",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 24,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 24,
+      "reason": "lower source priority"
     },
     {
       "plugin": "IndianTVProvider",
@@ -757,11 +1044,51 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "JackieChan",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "JetFilmizle",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 41,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 41,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "JustPlay",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 12,
       "skippedSource": "raghav repo",
       "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Kalite18",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "KKPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "KoreanTurk",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 7,
       "reason": "lower source priority"
     },
     {
@@ -771,6 +1098,14 @@
       "skippedSource": "Re-3arabi",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "KultFilmler",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Latanime",
@@ -789,11 +1124,43 @@
       "reason": "lower version"
     },
     {
+      "plugin": "LittleMermaid",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "MedalOfHonor",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "MegaProvider",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 2,
       "skippedSource": "Mega Repository",
       "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "MetalSlugAdvance",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "MinishCap",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
       "reason": "lower source priority"
     },
     {
@@ -845,11 +1212,43 @@
       "reason": "lower version"
     },
     {
+      "plugin": "NetflixMirror",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 32,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 32,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "NetflixMirrorProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 44,
+      "skippedSource": "StreamPlay Recovery Builds",
+      "skippedVersion": 44,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "NetMovie",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 1,
       "skippedSource": "Desi Extensions",
       "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "OHiTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "OnePiece",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 16,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 16,
       "reason": "lower source priority"
     },
     {
@@ -861,12 +1260,68 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "OPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Pencurimovie",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 8,
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "PhimLongTiengProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PhimMoiProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 9,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 9,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PhimTuoiThoProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 5,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 5,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Pokemon",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PornoAnne",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PrinceOfPersia",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
     },
     {
       "plugin": "RareFilmm",
@@ -885,11 +1340,51 @@
       "reason": "lower version"
     },
     {
+      "plugin": "RecTV",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 97,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 97,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Sarangfilm",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 1,
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SeriousSam",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SetFilmIzle",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 24,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 24,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SezonlukDizi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 6,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 6,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SinemaCX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 18,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 18,
       "reason": "lower source priority"
     },
     {
@@ -933,12 +1428,36 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "SuperFilmGeldi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 22,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 22,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SuperMario",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Tamilblasters",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 12,
       "skippedSource": "Cinephile",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "TekkenAdvance",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
     },
     {
       "plugin": "TheMoviesFlix",
@@ -949,12 +1468,52 @@
       "reason": "lower version"
     },
     {
+      "plugin": "TLCtr",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 19,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 19,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "TombRaider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "TorrentsV1",
       "selectedSource": "raghav repo",
       "selectedVersion": 23,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 22,
       "reason": "lower version"
+    },
+    {
+      "plugin": "TRanimaci",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 17,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 17,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "TRasyalog",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 52,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 52,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "TurkAnime",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
     },
     {
       "plugin": "TV",
@@ -973,6 +1532,22 @@
       "reason": "lower version"
     },
     {
+      "plugin": "TvPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 11,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 11,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "UgurFilm",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 13,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 13,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "UltimaBeta",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 7,
@@ -989,6 +1564,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "VipPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 9,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 9,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "ViStreamProvider",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 35,
@@ -997,8 +1580,32 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "Watch2Movies",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 5,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 5,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "WebteIzle",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 15,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 15,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Xhamster",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Xhamster",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 1,
       "skippedSource": "CXXX",
       "skippedVersion": 1,
@@ -1006,7 +1613,15 @@
     },
     {
       "plugin": "XNXX",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "XNXX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 2,
       "skippedSource": "CXXX",
       "skippedVersion": 2,
@@ -1021,12 +1636,28 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "YanHH3DProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 16,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 16,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "YouTube",
       "selectedSource": "doGior's Had Enough",
       "selectedVersion": 15,
       "skippedSource": "Re-3arabi",
       "skippedVersion": 2,
       "reason": "lower version"
+    },
+    {
+      "plugin": "Zelda",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
     }
   ],
   "candidateDuplicateDecisions": [
@@ -1055,12 +1686,28 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AnimeciX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 21,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 21,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Animedubhindi",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 9,
       "skippedSource": "Desi Extensions",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeHayProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 11,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 11,
+      "reason": "lower source priority"
     },
     {
       "plugin": "AnimeTH",
@@ -1077,6 +1724,14 @@
       "skippedSource": "DieGon Repository",
       "skippedVersion": 17,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeVietsubProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
     },
     {
       "plugin": "AnimeWorld",
@@ -1111,12 +1766,28 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AriaOfSorrow",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Arte",
       "selectedSource": "DieGon Repository",
       "selectedVersion": 5,
       "skippedSource": "doGior's Had Enough",
       "skippedVersion": 4,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AvatarAirbender",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
     },
     {
       "plugin": "BanglaPlex",
@@ -1127,11 +1798,27 @@
       "reason": "lower version"
     },
     {
+      "plugin": "BelgeselX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "BingedReview",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 3,
       "skippedSource": "Cinephile",
       "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "BluPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 16,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 16,
       "reason": "lower source priority"
     },
     {
@@ -1143,11 +1830,115 @@
       "reason": "lower version"
     },
     {
+      "plugin": "CanliTV",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Castlevania",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "CizgiMax",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Contra",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Ddizi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DesertStrike",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziBox",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 23,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 23,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziKorea",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 29,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 29,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Dizilla",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 39,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 39,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziMom",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 35,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 35,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziPal",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 32,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 32,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DiziYou",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 23,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 23,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Donghub",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 4,
       "skippedSource": "Nonton Indo",
       "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Doom",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
       "reason": "lower source priority"
     },
     {
@@ -1159,11 +1950,51 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "DramaFull",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "StreamPlay Recovery Builds",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Extractors",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 67,
       "skippedSource": "Shakzz Recovery Builds",
       "skippedVersion": 67,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FilmBip",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 11,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 11,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FilmMakinesi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 40,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 40,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FilmModu",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 15,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 15,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FlappyBird",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 8,
       "reason": "lower source priority"
     },
     {
@@ -1175,11 +2006,43 @@
       "reason": "lower version"
     },
     {
+      "plugin": "FullHDFilm",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 35,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 35,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FullHDFilmizlesene",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 27,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 27,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "FullPorner",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "FullPorner",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 2,
       "skippedSource": "CXXX",
       "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Game2048",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
       "reason": "lower source priority"
     },
     {
@@ -1207,8 +2070,48 @@
       "reason": "lower version"
     },
     {
+      "plugin": "HdAbla",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "HDFilmCehennemi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 23,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 23,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "HHkungfuProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 5,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 5,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "HHPandaProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Hqporner",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Hqporner",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 4,
       "skippedSource": "CXXX",
       "skippedVersion": 3,
@@ -1221,6 +2124,22 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "IfsaLog",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "InatBox",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 24,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 24,
+      "reason": "lower source priority"
     },
     {
       "plugin": "IndianTVProvider",
@@ -1239,11 +2158,51 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "JackieChan",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "JetFilmizle",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 41,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 41,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "JustPlay",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 12,
       "skippedSource": "raghav repo",
       "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Kalite18",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "KKPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "KoreanTurk",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 7,
       "reason": "lower source priority"
     },
     {
@@ -1253,6 +2212,14 @@
       "skippedSource": "Re-3arabi",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "KultFilmler",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Latanime",
@@ -1271,11 +2238,43 @@
       "reason": "lower version"
     },
     {
+      "plugin": "LittleMermaid",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "MedalOfHonor",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "MegaProvider",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 2,
       "skippedSource": "Mega Repository",
       "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "MetalSlugAdvance",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "MinishCap",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
       "reason": "lower source priority"
     },
     {
@@ -1327,11 +2326,43 @@
       "reason": "lower version"
     },
     {
+      "plugin": "NetflixMirror",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 32,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 32,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "NetflixMirrorProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 44,
+      "skippedSource": "StreamPlay Recovery Builds",
+      "skippedVersion": 44,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "NetMovie",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 1,
       "skippedSource": "Desi Extensions",
       "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "OHiTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "OnePiece",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 16,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 16,
       "reason": "lower source priority"
     },
     {
@@ -1343,12 +2374,68 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "OPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Pencurimovie",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 8,
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "PhimLongTiengProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PhimMoiProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 9,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 9,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PhimTuoiThoProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 5,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 5,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Pokemon",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PornoAnne",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "PrinceOfPersia",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 10,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 10,
+      "reason": "lower source priority"
     },
     {
       "plugin": "RareFilmm",
@@ -1367,11 +2454,51 @@
       "reason": "lower version"
     },
     {
+      "plugin": "RecTV",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 97,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 97,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Sarangfilm",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 1,
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SeriousSam",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 4,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SetFilmIzle",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 24,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 24,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SezonlukDizi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 6,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 6,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SinemaCX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 18,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 18,
       "reason": "lower source priority"
     },
     {
@@ -1415,12 +2542,36 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "SuperFilmGeldi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 22,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 22,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "SuperMario",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Tamilblasters",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 12,
       "skippedSource": "Cinephile",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "TekkenAdvance",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
     },
     {
       "plugin": "TheMoviesFlix",
@@ -1431,12 +2582,52 @@
       "reason": "lower version"
     },
     {
+      "plugin": "TLCtr",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 19,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 19,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "TombRaider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "TorrentsV1",
       "selectedSource": "raghav repo",
       "selectedVersion": 23,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 22,
       "reason": "lower version"
+    },
+    {
+      "plugin": "TRanimaci",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 17,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 17,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "TRasyalog",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 52,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 52,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "TurkAnime",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 14,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 14,
+      "reason": "lower source priority"
     },
     {
       "plugin": "TV",
@@ -1455,6 +2646,22 @@
       "reason": "lower version"
     },
     {
+      "plugin": "TvPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 11,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 11,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "UgurFilm",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 13,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 13,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "UltimaBeta",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 7,
@@ -1471,6 +2678,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "VipPhimProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 9,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 9,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "ViStreamProvider",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 35,
@@ -1479,8 +2694,32 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "Watch2Movies",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 5,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 5,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "WebteIzle",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 15,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 15,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Xhamster",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Xhamster",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 1,
       "skippedSource": "CXXX",
       "skippedVersion": 1,
@@ -1488,7 +2727,15 @@
     },
     {
       "plugin": "XNXX",
-      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "XNXX",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 2,
       "skippedSource": "CXXX",
       "skippedVersion": 2,
@@ -1503,19 +2750,35 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "YanHH3DProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 16,
+      "skippedSource": "Vietnamese CloudStream Index",
+      "skippedVersion": 16,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "YouTube",
       "selectedSource": "doGior's Had Enough",
       "selectedVersion": 15,
       "skippedSource": "Re-3arabi",
       "skippedVersion": 2,
       "reason": "lower version"
+    },
+    {
+      "plugin": "Zelda",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Ayu CloudStream Games",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
     }
   ],
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 9,
-    "unchanged": 538,
+    "updated": 79,
+    "unchanged": 468,
     "removed": 0
   },
   "changeDetails": {
@@ -1523,128 +2786,1108 @@
     "recovered": [],
     "updated": [
       {
-        "plugin": "AltadefinizioneProvider",
-        "name": "AltadefinizioneProvider",
-        "version": 1,
+        "plugin": "AnimeciX",
+        "name": "AnimeciX",
+        "version": 21,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 1,
-        "toVersion": 1,
-        "fromSourceId": "gian-fr",
-        "fromSource": "Gian-Fr Italian Provider",
+        "category": "Anime",
+        "fromVersion": 21,
+        "toVersion": 21,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       },
       {
-        "plugin": "AniyomiProvider",
-        "name": "AniyomiProvider",
+        "plugin": "AnimeHayProvider",
+        "name": "AnimeHayProvider",
+        "version": 11,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime",
+        "fromVersion": 11,
+        "toVersion": 11,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "AnimeVietsubProvider",
+        "name": "AnimeVietsubProvider",
+        "version": 14,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime",
+        "fromVersion": 14,
+        "toVersion": 14,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "AriaOfSorrow",
+        "name": "AriaOfSorrow",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "AvatarAirbender",
+        "name": "AvatarAirbender",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "BelgeselX",
+        "name": "BelgeselX",
+        "version": 12,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 12,
+        "toVersion": 12,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "BluPhimProvider",
+        "name": "BluPhimProvider",
+        "version": 16,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 16,
+        "toVersion": 16,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "CanliTV",
+        "name": "CanliTV",
+        "version": 10,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Live",
+        "fromVersion": 10,
+        "toVersion": 10,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Castlevania",
+        "name": "Castlevania",
         "version": 8,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
         "category": "Other",
         "fromVersion": 8,
         "toVersion": 8,
-        "fromSourceId": "aniyomi-compat",
-        "fromSource": "Aniyomi Compat",
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       },
       {
-        "plugin": "BingedReview",
-        "name": "BingedReview",
-        "version": 3,
+        "plugin": "CizgiMax",
+        "name": "CizgiMax",
+        "version": 8,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
         "category": "Movies",
-        "fromVersion": 3,
-        "toVersion": 3,
-        "fromSourceId": "cinephile",
-        "fromSource": "Cinephile",
+        "fromVersion": 8,
+        "toVersion": 8,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       },
       {
-        "plugin": "DramaDrip",
-        "name": "DramaDrip",
-        "version": 3,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 3,
-        "toVersion": 3,
-        "fromSourceId": "kim-recovery",
-        "fromSource": "Kim Recovery Builds",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "GuardaSerieProvider",
-        "name": "GuardaSerieProvider",
-        "version": 1,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 1,
-        "toVersion": 1,
-        "fromSourceId": "gian-fr",
-        "fromSource": "Gian-Fr Italian Provider",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "IndianTVProvider",
-        "name": "IndianTVProvider",
-        "version": 6,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Live",
-        "fromVersion": 6,
-        "toVersion": 6,
-        "fromSourceId": "kim-recovery",
-        "fromSource": "Kim Recovery Builds",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "MegaProvider",
-        "name": "MegaProvider",
-        "version": 2,
+        "plugin": "Contra",
+        "name": "Contra",
+        "version": 10,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
         "category": "Other",
-        "fromVersion": 2,
-        "toVersion": 2,
-        "fromSourceId": "mega-provider",
-        "fromSource": "Mega Repository",
+        "fromVersion": 10,
+        "toVersion": 10,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       },
       {
-        "plugin": "SkymoviesHD",
-        "name": "SkymoviesHD",
+        "plugin": "Ddizi",
+        "name": "Ddizi",
+        "version": 10,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 10,
+        "toVersion": 10,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DesertStrike",
+        "name": "DesertStrike",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DiziBox",
+        "name": "DiziBox",
+        "version": 23,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 23,
+        "toVersion": 23,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DiziKorea",
+        "name": "DiziKorea",
+        "version": 29,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Asian",
+        "fromVersion": 29,
+        "toVersion": 29,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Dizilla",
+        "name": "Dizilla",
+        "version": 39,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 39,
+        "toVersion": 39,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DiziMom",
+        "name": "DiziMom",
+        "version": 35,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 35,
+        "toVersion": 35,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DiziPal",
+        "name": "DiziPal",
+        "version": 32,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 32,
+        "toVersion": 32,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DiziYou",
+        "name": "DiziYou",
+        "version": 23,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 23,
+        "toVersion": 23,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Doom",
+        "name": "Doom",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DramaFull",
+        "name": "DramaFull",
         "version": 1,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
         "category": "Movies",
         "fromVersion": 1,
         "toVersion": 1,
-        "fromSourceId": "cinephile",
-        "fromSource": "Cinephile",
+        "fromSourceId": "nuyuls-recovery",
+        "fromSource": "StreamPlay Recovery Builds",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       },
       {
-        "plugin": "UltimaBeta",
-        "name": "UltimaBeta",
+        "plugin": "FilmBip",
+        "name": "FilmBip",
+        "version": 11,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 11,
+        "toVersion": 11,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "FilmMakinesi",
+        "name": "FilmMakinesi",
+        "version": 40,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 40,
+        "toVersion": 40,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "FilmModu",
+        "name": "FilmModu",
+        "version": 15,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 15,
+        "toVersion": 15,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "FlappyBird",
+        "name": "FlappyBird",
+        "version": 8,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 8,
+        "toVersion": 8,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "FullHDFilm",
+        "name": "FullHDFilm",
+        "version": 35,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 35,
+        "toVersion": 35,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "FullHDFilmizlesene",
+        "name": "FullHDFilmizlesene",
+        "version": 27,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 27,
+        "toVersion": 27,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "FullPorner",
+        "name": "FullPorner",
+        "version": 2,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Adult",
+        "fromVersion": 2,
+        "toVersion": 2,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Game2048",
+        "name": "Game2048",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "HdAbla",
+        "name": "HdAbla",
+        "version": 2,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Adult",
+        "fromVersion": 2,
+        "toVersion": 2,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "HDFilmCehennemi",
+        "name": "HDFilmCehennemi",
+        "version": 23,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 23,
+        "toVersion": 23,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "HHkungfuProvider",
+        "name": "HHkungfuProvider",
+        "version": 5,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime",
+        "fromVersion": 5,
+        "toVersion": 5,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "HHPandaProvider",
+        "name": "HHPandaProvider",
+        "version": 12,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime",
+        "fromVersion": 12,
+        "toVersion": 12,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Hqporner",
+        "name": "Hqporner",
+        "version": 4,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Adult",
+        "fromVersion": 4,
+        "toVersion": 4,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "IfsaLog",
+        "name": "IfsaLog",
+        "version": 3,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 3,
+        "toVersion": 3,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "InatBox",
+        "name": "InatBox",
+        "version": 24,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Live",
+        "fromVersion": 24,
+        "toVersion": 24,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "JackieChan",
+        "name": "JackieChan",
+        "version": 4,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 4,
+        "toVersion": 4,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "JetFilmizle",
+        "name": "JetFilmizle",
+        "version": 41,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 41,
+        "toVersion": 41,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Kalite18",
+        "name": "Kalite18",
+        "version": 2,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Adult",
+        "fromVersion": 2,
+        "toVersion": 2,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "KKPhimProvider",
+        "name": "KKPhimProvider",
+        "version": 10,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 10,
+        "toVersion": 10,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "KoreanTurk",
+        "name": "KoreanTurk",
+        "version": 7,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Asian",
+        "fromVersion": 7,
+        "toVersion": 7,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "KultFilmler",
+        "name": "KultFilmler",
+        "version": 14,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 14,
+        "toVersion": 14,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "LittleMermaid",
+        "name": "LittleMermaid",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "MedalOfHonor",
+        "name": "MedalOfHonor",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "MetalSlugAdvance",
+        "name": "MetalSlugAdvance",
         "version": 7,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
         "category": "Other",
         "fromVersion": 7,
         "toVersion": 7,
-        "fromSourceId": "kim-recovery",
-        "fromSource": "Kim Recovery Builds",
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "MinishCap",
+        "name": "MinishCap",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "NetflixMirror",
+        "name": "NetflixMirror",
+        "version": 32,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Indian",
+        "fromVersion": 32,
+        "toVersion": 32,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "NetflixMirrorProvider",
+        "name": "NetflixMirrorProvider",
+        "version": 44,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 44,
+        "toVersion": 44,
+        "fromSourceId": "nuyuls-recovery",
+        "fromSource": "StreamPlay Recovery Builds",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "OHiTVProvider",
+        "name": "OHiTVProvider",
+        "version": 2,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 2,
+        "toVersion": 2,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "OnePiece",
+        "name": "OnePiece",
+        "version": 16,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 16,
+        "toVersion": 16,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "OPhimProvider",
+        "name": "OPhimProvider",
+        "version": 10,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 10,
+        "toVersion": 10,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "PhimLongTiengProvider",
+        "name": "PhimLongTiengProvider",
+        "version": 12,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 12,
+        "toVersion": 12,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "PhimMoiProvider",
+        "name": "PhimMoiProvider",
+        "version": 9,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 9,
+        "toVersion": 9,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "PhimTuoiThoProvider",
+        "name": "PhimTuoiThoProvider",
+        "version": 5,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 5,
+        "toVersion": 5,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Pokemon",
+        "name": "Pokemon",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "PornoAnne",
+        "name": "PornoAnne",
+        "version": 3,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Adult",
+        "fromVersion": 3,
+        "toVersion": 3,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "PrinceOfPersia",
+        "name": "PrinceOfPersia",
+        "version": 10,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 10,
+        "toVersion": 10,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "RecTV",
+        "name": "RecTV",
+        "version": 97,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Live",
+        "fromVersion": 97,
+        "toVersion": 97,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "SeriousSam",
+        "name": "SeriousSam",
+        "version": 4,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 4,
+        "toVersion": 4,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "SetFilmIzle",
+        "name": "SetFilmIzle",
+        "version": 24,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 24,
+        "toVersion": 24,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "SezonlukDizi",
+        "name": "SezonlukDizi",
+        "version": 6,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 6,
+        "toVersion": 6,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "SinemaCX",
+        "name": "SinemaCX",
+        "version": 18,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 18,
+        "toVersion": 18,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "SuperFilmGeldi",
+        "name": "SuperFilmGeldi",
+        "version": 22,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 22,
+        "toVersion": 22,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "SuperMario",
+        "name": "SuperMario",
+        "version": 14,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 14,
+        "toVersion": 14,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TekkenAdvance",
+        "name": "TekkenAdvance",
+        "version": 7,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 7,
+        "toVersion": 7,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TLCtr",
+        "name": "TLCtr",
+        "version": 19,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 19,
+        "toVersion": 19,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TombRaider",
+        "name": "TombRaider",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TRanimaci",
+        "name": "TRanimaci",
+        "version": 17,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime",
+        "fromVersion": 17,
+        "toVersion": 17,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TRasyalog",
+        "name": "TRasyalog",
+        "version": 52,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 52,
+        "toVersion": 52,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TurkAnime",
+        "name": "TurkAnime",
+        "version": 14,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime",
+        "fromVersion": 14,
+        "toVersion": 14,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TvPhimProvider",
+        "name": "TvPhimProvider",
+        "version": 11,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 11,
+        "toVersion": 11,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "UgurFilm",
+        "name": "UgurFilm",
+        "version": 13,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 13,
+        "toVersion": 13,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "VipPhimProvider",
+        "name": "VipPhimProvider",
+        "version": 9,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 9,
+        "toVersion": 9,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Watch2Movies",
+        "name": "Watch2Movies",
+        "version": 5,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 5,
+        "toVersion": 5,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "WebteIzle",
+        "name": "WebteIzle",
+        "version": 15,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 15,
+        "toVersion": 15,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Xhamster",
+        "name": "Xhamster",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Adult",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "XNXX",
+        "name": "XNXX",
+        "version": 2,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Adult",
+        "fromVersion": 2,
+        "toVersion": 2,
+        "fromSourceId": "kekik",
+        "fromSource": "Turkish Providers Repository | @KekikAkademi",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "YanHH3DProvider",
+        "name": "YanHH3DProvider",
+        "version": 16,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime",
+        "fromVersion": 16,
+        "toVersion": 16,
+        "fromSourceId": "vietnam",
+        "fromSource": "Vietnamese CloudStream Index",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "Zelda",
+        "name": "Zelda",
+        "version": 8,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 8,
+        "toVersion": 8,
+        "fromSourceId": "ayu-games",
+        "fromSource": "Ayu CloudStream Games",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       }
@@ -1677,12 +3920,12 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "f5d3c5f8b45bbf4d9649e04ae4bb7d84a29113a0fb8b9804d1cb55911cdcd1ac",
+  "originalSourceReportDigest": "f3185679cb9a2fe8360e612de3b89b03796f08e8f34b35825e150c8a6a682600",
   "inputSnapshotDigests": {
-    "candidate": "740a0e06ea2d8f06b9864e81824c98ac0685d88b71dfde489b7b534390ce4e5c",
-    "previous": "12f7fb50e0f8388e9ff0c31bbc33a99ce63762325afb5dad57b840e8cc43ee70",
-    "candidateProvenance": "dca49b50c524358ee59b0e3b9121d731bf19932d73ea475b2e0902b17fa16a51",
-    "previousProvenance": "66565161e6f0be0e39ace5d0d505b31c487ce65f69352a47cca45141719cf9d4"
+    "candidate": "f6c2338dbf4ce96c864378c86b073d48f9780514d74462b253b67b147cb42f06",
+    "previous": "a39b9feda134ee24c9dd21d9d05acf9ff76bafba771659377bf8f03264edc707",
+    "candidateProvenance": "1766672ee91ca9776917107e3eda2768a3d2f489ae6c67975e8556c3830f1eb9",
+    "previousProvenance": "72a29758ce074473e0098f7d7263a03bb9f3e6036c8237195b70dd8608eac9b3"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

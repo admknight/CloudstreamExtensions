@@ -502,17 +502,17 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 21,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun",
       "inatchii",
       "JustRelaxable"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/AnimeciX.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/AnimeciX.cs3"
   },
   {
     "plugin": "AnimeCloud",
@@ -589,15 +589,15 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 11,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/AnimeHayProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/AnimeHayProvider.cs3"
   },
   {
     "plugin": "AnimeIdHentai",
@@ -896,15 +896,15 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 14,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/AnimeVietsubProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/AnimeVietsubProvider.cs3"
   },
   {
     "plugin": "AnimeVilla",
@@ -1233,19 +1233,19 @@
   {
     "plugin": "AriaOfSorrow",
     "originalName": "AriaOfSorrow",
-    "publishedName": "[Games] AriaOfSorrow",
-    "category": "Games",
+    "publishedName": "[Other] AriaOfSorrow",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/AriaOfSorrow.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/AriaOfSorrow.cs3"
   },
   {
     "plugin": "Arte",
@@ -1284,19 +1284,19 @@
   {
     "plugin": "AvatarAirbender",
     "originalName": "AvatarAirbender",
-    "publishedName": "[Games] AvatarAirbender",
-    "category": "Games",
+    "publishedName": "[Other] AvatarAirbender",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/AvatarAirbender.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/AvatarAirbender.cs3"
   },
   {
     "plugin": "BambooUAProvider",
@@ -1492,16 +1492,16 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 12,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun",
       "JustRelaxable"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/BelgeselX.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/BelgeselX.cs3"
   },
   {
     "plugin": "BilibiliProvider",
@@ -1561,15 +1561,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 16,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/BluPhimProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/BluPhimProvider.cs3"
   },
   {
     "plugin": "Bollyflix",
@@ -1663,16 +1663,16 @@
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 10,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Adippe",
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/CanliTV.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/CanliTV.cs3"
   },
   {
     "plugin": "CastleTvProvider",
@@ -1694,19 +1694,19 @@
   {
     "plugin": "Castlevania",
     "originalName": "Castlevania",
-    "publishedName": "[Games] Castlevania",
-    "category": "Games",
+    "publishedName": "[Other] Castlevania",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 8,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Castlevania.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Castlevania.cs3"
   },
   {
     "plugin": "CatalogoGeneral",
@@ -2091,15 +2091,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 8,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/CizgiMax.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/CizgiMax.cs3"
   },
   {
     "plugin": "CNC Verse",
@@ -2190,19 +2190,19 @@
   {
     "plugin": "Contra",
     "originalName": "Contra",
-    "publishedName": "[Games] Contra",
-    "category": "Games",
+    "publishedName": "[Other] Contra",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 10,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Contra.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Contra.cs3"
   },
   {
     "plugin": "CornHubProvider",
@@ -2317,15 +2317,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 10,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Ddizi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Ddizi.cs3"
   },
   {
     "plugin": "DeporTVProvider",
@@ -2347,19 +2347,19 @@
   {
     "plugin": "DesertStrike",
     "originalName": "DesertStrike",
-    "publishedName": "[Games] DesertStrike",
-    "category": "Games",
+    "publishedName": "[Other] DesertStrike",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/DesertStrike.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/DesertStrike.cs3"
   },
   {
     "plugin": "Desicinemas",
@@ -2471,15 +2471,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 23,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziBox.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziBox.cs3"
   },
   {
     "plugin": "DiziKorea",
@@ -2488,15 +2488,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 29,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziKorea.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziKorea.cs3"
   },
   {
     "plugin": "Dizilla",
@@ -2505,15 +2505,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 39,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Dizilla.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Dizilla.cs3"
   },
   {
     "plugin": "DiziMom",
@@ -2522,15 +2522,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 35,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziMom.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziMom.cs3"
   },
   {
     "plugin": "DiziPal",
@@ -2539,16 +2539,16 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 32,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun",
       "muratcesmecioglu"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziPal.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziPal.cs3"
   },
   {
     "plugin": "DiziYou",
@@ -2557,15 +2557,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 23,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/DiziYou.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziYou.cs3"
   },
   {
     "plugin": "DocumaniaTVProvider",
@@ -2655,19 +2655,19 @@
   {
     "plugin": "Doom",
     "originalName": "Doom",
-    "publishedName": "[Games] Doom",
-    "category": "Games",
+    "publishedName": "[Other] Doom",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Doom.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Doom.cs3"
   },
   {
     "plugin": "DoraBash",
@@ -2778,15 +2778,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "nuyuls-recovery",
-    "sourceName": "StreamPlay Recovery Builds",
-    "sourceRepository": "https://github.com/nuyuls79/StreamPlay-movie",
-    "sourceIndex": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/nuyuls79/StreamPlay-movie",
-    "packageUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/DramaFull.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/e065fad55d0acf955036102dddec92162c56f6ed/DramaFull.cs3"
   },
   {
     "plugin": "Dubbindo",
@@ -3068,15 +3068,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 11,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmBip.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FilmBip.cs3"
   },
   {
     "plugin": "FilmFly",
@@ -3136,16 +3136,16 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 40,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun",
       "usdogu"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmMakinesi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FilmMakinesi.cs3"
   },
   {
     "plugin": "FilmModu",
@@ -3154,15 +3154,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 15,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FilmModu.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FilmModu.cs3"
   },
   {
     "plugin": "Fivemovierulz",
@@ -3185,19 +3185,19 @@
   {
     "plugin": "FlappyBird",
     "originalName": "FlappyBird",
-    "publishedName": "[Games] FlappyBird",
-    "category": "Games",
+    "publishedName": "[Other] FlappyBird",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 8,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/FlappyBird.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/FlappyBird.cs3"
   },
   {
     "plugin": "Flixlatam",
@@ -3326,15 +3326,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 35,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullHDFilm.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FullHDFilm.cs3"
   },
   {
     "plugin": "FullHDFilmizlesene",
@@ -3343,15 +3343,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 27,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullHDFilmizlesene.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FullHDFilmizlesene.cs3"
   },
   {
     "plugin": "FullPorner",
@@ -3360,15 +3360,15 @@
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 2,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Coxju, megix"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/FullPorner.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FullPorner.cs3"
   },
   {
     "plugin": "FullRaces",
@@ -3445,19 +3445,19 @@
   {
     "plugin": "Game2048",
     "originalName": "Game2048",
-    "publishedName": "[Games] Game2048",
-    "category": "Games",
+    "publishedName": "[Other] Game2048",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Game2048.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Game2048.cs3"
   },
   {
     "plugin": "GDIndex",
@@ -3673,15 +3673,15 @@
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 2,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "kerimmkirac"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/HdAbla.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/HdAbla.cs3"
   },
   {
     "plugin": "HDFilmCehennemi",
@@ -3690,16 +3690,16 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 23,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "hexated",
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/HDFilmCehennemi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/HDFilmCehennemi.cs3"
   },
   {
     "plugin": "HDFullProvider",
@@ -3861,15 +3861,15 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 5,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/HHkungfuProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/HHkungfuProvider.cs3"
   },
   {
     "plugin": "HHPandaProvider",
@@ -3878,15 +3878,15 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 12,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/HHPandaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/HHPandaProvider.cs3"
   },
   {
     "plugin": "HiAnime",
@@ -3929,15 +3929,15 @@
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 4,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Phishe"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Hqporner.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Hqporner.cs3"
   },
   {
     "plugin": "HStream",
@@ -4014,15 +4014,15 @@
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 3,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "kraptor"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/IfsaLog.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/IfsaLog.cs3"
   },
   {
     "plugin": "IlCorsaroViola",
@@ -4048,16 +4048,16 @@
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 24,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "JustRelaxable",
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/InatBox.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/InatBox.cs3"
   },
   {
     "plugin": "IncestFlix",
@@ -4301,19 +4301,19 @@
   {
     "plugin": "JackieChan",
     "originalName": "JackieChan",
-    "publishedName": "[Games] JackieChan",
-    "category": "Games",
+    "publishedName": "[Other] JackieChan",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 4,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/JackieChan.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/JackieChan.cs3"
   },
   {
     "plugin": "JavFreeProvider",
@@ -4459,15 +4459,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 41,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/JetFilmizle.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/JetFilmizle.cs3"
   },
   {
     "plugin": "JKAnimeProvider",
@@ -4527,15 +4527,15 @@
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 2,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "kerimmkirac"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Kalite18.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Kalite18.cs3"
   },
   {
     "plugin": "Kartoons",
@@ -4699,15 +4699,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 10,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/KKPhimProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/KKPhimProvider.cs3"
   },
   {
     "plugin": "KlikXXi",
@@ -4767,15 +4767,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 7,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/KoreanTurk.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/KoreanTurk.cs3"
   },
   {
     "plugin": "Krmzy",
@@ -4818,15 +4818,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 14,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/KultFilmler.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/KultFilmler.cs3"
   },
   {
     "plugin": "Kuramanime",
@@ -5021,19 +5021,19 @@
   {
     "plugin": "LittleMermaid",
     "originalName": "LittleMermaid",
-    "publishedName": "[Games] LittleMermaid",
-    "category": "Games",
+    "publishedName": "[Other] LittleMermaid",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/LittleMermaid.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/LittleMermaid.cs3"
   },
   {
     "plugin": "LIVETVProvider",
@@ -5174,19 +5174,19 @@
   {
     "plugin": "MedalOfHonor",
     "originalName": "MedalOfHonor",
-    "publishedName": "[Games] MedalOfHonor",
-    "category": "Games",
+    "publishedName": "[Other] MedalOfHonor",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/MedalOfHonor.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/MedalOfHonor.cs3"
   },
   {
     "plugin": "Megakino",
@@ -5223,19 +5223,19 @@
   {
     "plugin": "MetalSlugAdvance",
     "originalName": "MetalSlugAdvance",
-    "publishedName": "[Games] MetalSlugAdvance",
-    "category": "Games",
+    "publishedName": "[Other] MetalSlugAdvance",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 7,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/MetalSlugAdvance.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/MetalSlugAdvance.cs3"
   },
   {
     "plugin": "Microtv",
@@ -5274,19 +5274,19 @@
   {
     "plugin": "MinishCap",
     "originalName": "MinishCap",
-    "publishedName": "[Games] MinishCap",
-    "category": "Games",
+    "publishedName": "[Other] MinishCap",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/MinishCap.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/MinishCap.cs3"
   },
   {
     "plugin": "Miruro",
@@ -5737,16 +5737,16 @@
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 32,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Horis, megix",
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/NetflixMirror.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/NetflixMirror.cs3"
   },
   {
     "plugin": "NetflixMirrorProvider",
@@ -5755,15 +5755,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 44,
-    "sourceId": "nuyuls-recovery",
-    "sourceName": "StreamPlay Recovery Builds",
-    "sourceRepository": "https://github.com/nuyuls79/StreamPlay-movie",
-    "sourceIndex": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "megix"
     ],
     "originalRepositoryUrl": "https://github.com/nuyuls79/StreamPlay-movie",
-    "packageUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/NetflixMirrorProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/e065fad55d0acf955036102dddec92162c56f6ed/NetflixMirrorProvider.cs3"
   },
   {
     "plugin": "Netmirror",
@@ -5942,15 +5942,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 2,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/OHiTVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/OHiTVProvider.cs3"
   },
   {
     "plugin": "OHLI24",
@@ -6006,19 +6006,19 @@
   {
     "plugin": "OnePiece",
     "originalName": "OnePiece",
-    "publishedName": "[Games] OnePiece",
-    "category": "Games",
+    "publishedName": "[Other] OnePiece",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 16,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/OnePiece.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/OnePiece.cs3"
   },
   {
     "plugin": "OneTouchTV",
@@ -6112,15 +6112,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 10,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/OPhimProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/OPhimProvider.cs3"
   },
   {
     "plugin": "OpJav",
@@ -6350,15 +6350,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 12,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimLongTiengProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/PhimLongTiengProvider.cs3"
   },
   {
     "plugin": "PhimMoiProvider",
@@ -6367,15 +6367,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 9,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimMoiProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/PhimMoiProvider.cs3"
   },
   {
     "plugin": "PhimTuoiThoProvider",
@@ -6384,15 +6384,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 5,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/PhimTuoiThoProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/PhimTuoiThoProvider.cs3"
   },
   {
     "plugin": "PikashowProvider",
@@ -6499,19 +6499,19 @@
   {
     "plugin": "Pokemon",
     "originalName": "Pokemon",
-    "publishedName": "[Games] Pokemon",
-    "category": "Games",
+    "publishedName": "[Other] Pokemon",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Pokemon.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Pokemon.cs3"
   },
   {
     "plugin": "Porn4fans",
@@ -6622,15 +6622,15 @@
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 3,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "kerimmkirac"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/PornoAnne.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/PornoAnne.cs3"
   },
   {
     "plugin": "Pornobae",
@@ -6686,19 +6686,19 @@
   {
     "plugin": "PrinceOfPersia",
     "originalName": "PrinceOfPersia",
-    "publishedName": "[Games] PrinceOfPersia",
-    "category": "Games",
+    "publishedName": "[Other] PrinceOfPersia",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 10,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/PrinceOfPersia.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/PrinceOfPersia.cs3"
   },
   {
     "plugin": "PublicSportsIPTV",
@@ -6895,10 +6895,10 @@
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 97,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun",
       "yusiqo",
@@ -6906,7 +6906,7 @@
       "JustRelaxable"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/RecTV.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/RecTV.cs3"
   },
   {
     "plugin": "Replaymatch",
@@ -7166,19 +7166,19 @@
   {
     "plugin": "SeriousSam",
     "originalName": "SeriousSam",
-    "publishedName": "[Games] SeriousSam",
-    "category": "Games",
+    "publishedName": "[Other] SeriousSam",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 4,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/SeriousSam.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/SeriousSam.cs3"
   },
   {
     "plugin": "SetFilmIzle",
@@ -7187,15 +7187,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 24,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SetFilmIzle.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SetFilmIzle.cs3"
   },
   {
     "plugin": "Sextb",
@@ -7221,16 +7221,16 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 6,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun",
       "JustRelaxable"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SezonlukDizi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SezonlukDizi.cs3"
   },
   {
     "plugin": "Shahid4u",
@@ -7324,15 +7324,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 18,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SinemaCX.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SinemaCX.cs3"
   },
   {
     "plugin": "SKTechProvider",
@@ -7700,15 +7700,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 22,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/SuperFilmGeldi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SuperFilmGeldi.cs3"
   },
   {
     "plugin": "SuperJav",
@@ -7730,19 +7730,19 @@
   {
     "plugin": "SuperMario",
     "originalName": "SuperMario",
-    "publishedName": "[Games] SuperMario",
-    "category": "Games",
+    "publishedName": "[Other] SuperMario",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 14,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/SuperMario.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/SuperMario.cs3"
   },
   {
     "plugin": "SuperStream",
@@ -7935,19 +7935,19 @@
   {
     "plugin": "TekkenAdvance",
     "originalName": "TekkenAdvance",
-    "publishedName": "[Games] TekkenAdvance",
-    "category": "Games",
+    "publishedName": "[Other] TekkenAdvance",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 7,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/TekkenAdvance.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/TekkenAdvance.cs3"
   },
   {
     "plugin": "The Movie Flix",
@@ -8007,15 +8007,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 19,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TLCtr.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TLCtr.cs3"
   },
   {
     "plugin": "TollyPro",
@@ -8037,19 +8037,19 @@
   {
     "plugin": "TombRaider",
     "originalName": "TombRaider",
-    "publishedName": "[Games] TombRaider",
-    "category": "Games",
+    "publishedName": "[Other] TombRaider",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/TombRaider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/TombRaider.cs3"
   },
   {
     "plugin": "ToonHub",
@@ -8212,15 +8212,15 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 17,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TRanimaci.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TRanimaci.cs3"
   },
   {
     "plugin": "TRasyalog",
@@ -8229,15 +8229,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 52,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TRasyalog.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TRasyalog.cs3"
   },
   {
     "plugin": "TrendyPorn",
@@ -8314,15 +8314,15 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 14,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/TurkAnime.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TurkAnime.cs3"
   },
   {
     "plugin": "TV",
@@ -8365,15 +8365,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 11,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/TvPhimProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/TvPhimProvider.cs3"
   },
   {
     "plugin": "TwitchProvider",
@@ -8484,15 +8484,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 13,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/UgurFilm.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/UgurFilm.cs3"
   },
   {
     "plugin": "UHDmoviesProvider",
@@ -8637,15 +8637,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 9,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/VipPhimProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/VipPhimProvider.cs3"
   },
   {
     "plugin": "ViStreamProvider",
@@ -8706,15 +8706,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 5,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Watch2Movies.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Watch2Movies.cs3"
   },
   {
     "plugin": "Watch32",
@@ -8826,15 +8826,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 15,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "keyiflerolsun"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/WebteIzle.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/WebteIzle.cs3"
   },
   {
     "plugin": "Wecima",
@@ -8962,15 +8962,15 @@
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "SIX"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Xhamster.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Xhamster.cs3"
   },
   {
     "plugin": "Xmaza",
@@ -9030,15 +9030,15 @@
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 2,
-    "sourceId": "kekik",
-    "sourceName": "Turkish Providers Repository | @KekikAkademi",
-    "sourceRepository": "https://github.com/maarrem/cs-Kekik",
-    "sourceIndex": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "SIX"
     ],
     "originalRepositoryUrl": "https://github.com/maarrem/cs-Kekik",
-    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/XNXX.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/XNXX.cs3"
   },
   {
     "plugin": "XonProvider",
@@ -9166,15 +9166,15 @@
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 16,
-    "sourceId": "vietnam",
-    "sourceName": "Vietnamese CloudStream Index",
-    "sourceRepository": "https://github.com/t23-02/cloudstream",
-    "sourceIndex": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://t.me/cloudstream_extension_vn",
-    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/refs/heads/main/YanHH3DProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/YanHH3DProvider.cs3"
   },
   {
     "plugin": "YesPornPlease",
@@ -9315,19 +9315,19 @@
   {
     "plugin": "Zelda",
     "originalName": "Zelda",
-    "publishedName": "[Games] Zelda",
-    "category": "Games",
+    "publishedName": "[Other] Zelda",
+    "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 8,
-    "sourceId": "ayu-games",
-    "sourceName": "Ayu CloudStream Games",
-    "sourceRepository": "https://github.com/errorcode26/Ayu-CloudStream-Games",
-    "sourceIndex": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "errorcode26"
     ],
     "originalRepositoryUrl": null,
-    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/builds/Zelda.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Zelda.cs3"
   },
   {
     "plugin": "Zinkmovies",
