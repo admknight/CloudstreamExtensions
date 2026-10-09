@@ -4,9 +4,9 @@ This is a scoped downstream correction, not a claim that the upstream maintainer
 
 ## Mechanism
 
-- `local_verified_plugins.json` contains nine selected plugins from their **original upstream GitHub/GitLab repositories**, each pinned to an exact 40-character Git commit and including the SHA-256 and byte length of that binary.
+- `local_verified_plugins.json` contains fifteen selected plugins from their **original upstream GitHub/GitLab repositories**, each pinned to an exact 40-character Git commit and including the SHA-256 and byte length of that binary.
 - `sources.json` gives these reviewed entries selection priority over same-version upstream records. `tools/merge_upstreams.py` reads the checked-out local source so pull-request reviews and production builds use exactly the approved file revision.
-- `trusted_binary_approvals.json` contains **exact-match, scoped review records** for these nine entries, with source, version, URL, digest, size, reviewer identification and immutable evidence link. The existing `verify_candidate_integrity.py` gate independently re-downloads and validates every selected package before publication.
+- `trusted_binary_approvals.json` contains **exact-match, scoped review records** for these fifteen entries, with source, version, URL, digest, size, reviewer identification and immutable evidence link. The existing `verify_candidate_integrity.py` gate independently re-downloads and validates every selected package before publication.
 - If a source updates to an unapproved binary or a pinned package disappears, the existing fail-closed, no-removal safety rules still apply. No arbitrary URL or unreviewed checksum is accepted.
 
 ## Evidence
@@ -15,11 +15,17 @@ This is a scoped downstream correction, not a claim that the upstream maintainer
 
 **NetMovie original-release evidence:** Desi builds revision `0af83282ff9d36e0cc7447582b7152cc948fd1cc`, plugin `NetMovie` v1, 32,088 bytes, SHA-256 `27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576`, matching the original commit's manifest and the guarded candidate audit. The first release is eligible for publication only through the existing exact-reviewed approval and guarded verification steps.
 
-**GitLab immutable files:** Cloudstream Vietnamese revision `05b8e0b8c7b3aa43665fc57c477862cc0888f917` (StremioProvider, ViStreamProvider, XtreamIPTVProvider), checked by the read-only [GitLab evidence workflow](https://github.com/admknight/CloudstreamExtensions/actions/runs/37988142853). Pinned bytes, revision and hashes were independently verified in CI.
+**GitLab immutable files:** Cloudstream Vietnamese revision `05b8e0b8c7b3aa43665fc57c477862cc0888f917` (StremioProvider, ViStreamProvider, XtreamIPTVProvider, IPTVProvider), checked by the read-only [GitLab evidence workflow](https://github.com/admknight/CloudstreamExtensions/actions/runs/37988142853). Pinned bytes, revision and hashes were independently verified in CI.
+
+**StreamHubOne v63:** Desi immutable GitHub build revision `0af83282ff9d36e0cc7447582b7152cc948fd1cc`, 1,099,831 bytes, SHA-256 `d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57`. The original committed upstream manifest and actual ZIP binary agree. This replaces only the older immutable v62 entry after guarded approval. Evidence: [read-only original-source probe](https://github.com/admknight/CloudstreamExtensions/actions/runs/37994777840).
+
+**IPTVProvider v9:** Cloudstream Vietnamese GitLab revision `05b8e0b8c7b3aa43665fc57c477862cc0888f917`, 32,311 bytes, SHA-256 `8760295a88dd29011add8fa04e542209412100631dee948c18559e9e1acc565a`. The upstream index declares 30,703 bytes, so local recovery overrides only that incorrect size, adds the measured hash, and uses the original commit-pinned package URL while preserving the original upstream metadata. The prior single-plugin exclusion in `sources.json` is removed. Evidence: [read-only original-source probe](https://github.com/admknight/CloudstreamExtensions/actions/runs/37994777840).
+
+**Raghav newer releases and first-time plugins:** Raghav original immutable build revision `bbd6dcf1318d7c76bbf8c853ec120b857dd7df22`, with exact upstream manifest metadata and independently recomputed ZIP SHA-256 in [read-only evidence run](https://github.com/admknight/CloudstreamExtensions/actions/runs/37995159232): `AnimeTH` v1 (51,648 bytes, SHA-256 `588900960340944467b3dcd9895425aca0db65df75f65b680be446293c0a7b2d`), `Anv` v1 (59,454 bytes, `94a1716c3677bc0c2877d89634e7c5da66c39bc306b3dd34758f0e5a06f4c443`), `JustPlay` v12 (421,355 bytes, `31d865e11f19b984e39baa48fa6234b9dd24f70c4a8ff9a1ca178a0dc56966e5`), `TorrentsV1` v22 (123,332 bytes, `083368334ae440237fc0d799ea3dd087c782f46b177915b477267f7f326a05a1`). These are exact per-plugin pins and records, not blanket approval of future upstream changes.
 
 ## Release validation
 
-The [guarded candidate workflow](https://github.com/admknight/CloudstreamExtensions/actions/runs/37988648669) retained **543/543 existing identities** and reported **zero deferred unsafe updates** with **one independently verified old-byte fallback**. This historical eight-plugin verification was a test-only build; the production branch later published those eight fixes. The ninth NetMovie pin requires its own current guarded build and post-publication audit before being described as deployed.
+The [guarded candidate workflow](https://github.com/admknight/CloudstreamExtensions/actions/runs/37988648669) retained **543/543 existing identities** and reported **zero deferred unsafe updates** with **one independently verified old-byte fallback**. This historical eight-plugin verification was a test-only build; the production branch later published those eight fixes. The ninth NetMovie pin was subsequently published and independently audited in [NetMovie production verification](https://github.com/admknight/CloudstreamExtensions/actions/runs/37991262319). The six additional StreamHubOne, IPTVProvider, AnimeTH, Anv, JustPlay and TorrentsV1 corrections must pass their own guarded build and post-publication audit before being considered deployed.
 
 ## Scope of the assurance
 

@@ -1,5 +1,48 @@
 [
   {
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "AnimeTH",
+    "internalName": "AnimeTH",
+    "authors": [
+      "raghav"
+    ],
+    "description": "anime with Thai dub and sub",
+    "fileSize": 51648,
+    "repositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "language": "th",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "iconUrl": "https://anime-th.com/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-588900960340944467b3dcd9895425aca0db65df75f65b680be446293c0a7b2d"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Anv.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "Anv",
+    "internalName": "Anv",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "Anime sub and dub from multiple servers with subtitle language support",
+    "fileSize": 59454,
+    "repositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://anv.to/brand/icon-512.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-94a1716c3677bc0c2877d89634e7c5da66c39bc306b3dd34758f0e5a06f4c443"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghive.vip&sz=%size%",
     "fileHash": "sha256-836fa09519a8ac309688481b7baac6e539038393b29b2edb8268a52b002d9f3a",
     "apiVersion": 1,
@@ -60,6 +103,46 @@
     "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3",
     "name": "GDIndex",
     "fileHash": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679"
+  },
+  {
+    "apiVersion": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "description": "Cần nhập link IPTV để xem",
+    "fileSize": 32311,
+    "iconUrl": "https://www.shutterstock.com/image-vector/iptv-vector-line-icon-ip-260nw-1841427610.jpg",
+    "internalName": "IPTVProvider",
+    "name": "IPTVProvider",
+    "repositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "status": 1,
+    "tvTypes": [
+      "Live"
+    ],
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3",
+    "version": 9,
+    "fileHash": "sha256-8760295a88dd29011add8fa04e542209412100631dee948c18559e9e1acc565a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
+    "status": 1,
+    "version": 12,
+    "name": "JustPlay",
+    "internalName": "JustPlay",
+    "authors": [
+      "KSHITIJ8473"
+    ],
+    "description": "Movies and series from multiple sources with a Manage Sources screen that filters download and stream links",
+    "fileSize": 421355,
+    "repositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "language": "en",
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknDTJSN2AhrHzfxF75gr9-qG4x-JzwHRnvPDjZP2aa-93KRaXPF1_ZQdm&s=10",
+    "apiVersion": 1,
+    "fileHash": "sha256-31d865e11f19b984e39baa48fa6234b9dd24f70c4a8ff9a1ca178a0dc56966e5"
   },
   {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
@@ -125,6 +208,30 @@
     "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7"
   },
   {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
+    "status": 1,
+    "version": 63,
+    "name": "StreamHubOne",
+    "internalName": "StreamHubOne",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "StreamHub -  Multilingual provider Non-Stop Solution For Streaming Movies/Tv series & Anime ",
+    "fileSize": 1099831,
+    "repositoryUrl": "https://github.com/Faisal0786/Desi",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "AsianDrama"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/images%20(1).jpeg",
+    "apiVersion": 1,
+    "fileHash": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57"
+  },
+  {
     "iconUrl": "https://www.stremio.com/website/favicon.ico",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -144,6 +251,31 @@
     "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/StremioProvider.cs3",
     "name": "[Tools] StremioProvider",
     "fileHash": "sha256-5d7c4d6f65b974f82d2edf454b3343d309b1dc04b627cb9e519beff66799d7a7"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3",
+    "status": 1,
+    "version": 22,
+    "name": "TorrentsV1",
+    "internalName": "TorrentsV1",
+    "authors": [
+      "raghav"
+    ],
+    "description": "Torrent support for Anime, Movies and TV via Torrentio, TorrentsDB, Animetosho, Nyaa and custom Stremio addons",
+    "fileSize": 123332,
+    "repositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA",
+      "Movie",
+      "TvSeries",
+      "Torrent"
+    ],
+    "iconUrl": "https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg",
+    "apiVersion": 1,
+    "fileHash": "sha256-083368334ae440237fc0d799ea3dd087c782f46b177915b477267f7f326a05a1"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=uncutmaza.cc&sz=%size%",

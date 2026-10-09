@@ -1,9 +1,11 @@
-name: Inspect GitLab immutable source evidence (read only)
+name: Inspect immutable upstream source evidence (read only)
 
 on:
   pull_request:
     paths:
       - 'tools/probe_gitlab_recovery.py'
+      - 'tools/probe_desi_recovery.py'
+      - 'tools/probe_raghav_recovery.py'
       - '.github/workflows/probe-gitlab-recovery.yml'
   workflow_dispatch:
 
@@ -22,9 +24,20 @@ jobs:
         run: |
           set -euo pipefail
           python3 tools/probe_gitlab_recovery.py
+      - name: Verify immutable Desi StreamHubOne candidate independently
+        run: |
+          set -euo pipefail
+          python3 tools/probe_desi_recovery.py
+      - name: Verify four Raghav original package digests and metadata
+        run: |
+          set -euo pipefail
+          python3 tools/probe_raghav_recovery.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: gitlab-immutable-evidence
-          path: gitlab-immutable-evidence.json
+          path: |
+            gitlab-immutable-evidence.json
+            desi-immutable-evidence.json
+            raghav-immutable-evidence.json
           if-no-files-found: warn

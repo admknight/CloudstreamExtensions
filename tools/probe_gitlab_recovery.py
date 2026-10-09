@@ -8,11 +8,13 @@ import hashlib
 import json
 import sys
 import urllib.request
+import zipfile
+from io import BytesIO
 from pathlib import Path
 
 PROJECT = "65865366"
 BASE = "https://gitlab.com/tearrs/cloudstream-vietnamese"
-NAMES = ("StremioProvider", "ViStreamProvider", "XtreamIPTVProvider")
+NAMES = ("StremioProvider", "ViStreamProvider", "XtreamIPTVProvider", "IPTVProvider")
 MAX_BYTES = 2 * 1024 * 1024
 
 
@@ -47,10 +49,11 @@ def collect(get=download):
             raise ValueError("Missing or duplicate pinned plugin: " + name)
         item = matches[0]
         data = get(base + name + ".cs3")
-        if not data.startswith(b"PK"):
-            raise ValueError("Pinned .cs3 payload is not a ZIP: " + name)
+        if not zipfile.is_zipfile(BytesIO(data)):
+            raise ValueError("Pinned .cs3 payload is not a valid ZIP: " + name)
         result.append({
             "plugin": name, "upstreamManifestVersion": item.get("version"),
+            "sourcePluginEntry": item if name == "IPTVProvider" else None,
             "upstreamDeclaredSize": item.get("fileSize"),
             "size": len(data), "sha256": "sha256-" + hashlib.sha256(data).hexdigest(),
             "url": base + name + ".cs3",

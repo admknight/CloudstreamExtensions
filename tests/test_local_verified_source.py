@@ -20,9 +20,9 @@ class LocalVerifiedSourceTests(unittest.TestCase):
         cls.pins = json.loads((ROOT / "local_verified_plugins.json").read_text())
         cls.approvals = json.loads((ROOT / "trusted_binary_approvals.json").read_text())
 
-    def test_source_is_nine_checked_in_immutable_packages(self):
+    def test_source_is_fifteen_checked_in_immutable_packages(self):
         items = merge.fetch_source_plugins(self.source)
-        self.assertEqual(len(items), 9)
+        self.assertEqual(len(items), 15)
         self.assertEqual({p["internalName"] for p in items},
                          set(self.source["include"]))
         self.assertEqual(self.source["priority"], 0)
@@ -55,7 +55,7 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                     "actualFileSize":trusted["fileSize"]}
         report = gate(self.pins, [], provenance, [], self.approvals, checker=check, workers=1)
         self.assertEqual(report["blockedCount"], 0)
-        self.assertEqual(report["reviewApproved"], 9)
+        self.assertEqual(report["reviewApproved"], 15)
         altered = copy.deepcopy(self.pins)
         altered[0]["fileHash"] = "sha256-" + "0"*64
         bad = gate(altered, [], provenance, [], self.approvals, checker=check, workers=1)
@@ -75,9 +75,72 @@ class LocalVerifiedSourceTests(unittest.TestCase):
         self.assertEqual(reviews[0]["sourceId"], "local-pinned-recovery")
         self.assertEqual(reviews[0]["fileHash"], pkg["fileHash"])
 
+    def test_new_release_and_corrected_iptv_pin_are_exact(self):
+        expected = {
+            "StreamHubOne": {
+                "version": 63,
+                "size": 1099831,
+                "hash": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57",
+                "url": "https://raw.githubusercontent.com/Faisal0786/Desi/"
+                       "0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
+            },
+            "IPTVProvider": {
+                "version": 9,
+                "size": 32311,
+                "hash": "sha256-8760295a88dd29011add8fa04e542209412100631dee948c18559e9e1acc565a",
+                "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/"
+                       "05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3",
+            },
+        }
+        for name, item in expected.items():
+            with self.subTest(plugin=name):
+                plugin = next(p for p in self.pins if p["internalName"] == name)
+                self.assertEqual(plugin["version"], item["version"])
+                self.assertEqual(plugin["fileSize"], item["size"])
+                self.assertEqual(plugin["fileHash"], item["hash"])
+                self.assertEqual(plugin["url"], item["url"])
+                records = [a for a in self.approvals if a["plugin"] == name]
+                self.assertEqual(len(records), 1)
+                self.assertEqual(records[0]["sourceId"], "local-pinned-recovery")
+                self.assertEqual(records[0]["fileSize"], item["size"])
+                self.assertEqual(records[0]["fileHash"], item["hash"])
+        tearrs = next(x for x in merge.SOURCES if x["id"] == "tearrs-vietnamese")
+        self.assertNotIn("IPTVProvider", tearrs.get("exclude", []))
+        iptv = next(p for p in self.pins if p["internalName"] == "IPTVProvider")
+        self.assertEqual(iptv["authors"], ["anhdaden"])
+        self.assertEqual(iptv["tvTypes"], ["Live"])
+        self.assertEqual(iptv["status"], 1)
+
+    def test_four_raghav_binary_releases_have_original_immutable_commit(self):
+        source_commit = "bbd6dcf1318d7c76bbf8c853ec120b857dd7df22"
+        expected = {
+            "AnimeTH": (1, 51648,
+                "sha256-588900960340944467b3dcd9895425aca0db65df75f65b680be446293c0a7b2d"),
+            "Anv": (1, 59454,
+                "sha256-94a1716c3677bc0c2877d89634e7c5da66c39bc306b3dd34758f0e5a06f4c443"),
+            "JustPlay": (12, 421355,
+                "sha256-31d865e11f19b984e39baa48fa6234b9dd24f70c4a8ff9a1ca178a0dc56966e5"),
+            "TorrentsV1": (22, 123332,
+                "sha256-083368334ae440237fc0d799ea3dd087c782f46b177915b477267f7f326a05a1"),
+        }
+        for name, (version, size, digest) in expected.items():
+            with self.subTest(plugin=name):
+                item = next(p for p in self.pins if p["internalName"] == name)
+                self.assertEqual(item["version"], version)
+                self.assertEqual(item["fileSize"], size)
+                self.assertEqual(item["fileHash"], digest)
+                self.assertEqual(item["url"],
+                    f"https://raw.githubusercontent.com/KSHITIJ8473/raghav/{source_commit}/{name}.cs3")
+                reviews = [a for a in self.approvals if a["plugin"] == name]
+                self.assertEqual(len(reviews), 1)
+                self.assertEqual(reviews[0]["sourceId"], "local-pinned-recovery")
+                self.assertEqual(reviews[0]["fileHash"], digest)
+                self.assertEqual(reviews[0]["fileSize"], size)
+
     def test_rejects_mutable_package_url(self):
         copied = copy.deepcopy(self.pins)
-        copied[0]["url"] = copied[0]["url"].replace(
+        donghub = next(x for x in copied if x["internalName"] == "Donghub")
+        donghub["url"] = donghub["url"].replace(
             "/ff22707cca6b1292d327a9aa9dcc60de5ee12492/", "/builds/"
         )
         with tempfile.TemporaryDirectory() as td:
