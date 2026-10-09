@@ -13,6 +13,7 @@ excluded from the preview; it is NOT claimed to be safely retained at a mutable
 URL. This preview is never authorized for automatic publication.
 """
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -187,6 +188,16 @@ def build_preview(candidate, previous, candidate_provenance,
         or counts["retainedImmutablePrevious"]
     )
     summary = {
+        "inputDigests": {
+            "candidate": canonical_sha256(candidate),
+            "previous": canonical_sha256(previous),
+            "candidateProvenance": canonical_sha256(candidate_provenance),
+            "previousProvenance": canonical_sha256(previous_provenance),
+        },
+        "outputDigests": {
+            "previewPlugins": canonical_sha256(proposal),
+            "previewProvenance": canonical_sha256(proposal_provenance),
+        },
         "mode": "PREVIEW_ONLY_NO_PUBLICATION",
         "candidateCount": len(candidate),
         "previousCount": len(previous),
@@ -209,6 +220,12 @@ def build_preview(candidate, previous, candidate_provenance,
             + quarantines != len(candidate)):
         raise ValueError("Selection arithmetic does not reconcile")
     return proposal, proposal_provenance, summary, verification
+
+
+def canonical_sha256(value):
+    return hashlib.sha256(
+        json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    ).hexdigest()
 
 
 def _write_json(path, value):
