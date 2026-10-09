@@ -14,6 +14,8 @@ on:
     paths:
       - 'sources.json'
       - 'recovery_plugins.json'
+      - 'local_verified_plugins.json'
+      - 'trusted_binary_approvals.json'
       - 'tools/merge_upstreams.py'
       - '.github/workflows/build.yml'
       - 'repo.json'
