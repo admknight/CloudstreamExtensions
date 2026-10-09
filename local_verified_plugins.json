@@ -62,6 +62,25 @@
     "fileHash": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679"
   },
   {
+    "apiVersion": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "description": "Cần nhập link IPTV để xem",
+    "fileSize": 32311,
+    "iconUrl": "https://www.shutterstock.com/image-vector/iptv-vector-line-icon-ip-260nw-1841427610.jpg",
+    "internalName": "IPTVProvider",
+    "name": "IPTVProvider",
+    "repositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "status": 1,
+    "tvTypes": [
+      "Live"
+    ],
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3",
+    "version": 9,
+    "fileHash": "sha256-8760295a88dd29011add8fa04e542209412100631dee948c18559e9e1acc565a"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
     "status": 1,
     "version": 1,
@@ -123,6 +142,30 @@
     "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
     "name": "Sarangfilm",
     "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
+    "status": 1,
+    "version": 63,
+    "name": "StreamHubOne",
+    "internalName": "StreamHubOne",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "StreamHub -  Multilingual provider Non-Stop Solution For Streaming Movies/Tv series & Anime ",
+    "fileSize": 1099831,
+    "repositoryUrl": "https://github.com/Faisal0786/Desi",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "AsianDrama"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/images%20(1).jpeg",
+    "apiVersion": 1,
+    "fileHash": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57"
   },
   {
     "iconUrl": "https://www.stremio.com/website/favicon.ico",
