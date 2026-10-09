@@ -51,6 +51,7 @@ def collect(get=download):
             raise ValueError("Pinned .cs3 payload is not a ZIP: " + name)
         result.append({
             "plugin": name, "upstreamManifestVersion": item.get("version"),
+            "sourcePluginEntry": item if name == "IPTVProvider" else None,
             "upstreamDeclaredSize": item.get("fileSize"),
             "size": len(data), "sha256": "sha256-" + hashlib.sha256(data).hexdigest(),
             "url": base + name + ".cs3",
