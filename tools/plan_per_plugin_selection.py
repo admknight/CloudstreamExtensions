@@ -13,6 +13,7 @@ excluded from the preview; it is NOT claimed to be safely retained at a mutable
 URL. This preview is never authorized for automatic publication.
 """
 import argparse
+import copy
 import hashlib
 import json
 import re
@@ -126,8 +127,8 @@ def build_preview(candidate, previous, candidate_provenance,
     for key, entry in new.items():
         failure = denied.get(key)
         if not failure:
-            proposal.append(entry)
-            proposal_provenance.append(new_provenance[key])
+            proposal.append(copy.deepcopy(entry))
+            proposal_provenance.append(copy.deepcopy(new_provenance[key]))
             counts["acceptedCandidates"] += 1
             continue
         earlier = old.get(key)
@@ -137,8 +138,8 @@ def build_preview(candidate, previous, candidate_provenance,
         if held:
             if key not in old_provenance:
                 raise ValueError("Verified previous binary lacks provenance: " + key)
-            proposal.append(earlier)
-            proposal_provenance.append(old_provenance[key])
+            proposal.append(copy.deepcopy(earlier))
+            proposal_provenance.append(copy.deepcopy(old_provenance[key]))
             counts["retainedImmutablePrevious"] += 1
             disposition = "retained_immutable_previous"
         elif earlier is not None:
