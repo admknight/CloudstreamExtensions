@@ -63,7 +63,7 @@
     .pager{display:flex;align-items:center;justify-content:center;gap:16px;margin:24px 0 55px}
     .pager span{font-size:.86rem;color:var(--muted)}
     .empty{border:1px dashed #405371;border-radius:13px;padding:28px;text-align:center;color:var(--muted);grid-column:1/-1}
-    footer{border-top:1px solid var(--line);padding:26px 0 35px;color:var(--muted);font-size:.85rem}
+    footer{border-top:1px solid var(--line);padding:26px 0 35px;color:var(--muted);font-size:.85rem}.page-counter{display:inline-flex;align-items:center;vertical-align:middle;line-height:1}.page-counter img{height:20px;width:auto;display:block}
     .install-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0 25px}
     .install-path{display:flex;flex-direction:column;gap:9px;padding:19px 21px;border-radius:13px;border:1px solid #2c4c6b;background:linear-gradient(140deg,#152940,#0c1b2d);text-decoration:none;color:var(--text)}
     .install-path:hover,.install-path:focus-visible{border-color:var(--cyan);background:#1b3148}
@@ -118,7 +118,7 @@
     <section id="cards" class="cards" aria-label="Extension results" aria-live="polite"></section>
     <div class="pager"><button id="prev" type="button" disabled>Previous</button><span id="page-label">Page 1</span><button id="next" type="button" disabled>Next</button></div>
   </main>
-  <footer class="shell">Data: <a href="https://github.com/admknight/CloudstreamExtensions/tree/builds" target="_blank" rel="noopener noreferrer">published MegaRepo catalog</a> &middot; Explorer bookmarks stay in this browser &middot; <a href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Build a personal repository</a> &middot; <a href="./#install-full" target="_blank" rel="noopener noreferrer">Get full MegaRepo shortcode</a></footer>
+  <footer class="shell">Data: <a href="https://github.com/admknight/CloudstreamExtensions/tree/builds" target="_blank" rel="noopener noreferrer">published MegaRepo catalog</a> &middot; Explorer bookmarks stay in this browser &middot; <a href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Build a personal repository</a> &middot; <a href="./#install-full" target="_blank" rel="noopener noreferrer">Get full MegaRepo shortcode</a> &middot; <span class="page-counter"><img src="https://hits.sh/admknight.github.io/CloudstreamExtensions/explore.html.svg?style=flat-square&amp;label=Page+views&amp;color=43a7ff&amp;labelColor=18263a" alt="Page views for Extension Explorer" title="Page hits since this counter was added; not unique visitors" height="20" loading="eager" decoding="async" referrerpolicy="no-referrer"></span></footer>
   <script>
   (() => {
     'use strict';
