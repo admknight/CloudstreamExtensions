@@ -36,6 +36,18 @@
     "evidenceUrl": "https://github.com/Shakzz890/ShakzzCutie/blob/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3"
   },
   {
+    "plugin": "IPTVProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3",
+    "version": 9,
+    "fileSize": 32311,
+    "fileHash": "sha256-8760295a88dd29011add8fa04e542209412100631dee948c18559e9e1acc565a",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Downstream correction of inaccurate upstream fileSize. Original IPTVProvider v9 .cs3 downloaded from full GitLab source commit, independently SHA-256 verified in GitHub Actions; release functionality not certified.",
+    "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3"
+  },
+  {
     "plugin": "NetMovie",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
@@ -70,6 +82,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
     "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3"
+  },
+  {
+    "plugin": "StreamHubOne",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
+    "version": 63,
+    "fileSize": 1099831,
+    "fileHash": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "StreamHubOne v63 .cs3 pinned to immutable original GitHub Desi build revision. Source manifest, ZIP structure, SHA-256 and byte length independently verified in GitHub Actions; runtime functionality not certified.",
+    "evidenceUrl": "https://github.com/Faisal0786/Desi/blob/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3"
   },
   {
     "plugin": "StremioProvider",
