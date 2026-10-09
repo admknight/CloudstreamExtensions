@@ -14,9 +14,11 @@
         "Donghub",
         "Extractors",
         "GDIndex",
+        "IPTVProvider",
         "NetMovie",
         "OnlineMoviesHinditProvider",
         "Sarangfilm",
+        "StreamHubOne",
         "StremioProvider",
         "ViStreamProvider",
         "XtreamIPTVProvider"
@@ -305,10 +307,7 @@
       "id": "tearrs-vietnamese",
       "name": "Tearrs Vietnamese Extension",
       "repo": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-      "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
-      "exclude": [
-        "IPTVProvider"
-      ]
+      "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json"
     }
   ],
   "inactive": [
