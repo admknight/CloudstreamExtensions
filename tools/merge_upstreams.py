@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import re
 import urllib.request
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -39,6 +40,59 @@ def fetch_json(url):
     )
     with urllib.request.urlopen(req, timeout=45) as response:
         return json.load(response)
+
+
+def fetch_source_plugins(source):
+    """Load one explicit, version-controlled local recovery source safely."""
+    local_file = source.get("localFile")
+    if local_file is None:
+        return fetch_json(source["index"])
+    allowed_url = (
+        "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/"
+        "master/local_verified_plugins.json"
+    )
+    if (
+        source.get("id") != "local-pinned-recovery"
+        or local_file != "local_verified_plugins.json"
+        or source.get("index") != allowed_url
+    ):
+        raise ValueError("Unrecognized local source: refusing arbitrary file access")
+    path = ROOT / "local_verified_plugins.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, list):
+        raise ValueError("Local verified source must be a JSON array")
+    expected = {str(x).strip().casefold() for x in source.get("include", [])}
+    seen = set()
+    github_pin = re.compile(
+        r"^https://raw\\.githubusercontent\\.com/[A-Za-z0-9_.-]+/"
+        r"[A-Za-z0-9_.-]+/[a-f0-9]{40}/[^?#]+\\.cs3$"
+    )
+    gitlab_pin = re.compile(
+        r"^https://gitlab\\.com/tearrs/cloudstream-vietnamese/"
+        r"-/raw/[a-f0-9]{40}/[^?#]+\\.cs3$"
+    )
+    for plugin in data:
+        if not isinstance(plugin, dict):
+            raise ValueError("Malformed local verified entry")
+        key = plugin_identity(plugin)
+        url = plugin.get("url", "")
+        digest = plugin.get("fileHash")
+        size = plugin.get("fileSize")
+        if (
+            not key or key in seen or key not in expected
+            or type(plugin.get("version")) is not int
+            or type(size) is not int or size <= 0
+            or not isinstance(digest, str)
+            or re.fullmatch(r"sha256-[a-f0-9]{64}", digest) is None
+            or not isinstance(url, str)
+            or (github_pin.fullmatch(url) is None
+                and gitlab_pin.fullmatch(url) is None)
+        ):
+            raise ValueError("Invalid/non-immutable local package pin: " + str(key))
+        seen.add(key)
+    if not expected or seen != expected:
+        raise ValueError("Local source and explicitly included identities differ")
+    return data
 
 
 def plugin_key(plugin):
@@ -749,7 +803,7 @@ def main():
             "duplicateSkipped": 0,
         }
         try:
-            plugins = fetch_json(source["index"])
+            plugins = fetch_source_plugins(source)
             if not isinstance(plugins, list):
                 raise RuntimeError("upstream response is not a plugin list")
             state["ok"] = True
