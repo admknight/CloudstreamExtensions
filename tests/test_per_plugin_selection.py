@@ -211,7 +211,7 @@ class PerPluginSelectionTests(unittest.TestCase):
 
     def test_duplicate_candidate_identity_fails(self):
         x = item("P0")
-        with self.assertRaisesRegex(ValueError, "Duplicate"):
+        with self.assertRaisesRegex(ValueError, "duplicate"):
             select([x, dict(x)])
 
     def test_empty_candidate_fails(self):
