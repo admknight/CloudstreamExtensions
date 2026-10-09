@@ -68,6 +68,7 @@ jobs:
             source/merged/RELEASE_NOTES.md
             source/merged/release-diff.json
             merge-output.txt
+            package-integrity-gate.json
           if-no-files-found: warn
 
       - name: Stop On Upstream Failure
@@ -76,6 +77,17 @@ jobs:
             echo "Candidate generation failed. Production remains unchanged."
             exit 1
           fi
+
+      - name: Verify candidate package integrity (fail closed)
+        run: |
+          python3 -m unittest discover -s source/tests -p 'test_verify_candidate_integrity.py' -v
+          python3 source/tools/verify_candidate_integrity.py \
+            --candidate source/merged/plugins.json \
+            --previous builds/plugins.json \
+            --candidate-provenance source/merged/provenance.json \
+            --previous-provenance builds/provenance.json \
+            --approvals source/trusted_binary_approvals.json \
+            --report package-integrity-gate.json
 
       - name: Safety Gate
         run: |
