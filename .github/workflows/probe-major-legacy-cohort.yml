@@ -1,0 +1,60 @@
+name: Audit 79 legacy original commit binaries (read only)
+
+on:
+  pull_request:
+    paths:
+      - 'tools/probe_major_legacy_cohort.py'
+      - 'tests/test_probe_major_legacy_cohort.py'
+      - '.github/workflows/probe-major-legacy-cohort.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original-commit-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v5
+        with:
+          ref: builds
+          path: published-catalog
+          persist-credentials: false
+      - name: Verify independent original-source evidence logic
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/probe_major_legacy_cohort.py
+          python3 -m unittest discover -s tests -p test_probe_major_legacy_cohort.py -v
+      - name: Inspect 79 original release binaries without approving any
+        run: |
+          set -euo pipefail
+          python3 tools/probe_major_legacy_cohort.py \
+            --published published-catalog/plugins.json \
+            --provenance published-catalog/provenance.json \
+            --workers 6 \
+            --output legacy-major-original-source-evidence.json | tee legacy-major-probe-summary.log
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("legacy-major-original-source-evidence.json").read_text())
+          assert data["expectedCount"] == 79
+          assert data["verifiedCount"] + data["withheldCount"] == 79
+          assert data["releaseAuthorized"] is False
+          assert all(not row["releaseAuthorized"] and row["byteIdenticalToPublished"] for row in data["verified"])
+          print("Original-source verified:", data["verifiedCount"],
+                "strictly withheld:", data["withheldCount"])
+          PY
+      - name: Retain original-source evidence and withheld exceptions
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: legacy-original-source-79-evidence
+          path: |
+            legacy-major-original-source-evidence.json
+            legacy-major-probe-summary.log
+          retention-days: 30
+          if-no-files-found: warn
