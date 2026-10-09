@@ -16,13 +16,20 @@ def validate_post_publish(audit, report, plugins, provenance):
     if not all(isinstance(x, list) for x in (plugins, provenance)):
         raise ValueError("Published catalog/provenance must be lists")
     from audit_package_integrity import plugin_identity
-    names = {plugin_identity(p) for p in plugins}
-    sources = {
-        str(r.get("plugin") or r.get("originalName") or "").casefold()
-        for r in provenance
-    }
-    if None in names or len(names) != len(plugins) or sources != names:
+    names = [plugin_identity(p) for p in plugins]
+    sources = [
+        str(r.get("plugin") or r.get("originalName") or "").strip().casefold()
+        for r in provenance if isinstance(r, dict)
+    ]
+    if (
+        len(plugins) != len(provenance) or len(sources) != len(provenance)
+        or not all(isinstance(p, dict) for p in plugins)
+        or not all(names) or not all(sources)
+        or len(set(names)) != len(names) or len(set(sources)) != len(sources)
+        or set(names) != set(sources)
+    ):
         raise ValueError("Published plugin identities and provenance are inconsistent")
+    names = set(names)
     if (
         report.get("releaseEligible") is not True
         or report.get("publicationMethod") != "guarded_per_plugin_compatibility"
@@ -53,8 +60,18 @@ def validate_post_publish(audit, report, plugins, provenance):
         or audit.get("scan", {}).get("checked") != len(plugins)
     ):
         raise ValueError("Full-published-catalog audit did not complete")
-    if audit.get("sourceErrors"):
+    if not isinstance(audit.get("sourceErrors"), list):
+        raise ValueError("Post-publication audit lacks source-error evidence")
+    if audit["sourceErrors"]:
         raise ValueError("An upstream index was unavailable at post-publication audit")
+    scan = audit.get("scan") or {}
+    problems = audit.get("packageProblems")
+    if (
+        type(scan.get("failed")) is not int
+        or not isinstance(problems, list)
+        or scan["failed"] != len(problems)
+    ):
+        raise ValueError("Full-audit package-failure count does not reconcile with evidence")
     unexpected = []
     known = []
     for field in ("metadataDrift", "packageProblems"):
