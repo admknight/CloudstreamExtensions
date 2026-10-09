@@ -11,6 +11,8 @@ on:
       - 'tools/verify_candidate_integrity.py'
       - 'tools/plan_per_plugin_selection.py'
       - 'tools/reconcile_integrity_review.py'
+      - 'tools/verified_immutable_fallback.py'
+      - 'tools/index_immutable_recovery.py'
       - 'trusted_binary_approvals.json'
   pull_request:
     paths:
@@ -22,6 +24,7 @@ on:
       - '.github/workflows/full-integrity-review.yml'
       - 'tools/verify_candidate_integrity.py'
       - 'tests/test_verify_candidate_integrity.py'
+      - 'tests/test_immutable_fallback_selection.py'
       - 'trusted_binary_approvals.json'
   workflow_dispatch:
 
@@ -46,7 +49,8 @@ jobs:
           python3 -m unittest discover -s tests -p test_verify_candidate_integrity.py -v
           python3 -m unittest discover -s tests -p test_per_plugin_selection.py -v
           python3 -m unittest discover -s tests -p test_reconcile_integrity_review.py -v
-          python3 -m py_compile tools/verify_candidate_integrity.py tools/plan_per_plugin_selection.py tools/reconcile_integrity_review.py
+          python3 -m unittest discover -s tests -p test_immutable_fallback_selection.py -v
+          python3 -m py_compile tools/verify_candidate_integrity.py tools/plan_per_plugin_selection.py tools/reconcile_integrity_review.py tools/verified_immutable_fallback.py
       - name: Parse workflow YAML
         run: |
           ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "Workflow YAML parsed."'
@@ -84,6 +88,17 @@ jobs:
             --previous production/plugins.json \
             --previous-report production/merge-report.json \
             --previous-provenance production/provenance.json
+      - name: Verify published checksums against immutable source revisions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 source/tools/index_immutable_recovery.py \
+            --published production/plugins.json \
+            --provenance production/provenance.json \
+            --output pinned-recovery-evidence.json \
+            --max-history 16 \
+            --workers 6
       - name: Download, verify and select individual plugin previews
         run: |
           set -euo pipefail
@@ -93,6 +108,7 @@ jobs:
             --candidate-provenance candidate/provenance.json \
             --previous-provenance production/provenance.json \
             --approvals source/trusted_binary_approvals.json \
+            --recovery-index pinned-recovery-evidence.json \
             --output-dir review-preview \
             --workers 8
       - name: Rebuild all derived catalog metadata in both preview policies
@@ -208,6 +224,7 @@ jobs:
             review-preview/preview.plugins.json
             review-preview/preview.provenance.json
             candidate/merge-report.json
+            pinned-recovery-evidence.json
             review-compatibility/
             review-quarantine/
           if-no-files-found: warn
