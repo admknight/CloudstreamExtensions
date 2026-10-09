@@ -54,14 +54,20 @@ class GateTests(unittest.TestCase):
         old = plugin()
         new = plugin(version=2, fileHash=outcome(plugin())["actualFileHash"])
         approval = {"plugin": "Demo", "sourceId": "demo", "url":new["url"],
-                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"]}
+                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"],
+                    "reviewedBy":"maintainer", "reviewedAt":"2026-10-01",
+                    "evidenceUrl":"https://github.com/demo/issues/1",
+                    "reason":"Intended reviewed binary release"}
         self.assertTrue(run(old, new, approvals=[approval])["passed"])
 
     def test_approval_wrong_source_blocked(self):
         old = plugin()
         new = plugin(version=2, fileHash=outcome(plugin())["actualFileHash"])
         approval = {"plugin": "Demo", "sourceId": "attacker", "url":new["url"],
-                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"]}
+                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"],
+                    "reviewedBy":"maintainer", "reviewedAt":"2026-10-01",
+                    "evidenceUrl":"https://github.com/demo/issues/1",
+                    "reason":"Intended reviewed binary release"}
         self.assertFalse(run(old, new, approvals=[approval])["passed"])
 
     def test_existing_same_hash_changed_version(self):
@@ -74,7 +80,10 @@ class GateTests(unittest.TestCase):
         old = plugin()
         new = plugin(version=2)
         approval = {"plugin": "Demo", "sourceId": "demo", "url":new["url"],
-                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"]}
+                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"],
+                    "reviewedBy":"maintainer", "reviewedAt":"2026-10-01",
+                    "evidenceUrl":"https://github.com/demo/issues/1",
+                    "reason":"Intended reviewed binary release"}
         self.assertFalse(run(old, new, approvals=[approval])["passed"])
 
     def test_trusted_digest_does_not_transfer_between_sources(self):
@@ -94,6 +103,13 @@ class GateTests(unittest.TestCase):
         old = plugin()
         del old["fileSize"]
         self.assertFalse(run(old, old)["passed"])
+
+    def test_approval_without_review_evidence_is_rejected(self):
+        old = plugin()
+        new = plugin(version=2, fileHash=outcome(plugin())["actualFileHash"])
+        approval = {"plugin": "Demo", "sourceId": "demo", "url":new["url"],
+                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"]}
+        self.assertFalse(run(old, new, approvals=[approval])["passed"])
 
     def test_missing_provenance_fails(self):
         with self.assertRaises(ValueError):
