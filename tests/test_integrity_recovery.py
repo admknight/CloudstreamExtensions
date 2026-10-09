@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import json
 import sys
 import unittest
@@ -8,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1] / "tools"
 sys.path.insert(0, str(ROOT))
 import plan_integrity_recovery as plan
 import sync_integrity_issues as issues
+import verify_candidate_integrity as gate
 
 
 def plugin(version=1):
@@ -47,6 +49,35 @@ class RecoveryPlanTests(unittest.TestCase):
         self.assertEqual(len(self.decision()["candidateDigest"]), 64)
         self.assertFalse(self.decision(gate={"passed": False, "checked": 1, "blockedCount": 1})["dispatch"])
         self.assertFalse(self.decision(source="impersonator")["dispatch"])
+
+    def test_full_gate_to_trusted_dispatch_end_to_end(self):
+        old = plugin(version=1)
+        digest = "sha256-" + hashlib.sha256(b"approved bytes").hexdigest()
+        old["fileHash"] = digest
+        new = dict(old, version=2)
+        provenance = [{"plugin": "Demo", "sourceId": "trusted"}]
+        check = lambda row: {"status": "hash_verified", "actualFileSize": 10,
+                             "actualFileHash": digest}
+        result = gate.gate([new], [old], provenance, provenance, [],
+                           checker=check, workers=1)
+        self.assertTrue(result["passed"])
+        decision = plan.decide_dispatch(incident(), result, [new], [old],
+                                        provenance, {"candidateStatus":"READY",
+                                        "sourceHealth":{"failed":0}})
+        self.assertTrue(decision["dispatch"])
+
+    def test_new_untrusted_digest_cannot_trigger_recovery(self):
+        old = plugin(version=1)
+        new = dict(old, version=2, fileHash="sha256-"+"b"*64)
+        provenance = [{"plugin":"Demo","sourceId":"trusted"}]
+        result = gate.gate([new], [old], provenance, provenance, [],
+                           checker=lambda row: {"status":"hash_verified",
+                           "actualFileSize":10,"actualFileHash":new["fileHash"]},
+                           workers=1)
+        self.assertFalse(result["passed"])
+        self.assertFalse(plan.decide_dispatch(incident(), result,
+            [new],[old],provenance,{"candidateStatus":"READY",
+            "sourceHealth":{"failed":0}})["dispatch"])
 
     def test_no_drift_never_dispatches(self):
         audit = incident()
