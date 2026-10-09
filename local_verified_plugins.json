@@ -20,6 +20,46 @@
     "fileHash": "sha256-905b0b1ef8b722a1599ecfee3f65d37954dd6a87e8c13e0624d36f74776441ba"
   },
   {
+    "iconUrl": "https://anm.cx/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 24512,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun",
+      "inatchii",
+      "JustRelaxable"
+    ],
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 21,
+    "internalName": "AnimeciX",
+    "description": "AnimeciX, animeleri keşfedebileceğiniz ve animeler hakkında her şeyi öğrenebileceğiniz bir paylaşım platformudur.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/AnimeciX.cs3",
+    "name": "AnimeciX",
+    "fileHash": "sha256-b5677e95dd7326a40d6a73e375c881fb4f44e7715deeb11b81ea992ffaf8d569"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=animehay.in&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 31519,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 11,
+    "internalName": "AnimeHayProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/AnimeHayProvider.cs3",
+    "name": "AnimeHayProvider",
+    "fileHash": "sha256-aafe899cf487e20cd108b1e74b66aedce0242563432d30f149baeef9eb55c8d3"
+  },
+  {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3",
     "status": 1,
     "version": 1,
@@ -39,6 +79,24 @@
     "iconUrl": "https://anime-th.com/favicon.ico",
     "apiVersion": 1,
     "fileHash": "sha256-588900960340944467b3dcd9895425aca0db65df75f65b680be446293c0a7b2d"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=animevietsub.app&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 33198,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 14,
+    "internalName": "AnimeVietsubProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/AnimeVietsubProvider.cs3",
+    "name": "AnimeVietsubProvider",
+    "fileHash": "sha256-a52ba4a673e24ced8d7d146b428db9f8860c5d181e825e37fc7c7a271bb1ef35"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=aniyomi.org&sz=%size%",
@@ -82,6 +140,65 @@
     "fileHash": "sha256-94a1716c3677bc0c2877d89634e7c5da66c39bc306b3dd34758f0e5a06f4c443"
   },
   {
+    "name": "AriaOfSorrow",
+    "internalName": "AriaOfSorrow",
+    "description": "Play Aria of Sorrow.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/AriaOfSorrow.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Castlevania%20-%20Aria%20of%20Sorrow%20(USA).png",
+    "fileSize": 4511456,
+    "fileHash": "sha256-2f9d8387212d17fa06e674e0774acbd8b7e64e648e636e3314cae604e019513b"
+  },
+  {
+    "name": "AvatarAirbender",
+    "internalName": "AvatarAirbender",
+    "description": "Play Avatar Airbender.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/AvatarAirbender.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Avatar%20-%20The%20Last%20Airbender%20(USA).png",
+    "fileSize": 3111325,
+    "fileHash": "sha256-73b8179fb0a896e49ccb95905290967d7b1d912e854880974b01235a66c31e0c"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=belgeselx.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 19252,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun",
+      "JustRelaxable"
+    ],
+    "tvTypes": [
+      "Documentary"
+    ],
+    "version": 12,
+    "internalName": "BelgeselX",
+    "description": "En yeni belgeseller, türkçe altyazılı yada dublaj olarak 1080p kalitesinde HD belgesel izle.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/BelgeselX.cs3",
+    "name": "BelgeselX",
+    "fileHash": "sha256-c097d60b547b25cebbdf102a0386f4d36dd092af113712932fa1a469e99d6769"
+  },
+  {
     "iconUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/refs/heads/master/BingedReview/icon.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/rockhero1234/cinephile",
@@ -99,6 +216,266 @@
     "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/BingedReview.cs3",
     "name": "BingedReview",
     "fileHash": "sha256-b0793b093256a5c2feb5468099941f4e8b6058682a13f146e973675738991c3e"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=bluphim.art&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 49331,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 16,
+    "internalName": "BluPhimProvider",
+    "description": "FullHD",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/BluPhimProvider.cs3",
+    "name": "BluPhimProvider",
+    "fileHash": "sha256-420e718e5f87c336576ad9cc9f173c094d10bf5655286382b53d33cee21f2de1"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 18691,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "Adippe",
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 10,
+    "internalName": "CanliTV",
+    "description": "Canlı TV",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/CanliTV.cs3",
+    "name": "CanliTV",
+    "fileHash": "sha256-6253a26e4d6dfcd27b5a8381efd5d7c9b1a2fcc1ef23919ffc3425330c1b1e61"
+  },
+  {
+    "name": "Castlevania",
+    "internalName": "Castlevania",
+    "description": "Play Castlevania.",
+    "status": 1,
+    "version": 8,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Castlevania.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_Entertainment_System/master/Named_Boxarts/Castlevania%20(USA).png",
+    "fileSize": 159336,
+    "fileHash": "sha256-273209e7723415b84c0f95e59e1e15975647af2e9128310a71bb5fc1d63ec2ea"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=cizgimax.online&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 18364,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Cartoon"
+    ],
+    "version": 8,
+    "internalName": "CizgiMax",
+    "description": "ÇizgiMax ile Çizgi Film izlemek artık daha kolay, donmadan full hd ve reklamsız bir sitedir, içerisinde 700 den fazla çizgi film olan, Bu site bu işi profesyonelce yapıyor.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/CizgiMax.cs3",
+    "name": "CizgiMax",
+    "fileHash": "sha256-b1d8276ef2bccf329e83089466ec959e5b95a8269cd6d077debaef70efcc3b97"
+  },
+  {
+    "name": "Contra",
+    "internalName": "Contra",
+    "description": "Play Contra.",
+    "status": 1,
+    "version": 10,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Contra.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_Entertainment_System/master/Named_Boxarts/Contra%20(USA).png",
+    "fileSize": 182275,
+    "fileHash": "sha256-256823f14a7568ce0cbec382cb15e5b503b763c17d3bbeb038a19f1cc7c5a924"
+  },
+  {
+    "iconUrl": "https://www.ddizi.im/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 17960,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 10,
+    "internalName": "Ddizi",
+    "description": "DDizi.im için Cloudstream eklentisi",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Ddizi.cs3",
+    "name": "Ddizi",
+    "fileHash": "sha256-6bccedfdf8d45d209a8f452d76058815b1d5ee5fee502371754b69b749b84876"
+  },
+  {
+    "name": "DesertStrike",
+    "internalName": "DesertStrike",
+    "description": "Play Desert Strike.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/DesertStrike.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Desert%20Strike%20Advance%20(USA).png",
+    "fileSize": 2396453,
+    "fileHash": "sha256-0ae15aecc7261848a0a3e736f462ae9fd8a3bb98ee20f2e1afeba626649d0e59"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizibox.live&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 21202,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 23,
+    "internalName": "DiziBox",
+    "description": "Yabancı Dizi izle, Tüm yabancı dizilerin yeni ve eski sezonlarını full hd izleyebileceğiniz elit site.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziBox.cs3",
+    "name": "DiziBox",
+    "fileHash": "sha256-0d568891f9b4cc480dfa257e28ef096d3c6620d920ed1f7fc1c6f4d5da56805e"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizikorea.vip&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 22714,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "AsianDrama"
+    ],
+    "version": 29,
+    "internalName": "DiziKorea",
+    "description": "En Güncel Kore Dizileri izleme Sitesi",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziKorea.cs3",
+    "name": "DiziKorea",
+    "fileHash": "sha256-89f144ada4cb163193ec489a999ba2cfed4371c188baed6c2a9d6cbe569107b3"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=dizilla.club&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 26855,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 39,
+    "internalName": "Dizilla",
+    "description": "Dizilla tüm yabancı dizileri ücretsiz olarak Türkçe Dublaj ve altyazılı seçenekleri ile 1080P kalite izleyebileceğiniz yeni nesil yabancı dizi izleme siteniz.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Dizilla.cs3",
+    "name": "Dizilla",
+    "fileHash": "sha256-a64d070874d26419d66b6f54fc0e4eb20f9c049b5f4dfc6c59a4728d1d9bace0"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizimom.plus&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 30769,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 35,
+    "internalName": "DiziMom",
+    "description": "Binlerce yerli yabancı dizi arşivi, tüm sezonlar, kesintisiz bölümler. Sadece dizi izle, Dizimom heryerde seninle!",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziMom.cs3",
+    "name": "DiziMom",
+    "fileHash": "sha256-b7796bab1ee401b414112bcc2156d836b921aef2490d6daab7b60348765c3913"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizipal952.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 19328,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun",
+      "muratcesmecioglu"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 32,
+    "internalName": "DiziPal",
+    "description": "en yeni dizileri güvenli ve hızlı şekilde sunar.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziPal.cs3",
+    "name": "DiziPal",
+    "fileHash": "sha256-8527073a7c62535fc8a188ddffc24f4c7f1898c947a182f13c8fee89ab9412e0"
+  },
+  {
+    "iconUrl": "https://cdn.diziyou6.com/wp-content/uploads/2020/04/diziyou-favicon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 15734,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 23,
+    "internalName": "DiziYou",
+    "description": "Diziyou en kaliteli Türkçe dublaj ve altyazılı yabancı dizi izleme sitesidir. Güncel ve efsanevi dizileri 1080p Full HD kalitede izlemek için hemen tıkla!",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/DiziYou.cs3",
+    "name": "DiziYou",
+    "fileHash": "sha256-63b4f919fb1b4ebaf89b959b71919b12c87af57e36d951c9bfa6be0ad53d91af"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghive.vip&sz=%size%",
@@ -119,6 +496,25 @@
     "internalName": "Donghub",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3",
     "name": "Donghub"
+  },
+  {
+    "name": "Doom",
+    "internalName": "Doom",
+    "description": "Play DOOM.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Doom.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Doom%20%28USA%2C%20Europe%29.png",
+    "fileSize": 3276326,
+    "fileHash": "sha256-ad8bae0a0cd60e936ae28d120f018d25e3fe24871b0aadae467b6604081df13a"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/dramadrip-icon.png",
@@ -145,6 +541,30 @@
     "fileHash": "sha256-345a94bf04a6c9bbdbd0522d3f3e8c499f498cf84c5c62bfc522d4f3770ba9f4"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=dramafull.cc&sz=%size%",
+    "jarFileSize": 69849,
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/nuyuls79/StreamPlay-movie",
+    "fileSize": 21296,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Phisher98"
+    ],
+    "tvTypes": [
+      "AsianDrama",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 1,
+    "internalName": "DramaFull",
+    "jarUrl": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/builds/DramaFull.jar",
+    "description": "Kdramas and Movies",
+    "url": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/e065fad55d0acf955036102dddec92162c56f6ed/DramaFull.cs3",
+    "name": "DramaFull",
+    "fileHash": "sha256-78d1051e24df6e4403964a83c2f632baa430cb78be7810e09e76dcab5a372f06"
+  },
+  {
     "iconUrl": "https://github.com/Shakzz890/ShakzzCutie/raw/refs/heads/master/Extractors/icon.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
@@ -165,6 +585,166 @@
     "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/Extractors.cs3",
     "name": "Extractors",
     "fileHash": "sha256-b6c73e188efa1d49796b7beec71e1ab3cadda8f308c987dbe23e9e183efb4abd"
+  },
+  {
+    "iconUrl": "https://filmbip.com/uploads/favicon/original/favicon.webp",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 14795,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 11,
+    "internalName": "FilmBip",
+    "description": "Binlerce yerli yabancı dizi arşivi, tüm sezonlar, kesintisiz bölümler. Filmbip heryerde seninle!",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FilmBip.cs3",
+    "name": "FilmBip",
+    "fileHash": "sha256-57e5811ca991f4fe6c27c66f4472456adc08e04c77abda5b819624eae77db789"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=filmmakinesi.film&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 15817,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun",
+      "usdogu"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 40,
+    "internalName": "FilmMakinesi",
+    "description": "Film Makinesi, en yeni ve en güncel filmleri sitemizde full HD kalite farkı ile izleyebilirsiniz. HD film izle denildiğinde akla gelen en kaliteli film izleme sitesi.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FilmMakinesi.cs3",
+    "name": "FilmMakinesi",
+    "fileHash": "sha256-8a629add45bd5315c2afe7b2b123f1910606bcc01cb13813b344c20f3e340741"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.filmmodu17.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 14631,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 15,
+    "internalName": "FilmModu",
+    "description": "Film modun geldiyse yüksek kalitede en yeni filmleri izle, 1080p izleyebileceğiniz reklamsiz film sitesi.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FilmModu.cs3",
+    "name": "FilmModu",
+    "fileHash": "sha256-63d8249b8042720be2118847c755b62f3dbdf57bc034aea6462dcf8292319827"
+  },
+  {
+    "name": "FlappyBird",
+    "internalName": "FlappyBird",
+    "description": "Play Flappy Bird.",
+    "status": 1,
+    "version": 8,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/FlappyBird.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/samuelcust/flappy-bird-assets/master/sprites/yellowbird-midflap.png",
+    "fileSize": 139482,
+    "fileHash": "sha256-998f291e5e05bd192a7a409285fccdc9cc98ecaa546d80315d19c15193cb9bec"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=fullhdfilm.us&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 18064,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 35,
+    "internalName": "FullHDFilm",
+    "description": "Fullhdfilm ile en yeni vizyon filmler Full HD ve kesintisiz film sizlerle. Özgün film arşivimizle en üstün kaliteli film izle keyfini sunuyoruz.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FullHDFilm.cs3",
+    "name": "FullHDFilm",
+    "fileHash": "sha256-c45389f56e12db8e168275dce738fe00ebb5ac76419843dc568721b4aed79bdd"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.fullhdfilmizlesene.de&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 34067,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 27,
+    "internalName": "FullHDFilmizlesene",
+    "description": "Sinema zevkini evinize kadar getirdik. Türkiye'nin lider Film sitesinde, en yeni filmleri Full HD izleyin.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FullHDFilmizlesene.cs3",
+    "name": "FullHDFilmizlesene",
+    "fileHash": "sha256-5b4bf380db7ff905b4974c1f816eb2efdc49bd376f6abd9bc087fd7722693bdd"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=fullporner.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 12380,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Coxju, megix"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 2,
+    "internalName": "FullPorner",
+    "description": "FullPorner is the best free full length porn video site. Choose from millions of hardcore videos that stream quickly and in high quality and only full length",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FullPorner.cs3",
+    "name": "FullPorner",
+    "fileHash": "sha256-cdbf48d9fc5cef1fda4a325441d4236e90862a58f1828b870eaf9f2098060f8b"
+  },
+  {
+    "name": "Game2048",
+    "internalName": "Game2048",
+    "description": "Play 2048.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Game2048.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/gabrielecirulli/2048/master/meta/apple-touch-icon.png",
+    "fileSize": 24226,
+    "fileHash": "sha256-f98d1d59ef05dbbd1f17e59e7749c5a408adc2bb900119cb287e107edd119352"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/masters/GDIndex/icon.ico",
@@ -207,6 +787,150 @@
     "fileHash": "sha256-1bc6f551461dbfa6a851265d8e50ea6a51c3bfc13e8ad5ccebeeea838e5d56bf"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=hdabla.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 13721,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "kerimmkirac"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 2,
+    "internalName": "HdAbla",
+    "description": "Porno film izlemek için HdAbla sitesini ziyaret edin. Keyifle mobil sikiş seyret. Sex ve rokettube seks videolarını güncel olarak Full HD kalitede bedava adult porn sunuyoruz",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/HdAbla.cs3",
+    "name": "HdAbla",
+    "fileHash": "sha256-cb652beb4fa6d583de3cbfdcc30b0fffab72fbe9158114bc3f3ff8673df52215"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=hdfilmcehennemi.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 25407,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "hexated",
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 23,
+    "internalName": "HDFilmCehennemi",
+    "description": "Türkiye'nin en hızlı hd film izleme sitesi",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/HDFilmCehennemi.cs3",
+    "name": "HDFilmCehennemi",
+    "fileHash": "sha256-bff876a7263ee73a44a19006e61008bdec90026e7e4f9b4902c27b1f81a77172"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=hhkungfu.chat&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 29337,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 5,
+    "internalName": "HHkungfuProvider",
+    "description": "Hoạt hình Trung Quốc vietsub",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/HHkungfuProvider.cs3",
+    "name": "HHkungfuProvider",
+    "fileHash": "sha256-0672d60333fd41386090178efbe0158e1352719c93c6d928f3a1b5ac38216d11"
+  },
+  {
+    "iconUrl": "https://hhpanda.city/static/favicon-16x16.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 31393,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 12,
+    "internalName": "HHPandaProvider",
+    "description": "Anime, Hoạt hình Trung Quốc",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/HHPandaProvider.cs3",
+    "name": "HHPandaProvider",
+    "fileHash": "sha256-89ed37b52a53b07afdc901e4ce0c1e514635bfaa771b9e06bcf00f10e7bef622"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=hqporner.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 14542,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Phishe"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 4,
+    "internalName": "Hqporner",
+    "description": "(VPN) Premium Porn with 4K support",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Hqporner.cs3",
+    "name": "Hqporner",
+    "fileHash": "sha256-be7681b95a8f67e70212ced9981b8453401c24c4b5028c20c80e70c10fadbdb2"
+  },
+  {
+    "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ifsalog4.club/&size=128",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 11783,
+    "status": 0,
+    "language": "tr",
+    "authors": [
+      "kraptor"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 3,
+    "internalName": "IfsaLog",
+    "description": "İfsalog Saklanan ne varsa burada ifşa olur ! - Türkiye’nin en güncel ifşa içeriklerini HD kalitede keşfedin – sızdırılmış videolar, özel çekimler ve sosyal medya medyasıyla gerçek ifşalar şimdi burada!",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/IfsaLog.cs3",
+    "name": "IfsaLog",
+    "fileHash": "sha256-f37c3143489b22e8781e95aadd64e844f7c3251899c9ea6dba208b8501d0ec94"
+  },
+  {
+    "iconUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3vCp6N1K4bECoYRQD-cisJF2_6V_Hk01ZhDmoPR2JuM8O5qr4MqrPO1munM9cRlleBBSK6odYhLtDBWv4E3vhPhynlmS5hVVtJZShHoGA5REQ8_3v8SIlccTEqzVQu2UJyNYQdJNrKIfWy66RQeT0D-CcmFCbHPz5023H6p2v5fv4NVloZ5Rqo_yGrIY/s320/iNat-Box-App.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 30945,
+    "status": 3,
+    "language": "tr",
+    "authors": [
+      "JustRelaxable",
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Live"
+    ],
+    "version": 24,
+    "internalName": "InatBox",
+    "description": "İnatBox cloudstream eklentisidir. Sevdiğiniz yayın platformlarını ve canlı maçları burada bulabilirsiniz.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/InatBox.cs3",
+    "name": "InatBox",
+    "fileHash": "sha256-e9fa9ade6d4657d32ea2b9ebb687ead6e2db0c2b0dd833bd8e6613156d9a94ec"
+  },
+  {
     "iconUrl": "https://www.freepnglogos.com/uploads/tv-png/tv-png-box-television-set-cable-screen-icon-31.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
@@ -245,6 +969,45 @@
     "fileHash": "sha256-8760295a88dd29011add8fa04e542209412100631dee948c18559e9e1acc565a"
   },
   {
+    "name": "JackieChan",
+    "internalName": "JackieChan",
+    "description": "Play Jackie Chan Adventures.",
+    "status": 1,
+    "version": 4,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/JackieChan.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Jackie%20Chan%20Adventures%20-%20Legend%20of%20the%20Dark%20Hand%20(USA%2C%20Europe).png",
+    "fileSize": 2384148,
+    "fileHash": "sha256-d260c85265288dc0cd8dc241cf0828fd0e90312c6615dc44c187d5e2851d7c8c"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://jetfilmizle.de&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 16270,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 41,
+    "internalName": "JetFilmizle",
+    "description": "Binlerce Film İzleme Seçeneğiyle En İyi Film İzleme Sitesi",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/JetFilmizle.cs3",
+    "name": "JetFilmizle",
+    "fileHash": "sha256-ab99d0e8b68978bb97d9b244a3382319b108a6d673a78bfda2821e852d4e5962"
+  },
+  {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
     "status": 1,
     "version": 12,
@@ -266,6 +1029,125 @@
     "fileHash": "sha256-31d865e11f19b984e39baa48fa6234b9dd24f70c4a8ff9a1ca178a0dc56966e5"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.kalite18.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 12776,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "kerimmkirac"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 2,
+    "internalName": "Kalite18",
+    "description": "Kalite18, sizlere porno filmleri HD kalite ve türkçe altyazılı olarak izleme keyfi sunmaktadır. Porno ve sex filmlerini anlayarak 31 çekmenin keyfini çıkarın.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Kalite18.cs3",
+    "name": "Kalite18",
+    "fileHash": "sha256-390fb9265a4eb5c3d13f774d9eb2264b36ea8aa7c234a45af4d4c35f42d20775"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=kkphim.vip&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 45350,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 10,
+    "internalName": "KKPhimProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/KKPhimProvider.cs3",
+    "name": "KKPhimProvider",
+    "fileHash": "sha256-06a990f35f26e1704093c7a0b884afccf29b1e59029254f8a30552e1b0efe9d0"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=koreanturk.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 12215,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "AsianDrama"
+    ],
+    "version": 7,
+    "internalName": "KoreanTurk",
+    "description": "Güney Kore sevdalılarının vazgeçemediği ve Türkiye'nin en çok ziyaret edilen Güney Kore Portalı; Koreantürk'e hoşgeldiniz!",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/KoreanTurk.cs3",
+    "name": "KoreanTurk",
+    "fileHash": "sha256-b63c084e39346fa977c9028571e7724dda3415b9a7c9719f6c5f52bb6232e782"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=kultfilmler.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 21639,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 14,
+    "internalName": "KultFilmler",
+    "description": "Kült Filmler özenle en iyi filmleri derler ve iyi bir altyazılı film izleme deneyimi sunmayı amaçlar",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/KultFilmler.cs3",
+    "name": "KultFilmler",
+    "fileHash": "sha256-e3c71eba18cf59b1adf02288b6b3507cea8177a04c77dba85d6ee5a8c42dd3be"
+  },
+  {
+    "name": "LittleMermaid",
+    "internalName": "LittleMermaid",
+    "description": "Play The Little Mermaid.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/LittleMermaid.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Little%20Mermaid%2C%20The%20-%20Magic%20in%20Two%20Kingdoms%20(USA%2C%20Europe)%20(En%2CFr%2CDe%2CEs%2CIt).png",
+    "fileSize": 4475388,
+    "fileHash": "sha256-52f627a6859ca068a75cf37a2cc6922634c88f71c8c1c8e79446f0dd7ebee8a7"
+  },
+  {
+    "name": "MedalOfHonor",
+    "internalName": "MedalOfHonor",
+    "description": "Play Medal of Honor.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/MedalOfHonor.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Medal%20of%20Honor%20-%20Infiltrator%20(USA%2C%20Europe)%20(En%2CFr%2CDe).png",
+    "fileSize": 8336733,
+    "fileHash": "sha256-faaac5ba8d0d670d0bbb9113d0769a233a0857dc8d1f97028f692896575508ee"
+  },
+  {
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/self-similarity/MegaRepo",
     "fileSize": 6929,
@@ -278,6 +1160,88 @@
     "url": "https://raw.githubusercontent.com/self-similarity/MegaRepo/d8b64bab636845a89503469f1c3cb13fdc750a8a/MegaProvider.cs3",
     "name": "MegaProvider",
     "fileHash": "sha256-7062fa86531ad8b8c34244c564adcba97176870a186499adbc369189ac848dbe"
+  },
+  {
+    "name": "MetalSlugAdvance",
+    "internalName": "MetalSlugAdvance",
+    "description": "Play Metal Slug.",
+    "status": 1,
+    "version": 7,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/MetalSlugAdvance.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Metal%20Slug%20Advance%20(USA).png",
+    "fileSize": 3975971,
+    "fileHash": "sha256-7c0295cde52acdf4eb96352f3cbc9ac23fe85fd5b622fc9a15cd99acd947acf6"
+  },
+  {
+    "name": "MinishCap",
+    "internalName": "MinishCap",
+    "description": "Play The Minish Cap.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/MinishCap.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Legend%20of%20Zelda%2C%20The%20-%20The%20Minish%20Cap%20(USA).png",
+    "fileSize": 7732050,
+    "fileHash": "sha256-a69fbcd2aae6c491518b43c396c01a86f04e025684fb8cc40c634cb078423505"
+  },
+  {
+    "iconUrl": "https://netfree2.cc/mobile/img/nf2/icon_x192.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 42637,
+    "status": 1,
+    "language": "hi",
+    "authors": [
+      "Horis, megix",
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 32,
+    "internalName": "NetflixMirror",
+    "description": "Netflix, PrimeVideo Content in Multiple Languages",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/NetflixMirror.cs3",
+    "name": "NetflixMirror",
+    "fileHash": "sha256-a5e1be2d63f105be1141b1e75b05cfe85dbc7ad764376b62f6d78d51e233ddd8"
+  },
+  {
+    "iconUrl": "https://github.com/SaurabhKaperwan/CSX/raw/refs/heads/master/NetflixMirrorProvider/icon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/nuyuls79/StreamPlay-movie",
+    "fileSize": 54916,
+    "status": 1,
+    "authors": [
+      "megix"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AsianDrama",
+      "Anime"
+    ],
+    "version": 44,
+    "internalName": "NetflixMirrorProvider",
+    "description": "Netflix, PrimeVideo, JioHotstar(Hotstar, Disney, Paramount, HBO, Peacock) Content in Multiple Languages",
+    "url": "https://raw.githubusercontent.com/nuyuls79/StreamPlay-movie/e065fad55d0acf955036102dddec92162c56f6ed/NetflixMirrorProvider.cs3",
+    "name": "NetflixMirrorProvider",
+    "fileHash": "sha256-45647b90948e8d8faaf84a106533828cc7e0e19f9a02f30badca5601480b3bf8"
   },
   {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
@@ -302,6 +1266,45 @@
     "fileHash": "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=ohitv.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 21385,
+    "status": 1,
+    "language": "",
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 2,
+    "internalName": "OHiTVProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/OHiTVProvider.cs3",
+    "name": "OHiTVProvider",
+    "fileHash": "sha256-70f347d1c53fa17ea364424e76bfdde5bceee3cb972d9aea4d49721e0a85caed"
+  },
+  {
+    "name": "OnePiece",
+    "internalName": "OnePiece",
+    "description": "Play One Piece.",
+    "status": 1,
+    "version": 16,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/OnePiece.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/One%20Piece%20(USA).png",
+    "fileSize": 2639369,
+    "fileHash": "sha256-fed9d427a4573195b519a48b241ddec5e3bdcd980078eb1d02e90bab5d86b966"
+  },
+  {
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
     "status": 1,
@@ -320,6 +1323,169 @@
     "name": "OnlineMoviesHinditProvider",
     "fileSize": 12001,
     "fileHash": "sha256-5f8a774e0cd991f885642ce72459d856c6ca122d6298fe337a2fea816b08f93e"
+  },
+  {
+    "iconUrl": "https://ophim17.cc/icon_ophim.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 45480,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 10,
+    "internalName": "OPhimProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/OPhimProvider.cs3",
+    "name": "OPhimProvider",
+    "fileHash": "sha256-91a0a034a95efa2c447e4d1b7ffc10d016387d4d084ec7d1d902c943d778ec2e"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=phimlongtieng.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 28862,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 12,
+    "internalName": "PhimLongTiengProvider",
+    "description": "Phim TVB, phim xưa",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/PhimLongTiengProvider.cs3",
+    "name": "PhimLongTiengProvider",
+    "fileHash": "sha256-dc9e958c0df3349181fcf5150c0d4d8ed124f1ea9c63fa6aac86d86ae4b7ab4a"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=phimmoichillk.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 30387,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 9,
+    "internalName": "PhimMoiProvider",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/PhimMoiProvider.cs3",
+    "name": "PhimMoiProvider",
+    "fileHash": "sha256-be092de33162a9a734c4007f1ab2fb1069fd0038545b21625e18849736e08af8"
+  },
+  {
+    "iconUrl": "https://phimtuoitho.site/uploads/system_logo/favicon_66e1bd1b3276b.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 31043,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 5,
+    "internalName": "PhimTuoiThoProvider",
+    "description": "Phim hoạt hình tuổi thơ",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/PhimTuoiThoProvider.cs3",
+    "name": "PhimTuoiThoProvider",
+    "fileHash": "sha256-6ce9aa8f890cdc737f23fdc73d72047c3a8eaa3ef4185b701342e7fb2d5a9dcc"
+  },
+  {
+    "name": "Pokemon",
+    "internalName": "Pokemon",
+    "description": "Play Pokémon FireRed.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Pokemon.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Pokemon%20-%20FireRed%20Version%20(USA%2C%20Europe).png",
+    "fileSize": 5460456,
+    "fileHash": "sha256-03dd8e08e55814dcb3b97433d7a27e380b41cadb71940d73d89ea8ef4bba55e0"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=pornoanne.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 11636,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "kerimmkirac"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 3,
+    "internalName": "PornoAnne",
+    "description": "Porno Anne ile en kaliteli HD porno filmleri burada! Sex videoları ve sikiş sahneleri ile dolu anlara ücretsiz porno izle yazarak ulaş ve sikiş seyret.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/PornoAnne.cs3",
+    "name": "PornoAnne",
+    "fileHash": "sha256-613b3d29ad163e8085a4ed63dfa0a353af40b494aac9b9e03f4221c511793b9f"
+  },
+  {
+    "name": "PrinceOfPersia",
+    "internalName": "PrinceOfPersia",
+    "description": "Play Prince of Persia.",
+    "status": 1,
+    "version": 10,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/PrinceOfPersia.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Prince%20of%20Persia%20-%20The%20Sands%20of%20Time%20(USA)%20(En%2CFr%2CEs).png",
+    "fileSize": 5276231,
+    "fileHash": "sha256-280820c825da13857181a31d2d15b197e4c58bd733c4872d37c95cc6d64f61ae"
+  },
+  {
+    "iconUrl": "https://rectvapp.com.tr/wp-content/uploads/2024/08/cropped-cropped-Screenshot_2023-08-31_at_11.02.55_PM-removebg-preview-32x32.webp",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 24211,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun",
+      "yusiqo",
+      "inatchii",
+      "JustRelaxable"
+    ],
+    "tvTypes": [
+      "Movie",
+      "Live",
+      "TvSeries"
+    ],
+    "version": 97,
+    "internalName": "RecTV",
+    "description": "RecTv APK, Türkiye’deki en popüler Çevrimiçi Medya Akış platformlarından biridir. Filmlerin, Canlı Sporların, Web Dizilerinin ve çok daha fazlasının keyfini ücretsiz çıkarın.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/RecTV.cs3",
+    "name": "RecTV",
+    "fileHash": "sha256-82a0076cd5fbdf3b3011ed91c7d1d501dbfff9a49eb7ac041c25767a303f7f7d"
   },
   {
     "iconUrl": "https://i.ibb.co.com/bMKwcDtH/sarangfilm.png",
@@ -341,6 +1507,87 @@
     "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
     "name": "Sarangfilm",
     "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7"
+  },
+  {
+    "name": "SeriousSam",
+    "internalName": "SeriousSam",
+    "description": "Play Serious Sam.",
+    "status": 1,
+    "version": 4,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/SeriousSam.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Serious%20Sam%20Advance%20(USA)%20(En%2CFr%2CDe).png",
+    "fileSize": 4521782,
+    "fileHash": "sha256-ab4a4d88916095c2c7fba1f64753fad99e5f8f21725c7994e740e6b72a508a24"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.setfilmizle.nl&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 19121,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 24,
+    "internalName": "SetFilmIzle",
+    "description": "Setfilmizle sitemizde, donma yaşamadan Türkçe dublaj ve altyazılı filmleri ile dizileri muhteşem 1080p full HD kalitesinde izleyebilirsiniz.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SetFilmIzle.cs3",
+    "name": "SetFilmIzle",
+    "fileHash": "sha256-89925db46b338ceb70a1b76f4d9d8644cec60190a1b55d54a8c0d9cc502d19b5"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi6.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 18565,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun",
+      "JustRelaxable"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 6,
+    "internalName": "SezonlukDizi",
+    "description": "Güncel ve eski dizileri en iyi görüntü kalitesiyle bulabileceğiniz yabancı dizi izleme siteniz.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SezonlukDizi.cs3",
+    "name": "SezonlukDizi",
+    "fileHash": "sha256-b7ec937edb21f448f823253ca509b388f36abfcdcfae9b8c78cc2b4c5fa21cae"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.sinema.cx&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 14627,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 18,
+    "internalName": "SinemaCX",
+    "description": "Güncel ve en iyi yabancı filmleri yüksek görüntü kalitesinde, Türkçe dublaj ve altyazı seçenekleriyle filmleri full izleyin.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SinemaCX.cs3",
+    "name": "SinemaCX",
+    "fileHash": "sha256-d46229586a7d390f1fe29b5528e0dd900e0802738e7cb9cd7b7259c791e5f373"
   },
   {
     "iconUrl": "https://skymovieshd.mba/images/logo2.png",
@@ -410,6 +1657,103 @@
     "fileHash": "sha256-5d7c4d6f65b974f82d2edf454b3343d309b1dc04b627cb9e519beff66799d7a7"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.superfilmgeldi.info&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 18087,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 22,
+    "internalName": "SuperFilmGeldi",
+    "description": "Hd film izliyerek arkadaşlarınızla ve sevdiklerinizle iyi bir vakit geçirmek istiyorsanız açın bir film eğlenmeye bakın. Bilim kurgu filmleri, aşk drama vahşet aşk romantik sıradışı korku filmlerini izle.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/SuperFilmGeldi.cs3",
+    "name": "SuperFilmGeldi",
+    "fileHash": "sha256-66bbf0715687224699d9aa78a1b767fd91649c6bdb4f61456acdedc81a795ad2"
+  },
+  {
+    "name": "SuperMario",
+    "internalName": "SuperMario",
+    "description": "Play Super Mario Bros.",
+    "status": 1,
+    "version": 14,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/SuperMario.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_Entertainment_System/master/Named_Boxarts/Super%20Mario%20Bros.%20(World).png",
+    "fileSize": 528621,
+    "fileHash": "sha256-38069cae7afba85a23159f91730683e66f2f70e70e67789a607733f9dbf5f23e"
+  },
+  {
+    "name": "TekkenAdvance",
+    "internalName": "TekkenAdvance",
+    "description": "Play Tekken.",
+    "status": 1,
+    "version": 7,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/TekkenAdvance.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Tekken%20Advance%20(USA).png",
+    "fileSize": 6381028,
+    "fileHash": "sha256-883b92e9270805cb8370d3846e54c9f63451ef65961e6acb815b1e99f8db6a24"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.tlctv.com.tr&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 13170,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 19,
+    "internalName": "TLCtr",
+    "description": "TLC tr",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TLCtr.cs3",
+    "name": "TLCtr",
+    "fileHash": "sha256-73e27d07e7eb91323d65da2a66a40a1d00e02a15f64a0041663e962486164a34"
+  },
+  {
+    "name": "TombRaider",
+    "internalName": "TombRaider",
+    "description": "Play Tomb Raider.",
+    "status": 1,
+    "version": 1,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/TombRaider.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Lara%20Croft%20Tomb%20Raider%20-%20Legend%20(USA)%20(En%2CFr%2CDe%2CEs%2CIt).png",
+    "fileSize": 6711363,
+    "fileHash": "sha256-f307bbc357cb585ed7a072e3027711ba086b61e66b6fdd4aca5b107adf4c8d9b"
+  },
+  {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3",
     "status": 1,
     "version": 22,
@@ -435,6 +1779,107 @@
     "fileHash": "sha256-083368334ae440237fc0d799ea3dd087c782f46b177915b477267f7f326a05a1"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tranimaci.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 12674,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 17,
+    "internalName": "TRanimaci",
+    "description": "TRanimeci - Türkiye'nin Online Anime izleme sitesi.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TRanimaci.cs3",
+    "name": "TRanimaci",
+    "fileHash": "sha256-709344d4700bb9921e051aa40c1ef7a40cc2623c1c71decf35b3c4626a8f974c"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=asyalog.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 13687,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 52,
+    "internalName": "TRasyalog",
+    "description": "TRasyalog izleme sitesi.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TRasyalog.cs3",
+    "name": "TRasyalog",
+    "fileHash": "sha256-923f354b9e69efb18876a133aea037922b45d525a4e0554c2ce53d485f12d042"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=www.turkanime.co&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 16212,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Anime"
+    ],
+    "version": 14,
+    "internalName": "TurkAnime",
+    "description": "Türk Anime TV - Türkiye'nin Online Anime izleme sitesi.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/TurkAnime.cs3",
+    "name": "TurkAnime",
+    "fileHash": "sha256-75261e157fa13f900aa322c8be556c007b5a8fcf460ac00882925c9403a6dd52"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tvphim.us&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 39106,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime",
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 11,
+    "internalName": "TvPhimProvider",
+    "description": "720p thuyết minh phim giọng hay",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/TvPhimProvider.cs3",
+    "name": "TvPhimProvider",
+    "fileHash": "sha256-9ad26bc81e569ec9dc814ca84ff4435539f48f1b688704ecd4b036ffb9264072"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=ugurfilm7.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 20875,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 13,
+    "internalName": "UgurFilm",
+    "description": "Yabancı film izle, Türkçe dublaj ve Türkçe altyazılı film seçenekleriyle 720p ve 1080p HD kalitesinde film izle - Uğur Film full hd film izle.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/UgurFilm.cs3",
+    "name": "UgurFilm",
+    "fileHash": "sha256-606e1c37ec8bffafb49ef7a4c7a635c5417a8112ab716786cb2e111a7d055cb0"
+  },
+  {
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/UltimaBeta.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
@@ -453,6 +1898,26 @@
     "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/UltimaBeta.cs3",
     "name": "UltimaBeta",
     "fileHash": "sha256-039cdf7621971da3c7a7153f5802694126e170a286511d3422e64da471e814c9"
+  },
+  {
+    "iconUrl": "https://www.vipphim.biz/assets/other/favicon/vip-phim/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 52281,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Movie"
+    ],
+    "version": 9,
+    "internalName": "VipPhimProvider",
+    "description": "FullHD",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/VipPhimProvider.cs3",
+    "name": "VipPhimProvider",
+    "fileHash": "sha256-c08c8ded220eb1e9c28d5cfbada5b22ff5a7b8cc6cad18952521c9fd95995a09"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=uncutmaza.cc&sz=%size%",
@@ -476,6 +1941,88 @@
     "fileHash": "sha256-2f83a4ffacc087efe993e2719d9e6e2f187bc6289b1ffd3e3e35f6928ed8337a"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=watch2movies.net&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 18369,
+    "status": 3,
+    "language": "en",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 5,
+    "internalName": "Watch2Movies",
+    "description": "!!! YAPIM AŞAMASINDA !!! Watch2Movies is a Free Movies streaming site with zero ads. We let you watch movies online without having to register or paying, with over 10000 movies and TV-Series. You can also Download full movies from Watch2Movies and watch it later if you want.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Watch2Movies.cs3",
+    "name": "Watch2Movies",
+    "fileHash": "sha256-0ac00d41dc9dd3a4913985c894e24305a1477943a02db273cfe8979e0c6ccb49"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=webteizle2.com&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 20734,
+    "status": 1,
+    "language": "tr",
+    "authors": [
+      "keyiflerolsun"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 15,
+    "internalName": "WebteIzle",
+    "description": "Her türlü filmi ister dublaj ister altyazılı, en kaliteli bir şekilde izleyebileceğiniz arşivi en geniş gerçek film izleme siteniz.",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/WebteIzle.cs3",
+    "name": "WebteIzle",
+    "fileHash": "sha256-ec854780f687dd97c04436f6e0d4b4e292099333d9d2a01a4756151f3405e7c3"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://vi.xhspot.com&sz=256",
+    "jarFileSize": 128553,
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 26861,
+    "status": 1,
+    "language": "vi",
+    "authors": [
+      "SIX"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 1,
+    "internalName": "Xhamster",
+    "jarUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/Xhamster.jar",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/Xhamster.cs3",
+    "name": "Xhamster",
+    "fileHash": "sha256-6a4beda637a3799b94d5322b03f9195b1bdf33d74873ed5d52dfd01dceaccb63"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.xnxx.com&sz=256",
+    "jarFileSize": 85357,
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
+    "fileSize": 23156,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "SIX"
+    ],
+    "tvTypes": [
+      "NSFW"
+    ],
+    "version": 2,
+    "internalName": "XNXX",
+    "jarUrl": "https://raw.githubusercontent.com/maarrem/cs-Kekik/builds/XNXX.jar",
+    "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/XNXX.cs3",
+    "name": "XNXX",
+    "fileHash": "sha256-36719a35c7e6126c6383dc37873f74da593ca41e770f036c5ad8d07ebdaba0c4"
+  },
+  {
     "iconUrl": "https://play-lh.googleusercontent.com/gMB8Eq9g9Uq6CXiOHcqatXpx-6HTexAzcQibTgpqAE756Fnt1Jyyp0j7S3UDKPztkA=w480-h960-rw",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
@@ -493,5 +2040,44 @@
     "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/XtreamIPTVProvider.cs3",
     "name": "[Live] XtreamIPTVProvider",
     "fileHash": "sha256-3d30e8f45432043394c399339556fe206c7a563d6cc2caf07160a606dec24782"
+  },
+  {
+    "iconUrl": "https://yanhh3d.net/storage/settings/August2024/YOoAwtlobLbwKhiFwRZv.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://t.me/cloudstream_extension_vn",
+    "fileSize": 32844,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "version": 16,
+    "internalName": "YanHH3DProvider",
+    "description": "Hoạt hình Trung Quốc thuyết minh",
+    "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/YanHH3DProvider.cs3",
+    "name": "YanHH3DProvider",
+    "fileHash": "sha256-a43b811274ae6eb15fdca726c3d407e4daba995991395ca65551725f8e43e364"
+  },
+  {
+    "name": "Zelda",
+    "internalName": "Zelda",
+    "description": "Play The Legend of Zelda.",
+    "status": 1,
+    "version": 8,
+    "apiVersion": 1,
+    "authors": [
+      "errorcode26"
+    ],
+    "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/Zelda.cs3",
+    "tvTypes": [
+      "Others"
+    ],
+    "language": "en",
+    "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_Entertainment_System/master/Named_Boxarts/Legend%20of%20Zelda%2C%20The%20(USA).png",
+    "fileSize": 151849,
+    "fileHash": "sha256-65f7f2d7797f97340af57e82098649e08c2776d896653e45d1527b2d8c090972"
   }
 ]
