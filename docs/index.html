@@ -66,6 +66,8 @@
     .route-card h2{font-size:1.24rem;line-height:1.22;letter-spacing:-.025em;margin:11px 0 9px}
     .route-card p{color:#a6bad0;font-size:.87rem;line-height:1.48;margin:0 0 17px;max-width:none;flex:1}
     .route-card .btn{align-self:flex-start;font-size:.84rem;padding:9px 12px}
+    .route-output{font-size:.78rem;color:#c6dcf2;padding:10px 0 13px;font-weight:650;line-height:1.4}
+    .route-output code{font-size:.9em;color:#9ce7ff}
     .route-note{font-size:.82rem!important;color:#8ea6c0!important;margin:15px auto 0!important;max-width:850px!important;text-align:center}
     .install-heading{font-size:1.1rem;letter-spacing:-.015em;margin:0 0 5px}
     .install-help{font-size:.86rem!important;line-height:1.5;color:#a6bbd0!important;margin:0 0 17px!important;max-width:none!important}
@@ -94,25 +96,28 @@
       <h2 class="route-heading">What would you like to do?</h2>
       <div class="route-grid">
         <article class="route-card">
-          <div class="route-kicker">01 · Everything in one repo</div>
-          <h2>Install the full MegaRepo</h2>
+          <div class="route-kicker">01 · Full catalog · CloudStream</div>
+          <h2>Add the full MegaRepo</h2>
           <p>Add the main repository in CloudStream to browse the complete published catalog. You then install individual extensions in the app.</p>
+          <div class="route-output">Result: full repository added via shortcode <code>admknight</code></div>
           <a class="btn" href="#install-full">Get full repo shortcode ↓</a>
         </article>
         <article class="route-card featured">
-          <div class="route-kicker">02 · Your own selection</div>
-          <h2>Build my personal repository</h2>
+          <div class="route-kicker">02 · Selected-only catalog · Cloudflare Worker</div>
+          <h2>Build a selected-only repository</h2>
           <p>Select up to 100 extensions. Generate a unique CloudStream repository link containing only your choices. No account required.</p>
-          <a class="btn primary" href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Select my extensions ↗</a>
+          <div class="route-output">Result: personal <code>repo.json</code> URL to add in CloudStream</div>
+          <a class="btn primary" href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Create my repository link ↗</a>
         </article>
         <article class="route-card">
-          <div class="route-kicker">03 · Discover first</div>
-          <h2>Explore extensions</h2>
+          <div class="route-kicker">03 · Discovery only · Browser bookmarks</div>
+          <h2>Browse in Extension Explorer</h2>
           <p>Search by name, language or type and bookmark names on this device. The Explorer does not install plugins or build repository links.</p>
+          <div class="route-output">Result: local bookmarks only — nothing added to CloudStream</div>
           <a class="btn" href="explore.html">Open Extension Explorer →</a>
         </article>
       </div>
-      <p class="route-note">Adding a repository makes its extensions available in CloudStream; it never installs them automatically. Install the plugins you want inside the app.</p>
+      <p class="route-note"><strong>These are different tools, not three install buttons.</strong> Full and personal repositories make plugins available in CloudStream; adding either repository does not install plugins. Explorer bookmarks remain in your browser and do not automatically appear in the Builder.</p>
     </div>
 
     <div id="install-full" class="install">
