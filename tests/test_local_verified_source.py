@@ -22,7 +22,7 @@ class LocalVerifiedSourceTests(unittest.TestCase):
 
     def test_source_is_twentyfour_checked_in_immutable_packages(self):
         items = merge.fetch_source_plugins(self.source)
-        self.assertEqual(len(items), 24
+        self.assertEqual(len(items), 24)
         self.assertEqual({p["internalName"] for p in items},
                          set(self.source["include"]))
         self.assertEqual(self.source["priority"], 0)
