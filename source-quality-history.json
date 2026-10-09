@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-09 21:47:09 UTC",
+  "snapshots": [
+    {
+      "generatedAt": "2026-10-09 21:47:09 UTC",
+      "sources": [
+        {
+          "id": "local-pinned-recovery",
+          "ok": true
+        },
+        {
+          "id": "phisher",
+          "ok": true
+        },
+        {
+          "id": "cinephile",
+          "ok": true
+        },
+        {
+          "id": "csx",
+          "ok": true
+        },
+        {
+          "id": "netmirror",
+          "ok": true
+        },
+        {
+          "id": "official",
+          "ok": true
+        },
+        {
+          "id": "redowan",
+          "ok": true
+        },
+        {
+          "id": "vietnam",
+          "ok": true
+        },
+        {
+          "id": "nontonindo",
+          "ok": true
+        },
+        {
+          "id": "rearabi",
+          "ok": true
+        },
+        {
+          "id": "alyss",
+          "ok": true
+        },
+        {
+          "id": "cakestwix",
+          "ok": true
+        },
+        {
+          "id": "cloudx",
+          "ok": true
+        },
+        {
+          "id": "storm-redblacker8",
+          "ok": true
+        },
+        {
+          "id": "desi",
+          "ok": true
+        },
+        {
+          "id": "flummox",
+          "ok": true
+        },
+        {
+          "id": "ayu-games",
+          "ok": true
+        },
+        {
+          "id": "raghav",
+          "ok": true
+        },
+        {
+          "id": "diegon",
+          "ok": true
+        },
+        {
+          "id": "reflex",
+          "ok": true
+        },
+        {
+          "id": "cs-karma",
+          "ok": true
+        },
+        {
+          "id": "cnc",
+          "ok": true
+        },
+        {
+          "id": "kekik",
+          "ok": true
+        },
+        {
+          "id": "cxxx",
+          "ok": true
+        },
+        {
+          "id": "kim-recovery",
+          "ok": true
+        },
+        {
+          "id": "nuyuls-recovery",
+          "ok": true
+        },
+        {
+          "id": "shakzz-recovery",
+          "ok": true
+        },
+        {
+          "id": "mega-provider",
+          "ok": true
+        },
+        {
+          "id": "rowdy-recovery",
+          "ok": true
+        },
+        {
+          "id": "cloudstreamhub-recovery",
+          "ok": true
+        },
+        {
+          "id": "manual-recovery",
+          "ok": true
+        },
+        {
+          "id": "adam-custom",
+          "ok": true
+        },
+        {
+          "id": "dogior",
+          "ok": true
+        },
+        {
+          "id": "gian-fr",
+          "ok": true
+        },
+        {
+          "id": "aniyomi-compat",
+          "ok": true
+        },
+        {
+          "id": "tearrs-vietnamese",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

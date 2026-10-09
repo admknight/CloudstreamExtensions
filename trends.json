@@ -1,40 +1,56 @@
 {
-  "generatedAt": "2026-10-09 07:45:10 UTC",
+  "generatedAt": "2026-10-09 22:03:11 UTC",
   "windows": {
     "7d": {
       "days": 7,
-      "snapshotCount": 7,
-      "checks": 43,
-      "ok": 36,
+      "snapshotCount": 8,
+      "checks": 49,
+      "ok": 41,
       "restricted": 0,
-      "failed": 7,
+      "failed": 8,
+      "redirected": 10,
+      "hostChanged": 10,
+      "dnsErrors": 1,
+      "timeouts": 0,
       "healthyPct": 83.7,
       "reachablePct": 83.7,
       "providers": [
         {
           "module": "Cinedoze",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "Cinemaluxe",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 2,
+          "hostChanged": 2,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "CinevezProvider",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
@@ -44,33 +60,49 @@
           "ok": 1,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "Full4Movies",
-          "checks": 7,
+          "checks": 8,
           "ok": 0,
           "restricted": 0,
-          "failed": 7,
+          "failed": 8,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 1,
+          "timeouts": 0,
           "healthyPct": 0.0,
           "reachablePct": 0.0
         },
         {
           "module": "India4Movies",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 8,
+          "hostChanged": 8,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "World4uFree",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         }
@@ -78,38 +110,54 @@
     },
     "30d": {
       "days": 30,
-      "snapshotCount": 7,
-      "checks": 43,
-      "ok": 36,
+      "snapshotCount": 8,
+      "checks": 49,
+      "ok": 41,
       "restricted": 0,
-      "failed": 7,
+      "failed": 8,
+      "redirected": 10,
+      "hostChanged": 10,
+      "dnsErrors": 1,
+      "timeouts": 0,
       "healthyPct": 83.7,
       "reachablePct": 83.7,
       "providers": [
         {
           "module": "Cinedoze",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "Cinemaluxe",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 2,
+          "hostChanged": 2,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "CinevezProvider",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
@@ -119,33 +167,49 @@
           "ok": 1,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "Full4Movies",
-          "checks": 7,
+          "checks": 8,
           "ok": 0,
           "restricted": 0,
-          "failed": 7,
+          "failed": 8,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 1,
+          "timeouts": 0,
           "healthyPct": 0.0,
           "reachablePct": 0.0
         },
         {
           "module": "India4Movies",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 8,
+          "hostChanged": 8,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         },
         {
           "module": "World4uFree",
-          "checks": 7,
-          "ok": 7,
+          "checks": 8,
+          "ok": 8,
           "restricted": 0,
           "failed": 0,
+          "redirected": 0,
+          "hostChanged": 0,
+          "dnsErrors": 0,
+          "timeouts": 0,
           "healthyPct": 100.0,
           "reachablePct": 100.0
         }
@@ -157,43 +221,65 @@
       "generatedAt": "2026-10-06 02:39:46 UTC",
       "ok": 6,
       "restricted": 0,
-      "failed": 1
+      "failed": 1,
+      "hostChanged": 0,
+      "redirected": 0
     },
     {
       "generatedAt": "2026-10-06 03:04:45 UTC",
       "ok": 5,
       "restricted": 0,
-      "failed": 1
+      "failed": 1,
+      "hostChanged": 0,
+      "redirected": 0
     },
     {
       "generatedAt": "2026-10-06 03:05:06 UTC",
       "ok": 5,
       "restricted": 0,
-      "failed": 1
+      "failed": 1,
+      "hostChanged": 0,
+      "redirected": 0
     },
     {
       "generatedAt": "2026-10-06 07:52:58 UTC",
       "ok": 5,
       "restricted": 0,
-      "failed": 1
+      "failed": 1,
+      "hostChanged": 0,
+      "redirected": 0
     },
     {
       "generatedAt": "2026-10-07 07:31:43 UTC",
       "ok": 5,
       "restricted": 0,
-      "failed": 1
+      "failed": 1,
+      "hostChanged": 0,
+      "redirected": 0
     },
     {
       "generatedAt": "2026-10-08 07:48:26 UTC",
       "ok": 5,
       "restricted": 0,
-      "failed": 1
+      "failed": 1,
+      "hostChanged": 0,
+      "redirected": 0
     },
     {
       "generatedAt": "2026-10-09 07:45:10 UTC",
       "ok": 5,
       "restricted": 0,
-      "failed": 1
+      "failed": 1,
+      "hostChanged": 0,
+      "redirected": 0
+    },
+    {
+      "generatedAt": "2026-10-09 22:03:11 UTC",
+      "ok": 5,
+      "restricted": 0,
+      "failed": 1,
+      "hostChanged": 2,
+      "redirected": 2
     }
   ]
 }

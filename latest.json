@@ -1,10 +1,14 @@
 {
-  "generatedAt": "2026-10-09 07:45:10 UTC",
+  "generatedAt": "2026-10-09 22:03:11 UTC",
   "providerCount": 6,
   "summary": {
     "ok": 5,
     "restricted": 0,
-    "failed": 1
+    "failed": 1,
+    "redirected": 2,
+    "hostChanged": 2,
+    "dnsErrors": 1,
+    "timeouts": 0
   },
   "providers": [
     {
@@ -15,7 +19,12 @@
       "httpStatus": 200,
       "finalUrl": "https://cinedoze.tv",
       "error": "",
-      "attempts": 1
+      "attempts": 1,
+      "outcome": "ok",
+      "redirected": false,
+      "hostChanged": false,
+      "configuredHost": "cinedoze.tv",
+      "finalHost": "cinedoze.tv"
     },
     {
       "module": "Cinemaluxe",
@@ -25,7 +34,12 @@
       "httpStatus": 200,
       "finalUrl": "https://cinemalux.beauty/",
       "error": "",
-      "attempts": 1
+      "attempts": 1,
+      "outcome": "ok",
+      "redirected": true,
+      "hostChanged": true,
+      "configuredHost": "cinemalux.baby",
+      "finalHost": "cinemalux.beauty"
     },
     {
       "module": "CinevezProvider",
@@ -35,7 +49,12 @@
       "httpStatus": 200,
       "finalUrl": "https://cinevez.buzz",
       "error": "",
-      "attempts": 1
+      "attempts": 1,
+      "outcome": "ok",
+      "redirected": false,
+      "hostChanged": false,
+      "configuredHost": "cinevez.buzz",
+      "finalHost": "cinevez.buzz"
     },
     {
       "module": "Full4Movies",
@@ -45,7 +64,12 @@
       "httpStatus": null,
       "finalUrl": "https://fullmoviesmx.com",
       "error": "[Errno -2] Name or service not known",
-      "attempts": 3
+      "attempts": 3,
+      "outcome": "dns_error",
+      "redirected": false,
+      "hostChanged": false,
+      "configuredHost": "fullmoviesmx.com",
+      "finalHost": "fullmoviesmx.com"
     },
     {
       "module": "India4Movies",
@@ -55,7 +79,12 @@
       "httpStatus": 200,
       "finalUrl": "https://go6.india4movies.net/",
       "error": "",
-      "attempts": 1
+      "attempts": 1,
+      "outcome": "ok",
+      "redirected": true,
+      "hostChanged": true,
+      "configuredHost": "go3.india4movies.net",
+      "finalHost": "go6.india4movies.net"
     },
     {
       "module": "World4uFree",
@@ -65,7 +94,12 @@
       "httpStatus": 200,
       "finalUrl": "https://worldfree4u.blog",
       "error": "",
-      "attempts": 1
+      "attempts": 1,
+      "outcome": "ok",
+      "redirected": false,
+      "hostChanged": false,
+      "configuredHost": "worldfree4u.blog",
+      "finalHost": "worldfree4u.blog"
     }
   ]
 }
