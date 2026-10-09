@@ -59,6 +59,14 @@ jobs:
           find "$GITHUB_WORKSPACE/source" -path '*/build/*.cs3' -type f -exec cp {} . \;
           find "$GITHUB_WORKSPACE/source" -path '*/build/*.jar' -type f -exec cp {} . \;
           cp "$GITHUB_WORKSPACE/source"/build/plugins.json plugins.json
+          python3 "$GITHUB_WORKSPACE/source/tools/provider_architecture_audit.py" \
+            --root "$GITHUB_WORKSPACE/source" \
+            --json "$GITHUB_WORKSPACE/source/provider-architecture.json" \
+            --markdown "$GITHUB_WORKSPACE/source/PROVIDER_ARCHITECTURE.md" \
+            --filter-plugins plugins.json \
+            --filter-artifacts-dir .
+          cp "$GITHUB_WORKSPACE/source/PROVIDER_ARCHITECTURE.md" PROVIDER_ARCHITECTURE.md
+          cp "$GITHUB_WORKSPACE/source/provider-architecture.json" provider-architecture.json
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -149,6 +157,7 @@ jobs:
               '- GitHub Actions compiles all discovered custom provider modules.',
               '- Successful builds publish `.cs3`, `.jar`, `plugins.json`, and this README automatically.',
               '- The custom feed automatically triggers the production Mega Repo aggregation.',
+              '- A static architecture audit removes incomplete providers that do not implement the CloudStream playback contract.',
               '- A separate scheduled workflow checks configured provider websites and reports runtime availability.',
               '',
               '## Branch files',
@@ -157,6 +166,8 @@ jobs:
               '- `plugins.json` — generated custom plugin catalog.',
               '- `*.cs3` — installable CloudStream plugin packages.',
               '- `*.jar` — generated plugin JARs.',
+              '- `PROVIDER_ARCHITECTURE.md` — source-level CloudStream provider contract audit.',
+              '- `provider-architecture.json` — machine-readable architecture audit.',
               '',
               '## Disclaimer',
               '',
