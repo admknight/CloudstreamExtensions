@@ -11,16 +11,20 @@ on:
       - '*/src/main/kotlin/**'
       - 'tools/custom_provider_health.py'
       - 'tools/source_quality.py'
+      - 'tools/legacy_checksum_inventory.py'
       - 'tests/test_custom_provider_health_drift.py'
       - 'tests/test_source_quality.py'
+      - 'tests/test_legacy_checksum_inventory.py'
       - '.github/workflows/health.yml'
 
   pull_request:
     paths:
       - 'tools/custom_provider_health.py'
       - 'tools/source_quality.py'
+      - 'tools/legacy_checksum_inventory.py'
       - 'tests/test_custom_provider_health_drift.py'
       - 'tests/test_source_quality.py'
+      - 'tests/test_legacy_checksum_inventory.py'
       - '.github/workflows/health.yml'
 
 concurrency:
@@ -45,9 +49,10 @@ jobs:
       - name: Regression-check advisory monitor and source scoring
         run: |
           set -euo pipefail
-          python3 -m py_compile tools/custom_provider_health.py tools/source_quality.py
+          python3 -m py_compile tools/custom_provider_health.py tools/source_quality.py tools/legacy_checksum_inventory.py
           python3 -m unittest discover -s tests -p test_custom_provider_health_drift.py -v
           python3 -m unittest discover -s tests -p test_source_quality.py -v
+          python3 -m unittest discover -s tests -p test_legacy_checksum_inventory.py -v
       - name: Reconcile actual published sources in a read-only scratch directory
         run: |
           set -euo pipefail
@@ -58,6 +63,12 @@ jobs:
             --history-out quality-scratch/history.json \
             --json quality-scratch/quality.json \
             --markdown quality-scratch/SOURCE_QUALITY.md
+          python3 tools/legacy_checksum_inventory.py \
+            --plugins baseline-builds/plugins.json \
+            --provenance baseline-builds/provenance.json \
+            --report baseline-builds/merge-report.json \
+            --json quality-scratch/legacy-inventory.json \
+            --markdown quality-scratch/LEGACY_CHECKSUM_INVENTORY.md
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -67,6 +78,9 @@ jobs:
           assert sum(x['uniqueContributed'] for x in report['sources'])==source['uniquePlugins']
           assert all(0<=x['score']<=100 for x in report['sources'])
           assert report['scoring']['sourceSelectionAffected'] is False
+          legacy=json.loads(Path('quality-scratch/legacy-inventory.json').read_text())
+          assert legacy['legacyWithoutSha256Count']==source['integrityHealth']['sizeOnlyLegacyCandidateAccepted']
+          assert legacy['releaseAuthorized'] is False
           PY
 
   health:
@@ -118,6 +132,16 @@ jobs:
             --json health-history/source-quality.json \
             --markdown health-history/SOURCE_QUALITY.md
 
+      - name: Inventory legacy checksum gaps without changing package metadata
+        run: |
+          set -euo pipefail
+          python3 tools/legacy_checksum_inventory.py \
+            --plugins published-catalog/plugins.json \
+            --provenance published-catalog/provenance.json \
+            --report published-catalog/merge-report.json \
+            --json health-history/legacy-checksum-inventory.json \
+            --markdown health-history/LEGACY_CHECKSUM_INVENTORY.md
+
       - name: Publish health summary
         if: always()
         run: |
@@ -139,7 +163,7 @@ jobs:
           cd health-history
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add history.json latest.json trends.json source-quality.json source-quality-history.json SOURCE_QUALITY.md
+          git add history.json latest.json trends.json source-quality.json source-quality-history.json SOURCE_QUALITY.md legacy-checksum-inventory.json LEGACY_CHECKSUM_INVENTORY.md
           if git diff --cached --quiet; then
             echo "No health-history changes to publish."
             exit 0
@@ -170,4 +194,6 @@ jobs:
             health-history/source-quality.json
             health-history/source-quality-history.json
             health-history/SOURCE_QUALITY.md
+            health-history/legacy-checksum-inventory.json
+            health-history/LEGACY_CHECKSUM_INVENTORY.md
           if-no-files-found: warn
