@@ -1,0 +1,69 @@
+name: Sync Full Catalog Integrity Incidents
+
+on:
+  workflow_run:
+    workflows: ["Full Catalog Integrity Review (Read Only)"]
+    types: [completed]
+    branches: [master]
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+
+concurrency:
+  group: full-integrity-incident-sync
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'master' && github.event.workflow_run.event != 'pull_request' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout trusted issue scripts
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          persist-credentials: false
+      - name: Validate completed master review run origin
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          case "$RUN_ID" in ''|*[!0-9]*) echo "Bad source run ID"; exit 1;; esac
+          gh api "/repos/$GITHUB_REPOSITORY/actions/runs/$RUN_ID" > source-run.json
+          python3 tools/validate_integrity_review_origin.py \
+            --run-json source-run.json --repository "$GITHUB_REPOSITORY" \
+            --run-id "$RUN_ID"
+      - name: Download exact full review evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" \
+            --name "full-integrity-review-$RUN_ID" --dir evidence
+          test -s evidence/review-preview/verification-report.json
+          test -s evidence/review-compatibility/merge-report.json
+      - name: Upsert only changed candidate exception evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          python3 tools/sync_candidate_integrity_issues.py \
+            --review evidence/review-compatibility/merge-report.json \
+            --verification evidence/review-preview/verification-report.json \
+            --run-id "$RUN_ID"
+      - name: Retain origin and incident evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-incident-processing-${{ github.run_id }}
+          path: |
+            source-run.json
+            evidence/review-preview/verification-report.json
+            evidence/review-compatibility/merge-report.json
+          if-no-files-found: warn
+          retention-days: 14
