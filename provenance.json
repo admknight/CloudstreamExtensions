@@ -4180,23 +4180,6 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IPTVPlayer.cs3"
   },
   {
-    "plugin": "IPTVProvider",
-    "originalName": "IPTVProvider",
-    "publishedName": "[Live] IPTVProvider",
-    "category": "Live",
-    "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 9,
-    "sourceId": "tearrs-vietnamese",
-    "sourceName": "Tearrs Vietnamese Extension",
-    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
-    "originalAuthors": [
-      "anhdaden"
-    ],
-    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/IPTVProvider.cs3"
-  },
-  {
     "plugin": "IStreamFlare",
     "originalName": "IStreamFlare",
     "publishedName": "[Indian] IStreamFlare",

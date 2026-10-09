@@ -1,23 +1,23 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-09 02:21:33 UTC**
+Generated: **2026-10-09 03:31:30 UTC**
 
-Production catalog: **542 reachable plugins** · **35 healthy sources** · **0 package failures**
+Production catalog: **541 reachable plugins** · **35 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **0**
 - Updated: **0**
-- Removed: **0**
-- Unchanged: **542**
+- Removed: **1**
+- Unchanged: **541**
 
-## Catalog changes
+## Removed plugins
 
-No plugin or source changes were detected in this production refresh.
+- **IPTVProvider** v9 — Tearrs Vietnamese Extension
 
 ## Production health
 
-- Reachable packages: **542**
+- Reachable packages: **541**
 - Package failures: **0**
 - Healthy sources: **35**
 - Failed sources: **0**

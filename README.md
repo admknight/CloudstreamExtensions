@@ -11,7 +11,7 @@
   <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">
     <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Custom Provider Health">
   </a>
-  <img src="https://img.shields.io/badge/plugins-542-2ea44f?style=flat-square" alt="542 plugins">
+  <img src="https://img.shields.io/badge/plugins-541-2ea44f?style=flat-square" alt="541 plugins">
   <img src="https://img.shields.io/badge/sources-35-blue?style=flat-square" alt="35 active sources">
   <img src="https://img.shields.io/badge/package%20failures-0-brightgreen?style=flat-square" alt="0 package failures">
   <a href="https://github.com/admknight/CloudstreamExtensions/stargazers">
@@ -78,11 +78,11 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-09 02:21:33 UTC**
+Last successful refresh: **2026-10-09 03:31:30 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 542 | 0 | 35 | 0 | 0 | 0 | 0 |
+| 541 | 0 | 35 | 0 | 0 | 0 | 1 |
 
 ## 🗂️ Browse by section
 
@@ -95,7 +95,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | 🇮🇳 **Indian** | `[Indian]` | 82 |
 | 🌙 **Arabic** | `[Arabic]` | 36 |
 | 🌏 **Asian** | `[Asian]` | 49 |
-| 📡 **Live** | `[Live]` | 47 |
+| 📡 **Live** | `[Live]` | 46 |
 | 🏟️ **Sports** | `[Sports]` | 2 |
 | 🎮 **Games** | `[Games]` | 21 |
 | 🛠️ **Tools** | `[Tools]` | 12 |
@@ -140,7 +140,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [doGior's Had Enough](https://github.com/doGior/doGiorsHadEnough) | ✅ OK | 15 | 9 | 0 | 6 |
 | [Gian-Fr Italian Provider](https://github.com/Gian-Fr/ItalianProvider) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Aniyomi Compat](https://github.com/CranberrySoup/AniyomiCompatExtension) | ✅ OK | 1 | 1 | 0 | 0 |
-| [Tearrs Vietnamese Extension](https://gitlab.com/tearrs/cloudstream-vietnamese) | ✅ OK | 7 | 7 | 0 | 0 |
+| [Tearrs Vietnamese Extension](https://gitlab.com/tearrs/cloudstream-vietnamese) | ✅ OK | 7 | 6 | 0 | 0 |
 
 ### Package failures
 
@@ -152,7 +152,7 @@ A package is considered reachable when its published .cs3 URL responds successfu
 
 ## 📦 Plugins by section
 
-**542 plugins are currently published and package-reachable.**
+**541 plugins are currently published and package-reachable.**
 
 ### 🎬 Movies — 135 plugins
 
@@ -555,7 +555,7 @@ CloudStream display prefix: `[Asian]`
 | 48 | **WGFilm21** | 1 | id | Movie, TvSeries | CloudX-V2 | — |
 | 49 | **YlnimeProvider** | 6 | id | Anime, TvSeries, Movie | TheAlyss Repo | — |
 
-### 📡 Live — 47 plugins
+### 📡 Live — 46 plugins
 
 CloudStream display prefix: `[Live]`
 
@@ -580,34 +580,33 @@ CloudStream display prefix: `[Live]`
 | 17 | **IndianTVProvider** | 6 |  | Live | Kim Recovery Builds | — |
 | 18 | **IPTV** | 1 |  | Live | doGior's Had Enough | — |
 | 19 | **IPTVPlayer** | 9 | hi | Live | Phisher Repo | — |
-| 20 | **IPTVProvider** | 9 |  | Live | Tearrs Vietnamese Extension | — |
-| 21 | **IzziGoProvider** | 16 | mx | Movie, TvSeries, Live | Storm-ext Fork by redblacker8 | — |
-| 22 | **LIVETVProvider** | 37 | en | Live | raghav repo | — |
-| 23 | **LivXowProvider** | 19 | ta | Live | CNC Repo (All Language) | — |
-| 24 | **NetNaija-box** | 2 | en | Movie, TvSeries, Live | raghav repo | — |
-| 25 | **PlayFyProvider** | 13 | ta | Live | CNC Repo (All Language) | — |
-| 26 | **PlayZTVProvider** | 41 | ta | Live | CNC Repo (All Language) | — |
-| 27 | **PublicSportsIPTV** | 5 | en | Live | Phisher Repo | — |
-| 28 | **QuickIPTV** | 8 | en | Live | Phisher Repo | — |
-| 29 | **RadioIndiaProvider** | 33 | ta | Live | CNC Repo (All Language) | — |
-| 30 | **RecTV** | 97 | tr | Movie, Live, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
-| 31 | **ReplayZone** | 4 | en | Live | raghav repo | — |
-| 32 | **SKTechProvider** | 57 | ta | Live | CNC Repo (All Language) | — |
-| 33 | **SportzxProvider** | 24 | ta | Live | CNC Repo (All Language) | — |
-| 34 | **StreamCenter** | 11 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | — |
-| 35 | **Streamed** | 29 | en | Live | cs-karma | — |
-| 36 | **StreamedPk** | 12 | en | Live | raghav repo | — |
-| 37 | **StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | — |
-| 38 | **Syrialive** | 1 | ar | TvSeries, Live | Re-3arabi | — |
-| 39 | **TamilUltraProvider** | 40 | ta | Live | CNC Repo (All Language) | — |
-| 40 | **TV** | 5 |  | Live | DieGon Repository | — |
-| 41 | **TVGarden** | 11 | en | Live | cs-karma | — |
-| 42 | **TwitchProvider** | 2 |  | Live | ReCloudStream Official Extensions | — |
-| 43 | **Vavoo** | 7 |  | Live | doGior's Had Enough | — |
-| 44 | **WatchWrestling** | 18 | en | Live | cs-karma | — |
-| 45 | **XtreamIPTVProvider** | 1 |  | Live | Tearrs Vietnamese Extension | — |
-| 46 | **Yacintv** | 1 | ar | TvSeries, Live, Movie | Re-3arabi | — |
-| 47 | **YoutubeProvider** | 1 |  | Other, Live, TvSeries | ReCloudStream Official Extensions | — |
+| 20 | **IzziGoProvider** | 16 | mx | Movie, TvSeries, Live | Storm-ext Fork by redblacker8 | — |
+| 21 | **LIVETVProvider** | 37 | en | Live | raghav repo | — |
+| 22 | **LivXowProvider** | 19 | ta | Live | CNC Repo (All Language) | — |
+| 23 | **NetNaija-box** | 2 | en | Movie, TvSeries, Live | raghav repo | — |
+| 24 | **PlayFyProvider** | 13 | ta | Live | CNC Repo (All Language) | — |
+| 25 | **PlayZTVProvider** | 41 | ta | Live | CNC Repo (All Language) | — |
+| 26 | **PublicSportsIPTV** | 5 | en | Live | Phisher Repo | — |
+| 27 | **QuickIPTV** | 8 | en | Live | Phisher Repo | — |
+| 28 | **RadioIndiaProvider** | 33 | ta | Live | CNC Repo (All Language) | — |
+| 29 | **RecTV** | 97 | tr | Movie, Live, TvSeries | Turkish Providers Repository \| @KekikAkademi | — |
+| 30 | **ReplayZone** | 4 | en | Live | raghav repo | — |
+| 31 | **SKTechProvider** | 57 | ta | Live | CNC Repo (All Language) | — |
+| 32 | **SportzxProvider** | 24 | ta | Live | CNC Repo (All Language) | — |
+| 33 | **StreamCenter** | 11 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | — |
+| 34 | **Streamed** | 29 | en | Live | cs-karma | — |
+| 35 | **StreamedPk** | 12 | en | Live | raghav repo | — |
+| 36 | **StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | — |
+| 37 | **Syrialive** | 1 | ar | TvSeries, Live | Re-3arabi | — |
+| 38 | **TamilUltraProvider** | 40 | ta | Live | CNC Repo (All Language) | — |
+| 39 | **TV** | 5 |  | Live | DieGon Repository | — |
+| 40 | **TVGarden** | 11 | en | Live | cs-karma | — |
+| 41 | **TwitchProvider** | 2 |  | Live | ReCloudStream Official Extensions | — |
+| 42 | **Vavoo** | 7 |  | Live | doGior's Had Enough | — |
+| 43 | **WatchWrestling** | 18 | en | Live | cs-karma | — |
+| 44 | **XtreamIPTVProvider** | 1 |  | Live | Tearrs Vietnamese Extension | — |
+| 45 | **Yacintv** | 1 | ar | TvSeries, Live, Movie | Re-3arabi | — |
+| 46 | **YoutubeProvider** | 1 |  | Other, Live, TvSeries | ReCloudStream Official Extensions | — |
 
 ### 🏟️ Sports — 2 plugins
 

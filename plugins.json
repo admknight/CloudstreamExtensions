@@ -5053,24 +5053,6 @@
     "fileHash": "sha256-4280084e15d3beee2ffc8c7d41767b98a2cbac64cefb75c52e61d0b86b49f976"
   },
   {
-    "iconUrl": "https://www.shutterstock.com/image-vector/iptv-vector-line-icon-ip-260nw-1841427610.jpg",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 30703,
-    "status": 1,
-    "authors": [
-      "Adam Knight (Maintainer)"
-    ],
-    "tvTypes": [
-      "Live"
-    ],
-    "version": 9,
-    "internalName": "IPTVProvider",
-    "description": "Cần nhập link IPTV để xem",
-    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/IPTVProvider.cs3",
-    "name": "[Live] IPTVProvider"
-  },
-  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IStreamFlare.cs3",
     "status": 1,
     "version": 6,
