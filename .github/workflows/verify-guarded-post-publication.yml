@@ -5,6 +5,12 @@ on:
     workflows: ["Update Aggregated Repository"]
     types: [completed]
     branches: [master]
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/verify-guarded-post-publication.yml'
+      - 'tools/validate_guarded_post_publish.py'
+      - 'tools/resolve_verified_integrity_issues.py'
 
 permissions:
   contents: read
@@ -15,7 +21,7 @@ concurrency:
 
 jobs:
   verify:
-    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository }}
+    if: ${{ github.event_name == 'push' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository) }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -63,5 +69,40 @@ jobs:
             full-published-audit.json
             full-published-audit.md
             guarded-post-publish-result.json
+            published/plugins.json
+            published/provenance.json
+            published/merge-report.json
           retention-days: 21
           if-no-files-found: warn
+
+  resolve:
+    needs: verify
+    if: ${{ needs.verify.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Checkout trusted master issue resolver only
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          persist-credentials: false
+      - name: Load exact independent audited catalog and verdict
+        uses: actions/download-artifact@v4
+        with:
+          name: guarded-published-catalog-audit-${{ github.run_id }}
+          path: evidence
+      - name: Resolve only individually proven fixed static integrity incidents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 tools/resolve_verified_integrity_issues.py \
+            --audit evidence/full-published-audit.json \
+            --guarded-verdict evidence/guarded-post-publish-result.json \
+            --report evidence/published/merge-report.json \
+            --plugins evidence/published/plugins.json \
+            --provenance evidence/published/provenance.json \
+            --run-id "$GITHUB_RUN_ID"
