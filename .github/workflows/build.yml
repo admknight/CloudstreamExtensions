@@ -77,6 +77,86 @@ jobs:
             exit 1
           fi
 
+      - name: Verify individual candidates and freeze exact previous bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cp -a source/merged source/upstream-candidate
+          python3 source/tools/index_immutable_recovery.py \
+            --published builds/plugins.json \
+            --provenance builds/provenance.json \
+            --output pinned-published-recovery.json \
+            --max-history 16 \
+            --workers 6
+          python3 source/tools/plan_per_plugin_selection.py \
+            --candidate source/upstream-candidate/plugins.json \
+            --previous builds/plugins.json \
+            --candidate-provenance source/upstream-candidate/provenance.json \
+            --previous-provenance builds/provenance.json \
+            --approvals source/trusted_binary_approvals.json \
+            --recovery-index pinned-published-recovery.json \
+            --output-dir source/verified-selection \
+            --workers 8
+
+      - name: Reconcile safe updates while preserving existing plugins
+        run: |
+          set -euo pipefail
+          python3 source/tools/finalize_guarded_release.py \
+            --candidate-dir source/upstream-candidate \
+            --previous-dir builds \
+            --selection-dir source/verified-selection \
+            --output-dir source/guarded-release \
+            --max-deferred 24 \
+            --verify-deferred-urls
+          python3 - <<'PY'
+          import json, shutil
+          from pathlib import Path
+          previous=json.loads(Path("builds/plugins.json").read_text())
+          assurance=json.loads(Path("source/guarded-release/guarded-release-assurance.json").read_text())
+          status=json.loads(Path("source/guarded-release/merge-report.json").read_text())
+          files=assurance["files"]
+          required={"plugins.json","repo.json","merge-report.json","provenance.json",
+                    "RELEASE_NOTES.md","release-diff.json","STATUS.md","README.md"}
+          assert set(files)==required
+          assert assurance["releaseEligible"] is True
+          assert assurance["actualPublicationPerformed"] is False
+          assert assurance["publishedCountBefore"]==len(previous)
+          assert assurance["selectedCount"]>=len(previous)
+          assert status["changes"]["removed"]==0
+          assert status["sourceHealth"]["failed"]==0
+          assert status["integrityHealth"]["unverifiedPreviousCarried"]<=24
+          assert status["releaseEligible"] is True
+          for name in sorted(required):
+              path=Path("source/guarded-release")/name
+              if not path.is_file() or not path.stat().st_size:
+                  raise SystemExit("Incomplete guarded file: "+name)
+          for name in sorted(required):
+              shutil.copyfile(Path("source/guarded-release")/name,
+                              Path("source/merged")/name)
+          print("Guarded catalog promotion staged, no removal or unverified binary approval.")
+          with open(__import__('os').environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write("\n### Guarded binary-integrity publication gate\n\n")
+              out.write(f"- Preserved original plugin identities: **{len(previous)}**\n")
+              out.write(f"- Final catalog entries: **{status['uniquePlugins']}**\n")
+              out.write(f"- Deferred unverified upstream updates: **{assurance['deferredUnverifiedCount']}**\n")
+              out.write(f"- Byte-identical previous commit pins retained: **{assurance['immutableRecoveredCount']}**\n")
+              out.write("- No unreviewed changed binary was authorized.\n")
+          PY
+
+      - name: Upload guarded publication trace
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guarded-catalog-verification-${{ github.run_id }}
+          path: |
+            pinned-published-recovery.json
+            source/verified-selection/integrity-selection.json
+            source/verified-selection/verification-report.json
+            source/guarded-release/guarded-release-assurance.json
+          retention-days: 21
+          if-no-files-found: warn
+
       - name: Safety Gate
         run: |
           python3 - << 'PY'
