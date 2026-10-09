@@ -1,0 +1,51 @@
+name: Audit Published Plugin Integrity
+
+on:
+  schedule:
+    - cron: '43 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/audit_package_integrity.py'
+      - 'tests/test_audit_package_integrity.py'
+      - '.github/workflows/audit-package-integrity.yml'
+  pull_request:
+    paths:
+      - 'tools/audit_package_integrity.py'
+      - 'tests/test_audit_package_integrity.py'
+      - '.github/workflows/audit-package-integrity.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audit-published-packages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests (no network)
+        run: python3 -m unittest discover -s tests -p test_audit_package_integrity.py -v
+      - name: Compare live published and upstream metadata, sample package hashes
+        run: python3 tools/audit_package_integrity.py --json-report audit-report.json --markdown-report audit-summary.md
+      - name: Publish verification summary
+        if: always()
+        run: |
+          if [ -f audit-summary.md ]; then cat audit-summary.md >> "$GITHUB_STEP_SUMMARY"; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: plugin-integrity-audit-${{ github.run_id }}
+          path: |
+            audit-report.json
+            audit-summary.md
+          if-no-files-found: warn
+          retention-days: 14
