@@ -2,6 +2,8 @@ import hashlib
 import importlib.util
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
+import json
 
 SCRIPT = Path(__file__).resolve().parents[1] / 'tools' / 'audit_package_integrity.py'
 spec = importlib.util.spec_from_file_location('audit_package_integrity', SCRIPT)
@@ -16,6 +18,32 @@ def plugin(name='Anichi', content=b'new package'):
 
 
 class AuditTests(unittest.TestCase):
+    def test_snapshot_files_are_consistent_without_raw_branch_cache(self):
+        entry = plugin()
+        upstream_url = 'https://raw.githubusercontent.com/demo/plugins.json'
+        def fetcher(url):
+            if url == audit.SOURCES_URL:
+                return {'sources': [{'id': 'demo', 'index': upstream_url}]}
+            if url == upstream_url:
+                return [entry]
+            raise AssertionError('Snapshot must not fetch independent mutable raw URLs: ' + url)
+        def downloader(url, limit):
+            content = b'new package'
+            return b'', len(content), 'sha256-' + hashlib.sha256(content).hexdigest()
+        with TemporaryDirectory() as folder:
+            published = Path(folder) / 'plugins.json'
+            provenance = Path(folder) / 'provenance.json'
+            published.write_text(json.dumps([entry]), encoding='utf-8')
+            provenance.write_text(json.dumps([{'plugin': 'Anichi', 'sourceId': 'demo'}]), encoding='utf-8')
+            report = audit.audit(only='Anichi', published_file=published,
+                                 provenance_file=provenance, fetcher=fetcher, downloader=downloader)
+        self.assertTrue(report['pass'])
+        self.assertEqual(report['publishedCount'], 1)
+
+    def test_snapshot_files_must_be_supplied_together(self):
+        with self.assertRaisesRegex(ValueError, 'supplied together'):
+            audit.audit(published_file=Path('plugins.json'), fetcher=lambda _: None)
+
     def test_live_hash_match(self):
         entry = plugin()
         fake = lambda url, limit: (b'', len(b'new package'), 'sha256-' + hashlib.sha256(b'new package').hexdigest())

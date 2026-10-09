@@ -163,12 +163,21 @@ def _source_index(entries):
     return result
 
 
-def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader=None):
+def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader=None,
+          published_file=None, provenance_file=None):
     fetcher = fetcher or fetch_json
     ts = datetime.now(timezone.utc)
     chosen_slot = ts.hour % buckets if slot is None else slot
-    published = fetcher(PUBLISHED_URL)
-    provenance = fetcher(PROVENANCE_URL)
+    # In CI both manifests are read from one pinned builds-branch checkout.
+    # Separate raw URLs may be cached at different revisions after publication.
+    if (published_file is None) != (provenance_file is None):
+        raise ValueError('Published catalog and provenance files must be supplied together')
+    if published_file is not None:
+        published = json.loads(Path(published_file).read_text(encoding='utf-8'))
+        provenance = json.loads(Path(provenance_file).read_text(encoding='utf-8'))
+    else:
+        published = fetcher(PUBLISHED_URL)
+        provenance = fetcher(PROVENANCE_URL)
     config = fetcher(SOURCES_URL)
     if not isinstance(published, list) or not isinstance(provenance, list) or not isinstance(config, dict):
         raise ValueError('Unexpected production JSON structure')
@@ -253,11 +262,14 @@ def main(argv=None):
     parser.add_argument('--full', action='store_true', help='Download all packages instead of rotating 1/6')
     parser.add_argument('--only', default='', help='Only check one internal plugin name')
     parser.add_argument('--slot', type=int, help='Rotation index 0-5; default is current UTC hour modulo 6')
+    parser.add_argument('--published-file', type=Path, help='Published catalog from a pinned builds-branch checkout')
+    parser.add_argument('--provenance-file', type=Path, help='Matching provenance from that same checkout')
     parser.add_argument('--json-report', default='audit-report.json')
     parser.add_argument('--markdown-report', default='audit-summary.md')
     args = parser.parse_args(argv)
     try:
-        data = audit(only=args.only, full=args.full, slot=args.slot)
+        data = audit(only=args.only, full=args.full, slot=args.slot,
+                     published_file=args.published_file, provenance_file=args.provenance_file)
     except Exception as exc:
         data = {'checkedAtUTC': datetime.now(timezone.utc).isoformat(), 'pass': False,
                 'fatalError': f'{type(exc).__name__}: {exc}'}
