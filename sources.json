@@ -286,7 +286,8 @@
       "id": "tearrs-vietnamese",
       "name": "Tearrs Vietnamese Extension",
       "repo": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-      "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json"
+      "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+      "exclude": ["IPTVProvider"]
     }
   ],
   "inactive": [
