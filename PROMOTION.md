@@ -2,7 +2,7 @@
 
 ## One-line description
 
-**Adam Knight Mega Repo** is an automatically maintained CloudStream extensions repository with 540 reachable plugins, 35 healthy sources, package checks, deduplication, custom providers, and health monitoring.
+**Adam Knight Mega Repo** is an automatically maintained CloudStream extension catalog with guarded three-hour refreshes, package checks, deduplication, custom providers, and health monitoring. For selected-only repository links, use its independent companion, Personal Bundles.
 
 ## Short announcement
 
@@ -28,7 +28,7 @@ Current production status:
 - **540** reachable plugins
 - **35** healthy upstream/custom sources
 - **0** package failures
-- automatic daily aggregation
+- guarded aggregation every three hours
 - version-aware duplicate resolution
 - package reachability checks
 - publication safety gates
@@ -91,6 +91,23 @@ Project dashboard: https://admknight.github.io/CloudstreamExtensions/
 Source: https://github.com/admknight/CloudstreamExtensions  
 Release: https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0
 
+## Companion announcement — Personal Bundles (draft; publish separately)
+
+**Introducing Personal Bundles — your CloudStream plugins, your selection.**
+
+The [Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/) is a separate companion to Adam Knight MegaRepo. Choose up to **100** published extensions and generate your own CloudStream-compatible `repo.json` link containing only those plugins.
+
+- No registration or database-backed personal account is needed.
+- Plugin identities track current published MegaRepo metadata, without hosting package binaries.
+- Change your selected plugins by generating a new link.
+- Add the URL in CloudStream, then install individual extensions manually. Adding the repo is not an automatic installation.
+
+**Builder:** https://adam-cloudstream-bundles.badass-insane.workers.dev/  
+**Source:** https://github.com/admknight/cloudstream-personal-bundles  
+**Full MegaRepo:** https://admknight.github.io/CloudstreamExtensions/
+
+This is a companion-feature announcement draft, **not** a new MegaRepo v1.0 release, a claim of exclusive invention, or a published Personal Bundles GitHub release. Confirm the latest Cloudflare Worker deployment before publishing.
+
 ## Suggested call to action
 
 **Try the repo, report broken providers, and suggest maintained repositories that should be considered for aggregation.**
@@ -103,6 +120,8 @@ Release: https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0
 - Latest release: https://github.com/admknight/CloudstreamExtensions/releases/latest
 - v1.0.0: https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0
 - Repository manifest: https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json
+- Personal Bundles website: https://adam-cloudstream-bundles.badass-insane.workers.dev/
+- Personal Bundles source: https://github.com/admknight/cloudstream-personal-bundles
 
 ## Suggested sharing title
 
