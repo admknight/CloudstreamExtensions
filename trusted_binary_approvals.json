@@ -336,6 +336,18 @@
     "evidenceUrl": "https://github.com/nuyuls79/StreamPlay-movie/blob/e065fad55d0acf955036102dddec92162c56f6ed/DramaFull.cs3"
   },
   {
+    "plugin": "Dutamovie",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Dutamovie.cs3",
+    "version": 1,
+    "fileSize": 27347,
+    "fileHash": "sha256-602e9e7655cddf7ba9e2c5f61b4741920daec20bed2df3d770276fabd215da0c",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Dutamovie.cs3"
+  },
+  {
     "plugin": "Extractors",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/Extractors.cs3",
@@ -358,6 +370,30 @@
     "reviewedAt": "2026-10-09",
     "reason": "Independently verified original committed manifest, original GitHub ZIP SHA-256, and byte identity with the existing mutable package in read-only GitHub Actions run 37998183977. Exact scoped legacy integrity improvement only, no change in version or status; not runtime or publisher-signature certification.",
     "evidenceUrl": "https://github.com/maarrem/cs-Kekik/blob/51034df969e134e1347f4a3abe1e57063474a95f/FilmBip.cs3"
+  },
+  {
+    "plugin": "Filmkita",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmkita.cs3",
+    "version": 1,
+    "fileSize": 24041,
+    "fileHash": "sha256-57b2305880863023b8f08f26aae5fc3ad2477afa7df7b2116845c53266e573f2",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmkita.cs3"
+  },
+  {
+    "plugin": "Filmlokal",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmlokal.cs3",
+    "version": 1,
+    "fileSize": 20434,
+    "fileHash": "sha256-69cfadc0e6be1123354bb08ee42d5151d785597c3bb1f33b86163af4f1d33777",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmlokal.cs3"
   },
   {
     "plugin": "FilmMakinesi",
@@ -564,6 +600,18 @@
     "evidenceUrl": "https://github.com/kim20598/cloudstream-extensions-test/blob/3e2792be0585090691a9d3421d902c29d7736c0f/IndianTVProvider.cs3"
   },
   {
+    "plugin": "Indomax",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Indomax.cs3",
+    "version": 1,
+    "fileSize": 20883,
+    "fileHash": "sha256-f5b4f2e370485114cf775a6e0a21de3f53d3a6d3d177457222194590c1c66d54",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Indomax.cs3"
+  },
+  {
     "plugin": "IPTVProvider",
     "sourceId": "local-pinned-recovery",
     "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3",
@@ -624,6 +672,18 @@
     "evidenceUrl": "https://github.com/maarrem/cs-Kekik/blob/51034df969e134e1347f4a3abe1e57063474a95f/Kalite18.cs3"
   },
   {
+    "plugin": "Kawanfilm",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Kawanfilm.cs3",
+    "version": 1,
+    "fileSize": 27616,
+    "fileHash": "sha256-271cf55372a3cb5ec1dc83ccc7718e45280b145e10cfe7c3bc6ec766d62201d4",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Kawanfilm.cs3"
+  },
+  {
     "plugin": "KKPhimProvider",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/KKPhimProvider.cs3",
@@ -634,6 +694,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Independently verified original committed manifest, original GitHub ZIP SHA-256, and byte identity with the existing mutable package in read-only GitHub Actions run 37998183977. Exact scoped legacy integrity improvement only, no change in version or status; not runtime or publisher-signature certification.",
     "evidenceUrl": "https://github.com/t23-02/cloudstream/blob/72ea428321cd0f3749773933c42c9a1c3573ab25/KKPhimProvider.cs3"
+  },
+  {
+    "plugin": "KlikXXi",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/KlikXXi.cs3",
+    "version": 1,
+    "fileSize": 20005,
+    "fileHash": "sha256-527c442274ffa62662eb1b3b7b2611c3be856852cd68083ad5726932d771c0bf",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/KlikXXi.cs3"
   },
   {
     "plugin": "KoreanTurk",
@@ -658,6 +730,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Independently verified original committed manifest, original GitHub ZIP SHA-256, and byte identity with the existing mutable package in read-only GitHub Actions run 37998183977. Exact scoped legacy integrity improvement only, no change in version or status; not runtime or publisher-signature certification.",
     "evidenceUrl": "https://github.com/maarrem/cs-Kekik/blob/51034df969e134e1347f4a3abe1e57063474a95f/KultFilmler.cs3"
+  },
+  {
+    "plugin": "LayarWarna",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/LayarWarna.cs3",
+    "version": 1,
+    "fileSize": 24214,
+    "fileHash": "sha256-cfaa4f793682813187ffc3a0ae284b20233dc2612d2cfef250bbccf72ec3e616",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/LayarWarna.cs3"
   },
   {
     "plugin": "LittleMermaid",
@@ -708,6 +792,18 @@
     "evidenceUrl": "https://github.com/errorcode26/Ayu-CloudStream-Games/blob/3945b17e94a0176bf25ee527519ed427db2ce5ec/MetalSlugAdvance.cs3"
   },
   {
+    "plugin": "MidasXXi",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/MidasXXi.cs3",
+    "version": 1,
+    "fileSize": 23444,
+    "fileHash": "sha256-d3dd46ed56af6a704f689541a717f8f99c3c02f907125531f42d80b11041684b",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/MidasXXi.cs3"
+  },
+  {
     "plugin": "MinishCap",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/errorcode26/Ayu-CloudStream-Games/3945b17e94a0176bf25ee527519ed427db2ce5ec/MinishCap.cs3",
@@ -718,6 +814,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Independently verified original committed manifest, original GitHub ZIP SHA-256, and byte identity with the existing mutable package in read-only GitHub Actions run 37998183977. Exact scoped legacy integrity improvement only, no change in version or status; not runtime or publisher-signature certification.",
     "evidenceUrl": "https://github.com/errorcode26/Ayu-CloudStream-Games/blob/3945b17e94a0176bf25ee527519ed427db2ce5ec/MinishCap.cs3"
+  },
+  {
+    "plugin": "MonPlayerProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/MonPlayerProvider.cs3",
+    "version": 9,
+    "fileSize": 55806,
+    "fileHash": "sha256-699544b1db14f2eb5e2bec9612a9c0ec9edde55c63ca140472bd27f9c55a60b5",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/MonPlayerProvider.cs3"
   },
   {
     "plugin": "NetflixMirror",
@@ -754,6 +862,30 @@
     "reviewedAt": "2026-10-09",
     "reason": "Independently observed published checksum and size match upstream's committed release manifest; original package pinned to exact GitHub build commit. This does not certify publisher signature or runtime functionality.",
     "evidenceUrl": "https://github.com/Faisal0786/Desi/blob/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3"
+  },
+  {
+    "plugin": "Ngefilm",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Ngefilm.cs3",
+    "version": 1,
+    "fileSize": 21909,
+    "fileHash": "sha256-4641795e14b16d53e1c9dc1ffe7d369d84757cb0e886c090b33b47da3d204d0d",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Ngefilm.cs3"
+  },
+  {
+    "plugin": "Nomat",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Nomat.cs3",
+    "version": 1,
+    "fileSize": 19451,
+    "fileHash": "sha256-acea324975bbd3715af5ad0a15623cfe671c62f547e8448e98abb2636ac5f640",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Nomat.cs3"
   },
   {
     "plugin": "OHiTVProvider",
@@ -876,6 +1008,18 @@
     "evidenceUrl": "https://github.com/errorcode26/Ayu-CloudStream-Games/blob/3945b17e94a0176bf25ee527519ed427db2ce5ec/PrinceOfPersia.cs3"
   },
   {
+    "plugin": "Pusatmovie",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Pusatmovie.cs3",
+    "version": 1,
+    "fileSize": 23941,
+    "fileHash": "sha256-d1ac2b4bad4cfec0fd5fc357cf30b5be259c7ba56031428c13a07cd9024c9826",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Pusatmovie.cs3"
+  },
+  {
     "plugin": "RecTV",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/RecTV.cs3",
@@ -888,6 +1032,18 @@
     "evidenceUrl": "https://github.com/maarrem/cs-Kekik/blob/51034df969e134e1347f4a3abe1e57063474a95f/RecTV.cs3"
   },
   {
+    "plugin": "Rowdy",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/0143d69ce3ec9b7cf09f6d6216212694dc5890a0/Rowdy.cs3",
+    "version": 21,
+    "fileSize": 96013,
+    "fileHash": "sha256-f2c4746a767bd1eff613a5277d81430890327b2159383007c46d3b1dab762a61",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/RowdyRushya/rowdy-cs-extensions/blob/0143d69ce3ec9b7cf09f6d6216212694dc5890a0/Rowdy.cs3"
+  },
+  {
     "plugin": "Sarangfilm",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
@@ -898,6 +1054,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
     "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3"
+  },
+  {
+    "plugin": "Savefilm",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Savefilm.cs3",
+    "version": 1,
+    "fileSize": 21933,
+    "fileHash": "sha256-5bb52630a1c5fc326ace7665c43a645cd2555dc7b925f32cdb740908334e4329",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Savefilm.cs3"
   },
   {
     "plugin": "SeriousSam",
@@ -1006,6 +1174,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Independently verified original committed manifest, original GitHub ZIP SHA-256, and byte identity with the existing mutable package in read-only GitHub Actions run 37998183977. Exact scoped legacy integrity improvement only, no change in version or status; not runtime or publisher-signature certification.",
     "evidenceUrl": "https://github.com/errorcode26/Ayu-CloudStream-Games/blob/3945b17e94a0176bf25ee527519ed427db2ce5ec/SuperMario.cs3"
+  },
+  {
+    "plugin": "SyncProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/SyncProvider.cs3",
+    "version": 9,
+    "fileSize": 42324,
+    "fileHash": "sha256-ef3e1f23ddb890018e6164c2bd42310c2ab9f6712ec5fd2a116212212ca8a01c",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/SyncProvider.cs3"
   },
   {
     "plugin": "TekkenAdvance",
@@ -1174,6 +1354,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Independently verified original committed manifest, original GitHub ZIP SHA-256, and byte identity with the existing mutable package in read-only GitHub Actions run 37998183977. Exact scoped legacy integrity improvement only, no change in version or status; not runtime or publisher-signature certification.",
     "evidenceUrl": "https://github.com/maarrem/cs-Kekik/blob/51034df969e134e1347f4a3abe1e57063474a95f/WebteIzle.cs3"
+  },
+  {
+    "plugin": "WGFilm21",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/WGFilm21.cs3",
+    "version": 1,
+    "fileSize": 24012,
+    "fileHash": "sha256-35832a5e612b5931564a24fbbe042b125fc92ba495c4734d157f54375eead0d8",
+    "reviewedBy": "MegaRepo maintainer-authorized original-source technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original-source immutable GitHub/GitLab release manifest and ZIP SHA-256 verified byte-identical to currently published mutable package in independent GitHub Actions run 37998743430; no plugin version/status change or claim of source signature or runtime playback.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/WGFilm21.cs3"
   },
   {
     "plugin": "Xhamster",
