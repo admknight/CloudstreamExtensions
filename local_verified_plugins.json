@@ -1,5 +1,25 @@
 [
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=altadefinizione.vodka&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Gian-Fr/ItalianProvider",
+    "fileSize": 10734,
+    "status": 1,
+    "language": "it",
+    "authors": [
+      "Gian-Fr",
+      "Adippe"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 1,
+    "internalName": "AltadefinizioneProvider",
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/AltadefinizioneProvider.cs3",
+    "name": "AltadefinizioneProvider",
+    "fileHash": "sha256-905b0b1ef8b722a1599ecfee3f65d37954dd6a87e8c13e0624d36f74776441ba"
+  },
+  {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3",
     "status": 1,
     "version": 1,
@@ -19,6 +39,25 @@
     "iconUrl": "https://anime-th.com/favicon.ico",
     "apiVersion": 1,
     "fileHash": "sha256-588900960340944467b3dcd9895425aca0db65df75f65b680be446293c0a7b2d"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=aniyomi.org&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/CranberrySoup/AniyomiCompatExtension",
+    "fileSize": 36701,
+    "status": 1,
+    "authors": [
+      "CranberrySoup"
+    ],
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 8,
+    "internalName": "AniyomiProvider",
+    "description": "Use Aniyomi Extensions in CloudStream!\nNot guaranteed to work perfectly.",
+    "url": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/0a539fd454179399dd34b38ef5d4d3db49ce4971/AniyomiProvider.cs3",
+    "name": "AniyomiProvider",
+    "fileHash": "sha256-5f0a5c8d44cdab98c4ee6fc5384ecf22c74d4b1a466a4c4e6662b04987837842"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Anv.cs3",
@@ -43,6 +82,25 @@
     "fileHash": "sha256-94a1716c3677bc0c2877d89634e7c5da66c39bc306b3dd34758f0e5a06f4c443"
   },
   {
+    "iconUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/refs/heads/master/BingedReview/icon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "fileSize": 17968,
+    "status": 1,
+    "authors": [
+      "Dilip"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 3,
+    "internalName": "BingedReview",
+    "description": "Data about streaming and review",
+    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/BingedReview.cs3",
+    "name": "BingedReview",
+    "fileHash": "sha256-b0793b093256a5c2feb5468099941f4e8b6058682a13f146e973675738991c3e"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghive.vip&sz=%size%",
     "fileHash": "sha256-836fa09519a8ac309688481b7baac6e539038393b29b2edb8268a52b002d9f3a",
     "apiVersion": 1,
@@ -61,6 +119,30 @@
     "internalName": "Donghub",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3",
     "name": "Donghub"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/dramadrip-icon.png",
+    "jarFileSize": 180160,
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
+    "fileSize": 43695,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Phisher98"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "AsianDrama"
+    ],
+    "version": 3,
+    "internalName": "DramaDrip",
+    "jarUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/DramaDrip.jar",
+    "description": "K-Drama,Dramas Extension by ModFlix Team",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/DramaDrip.cs3",
+    "name": "DramaDrip",
+    "fileHash": "sha256-345a94bf04a6c9bbdbd0522d3f3e8c499f498cf84c5c62bfc522d4f3770ba9f4"
   },
   {
     "iconUrl": "https://github.com/Shakzz890/ShakzzCutie/raw/refs/heads/master/Extractors/icon.png",
@@ -105,6 +187,45 @@
     "fileHash": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=guardaserie.ceo&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Gian-Fr/ItalianProvider",
+    "fileSize": 10898,
+    "status": 1,
+    "language": "it",
+    "authors": [
+      "Gian-Fr",
+      "Adippe"
+    ],
+    "tvTypes": [
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "GuardaSerieProvider",
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/GuardaSerieProvider.cs3",
+    "name": "GuardaSerieProvider",
+    "fileHash": "sha256-1bc6f551461dbfa6a851265d8e50ea6a51c3bfc13e8ad5ccebeeea838e5d56bf"
+  },
+  {
+    "iconUrl": "https://www.freepnglogos.com/uploads/tv-png/tv-png-box-television-set-cable-screen-icon-31.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
+    "fileSize": 21427,
+    "status": 1,
+    "authors": [
+      "Phisher98"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 6,
+    "internalName": "IndianTVProvider",
+    "description": "Indian TV",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/IndianTVProvider.cs3",
+    "name": "IndianTVProvider",
+    "fileHash": "sha256-a679563b917a4b5b1e5e9d9af901884b18981e18f321cdadb95a374c4fd189f9"
+  },
+  {
     "apiVersion": 1,
     "authors": [
       "anhdaden"
@@ -143,6 +264,20 @@
     "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknDTJSN2AhrHzfxF75gr9-qG4x-JzwHRnvPDjZP2aa-93KRaXPF1_ZQdm&s=10",
     "apiVersion": 1,
     "fileHash": "sha256-31d865e11f19b984e39baa48fa6234b9dd24f70c4a8ff9a1ca178a0dc56966e5"
+  },
+  {
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/self-similarity/MegaRepo",
+    "fileSize": 6929,
+    "status": 1,
+    "language": "en",
+    "authors": [],
+    "version": 2,
+    "internalName": "MegaProvider",
+    "description": "This plugin adds all repositories each time the app is opened. Uninstall after one run if you do not want all repositories. Does not automatically refresh the repository list.",
+    "url": "https://raw.githubusercontent.com/self-similarity/MegaRepo/d8b64bab636845a89503469f1c3cb13fdc750a8a/MegaProvider.cs3",
+    "name": "MegaProvider",
+    "fileHash": "sha256-7062fa86531ad8b8c34244c564adcba97176870a186499adbc369189ac848dbe"
   },
   {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
@@ -206,6 +341,28 @@
     "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
     "name": "Sarangfilm",
     "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7"
+  },
+  {
+    "iconUrl": "https://skymovieshd.mba/images/logo2.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/rockhero1234/cinephile",
+    "fileSize": 23971,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "Redowan"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "NSFW"
+    ],
+    "version": 1,
+    "internalName": "SkymoviesHD",
+    "description": "just testing",
+    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/SkymoviesHD.cs3",
+    "name": "SkymoviesHD",
+    "fileHash": "sha256-944c9644ca9c8ee455a161e6154b20f6c764d2f7be0b355d902e997d8d63795f"
   },
   {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
@@ -276,6 +433,26 @@
     "iconUrl": "https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg",
     "apiVersion": 1,
     "fileHash": "sha256-083368334ae440237fc0d799ea3dd087c782f46b177915b477267f7f326a05a1"
+  },
+  {
+    "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/UltimaBeta.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
+    "fileSize": 314672,
+    "status": 2,
+    "language": "en",
+    "authors": [
+      "RowdyRushya,Phisher98"
+    ],
+    "tvTypes": [
+      "All"
+    ],
+    "version": 7,
+    "internalName": "UltimaBeta",
+    "description": "(Beta)The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/UltimaBeta.cs3",
+    "name": "UltimaBeta",
+    "fileHash": "sha256-039cdf7621971da3c7a7153f5802694126e170a286511d3422e64da471e814c9"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=uncutmaza.cc&sz=%size%",
