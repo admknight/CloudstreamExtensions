@@ -20,7 +20,7 @@ def sample():
     }
     audit={
         "publishedCount":2,"pass":False,
-        "scan":{"mode":"all","checked":2},
+        "scan":{"mode":"all","checked":2,"failed":1},
         "sourceErrors":[],"metadataDrift":[{"plugin":"Two","type":"version"}],
         "packageProblems":[{"plugin":"Two","status":"mismatch"}]
     }
@@ -38,6 +38,7 @@ class PostPublishTests(unittest.TestCase):
     def test_novel_mismatched_plugin_is_not_silenced(self):
         data=sample()
         data[0]["packageProblems"].append({"plugin":"One","status":"mismatch"})
+        data[0]["scan"]["failed"]=2
         with self.assertRaisesRegex(ValueError,"Unexpected integrity anomalies"):
             validate_post_publish(*data)
 
@@ -81,6 +82,7 @@ class PostPublishTests(unittest.TestCase):
         }]
         audit["metadataDrift"]=[{"plugin":"One","reason":"commit-pinned previous bytes"}]
         audit["packageProblems"]=[]
+        audit["scan"]["failed"]=0
         audit["pass"]=False
         result=validate_post_publish(audit,r,plugins,p)
         self.assertEqual(result["knownAuditAnomalyCount"],1)
@@ -106,6 +108,7 @@ class PostPublishTests(unittest.TestCase):
         r["integrityHealth"]["unverifiedPreviousCarried"]=0
         audit["metadataDrift"]=[]
         audit["packageProblems"]=[]
+        audit["scan"]["failed"]=0
         audit["pass"]=True
         result=validate_post_publish(audit,r,plugins,p)
         self.assertTrue(result["upstreamProblemsFullyResolved"])
@@ -117,9 +120,42 @@ class PostPublishTests(unittest.TestCase):
         r["integrityHealth"]["unverifiedPreviousCarried"]=0
         audit["metadataDrift"]=[]
         audit["packageProblems"]=[]
+        audit["scan"]["failed"]=0
         audit["pass"]=False
         with self.assertRaises(ValueError):
             validate_post_publish(audit,r,plugins,p)
+
+
+    def test_blank_identity_fails_even_when_source_is_also_blank(self):
+        audit,report,plugins,provenance=sample()
+        plugins[0]["internalName"]=""
+        provenance[0]["plugin"]=""
+        with self.assertRaisesRegex(ValueError,"inconsistent"):
+            validate_post_publish(audit,report,plugins,provenance)
+
+    def test_duplicate_provenance_fails_even_when_identity_sets_match(self):
+        audit,report,plugins,provenance=sample()
+        provenance.append(dict(provenance[0]))
+        with self.assertRaisesRegex(ValueError,"inconsistent"):
+            validate_post_publish(audit,report,plugins,provenance)
+
+    def test_unreported_package_failure_count_fails(self):
+        audit,report,plugins,provenance=sample()
+        audit["scan"]["failed"]=2
+        with self.assertRaisesRegex(ValueError,"package-failure count"):
+            validate_post_publish(audit,report,plugins,provenance)
+
+    def test_missing_failed_scan_counter_fails(self):
+        audit,report,plugins,provenance=sample()
+        del audit["scan"]["failed"]
+        with self.assertRaisesRegex(ValueError,"package-failure count"):
+            validate_post_publish(audit,report,plugins,provenance)
+
+    def test_missing_source_error_evidence_fails(self):
+        audit,report,plugins,provenance=sample()
+        del audit["sourceErrors"]
+        with self.assertRaisesRegex(ValueError,"source-error evidence"):
+            validate_post_publish(audit,report,plugins,provenance)
 
 
 if __name__=="__main__":
