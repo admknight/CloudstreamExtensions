@@ -62,6 +62,28 @@
     "fileHash": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679"
   },
   {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "NetMovie",
+    "internalName": "NetMovie",
+    "authors": [
+      "Faisal"
+    ],
+    "description": "NetMovie Provider",
+    "fileSize": 32088,
+    "repositoryUrl": "https://github.com/Faisal0786/Desi",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "",
+    "apiVersion": 1,
+    "fileHash": "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576"
+  },
+  {
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
     "status": 1,

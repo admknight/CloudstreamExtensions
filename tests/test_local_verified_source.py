@@ -20,9 +20,9 @@ class LocalVerifiedSourceTests(unittest.TestCase):
         cls.pins = json.loads((ROOT / "local_verified_plugins.json").read_text())
         cls.approvals = json.loads((ROOT / "trusted_binary_approvals.json").read_text())
 
-    def test_source_is_eight_checked_in_immutable_packages(self):
+    def test_source_is_nine_checked_in_immutable_packages(self):
         items = merge.fetch_source_plugins(self.source)
-        self.assertEqual(len(items), 8)
+        self.assertEqual(len(items), 9)
         self.assertEqual({p["internalName"] for p in items},
                          set(self.source["include"]))
         self.assertEqual(self.source["priority"], 0)
@@ -55,11 +55,25 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                     "actualFileSize":trusted["fileSize"]}
         report = gate(self.pins, [], provenance, [], self.approvals, checker=check, workers=1)
         self.assertEqual(report["blockedCount"], 0)
-        self.assertEqual(report["reviewApproved"], 8)
+        self.assertEqual(report["reviewApproved"], 9)
         altered = copy.deepcopy(self.pins)
         altered[0]["fileHash"] = "sha256-" + "0"*64
         bad = gate(altered, [], provenance, [], self.approvals, checker=check, workers=1)
         self.assertEqual(bad["blockedCount"], 1)
+
+    def test_netmovie_first_release_is_commit_pinned_and_scoped(self):
+        pkg = next(x for x in self.pins if x["internalName"] == "NetMovie")
+        self.assertEqual(pkg["version"], 1)
+        self.assertEqual(pkg["fileSize"], 32088)
+        self.assertEqual(pkg["fileHash"],
+            "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576")
+        self.assertEqual(pkg["url"],
+            "https://raw.githubusercontent.com/Faisal0786/Desi/"
+            "0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3")
+        reviews = [x for x in self.approvals if x["plugin"] == "NetMovie"]
+        self.assertEqual(len(reviews), 1)
+        self.assertEqual(reviews[0]["sourceId"], "local-pinned-recovery")
+        self.assertEqual(reviews[0]["fileHash"], pkg["fileHash"])
 
     def test_rejects_mutable_package_url(self):
         copied = copy.deepcopy(self.pins)
