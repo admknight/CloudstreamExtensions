@@ -10,6 +10,17 @@ on:
     paths:
       - '*/src/main/kotlin/**'
       - 'tools/custom_provider_health.py'
+      - 'tools/source_quality.py'
+      - 'tests/test_custom_provider_health_drift.py'
+      - 'tests/test_source_quality.py'
+      - '.github/workflows/health.yml'
+
+  pull_request:
+    paths:
+      - 'tools/custom_provider_health.py'
+      - 'tools/source_quality.py'
+      - 'tests/test_custom_provider_health_drift.py'
+      - 'tests/test_source_quality.py'
       - '.github/workflows/health.yml'
 
 concurrency:
@@ -17,7 +28,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Regression-check advisory monitor and source scoring
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/custom_provider_health.py tools/source_quality.py
+          python3 -m unittest discover -s tests -p test_custom_provider_health_drift.py -v
+          python3 -m unittest discover -s tests -p test_source_quality.py -v
+
   health:
+    needs: tests
+    if: github.repository == 'admknight/CloudstreamExtensions' && (github.event_name == 'schedule' || (github.event_name != 'pull_request' && github.ref == 'refs/heads/master'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -34,6 +63,13 @@ jobs:
           path: health-history
           fetch-depth: 1
 
+      - name: Checkout one consistent published source catalog
+        uses: actions/checkout@v5
+        with:
+          ref: builds
+          path: published-catalog
+          persist-credentials: false
+
       - name: Check provider websites
         run: |
           python3 tools/custom_provider_health.py \
@@ -46,12 +82,27 @@ jobs:
             --trends-out health-history/trends.json \
             --max-history 180
 
+      - name: Score published upstream source quality without affecting selection
+        run: |
+          set -euo pipefail
+          python3 tools/source_quality.py \
+            --report published-catalog/merge-report.json \
+            --provenance published-catalog/provenance.json \
+            --history-in health-history/source-quality-history.json \
+            --history-out health-history/source-quality-history.json \
+            --json health-history/source-quality.json \
+            --markdown health-history/SOURCE_QUALITY.md
+
       - name: Publish health summary
         if: always()
         run: |
           if [ -f CUSTOM_PROVIDER_HEALTH.md ]; then
             cat CUSTOM_PROVIDER_HEALTH.md
             cat CUSTOM_PROVIDER_HEALTH.md >> "$GITHUB_STEP_SUMMARY"
+            if [ -f health-history/SOURCE_QUALITY.md ]; then
+              echo "" >> "$GITHUB_STEP_SUMMARY"
+              sed -n '1,16p' health-history/SOURCE_QUALITY.md >> "$GITHUB_STEP_SUMMARY"
+            fi
           else
             echo "No health report was generated." >> "$GITHUB_STEP_SUMMARY"
           fi
@@ -63,7 +114,7 @@ jobs:
           cd health-history
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add history.json latest.json trends.json
+          git add history.json latest.json trends.json source-quality.json source-quality-history.json SOURCE_QUALITY.md
           if git diff --cached --quiet; then
             echo "No health-history changes to publish."
             exit 0
@@ -91,4 +142,7 @@ jobs:
             custom-provider-health.json
             health-history/latest.json
             health-history/trends.json
+            health-history/source-quality.json
+            health-history/source-quality-history.json
+            health-history/SOURCE_QUALITY.md
           if-no-files-found: warn
