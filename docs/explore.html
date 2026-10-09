@@ -72,6 +72,14 @@
     .install-path em{font-style:normal;font-weight:800;color:#79def4;font-size:.84rem;margin-top:auto}
     @media(max-width:870px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1/-1}}
     @media(max-width:570px){.install-paths{grid-template-columns:1fr}.topbar{align-items:flex-start;flex-direction:column;gap:8px;padding-top:15px;padding-bottom:15px}.navlinks{gap:12px}.cards,.filters{grid-template-columns:1fr}.filters label:first-child{grid-column:auto}.panel{padding:14px}.intro{padding-top:36px!important}.tools{align-items:flex-start;flex-direction:column}}
+
+    /* Shared MegaRepo ecosystem back-to-top control. */
+    .back-to-top{position:fixed;right:20px;bottom:20px;z-index:1001;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:74px;padding:10px 15px;border:1px solid #407395;border-radius:999px;background:linear-gradient(145deg,#153b59,#0c2035);box-shadow:0 12px 32px rgba(0,0,0,.38);color:#f2f9ff;font:800 .85rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+    .back-to-top:hover{transform:translateY(-2px);background:#205473;border-color:#79dff8}
+    .back-to-top:focus-visible{outline:2px solid #7de7ff;outline-offset:3px}
+    .back-to-top[hidden]{display:none}
+    @media(max-width:620px){.back-to-top{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:11px 13px}}
+    @media(prefers-reduced-motion:reduce){.back-to-top{transition:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
@@ -119,6 +127,7 @@
     <div class="pager"><button id="prev" type="button" disabled>Previous</button><span id="page-label">Page 1</span><button id="next" type="button" disabled>Next</button></div>
   </main>
   <footer class="shell">Data: <a href="https://github.com/admknight/CloudstreamExtensions/tree/builds" target="_blank" rel="noopener noreferrer">published MegaRepo catalog</a> &middot; Explorer bookmarks stay in this browser &middot; <a href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Build a personal repository</a> &middot; <a href="./#install-full" target="_blank" rel="noopener noreferrer">Get full MegaRepo shortcode</a> &middot; <span class="page-counter"><img src="https://hits.sh/admknight.github.io/CloudstreamExtensions/explore.html.svg?style=flat-square&amp;label=Page+views&amp;color=43a7ff&amp;labelColor=18263a" alt="Page views for Extension Explorer" title="Page hits since this counter was added; not unique visitors" height="20" loading="eager" decoding="async" referrerpolicy="no-referrer"></span></footer>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top" hidden><span aria-hidden="true">↑</span> Top</button>
   <script>
   (() => {
     'use strict';
@@ -247,6 +256,20 @@
       try { await copyText(names.join('\n'));ui.message.textContent='Bookmarked names copied. This is a list, not an installable repository.'; }
       catch { ui.message.textContent='Clipboard unavailable. Copy bookmarked names from the cards individually.'; }
     });
+
+function setupBackToTop() {
+  const button = document.getElementById("back-to-top");
+  if (!button) return;
+  const update = () => { button.hidden = (window.scrollY || document.documentElement.scrollTop || 0) <= 320; };
+  button.addEventListener("click", () => window.scrollTo({
+    top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+  }));
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("pageshow", update);
+  update();
+}
+
+    setupBackToTop();
     load();
   })();
   </script>
