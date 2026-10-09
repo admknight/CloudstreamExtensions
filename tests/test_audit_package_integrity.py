@@ -31,6 +31,16 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(issues[0]['differences']['fileHash']['upstream'], new['fileHash'])
         self.assertNotIn('version', issues[0]['differences'])
 
+    def test_url_spaces_normalized_like_aggregator(self):
+        upstream = plugin()
+        upstream['url'] = 'https://raw.githubusercontent.com/demo/Ani Chi.cs3'
+        published = dict(upstream)
+        published['url'] = upstream['url'].replace(' ', '%20')
+        issues = audit.compare_catalog([published], [{'plugin': 'Anichi', 'sourceId': 'phisher'}],
+                                       [{'id': 'phisher', 'index': 'https://raw.githubusercontent.com/demo/plugins.json'}],
+                                       {'phisher': {'anichi': upstream}})
+        self.assertEqual(issues, [])
+
     def test_binary_mismatch(self):
         entry = plugin(content=b'old package')
         fake = lambda url, limit: (b'', len(b'old package'), 'sha256-' + hashlib.sha256(b'new package').hexdigest())
