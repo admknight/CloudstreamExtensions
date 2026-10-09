@@ -1,0 +1,112 @@
+name: Verify Immutable Published Package Recovery Revisions
+
+on:
+  schedule:
+    - cron: '23 5 * * *'
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/immutable-package-recovery.yml'
+      - 'tools/index_immutable_recovery.py'
+      - 'tests/test_immutable_recovery_index.py'
+  pull_request:
+    paths:
+      - '.github/workflows/immutable-package-recovery.yml'
+      - 'tools/index_immutable_recovery.py'
+      - 'tests/test_immutable_recovery_index.py'
+      - 'docs/IMMUTABLE_RECOVERY.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pinned-recovery-review-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline published-digest and URL pinning regression tests
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests -p 'test_immutable_recovery_index.py' -v
+          python3 -m py_compile tools/index_immutable_recovery.py
+      - name: Validate workflow syntax and permission boundary
+        run: |
+          ruby -e 'require "yaml"; YAML.load_file(".github/workflows/immutable-package-recovery.yml"); puts "YAML parsed."'
+          python3 - <<'PY'
+          from pathlib import Path
+          source=Path('.github/workflows/immutable-package-recovery.yml').read_text()
+          assert "permissions:\n  contents: read" in source
+          assert ('contents:'+' write') not in source
+          assert ('gh'+' workflow run') not in source
+          assert ('git'+' push') not in source
+          print('No publication or repository write permissions.')
+          PY
+
+  immutable-inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 38
+    steps:
+      - name: Checkout verification code without persistent write token
+        uses: actions/checkout@v4
+        with:
+          path: source
+          persist-credentials: false
+      - name: Checkout single current published catalog snapshot
+        uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: published
+          persist-credentials: false
+      - name: Verify old SHA-256 fingerprints against immutable GitHub revisions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 source/tools/index_immutable_recovery.py \
+            --published published/plugins.json \
+            --provenance published/provenance.json \
+            --output immutable-recovery.json \
+            --max-history 16 \
+            --workers 6
+      - name: Validate complete accounting and preserve evidence
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          data=json.loads(Path('immutable-recovery.json').read_text())
+          published=json.loads(Path('published/plugins.json').read_text())
+          assert data['mode']=='READ_ONLY_PINNED_RECOVERY_EVIDENCE'
+          assert data['autoPublicationAuthorized'] is False
+          assert data['publishedCount']==len(published)
+          assert data['immutableMatches']+data['unmatchedCount']==len(published)
+          assert len(data['locks'])==data['immutableMatches']
+          assert len(data['unmatched'])==data['unmatchedCount']
+          assert data['matchedCurrentCommit']+data['matchedPriorCommit']==data['immutableMatches']
+          assert len(set(x['plugin'].casefold() for x in data['locks']))==len(data['locks'])
+          if data['immutableMatches']<50:
+              raise SystemExit('Too few verified immutable pins; investigate upstream fetch failure')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as output:
+              output.write('## Immutable recovery index (read only)\n\n')
+              output.write(f"- Published catalog entries: **{data['publishedCount']}**\n")
+              output.write(f"- Prior published SHA-256 packages pinned to byte-identical revisions: **{data['immutableMatches']}**\n")
+              output.write(f"- Matched currently resolved source commit: **{data['matchedCurrentCommit']}**\n")
+              output.write(f"- Found only in older history: **{data['matchedPriorCommit']}**\n")
+              output.write(f"- Not yet pinned: **{data['unmatchedCount']}**\n")
+              output.write('- **No changed binary approved and no published manifest updated.**\n')
+          print('Complete, consistent pin evidence.')
+          PY
+      - name: Retain immutable recovery lock evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: immutable-published-fingerprint-${{ github.run_id }}
+          path: immutable-recovery.json
+          if-no-files-found: warn
+          retention-days: 30
