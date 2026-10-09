@@ -17,6 +17,9 @@ on:
       - 'tools/merge_upstreams.py'
       - '.github/workflows/build.yml'
       - 'repo.json'
+      - 'trusted_binary_approvals.json'
+      - 'tools/verify_candidate_integrity.py'
+      - 'tests/test_verify_candidate_integrity.py'
 
 jobs:
   publish:
