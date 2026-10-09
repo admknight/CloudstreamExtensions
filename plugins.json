@@ -6930,6 +6930,28 @@
     "name": "[Indian] Netmirror"
   },
   {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "[Indian] NetMovie",
+    "internalName": "NetMovie",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "NetMovie Provider",
+    "fileSize": 32088,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "iconUrl": "",
+    "apiVersion": 1,
+    "fileHash": "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576"
+  },
+  {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NetNaija.cs3",
     "status": 1,
     "version": 17,

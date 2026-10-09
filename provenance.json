@@ -5732,6 +5732,23 @@
     "packageUrl": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/Netmirror.cs3"
   },
   {
+    "plugin": "NetMovie",
+    "originalName": "NetMovie",
+    "publishedName": "[Indian] NetMovie",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3"
+  },
+  {
     "plugin": "NetNaija",
     "originalName": "NetNaija",
     "publishedName": "[Movies] NetNaija",

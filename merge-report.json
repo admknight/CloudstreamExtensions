@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09 20:44:01 UTC",
+  "generatedAt": "2026-10-09 21:05:12 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
@@ -18,8 +18,8 @@
       "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
       "priority": 0,
       "ok": true,
-      "rawCount": 8,
-      "includedCount": 8,
+      "rawCount": 9,
+      "includedCount": 9,
       "packageFailed": 0,
       "duplicateSkipped": 0,
       "integrityExceptions": 0,
@@ -217,8 +217,8 @@
       "rawCount": 17,
       "includedCount": 12,
       "packageFailed": 0,
-      "duplicateSkipped": 4,
-      "integrityExceptions": 2,
+      "duplicateSkipped": 5,
+      "integrityExceptions": 1,
       "deferredUnverified": 0
     },
     {
@@ -517,7 +517,7 @@
     }
   ],
   "categoryCounts": {
-    "Indian": 83,
+    "Indian": 84,
     "Arabic": 36,
     "Adult": 74,
     "Movies": 135,
@@ -530,19 +530,19 @@
     "Tools": 12
   },
   "previousPlugins": 543,
-  "uniquePlugins": 543,
+  "uniquePlugins": 544,
   "packageHealth": {
     "reachable": 544,
     "failed": 0
   },
   "integrityHealth": {
     "candidateChecked": 544,
-    "candidateAccepted": 542,
+    "candidateAccepted": 543,
     "immutableOldRetained": 1,
     "pinnedPreviousRecovered": 1,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 2,
+    "changedOrFailedCandidates": 1,
     "sizeOnlyLegacyCandidateAccepted": 104,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
@@ -763,6 +763,14 @@
       "skippedSource": "Cinephile",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "NetMovie",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
     },
     {
       "plugin": "OnlineMoviesHinditProvider",
@@ -1127,6 +1135,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "NetMovie",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "OnlineMoviesHinditProvider",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 6,
@@ -1273,152 +1289,28 @@
   ],
   "failedPlugins": [],
   "changes": {
-    "added": 0,
-    "updated": 9,
-    "unchanged": 534,
+    "added": 1,
+    "updated": 0,
+    "unchanged": 543,
     "removed": 0
   },
   "changeDetails": {
-    "added": [],
-    "recovered": [],
-    "updated": [
+    "added": [
       {
-        "plugin": "Donghub",
-        "name": "Donghub",
-        "version": 4,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Asian",
-        "fromVersion": 3,
-        "toVersion": 4,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "Extractors",
-        "name": "Extractors",
-        "version": 67,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 67,
-        "toVersion": 67,
-        "fromSourceId": "shakzz-recovery",
-        "fromSource": "Shakzz Recovery Builds",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "GDIndex",
-        "name": "GDIndex",
-        "version": 4,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 4,
-        "toVersion": 4,
-        "fromSourceId": "shakzz-recovery",
-        "fromSource": "Shakzz Recovery Builds",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "OnlineMoviesHinditProvider",
-        "name": "OnlineMoviesHinditProvider",
-        "version": 6,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Indian",
-        "fromVersion": 6,
-        "toVersion": 6,
-        "fromSourceId": "manual-recovery",
-        "fromSource": "Adam Knight Curated Recovery",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "Sarangfilm",
-        "name": "Sarangfilm",
+        "plugin": "NetMovie",
+        "name": "NetMovie",
         "version": 1,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Asian",
-        "fromVersion": 1,
-        "toVersion": 1,
-        "fromSourceId": "cloudx",
-        "fromSource": "CloudX-V2",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "StreamHubOne",
-        "name": "StreamHubOne",
-        "version": 62,
-        "sourceId": "desi",
-        "sourceName": "Desi Extensions",
-        "category": "Indian",
-        "fromVersion": 62,
-        "toVersion": 62,
-        "fromSourceId": "desi",
-        "fromSource": "Desi Extensions",
-        "toSourceId": "desi",
-        "toSource": "Desi Extensions"
-      },
-      {
-        "plugin": "StremioProvider",
-        "name": "StremioProvider",
-        "version": 7,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Tools",
-        "fromVersion": 7,
-        "toVersion": 7,
-        "fromSourceId": "tearrs-vietnamese",
-        "fromSource": "Tearrs Vietnamese Extension",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "ViStreamProvider",
-        "name": "ViStreamProvider",
-        "version": 35,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 35,
-        "toVersion": 35,
-        "fromSourceId": "tearrs-vietnamese",
-        "fromSource": "Tearrs Vietnamese Extension",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "XtreamIPTVProvider",
-        "name": "XtreamIPTVProvider",
-        "version": 1,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Live",
-        "fromVersion": 1,
-        "toVersion": 1,
-        "fromSourceId": "tearrs-vietnamese",
-        "fromSource": "Tearrs Vietnamese Extension",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
+        "category": "Indian"
       }
     ],
+    "recovered": [],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
-    "added": [
-      {
-        "id": "local-pinned-recovery",
-        "name": "MegaRepo Verified Immutable Recovery",
-        "repo": "https://github.com/admknight/CloudstreamExtensions"
-      }
-    ],
+    "added": [],
     "removed": [],
     "healthChanged": []
   },
@@ -1427,28 +1319,12 @@
   "deferredUnverified": [],
   "quarantineIncidents": [
     {
-      "plugin": "netmovie",
-      "disposition": "withheld_new",
-      "candidateSourceId": "desi",
-      "previousSourceId": null,
-      "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/NetMovie.cs3",
-      "previousUrl": null,
-      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "observedVerification": "hash_verified",
-      "observedActualSize": 32088,
-      "observedActualSHA256": "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576",
-      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
-    },
-    {
       "plugin": "streamhubone",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "desi",
       "previousSourceId": "desi",
       "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
       "observedActualSize": 1099831,
@@ -1459,12 +1335,12 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "218ca095d3201f6f2f0aa3238348d71faee390d437281f5f1d42f3beaca409bb",
+  "originalSourceReportDigest": "3e77fc8274d8d43be4d1f3e0c54340efe2969719831edf58fd28781c68f377e6",
   "inputSnapshotDigests": {
-    "candidate": "29962d685b36fda9d3dae504566159cea5c4711c72e7504cc27965310aa2b040",
-    "previous": "32fabfe20f6425eb913db24ab871b5b5aa2abdd90fec80cef204570c221f21da",
-    "candidateProvenance": "708332b74186528b9e66e0eb30df7a419875c3255e9040409962856a58ee67cd",
-    "previousProvenance": "8c2f664784d6b1eac524363f0dd4ed2333f83d7f4f09be27c4388c86081f36b3"
+    "candidate": "e28bee0b6235fc2d9010796dea2d2b84919c8054cd138f6f951af0f556a51cf3",
+    "previous": "38cb533a2be865731bf7ef4175640e5c1074a7c16282515612d188a047c665c9",
+    "candidateProvenance": "a29a3f66e5ad57991665c27cd64d2578245440c14f09d02f747f6f2e7fa71b9a",
+    "previousProvenance": "e6371a69d6dabb29d7adb48430768b97efaa035206b39847978379c52d7c44cf"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

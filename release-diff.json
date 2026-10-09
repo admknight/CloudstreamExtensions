@@ -1,172 +1,48 @@
 {
-  "generatedAt": "2026-10-09 20:44:01 UTC",
+  "generatedAt": "2026-10-09 21:05:12 UTC",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "catalog": {
-    "plugins": 543,
+    "plugins": 544,
     "healthySources": 36,
     "failedSources": 0,
     "reachablePackages": 544,
     "packageFailures": 0
   },
   "changes": {
-    "added": 0,
-    "updated": 9,
-    "unchanged": 534,
+    "added": 1,
+    "updated": 0,
+    "unchanged": 543,
     "removed": 0
   },
   "changeDetails": {
-    "added": [],
-    "recovered": [],
-    "updated": [
+    "added": [
       {
-        "plugin": "Donghub",
-        "name": "Donghub",
-        "version": 4,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Asian",
-        "fromVersion": 3,
-        "toVersion": 4,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "Extractors",
-        "name": "Extractors",
-        "version": 67,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 67,
-        "toVersion": 67,
-        "fromSourceId": "shakzz-recovery",
-        "fromSource": "Shakzz Recovery Builds",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "GDIndex",
-        "name": "GDIndex",
-        "version": 4,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 4,
-        "toVersion": 4,
-        "fromSourceId": "shakzz-recovery",
-        "fromSource": "Shakzz Recovery Builds",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "OnlineMoviesHinditProvider",
-        "name": "OnlineMoviesHinditProvider",
-        "version": 6,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Indian",
-        "fromVersion": 6,
-        "toVersion": 6,
-        "fromSourceId": "manual-recovery",
-        "fromSource": "Adam Knight Curated Recovery",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "Sarangfilm",
-        "name": "Sarangfilm",
+        "plugin": "NetMovie",
+        "name": "NetMovie",
         "version": 1,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Asian",
-        "fromVersion": 1,
-        "toVersion": 1,
-        "fromSourceId": "cloudx",
-        "fromSource": "CloudX-V2",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "StreamHubOne",
-        "name": "StreamHubOne",
-        "version": 62,
-        "sourceId": "desi",
-        "sourceName": "Desi Extensions",
-        "category": "Indian",
-        "fromVersion": 62,
-        "toVersion": 62,
-        "fromSourceId": "desi",
-        "fromSource": "Desi Extensions",
-        "toSourceId": "desi",
-        "toSource": "Desi Extensions"
-      },
-      {
-        "plugin": "StremioProvider",
-        "name": "StremioProvider",
-        "version": 7,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Tools",
-        "fromVersion": 7,
-        "toVersion": 7,
-        "fromSourceId": "tearrs-vietnamese",
-        "fromSource": "Tearrs Vietnamese Extension",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "ViStreamProvider",
-        "name": "ViStreamProvider",
-        "version": 35,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Movies",
-        "fromVersion": 35,
-        "toVersion": 35,
-        "fromSourceId": "tearrs-vietnamese",
-        "fromSource": "Tearrs Vietnamese Extension",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
-      },
-      {
-        "plugin": "XtreamIPTVProvider",
-        "name": "XtreamIPTVProvider",
-        "version": 1,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Live",
-        "fromVersion": 1,
-        "toVersion": 1,
-        "fromSourceId": "tearrs-vietnamese",
-        "fromSource": "Tearrs Vietnamese Extension",
-        "toSourceId": "local-pinned-recovery",
-        "toSource": "MegaRepo Verified Immutable Recovery"
+        "category": "Indian"
       }
     ],
+    "recovered": [],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
-    "added": [
-      {
-        "id": "local-pinned-recovery",
-        "name": "MegaRepo Verified Immutable Recovery",
-        "repo": "https://github.com/admknight/CloudstreamExtensions"
-      }
-    ],
+    "added": [],
     "removed": [],
     "healthChanged": []
   },
   "customProviderChanges": [],
   "integrityHealth": {
     "candidateChecked": 544,
-    "candidateAccepted": 542,
+    "candidateAccepted": 543,
     "immutableOldRetained": 1,
     "pinnedPreviousRecovered": 1,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 2,
+    "changedOrFailedCandidates": 1,
     "sizeOnlyLegacyCandidateAccepted": 104,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
