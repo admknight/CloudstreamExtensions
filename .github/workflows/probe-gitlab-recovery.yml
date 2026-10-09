@@ -1,0 +1,30 @@
+name: Inspect GitLab immutable source evidence (read only)
+
+on:
+  pull_request:
+    paths:
+      - 'tools/probe_gitlab_recovery.py'
+      - '.github/workflows/probe-gitlab-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pinned-gitlab-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify exact GitLab commit and binary fingerprints
+        run: |
+          set -euo pipefail
+          python3 tools/probe_gitlab_recovery.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gitlab-immutable-evidence
+          path: gitlab-immutable-evidence.json
+          if-no-files-found: warn
