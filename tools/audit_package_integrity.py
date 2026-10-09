@@ -222,25 +222,25 @@ def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader
 def summary(report):
     scan = report['scan']
     lines = ['# MegaRepo package-integrity audit', '',
-             f" + '"' + " - Checked: {report['checkedAtUTC']}" + '"' + ",
-             f" + '"' + " - Result: {'PASS' if report['pass'] else 'FAIL - investigation needed'}" + '"' + ",
-             f" + '"' + " - Published plugins evaluated for metadata: {report['publishedCount']}" + '"' + ",
-             f" + '"' + " - Upstream source indexes fetched: {report['upstreamSourceIndexesChecked']}" + '"' + ",
-             f" + '"' + " - Rotation: {scan['slot'] + 1} / {scan['buckets']} ({scan['mode']})" + '"' + ",
-             f" + '"' + " - Packages downloaded: {scan['checked']}" + '"' + ",
-             f" + '"' + " - Matching SHA-256 digests: {scan['hashVerified']}" + '"' + ",
-             f" + '"' + " - Size-only checks (no upstream checksum): {scan['withoutHashes']}" + '"' + ",
-             f" + '"' + " - Package failures: {scan['failed']}" + '"' + ",
-             f" + '"' + " - Upstream metadata drift: {len(report['metadataDrift'])}" + '"' + ",
-             f" + '"' + " - Source fetch failures: {len(report['sourceErrors'])}" + '"' + ",
+             f"- Checked: {report['checkedAtUTC']}",
+             f"- Result: {'PASS' if report['pass'] else 'FAIL - investigation needed'}",
+             f"- Published plugins evaluated for metadata: {report['publishedCount']}",
+             f"- Upstream source indexes fetched: {report['upstreamSourceIndexesChecked']}",
+             f"- Rotation: {scan['slot'] + 1} / {scan['buckets']} ({scan['mode']})",
+             f"- Packages downloaded: {scan['checked']}",
+             f"- Matching SHA-256 digests: {scan['hashVerified']}",
+             f"- Size-only checks (no upstream checksum): {scan['withoutHashes']}",
+             f"- Package failures: {scan['failed']}",
+             f"- Upstream metadata drift: {len(report['metadataDrift'])}",
+             f"- Source fetch failures: {len(report['sourceErrors'])}",
              '', 'This audit is read-only. Source availability and checksum checks do not prove playback.', '']
     for title, data in [('Upstream metadata drift', report['metadataDrift']),
                         ('Package failures', report['packageProblems']),
                         ('Upstream index fetch failures', report['sourceErrors'])]:
         if data:
-            lines.extend([f'## {title}', '', '### Details', json.dumps(data[:30], indent=2, sort_keys=True), ''])
+            lines.extend([f'## {title}', '', '```json', json.dumps(data[:30], indent=2, sort_keys=True), '```', ''])
             if len(data) > 30:
-                lines.append(f'...and {len(data) - 30} more; see the uploaded audit JSON.')
+                lines.append(f'...and {len(data) - 30} more; see the uploaded audit JSON.\n')
     return '\n'.join(lines)
 
 
@@ -261,7 +261,7 @@ def main(argv=None):
     if 'scan' in data:
         report = summary(data)
     else:
-        report = f" + '"' + "# MegaRepo package-integrity audit\\n\\nFAIL: {data['fatalError']}\\n" + '"' + "
+        report = f"# MegaRepo package-integrity audit\n\nFAIL: {data['fatalError']}\n"
     Path(args.markdown_report).write_text(report + '\n', encoding='utf-8')
     print(report)
     return 0 if data['pass'] else 1
