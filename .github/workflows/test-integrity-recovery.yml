@@ -43,3 +43,65 @@ jobs:
           assert isinstance(x,list)
           print('Approvals:',len(x))
           PY
+
+  catalog-dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout PR source
+        uses: actions/checkout@v4
+        with:
+          path: source
+      - name: Checkout pinned current production catalog
+        uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: production
+      - name: Build candidate from current upstreams (read-only)
+        run: |
+          python3 source/tools/merge_upstreams.py candidate \
+            --previous production/plugins.json \
+            --previous-report production/merge-report.json \
+            --previous-provenance production/provenance.json
+      - name: Dry-run integrity gate against complete real catalog
+        run: |
+          set +e
+          python3 source/tools/verify_candidate_integrity.py \
+            --candidate candidate/plugins.json \
+            --previous production/plugins.json \
+            --candidate-provenance candidate/provenance.json \
+            --previous-provenance production/provenance.json \
+            --approvals source/trusted_binary_approvals.json \
+            --report full-catalog-gate.json
+          status=$?
+          echo "Candidate gate returned $status (expected while unsigned/unreviewed changes exist)"
+          exit 0
+      - name: Explain results and preserve evidence
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('full-catalog-gate.json').read_text())
+          print(json.dumps({k:v for k,v in report.items() if k!='blocked'}, indent=2))
+          for row in report.get('blocked', [])[:12]:
+              print(row['plugin'], ':',row['reason'])
+          with open(__import__('os').environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('### Candidate integrity dry-run\n\n')
+              f.write('- Checked: '+str(report.get('checked','not run'))+'\n')
+              f.write('- Blocked: '+str(report.get('blockedCount','unknown'))+'\n')
+              f.write('- Legacy unpinned: '+str(report.get('legacyUnpinned','unknown'))+'\n')
+          if 'fatalError' in report:
+              raise SystemExit(report['fatalError'])
+          PY
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integrity-catalog-dry-run-${{ github.run_id }}
+          path: |
+            full-catalog-gate.json
+            candidate/merge-report.json
+            candidate/STATUS.md
+          if-no-files-found: warn
