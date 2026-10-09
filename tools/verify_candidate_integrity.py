@@ -11,6 +11,8 @@ import json
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from datetime import date
+from urllib.parse import urlparse
 
 from audit_package_integrity import DIGEST_RE, plugin_identity, verify_package
 
@@ -59,6 +61,14 @@ def approved(plugin, source_id, actual, approvals):
         if not isinstance(row, dict):
             continue
         try:
+            reviewed_by = str(row.get("reviewedBy") or "").strip()
+            evidence_url = str(row.get("evidenceUrl") or "").strip()
+            reason = str(row.get("reason") or "").strip()
+            reviewed_on = date.fromisoformat(str(row.get("reviewedAt") or ""))
+            evidence = urlparse(evidence_url)
+            if not (reviewed_by and reason and evidence.scheme == "https" and
+                    evidence.hostname and reviewed_on <= date.today()):
+                continue
             match = (
                 str(row.get("plugin") or "").strip().casefold() == plugin_identity(plugin)
                 and str(row.get("sourceId") or "") == source_id
