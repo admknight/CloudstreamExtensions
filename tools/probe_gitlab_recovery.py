@@ -12,7 +12,7 @@ from pathlib import Path
 
 PROJECT = "65865366"
 BASE = "https://gitlab.com/tearrs/cloudstream-vietnamese"
-NAMES = ("StremioProvider", "ViStreamProvider", "XtreamIPTVProvider")
+NAMES = ("StremioProvider", "ViStreamProvider", "XtreamIPTVProvider", "IPTVProvider")
 MAX_BYTES = 2 * 1024 * 1024
 
 
