@@ -1022,6 +1022,27 @@
     "name": "[Anime] AnimeSuge"
   },
   {
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "[Anime] AnimeTH",
+    "internalName": "AnimeTH",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "anime with Thai dub and sub",
+    "fileSize": 51648,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "th",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie"
+    ],
+    "iconUrl": "https://anime-th.com/favicon.ico",
+    "apiVersion": 1,
+    "fileHash": "sha256-588900960340944467b3dcd9895425aca0db65df75f65b680be446293c0a7b2d"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animeua.club&sz=%size%",
     "fileHash": "sha256-0b21a92476a98a26ae209ad7c7477ebc47f498a088b463f13a283de7c4b27c1f",
     "apiVersion": 1,
@@ -1444,6 +1465,28 @@
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/anizone.png",
     "apiVersion": 1,
     "fileHash": "sha256-2d7e4c5ab4bcbd25665d9eb2951ba8cb7352ebb985f6d9d047030fcd99dd9a09"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Anv.cs3",
+    "status": 1,
+    "version": 1,
+    "name": "[Anime] Anv",
+    "internalName": "Anv",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Anime sub and dub from multiple servers with subtitle language support",
+    "fileSize": 59454,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "en",
+    "tvTypes": [
+      "Anime",
+      "AnimeMovie",
+      "OVA"
+    ],
+    "iconUrl": "https://anv.to/brand/icon-512.png",
+    "apiVersion": 1,
+    "fileHash": "sha256-94a1716c3677bc0c2877d89634e7c5da66c39bc306b3dd34758f0e5a06f4c443"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AreaDocumentalProvider.cs3",
@@ -5055,6 +5098,25 @@
     "fileHash": "sha256-280fd2371c6cffc81677530d2a24106b1704a36eb693e6c51558502c14a46c87"
   },
   {
+    "apiVersion": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "Cần nhập link IPTV để xem",
+    "fileSize": 32311,
+    "iconUrl": "https://www.shutterstock.com/image-vector/iptv-vector-line-icon-ip-260nw-1841427610.jpg",
+    "internalName": "IPTVProvider",
+    "name": "[Live] IPTVProvider",
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "status": 1,
+    "tvTypes": [
+      "Live"
+    ],
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3",
+    "version": 9,
+    "fileHash": "sha256-8760295a88dd29011add8fa04e542209412100631dee948c18559e9e1acc565a"
+  },
+  {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IStreamFlare.cs3",
     "status": 1,
     "version": 6,
@@ -5382,16 +5444,16 @@
     "fileHash": "sha256-1b736e0cda249cbac483658a2abe2b8c90075c232dd26fd8739797b79a5e5f5f"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/JustPlay.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
     "status": 1,
-    "version": 10,
+    "version": 12,
     "name": "[Movies] JustPlay",
     "internalName": "JustPlay",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies and series from multiple sources with a Manage Sources screen that filters download and stream links",
-    "fileSize": 399041,
+    "fileSize": 421355,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5400,7 +5462,7 @@
     ],
     "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknDTJSN2AhrHzfxF75gr9-qG4x-JzwHRnvPDjZP2aa-93KRaXPF1_ZQdm&s=10",
     "apiVersion": 1,
-    "fileHash": "sha256-7caf82f7b2bfb0a08a9e738a8d39b6988fd77addac08669ce30159369c80fdb1"
+    "fileHash": "sha256-31d865e11f19b984e39baa48fa6234b9dd24f70c4a8ff9a1ca178a0dc56966e5"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=www.kalite18.net&sz=%size%",
@@ -9035,16 +9097,16 @@
     "name": "[Indian] StreamFlixProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3",
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
     "status": 1,
-    "version": 62,
+    "version": 63,
     "name": "[Indian] StreamHubOne",
     "internalName": "StreamHubOne",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "StreamHub -  Multilingual provider Non-Stop Solution For Streaming Movies/Tv series & Anime",
-    "fileSize": 1099698,
+    "fileSize": 1099831,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -9056,7 +9118,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/images%20(1).jpeg",
     "apiVersion": 1,
-    "fileHash": "sha256-134c3a85496abc454bb61686ccf98d83e2adac956f347dc1808f9b6e458eafd8"
+    "fileHash": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3",
@@ -9844,16 +9906,16 @@
     "fileHash": "sha256-ca50d64ae259c7b9167d5fddf03902ec418a0a9d57230f84545ca97cd9df147c"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TorrentsV1.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3",
     "status": 1,
-    "version": 21,
+    "version": 22,
     "name": "[Movies] TorrentsV1",
     "internalName": "TorrentsV1",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "description": "Torrent support for Anime, Movies and TV via Torrentio, TorrentsDB, Animetosho and custom Stremio addons",
-    "fileSize": 118012,
+    "description": "Torrent support for Anime, Movies and TV via Torrentio, TorrentsDB, Animetosho, Nyaa and custom Stremio addons",
+    "fileSize": 123332,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9866,7 +9928,7 @@
     ],
     "iconUrl": "https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-867fe24b5e0a7b5d98d31e0d24744d790ac5022defbedd8b8d577dc9be0c3fd0"
+    "fileHash": "sha256-083368334ae440237fc0d799ea3dd087c782f46b177915b477267f7f326a05a1"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=tranimaci.com&sz=%size%",

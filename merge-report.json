@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09 21:05:12 UTC",
+  "generatedAt": "2026-10-09 21:47:09 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
@@ -18,8 +18,8 @@
       "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
       "priority": 0,
       "ok": true,
-      "rawCount": 9,
-      "includedCount": 9,
+      "rawCount": 15,
+      "includedCount": 15,
       "packageFailed": 0,
       "duplicateSkipped": 0,
       "integrityExceptions": 0,
@@ -215,10 +215,10 @@
       "priority": 25,
       "ok": true,
       "rawCount": 17,
-      "includedCount": 12,
+      "includedCount": 11,
       "packageFailed": 0,
-      "duplicateSkipped": 5,
-      "integrityExceptions": 1,
+      "duplicateSkipped": 6,
+      "integrityExceptions": 0,
       "deferredUnverified": 0
     },
     {
@@ -256,10 +256,10 @@
       "index": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
       "priority": 20,
       "ok": true,
-      "rawCount": 30,
-      "includedCount": 30,
+      "rawCount": 32,
+      "includedCount": 28,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 4,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -511,7 +511,7 @@
       "rawCount": 7,
       "includedCount": 3,
       "packageFailed": 0,
-      "duplicateSkipped": 3,
+      "duplicateSkipped": 4,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     }
@@ -522,27 +522,27 @@
     "Adult": 74,
     "Movies": 135,
     "Other": 20,
-    "Anime": 64,
+    "Anime": 66,
     "Asian": 50,
     "Games": 21,
-    "Live": 46,
+    "Live": 47,
     "Sports": 2,
     "Tools": 12
   },
-  "previousPlugins": 543,
-  "uniquePlugins": 544,
+  "previousPlugins": 544,
+  "uniquePlugins": 547,
   "packageHealth": {
-    "reachable": 544,
+    "reachable": 547,
     "failed": 0
   },
   "integrityHealth": {
-    "candidateChecked": 544,
-    "candidateAccepted": 543,
-    "immutableOldRetained": 1,
-    "pinnedPreviousRecovered": 1,
+    "candidateChecked": 547,
+    "candidateAccepted": 547,
+    "immutableOldRetained": 0,
+    "pinnedPreviousRecovered": 0,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 1,
+    "changedOrFailedCandidates": 0,
     "sizeOnlyLegacyCandidateAccepted": 104,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
@@ -571,6 +571,14 @@
       "skippedSource": "Desi Extensions",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeTH",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
     },
     {
       "plugin": "AnimeUnity",
@@ -603,6 +611,14 @@
       "skippedSource": "Desi Extensions",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "Anv",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Arte",
@@ -691,6 +707,22 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "IPTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 9,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 9,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "JustPlay",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Krmzy",
@@ -821,6 +853,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "StreamHubOne",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 63,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 63,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "StreamingCommunity",
       "selectedSource": "DieGon Repository",
       "selectedVersion": 53,
@@ -851,6 +891,14 @@
       "skippedSource": "Redowan CloudStream",
       "skippedVersion": 6,
       "reason": "lower version"
+    },
+    {
+      "plugin": "TorrentsV1",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 22,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 22,
+      "reason": "lower source priority"
     },
     {
       "plugin": "TV",
@@ -943,6 +991,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AnimeTH",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "AnimeUnity",
       "selectedSource": "doGior's Had Enough",
       "selectedVersion": 26,
@@ -973,6 +1029,14 @@
       "skippedSource": "Desi Extensions",
       "skippedVersion": 3,
       "reason": "lower version"
+    },
+    {
+      "plugin": "Anv",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Arte",
@@ -1061,6 +1125,22 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "IPTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 9,
+      "skippedSource": "Tearrs Vietnamese Extension",
+      "skippedVersion": 9,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "JustPlay",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 12,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 12,
+      "reason": "lower source priority"
     },
     {
       "plugin": "Krmzy",
@@ -1191,6 +1271,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "StreamHubOne",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 63,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 63,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "StreamingCommunity",
       "selectedSource": "DieGon Repository",
       "selectedVersion": 53,
@@ -1221,6 +1309,14 @@
       "skippedSource": "Redowan CloudStream",
       "skippedVersion": 6,
       "reason": "lower version"
+    },
+    {
+      "plugin": "TorrentsV1",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 22,
+      "skippedSource": "raghav repo",
+      "skippedVersion": 22,
+      "reason": "lower source priority"
     },
     {
       "plugin": "TV",
@@ -1289,24 +1385,83 @@
   ],
   "failedPlugins": [],
   "changes": {
-    "added": 1,
-    "updated": 0,
-    "unchanged": 543,
+    "added": 3,
+    "updated": 3,
+    "unchanged": 541,
     "removed": 0
   },
   "changeDetails": {
     "added": [
       {
-        "plugin": "NetMovie",
-        "name": "NetMovie",
+        "plugin": "AnimeTH",
+        "name": "AnimeTH",
         "version": 1,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Indian"
+        "category": "Anime"
+      },
+      {
+        "plugin": "Anv",
+        "name": "Anv",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime"
+      },
+      {
+        "plugin": "IPTVProvider",
+        "name": "IPTVProvider",
+        "version": 9,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Live"
       }
     ],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "JustPlay",
+        "name": "JustPlay",
+        "version": 12,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 10,
+        "toVersion": 12,
+        "fromSourceId": "raghav",
+        "fromSource": "raghav repo",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "StreamHubOne",
+        "name": "StreamHubOne",
+        "version": 63,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Indian",
+        "fromVersion": 62,
+        "toVersion": 63,
+        "fromSourceId": "desi",
+        "fromSource": "Desi Extensions",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TorrentsV1",
+        "name": "TorrentsV1",
+        "version": 22,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 21,
+        "toVersion": 22,
+        "fromSourceId": "raghav",
+        "fromSource": "raghav repo",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -1317,30 +1472,13 @@
   "customProviderChanges": [],
   "removedPlugins": [],
   "deferredUnverified": [],
-  "quarantineIncidents": [
-    {
-      "plugin": "streamhubone",
-      "disposition": "retained_immutable_previous",
-      "candidateSourceId": "desi",
-      "previousSourceId": "desi",
-      "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3",
-      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "observedVerification": "hash_verified",
-      "observedActualSize": 1099831,
-      "observedActualSHA256": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57",
-      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
-      "fallbackVerified": true,
-      "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3",
-      "fallbackThroughRecoveryLock": true
-    }
-  ],
-  "originalSourceReportDigest": "3e77fc8274d8d43be4d1f3e0c54340efe2969719831edf58fd28781c68f377e6",
+  "quarantineIncidents": [],
+  "originalSourceReportDigest": "56601681640c39d87d1970999b25988c4cd3e960d387f00d9ede6bfe97e7d747",
   "inputSnapshotDigests": {
-    "candidate": "e28bee0b6235fc2d9010796dea2d2b84919c8054cd138f6f951af0f556a51cf3",
-    "previous": "38cb533a2be865731bf7ef4175640e5c1074a7c16282515612d188a047c665c9",
-    "candidateProvenance": "a29a3f66e5ad57991665c27cd64d2578245440c14f09d02f747f6f2e7fa71b9a",
-    "previousProvenance": "e6371a69d6dabb29d7adb48430768b97efaa035206b39847978379c52d7c44cf"
+    "candidate": "12f7fb50e0f8388e9ff0c31bbc33a99ce63762325afb5dad57b840e8cc43ee70",
+    "previous": "0f5d7eaf163097d88787444d7445906474790c94553e4cdbfe38c2cd19a577db",
+    "candidateProvenance": "66565161e6f0be0e39ace5d0d505b31c487ce65f69352a47cca45141719cf9d4",
+    "previousProvenance": "fae85848425f90903d1c47a0b043e5083d8574384df5c3ccb232599f0fdc0c07"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

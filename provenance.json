@@ -839,6 +839,23 @@
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/AnimeSuge.cs3"
   },
   {
+    "plugin": "AnimeTH",
+    "originalName": "AnimeTH",
+    "publishedName": "[Anime] AnimeTH",
+    "category": "Anime",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
+    "originalAuthors": [
+      "raghav"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3"
+  },
+  {
     "plugin": "AnimeUAProvider",
     "originalName": "AnimeUAProvider",
     "publishedName": "[Anime] AnimeUAProvider",
@@ -1178,6 +1195,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anizone.cs3"
+  },
+  {
+    "plugin": "Anv",
+    "originalName": "Anv",
+    "publishedName": "[Anime] Anv",
+    "category": "Anime",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
+    "originalAuthors": [
+      "KSHITIJ8473"
+    ],
+    "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Anv.cs3"
   },
   {
     "plugin": "AreaDocumentalProvider",
@@ -4180,6 +4214,23 @@
     "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IPTVPlayer.cs3"
   },
   {
+    "plugin": "IPTVProvider",
+    "originalName": "IPTVProvider",
+    "publishedName": "[Live] IPTVProvider",
+    "category": "Live",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 9,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
+    "originalAuthors": [
+      "anhdaden"
+    ],
+    "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3"
+  },
+  {
     "plugin": "IStreamFlare",
     "originalName": "IStreamFlare",
     "publishedName": "[Indian] IStreamFlare",
@@ -4458,16 +4509,16 @@
     "publishedName": "[Movies] JustPlay",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
-    "sourceId": "raghav",
-    "sourceName": "raghav repo",
-    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
-    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "selectedVersion": 12,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "KSHITIJ8473"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/JustPlay.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3"
   },
   {
     "plugin": "Kalite18",
@@ -7476,16 +7527,16 @@
     "publishedName": "[Indian] StreamHubOne",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 62,
-    "sourceId": "desi",
-    "sourceName": "Desi Extensions",
-    "sourceRepository": "https://github.com/Faisal0786/Desi",
-    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "selectedVersion": 63,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Faisal"
     ],
     "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
-    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/2e8395358aba1347cda0d21af5f90aaf1d0f8177/StreamHubOne.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3"
   },
   {
     "plugin": "StreamingCommunity",
@@ -8143,16 +8194,16 @@
     "publishedName": "[Movies] TorrentsV1",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 21,
-    "sourceId": "raghav",
-    "sourceName": "raghav repo",
-    "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
-    "sourceIndex": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
+    "selectedVersion": 22,
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TorrentsV1.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3"
   },
   {
     "plugin": "TRanimaci",

@@ -1,32 +1,91 @@
 {
-  "generatedAt": "2026-10-09 21:05:12 UTC",
+  "generatedAt": "2026-10-09 21:47:09 UTC",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "catalog": {
-    "plugins": 544,
+    "plugins": 547,
     "healthySources": 36,
     "failedSources": 0,
-    "reachablePackages": 544,
+    "reachablePackages": 547,
     "packageFailures": 0
   },
   "changes": {
-    "added": 1,
-    "updated": 0,
-    "unchanged": 543,
+    "added": 3,
+    "updated": 3,
+    "unchanged": 541,
     "removed": 0
   },
   "changeDetails": {
     "added": [
       {
-        "plugin": "NetMovie",
-        "name": "NetMovie",
+        "plugin": "AnimeTH",
+        "name": "AnimeTH",
         "version": 1,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Indian"
+        "category": "Anime"
+      },
+      {
+        "plugin": "Anv",
+        "name": "Anv",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Anime"
+      },
+      {
+        "plugin": "IPTVProvider",
+        "name": "IPTVProvider",
+        "version": 9,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Live"
       }
     ],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "JustPlay",
+        "name": "JustPlay",
+        "version": 12,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 10,
+        "toVersion": 12,
+        "fromSourceId": "raghav",
+        "fromSource": "raghav repo",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "StreamHubOne",
+        "name": "StreamHubOne",
+        "version": 63,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Indian",
+        "fromVersion": 62,
+        "toVersion": 63,
+        "fromSourceId": "desi",
+        "fromSource": "Desi Extensions",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "TorrentsV1",
+        "name": "TorrentsV1",
+        "version": 22,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 21,
+        "toVersion": 22,
+        "fromSourceId": "raghav",
+        "fromSource": "raghav repo",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -36,13 +95,13 @@
   },
   "customProviderChanges": [],
   "integrityHealth": {
-    "candidateChecked": 544,
-    "candidateAccepted": 543,
-    "immutableOldRetained": 1,
-    "pinnedPreviousRecovered": 1,
+    "candidateChecked": 547,
+    "candidateAccepted": 547,
+    "immutableOldRetained": 0,
+    "pinnedPreviousRecovered": 0,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 1,
+    "changedOrFailedCandidates": 0,
     "sizeOnlyLegacyCandidateAccepted": 104,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
