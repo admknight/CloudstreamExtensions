@@ -108,7 +108,19 @@ def validate_snapshots(candidate, previous, candidate_provenance,
     for key, plugin in chosen.items():
         inc = incident_by_key.get(key)
         if inc and inc["disposition"] == "retained_immutable_previous":
-            if key not in old or plugin != old[key] or chosen_src[key] != old_src[key]:
+            if key not in old or inc.get("fallbackVerified") is not True:
+                raise ValueError("Previous immutable fallback is not verified: " + key)
+            if inc.get("fallbackThroughRecoveryLock") is True:
+                if inc.get("fallbackPin") != plugin.get("url"):
+                    raise ValueError("Recovery pin mismatch: " + key)
+                expected_old = dict(old[key])
+                expected_old["url"] = inc["fallbackPin"]
+                expected_origin = dict(old_src[key])
+                expected_origin["packageUrl"] = inc["fallbackPin"]
+                if (plugin != expected_old or chosen_src[key] != expected_origin
+                    or inc.get("previousUrl") != old[key].get("url")):
+                    raise ValueError("Pinned fallback altered previous published bytes or provenance: " + key)
+            elif key not in old or plugin != old[key] or chosen_src[key] != old_src[key]:
                 raise ValueError("Previous immutable fallback does not match original: " + key)
         elif (key not in current or plugin != current[key]
               or chosen_src[key] != cur_src[key] or key in blocked_by_key):
@@ -362,6 +374,7 @@ def reconcile(candidate, previous, candidate_provenance, previous_provenance,
             "candidateChecked": len(candidate),
             "candidateAccepted": selection["selection"]["acceptedCandidates"],
             "immutableOldRetained": selection["selection"]["retainedImmutablePrevious"],
+            "pinnedPreviousRecovered": selection["selection"].get("retainedThroughRecoveryLock", 0),
             "unverifiedPreviousCarried": len(deferred),
             "quarantinedNotInProposal": len(removed),
             "changedOrFailedCandidates": blocked,
