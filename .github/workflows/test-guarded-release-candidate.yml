@@ -8,6 +8,8 @@ on:
       - '.github/workflows/verify-guarded-post-publication.yml'
       - 'tools/validate_guarded_post_publish.py'
       - 'tests/test_validate_guarded_post_publish.py'
+      - 'tools/resolve_verified_integrity_issues.py'
+      - 'tests/test_resolve_verified_integrity_issues.py'
       - 'tools/finalize_guarded_release.py'
       - 'tests/test_finalize_guarded_release.py'
   workflow_dispatch:
@@ -26,7 +28,8 @@ jobs:
           set -euo pipefail
           python3 -m unittest discover -s tests -p 'test_finalize_guarded_release.py' -v
           python3 -m unittest discover -s tests -p 'test_validate_guarded_post_publish.py' -v
-          python3 -m py_compile tools/finalize_guarded_release.py tools/validate_guarded_post_publish.py
+          python3 -m unittest discover -s tests -p 'test_resolve_verified_integrity_issues.py' -v
+          python3 -m py_compile tools/finalize_guarded_release.py tools/validate_guarded_post_publish.py tools/resolve_verified_integrity_issues.py
       - name: YAML and read-only workflow check
         run: |
           ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |path| YAML.load_file(path) }; puts "All workflow YAML parsed"'
