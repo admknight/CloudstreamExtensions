@@ -184,10 +184,15 @@ class PerPluginSelectionTests(unittest.TestCase):
     def test_replaced_source_without_review_is_quarantined(self):
         before = [item(name=f"P{i}") for i in range(51)]
         changed = copy.deepcopy(before)
-        _, _, report, _ = select(
-            changed, before, candidate_source="impostor", previous_source="test"
+        current_origins = provenance(changed)
+        current_origins[0]["sourceId"] = "impostor"
+        result, _, report, _ = build_preview(
+            changed, before, current_origins, provenance(before), [],
+            checker=verifier({p["url"]: b"original" for p in before}),
+            workers=1
         )
-        self.assertEqual(report["selection"]["quarantinedExisting"], 51)
+        self.assertEqual(report["selection"]["quarantinedExisting"], 1)
+        self.assertEqual(len(result), 50)
 
     def test_candidate_disappearance_is_reconciled_as_review_required(self):
         before = [item(name=f"P{i}") for i in range(51)]
