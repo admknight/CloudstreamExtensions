@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - '.github/workflows/test-guarded-release-candidate.yml'
+      - '.github/workflows/build.yml'
       - 'tools/finalize_guarded_release.py'
       - 'tests/test_finalize_guarded_release.py'
   workflow_dispatch:
@@ -85,7 +86,8 @@ jobs:
             --previous-dir published \
             --selection-dir integrity-selection \
             --output-dir release-candidate \
-            --max-deferred 24
+            --max-deferred 24 \
+            --verify-deferred-urls
       - name: Assert real 543-entry release candidates remain complete
         run: |
           python3 - <<'PY'
