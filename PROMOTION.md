@@ -8,7 +8,7 @@
 
 🚀 **Adam Knight Mega Repo v1.0 is live**
 
-540 reachable plugins · 35 healthy sources · 0 package failures.
+At the October 6, 2026 v1.0 launch: 540 reachable plugins · 35 healthy sources · 0 package failures.
 
 Automatic upstream aggregation, version-aware deduplication, package verification, custom provider builds, health monitoring, and publication safety gates.
 
@@ -23,7 +23,7 @@ Automatic upstream aggregation, version-aware deduplication, package verificatio
 
 I’ve released the first stable version of **Adam Knight Mega Repo**, an automatically maintained CloudStream extensions repository.
 
-Current production status:
+v1.0 launch-time snapshot (October 6, 2026):
 
 - **540** reachable plugins
 - **35** healthy upstream/custom sources
@@ -64,7 +64,9 @@ Feedback, repository suggestions, and testing reports are welcome.
 
 🚀 **Adam Knight Mega Repo v1.0**
 
-A single automatically maintained CloudStream repo with:
+A single automatically maintained CloudStream repo.
+
+At the October 6, 2026 v1.0 launch:
 
 • 540 reachable plugins  
 • 35 healthy sources  
@@ -85,7 +87,7 @@ A single automatically maintained CloudStream repo with:
 
 The pipeline fetches configured upstream indexes, resolves duplicates using version/source-priority rules, verifies package reachability, applies publication safety gates, builds local providers, and publishes a known-good production catalog.
 
-Current release baseline: **540 plugins · 35 healthy sources · 0 package failures**.
+v1.0 release-time baseline: **540 plugins · 35 healthy sources · 0 package failures**.
 
 Project dashboard: https://admknight.github.io/CloudstreamExtensions/  
 Source: https://github.com/admknight/CloudstreamExtensions  
