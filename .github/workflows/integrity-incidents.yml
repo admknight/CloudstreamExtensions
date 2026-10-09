@@ -1,4 +1,4 @@
-name: Track published integrity incidents
+name: Track integrity incidents and safely recover trusted upstream corrections
 
 on:
   workflow_run:
@@ -8,45 +8,174 @@ on:
   workflow_dispatch:
     inputs:
       run_id:
-        description: "Completed integrity audit workflow run ID"
+        description: "Completed master-branch integrity audit workflow run ID"
         required: true
         type: string
 
 permissions:
-  actions: read
+  actions: write
   contents: read
   issues: write
 
 concurrency:
-  group: integrity-incidents
+  group: integrity-incidents-and-recovery
   cancel-in-progress: false
 
 jobs:
-  incidents:
+  recovery:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.head_repository.full_name == github.repository }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
-      - name: Checkout trusted master scripts
+      - name: Checkout trusted scripts from master
         uses: actions/checkout@v4
         with:
           ref: master
           persist-credentials: false
-      - name: Download original audit evidence
+
+      - name: Verify completed audit origin
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
         run: |
           set -euo pipefail
-          case "$RUN_ID" in *[!0-9]*|'') echo "Invalid run ID"; exit 1;; esac
-          gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" --pattern "plugin-integrity-audit-*" --dir evidence
-          test -s evidence/audit-report.json || test -s evidence/*/audit-report.json
-          find evidence -type f -name audit-report.json -print
-      - name: Record unresolved incidents without modifying manifests
+          case "$RUN_ID" in *[!0-9]*|'') echo "Invalid audit run ID"; exit 1;; esac
+          gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" \
+            --json name,workflowName,headBranch,status,event > audit-origin.json
+          python3 - <<'PY'
+          import json
+          obj=json.load(open('audit-origin.json'))
+          assert obj.get('workflowName') == 'Audit Published Plugin Integrity', obj
+          assert obj.get('headBranch') == 'master', obj
+          assert obj.get('status') == 'completed', obj
+          print('Verified completed master audit origin.')
+          PY
+
+      - name: Retrieve audit evidence artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
+        run: |
+          set -euo pipefail
+          gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" \
+            --pattern "plugin-integrity-audit-*" --dir evidence
+          python3 - <<'PY'
+          from pathlib import Path
+          items=list(Path('evidence').rglob('audit-report.json'))
+          if len(items)!=1:
+              raise SystemExit('Exactly one audit JSON artifact is required')
+          import shutil
+          shutil.copyfile(items[0], 'original-audit.json')
+          PY
+
+      - name: Plan incident changes and record issues
+        id: hint
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          report="$(find evidence -type f -name audit-report.json | head -n 1)"
-          test -n "$report"
-          python3 tools/sync_integrity_issues.py --audit "$report"
+          python3 tools/plan_integrity_recovery.py \
+            --audit original-audit.json --plan incident-plan.json
+          python3 tools/sync_integrity_issues.py --audit original-audit.json
+          python3 - <<'PY'
+          import json,os
+          p=json.load(open('incident-plan.json'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('preflight='+('true' if p['candidatePreflightNeeded'] else 'false')+'\n')
+          PY
+
+      - name: Checkout one pinned production catalog snapshot
+        if: steps.hint.outputs.preflight == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: production
+          persist-credentials: false
+
+      - name: Independently rebuild current upstream candidate
+        if: steps.hint.outputs.preflight == 'true'
+        run: |
+          python3 tools/merge_upstreams.py candidate \
+            --previous production/plugins.json \
+            --previous-report production/merge-report.json \
+            --previous-provenance production/provenance.json
+
+      - name: Full candidate binary-integrity preflight (advisory, fail-closed decision)
+        if: steps.hint.outputs.preflight == 'true'
+        run: |
+          set +e
+          python3 tools/verify_candidate_integrity.py \
+            --candidate candidate/plugins.json \
+            --previous production/plugins.json \
+            --candidate-provenance candidate/provenance.json \
+            --previous-provenance production/provenance.json \
+            --approvals trusted_binary_approvals.json \
+            --report candidate-gate.json
+          status=$?
+          echo "Integrity preflight exit: $status. No unsafe dispatch will occur."
+          test -s candidate-gate.json
+
+      - name: Decide if guarded aggregation may run
+        id: decision
+        if: steps.hint.outputs.preflight == 'true'
+        run: |
+          set -euo pipefail
+          python3 tools/plan_integrity_recovery.py \
+            --audit original-audit.json --plan incident-plan.json \
+            --gate candidate-gate.json \
+            --candidate candidate/plugins.json \
+            --previous production/plugins.json \
+            --candidate-provenance candidate/provenance.json \
+            --candidate-report candidate/merge-report.json \
+            --decision recovery-decision.json
+          python3 - <<'PY'
+          import datetime,json,os
+          d=json.load(open('recovery-decision.json'))
+          approved=d.get('dispatch') is True
+          print(json.dumps(d,indent=2))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('dispatch='+('true' if approved else 'false')+'\n')
+              if approved:
+                  key='trusted-recovery-'+d['candidateDigest']+'-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%d')
+                  f.write('cache-key='+key+'\n')
+          PY
+
+      - name: Check same-day dispatch deduplication
+        if: steps.decision.outputs.dispatch == 'true'
+        id: previous
+        uses: actions/cache/restore@v4
+        with:
+          path: recovery-dispatched.txt
+          key: ${{ steps.decision.outputs.cache-key }}
+
+      - name: Dispatch guarded aggregation for trusted candidate only
+        if: steps.decision.outputs.dispatch == 'true' && steps.previous.outputs.cache-hit != 'true'
+        id: dispatch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run build.yml --ref master
+          echo "Guarded aggregator dispatched following independently verified preflight."
+          echo "${{ steps.decision.outputs.cache-key }}" > recovery-dispatched.txt
+
+      - name: Save same-day dispatch marker
+        if: steps.dispatch.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: recovery-dispatched.txt
+          key: ${{ steps.decision.outputs.cache-key }}
+
+      - name: Preserve decision evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guarded-recovery-decision-${{ github.run_id }}
+          path: |
+            audit-origin.json
+            original-audit.json
+            incident-plan.json
+            candidate-gate.json
+            recovery-decision.json
+          if-no-files-found: warn
+          retention-days: 14
