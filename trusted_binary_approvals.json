@@ -1,5 +1,17 @@
 [
   {
+    "plugin": "AltadefinizioneProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/AltadefinizioneProvider.cs3",
+    "version": 1,
+    "fileSize": 10734,
+    "fileHash": "sha256-905b0b1ef8b722a1599ecfee3f65d37954dd6a87e8c13e0624d36f74776441ba",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/Gian-Fr/ItalianProvider/blob/e34c60c1139308f2265e57631abf2576addf73b0/AltadefinizioneProvider.cs3"
+  },
+  {
     "plugin": "AnimeTH",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3",
@@ -10,6 +22,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Original upstream build at full immutable GitHub commit, exact .cs3 ZIP size and SHA-256 independently verified against committed manifest in GitHub Actions run 37995159232; publisher signature and runtime functionality not certified.",
     "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3"
+  },
+  {
+    "plugin": "AniyomiProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/0a539fd454179399dd34b38ef5d4d3db49ce4971/AniyomiProvider.cs3",
+    "version": 8,
+    "fileSize": 36701,
+    "fileHash": "sha256-5f0a5c8d44cdab98c4ee6fc5384ecf22c74d4b1a466a4c4e6662b04987837842",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/CranberrySoup/AniyomiCompatExtension/blob/0a539fd454179399dd34b38ef5d4d3db49ce4971/AniyomiProvider.cs3"
   },
   {
     "plugin": "Anv",
@@ -24,6 +48,18 @@
     "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Anv.cs3"
   },
   {
+    "plugin": "BingedReview",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/BingedReview.cs3",
+    "version": 3,
+    "fileSize": 17968,
+    "fileHash": "sha256-b0793b093256a5c2feb5468099941f4e8b6058682a13f146e973675738991c3e",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/rockhero1234/cinephile/blob/9aebfedfde585c7312edb1378ac287a6a847a59e/BingedReview.cs3"
+  },
+  {
     "plugin": "Donghub",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3",
@@ -34,6 +70,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
     "evidenceUrl": "https://github.com/ExtremeBoyGG/nonton-indo/blob/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3"
+  },
+  {
+    "plugin": "DramaDrip",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/DramaDrip.cs3",
+    "version": 3,
+    "fileSize": 43695,
+    "fileHash": "sha256-345a94bf04a6c9bbdbd0522d3f3e8c499f498cf84c5c62bfc522d4f3770ba9f4",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/kim20598/cloudstream-extensions-test/blob/3e2792be0585090691a9d3421d902c29d7736c0f/DramaDrip.cs3"
   },
   {
     "plugin": "Extractors",
@@ -60,6 +108,30 @@
     "evidenceUrl": "https://github.com/Shakzz890/ShakzzCutie/blob/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3"
   },
   {
+    "plugin": "GuardaSerieProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/GuardaSerieProvider.cs3",
+    "version": 1,
+    "fileSize": 10898,
+    "fileHash": "sha256-1bc6f551461dbfa6a851265d8e50ea6a51c3bfc13e8ad5ccebeeea838e5d56bf",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/Gian-Fr/ItalianProvider/blob/e34c60c1139308f2265e57631abf2576addf73b0/GuardaSerieProvider.cs3"
+  },
+  {
+    "plugin": "IndianTVProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/IndianTVProvider.cs3",
+    "version": 6,
+    "fileSize": 21427,
+    "fileHash": "sha256-a679563b917a4b5b1e5e9d9af901884b18981e18f321cdadb95a374c4fd189f9",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/kim20598/cloudstream-extensions-test/blob/3e2792be0585090691a9d3421d902c29d7736c0f/IndianTVProvider.cs3"
+  },
+  {
     "plugin": "IPTVProvider",
     "sourceId": "local-pinned-recovery",
     "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3",
@@ -82,6 +154,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Original upstream build at full immutable GitHub commit, exact .cs3 ZIP size and SHA-256 independently verified against committed manifest in GitHub Actions run 37995159232; publisher signature and runtime functionality not certified.",
     "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3"
+  },
+  {
+    "plugin": "MegaProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/self-similarity/MegaRepo/d8b64bab636845a89503469f1c3cb13fdc750a8a/MegaProvider.cs3",
+    "version": 2,
+    "fileSize": 6929,
+    "fileHash": "sha256-7062fa86531ad8b8c34244c564adcba97176870a186499adbc369189ac848dbe",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/self-similarity/MegaRepo/blob/d8b64bab636845a89503469f1c3cb13fdc750a8a/MegaProvider.cs3"
   },
   {
     "plugin": "NetMovie",
@@ -120,6 +204,18 @@
     "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3"
   },
   {
+    "plugin": "SkymoviesHD",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/SkymoviesHD.cs3",
+    "version": 1,
+    "fileSize": 23971,
+    "fileHash": "sha256-944c9644ca9c8ee455a161e6154b20f6c764d2f7be0b355d902e997d8d63795f",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/rockhero1234/cinephile/blob/9aebfedfde585c7312edb1378ac287a6a847a59e/SkymoviesHD.cs3"
+  },
+  {
     "plugin": "StreamHubOne",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
@@ -154,6 +250,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Original upstream build at full immutable GitHub commit, exact .cs3 ZIP size and SHA-256 independently verified against committed manifest in GitHub Actions run 37995159232; publisher signature and runtime functionality not certified.",
     "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3"
+  },
+  {
+    "plugin": "UltimaBeta",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/UltimaBeta.cs3",
+    "version": 7,
+    "fileSize": 314672,
+    "fileHash": "sha256-039cdf7621971da3c7a7153f5802694126e170a286511d3422e64da471e814c9",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Exact original GitHub build-commit manifest reviewed; committed ZIP SHA-256 verified and byte-identical to existing published package via successful GitHub Actions run 37997574506. Preserves release version, size and status; does not certify runtime playback or signed upstream release.",
+    "evidenceUrl": "https://github.com/kim20598/cloudstream-extensions-test/blob/3e2792be0585090691a9d3421d902c29d7736c0f/UltimaBeta.cs3"
   },
   {
     "plugin": "ViStreamProvider",
