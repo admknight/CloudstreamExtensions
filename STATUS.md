@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-09 01:25:24 UTC**
+Generated: **2026-10-09 01:31:58 UTC**
 
 Candidate status: **READY**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 542 | 0 | 35 | 0 | 0 | 0 | 1 |
+| 542 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## Source health
 

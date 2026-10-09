@@ -43,7 +43,7 @@ The catalog is rebuilt from multiple published CloudStream repositories, dedupli
 
 **Adding a repository does not install its extensions automatically.** Choose and install individual plugins inside CloudStream.
 
-This project combines multi-source aggregation, a separate personal repository builder and read-only package-integrity monitoring. It does not claim to have invented personalized CloudStream repositories.
+Together, these tools connect a monitored multi-source catalog to three practical choices: install the full repository, create a selected-only repository, or explore first.
 
 ### Why use this CloudStream repository?
 
@@ -70,11 +70,11 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-09 01:25:24 UTC**
+Last successful refresh: **2026-10-09 01:31:58 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 542 | 0 | 35 | 0 | 0 | 0 | 1 |
+| 542 | 0 | 35 | 0 | 0 | 0 | 0 |
 
 ## 🗂️ Browse by section
 
