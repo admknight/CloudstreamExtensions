@@ -75,6 +75,20 @@ def validate_proven_resolution(audit, guarded_verdict, report, plugins, provenan
     if report.get("integrityHealth", {}).get("unverifiedPreviousCarried") != len(deferred):
         raise ValueError("Deferred entry total changed between checks")
 
+    prior_pinned = {
+        str(item.get("plugin") or "").strip().casefold()
+        for item in report.get("quarantineIncidents", [])
+        if isinstance(item, dict)
+        and item.get("disposition") == "retained_immutable_previous"
+        and item.get("fallbackVerified") is True
+    }
+    if "" in prior_pinned or not prior_pinned.issubset(set(entries)):
+        raise ValueError("Invalid pinned previous-release exception identities")
+    if report.get("integrityHealth", {}).get("pinnedPreviousRecovered") != sum(
+        1 for item in report.get("quarantineIncidents", [])
+        if isinstance(item, dict) and item.get("fallbackThroughRecoveryLock") is True
+    ):
+        raise ValueError("Pinned previous release count does not reconcile")
     anomalies = set()
     all_problems = []
     for field in ("metadataDrift", "packageProblems"):
@@ -87,11 +101,14 @@ def validate_proven_resolution(audit, guarded_verdict, report, plugins, provenan
             key = str(row.get("plugin") or "").strip().casefold()
             if not key or key not in entries:
                 raise ValueError("Audit contains unknown/ambiguous plugin")
+            if not (key in deferred or
+                    (field == "metadataDrift" and key in prior_pinned)):
+                raise ValueError("Unexpected unapproved post-publication discrepancy")
             anomalies.add(key)
             all_problems.append((field,key))
     if (
         guarded_verdict.get("knownAuditAnomalyCount") != len(all_problems)
-        or guarded_verdict.get("upstreamProblemsFullyResolved") != (not bool(deferred))
+        or guarded_verdict.get("upstreamProblemsFullyResolved") != (not bool(deferred or prior_pinned))
         or guarded_verdict.get("fullAuditPassed") != (audit.get("pass") is True)
     ):
         raise ValueError("Guarded audit verdict does not match underlying findings")
