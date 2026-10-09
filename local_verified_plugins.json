@@ -565,6 +565,28 @@
     "fileHash": "sha256-78d1051e24df6e4403964a83c2f632baa430cb78be7810e09e76dcab5a372f06"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/SwTXWck9/dutamovie.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 27347,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Hexated",
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Dutamovie",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Dutamovie.cs3",
+    "name": "Dutamovie",
+    "fileHash": "sha256-602e9e7655cddf7ba9e2c5f61b4741920daec20bed2df3d770276fabd215da0c"
+  },
+  {
     "iconUrl": "https://github.com/Shakzz890/ShakzzCutie/raw/refs/heads/master/Extractors/icon.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/Shakzz890/ShakzzCutie",
@@ -605,6 +627,48 @@
     "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/FilmBip.cs3",
     "name": "FilmBip",
     "fileHash": "sha256-57e5811ca991f4fe6c27c66f4472456adc08e04c77abda5b819624eae77db789"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/Jjzsxm9F/cropped-lk21-1.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 24041,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Filmkita",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmkita.cs3",
+    "name": "Filmkita",
+    "fileHash": "sha256-57b2305880863023b8f08f26aae5fc3ad2477afa7df7b2116845c53266e573f2"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/Cs2n4h1v/filmlokal.jpg",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 20434,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Filmlokal",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmlokal.cs3",
+    "name": "Filmlokal",
+    "fileHash": "sha256-69cfadc0e6be1123354bb08ee42d5151d785597c3bb1f33b86163af4f1d33777"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=filmmakinesi.film&sz=%size%",
@@ -950,6 +1014,27 @@
     "fileHash": "sha256-a679563b917a4b5b1e5e9d9af901884b18981e18f321cdadb95a374c4fd189f9"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/6cCQ1h87/indomax.jpg",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 20883,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Indomax",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Indomax.cs3",
+    "name": "Indomax",
+    "fileHash": "sha256-f5b4f2e370485114cf775a6e0a21de3f53d3a6d3d177457222194590c1c66d54"
+  },
+  {
     "apiVersion": 1,
     "authors": [
       "anhdaden"
@@ -1049,6 +1134,27 @@
     "fileHash": "sha256-390fb9265a4eb5c3d13f774d9eb2264b36ea8aa7c234a45af4d4c35f42d20775"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/KjQdk4YC/kawanfilm.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 27616,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Kawanfilm",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Kawanfilm.cs3",
+    "name": "Kawanfilm",
+    "fileHash": "sha256-271cf55372a3cb5ec1dc83ccc7718e45280b145e10cfe7c3bc6ec766d62201d4"
+  },
+  {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kkphim.vip&sz=%size%",
     "apiVersion": 1,
     "repositoryUrl": "https://t.me/cloudstream_extension_vn",
@@ -1067,6 +1173,27 @@
     "url": "https://raw.githubusercontent.com/t23-02/cloudstream/72ea428321cd0f3749773933c42c9a1c3573ab25/KKPhimProvider.cs3",
     "name": "KKPhimProvider",
     "fileHash": "sha256-06a990f35f26e1704093c7a0b884afccf29b1e59029254f8a30552e1b0efe9d0"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/QF8w02RR/klikxxi.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 20005,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "KlikXXi",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/KlikXXi.cs3",
+    "name": "KlikXXi",
+    "fileHash": "sha256-527c442274ffa62662eb1b3b7b2611c3be856852cd68083ad5726932d771c0bf"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=koreanturk.com&sz=%size%",
@@ -1108,6 +1235,27 @@
     "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/KultFilmler.cs3",
     "name": "KultFilmler",
     "fileHash": "sha256-e3c71eba18cf59b1adf02288b6b3507cea8177a04c77dba85d6ee5a8c42dd3be"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/6RGz8QkY/layarwarna.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 24214,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "LayarWarna",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/LayarWarna.cs3",
+    "name": "LayarWarna",
+    "fileHash": "sha256-cfaa4f793682813187ffc3a0ae284b20233dc2612d2cfef250bbccf72ec3e616"
   },
   {
     "name": "LittleMermaid",
@@ -1181,6 +1329,27 @@
     "fileHash": "sha256-7c0295cde52acdf4eb96352f3cbc9ac23fe85fd5b622fc9a15cd99acd947acf6"
   },
   {
+    "iconUrl": "https://midasxxi.com/wp-content/uploads/2024/01/cropped-favicon.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 23444,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "MidasXXi",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/MidasXXi.cs3",
+    "name": "MidasXXi",
+    "fileHash": "sha256-d3dd46ed56af6a704f689541a717f8f99c3c02f907125531f42d80b11041684b"
+  },
+  {
     "name": "MinishCap",
     "internalName": "MinishCap",
     "description": "Play The Minish Cap.",
@@ -1198,6 +1367,25 @@
     "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Legend%20of%20Zelda%2C%20The%20-%20The%20Minish%20Cap%20(USA).png",
     "fileSize": 7732050,
     "fileHash": "sha256-a69fbcd2aae6c491518b43c396c01a86f04e025684fb8cc40c634cb078423505"
+  },
+  {
+    "iconUrl": "https://monplayer.org/images/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "fileSize": 55806,
+    "status": 1,
+    "authors": [
+      "anhdaden"
+    ],
+    "tvTypes": [
+      "Others"
+    ],
+    "version": 9,
+    "internalName": "MonPlayerProvider",
+    "description": "Dùng được những link ghim trên nhóm tele",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/MonPlayerProvider.cs3",
+    "name": "MonPlayerProvider",
+    "fileHash": "sha256-699544b1db14f2eb5e2bec9612a9c0ec9edde55c63ca140472bd27f9c55a60b5"
   },
   {
     "iconUrl": "https://netfree2.cc/mobile/img/nf2/icon_x192.png",
@@ -1264,6 +1452,48 @@
     "iconUrl": "",
     "apiVersion": 1,
     "fileHash": "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/3yVG0DbY/ngefilm.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 21909,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Ngefilm",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Ngefilm.cs3",
+    "name": "Ngefilm",
+    "fileHash": "sha256-4641795e14b16d53e1c9dc1ffe7d369d84757cb0e886c090b33b47da3d204d0d"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/Z1YVFHNS/nomat.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 19451,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Nomat",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Nomat.cs3",
+    "name": "Nomat",
+    "fileHash": "sha256-acea324975bbd3715af5ad0a15623cfe671c62f547e8448e98abb2636ac5f640"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=ohitv.net&sz=%size%",
@@ -1463,6 +1693,27 @@
     "fileHash": "sha256-280820c825da13857181a31d2d15b197e4c58bd733c4872d37c95cc6d64f61ae"
   },
   {
+    "iconUrl": "https://i.ibb.co.com/qFdDYpcD/pusatmovie.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 23941,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Pusatmovie",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Pusatmovie.cs3",
+    "name": "Pusatmovie",
+    "fileHash": "sha256-d1ac2b4bad4cfec0fd5fc357cf30b5be259c7ba56031428c13a07cd9024c9826"
+  },
+  {
     "iconUrl": "https://rectvapp.com.tr/wp-content/uploads/2024/08/cropped-cropped-Screenshot_2023-08-31_at_11.02.55_PM-removebg-preview-32x32.webp",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/maarrem/cs-Kekik",
@@ -1488,6 +1739,28 @@
     "fileHash": "sha256-82a0076cd5fbdf3b3011ed91c7d1d501dbfff9a49eb7ac041c25767a303f7f7d"
   },
   {
+    "iconUrl": "https://raw.githubusercontent.com/Rowdy-Avocado/Rowdycado-Extensions/master/logos/ultima.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/rushi-chavan/rowdy-cs-extensions",
+    "fileSize": 96013,
+    "status": 1,
+    "language": "en",
+    "authors": [
+      "RowdyRushya"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime"
+    ],
+    "version": 21,
+    "internalName": "Rowdy",
+    "description": "One stop solution for all of your media need.",
+    "url": "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/0143d69ce3ec9b7cf09f6d6216212694dc5890a0/Rowdy.cs3",
+    "name": "Rowdy",
+    "fileHash": "sha256-f2c4746a767bd1eff613a5277d81430890327b2159383007c46d3b1dab762a61"
+  },
+  {
     "iconUrl": "https://i.ibb.co.com/bMKwcDtH/sarangfilm.png",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
@@ -1507,6 +1780,27 @@
     "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
     "name": "Sarangfilm",
     "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/HptN2Q7m/savefilm.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 21933,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "Savefilm",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Savefilm.cs3",
+    "name": "Savefilm",
+    "fileHash": "sha256-5bb52630a1c5fc326ace7665c43a645cd2555dc7b925f32cdb740908334e4329"
   },
   {
     "name": "SeriousSam",
@@ -1694,6 +1988,23 @@
     "iconUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_Entertainment_System/master/Named_Boxarts/Super%20Mario%20Bros.%20(World).png",
     "fileSize": 528621,
     "fileHash": "sha256-38069cae7afba85a23159f91730683e66f2f70e70e67789a607733f9dbf5f23e"
+  },
+  {
+    "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
+    "apiVersion": 1,
+    "repositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
+    "fileSize": 42324,
+    "status": 1,
+    "authors": [
+      "anhdaden",
+      "RowdyRushya"
+    ],
+    "version": 9,
+    "internalName": "SyncProvider",
+    "description": "Đồng bộ cài đặt và lịch sử xem giữa các thiết bị",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/SyncProvider.cs3",
+    "name": "Cross-Device Sync",
+    "fileHash": "sha256-ef3e1f23ddb890018e6164c2bd42310c2ab9f6712ec5fd2a116212212ca8a01c"
   },
   {
     "name": "TekkenAdvance",
@@ -1979,6 +2290,27 @@
     "url": "https://raw.githubusercontent.com/maarrem/cs-Kekik/51034df969e134e1347f4a3abe1e57063474a95f/WebteIzle.cs3",
     "name": "WebteIzle",
     "fileHash": "sha256-ec854780f687dd97c04436f6e0d4b4e292099333d9d2a01a4756151f3405e7c3"
+  },
+  {
+    "iconUrl": "https://i.ibb.co.com/zHLLPyVd/wgfilm21.webp",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/Asm0d3usX/CloudX",
+    "fileSize": 24012,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Asm0d3usX"
+    ],
+    "tvTypes": [
+      "Movie",
+      "TvSeries"
+    ],
+    "version": 1,
+    "internalName": "WGFilm21",
+    "description": "📺 Streaming Movie and TV Series",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/WGFilm21.cs3",
+    "name": "WGFilm21",
+    "fileHash": "sha256-35832a5e612b5931564a24fbbe042b125fc92ba495c4734d157f54375eead0d8"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://vi.xhspot.com&sz=256",

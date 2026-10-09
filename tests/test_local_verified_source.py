@@ -20,9 +20,9 @@ class LocalVerifiedSourceTests(unittest.TestCase):
         cls.pins = json.loads((ROOT / "local_verified_plugins.json").read_text())
         cls.approvals = json.loads((ROOT / "trusted_binary_approvals.json").read_text())
 
-    def test_source_is_hundred_three_checked_in_immutable_packages(self):
+    def test_source_is_hundred_nineteen_checked_in_immutable_packages(self):
         items = merge.fetch_source_plugins(self.source)
-        self.assertEqual(len(items), 103)
+        self.assertEqual(len(items), 119)
         self.assertEqual({p["internalName"] for p in items},
                          set(self.source["include"]))
         self.assertEqual(self.source["priority"], 0)
@@ -55,7 +55,7 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                     "actualFileSize":trusted["fileSize"]}
         report = gate(self.pins, [], provenance, [], self.approvals, checker=check, workers=1)
         self.assertEqual(report["blockedCount"], 0)
-        self.assertEqual(report["reviewApproved"], 103)
+        self.assertEqual(report["reviewApproved"], 119)
         altered = copy.deepcopy(self.pins)
         altered[0]["fileHash"] = "sha256-" + "0"*64
         bad = gate(altered, [], provenance, [], self.approvals, checker=check, workers=1)
@@ -170,7 +170,7 @@ class LocalVerifiedSourceTests(unittest.TestCase):
             "t23-02/cloudstream": ("72ea428321cd0f3749773933c42c9a1c3573ab25", 14),
             "nuyuls79/StreamPlay-movie": ("e065fad55d0acf955036102dddec92162c56f6ed", 2),
         }
-        self.assertEqual(len(self.pins), 103)
+        self.assertEqual(len(self.pins), 119)
         for repo, (commit, count) in original_sources.items():
             prefix = f"https://raw.githubusercontent.com/{repo}/{commit}/"
             records = [x for x in self.pins if x["url"].startswith(prefix)]
@@ -186,6 +186,30 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                     self.assertEqual(approvals[0]["fileHash"], entry["fileHash"])
                     self.assertEqual(approvals[0]["fileSize"], entry["fileSize"])
                     self.assertEqual(approvals[0]["version"], entry["version"])
+
+    def test_final_16_original_source_byte_identical_pins(self):
+        sources = {
+            "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/"
+              "c73809693bc8406a6f8cffd98039e8278e92a95a/": 14,  # Includes earlier Sarangfilm
+            "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/"
+              "0143d69ce3ec9b7cf09f6d6216212694dc5890a0/": 1,
+            "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/"
+              "05b8e0b8c7b3aa43665fc57c477862cc0888f917/": 6,
+        }
+        # GitLab already had 4 pinned packages before the last two legacy upgrades.
+        for prefix, count in sources.items():
+            with self.subTest(prefix=prefix):
+                records = [p for p in self.pins if p["url"].startswith(prefix)]
+                self.assertEqual(len(records), count)
+                for item in records:
+                    reviews = [x for x in self.approvals if x["plugin"]==item["internalName"]]
+                    self.assertEqual(len(reviews), 1)
+                    self.assertEqual(reviews[0]["fileHash"], item["fileHash"])
+                    self.assertEqual(reviews[0]["fileSize"], item["fileSize"])
+                    self.assertEqual(reviews[0]["url"], item["url"])
+        self.assertEqual(next(x for x in self.pins if x["internalName"]=="Rowdy")["version"], 21)
+        self.assertEqual(next(x for x in self.pins if x["internalName"]=="MonPlayerProvider")["authors"], ["anhdaden"])
+        self.assertEqual(next(x for x in self.pins if x["internalName"]=="SyncProvider")["name"], "Cross-Device Sync")
 
     def test_rejects_mutable_package_url(self):
         copied = copy.deepcopy(self.pins)

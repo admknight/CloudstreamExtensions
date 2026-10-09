@@ -1,0 +1,58 @@
+name: Verify final sixteen unsigned original source packages (read only)
+
+on:
+  pull_request:
+    paths:
+      - 'tools/probe_final_legacy_cohort.py'
+      - 'tests/test_probe_final_legacy_cohort.py'
+      - '.github/workflows/probe-final-legacy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v5
+        with:
+          ref: builds
+          path: published-catalog
+          persist-credentials: false
+      - name: Run strict original-release byte equality regressions
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/probe_final_legacy_cohort.py
+          python3 -m unittest discover -s tests -p test_probe_final_legacy_cohort.py -v
+      - name: Independently inspect last sixteen original package bytes
+        run: |
+          set -euo pipefail
+          python3 tools/probe_final_legacy_cohort.py \
+            --plugins published-catalog/plugins.json \
+            --provenance published-catalog/provenance.json \
+            --output final-legacy-evidence.json | tee final-legacy-summary.log
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('final-legacy-evidence.json').read_text())
+          assert data['expected']==16
+          assert data['verifiedCount']+data['heldCount']==16
+          assert data['approvedForPublication'] is False
+          assert all(p['identicalToPublishedBytes'] and not p['approvedForPublication'] for p in data['verified'])
+          print('Reviewed:', data['verifiedCount'], 'Strictly withheld:', data['heldCount'])
+          PY
+      - name: Preserve reviewed evidence and withheld exceptions
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-commit-final-16-evidence
+          path: |
+            final-legacy-evidence.json
+            final-legacy-summary.log
+          retention-days: 30
+          if-no-files-found: warn
