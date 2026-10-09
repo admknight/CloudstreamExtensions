@@ -81,6 +81,14 @@
     .secondary-actions a:hover,.secondary-actions button:hover{color:#edf4fb}
     @media(max-width:900px){.companion-panel{flex-direction:column;align-items:stretch}.companion-actions{flex-direction:row;flex-wrap:wrap}.route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.route-card:last-child{grid-column:1/-1}.stats{grid-template-columns:repeat(2,1fr)}.health-grid{grid-template-columns:1fr}.trend-grid{grid-template-columns:1fr 1fr}.trend-grid .trend-card:last-child{grid-column:1/-1}.pipeline{grid-template-columns:repeat(3,1fr)}.pipe:nth-child(3):after{display:none}.providers{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
     @media(max-width:620px){.companion-panel{padding:17px}.companion-actions{flex-direction:column}.route-grid{grid-template-columns:1fr}.route-card:last-child{grid-column:auto}.route-card{padding:18px}.hero{padding-top:42px}.route-card h2{font-size:1.12rem}.navlinks a:not(.home-link):not(.route-link){display:none}.hero{padding-top:58px}.hero img{width:94px;height:94px}.copyrow{flex-direction:column}.copybtn{height:40px}.trend-grid{grid-template-columns:1fr}.trend-grid .trend-card:last-child{grid-column:auto}.provider-trends{grid-template-columns:1fr}.pipeline{grid-template-columns:1fr 1fr}.pipe:nth-child(2n):after{display:none}.providers,.categories,.features{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats .stat{padding:17px}footer{flex-direction:column}}
+
+    /* Shared MegaRepo ecosystem back-to-top control. */
+    .back-to-top{position:fixed;right:20px;bottom:20px;z-index:1001;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:74px;padding:10px 15px;border:1px solid #407395;border-radius:999px;background:linear-gradient(145deg,#153b59,#0c2035);box-shadow:0 12px 32px rgba(0,0,0,.38);color:#f2f9ff;font:800 .85rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+    .back-to-top:hover{transform:translateY(-2px);background:#205473;border-color:#79dff8}
+    .back-to-top:focus-visible{outline:2px solid #7de7ff;outline-offset:3px}
+    .back-to-top[hidden]{display:none}
+    @media(max-width:620px){.back-to-top{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:11px 13px}}
+    @media(prefers-reduced-motion:reduce){.back-to-top{transition:none}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   </style>
 </head>
@@ -233,6 +241,7 @@
 </main>
 
 <footer class="shell"><span>Maintained by Adam Knight · This project indexes extensions and does not host media content.</span><span><a href="https://admknight.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a> · <a href="https://github.com/admknight/CloudstreamExtensions" target="_blank" rel="noopener noreferrer">GitHub</a> · <span class="page-counter"><img src="https://hits.sh/admknight.github.io/CloudstreamExtensions.svg?style=flat-square&amp;label=Page+views&amp;color=43a7ff&amp;labelColor=18263a" alt="Page views for MegaRepo dashboard" title="Page hits since this counter was added; not unique visitors" height="20" loading="eager" decoding="async" referrerpolicy="no-referrer"></span></span></footer>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" title="Back to top" hidden><span aria-hidden="true">↑</span> Top</button>
 
 <script>
 const REPORT="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/builds/merge-report.json";
@@ -302,6 +311,20 @@ async function loadHealthTrends(){
 document.querySelectorAll("[data-copy]").forEach(btn=>btn.addEventListener("click",async()=>{const text=$(btn.dataset.copy).textContent;try{await navigator.clipboard.writeText(text);const old=btn.textContent;btn.textContent="Copied!";btn.classList.add("copied");setTimeout(()=>{btn.textContent=old;btn.classList.remove("copied")},1400)}catch{btn.textContent="Select & copy"}}));
 const shareBtn=$("share-project");if(shareBtn)shareBtn.addEventListener("click",async()=>{const data={title:"Adam Knight Mega Repo",text:"CloudStream extensions Mega Repo — automatically maintained package catalog with aggregation, verification and health reporting.",url:"https://admknight.github.io/CloudstreamExtensions/"};const old=shareBtn.textContent;try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}}catch(e){if(e?.name!=="AbortError"){try{await navigator.clipboard.writeText(data.url);shareBtn.textContent="Link copied!"}catch{shareBtn.textContent="Copy link"}}}setTimeout(()=>shareBtn.textContent=old,1500)});
 addEventListener("scroll",()=>{const max=document.documentElement.scrollHeight-innerHeight;$("scroll-progress").style.width=(max?scrollY/max*100:0)+"%"},{passive:true});
+
+function setupBackToTop() {
+  const button = document.getElementById("back-to-top");
+  if (!button) return;
+  const update = () => { button.hidden = (window.scrollY || document.documentElement.scrollTop || 0) <= 320; };
+  button.addEventListener("click", () => window.scrollTo({
+    top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+  }));
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("pageshow", update);
+  update();
+}
+
+setupBackToTop();
 reveal();loadReport();loadCustom();loadRelease();loadHealthTrends();
 </script>
 </body>
