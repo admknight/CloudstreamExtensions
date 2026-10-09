@@ -36,6 +36,18 @@
     "evidenceUrl": "https://github.com/Shakzz890/ShakzzCutie/blob/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3"
   },
   {
+    "plugin": "NetMovie",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3",
+    "version": 1,
+    "fileSize": 32088,
+    "fileHash": "sha256-27320e91111d0a371614373dcd747baee5c4d3c5c4a6202de93c45cf9e44d576",
+    "reviewedBy": "AI-assisted local review authorized by MegaRepo owner",
+    "reviewedAt": "2026-10-09",
+    "reason": "Independently observed published checksum and size match upstream's committed release manifest; original package pinned to exact GitHub build commit. This does not certify publisher signature or runtime functionality.",
+    "evidenceUrl": "https://github.com/Faisal0786/Desi/blob/0af83282ff9d36e0cc7447582b7152cc948fd1cc/NetMovie.cs3"
+  },
+  {
     "plugin": "OnlineMoviesHinditProvider",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/OnlineMoviesHinditProvider.cs3",
