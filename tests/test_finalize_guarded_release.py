@@ -56,7 +56,7 @@ class PublishCandidateTests(unittest.TestCase):
         self.assertIn("## 🌐 Full MegaRepo installation",readme)
         self.assertIn("## Choose the right MegaRepo tool",readme)
         self.assertIn("## Integrity status",readme)
-        self.assertIn("Legacy",out["RELEASE_NOTES.md"] if False else out["STATUS.md"])
+        self.assertIn("legacy",out["STATUS.md"].lower())
         self.assertIn("old manifest entry",readme)
         self.assertIn("Deferred: previous metadata",out["STATUS.md"])
 
