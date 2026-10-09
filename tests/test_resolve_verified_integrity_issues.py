@@ -186,14 +186,15 @@ class ResolutionTests(unittest.TestCase):
         data[0]["metadataDrift"]=[]
         data[0]["packageProblems"]=[]
         data[0]["pass"]=True
-        data[1]={
+        data[1].clear()
+        data[1].update({
             "result":"GUARDED_PUBLICATION_VERIFIED_NO_DEFERRED_EXCEPTIONS",
             "unexpectedAuditAnomalyCount":0,
             "knownAuditAnomalyCount":0,
             "heldUpstreamExceptions":[],
             "upstreamProblemsFullyResolved":True,
             "fullAuditPassed":True
-        }
+        })
         data[2]["deferredUnverified"]=[]
         data[2]["integrityHealth"]["unverifiedPreviousCarried"]=0
         self.assertEqual(len(validate_proven_resolution(*data)),49)
