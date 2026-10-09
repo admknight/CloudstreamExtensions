@@ -11,7 +11,7 @@
   <a href="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml">
     <img src="https://github.com/admknight/CloudstreamExtensions/actions/workflows/health.yml/badge.svg?branch=master" alt="Custom Provider Health">
   </a>
-  <img src="https://img.shields.io/badge/plugins-544-2ea44f?style=flat-square" alt="544 plugins">
+  <img src="https://img.shields.io/badge/plugins-547-2ea44f?style=flat-square" alt="547 plugins">
   <img src="https://img.shields.io/badge/sources-36-blue?style=flat-square" alt="36 active sources">
   <img src="https://img.shields.io/badge/package%20failures-0-brightgreen?style=flat-square" alt="0 package failures">
   <a href="https://github.com/admknight/CloudstreamExtensions/stargazers">
@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-09 21:05:12 UTC**
+Last successful refresh: **2026-10-09 21:47:09 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 544 | 0 | 36 | 0 | 1 | 0 | 0 |
+| 547 | 0 | 36 | 0 | 3 | 3 | 0 |
 
 ## Integrity status — separate from package reachability
 
-- **544 candidate packages** inspected for declared length and SHA-256 when present.
-- **543 candidates** accepted under the published trust rules.
+- **547 candidate packages** inspected for declared length and SHA-256 when present.
+- **547 candidates** accepted under the published trust rules.
 - **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **1 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **0 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **104 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -100,11 +100,11 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | Section | CloudStream prefix | Plugins |
 | --- | --- | ---: |
 | 🎬 **Movies** | `[Movies]` | 135 |
-| 🎌 **Anime** | `[Anime]` | 64 |
+| 🎌 **Anime** | `[Anime]` | 66 |
 | 🇮🇳 **Indian** | `[Indian]` | 84 |
 | 🌙 **Arabic** | `[Arabic]` | 36 |
 | 🌏 **Asian** | `[Asian]` | 50 |
-| 📡 **Live** | `[Live]` | 46 |
+| 📡 **Live** | `[Live]` | 47 |
 | 🏟️ **Sports** | `[Sports]` | 2 |
 | 🎮 **Games** | `[Games]` | 21 |
 | 🛠️ **Tools** | `[Tools]` | 12 |
@@ -115,7 +115,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 
 | Source | Index | Raw | Published | Package failed | Duplicate-skipped |
 | --- | --- | ---: | ---: | ---: | ---: |
-| [MegaRepo Verified Immutable Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 9 | 9 | 0 | 0 |
+| [MegaRepo Verified Immutable Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 15 | 15 | 0 | 0 |
 | [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | ✅ OK | 85 | 81 | 0 | 4 |
 | [Cinephile](https://github.com/rockhero1234/cinephile) | ✅ OK | 5 | 2 | 0 | 2 |
 | [CSX](https://github.com/SaurabhKaperwan/CSX) | ✅ OK | 5 | 5 | 0 | 0 |
@@ -129,10 +129,10 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 21 | 21 | 0 | 0 |
 | [CloudX-V2](https://github.com/Asm0d3usX/CloudX-V2) | ✅ OK | 18 | 13 | 0 | 5 |
 | [Storm-ext Fork by redblacker8](https://github.com/redblacker8/storm-ext) | ✅ OK | 36 | 36 | 0 | 0 |
-| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 17 | 12 | 0 | 5 |
+| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 17 | 11 | 0 | 6 |
 | [FLUMMOX Repo](https://github.com/FlummoxGamer/FLUMMOX-Repo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Ayu CloudStream Games](https://github.com/errorcode26/Ayu-CloudStream-Games) | ✅ OK | 21 | 21 | 0 | 0 |
-| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 30 | 30 | 0 | 0 |
+| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 32 | 28 | 0 | 4 |
 | [DieGon Repository](https://github.com/DieGon7771/ItaliaInStreaming) | ✅ OK | 18 | 17 | 0 | 1 |
 | [Reflex Repo](https://github.com/Reflex755/ReflexRepo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [cs-karma](https://github.com/Kraptor123/cs-Karma) | ✅ OK | 33 | 30 | 0 | 3 |
@@ -150,7 +150,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [doGior's Had Enough](https://github.com/doGior/doGiorsHadEnough) | ✅ OK | 15 | 9 | 0 | 6 |
 | [Gian-Fr Italian Provider](https://github.com/Gian-Fr/ItalianProvider) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Aniyomi Compat](https://github.com/CranberrySoup/AniyomiCompatExtension) | ✅ OK | 1 | 1 | 0 | 0 |
-| [Tearrs Vietnamese Extension](https://gitlab.com/tearrs/cloudstream-vietnamese) | ✅ OK | 7 | 3 | 0 | 3 |
+| [Tearrs Vietnamese Extension](https://gitlab.com/tearrs/cloudstream-vietnamese) | ✅ OK | 7 | 3 | 0 | 4 |
 
 ### Package failures
 
@@ -162,7 +162,7 @@ A package is considered reachable when its published .cs3 URL responds successfu
 
 ## 📦 Plugins by section
 
-**544 plugins are currently published and package-reachable.**
+**547 plugins are currently published and package-reachable.**
 
 ### 🎬 Movies — 135 plugins
 
@@ -230,7 +230,7 @@ CloudStream display prefix: `[Movies]`
 | 58 | **IlCorsaroViola** | 1 | it | Movie, TvSeries, Torrent, Documentary | doGior's Had Enough | Unchanged |
 | 59 | **Iwatchtheoffice** | 3 | en | Movie | cs-karma | Unchanged |
 | 60 | **JetFilmizle** | 41 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | Unchanged |
-| 61 | **JustPlay** | 10 | en | Movie, TvSeries | raghav repo | Unchanged |
+| 61 | **JustPlay** | 12 | en | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
 | 62 | **Kdesa** | 3 | en | Movie, TvSeries, Anime | raghav repo | Unchanged |
 | 63 | **KinostrainProvider** | 2 | uk | TvSeries, Cartoon, Movie, Anime | CakesTwix UK/UA | Unchanged |
 | 64 | **KinoTronProvider** | 17 | uk | Cartoon, TvSeries, Movie, Anime | CakesTwix UK/UA | Unchanged |
@@ -285,7 +285,7 @@ CloudStream display prefix: `[Movies]`
 | 113 | **TLCtr** | 19 | tr | Movie | Turkish Providers Repository \| @KekikAkademi | Unchanged |
 | 114 | **Topstreamfilm** | 9 | de | Movie, TvSeries | Phisher Repo | Unchanged |
 | 115 | **TorraStream** | 97 | en | Movie, Torrent, AsianDrama, TvSeries, Anime | Phisher Repo | Unchanged |
-| 116 | **TorrentsV1** | 21 | en | Anime, AnimeMovie, OVA, Movie, TvSeries, Torrent | raghav repo | Unchanged |
+| 116 | **TorrentsV1** | 22 | en | Anime, AnimeMovie, OVA, Movie, TvSeries, Torrent | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
 | 117 | **TRasyalog** | 52 | tr | TvSeries | Turkish Providers Repository \| @KekikAkademi | Unchanged |
 | 118 | **TvPhimProvider** | 11 |  | Anime, TvSeries, Movie | Vietnamese CloudStream Index | Unchanged |
 | 119 | **UAFlixProvider** | 20 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
@@ -306,7 +306,7 @@ CloudStream display prefix: `[Movies]`
 | 134 | **YoTurkish** | 4 | en | TvSeries | cs-karma | Unchanged |
 | 135 | **YTS** | 11 | en | Movie, Torrent | Phisher Repo | Unchanged |
 
-### 🎌 Anime — 64 plugins
+### 🎌 Anime — 66 plugins
 
 CloudStream display prefix: `[Anime]`
 
@@ -333,49 +333,51 @@ CloudStream display prefix: `[Anime]`
 | 19 | **AnimePahe** | 43 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
 | 20 | **AnimeSaturn** | 4 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
 | 21 | **AnimeSuge** | 10 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | Unchanged |
-| 22 | **AnimeUAProvider** | 10 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Unchanged |
-| 23 | **AnimeUnity** | 26 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | Unchanged |
-| 24 | **AnimeVietsubProvider** | 14 |  | Anime | Vietnamese CloudStream Index | Unchanged |
-| 25 | **AnimeWorld** | 20 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
-| 26 | **Animexin** | 16 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
-| 27 | **AnimeYTX** | 10 | mx | Anime | cs-karma | Unchanged |
-| 28 | **Animo** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 29 | **AniPM** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 30 | **AniSnatch** | 2 | en | Anime, AnimeMovie, OVA | Phisher Repo | Unchanged |
-| 31 | **AniStream** | 1 | en | Anime, AnimeMovie | Desi Extensions | Unchanged |
-| 32 | **AniSuge** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 33 | **AnitubeinuaProvider** | 22 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Unchanged |
-| 34 | **AniWaves** | 7 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 35 | **Aniworld** | 15 | de | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
-| 36 | **Anizone** | 10 | en | Anime | Phisher Repo | Unchanged |
-| 37 | **BambooUAProvider** | 13 | uk | Anime, AsianDrama | CakesTwix UK/UA | Unchanged |
-| 38 | **Comix** | 2 | en | Others, Anime | Phisher Repo | Unchanged |
-| 39 | **GoTaku** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 40 | **HHkungfuProvider** | 5 |  | Anime, AnimeMovie | Vietnamese CloudStream Index | Unchanged |
-| 41 | **HHPandaProvider** | 12 |  | Anime | Vietnamese CloudStream Index | Unchanged |
-| 42 | **HiAnime** | 2 | en | Anime, OVA | Phisher Repo | Unchanged |
-| 43 | **JKAnimeProvider** | 9 | mx | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
-| 44 | **Kickassanime** | 27 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
-| 45 | **LatAnimeProvider** | 5 | mx | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
-| 46 | **Miruro** | 7 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 47 | **MonoschinosProvider** | 8 | mx | Anime, AnimeMovie, OVA | Storm-ext Fork by redblacker8 | Unchanged |
-| 48 | **MundoDonghuaProvider** | 4 | es | Anime, OVA, AnimeMovie | Storm-ext Fork by redblacker8 | Unchanged |
-| 49 | **NineAnime** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 50 | **OnePace** | 23 | en | Anime | Phisher Repo | Unchanged |
-| 51 | **Otakutsu** | 4 | en | Anime, AnimeMovie | FLUMMOX Repo | Unchanged |
-| 52 | **RaghavAnime** | 76 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 53 | **RaghavAnimeKitsu** | 28 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 54 | **ReAnime** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 55 | **ReyDonghuaProvider** | 2 | mx | Anime | Storm-ext Fork by redblacker8 | Unchanged |
-| 56 | **Senshi** | 8 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 57 | **Subsplease** | 4 | en | Anime | cs-karma | Unchanged |
-| 58 | **TioAnimeProvider** | 4 | es | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
-| 59 | **TRanimaci** | 17 | tr | Anime | Turkish Providers Repository \| @KekikAkademi | Unchanged |
-| 60 | **TurkAnime** | 14 | tr | Anime | Turkish Providers Repository \| @KekikAkademi | Unchanged |
-| 61 | **TwoDHive** | 17 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 62 | **UnimayProvider** | 13 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Unchanged |
-| 63 | **Xanime** | 1 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 64 | **YanHH3DProvider** | 16 |  | Anime, AnimeMovie | Vietnamese CloudStream Index | Unchanged |
+| 22 | **AnimeTH** | 1 | th | Anime, AnimeMovie | MegaRepo Verified Immutable Recovery | New (verified by candidate policy) |
+| 23 | **AnimeUAProvider** | 10 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Unchanged |
+| 24 | **AnimeUnity** | 26 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | Unchanged |
+| 25 | **AnimeVietsubProvider** | 14 |  | Anime | Vietnamese CloudStream Index | Unchanged |
+| 26 | **AnimeWorld** | 20 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
+| 27 | **Animexin** | 16 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
+| 28 | **AnimeYTX** | 10 | mx | Anime | cs-karma | Unchanged |
+| 29 | **Animo** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 30 | **AniPM** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 31 | **AniSnatch** | 2 | en | Anime, AnimeMovie, OVA | Phisher Repo | Unchanged |
+| 32 | **AniStream** | 1 | en | Anime, AnimeMovie | Desi Extensions | Unchanged |
+| 33 | **AniSuge** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 34 | **AnitubeinuaProvider** | 22 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Unchanged |
+| 35 | **AniWaves** | 7 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 36 | **Aniworld** | 15 | de | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
+| 37 | **Anizone** | 10 | en | Anime | Phisher Repo | Unchanged |
+| 38 | **Anv** | 1 | en | Anime, AnimeMovie, OVA | MegaRepo Verified Immutable Recovery | New (verified by candidate policy) |
+| 39 | **BambooUAProvider** | 13 | uk | Anime, AsianDrama | CakesTwix UK/UA | Unchanged |
+| 40 | **Comix** | 2 | en | Others, Anime | Phisher Repo | Unchanged |
+| 41 | **GoTaku** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 42 | **HHkungfuProvider** | 5 |  | Anime, AnimeMovie | Vietnamese CloudStream Index | Unchanged |
+| 43 | **HHPandaProvider** | 12 |  | Anime | Vietnamese CloudStream Index | Unchanged |
+| 44 | **HiAnime** | 2 | en | Anime, OVA | Phisher Repo | Unchanged |
+| 45 | **JKAnimeProvider** | 9 | mx | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
+| 46 | **Kickassanime** | 27 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
+| 47 | **LatAnimeProvider** | 5 | mx | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
+| 48 | **Miruro** | 7 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 49 | **MonoschinosProvider** | 8 | mx | Anime, AnimeMovie, OVA | Storm-ext Fork by redblacker8 | Unchanged |
+| 50 | **MundoDonghuaProvider** | 4 | es | Anime, OVA, AnimeMovie | Storm-ext Fork by redblacker8 | Unchanged |
+| 51 | **NineAnime** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 52 | **OnePace** | 23 | en | Anime | Phisher Repo | Unchanged |
+| 53 | **Otakutsu** | 4 | en | Anime, AnimeMovie | FLUMMOX Repo | Unchanged |
+| 54 | **RaghavAnime** | 76 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 55 | **RaghavAnimeKitsu** | 28 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 56 | **ReAnime** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 57 | **ReyDonghuaProvider** | 2 | mx | Anime | Storm-ext Fork by redblacker8 | Unchanged |
+| 58 | **Senshi** | 8 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 59 | **Subsplease** | 4 | en | Anime | cs-karma | Unchanged |
+| 60 | **TioAnimeProvider** | 4 | es | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
+| 61 | **TRanimaci** | 17 | tr | Anime | Turkish Providers Repository \| @KekikAkademi | Unchanged |
+| 62 | **TurkAnime** | 14 | tr | Anime | Turkish Providers Repository \| @KekikAkademi | Unchanged |
+| 63 | **TwoDHive** | 17 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 64 | **UnimayProvider** | 13 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Unchanged |
+| 65 | **Xanime** | 1 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 66 | **YanHH3DProvider** | 16 |  | Anime, AnimeMovie | Vietnamese CloudStream Index | Unchanged |
 
 ### 🇮🇳 Indian — 84 plugins
 
@@ -441,7 +443,7 @@ CloudStream display prefix: `[Indian]`
 | 56 | **MultiMoviesProvider** | 55 | hi | Movie, TvSeries, Anime | Phisher Repo | Unchanged |
 | 57 | **NetflixMirror** | 32 | hi | Movie, TvSeries | Turkish Providers Repository \| @KekikAkademi | Unchanged |
 | 58 | **Netmirror** | 46 | hi | Movie, TvSeries | NetMirror Extension | Unchanged |
-| 59 | **NetMovie** | 1 | hi | Movie, TvSeries, Anime | MegaRepo Verified Immutable Recovery | New (verified by candidate policy) |
+| 59 | **NetMovie** | 1 | hi | Movie, TvSeries, Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 60 | **OnlineMoviesHinditProvider** | 6 | hi | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 61 | **OttSource** | 7 | hi | Movie, TvSeries | Desi Extensions | Unchanged |
 | 62 | **PikashowProvider** | 32 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
@@ -451,7 +453,7 @@ CloudStream display prefix: `[Indian]`
 | 66 | **Rtally** | 50 | ta | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | CNC Repo (All Language) | Unchanged |
 | 67 | **SDmovies** | 4 | hi | TvSeries, Movie, AsianDrama, Anime, Torrent | Desi Extensions | Unchanged |
 | 68 | **StreamFlixProvider** | 34 | ta | Movie, TvSeries, Anime | CNC Repo (All Language) | Unchanged |
-| 69 | **StreamHubOne** | 62 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | Desi Extensions | Unchanged |
+| 69 | **StreamHubOne** | 63 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
 | 70 | **Tamilblasters** | 12 | ta | Movie, TvSeries | Phisher Repo | Unchanged |
 | 71 | **TamilDhoolProvider** | 40 | ta | TvSeries | CNC Repo (All Language) | Unchanged |
 | 72 | **Tamilian** | 32 | ta | Movies | CNC Repo (All Language) | Unchanged |
@@ -568,7 +570,7 @@ CloudStream display prefix: `[Asian]`
 | 49 | **WGFilm21** | 1 | id | Movie, TvSeries | CloudX-V2 | Unchanged |
 | 50 | **YlnimeProvider** | 6 | id | Anime, TvSeries, Movie | TheAlyss Repo | Unchanged |
 
-### 📡 Live — 46 plugins
+### 📡 Live — 47 plugins
 
 CloudStream display prefix: `[Live]`
 
@@ -593,33 +595,34 @@ CloudStream display prefix: `[Live]`
 | 17 | **IndianTVProvider** | 6 |  | Live | Kim Recovery Builds | Unchanged |
 | 18 | **IPTV** | 1 |  | Live | doGior's Had Enough | Unchanged |
 | 19 | **IPTVPlayer** | 9 | hi | Live | Phisher Repo | Unchanged |
-| 20 | **IzziGoProvider** | 16 | mx | Movie, TvSeries, Live | Storm-ext Fork by redblacker8 | Unchanged |
-| 21 | **LIVETVProvider** | 37 | en | Live | raghav repo | Unchanged |
-| 22 | **LivXowProvider** | 20 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 23 | **NetNaija-box** | 2 | en | Movie, TvSeries, Live | raghav repo | Unchanged |
-| 24 | **PlayFyProvider** | 14 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 25 | **PlayZTVProvider** | 42 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 26 | **PublicSportsIPTV** | 5 | en | Live | Phisher Repo | Unchanged |
-| 27 | **QuickIPTV** | 8 | en | Live | Phisher Repo | Unchanged |
-| 28 | **RadioIndiaProvider** | 33 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 29 | **RecTV** | 97 | tr | Movie, Live, TvSeries | Turkish Providers Repository \| @KekikAkademi | Unchanged |
-| 30 | **ReplayZone** | 4 | en | Live | raghav repo | Unchanged |
-| 31 | **SKTechProvider** | 58 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 32 | **SportzxProvider** | 26 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 33 | **StreamCenter** | 11 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | Unchanged |
-| 34 | **Streamed** | 29 | en | Live | cs-karma | Unchanged |
-| 35 | **StreamedPk** | 12 | en | Live | raghav repo | Unchanged |
-| 36 | **StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | Unchanged |
-| 37 | **Syrialive** | 1 | ar | TvSeries, Live | Re-3arabi | Unchanged |
-| 38 | **TamilUltraProvider** | 40 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 39 | **TV** | 5 |  | Live | DieGon Repository | Unchanged |
-| 40 | **TVGarden** | 11 | en | Live | cs-karma | Unchanged |
-| 41 | **TwitchProvider** | 2 |  | Live | ReCloudStream Official Extensions | Unchanged |
-| 42 | **Vavoo** | 7 |  | Live | doGior's Had Enough | Unchanged |
-| 43 | **WatchWrestling** | 18 | en | Live | cs-karma | Unchanged |
-| 44 | **XtreamIPTVProvider** | 1 |  | Live | MegaRepo Verified Immutable Recovery | Unchanged |
-| 45 | **Yacintv** | 1 | ar | TvSeries, Live, Movie | Re-3arabi | Unchanged |
-| 46 | **YoutubeProvider** | 1 |  | Other, Live, TvSeries | ReCloudStream Official Extensions | Unchanged |
+| 20 | **IPTVProvider** | 9 |  | Live | MegaRepo Verified Immutable Recovery | New (verified by candidate policy) |
+| 21 | **IzziGoProvider** | 16 | mx | Movie, TvSeries, Live | Storm-ext Fork by redblacker8 | Unchanged |
+| 22 | **LIVETVProvider** | 37 | en | Live | raghav repo | Unchanged |
+| 23 | **LivXowProvider** | 20 | ta | Live | CNC Repo (All Language) | Unchanged |
+| 24 | **NetNaija-box** | 2 | en | Movie, TvSeries, Live | raghav repo | Unchanged |
+| 25 | **PlayFyProvider** | 14 | ta | Live | CNC Repo (All Language) | Unchanged |
+| 26 | **PlayZTVProvider** | 42 | ta | Live | CNC Repo (All Language) | Unchanged |
+| 27 | **PublicSportsIPTV** | 5 | en | Live | Phisher Repo | Unchanged |
+| 28 | **QuickIPTV** | 8 | en | Live | Phisher Repo | Unchanged |
+| 29 | **RadioIndiaProvider** | 33 | ta | Live | CNC Repo (All Language) | Unchanged |
+| 30 | **RecTV** | 97 | tr | Movie, Live, TvSeries | Turkish Providers Repository \| @KekikAkademi | Unchanged |
+| 31 | **ReplayZone** | 4 | en | Live | raghav repo | Unchanged |
+| 32 | **SKTechProvider** | 58 | ta | Live | CNC Repo (All Language) | Unchanged |
+| 33 | **SportzxProvider** | 26 | ta | Live | CNC Repo (All Language) | Unchanged |
+| 34 | **StreamCenter** | 11 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | Unchanged |
+| 35 | **Streamed** | 29 | en | Live | cs-karma | Unchanged |
+| 36 | **StreamedPk** | 12 | en | Live | raghav repo | Unchanged |
+| 37 | **StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | Unchanged |
+| 38 | **Syrialive** | 1 | ar | TvSeries, Live | Re-3arabi | Unchanged |
+| 39 | **TamilUltraProvider** | 40 | ta | Live | CNC Repo (All Language) | Unchanged |
+| 40 | **TV** | 5 |  | Live | DieGon Repository | Unchanged |
+| 41 | **TVGarden** | 11 | en | Live | cs-karma | Unchanged |
+| 42 | **TwitchProvider** | 2 |  | Live | ReCloudStream Official Extensions | Unchanged |
+| 43 | **Vavoo** | 7 |  | Live | doGior's Had Enough | Unchanged |
+| 44 | **WatchWrestling** | 18 | en | Live | cs-karma | Unchanged |
+| 45 | **XtreamIPTVProvider** | 1 |  | Live | MegaRepo Verified Immutable Recovery | Unchanged |
+| 46 | **Yacintv** | 1 | ar | TvSeries, Live, Movie | Re-3arabi | Unchanged |
+| 47 | **YoutubeProvider** | 1 |  | Other, Live, TvSeries | ReCloudStream Official Extensions | Unchanged |
 
 ### 🏟️ Sports — 2 plugins
 
@@ -797,10 +800,12 @@ When the same plugin is published by more than one source, the highest version i
 | AltaDefinizione | DieGon Repository v25 | doGior's Had Enough v8 (lower version) |
 | AniKoto | CNC Repo (All Language) v10 | Phisher Repo v6 (lower version) |
 | Animedubhindi | Phisher Repo v9 | Desi Extensions v3 (lower version) |
+| AnimeTH | MegaRepo Verified Immutable Recovery v1 | raghav repo v1 (lower source priority) |
 | AnimeUnity | doGior's Had Enough v26 | DieGon Repository v17 (lower version) |
 | AnimeWorld | DieGon Repository v20 | doGior's Had Enough v18 (lower version) |
 | AnimeWorld | DieGon Repository v20 | cs-karma v5 (lower version) |
 | Anizone | Phisher Repo v10 | Desi Extensions v3 (lower version) |
+| Anv | MegaRepo Verified Immutable Recovery v1 | raghav repo v1 (lower source priority) |
 | Arte | DieGon Repository v5 | doGior's Had Enough v4 (lower version) |
 | BanglaPlex | Phisher Repo v8 | Redowan CloudStream v1 (lower version) |
 | CalcioStreaming | DieGon Repository v20 | doGior's Had Enough v15 (lower version) |
@@ -812,6 +817,8 @@ When the same plugin is published by more than one source, the highest version i
 | Hanime | CXXX v7 | Nonton Indo v3 (lower version) |
 | Hqporner | Turkish Providers Repository \| @KekikAkademi v4 | CXXX v3 (lower version) |
 | Idlix | Nonton Indo v3 | CloudX-V2 v1 (lower version) |
+| IPTVProvider | MegaRepo Verified Immutable Recovery v9 | Tearrs Vietnamese Extension v9 (lower source priority) |
+| JustPlay | MegaRepo Verified Immutable Recovery v12 | raghav repo v12 (lower source priority) |
 | Krmzy | cs-karma v2 | Re-3arabi v1 (lower version) |
 | Latanime | cs-karma v9 | Phisher Repo v5 (lower version) |
 | LayarKaca | cs-karma v15 | CloudX-V2 v1 (lower version) |
@@ -828,10 +835,12 @@ When the same plugin is published by more than one source, the highest version i
 | ReAnime | raghav repo v4 | Phisher Repo v3 (lower version) |
 | Sarangfilm | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
+| StreamHubOne | MegaRepo Verified Immutable Recovery v63 | Desi Extensions v63 (lower source priority) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | Tamilblasters | Phisher Repo v12 | Cinephile v3 (lower version) |
 | TheMoviesFlix | raghav repo v22 | Redowan CloudStream v6 (lower version) |
+| TorrentsV1 | MegaRepo Verified Immutable Recovery v22 | raghav repo v22 (lower source priority) |
 | TV | DieGon Repository v5 | doGior's Had Enough v3 (lower version) |
 | TVGarden | cs-karma v11 | Re-3arabi v1 (lower version) |
 | VegaMovies | CSX v82 | Desi Extensions v38 (lower version) |
