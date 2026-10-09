@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'tools/plan_per_plugin_selection.py'
+      - 'tools/reconcile_integrity_review.py'
+      - 'tests/test_reconcile_integrity_review.py'
       - 'tests/test_per_plugin_selection.py'
       - 'docs/PER_PLUGIN_INTEGRITY_PREVIEW.md'
       - '.github/workflows/test-per-plugin-selection.yml'
@@ -25,7 +27,8 @@ jobs:
       - name: Per-plugin selection regressions
         run: |
           python3 -m unittest discover -s tests -p test_per_plugin_selection.py -v
-          python3 -m py_compile tools/plan_per_plugin_selection.py
+          python3 -m unittest discover -s tests -p test_reconcile_integrity_review.py -v
+          python3 -m py_compile tools/plan_per_plugin_selection.py tools/reconcile_integrity_review.py
       - name: Parse workflow YAML
         run: |
           ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "Workflow YAML parsed."'
@@ -74,6 +77,21 @@ jobs:
             --approvals source/trusted_binary_approvals.json \
             --output-dir review-preview \
             --workers 8
+      - name: Rebuild all derived catalog metadata in both preview policies
+        run: |
+          set -euo pipefail
+          python3 source/tools/reconcile_integrity_review.py \
+            --candidate-dir candidate \
+            --previous-dir production \
+            --selection-dir review-preview \
+            --output-dir review-compatibility \
+            --mode compatibility
+          python3 source/tools/reconcile_integrity_review.py \
+            --candidate-dir candidate \
+            --previous-dir production \
+            --selection-dir review-preview \
+            --output-dir review-quarantine \
+            --mode quarantine
       - name: Cross-check every candidate, decision and preserved provenance
         run: |
           python3 - <<'PY'
@@ -116,6 +134,51 @@ jobs:
               f.write(f"- Verified immutable previous retained: **{c['retainedImmutablePrevious']}**\n")
               f.write('- **Production unchanged; this is not approval to remove plugins.**\n')
           PY
+      - name: Reconcile proposed catalog, source, status and release metadata
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          def load(p): return json.loads(Path(p).read_text())
+          old=load('production/plugins.json')
+          preview=load('review-preview/preview.plugins.json')
+          selections=load('review-preview/integrity-selection.json')
+          for mode in ('compatibility','quarantine'):
+              folder=Path('review-'+mode)
+              plugins=load(folder/'plugins.json')
+              prov=load(folder/'provenance.json')
+              report=load(folder/'merge-report.json')
+              delta=load(folder/'release-diff.json')
+              proof=load(folder/'reconciliation.json')
+              assert proof['releaseAuthorized'] is False
+              assert report['releaseAuthorized'] is False
+              assert report['candidateStatus'].startswith('REVIEW ONLY')
+              assert len(plugins)==len(prov)==report['uniquePlugins']==delta['catalog']['plugins']
+              assert report['changes']==delta['changes']
+              assert report['integrityHealth']==delta['integrityHealth']
+              assert sum(report['categoryCounts'].values())==len(plugins)
+              assert sum(s['includedCount'] for s in report['sourceStatus'])==len(plugins)
+              assert sum(report['changes'].values())==len(set(x['internalName'].casefold() for x in old)|set(x['internalName'].casefold() for x in plugins))
+              assert report['inputSnapshotDigests']==selections['inputDigests']
+              assert len(plugins)==proof['expectedPluginCount']
+              assert "NOT PUBLISHED" in (folder/'STATUS.md').read_text()
+              assert "NOT PUBLISHED" in (folder/'README.md').read_text()
+              assert proof['changesReconciled'] is True
+              if mode=='compatibility':
+                  assert len(plugins)>=len(old)
+                  assert report['changes']['removed']==0
+                  assert report['integrityHealth']['unverifiedPreviousCarried']==selections['selection']['quarantinedExisting']+selections['selection']['previousRemovedByCandidate']
+              else:
+                  assert len(plugins)==len(preview)
+                  assert report['integrityHealth']['unverifiedPreviousCarried']==0
+              print(mode,'identities:',len(plugins),'unverified carried:',report['integrityHealth']['unverifiedPreviousCarried'])
+          with open(__import__('os').environ['GITHUB_STEP_SUMMARY'],'a') as handle:
+              handle.write('\n### Reconciled preview artifacts — NOT PUBLISHED\n\n')
+              for mode in ('compatibility','quarantine'):
+                  r=load('review-'+mode+'/merge-report.json')
+                  handle.write('- '+mode+': '+str(r['uniquePlugins'])+' entries, '+str(r['integrityHealth']['unverifiedPreviousCarried'])+' unverified previous entries preserved in metadata only\n')
+              handle.write('\nNo production manifest or binary was modified.\n')
+          PY
       - name: Upload read-only verification evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -127,5 +190,7 @@ jobs:
             review-preview/preview.plugins.json
             review-preview/preview.provenance.json
             candidate/merge-report.json
+            review-compatibility/
+            review-quarantine/
           if-no-files-found: warn
           retention-days: 14
