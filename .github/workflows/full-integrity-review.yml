@@ -3,6 +3,15 @@ name: Full Catalog Integrity Review (Read Only)
 on:
   schedule:
     - cron: '11 2 * * *'
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/full-integrity-review.yml'
+      - 'tools/verify_candidate_integrity.py'
+      - 'tools/plan_per_plugin_selection.py'
+      - 'tools/reconcile_integrity_review.py'
+      - 'trusted_binary_approvals.json'
   pull_request:
     paths:
       - 'tools/plan_per_plugin_selection.py'
