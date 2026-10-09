@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "plugin": "Donghub",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3",
+    "version": 4,
+    "fileSize": 25108,
+    "fileHash": "sha256-836fa09519a8ac309688481b7baac6e539038393b29b2edb8268a52b002d9f3a",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://github.com/ExtremeBoyGG/nonton-indo/blob/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3"
+  },
+  {
+    "plugin": "Extractors",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/Extractors.cs3",
+    "version": 67,
+    "fileSize": 39894,
+    "fileHash": "sha256-b6c73e188efa1d49796b7beec71e1ab3cadda8f308c987dbe23e9e183efb4abd",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://github.com/Shakzz890/ShakzzCutie/blob/7c6272bc25262d78b7046f8754ee77db72fb0ae1/Extractors.cs3"
+  },
+  {
+    "plugin": "GDIndex",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3",
+    "version": 4,
+    "fileSize": 17206,
+    "fileHash": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://github.com/Shakzz890/ShakzzCutie/blob/7c6272bc25262d78b7046f8754ee77db72fb0ae1/GDIndex.cs3"
+  },
+  {
+    "plugin": "OnlineMoviesHinditProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/7c6272bc25262d78b7046f8754ee77db72fb0ae1/OnlineMoviesHinditProvider.cs3",
+    "version": 6,
+    "fileSize": 12001,
+    "fileHash": "sha256-5f8a774e0cd991f885642ce72459d856c6ca122d6298fe337a2fea816b08f93e",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://github.com/Shakzz890/ShakzzCutie/blob/7c6272bc25262d78b7046f8754ee77db72fb0ae1/OnlineMoviesHinditProvider.cs3"
+  },
+  {
+    "plugin": "Sarangfilm",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
+    "version": 1,
+    "fileSize": 28666,
+    "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://github.com/Asm0d3usX/CloudX-V2/blob/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3"
+  },
+  {
+    "plugin": "StremioProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/StremioProvider.cs3",
+    "version": 7,
+    "fileSize": 131077,
+    "fileHash": "sha256-5d7c4d6f65b974f82d2edf454b3343d309b1dc04b627cb9e519beff66799d7a7",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/StremioProvider.cs3"
+  },
+  {
+    "plugin": "ViStreamProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/ViStreamProvider.cs3",
+    "version": 35,
+    "fileSize": 312346,
+    "fileHash": "sha256-2f83a4ffacc087efe993e2719d9e6e2f187bc6289b1ffd3e3e35f6928ed8337a",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/ViStreamProvider.cs3"
+  },
+  {
+    "plugin": "XtreamIPTVProvider",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/XtreamIPTVProvider.cs3",
+    "version": 1,
+    "fileSize": 29257,
+    "fileHash": "sha256-3d30e8f45432043394c399339556fe206c7a563d6cc2caf07160a606dec24782",
+    "reviewedBy": "MegaRepo maintainer-authorized technical review",
+    "reviewedAt": "2026-10-10",
+    "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
+    "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/XtreamIPTVProvider.cs3"
+  }
+]
