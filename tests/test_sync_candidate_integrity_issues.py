@@ -8,6 +8,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 import sync_candidate_integrity_issues as candidate
 import sync_integrity_issues as published
+from validate_integrity_review_origin import validate_origin
 
 
 def report():
@@ -143,6 +144,50 @@ class CandidateIncidentTests(unittest.TestCase):
         candidate.sync(r,v,37970591208,runner)
         self.assertTrue(all(isinstance(args,list) for args in calls))
         self.assertFalse(any(args[0]=="bash" for args in calls))
+
+
+class OriginTests(unittest.TestCase):
+    def valid(self):
+        repo="admknight/CloudstreamExtensions"
+        return {"id":37970591208,
+                "name":"Full Catalog Integrity Review (Read Only)",
+                "path":".github/workflows/full-integrity-review.yml",
+                "head_branch":"master","status":"completed",
+                "conclusion":"success","event":"push",
+                "repository":{"full_name":repo},
+                "head_repository":{"full_name":repo}}
+
+    def test_real_master_push_event_allowed(self):
+        d=self.valid()
+        result=validate_origin(d,"admknight/CloudstreamExtensions",37970591208)
+        self.assertEqual(result["event"],"push")
+
+    def test_schedule_and_manual_master_allowed(self):
+        for event in ("schedule","workflow_dispatch"):
+            d=self.valid();d["event"]=event
+            self.assertEqual(validate_origin(d,"admknight/CloudstreamExtensions",37970591208)["event"],event)
+
+    def test_untrusted_workflow_run_rejected(self):
+        values=[
+            ("path",".github/workflows/build.yml"),
+            ("head_branch","topic"),
+            ("status","in_progress"),
+            ("conclusion","failure"),
+            ("event","pull_request"),
+            ("name","Other audit"),
+        ]
+        for field,bad in values:
+            d=self.valid();d[field]=bad
+            with self.subTest(field=field):
+                with self.assertRaises(ValueError):
+                    validate_origin(d,"admknight/CloudstreamExtensions",37970591208)
+
+    def test_fork_and_run_number_rejected(self):
+        d=self.valid();d["head_repository"]={"full_name":"attacker/repo"}
+        with self.assertRaisesRegex(ValueError,"head_repository"):
+            validate_origin(d,"admknight/CloudstreamExtensions",37970591208)
+        with self.assertRaisesRegex(ValueError,"run_id"):
+            validate_origin(self.valid(),"admknight/CloudstreamExtensions",42)
 
 
 if __name__=="__main__":
