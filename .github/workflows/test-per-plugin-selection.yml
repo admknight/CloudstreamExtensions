@@ -35,9 +35,9 @@ jobs:
           from pathlib import Path
           code=Path('.github/workflows/test-per-plugin-selection.yml').read_text()
           assert 'contents: read' in code
-          assert 'contents: write' not in code
-          assert 'gh workflow run' not in code
-          assert 'git push' not in code
+          assert ('contents:' + ' write') not in code
+          assert ('gh ' + 'workflow run') not in code
+          assert ('git' + ' push') not in code
           print('Only read-only catalog preview permissions are requested.')
           PY
 
