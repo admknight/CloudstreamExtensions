@@ -1,0 +1,43 @@
+name: Validate Integrity Incident Tracking
+
+on:
+  pull_request:
+    paths:
+      - 'tools/plan_integrity_recovery.py'
+      - 'tools/sync_integrity_issues.py'
+      - 'tests/test_integrity_recovery.py'
+      - '.github/workflows/integrity-incidents.yml'
+      - '.github/workflows/test-integrity-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Incident management unit tests (offline)
+        run: |
+          python3 -m unittest discover -s tests -p 'test_integrity_recovery.py' -v
+          python3 -m py_compile tools/plan_integrity_recovery.py tools/sync_integrity_issues.py
+      - name: Check all workflow YAML syntax
+        run: |
+          ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "YAML parsed"'
+      - name: Confirm no publication or workflow dispatch permissions
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          text=Path('.github/workflows/integrity-incidents.yml').read_text()
+          assert 'actions: read' in text
+          assert 'issues: write' in text
+          assert 'contents: read' in text
+          assert 'gh workflow run' not in text
+          assert 'gh api --method' not in text
+          print('Incident workflow is restricted to issue tracking.')
+          PY
