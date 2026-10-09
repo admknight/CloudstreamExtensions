@@ -67,6 +67,7 @@ def approved(plugin, source_id, actual, approvals):
                 and row.get("fileSize") == size
                 and row.get("fileSize") == plugin.get("fileSize")
                 and str(row.get("fileHash") or "").lower() == actual_digest
+                and str(plugin.get("fileHash") or "").lower() == actual_digest
             )
         except (TypeError, ValueError):
             match = False
@@ -77,6 +78,8 @@ def approved(plugin, source_id, actual, approvals):
 
 def evaluate(old, new, old_source, new_source, approvals, check_result):
     """Assess a single candidate using observable result, never HEAD alone."""
+    if not isinstance(new.get("fileSize"), int) or isinstance(new.get("fileSize"), bool) or new["fileSize"] <= 0:
+        return "blocked", "no valid declared fileSize; package length is not verified"
     if check_result.get("status") not in ("hash_verified", "size_only_no_checksum"):
         return "blocked", f"download verification failed: {check_result.get('reason') or check_result.get('error') or check_result.get('status')}"
     changed = (
@@ -91,6 +94,8 @@ def evaluate(old, new, old_source, new_source, approvals, check_result):
     new_hash = str(new.get("fileHash") or "").lower()
     if (
         old_hash and new_hash == old_hash
+        and old is not None and old_source == new_source
+        and old.get("url") == new.get("url")
         and check_result.get("status") == "hash_verified"
     ):
         return "trusted_existing_digest", "binary matches previously published digest"
