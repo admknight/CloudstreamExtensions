@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09 21:47:09 UTC",
+  "generatedAt": "2026-10-09 22:12:49 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
@@ -18,10 +18,10 @@
       "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
       "priority": 0,
       "ok": true,
-      "rawCount": 15,
-      "includedCount": 15,
+      "rawCount": 24,
+      "includedCount": 24,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 1,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -47,9 +47,9 @@
       "priority": 20,
       "ok": true,
       "rawCount": 5,
-      "includedCount": 2,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 2,
+      "duplicateSkipped": 4,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -256,11 +256,11 @@
       "index": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
       "priority": 20,
       "ok": true,
-      "rawCount": 32,
+      "rawCount": 31,
       "includedCount": 28,
       "packageFailed": 0,
-      "duplicateSkipped": 4,
-      "integrityExceptions": 0,
+      "duplicateSkipped": 2,
+      "integrityExceptions": 1,
       "deferredUnverified": 0
     },
     {
@@ -355,9 +355,9 @@
       "priority": 40,
       "ok": true,
       "rawCount": 71,
-      "includedCount": 3,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 3,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -397,9 +397,9 @@
       "priority": 50,
       "ok": true,
       "rawCount": 1,
-      "includedCount": 1,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 1,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -481,9 +481,9 @@
       "priority": 100,
       "ok": true,
       "rawCount": 2,
-      "includedCount": 2,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 2,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -495,9 +495,9 @@
       "priority": 100,
       "ok": true,
       "rawCount": 1,
-      "includedCount": 1,
+      "includedCount": 0,
       "packageFailed": 0,
-      "duplicateSkipped": 0,
+      "duplicateSkipped": 1,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -529,7 +529,7 @@
     "Sports": 2,
     "Tools": 12
   },
-  "previousPlugins": 544,
+  "previousPlugins": 547,
   "uniquePlugins": 547,
   "packageHealth": {
     "reachable": 547,
@@ -537,13 +537,13 @@
   },
   "integrityHealth": {
     "candidateChecked": 547,
-    "candidateAccepted": 547,
-    "immutableOldRetained": 0,
-    "pinnedPreviousRecovered": 0,
+    "candidateAccepted": 546,
+    "immutableOldRetained": 1,
+    "pinnedPreviousRecovered": 1,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 0,
-    "sizeOnlyLegacyCandidateAccepted": 104,
+    "changedOrFailedCandidates": 1,
+    "sizeOnlyLegacyCandidateAccepted": 95,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
   },
@@ -555,6 +555,14 @@
       "skippedSource": "doGior's Had Enough",
       "skippedVersion": 8,
       "reason": "lower version"
+    },
+    {
+      "plugin": "AltadefinizioneProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Gian-Fr Italian Provider",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
     },
     {
       "plugin": "AniKoto",
@@ -605,20 +613,20 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AniyomiProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Aniyomi Compat",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Anizone",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 10,
       "skippedSource": "Desi Extensions",
       "skippedVersion": 3,
       "reason": "lower version"
-    },
-    {
-      "plugin": "Anv",
-      "selectedSource": "MegaRepo Verified Immutable Recovery",
-      "selectedVersion": 1,
-      "skippedSource": "raghav repo",
-      "skippedVersion": 1,
-      "reason": "lower source priority"
     },
     {
       "plugin": "Arte",
@@ -637,6 +645,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "BingedReview",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "CalcioStreaming",
       "selectedSource": "DieGon Repository",
       "selectedVersion": 20,
@@ -650,6 +666,14 @@
       "selectedVersion": 4,
       "skippedSource": "Nonton Indo",
       "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DramaDrip",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Kim Recovery Builds",
+      "skippedVersion": 3,
       "reason": "lower source priority"
     },
     {
@@ -685,6 +709,14 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "GuardaSerieProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Gian-Fr Italian Provider",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Hanime",
       "selectedSource": "CXXX",
       "selectedVersion": 7,
@@ -707,6 +739,14 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "IndianTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 6,
+      "skippedSource": "Kim Recovery Builds",
+      "skippedVersion": 6,
+      "reason": "lower source priority"
     },
     {
       "plugin": "IPTVProvider",
@@ -747,6 +787,14 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "MegaProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Mega Repository",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
     },
     {
       "plugin": "MovieBox",
@@ -845,6 +893,14 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "SkymoviesHD",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Sokuja",
       "selectedSource": "Nonton Indo",
       "selectedVersion": 4,
@@ -894,11 +950,11 @@
     },
     {
       "plugin": "TorrentsV1",
-      "selectedSource": "MegaRepo Verified Immutable Recovery",
-      "selectedVersion": 22,
-      "skippedSource": "raghav repo",
+      "selectedSource": "raghav repo",
+      "selectedVersion": 23,
+      "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 22,
-      "reason": "lower source priority"
+      "reason": "lower version"
     },
     {
       "plugin": "TV",
@@ -915,6 +971,14 @@
       "skippedSource": "Re-3arabi",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "UltimaBeta",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Kim Recovery Builds",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
     },
     {
       "plugin": "VegaMovies",
@@ -975,6 +1039,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AltadefinizioneProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Gian-Fr Italian Provider",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "AniKoto",
       "selectedSource": "CNC Repo (All Language)",
       "selectedVersion": 10,
@@ -1023,20 +1095,20 @@
       "reason": "lower version"
     },
     {
+      "plugin": "AniyomiProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 8,
+      "skippedSource": "Aniyomi Compat",
+      "skippedVersion": 8,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Anizone",
       "selectedSource": "Phisher Repo",
       "selectedVersion": 10,
       "skippedSource": "Desi Extensions",
       "skippedVersion": 3,
       "reason": "lower version"
-    },
-    {
-      "plugin": "Anv",
-      "selectedSource": "MegaRepo Verified Immutable Recovery",
-      "selectedVersion": 1,
-      "skippedSource": "raghav repo",
-      "skippedVersion": 1,
-      "reason": "lower source priority"
     },
     {
       "plugin": "Arte",
@@ -1055,6 +1127,14 @@
       "reason": "lower version"
     },
     {
+      "plugin": "BingedReview",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 3,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "CalcioStreaming",
       "selectedSource": "DieGon Repository",
       "selectedVersion": 20,
@@ -1068,6 +1148,14 @@
       "selectedVersion": 4,
       "skippedSource": "Nonton Indo",
       "skippedVersion": 4,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "DramaDrip",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 3,
+      "skippedSource": "Kim Recovery Builds",
+      "skippedVersion": 3,
       "reason": "lower source priority"
     },
     {
@@ -1103,6 +1191,14 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "GuardaSerieProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Gian-Fr Italian Provider",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Hanime",
       "selectedSource": "CXXX",
       "selectedVersion": 7,
@@ -1125,6 +1221,14 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "IndianTVProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 6,
+      "skippedSource": "Kim Recovery Builds",
+      "skippedVersion": 6,
+      "reason": "lower source priority"
     },
     {
       "plugin": "IPTVProvider",
@@ -1165,6 +1269,14 @@
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "MegaProvider",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 2,
+      "skippedSource": "Mega Repository",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
     },
     {
       "plugin": "MovieBox",
@@ -1263,6 +1375,14 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "SkymoviesHD",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 1,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
       "plugin": "Sokuja",
       "selectedSource": "Nonton Indo",
       "selectedVersion": 4,
@@ -1312,11 +1432,11 @@
     },
     {
       "plugin": "TorrentsV1",
-      "selectedSource": "MegaRepo Verified Immutable Recovery",
-      "selectedVersion": 22,
-      "skippedSource": "raghav repo",
+      "selectedSource": "raghav repo",
+      "selectedVersion": 23,
+      "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 22,
-      "reason": "lower source priority"
+      "reason": "lower version"
     },
     {
       "plugin": "TV",
@@ -1333,6 +1453,14 @@
       "skippedSource": "Re-3arabi",
       "skippedVersion": 1,
       "reason": "lower version"
+    },
+    {
+      "plugin": "UltimaBeta",
+      "selectedSource": "MegaRepo Verified Immutable Recovery",
+      "selectedVersion": 7,
+      "skippedSource": "Kim Recovery Builds",
+      "skippedVersion": 7,
+      "reason": "lower source priority"
     },
     {
       "plugin": "VegaMovies",
@@ -1385,79 +1513,138 @@
   ],
   "failedPlugins": [],
   "changes": {
-    "added": 3,
-    "updated": 3,
-    "unchanged": 541,
+    "added": 0,
+    "updated": 9,
+    "unchanged": 538,
     "removed": 0
   },
   "changeDetails": {
-    "added": [
-      {
-        "plugin": "AnimeTH",
-        "name": "AnimeTH",
-        "version": 1,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Anime"
-      },
-      {
-        "plugin": "Anv",
-        "name": "Anv",
-        "version": 1,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Anime"
-      },
-      {
-        "plugin": "IPTVProvider",
-        "name": "IPTVProvider",
-        "version": 9,
-        "sourceId": "local-pinned-recovery",
-        "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Live"
-      }
-    ],
+    "added": [],
     "recovered": [],
     "updated": [
       {
-        "plugin": "JustPlay",
-        "name": "JustPlay",
-        "version": 12,
+        "plugin": "AltadefinizioneProvider",
+        "name": "AltadefinizioneProvider",
+        "version": 1,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
         "category": "Movies",
-        "fromVersion": 10,
-        "toVersion": 12,
-        "fromSourceId": "raghav",
-        "fromSource": "raghav repo",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "gian-fr",
+        "fromSource": "Gian-Fr Italian Provider",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       },
       {
-        "plugin": "StreamHubOne",
-        "name": "StreamHubOne",
-        "version": 63,
+        "plugin": "AniyomiProvider",
+        "name": "AniyomiProvider",
+        "version": 8,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
-        "category": "Indian",
-        "fromVersion": 62,
-        "toVersion": 63,
-        "fromSourceId": "desi",
-        "fromSource": "Desi Extensions",
+        "category": "Other",
+        "fromVersion": 8,
+        "toVersion": 8,
+        "fromSourceId": "aniyomi-compat",
+        "fromSource": "Aniyomi Compat",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       },
       {
-        "plugin": "TorrentsV1",
-        "name": "TorrentsV1",
-        "version": 22,
+        "plugin": "BingedReview",
+        "name": "BingedReview",
+        "version": 3,
         "sourceId": "local-pinned-recovery",
         "sourceName": "MegaRepo Verified Immutable Recovery",
         "category": "Movies",
-        "fromVersion": 21,
-        "toVersion": 22,
-        "fromSourceId": "raghav",
-        "fromSource": "raghav repo",
+        "fromVersion": 3,
+        "toVersion": 3,
+        "fromSourceId": "cinephile",
+        "fromSource": "Cinephile",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "DramaDrip",
+        "name": "DramaDrip",
+        "version": 3,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 3,
+        "toVersion": 3,
+        "fromSourceId": "kim-recovery",
+        "fromSource": "Kim Recovery Builds",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "GuardaSerieProvider",
+        "name": "GuardaSerieProvider",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "gian-fr",
+        "fromSource": "Gian-Fr Italian Provider",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "IndianTVProvider",
+        "name": "IndianTVProvider",
+        "version": 6,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Live",
+        "fromVersion": 6,
+        "toVersion": 6,
+        "fromSourceId": "kim-recovery",
+        "fromSource": "Kim Recovery Builds",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "MegaProvider",
+        "name": "MegaProvider",
+        "version": 2,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 2,
+        "toVersion": 2,
+        "fromSourceId": "mega-provider",
+        "fromSource": "Mega Repository",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "SkymoviesHD",
+        "name": "SkymoviesHD",
+        "version": 1,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Movies",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "cinephile",
+        "fromSource": "Cinephile",
+        "toSourceId": "local-pinned-recovery",
+        "toSource": "MegaRepo Verified Immutable Recovery"
+      },
+      {
+        "plugin": "UltimaBeta",
+        "name": "UltimaBeta",
+        "version": 7,
+        "sourceId": "local-pinned-recovery",
+        "sourceName": "MegaRepo Verified Immutable Recovery",
+        "category": "Other",
+        "fromVersion": 7,
+        "toVersion": 7,
+        "fromSourceId": "kim-recovery",
+        "fromSource": "Kim Recovery Builds",
         "toSourceId": "local-pinned-recovery",
         "toSource": "MegaRepo Verified Immutable Recovery"
       }
@@ -1472,13 +1659,30 @@
   "customProviderChanges": [],
   "removedPlugins": [],
   "deferredUnverified": [],
-  "quarantineIncidents": [],
-  "originalSourceReportDigest": "56601681640c39d87d1970999b25988c4cd3e960d387f00d9ede6bfe97e7d747",
+  "quarantineIncidents": [
+    {
+      "plugin": "torrentsv1",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "raghav",
+      "previousSourceId": "local-pinned-recovery",
+      "candidateUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TorrentsV1.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 118013,
+      "observedActualSHA256": "sha256-650ba8764bf9350cf9ba1a441c6c3fc2689d74d75af25265a9ca133e0fe9152a",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3",
+      "fallbackThroughRecoveryLock": true
+    }
+  ],
+  "originalSourceReportDigest": "f5d3c5f8b45bbf4d9649e04ae4bb7d84a29113a0fb8b9804d1cb55911cdcd1ac",
   "inputSnapshotDigests": {
-    "candidate": "12f7fb50e0f8388e9ff0c31bbc33a99ce63762325afb5dad57b840e8cc43ee70",
-    "previous": "0f5d7eaf163097d88787444d7445906474790c94553e4cdbfe38c2cd19a577db",
-    "candidateProvenance": "66565161e6f0be0e39ace5d0d505b31c487ce65f69352a47cca45141719cf9d4",
-    "previousProvenance": "fae85848425f90903d1c47a0b043e5083d8574384df5c3ccb232599f0fdc0c07"
+    "candidate": "740a0e06ea2d8f06b9864e81824c98ac0685d88b71dfde489b7b534390ce4e5c",
+    "previous": "12f7fb50e0f8388e9ff0c31bbc33a99ce63762325afb5dad57b840e8cc43ee70",
+    "candidateProvenance": "dca49b50c524358ee59b0e3b9121d731bf19932d73ea475b2e0902b17fa16a51",
+    "previousProvenance": "66565161e6f0be0e39ace5d0d505b31c487ce65f69352a47cca45141719cf9d4"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

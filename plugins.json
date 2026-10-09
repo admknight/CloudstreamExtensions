@@ -283,8 +283,9 @@
     ],
     "version": 1,
     "internalName": "AltadefinizioneProvider",
-    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/AltadefinizioneProvider.cs3",
-    "name": "[Movies] AltadefinizioneProvider"
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/AltadefinizioneProvider.cs3",
+    "name": "[Movies] AltadefinizioneProvider",
+    "fileHash": "sha256-905b0b1ef8b722a1599ecfee3f65d37954dd6a87e8c13e0624d36f74776441ba"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniChan.cs3",
@@ -1443,8 +1444,9 @@
     "version": 8,
     "internalName": "AniyomiProvider",
     "description": "Use Aniyomi Extensions in CloudStream!\nNot guaranteed to work perfectly.",
-    "url": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/AniyomiProvider.cs3",
-    "name": "[Other] AniyomiProvider"
+    "url": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/0a539fd454179399dd34b38ef5d4d3db49ce4971/AniyomiProvider.cs3",
+    "name": "[Other] AniyomiProvider",
+    "fileHash": "sha256-5f0a5c8d44cdab98c4ee6fc5384ecf22c74d4b1a466a4c4e6662b04987837842"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Anizone.cs3",
@@ -1919,8 +1921,9 @@
     "version": 3,
     "internalName": "BingedReview",
     "description": "Data about streaming and review",
-    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/BingedReview.cs3",
-    "name": "[Movies] BingedReview"
+    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/BingedReview.cs3",
+    "name": "[Movies] BingedReview",
+    "fileHash": "sha256-b0793b093256a5c2feb5468099941f4e8b6058682a13f146e973675738991c3e"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=bluphim.art&sz=%size%",
@@ -3377,8 +3380,9 @@
     "internalName": "DramaDrip",
     "jarUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/DramaDrip.jar",
     "description": "K-Drama,Dramas Extension by ModFlix Team",
-    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/DramaDrip.cs3",
-    "name": "[Movies] DramaDrip"
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/DramaDrip.cs3",
+    "name": "[Movies] DramaDrip",
+    "fileHash": "sha256-345a94bf04a6c9bbdbd0522d3f3e8c499f498cf84c5c62bfc522d4f3770ba9f4"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=dramafull.cc&sz=%size%",
@@ -4387,8 +4391,9 @@
     ],
     "version": 1,
     "internalName": "GuardaSerieProvider",
-    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/GuardaSerieProvider.cs3",
-    "name": "[Movies] GuardaSerieProvider"
+    "url": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/GuardaSerieProvider.cs3",
+    "name": "[Movies] GuardaSerieProvider",
+    "fileHash": "sha256-1bc6f551461dbfa6a851265d8e50ea6a51c3bfc13e8ad5ccebeeea838e5d56bf"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Hahomoe.cs3",
@@ -4971,8 +4976,9 @@
     "version": 6,
     "internalName": "IndianTVProvider",
     "description": "Indian TV",
-    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/IndianTVProvider.cs3",
-    "name": "[Live] IndianTVProvider"
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/IndianTVProvider.cs3",
+    "name": "[Live] IndianTVProvider",
+    "fileHash": "sha256-a679563b917a4b5b1e5e9d9af901884b18981e18f321cdadb95a374c4fd189f9"
   },
   {
     "iconUrl": "https://i.ibb.co.com/6cCQ1h87/indomax.jpg",
@@ -6299,8 +6305,9 @@
     "version": 2,
     "internalName": "MegaProvider",
     "description": "This plugin adds all repositories each time the app is opened. Uninstall after one run if you do not want all repositories. Does not automatically refresh the repository list.",
-    "url": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/MegaProvider.cs3",
-    "name": "[Other] MegaProvider"
+    "url": "https://raw.githubusercontent.com/self-similarity/MegaRepo/d8b64bab636845a89503469f1c3cb13fdc750a8a/MegaProvider.cs3",
+    "name": "[Other] MegaProvider",
+    "fileHash": "sha256-7062fa86531ad8b8c34244c564adcba97176870a186499adbc369189ac848dbe"
   },
   {
     "name": "[Games] MetalSlugAdvance",
@@ -8901,8 +8908,9 @@
     "version": 1,
     "internalName": "SkymoviesHD",
     "description": "just testing",
-    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/SkymoviesHD.cs3",
-    "name": "[Movies] SkymoviesHD"
+    "url": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/SkymoviesHD.cs3",
+    "name": "[Movies] SkymoviesHD",
+    "fileHash": "sha256-944c9644ca9c8ee455a161e6154b20f6c764d2f7be0b355d902e997d8d63795f"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://x6.sokuja.uk&sz=%size%",
@@ -10342,8 +10350,9 @@
     "version": 7,
     "internalName": "UltimaBeta",
     "description": "(Beta)The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
-    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/UltimaBeta.cs3",
-    "name": "[Other] UltimaBeta"
+    "url": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/UltimaBeta.cs3",
+    "name": "[Other] UltimaBeta",
+    "fileHash": "sha256-039cdf7621971da3c7a7153f5802694126e170a286511d3422e64da471e814c9"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Uncut99.cs3",

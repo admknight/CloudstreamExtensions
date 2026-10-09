@@ -228,16 +228,16 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "gian-fr",
-    "sourceName": "Gian-Fr Italian Provider",
-    "sourceRepository": "https://github.com/Gian-Fr/ItalianProvider",
-    "sourceIndex": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Gian-Fr",
       "Adippe"
     ],
     "originalRepositoryUrl": "https://github.com/Gian-Fr/ItalianProvider",
-    "packageUrl": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/AltadefinizioneProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/AltadefinizioneProvider.cs3"
   },
   {
     "plugin": "AniChan",
@@ -1169,15 +1169,15 @@
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 8,
-    "sourceId": "aniyomi-compat",
-    "sourceName": "Aniyomi Compat",
-    "sourceRepository": "https://github.com/CranberrySoup/AniyomiCompatExtension",
-    "sourceIndex": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "CranberrySoup"
     ],
     "originalRepositoryUrl": "https://github.com/CranberrySoup/AniyomiCompatExtension",
-    "packageUrl": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/builds/AniyomiProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CranberrySoup/AniyomiCompatExtension/0a539fd454179399dd34b38ef5d4d3db49ce4971/AniyomiProvider.cs3"
   },
   {
     "plugin": "Anizone",
@@ -1544,15 +1544,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 3,
-    "sourceId": "cinephile",
-    "sourceName": "Cinephile",
-    "sourceRepository": "https://github.com/rockhero1234/cinephile",
-    "sourceIndex": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Dilip"
     ],
     "originalRepositoryUrl": "https://github.com/rockhero1234/cinephile",
-    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/BingedReview.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/BingedReview.cs3"
   },
   {
     "plugin": "BluPhimProvider",
@@ -2761,15 +2761,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 3,
-    "sourceId": "kim-recovery",
-    "sourceName": "Kim Recovery Builds",
-    "sourceRepository": "https://github.com/kim20598/cloudstream-extensions-test",
-    "sourceIndex": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
-    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/DramaDrip.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/DramaDrip.cs3"
   },
   {
     "plugin": "DramaFull",
@@ -3603,16 +3603,16 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "gian-fr",
-    "sourceName": "Gian-Fr Italian Provider",
-    "sourceRepository": "https://github.com/Gian-Fr/ItalianProvider",
-    "sourceIndex": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Gian-Fr",
       "Adippe"
     ],
     "originalRepositoryUrl": "https://github.com/Gian-Fr/ItalianProvider",
-    "packageUrl": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/builds/GuardaSerieProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Gian-Fr/ItalianProvider/e34c60c1139308f2265e57631abf2576addf73b0/GuardaSerieProvider.cs3"
   },
   {
     "plugin": "Hahomoe",
@@ -4100,15 +4100,15 @@
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 6,
-    "sourceId": "kim-recovery",
-    "sourceName": "Kim Recovery Builds",
-    "sourceRepository": "https://github.com/kim20598/cloudstream-extensions-test",
-    "sourceIndex": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
-    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/IndianTVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/IndianTVProvider.cs3"
   },
   {
     "plugin": "Indomax",
@@ -5212,13 +5212,13 @@
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 2,
-    "sourceId": "mega-provider",
-    "sourceName": "Mega Repository",
-    "sourceRepository": "https://github.com/self-similarity/MegaRepo",
-    "sourceIndex": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [],
     "originalRepositoryUrl": "https://github.com/self-similarity/MegaRepo",
-    "packageUrl": "https://raw.githubusercontent.com/self-similarity/MegaRepo/builds/MegaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/self-similarity/MegaRepo/d8b64bab636845a89503469f1c3cb13fdc750a8a/MegaProvider.cs3"
   },
   {
     "plugin": "MetalSlugAdvance",
@@ -7358,15 +7358,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cinephile",
-    "sourceName": "Cinephile",
-    "sourceRepository": "https://github.com/rockhero1234/cinephile",
-    "sourceIndex": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Redowan"
     ],
     "originalRepositoryUrl": "https://github.com/rockhero1234/cinephile",
-    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/builds/SkymoviesHD.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/rockhero1234/cinephile/9aebfedfde585c7312edb1378ac287a6a847a59e/SkymoviesHD.cs3"
   },
   {
     "plugin": "Sokuja",
@@ -8535,15 +8535,15 @@
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 7,
-    "sourceId": "kim-recovery",
-    "sourceName": "Kim Recovery Builds",
-    "sourceRepository": "https://github.com/kim20598/cloudstream-extensions-test",
-    "sourceIndex": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "RowdyRushya,Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/kim20598/cloudstream-extensions-test",
-    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/builds/UltimaBeta.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/kim20598/cloudstream-extensions-test/3e2792be0585090691a9d3421d902c29d7736c0f/UltimaBeta.cs3"
   },
   {
     "plugin": "Uncut99",
