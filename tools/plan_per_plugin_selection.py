@@ -23,6 +23,7 @@ from urllib.parse import urlparse
 
 from audit_package_integrity import DIGEST_RE, plugin_identity, verify_package
 from verify_candidate_integrity import gate, index_plugins, read_list, source_index
+from verified_immutable_fallback import validated_recovery_locks, restore_previous_from_lock
 
 GIT_SHA = re.compile(r"^[a-fA-F0-9]{40}$")
 
@@ -81,7 +82,7 @@ def verified_immutable_previous(previous_entry, previous_source, checker):
 
 def build_preview(candidate, previous, candidate_provenance,
                   previous_provenance, approvals,
-                  checker=verify_package, workers=8):
+                  checker=verify_package, workers=8, recovery_index=None):
     """Build a non-publishable preview; never mutate or write source objects."""
     if not isinstance(approvals, list):
         raise ValueError("Approvals registry must be a JSON array")
@@ -103,6 +104,8 @@ def build_preview(candidate, previous, candidate_provenance,
         if key not in new_provenance or not new_sources.get(key):
             raise ValueError("Missing source provenance for candidate " + key)
 
+    locks = validated_recovery_locks(recovery_index, previous, previous_provenance)
+
     verification = gate(candidate, previous, candidate_provenance,
                         previous_provenance, approvals,
                         checker=checker, workers=workers)
@@ -118,6 +121,7 @@ def build_preview(candidate, previous, candidate_provenance,
     counts = {
         "acceptedCandidates": 0,
         "retainedImmutablePrevious": 0,
+        "retainedThroughRecoveryLock": 0,
         "quarantinedExisting": 0,
         "withheldNew": 0,
         "previousRemovedByCandidate": 0,
@@ -132,15 +136,35 @@ def build_preview(candidate, previous, candidate_provenance,
             counts["acceptedCandidates"] += 1
             continue
         earlier = old.get(key)
-        held, explanation = verified_immutable_previous(
-            earlier, old_sources.get(key), checker
-        )
+        held = False
+        pinned_lock_used = False
+        pinned_entry = pinned_origin = None
+        explanation = "no independently verified immutable previous artifact"
+        if earlier is not None and key in locks:
+            pinned_entry, pinned_origin, explanation = restore_previous_from_lock(
+                key, earlier, old_provenance.get(key), locks, checker
+            )
+            held = pinned_entry is not None
+            pinned_lock_used = held
+        if not held:
+            original_held, original_explanation = verified_immutable_previous(
+                earlier, old_sources.get(key), checker
+            )
+            if original_held:
+                held = True
+                explanation = original_explanation
+                pinned_entry = copy.deepcopy(earlier)
+                pinned_origin = copy.deepcopy(old_provenance[key])
+            else:
+                explanation += "; " + original_explanation
         if held:
             if key not in old_provenance:
                 raise ValueError("Verified previous binary lacks provenance: " + key)
-            proposal.append(copy.deepcopy(earlier))
-            proposal_provenance.append(copy.deepcopy(old_provenance[key]))
+            proposal.append(pinned_entry)
+            proposal_provenance.append(pinned_origin)
             counts["retainedImmutablePrevious"] += 1
+            if pinned_lock_used:
+                counts["retainedThroughRecoveryLock"] += 1
             disposition = "retained_immutable_previous"
         elif earlier is not None:
             counts["quarantinedExisting"] += 1
@@ -160,6 +184,9 @@ def build_preview(candidate, previous, candidate_provenance,
             "observedActualSize": failure.get("actualFileSize"),
             "observedActualSHA256": failure.get("actualFileHash"),
             "fallbackAssessment": explanation,
+            "fallbackVerified": held,
+            "fallbackPin": pinned_entry.get("url") if held else None,
+            "fallbackThroughRecoveryLock": pinned_lock_used,
         })
     # A disappearance from the candidate is not an integrity-approved removal.
     # It appears only in the preview's exception ledger.
@@ -208,6 +235,8 @@ def build_preview(candidate, previous, candidate_provenance,
         "blockedCandidateCount": verification["blockedCount"],
         "incidentCount": len(records),
         "incidents": records,
+        "recoveryIndexSupplied": recovery_index is not None,
+        "recoveryCatalogDigest": recovery_index.get("sourceCatalogDigest") if recovery_index else None,
         "requiresExplicitReleaseReview": requires_review,
         "automaticPublicationAuthorized": False,
         "importantLimitation": (
@@ -241,9 +270,13 @@ def main(argv=None):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--fail-on-quarantine", action="store_true")
+    parser.add_argument("--recovery-index", type=Path,
+                        help="Optional recovery index matching exactly the previous catalog snapshot")
     args = parser.parse_args(argv)
     inputs = [args.candidate, args.previous, args.candidate_provenance,
               args.previous_provenance, args.approvals]
+    if args.recovery_index is not None:
+        inputs.append(args.recovery_index)
     destination = args.output_dir.resolve()
     if any(destination == p.resolve().parent for p in inputs) or destination.name in ("builds", "merged"):
         parser.error("Output must be a separate preview directory, never an input or production directory")
@@ -252,7 +285,9 @@ def main(argv=None):
     proposal, provenance, summary, verification = build_preview(
         read_list(args.candidate), read_list(args.previous),
         read_list(args.candidate_provenance), read_list(args.previous_provenance),
-        read_list(args.approvals), workers=args.workers
+        read_list(args.approvals), workers=args.workers,
+        recovery_index=(json.loads(args.recovery_index.read_text(encoding="utf-8"))
+                        if args.recovery_index else None)
     )
     destination.mkdir(parents=True, exist_ok=True)
     _write_json(destination / "preview.plugins.json", proposal)
