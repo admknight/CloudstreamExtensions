@@ -36,6 +36,14 @@ def validate_post_publish(audit, report, plugins, provenance):
     }
     if not allowed.issubset(names) or "" in allowed:
         raise ValueError("Invalid list of held upstream exceptions")
+    prior_pinned = {
+        str(item.get("plugin") or "").casefold()
+        for item in report.get("quarantineIncidents", [])
+        if item.get("disposition") == "retained_immutable_previous"
+        and item.get("fallbackVerified") is True
+    }
+    if not prior_pinned.issubset(names) or "" in prior_pinned:
+        raise ValueError("Invalid pinned prior binary disposition")
     integrity = report.get("integrityHealth", {})
     if integrity.get("unverifiedPreviousCarried") != len(allowed):
         raise ValueError("Deferred upstream exception accounting mismatch")
@@ -57,7 +65,7 @@ def validate_post_publish(audit, report, plugins, provenance):
             if not isinstance(entry, dict):
                 raise ValueError("Invalid audit entry")
             key = str(entry.get("plugin") or "").casefold()
-            if key in allowed:
+            if key in allowed or (field == "metadataDrift" and key in prior_pinned):
                 known.append({"plugin": key, "category": field})
             else:
                 unexpected.append({"plugin": key, "category": field})
@@ -74,7 +82,7 @@ def validate_post_publish(audit, report, plugins, provenance):
         "heldUpstreamExceptions": sorted(allowed),
         "knownAuditAnomalyCount": len(known),
         "unexpectedAuditAnomalyCount": 0,
-        "upstreamProblemsFullyResolved": not bool(allowed),
+        "upstreamProblemsFullyResolved": not bool(allowed or prior_pinned),
         "fullAuditPassed": audit.get("pass") is True,
         "warning": (
             "Known exceptions are not repaired, and old mutable package URLs "
