@@ -92,6 +92,15 @@ jobs:
             --approvals source/trusted_binary_approvals.json \
             --report package-integrity-gate.json
 
+      - name: Preserve candidate integrity diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidate-package-integrity-${{ github.run_id }}
+          path: package-integrity-gate.json
+          if-no-files-found: warn
+          retention-days: 14
+
       - name: Safety Gate
         run: |
           python3 - << 'PY'
