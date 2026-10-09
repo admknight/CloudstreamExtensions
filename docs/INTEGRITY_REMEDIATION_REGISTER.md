@@ -2,6 +2,8 @@
 
 **Evidence snapshot:** 2026-10-09 14:57 UTC; review-branch [full-catalog dry run](https://github.com/admknight/CloudstreamExtensions/actions/runs/37948028591) ([ZIP evidence](https://github.com/admknight/CloudstreamExtensions/actions/runs/37948028591/artifacts/11624038934)). Compared with published **builds** catalog generated 2026-10-09 10:37:11 UTC. All data below are historical observations, not live install/playback checks.
 
+**Upstream outreach:** [Prepared maintainer requests for Shakzz, CloudX-V2 and Desi](UPSTREAM_CORRECTION_REQUESTS.md) — ready for manual submission; the connected GitHub integration cannot create issues in those external repositories (HTTP 403). **No upstream issue has been submitted through this workflow.**
+
 **Result:** 543 candidate packages checked; **14 blocked**: 6 downloaded size mismatches, 7 changed/untrusted binary metadata cases, and 1 missing declared package size. No checksum or size values below constitute automatic permission to change a binary. `hash_verified` in the gate means matching *declared* hash, not independently authenticated publisher intent.
 
 ## Complete exception register
