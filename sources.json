@@ -11,15 +11,19 @@
       "localFile": "local_verified_plugins.json",
       "priority": 0,
       "include": [
+        "AnimeTH",
+        "Anv",
         "Donghub",
         "Extractors",
         "GDIndex",
         "IPTVProvider",
+        "JustPlay",
         "NetMovie",
         "OnlineMoviesHinditProvider",
         "Sarangfilm",
         "StreamHubOne",
         "StremioProvider",
+        "TorrentsV1",
         "ViStreamProvider",
         "XtreamIPTVProvider"
       ]
