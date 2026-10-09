@@ -4,6 +4,24 @@
   "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
   "sources": [
     {
+      "id": "local-pinned-recovery",
+      "name": "MegaRepo Verified Immutable Recovery",
+      "repo": "https://github.com/admknight/CloudstreamExtensions",
+      "index": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
+      "localFile": "local_verified_plugins.json",
+      "priority": 0,
+      "include": [
+        "Donghub",
+        "Extractors",
+        "GDIndex",
+        "OnlineMoviesHinditProvider",
+        "Sarangfilm",
+        "StremioProvider",
+        "ViStreamProvider",
+        "XtreamIPTVProvider"
+      ]
+    },
+    {
       "id": "phisher",
       "name": "Phisher Repo",
       "repo": "https://github.com/phisher98/cloudstream-extensions-phisher",
@@ -287,7 +305,9 @@
       "name": "Tearrs Vietnamese Extension",
       "repo": "https://gitlab.com/tearrs/cloudstream-vietnamese",
       "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
-      "exclude": ["IPTVProvider"]
+      "exclude": [
+        "IPTVProvider"
+      ]
     }
   ],
   "inactive": [

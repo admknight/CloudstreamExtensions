@@ -16,6 +16,10 @@ on:
       - 'tools/check_local_recovery_readiness.py'
       - 'tests/test_check_local_recovery_readiness.py'
       - 'trusted_binary_approvals.json'
+      - 'local_verified_plugins.json'
+      - 'sources.json'
+      - 'tools/merge_upstreams.py'
+      - 'tests/test_local_verified_source.py'
   pull_request:
     paths:
       - 'tools/plan_per_plugin_selection.py'
@@ -30,6 +34,10 @@ on:
       - 'tools/check_local_recovery_readiness.py'
       - 'tests/test_check_local_recovery_readiness.py'
       - 'trusted_binary_approvals.json'
+      - 'local_verified_plugins.json'
+      - 'sources.json'
+      - 'tools/merge_upstreams.py'
+      - 'tests/test_local_verified_source.py'
   workflow_dispatch:
 
 permissions:
@@ -51,11 +59,12 @@ jobs:
       - name: Per-plugin selection regressions
         run: |
           python3 -m unittest discover -s tests -p test_verify_candidate_integrity.py -v
+          python3 -m unittest discover -s tests -p test_local_verified_source.py -v
           python3 -m unittest discover -s tests -p test_per_plugin_selection.py -v
           python3 -m unittest discover -s tests -p test_reconcile_integrity_review.py -v
           python3 -m unittest discover -s tests -p test_immutable_fallback_selection.py -v
           python3 -m unittest discover -s tests -p test_check_local_recovery_readiness.py -v
-          python3 -m py_compile tools/verify_candidate_integrity.py tools/plan_per_plugin_selection.py tools/reconcile_integrity_review.py tools/verified_immutable_fallback.py tools/check_local_recovery_readiness.py
+          python3 -m py_compile tools/verify_candidate_integrity.py tools/merge_upstreams.py tools/plan_per_plugin_selection.py tools/reconcile_integrity_review.py tools/verified_immutable_fallback.py tools/check_local_recovery_readiness.py
       - name: Parse workflow YAML
         run: |
           ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "Workflow YAML parsed."'

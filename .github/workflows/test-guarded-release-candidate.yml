@@ -5,6 +5,11 @@ on:
     paths:
       - '.github/workflows/test-guarded-release-candidate.yml'
       - '.github/workflows/build.yml'
+      - 'sources.json'
+      - 'local_verified_plugins.json'
+      - 'trusted_binary_approvals.json'
+      - 'tools/merge_upstreams.py'
+      - 'tests/test_local_verified_source.py'
       - '.github/workflows/verify-guarded-post-publication.yml'
       - 'tools/validate_guarded_post_publish.py'
       - 'tests/test_validate_guarded_post_publish.py'
@@ -27,9 +32,10 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m unittest discover -s tests -p 'test_finalize_guarded_release.py' -v
+          python3 -m unittest discover -s tests -p 'test_local_verified_source.py' -v
           python3 -m unittest discover -s tests -p 'test_validate_guarded_post_publish.py' -v
           python3 -m unittest discover -s tests -p 'test_resolve_verified_integrity_issues.py' -v
-          python3 -m py_compile tools/finalize_guarded_release.py tools/validate_guarded_post_publish.py tools/resolve_verified_integrity_issues.py
+          python3 -m py_compile tools/finalize_guarded_release.py tools/merge_upstreams.py tools/validate_guarded_post_publish.py tools/resolve_verified_integrity_issues.py
       - name: YAML and read-only workflow check
         run: |
           ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |path| YAML.load_file(path) }; puts "All workflow YAML parsed"'
