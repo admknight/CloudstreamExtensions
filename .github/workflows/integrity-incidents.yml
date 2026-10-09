@@ -41,20 +41,10 @@ jobs:
           set -euo pipefail
           case "$RUN_ID" in *[!0-9]*|'') echo "Invalid run ID"; exit 1;; esac
           gh api "/repos/$GITHUB_REPOSITORY/actions/runs/$RUN_ID" > source-run.json
-          python3 - <<'PY'
-          import json, os
-          data=json.load(open('source-run.json'))
-          path=str(data.get('path') or '').split('@',1)[0]
-          origin=(data.get('head_repository') or {}).get('full_name')
-          assert data.get('id') == int(os.environ['RUN_ID'])
-          assert data.get('name') == 'Audit Published Plugin Integrity'
-          assert path.endswith('/.github/workflows/audit-package-integrity.yml')
-          assert data.get('head_branch') == 'master'
-          assert data.get('status') == 'completed'
-          assert origin == os.environ['GITHUB_REPOSITORY']
-          assert data.get('event') in ('push','schedule','workflow_dispatch')
-          print('Validated canonical completed audit run',data['id'])
-          PY
+          python3 tools/validate_audit_origin.py \
+            --run-json source-run.json \
+            --repository "$GITHUB_REPOSITORY" \
+            --run-id "$RUN_ID"
 
       - name: Download exactly matching audit artifact
         env:
