@@ -331,10 +331,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://anichin.moe&sz=%size%",
-    "fileHash": "sha256-0c8b647ffb002955cd8c25ff83b9bdcf205fa12abfc9e0d5935eeb4c88087eb8",
+    "fileHash": "sha256-44f51b55d79a2f75aba66bd67d48a23fd343081c2e44e561566d70adc734877b",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 29302,
+    "fileSize": 32873,
     "status": 1,
     "language": "id",
     "authors": [
@@ -344,7 +344,7 @@
       "Anime",
       "AnimeMovie"
     ],
-    "version": 1,
+    "version": 2,
     "internalName": "Anichin",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Anichin.cs3",
     "name": "[Asian] Anichin"
@@ -479,10 +479,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://animasuid.com&sz=%size%",
-    "fileHash": "sha256-ef9bcd8bced2111065a6698fddc8813707cbffd9e411039dcb0c2a6301e722ec",
+    "fileHash": "sha256-cd47b5816459655678b38690db8a463f29a3f4086415faad200817d610aba9a1",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 14645,
+    "fileSize": 14754,
     "status": 1,
     "language": "id",
     "authors": [
@@ -493,7 +493,7 @@
       "OVA",
       "Anime"
     ],
-    "version": 1,
+    "version": 2,
     "internalName": "Animasu",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Animasu.cs3",
     "name": "[Asian] Animasu"
@@ -744,10 +744,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://anime-indo.lol&sz=%size%",
-    "fileHash": "sha256-1101f01383716c135d0cfe27e2199a56400456a6f4ec94135e1ca03a14cf3910",
+    "fileHash": "sha256-895721489db7c7e148be474e0b8c074b4f1f6d021582a7e74f9b4de51c5738ff",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 22082,
+    "fileSize": 23108,
     "status": 1,
     "language": "id",
     "authors": [
@@ -759,7 +759,7 @@
       "Anime",
       "Movie"
     ],
-    "version": 1,
+    "version": 2,
     "internalName": "AnimeIndo",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/AnimeIndo.cs3",
     "name": "[Asian] AnimeIndo"
@@ -2717,10 +2717,10 @@
   },
   {
     "iconUrl": "https://cricfy.pro/wp-content/uploads/2024/11/cropped-cricfytv-2.png",
-    "fileHash": "sha256-38ab7771b21deec043c7a495875c977571b803aefbdd57e3c618306bb27033b9",
+    "fileHash": "sha256-c36b78630420569a3fdeb912963c9de47f5df1fe2b99a5a2bd7db51e8822d6ec",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 116844,
+    "fileSize": 117026,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -2729,7 +2729,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 70,
+    "version": 71,
     "internalName": "CricifyProvider",
     "description": "Watch Live sports and TV channels",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3",
@@ -3176,10 +3176,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghive.vip&sz=%size%",
-    "fileHash": "sha256-84df070e5262d84a4ff16c2b725f6c9eab5de8926abea41d9db6137df2b1fd89",
+    "fileHash": "sha256-26a4809b5dc58b23f1d36bedc951a7a3523d7f005272ab9dfa4763d16ff06902",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 22452,
+    "fileSize": 22912,
     "status": 1,
     "language": "id",
     "authors": [
@@ -3189,7 +3189,7 @@
       "Anime",
       "AnimeMovie"
     ],
-    "version": 2,
+    "version": 3,
     "internalName": "Donghub",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
     "name": "[Asian] Donghub"
@@ -5779,10 +5779,31 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://kuramanime.ink&sz=%size%",
-    "fileHash": "sha256-cd0ce1ef80451d60bb623d89670ab4e5a5e6abc80a31363bafe317d2a379bab3",
+    "fileHash": "sha256-1b762b166ea170890febaecdfde68616a5b7ea1e18e3880b1f00b16a83b59217",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 24051,
+    "fileSize": 25509,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "AnimeMovie",
+      "OVA",
+      "Anime"
+    ],
+    "version": 5,
+    "internalName": "Kuramanime",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Kuramanime.cs3",
+    "name": "[Asian] Kuramanime"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://kuronime.sbs&sz=%size%",
+    "fileHash": "sha256-d672986061c2d426e1ebe30807ac4d7746d2b9c4029bf003c90765b81b4e75bd",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 18190,
     "status": 1,
     "language": "id",
     "authors": [
@@ -5794,27 +5815,6 @@
       "Anime"
     ],
     "version": 2,
-    "internalName": "Kuramanime",
-    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Kuramanime.cs3",
-    "name": "[Asian] Kuramanime"
-  },
-  {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=https://kuronime.sbs&sz=%size%",
-    "fileHash": "sha256-6228d9c1b85bd3773a93dce45038d9b0251c27a26870b4663b3e3e24cfab8f41",
-    "apiVersion": 1,
-    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 17889,
-    "status": 1,
-    "language": "id",
-    "authors": [
-      "Adam Knight (Maintainer)"
-    ],
-    "tvTypes": [
-      "AnimeMovie",
-      "OVA",
-      "Anime"
-    ],
-    "version": 1,
     "internalName": "Kuronime",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Kuronime.cs3",
     "name": "[Asian] Kuronime"
@@ -6047,10 +6047,10 @@
   },
   {
     "iconUrl": "https://www.livxow.site/logo.jpg",
-    "fileHash": "sha256-5e879136115dcdb5c4ed6d335c67e6c7dbb2df75af6dc299e02d3551cd587405",
+    "fileHash": "sha256-1c078966138490b7da7f48f7eb36d4c20b538c311016a5b7341ef1fbf91d0086",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 127046,
+    "fileSize": 127205,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -6059,7 +6059,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 19,
+    "version": 20,
     "internalName": "LivXowProvider",
     "description": "Watch Live Sports and TV Channels via LivXow",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LivXowProvider.cs3",
@@ -6067,10 +6067,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://tv12.lk21official.cc&sz=%size%",
-    "fileHash": "sha256-76ccb45202cd9c7c91c97a6827a041272aee4a28aa5606ba86d4d2c00579a557",
+    "fileHash": "sha256-430ae1ea63a7d3acc5bfad6688cea2a1425feb63932b2bc6de03ce61dcc52ec5",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 18810,
+    "fileSize": 24010,
     "status": 1,
     "language": "id",
     "authors": [
@@ -6079,7 +6079,7 @@
     "tvTypes": [
       "Movie"
     ],
-    "version": 1,
+    "version": 4,
     "internalName": "LK21",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
     "name": "[Asian] LK21"
@@ -7426,10 +7426,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://pahe.ink&sz=%size%",
-    "fileHash": "sha256-8c11088961b8cbfcf6b67df19be26b0b15fd7eba85e966dd5ca6f42bb4f449ec",
+    "fileHash": "sha256-c29c3bc3de4aca5a17ca21af0437ab0dac7bd4bfe7e3313f98819e7074342276",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 15622,
+    "fileSize": 15681,
     "status": 1,
     "language": "id",
     "authors": [
@@ -7439,7 +7439,7 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 2,
+    "version": 3,
     "internalName": "Pahe",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Pahe.cs3",
     "name": "[Asian] Pahe"
@@ -7709,10 +7709,10 @@
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/Logos/PlayFyTvProvider/playfy-tv-4.webp",
-    "fileHash": "sha256-e9d1baf9121201b6c673fc6ecb2aec340d571994e4e8c930e341c69a166c45a3",
+    "fileHash": "sha256-365edb434209a559a3a7dfd7b6744b28831c137f2ef098fa418b08bfc1390250",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 106767,
+    "fileSize": 106982,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -7721,7 +7721,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 13,
+    "version": 14,
     "internalName": "PlayFyProvider",
     "description": "Watch Live sports and TV channels via PlayFy",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayFyProvider.cs3",
@@ -7729,10 +7729,10 @@
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/Logos/PlayZTVProvider/logo.jpg",
-    "fileHash": "sha256-633ca983c6b9dea4fd8a6f314058875f5c15f65180d32826acae4b9e6d738e3f",
+    "fileHash": "sha256-e6411013cca732e3f597f60493798b2c3841ed7d5d8ecdffa84a3248fae75b4c",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 117089,
+    "fileSize": 117275,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -7741,7 +7741,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 41,
+    "version": 42,
     "internalName": "PlayZTVProvider",
     "description": "Watch Live TV channels & sports via PlayZTV",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayZTVProvider.cs3",
@@ -8776,10 +8776,10 @@
   },
   {
     "iconUrl": "https://sktechtv.org/wp-content/uploads/2026/05/sktechtv.webp",
-    "fileHash": "sha256-b58b9b7befc3bd3e1ed0053404db79c81228b4fda059293d40cd3fa179a0778b",
+    "fileHash": "sha256-f7605368aff29d108c0975d23bddf4f98b3d6dae0662c5db3f5be0c76ab9150d",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 125041,
+    "fileSize": 125231,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -8788,7 +8788,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 57,
+    "version": 58,
     "internalName": "SKTechProvider",
     "description": "Watch Live sports and TV channels via SK Tech",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SKTechProvider.cs3",
@@ -8881,10 +8881,10 @@
   },
   {
     "iconUrl": "https://sportzxlive.com/wp-content/uploads/2026/04/cropped-logo-1-2048x1611-1-1024x806.png",
-    "fileHash": "sha256-fd8f3dc9d41912202a23a68106eca29e6ce68b4bbe99cbf60f17de77dcf4b7c2",
+    "fileHash": "sha256-62d24fa711dd5a9c0dec3e60b67ae5eaf2e3f7d71e6b5687039b65e70367b451",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 122953,
+    "fileSize": 123166,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -8893,7 +8893,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 25,
+    "version": 26,
     "internalName": "SportzxProvider",
     "description": "Watch Live Sports Events via SportzX",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SportzxProvider.cs3",
@@ -9017,7 +9017,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "StreamHub -  Multilingual provider Non-Stop Solution For Streaming Movies/Tv series & Anime",
-    "fileSize": 1059729,
+    "fileSize": 1099698,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -9029,7 +9029,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/images%20(1).jpeg",
     "apiVersion": 1,
-    "fileHash": "sha256-b5012093375d284330714ee8794d208ce4ff0b6f4d2d5e1ab983cf3696397fd6"
+    "fileHash": "sha256-134c3a85496abc454bb61686ccf98d83e2adac956f347dc1808f9b6e458eafd8"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3",
