@@ -101,5 +101,66 @@
     "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Sarangfilm.cs3",
     "name": "Sarangfilm",
     "fileHash": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7"
+  },
+  {
+    "iconUrl": "https://www.stremio.com/website/favicon.ico",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 131077,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "version": 7,
+    "internalName": "StremioProvider",
+    "description": "Addon use Streamio",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/StremioProvider.cs3",
+    "name": "[Tools] StremioProvider",
+    "fileHash": "sha256-5d7c4d6f65b974f82d2edf454b3343d309b1dc04b627cb9e519beff66799d7a7"
+  },
+  {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=uncutmaza.cc&sz=%size%",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 312346,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "TvSeries",
+      "Anime",
+      "Movie"
+    ],
+    "version": 35,
+    "internalName": "ViStreamProvider",
+    "description": "Download FullHD, 2K, 4K from torrent and cloud driver",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/ViStreamProvider.cs3",
+    "name": "[Movies] ViStreamProvider",
+    "fileHash": "sha256-2f83a4ffacc087efe993e2719d9e6e2f187bc6289b1ffd3e3e35f6928ed8337a"
+  },
+  {
+    "iconUrl": "https://play-lh.googleusercontent.com/gMB8Eq9g9Uq6CXiOHcqatXpx-6HTexAzcQibTgpqAE756Fnt1Jyyp0j7S3UDKPztkA=w480-h960-rw",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 29257,
+    "status": 1,
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Live"
+    ],
+    "version": 1,
+    "internalName": "XtreamIPTVProvider",
+    "description": "Cần nhập link Xtream IPTV, tài khoản và mật khẩu để xem",
+    "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/XtreamIPTVProvider.cs3",
+    "name": "[Live] XtreamIPTVProvider",
+    "fileHash": "sha256-3d30e8f45432043394c399339556fe206c7a563d6cc2caf07160a606dec24782"
   }
 ]
