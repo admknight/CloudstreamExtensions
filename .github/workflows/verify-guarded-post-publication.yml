@@ -1,0 +1,67 @@
+name: Verify Published Guarded Catalog Integrity
+
+on:
+  workflow_run:
+    workflows: ["Update Aggregated Repository"]
+    types: [completed]
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: guarded-post-publication-audit
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout trusted master audit and verifier code
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: source
+          persist-credentials: false
+      - name: Checkout one consistent published catalog snapshot
+        uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: published
+          persist-credentials: false
+      - name: Independently download and audit all published plugin binaries
+        run: |
+          set +e
+          python3 source/tools/audit_package_integrity.py \
+            --full \
+            --published-file published/plugins.json \
+            --provenance-file published/provenance.json \
+            --json-report full-published-audit.json \
+            --markdown-report full-published-audit.md
+          status=$?
+          echo "Full audit raw status: $status. Independent errors remain in evidence."
+          test -s full-published-audit.json
+          exit 0
+      - name: Verify all anomalies are exactly known and held, never hidden
+        run: |
+          set -euo pipefail
+          python3 source/tools/validate_guarded_post_publish.py \
+            --audit full-published-audit.json \
+            --report published/merge-report.json \
+            --plugins published/plugins.json \
+            --provenance published/provenance.json \
+            --output guarded-post-publish-result.json
+          cat guarded-post-publish-result.json >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain full byte and release verdict evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guarded-published-catalog-audit-${{ github.run_id }}
+          path: |
+            full-published-audit.json
+            full-published-audit.md
+            guarded-post-publish-result.json
+          retention-days: 21
+          if-no-files-found: warn

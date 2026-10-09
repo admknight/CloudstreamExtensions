@@ -115,6 +115,29 @@ class PublishCandidateTests(unittest.TestCase):
         self.assertEqual(set(assurance["files"]),set(EXPECTED_FILES))
         self.assertTrue(assurance["mode"].endswith("NOT_YET_PUBLISHED"))
 
+    def test_deferred_mutable_urls_must_remain_reachable_before_cutover(self):
+        values=baseline()
+        checked=[]
+        def check(url):
+            checked.append(url)
+            return {"ok": not url.endswith("P0.cs3")}
+        with self.assertRaisesRegex(ValueError,"no longer reachable"):
+            make_guarded_candidate(*values,deferred_url_checker=check)
+        self.assertTrue(checked)
+
+    def test_reachable_deferred_urls_do_not_imply_checksum_approval(self):
+        values=baseline()
+        found=[]
+        def check(url):
+            found.append(url)
+            return {"ok":True, "status":200}
+        release,evidence=make_guarded_candidate(
+            *values,deferred_url_checker=check
+        )
+        self.assertEqual(len(found),4)
+        self.assertEqual(evidence["deferredUnverifiedCount"],4)
+        self.assertEqual(release["merge-report.json"]["integrityHealth"]["unverifiedPreviousCarried"],4)
+
     def test_guarded_release_output_does_not_overwrite_existing(self):
         bundle,assurance=self.produce()
         with TemporaryDirectory() as t:

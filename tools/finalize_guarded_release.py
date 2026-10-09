@@ -35,7 +35,7 @@ def make_guarded_candidate(candidate, previous, candidate_provenance,
                            selection, verification,
                            candidate_report, previous_report,
                            candidate_repo, previous_repo,
-                           *, max_deferred=24):
+                           *, max_deferred=24, deferred_url_checker=None):
     if not isinstance(max_deferred, int) or not (0 <= max_deferred <= 100):
         raise ValueError("Deferred exception ceiling must be 0 to 100")
     bundle = reconcile(
@@ -82,6 +82,13 @@ def make_guarded_candidate(candidate, previous, candidate_provenance,
     for key in deferred_keys:
         if key not in original or key not in final or original[key] != final[key]:
             raise ValueError("Deferred candidate modified prior published metadata")
+    if deferred_url_checker is not None:
+        for item in report["deferredUnverified"]:
+            key = str(item["plugin"]).casefold()
+            url = final[key].get("url")
+            result = deferred_url_checker(url)
+            if not isinstance(result, dict) or result.get("ok") is not True:
+                raise ValueError("Previously published deferred URL is no longer reachable: " + key)
     if candidate_repo != previous_repo or bundle["repo.json"] != previous_repo:
         raise ValueError("CloudStream repo manifest must not change implicitly")
 
@@ -220,6 +227,8 @@ def main(argv=None):
     for name in ("candidate-dir","previous-dir","selection-dir","output-dir"):
         parser.add_argument("--"+name,required=True,type=Path)
     parser.add_argument("--max-deferred",type=int,default=24)
+    parser.add_argument("--verify-deferred-urls",action="store_true",
+                        help="Fail publication if any existing deferred package URL is unreachable")
     args=parser.parse_args(argv)
     folders=[args.candidate_dir.resolve(), args.previous_dir.resolve(),
              args.selection_dir.resolve()]
@@ -240,7 +249,9 @@ def main(argv=None):
         _load(args.previous_dir,"merge-report.json",dict),
         _load(args.candidate_dir,"repo.json",dict),
         _load(args.previous_dir,"repo.json",dict),
-        max_deferred=args.max_deferred
+        max_deferred=args.max_deferred,
+        deferred_url_checker=(template.check_package_url
+                              if args.verify_deferred_urls else None)
     )
     bundle["guarded-release-assurance.json"]=evidence
     write_bundle(dest,bundle)
