@@ -62,7 +62,7 @@ def analyze(report, provenance, past=None):
         compact.append({"id": source, "ok": row["ok"], "includedCount": included,
                         "rawCount": raw, "duplicateSkipped": duplicates,
                         "packageFailed": package_failed})
-    if set(counts) != ids or sum(counts.values()) != report["uniquePlugins"]:
+    if not set(counts).issubset(ids) or sum(counts.values()) != report["uniquePlugins"]:
         raise ValueError("Source IDs/provenance identities differ")
     if (type(totals.get("ok")) is not int or type(totals.get("failed")) is not int or
             totals["ok"] != sum(s["ok"] for s in compact) or
