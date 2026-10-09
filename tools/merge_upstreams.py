@@ -64,12 +64,12 @@ def fetch_source_plugins(source):
     expected = {str(x).strip().casefold() for x in source.get("include", [])}
     seen = set()
     github_pin = re.compile(
-        r"^https://raw\\.githubusercontent\\.com/[A-Za-z0-9_.-]+/"
-        r"[A-Za-z0-9_.-]+/[a-f0-9]{40}/[^?#]+\\.cs3$"
+        r"^https://raw\.githubusercontent\.com/[A-Za-z0-9_.-]+/"
+        r"[A-Za-z0-9_.-]+/[a-f0-9]{40}/[^?#]+\.cs3$"
     )
     gitlab_pin = re.compile(
-        r"^https://gitlab\\.com/tearrs/cloudstream-vietnamese/"
-        r"-/raw/[a-f0-9]{40}/[^?#]+\\.cs3$"
+        r"^https://gitlab\.com/tearrs/cloudstream-vietnamese/"
+        r"-/raw/[a-f0-9]{40}/[^?#]+\.cs3$"
     )
     for plugin in data:
         if not isinstance(plugin, dict):
