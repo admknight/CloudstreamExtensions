@@ -1,33 +1,19 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-09 18:22:37 UTC**
+Generated: **2026-10-09 19:12:33 UTC**
 
 Production catalog: **543 reachable plugins** · **35 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **0**
-- Updated: **15**
+- Updated: **0**
 - Removed: **0**
-- Unchanged: **528**
+- Unchanged: **543**
 
-## Updated plugins
+## Catalog changes
 
-- **Anichin** v1 → v2 — Nonton Indo
-- **Animasu** v1 → v2 — Nonton Indo
-- **AnimeIndo** v1 → v2 — Nonton Indo
-- **CricifyProvider** v70 → v71 — CNC Repo (All Language)
-- **Donghub** v2 → v3 — Nonton Indo
-- **Kuramanime** v2 → v5 — Nonton Indo
-- **Kuronime** v1 → v2 — Nonton Indo
-- **LivXowProvider** v19 → v20 — CNC Repo (All Language)
-- **LK21** v1 → v4 — Nonton Indo
-- **Pahe** v2 → v3 — Nonton Indo
-- **PlayFyProvider** v13 → v14 — CNC Repo (All Language)
-- **PlayZTVProvider** v41 → v42 — CNC Repo (All Language)
-- **SKTechProvider** v57 → v58 — CNC Repo (All Language)
-- **SportzxProvider** v25 → v26 — CNC Repo (All Language)
-- **StreamHubOne** v62 → v62 — Desi Extensions
+No plugin or source changes were detected in this production refresh.
 
 ## Production health
 
@@ -38,3 +24,13 @@ Production catalog: **543 reachable plugins** · **35 healthy sources** · **0 p
 
 > These notes are generated automatically from the production diff. Stable releases still require explicit manual approval.
 
+
+## Integrity status — separate from package reachability
+
+- **543 candidate packages** inspected for declared length and SHA-256 when present.
+- **535 candidates** accepted under the published trust rules.
+- **8 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **0 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **104 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
+
+Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.

@@ -1,8 +1,11 @@
 {
-  "generatedAt": "2026-10-09 18:22:37 UTC",
+  "generatedAt": "2026-10-09 19:12:33 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY",
+  "candidateStatus": "READY - GUARDED, 8 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "releaseAuthorized": false,
+  "previewPolicy": "compatibility",
+  "previewOfCandidateStatus": "READY",
   "sourceHealth": {
     "ok": 35,
     "failed": 0
@@ -18,7 +21,9 @@
       "rawCount": 85,
       "includedCount": 81,
       "packageFailed": 0,
-      "duplicateSkipped": 4
+      "duplicateSkipped": 4,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "cinephile",
@@ -30,7 +35,9 @@
       "rawCount": 5,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 2
+      "duplicateSkipped": 2,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "csx",
@@ -42,7 +49,9 @@
       "rawCount": 5,
       "includedCount": 5,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "netmirror",
@@ -54,7 +63,9 @@
       "rawCount": 1,
       "includedCount": 1,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "official",
@@ -66,7 +77,9 @@
       "rawCount": 5,
       "includedCount": 5,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "redowan",
@@ -78,7 +91,9 @@
       "rawCount": 18,
       "includedCount": 16,
       "packageFailed": 0,
-      "duplicateSkipped": 2
+      "duplicateSkipped": 2,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "vietnam",
@@ -90,7 +105,9 @@
       "rawCount": 16,
       "includedCount": 14,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "nontonindo",
@@ -102,7 +119,9 @@
       "rawCount": 18,
       "includedCount": 16,
       "packageFailed": 0,
-      "duplicateSkipped": 2
+      "duplicateSkipped": 2,
+      "integrityExceptions": 1,
+      "deferredUnverified": 1
     },
     {
       "id": "rearabi",
@@ -114,7 +133,9 @@
       "rawCount": 40,
       "includedCount": 37,
       "packageFailed": 0,
-      "duplicateSkipped": 3
+      "duplicateSkipped": 3,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "alyss",
@@ -126,7 +147,9 @@
       "rawCount": 3,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 1
+      "duplicateSkipped": 1,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "cakestwix",
@@ -138,7 +161,9 @@
       "rawCount": 21,
       "includedCount": 21,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "cloudx",
@@ -150,7 +175,9 @@
       "rawCount": 18,
       "includedCount": 14,
       "packageFailed": 0,
-      "duplicateSkipped": 4
+      "duplicateSkipped": 4,
+      "integrityExceptions": 1,
+      "deferredUnverified": 1
     },
     {
       "id": "storm-redblacker8",
@@ -162,7 +189,9 @@
       "rawCount": 36,
       "includedCount": 36,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "desi",
@@ -174,7 +203,9 @@
       "rawCount": 16,
       "includedCount": 12,
       "packageFailed": 0,
-      "duplicateSkipped": 4
+      "duplicateSkipped": 4,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "flummox",
@@ -186,7 +217,9 @@
       "rawCount": 2,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "ayu-games",
@@ -198,7 +231,9 @@
       "rawCount": 21,
       "includedCount": 21,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "raghav",
@@ -210,7 +245,9 @@
       "rawCount": 30,
       "includedCount": 30,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "diegon",
@@ -222,7 +259,9 @@
       "rawCount": 18,
       "includedCount": 17,
       "packageFailed": 0,
-      "duplicateSkipped": 1
+      "duplicateSkipped": 1,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "reflex",
@@ -234,7 +273,9 @@
       "rawCount": 2,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "cs-karma",
@@ -246,7 +287,9 @@
       "rawCount": 33,
       "includedCount": 30,
       "packageFailed": 0,
-      "duplicateSkipped": 3
+      "duplicateSkipped": 3,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "cnc",
@@ -258,7 +301,9 @@
       "rawCount": 36,
       "includedCount": 36,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "kekik",
@@ -270,7 +315,9 @@
       "rawCount": 43,
       "includedCount": 42,
       "packageFailed": 0,
-      "duplicateSkipped": 1
+      "duplicateSkipped": 1,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "cxxx",
@@ -282,7 +329,9 @@
       "rawCount": 70,
       "includedCount": 66,
       "packageFailed": 0,
-      "duplicateSkipped": 4
+      "duplicateSkipped": 4,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "kim-recovery",
@@ -294,7 +343,9 @@
       "rawCount": 71,
       "includedCount": 3,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "nuyuls-recovery",
@@ -306,7 +357,9 @@
       "rawCount": 46,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "shakzz-recovery",
@@ -318,7 +371,9 @@
       "rawCount": 13,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 2,
+      "deferredUnverified": 2
     },
     {
       "id": "mega-provider",
@@ -330,7 +385,9 @@
       "rawCount": 1,
       "includedCount": 1,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "rowdy-recovery",
@@ -342,7 +399,9 @@
       "rawCount": 1,
       "includedCount": 1,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "cloudstreamhub-recovery",
@@ -354,7 +413,9 @@
       "rawCount": 23,
       "includedCount": 1,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "manual-recovery",
@@ -366,7 +427,9 @@
       "rawCount": 1,
       "includedCount": 1,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 1,
+      "deferredUnverified": 1
     },
     {
       "id": "adam-custom",
@@ -378,7 +441,9 @@
       "rawCount": 6,
       "includedCount": 6,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "dogior",
@@ -390,7 +455,9 @@
       "rawCount": 15,
       "includedCount": 9,
       "packageFailed": 0,
-      "duplicateSkipped": 6
+      "duplicateSkipped": 6,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "gian-fr",
@@ -402,7 +469,9 @@
       "rawCount": 2,
       "includedCount": 2,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "aniyomi-compat",
@@ -414,7 +483,9 @@
       "rawCount": 1,
       "includedCount": 1,
       "packageFailed": 0,
-      "duplicateSkipped": 0
+      "duplicateSkipped": 0,
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "tearrs-vietnamese",
@@ -426,35 +497,23 @@
       "rawCount": 7,
       "includedCount": 6,
       "packageFailed": 0,
-      "duplicateSkipped": 0
-    }
-  ],
-  "inactiveSources": [
-    {
-      "id": "hexated",
-      "name": "Hexated CloudStream Extensions",
-      "repo": "https://github.com/Hexated/CloudStream-Extensions",
-      "reason": "No published builds/plugins.json index was available when last checked."
-    },
-    {
-      "id": "kekik-legacy",
-      "name": "Turkish Providers Repository | @KekikAkademi (legacy)",
-      "repo": "https://github.com/keyiflerolsun/Kekik-cloudstream",
-      "reason": "Archived legacy repository; superseded by the actively maintained maarrem/cs-Kekik fork."
+      "duplicateSkipped": 0,
+      "integrityExceptions": 3,
+      "deferredUnverified": 3
     }
   ],
   "categoryCounts": {
-    "Movies": 135,
-    "Anime": 64,
     "Indian": 83,
     "Arabic": 36,
+    "Adult": 74,
+    "Movies": 135,
+    "Other": 20,
+    "Anime": 64,
     "Asian": 50,
+    "Games": 21,
     "Live": 46,
     "Sports": 2,
-    "Games": 21,
-    "Tools": 12,
-    "Adult": 74,
-    "Other": 20
+    "Tools": 12
   },
   "previousPlugins": 543,
   "uniquePlugins": 543,
@@ -462,7 +521,317 @@
     "reachable": 543,
     "failed": 0
   },
+  "integrityHealth": {
+    "candidateChecked": 543,
+    "candidateAccepted": 535,
+    "immutableOldRetained": 0,
+    "pinnedPreviousRecovered": 0,
+    "unverifiedPreviousCarried": 8,
+    "quarantinedNotInProposal": 0,
+    "changedOrFailedCandidates": 8,
+    "sizeOnlyLegacyCandidateAccepted": 104,
+    "previewPolicy": "compatibility",
+    "releaseEligibleWithWarnings": true
+  },
   "duplicates": [
+    {
+      "plugin": "AltaDefinizione",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 25,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 8,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "AniKoto",
+      "selectedSource": "CNC Repo (All Language)",
+      "selectedVersion": 10,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 6,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Animedubhindi",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 9,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeUnity",
+      "selectedSource": "doGior's Had Enough",
+      "selectedVersion": 26,
+      "skippedSource": "DieGon Repository",
+      "skippedVersion": 17,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeWorld",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 20,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 18,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "AnimeWorld",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 20,
+      "skippedSource": "cs-karma",
+      "skippedVersion": 5,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Anizone",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 10,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Arte",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 5,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 4,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "BanglaPlex",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 8,
+      "skippedSource": "Redowan CloudStream",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "CalcioStreaming",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 20,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 15,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "FootReplays",
+      "selectedSource": "Redowan CloudStream",
+      "selectedVersion": 6,
+      "skippedSource": "cs-karma",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "FullPorner",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 2,
+      "skippedSource": "CXXX",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "Hanime",
+      "selectedSource": "CXXX",
+      "selectedVersion": 7,
+      "skippedSource": "Nonton Indo",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Hqporner",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 4,
+      "skippedSource": "CXXX",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Idlix",
+      "selectedSource": "Nonton Indo",
+      "selectedVersion": 3,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Krmzy",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 2,
+      "skippedSource": "Re-3arabi",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Latanime",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 9,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 5,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "LayarKaca",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 15,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MovieBox",
+      "selectedSource": "Desi Extensions",
+      "selectedVersion": 12,
+      "skippedSource": "Nonton Indo",
+      "skippedVersion": 4,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MovieBox",
+      "selectedSource": "Desi Extensions",
+      "selectedVersion": 12,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MovieBoxProvider",
+      "selectedSource": "CNC Repo (All Language)",
+      "selectedVersion": 52,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 36,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MovieBoxProvider",
+      "selectedSource": "CNC Repo (All Language)",
+      "selectedVersion": 52,
+      "skippedSource": "TheAlyss Repo",
+      "skippedVersion": 9,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "MoviesDrive",
+      "selectedSource": "CSX",
+      "selectedVersion": 33,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 18,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Mp4Moviez",
+      "selectedSource": "Redowan CloudStream",
+      "selectedVersion": 3,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Pencurimovie",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 8,
+      "skippedSource": "CloudX-V2",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "RareFilmm",
+      "selectedSource": "CloudStreamHub Recovery Builds",
+      "selectedVersion": 15,
+      "skippedSource": "Turkish Providers Repository | @KekikAkademi",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "ReAnime",
+      "selectedSource": "raghav repo",
+      "selectedVersion": 4,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Sokuja",
+      "selectedSource": "Nonton Indo",
+      "selectedVersion": 4,
+      "skippedSource": "cs-karma",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "StreamingCommunity",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 53,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 34,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Tamilblasters",
+      "selectedSource": "Phisher Repo",
+      "selectedVersion": 12,
+      "skippedSource": "Cinephile",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "TheMoviesFlix",
+      "selectedSource": "raghav repo",
+      "selectedVersion": 22,
+      "skippedSource": "Redowan CloudStream",
+      "skippedVersion": 6,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "TV",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 5,
+      "skippedSource": "doGior's Had Enough",
+      "skippedVersion": 3,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "TVGarden",
+      "selectedSource": "cs-karma",
+      "selectedVersion": 11,
+      "skippedSource": "Re-3arabi",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "VegaMovies",
+      "selectedSource": "CSX",
+      "selectedVersion": 82,
+      "skippedSource": "Desi Extensions",
+      "skippedVersion": 38,
+      "reason": "lower version"
+    },
+    {
+      "plugin": "Xhamster",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 1,
+      "skippedSource": "CXXX",
+      "skippedVersion": 1,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "XNXX",
+      "selectedSource": "Turkish Providers Repository | @KekikAkademi",
+      "selectedVersion": 2,
+      "skippedSource": "CXXX",
+      "skippedVersion": 2,
+      "reason": "lower source priority"
+    },
+    {
+      "plugin": "YouTube",
+      "selectedSource": "doGior's Had Enough",
+      "selectedVersion": 15,
+      "skippedSource": "Re-3arabi",
+      "skippedVersion": 2,
+      "reason": "lower version"
+    }
+  ],
+  "candidateDuplicateDecisions": [
     {
       "plugin": "AltaDefinizione",
       "selectedSource": "DieGon Repository",
@@ -763,225 +1132,14 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 15,
-    "unchanged": 528,
+    "updated": 0,
+    "unchanged": 543,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [
-      {
-        "plugin": "Anichin",
-        "name": "Anichin",
-        "version": 2,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 1,
-        "toVersion": 2,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "Animasu",
-        "name": "Animasu",
-        "version": 2,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 1,
-        "toVersion": 2,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "AnimeIndo",
-        "name": "AnimeIndo",
-        "version": 2,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 1,
-        "toVersion": 2,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "CricifyProvider",
-        "name": "CricifyProvider",
-        "version": 71,
-        "sourceId": "cnc",
-        "sourceName": "CNC Repo (All Language)",
-        "category": "Live",
-        "fromVersion": 70,
-        "toVersion": 71,
-        "fromSourceId": "cnc",
-        "fromSource": "CNC Repo (All Language)",
-        "toSourceId": "cnc",
-        "toSource": "CNC Repo (All Language)"
-      },
-      {
-        "plugin": "Donghub",
-        "name": "Donghub",
-        "version": 3,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 2,
-        "toVersion": 3,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "Kuramanime",
-        "name": "Kuramanime",
-        "version": 5,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 2,
-        "toVersion": 5,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "Kuronime",
-        "name": "Kuronime",
-        "version": 2,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 1,
-        "toVersion": 2,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "LivXowProvider",
-        "name": "LivXowProvider",
-        "version": 20,
-        "sourceId": "cnc",
-        "sourceName": "CNC Repo (All Language)",
-        "category": "Live",
-        "fromVersion": 19,
-        "toVersion": 20,
-        "fromSourceId": "cnc",
-        "fromSource": "CNC Repo (All Language)",
-        "toSourceId": "cnc",
-        "toSource": "CNC Repo (All Language)"
-      },
-      {
-        "plugin": "LK21",
-        "name": "LK21",
-        "version": 4,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 1,
-        "toVersion": 4,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "Pahe",
-        "name": "Pahe",
-        "version": 3,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 2,
-        "toVersion": 3,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
-      },
-      {
-        "plugin": "PlayFyProvider",
-        "name": "PlayFyProvider",
-        "version": 14,
-        "sourceId": "cnc",
-        "sourceName": "CNC Repo (All Language)",
-        "category": "Live",
-        "fromVersion": 13,
-        "toVersion": 14,
-        "fromSourceId": "cnc",
-        "fromSource": "CNC Repo (All Language)",
-        "toSourceId": "cnc",
-        "toSource": "CNC Repo (All Language)"
-      },
-      {
-        "plugin": "PlayZTVProvider",
-        "name": "PlayZTVProvider",
-        "version": 42,
-        "sourceId": "cnc",
-        "sourceName": "CNC Repo (All Language)",
-        "category": "Live",
-        "fromVersion": 41,
-        "toVersion": 42,
-        "fromSourceId": "cnc",
-        "fromSource": "CNC Repo (All Language)",
-        "toSourceId": "cnc",
-        "toSource": "CNC Repo (All Language)"
-      },
-      {
-        "plugin": "SKTechProvider",
-        "name": "SKTechProvider",
-        "version": 58,
-        "sourceId": "cnc",
-        "sourceName": "CNC Repo (All Language)",
-        "category": "Live",
-        "fromVersion": 57,
-        "toVersion": 58,
-        "fromSourceId": "cnc",
-        "fromSource": "CNC Repo (All Language)",
-        "toSourceId": "cnc",
-        "toSource": "CNC Repo (All Language)"
-      },
-      {
-        "plugin": "SportzxProvider",
-        "name": "SportzxProvider",
-        "version": 26,
-        "sourceId": "cnc",
-        "sourceName": "CNC Repo (All Language)",
-        "category": "Live",
-        "fromVersion": 25,
-        "toVersion": 26,
-        "fromSourceId": "cnc",
-        "fromSource": "CNC Repo (All Language)",
-        "toSourceId": "cnc",
-        "toSource": "CNC Repo (All Language)"
-      },
-      {
-        "plugin": "StreamHubOne",
-        "name": "StreamHubOne",
-        "version": 62,
-        "sourceId": "desi",
-        "sourceName": "Desi Extensions",
-        "category": "Indian",
-        "fromVersion": 62,
-        "toVersion": 62,
-        "fromSourceId": "desi",
-        "fromSource": "Desi Extensions",
-        "toSourceId": "desi",
-        "toSource": "Desi Extensions"
-      }
-    ],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
@@ -990,5 +1148,211 @@
     "healthChanged": []
   },
   "customProviderChanges": [],
-  "removedPlugins": []
+  "removedPlugins": [],
+  "deferredUnverified": [
+    {
+      "plugin": "Donghub",
+      "sourceId": "nontonindo",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Extractors",
+      "sourceId": "shakzz-recovery",
+      "reason": "download verification failed: fileSize",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "GDIndex",
+      "sourceId": "shakzz-recovery",
+      "reason": "download verification failed: fileSize",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "OnlineMoviesHinditProvider",
+      "sourceId": "manual-recovery",
+      "reason": "no valid declared fileSize; package length is not verified",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Sarangfilm",
+      "sourceId": "cloudx",
+      "reason": "download verification failed: fileSize",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "StremioProvider",
+      "sourceId": "tearrs-vietnamese",
+      "reason": "download verification failed: fileSize",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "ViStreamProvider",
+      "sourceId": "tearrs-vietnamese",
+      "reason": "download verification failed: fileSize",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "XtreamIPTVProvider",
+      "sourceId": "tearrs-vietnamese",
+      "reason": "download verification failed: fileSize",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    }
+  ],
+  "quarantineIncidents": [
+    {
+      "plugin": "donghub",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "nontonindo",
+      "previousSourceId": "nontonindo",
+      "candidateUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 25108,
+      "observedActualSHA256": "sha256-836fa09519a8ac309688481b7baac6e539038393b29b2edb8268a52b002d9f3a",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "extractors",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "shakzz-recovery",
+      "previousSourceId": "shakzz-recovery",
+      "candidateUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/Extractors.cs3",
+      "candidateReason": "download verification failed: fileSize",
+      "observedVerification": "mismatch",
+      "observedActualSize": 39894,
+      "observedActualSHA256": "sha256-b6c73e188efa1d49796b7beec71e1ab3cadda8f308c987dbe23e9e183efb4abd",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "gdindex",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "shakzz-recovery",
+      "previousSourceId": "shakzz-recovery",
+      "candidateUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/GDIndex.cs3",
+      "candidateReason": "download verification failed: fileSize",
+      "observedVerification": "mismatch",
+      "observedActualSize": 17206,
+      "observedActualSHA256": "sha256-06347df7ead05921e1e32da0c0103e800bea14b0ca186a611e0ae20ec018c679",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "onlinemovieshinditprovider",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "manual-recovery",
+      "previousSourceId": "manual-recovery",
+      "candidateUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Shakzz890/ShakzzCutie/builds/OnlineMoviesHinditProvider.cs3",
+      "candidateReason": "no valid declared fileSize; package length is not verified",
+      "observedVerification": "size_only_no_checksum",
+      "observedActualSize": 12001,
+      "observedActualSHA256": "sha256-5f8a774e0cd991f885642ce72459d856c6ca122d6298fe337a2fea816b08f93e",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "sarangfilm",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cloudx",
+      "previousSourceId": "cloudx",
+      "candidateUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Sarangfilm.cs3",
+      "candidateReason": "download verification failed: fileSize",
+      "observedVerification": "mismatch",
+      "observedActualSize": 28666,
+      "observedActualSHA256": "sha256-9be9cb884a6c83fc441be4406cd1fe3a1b026813f818b5b19ceab7662fa210e7",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "stremioprovider",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "tearrs-vietnamese",
+      "previousSourceId": "tearrs-vietnamese",
+      "candidateUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
+      "previousUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/StremioProvider.cs3",
+      "candidateReason": "download verification failed: fileSize",
+      "observedVerification": "mismatch",
+      "observedActualSize": 131077,
+      "observedActualSHA256": "sha256-5d7c4d6f65b974f82d2edf454b3343d309b1dc04b627cb9e519beff66799d7a7",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "vistreamprovider",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "tearrs-vietnamese",
+      "previousSourceId": "tearrs-vietnamese",
+      "candidateUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
+      "previousUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/ViStreamProvider.cs3",
+      "candidateReason": "download verification failed: fileSize",
+      "observedVerification": "mismatch",
+      "observedActualSize": 312346,
+      "observedActualSHA256": "sha256-2f83a4ffacc087efe993e2719d9e6e2f187bc6289b1ffd3e3e35f6928ed8337a",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "xtreamiptvprovider",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "tearrs-vietnamese",
+      "previousSourceId": "tearrs-vietnamese",
+      "candidateUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
+      "previousUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/XtreamIPTVProvider.cs3",
+      "candidateReason": "download verification failed: fileSize",
+      "observedVerification": "mismatch",
+      "observedActualSize": 29257,
+      "observedActualSHA256": "sha256-3d30e8f45432043394c399339556fe206c7a563d6cc2caf07160a606dec24782",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    }
+  ],
+  "originalSourceReportDigest": "001314ef624e523dbd6f57a74595281d1646a8240f8f2bd661ab5dca85192f7c",
+  "inputSnapshotDigests": {
+    "candidate": "82e671790f9c5e3ba0d8c64dcf1345f7319c78d0d008e857ab948ff93514e0a5",
+    "previous": "32fabfe20f6425eb913db24ab871b5b5aa2abdd90fec80cef204570c221f21da",
+    "candidateProvenance": "bde814b0888ab5c78b18a2ca37c4278a2130fb661db8f8f502451fdd832de6b6",
+    "previousProvenance": "8c2f664784d6b1eac524363f0dd4ed2333f83d7f4f09be27c4388c86081f36b3"
+  },
+  "releaseEligible": true,
+  "publicationMethod": "guarded_per_plugin_compatibility",
+  "candidateStatusDisclaimer": "A deferred mutable URL does NOT guarantee the old bytes remain available. Unverified metadata is held from the previous release only. Publication never approves a different binary on this basis."
 }
