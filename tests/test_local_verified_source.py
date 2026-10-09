@@ -20,9 +20,9 @@ class LocalVerifiedSourceTests(unittest.TestCase):
         cls.pins = json.loads((ROOT / "local_verified_plugins.json").read_text())
         cls.approvals = json.loads((ROOT / "trusted_binary_approvals.json").read_text())
 
-    def test_source_is_twentyfour_checked_in_immutable_packages(self):
+    def test_source_is_hundred_three_checked_in_immutable_packages(self):
         items = merge.fetch_source_plugins(self.source)
-        self.assertEqual(len(items), 24)
+        self.assertEqual(len(items), 103)
         self.assertEqual({p["internalName"] for p in items},
                          set(self.source["include"]))
         self.assertEqual(self.source["priority"], 0)
@@ -55,7 +55,7 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                     "actualFileSize":trusted["fileSize"]}
         report = gate(self.pins, [], provenance, [], self.approvals, checker=check, workers=1)
         self.assertEqual(report["blockedCount"], 0)
-        self.assertEqual(report["reviewApproved"], 24)
+        self.assertEqual(report["reviewApproved"], 103)
         altered = copy.deepcopy(self.pins)
         altered[0]["fileHash"] = "sha256-" + "0"*64
         bad = gate(altered, [], provenance, [], self.approvals, checker=check, workers=1)
@@ -162,6 +162,30 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                 self.assertEqual(reviews[0]["fileSize"], length)
                 self.assertEqual(reviews[0]["sourceId"], "local-pinned-recovery")
         self.assertEqual(next(p for p in self.pins if p["internalName"] == "UltimaBeta")["status"], 2)
+
+    def test_all_79_major_legacy_upgrades_are_exact_original_commit_pins(self):
+        original_sources = {
+            "maarrem/cs-Kekik": ("51034df969e134e1347f4a3abe1e57063474a95f", 42),
+            "errorcode26/Ayu-CloudStream-Games": ("3945b17e94a0176bf25ee527519ed427db2ce5ec", 21),
+            "t23-02/cloudstream": ("72ea428321cd0f3749773933c42c9a1c3573ab25", 14),
+            "nuyuls79/StreamPlay-movie": ("e065fad55d0acf955036102dddec92162c56f6ed", 2),
+        }
+        self.assertEqual(len(self.pins), 103)
+        for repo, (commit, count) in original_sources.items():
+            prefix = f"https://raw.githubusercontent.com/{repo}/{commit}/"
+            records = [x for x in self.pins if x["url"].startswith(prefix)]
+            with self.subTest(repo=repo):
+                self.assertEqual(len(records), count)
+                self.assertEqual(len({x["internalName"] for x in records}), count)
+                for entry in records:
+                    self.assertTrue(entry["url"].endswith("/"+entry["internalName"]+".cs3"))
+                    self.assertEqual(len(entry["fileHash"]), 71)
+                    approvals = [a for a in self.approvals if a["plugin"] == entry["internalName"]]
+                    self.assertEqual(len(approvals), 1)
+                    self.assertEqual(approvals[0]["url"], entry["url"])
+                    self.assertEqual(approvals[0]["fileHash"], entry["fileHash"])
+                    self.assertEqual(approvals[0]["fileSize"], entry["fileSize"])
+                    self.assertEqual(approvals[0]["version"], entry["version"])
 
     def test_rejects_mutable_package_url(self):
         copied = copy.deepcopy(self.pins)
