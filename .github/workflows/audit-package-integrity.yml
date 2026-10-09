@@ -4,6 +4,17 @@ on:
   schedule:
     - cron: '43 * * * *'
   workflow_dispatch:
+    inputs:
+      full:
+        description: "Run a complete binary verification instead of rotating 1/6"
+        type: boolean
+        default: false
+        required: false
+      only:
+        description: "Optional exact internal plugin identity to verify"
+        type: string
+        default: ""
+        required: false
   push:
     branches: [master]
     paths:
@@ -41,12 +52,19 @@ jobs:
         run: python3 -m unittest discover -s tests -p test_audit_package_integrity.py -v
       - name: Live drift audit (advisory on PR; enforced on master and schedule)
         continue-on-error: ${{ github.event_name == 'pull_request' }}
+        env:
+          FULL_SCAN: ${{ inputs.full || 'false' }}
+          ONLY_PLUGIN: ${{ inputs.only || '' }}
         run: |
+          set -euo pipefail
+          args=()
+          if [ "$FULL_SCAN" = "true" ]; then args+=(--full); fi
+          if [ -n "$ONLY_PLUGIN" ]; then args+=(--only "$ONLY_PLUGIN"); fi
           python3 tools/audit_package_integrity.py \
             --published-file published-catalog/plugins.json \
             --provenance-file published-catalog/provenance.json \
             --json-report audit-report.json \
-            --markdown-report audit-summary.md
+            --markdown-report audit-summary.md "${args[@]}"
       - name: Publish verification summary
         if: always()
         run: |

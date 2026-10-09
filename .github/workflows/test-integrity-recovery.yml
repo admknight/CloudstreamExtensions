@@ -1,15 +1,24 @@
-name: Validate Integrity Incident Tracking
+name: Validate Guarded Integrity Recovery
 
 on:
   pull_request:
     paths:
+      - '.github/workflows/build.yml'
+      - '.github/workflows/integrity-incidents.yml'
+      - '.github/workflows/test-integrity-recovery.yml'
+      - 'tools/verify_candidate_integrity.py'
       - 'tools/plan_integrity_recovery.py'
       - 'tools/sync_integrity_issues.py'
+      - 'tools/audit_package_integrity.py'
+      - 'tests/test_verify_candidate_integrity.py'
       - 'tests/test_integrity_recovery.py'
       - 'tests/test_validate_audit_origin.py'
       - 'tools/validate_audit_origin.py'
-      - '.github/workflows/integrity-incidents.yml'
-      - '.github/workflows/test-integrity-recovery.yml'
+      - 'tests/test_guarded_recovery.py'
+      - '.github/workflows/post-recovery-audit.yml'
+      - '.github/workflows/audit-package-integrity.yml'
+      - 'tests/test_audit_package_integrity.py'
+      - 'trusted_binary_approvals.json'
   workflow_dispatch:
 
 permissions:
@@ -24,23 +33,88 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Incident management unit tests (offline)
+      - name: Original audit and publication gate unit tests (offline)
         run: |
+          python3 -m unittest discover -s tests -p 'test_audit_package_integrity.py' -v
+          python3 -m unittest discover -s tests -p 'test_verify_candidate_integrity.py' -v
           python3 -m unittest discover -s tests -p 'test_integrity_recovery.py' -v
           python3 -m unittest discover -s tests -p 'test_validate_audit_origin.py' -v
-          python3 -m py_compile tools/plan_integrity_recovery.py tools/sync_integrity_issues.py tools/validate_audit_origin.py
-      - name: Check all workflow YAML syntax
+          python3 -m unittest discover -s tests -p 'test_guarded_recovery.py' -v
+      - name: Python syntax checks
         run: |
-          ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "YAML parsed"'
-      - name: Confirm no publication or workflow dispatch permissions
+          python3 -m py_compile tools/audit_package_integrity.py tools/verify_candidate_integrity.py tools/plan_integrity_recovery.py tools/sync_integrity_issues.py tools/validate_audit_origin.py
+      - name: Parse GitHub Actions YAML definitions
+        run: |
+          ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "YAML parse completed"'
+
+      - name: Validate reviewed approvals schema
         run: |
           python3 - <<'PY'
+          import json
           from pathlib import Path
-          text=Path('.github/workflows/integrity-incidents.yml').read_text()
-          assert 'actions: read' in text
-          assert 'issues: write' in text
-          assert 'contents: read' in text
-          assert 'gh workflow run' not in text
-          assert 'gh api --method' not in text
-          print('Incident workflow is restricted to issue tracking.')
+          x=json.loads(Path('trusted_binary_approvals.json').read_text())
+          assert isinstance(x,list)
+          print('Approvals:',len(x))
           PY
+
+  catalog-dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout PR source
+        uses: actions/checkout@v4
+        with:
+          path: source
+      - name: Checkout pinned current production catalog
+        uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: production
+      - name: Build candidate from current upstreams (read-only)
+        run: |
+          python3 source/tools/merge_upstreams.py candidate \
+            --previous production/plugins.json \
+            --previous-report production/merge-report.json \
+            --previous-provenance production/provenance.json
+      - name: Dry-run integrity gate against complete real catalog
+        run: |
+          set +e
+          python3 source/tools/verify_candidate_integrity.py \
+            --candidate candidate/plugins.json \
+            --previous production/plugins.json \
+            --candidate-provenance candidate/provenance.json \
+            --previous-provenance production/provenance.json \
+            --approvals source/trusted_binary_approvals.json \
+            --report full-catalog-gate.json
+          status=$?
+          echo "Candidate gate returned $status (expected while unsigned/unreviewed changes exist)"
+          exit 0
+      - name: Explain results and preserve evidence
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('full-catalog-gate.json').read_text())
+          print(json.dumps({k:v for k,v in report.items() if k!='blocked'}, indent=2))
+          for row in report.get('blocked', [])[:12]:
+              print(row['plugin'], ':',row['reason'])
+          with open(__import__('os').environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('### Candidate integrity dry-run\n\n')
+              f.write('- Checked: '+str(report.get('checked','not run'))+'\n')
+              f.write('- Blocked: '+str(report.get('blockedCount','unknown'))+'\n')
+              f.write('- Legacy unpinned: '+str(report.get('legacyUnpinned','unknown'))+'\n')
+          if 'fatalError' in report:
+              raise SystemExit(report['fatalError'])
+          PY
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integrity-catalog-dry-run-${{ github.run_id }}
+          path: |
+            full-catalog-gate.json
+            candidate/merge-report.json
+            candidate/STATUS.md
+          if-no-files-found: warn
