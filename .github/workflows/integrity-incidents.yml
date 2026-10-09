@@ -1,4 +1,4 @@
-name: Track published integrity incidents
+name: Track integrity incidents and safely recover trusted upstream corrections
 
 on:
   workflow_run:
@@ -13,19 +13,19 @@ on:
         type: string
 
 permissions:
-  actions: read
+  actions: write
   contents: read
   issues: write
 
 concurrency:
-  group: integrity-incident-tracking
+  group: integrity-incidents-and-recovery
   cancel-in-progress: false
 
 jobs:
   incidents:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.head_repository.full_name == github.repository }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Checkout trusted incident scripts
         uses: actions/checkout@v4
@@ -73,10 +73,103 @@ jobs:
           shutil.copyfile(items[0], 'audit-report.json')
           PY
 
-      - name: Upsert evidence-backed incidents; never edit catalogs
+      - name: Plan and upsert evidence-backed incidents
+        id: hint
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 tools/sync_integrity_issues.py --audit audit-report.json
+        run: |
+          set -euo pipefail
+          python3 tools/plan_integrity_recovery.py \
+            --audit audit-report.json --plan incident-plan.json
+          python3 tools/sync_integrity_issues.py --audit audit-report.json
+          python3 - <<'PY'
+          import json,os
+          plan=json.load(open('incident-plan.json'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('preflight='+('true' if plan['candidatePreflightNeeded'] else 'false')+'\n')
+          PY
+
+      - name: Checkout one pinned production catalog snapshot
+        if: steps.hint.outputs.preflight == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: production
+          persist-credentials: false
+
+      - name: Independently rebuild current upstream candidate
+        if: steps.hint.outputs.preflight == 'true'
+        run: |
+          python3 tools/merge_upstreams.py candidate \
+            --previous production/plugins.json \
+            --previous-report production/merge-report.json \
+            --previous-provenance production/provenance.json
+
+      - name: Full candidate binary-integrity preflight (advisory, fail-closed decision)
+        if: steps.hint.outputs.preflight == 'true'
+        run: |
+          set +e
+          python3 tools/verify_candidate_integrity.py \
+            --candidate candidate/plugins.json \
+            --previous production/plugins.json \
+            --candidate-provenance candidate/provenance.json \
+            --previous-provenance production/provenance.json \
+            --approvals trusted_binary_approvals.json \
+            --report candidate-gate.json
+          status=$?
+          echo "Integrity preflight exit: $status. No unsafe dispatch will occur."
+          test -s candidate-gate.json
+
+      - name: Decide if guarded aggregation may run
+        id: decision
+        if: steps.hint.outputs.preflight == 'true'
+        run: |
+          set -euo pipefail
+          python3 tools/plan_integrity_recovery.py \
+            --audit audit-report.json --plan incident-plan.json \
+            --gate candidate-gate.json \
+            --candidate candidate/plugins.json \
+            --previous production/plugins.json \
+            --candidate-provenance candidate/provenance.json \
+            --candidate-report candidate/merge-report.json \
+            --decision recovery-decision.json
+          python3 - <<'PY'
+          import datetime,json,os
+          d=json.load(open('recovery-decision.json'))
+          approved=d.get('dispatch') is True
+          print(json.dumps(d,indent=2))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('dispatch='+('true' if approved else 'false')+'\n')
+              if approved:
+                  key='trusted-recovery-'+d['candidateDigest']+'-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%d')
+                  f.write('cache-key='+key+'\n')
+          PY
+
+      - name: Check same-day dispatch deduplication
+        if: steps.decision.outputs.dispatch == 'true'
+        id: previous
+        uses: actions/cache/restore@v4
+        with:
+          path: recovery-dispatched.txt
+          key: ${{ steps.decision.outputs.cache-key }}
+
+      - name: Dispatch guarded aggregation for trusted candidate only
+        if: steps.decision.outputs.dispatch == 'true' && steps.previous.outputs.cache-hit != 'true'
+        id: dispatch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run build.yml --ref master
+          echo "Guarded aggregator dispatched following independently verified preflight."
+          echo "${{ steps.decision.outputs.cache-key }}" > recovery-dispatched.txt
+
+      - name: Save same-day dispatch marker
+        if: steps.dispatch.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: recovery-dispatched.txt
+          key: ${{ steps.decision.outputs.cache-key }}
 
       - name: Retain incident processing evidence
         if: always()
@@ -86,5 +179,8 @@ jobs:
           path: |
             source-run.json
             audit-report.json
+            incident-plan.json
+            candidate-gate.json
+            recovery-decision.json
           retention-days: 14
           if-no-files-found: warn
