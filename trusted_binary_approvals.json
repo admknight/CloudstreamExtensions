@@ -1,5 +1,29 @@
 [
   {
+    "plugin": "AnimeTH",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3",
+    "version": 1,
+    "fileSize": 51648,
+    "fileHash": "sha256-588900960340944467b3dcd9895425aca0db65df75f65b680be446293c0a7b2d",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Original upstream build at full immutable GitHub commit, exact .cs3 ZIP size and SHA-256 independently verified against committed manifest in GitHub Actions run 37995159232; publisher signature and runtime functionality not certified.",
+    "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/AnimeTH.cs3"
+  },
+  {
+    "plugin": "Anv",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Anv.cs3",
+    "version": 1,
+    "fileSize": 59454,
+    "fileHash": "sha256-94a1716c3677bc0c2877d89634e7c5da66c39bc306b3dd34758f0e5a06f4c443",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Original upstream build at full immutable GitHub commit, exact .cs3 ZIP size and SHA-256 independently verified against committed manifest in GitHub Actions run 37995159232; publisher signature and runtime functionality not certified.",
+    "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Anv.cs3"
+  },
+  {
     "plugin": "Donghub",
     "sourceId": "local-pinned-recovery",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/ff22707cca6b1292d327a9aa9dcc60de5ee12492/Donghub.cs3",
@@ -46,6 +70,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Downstream correction of inaccurate upstream fileSize. Original IPTVProvider v9 .cs3 downloaded from full GitLab source commit, independently SHA-256 verified in GitHub Actions; release functionality not certified.",
     "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/IPTVProvider.cs3"
+  },
+  {
+    "plugin": "JustPlay",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
+    "version": 12,
+    "fileSize": 421355,
+    "fileHash": "sha256-31d865e11f19b984e39baa48fa6234b9dd24f70c4a8ff9a1ca178a0dc56966e5",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Original upstream build at full immutable GitHub commit, exact .cs3 ZIP size and SHA-256 independently verified against committed manifest in GitHub Actions run 37995159232; publisher signature and runtime functionality not certified.",
+    "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3"
   },
   {
     "plugin": "NetMovie",
@@ -106,6 +142,18 @@
     "reviewedAt": "2026-10-09",
     "reason": "Commit-pinned original upstream binary, with independently checked SHA-256 and length. Local metadata review does not certify runtime functionality.",
     "evidenceUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/blob/05b8e0b8c7b3aa43665fc57c477862cc0888f917/StremioProvider.cs3"
+  },
+  {
+    "plugin": "TorrentsV1",
+    "sourceId": "local-pinned-recovery",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3",
+    "version": 22,
+    "fileSize": 123332,
+    "fileHash": "sha256-083368334ae440237fc0d799ea3dd087c782f46b177915b477267f7f326a05a1",
+    "reviewedBy": "MegaRepo owner-authorized technical review",
+    "reviewedAt": "2026-10-09",
+    "reason": "Original upstream build at full immutable GitHub commit, exact .cs3 ZIP size and SHA-256 independently verified against committed manifest in GitHub Actions run 37995159232; publisher signature and runtime functionality not certified.",
+    "evidenceUrl": "https://github.com/KSHITIJ8473/raghav/blob/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3"
   },
   {
     "plugin": "ViStreamProvider",
