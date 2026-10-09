@@ -33,17 +33,19 @@ The catalog is rebuilt from multiple published CloudStream repositories, dedupli
 
 > 🎉 **Stable milestone:** [Adam Knight Mega Repo v1.0.0](https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0) establishes the first production-ready baseline for the automated Mega Repo.
 
-## Three ways to use MegaRepo
+## Choose the right MegaRepo tool
+
+**Full MegaRepo = complete catalog. Personal Repository Builder = selected-only repository link. Extension Explorer = discovery and local bookmarks.**
 
 | Your goal | Where to go | What happens |
 | --- | --- | --- |
-| **Browse the full catalog in CloudStream** | **Full MegaRepo** — shortcode `admknight` | Add the full repository, then install whichever extensions you want individually. |
-| **Use only selected extensions** | **[Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/)** | Select up to 100 extensions and get a personal installable `repo.json` URL. Add it to CloudStream, then install the listed plugins. |
-| **Research extensions first** | **[Extension Explorer](https://admknight.github.io/CloudstreamExtensions/explore.html)** | Search, filter and bookmark extension names locally. Bookmarks do not install extensions or automatically transfer to the builder. |
+| **I want access to every published plugin** | **Full MegaRepo** — shortcode `admknight` | Adds one complete plugin catalog to CloudStream. Open it and install individual extensions yourself. |
+| **I want a repository with only my picks** | **[Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/)** | Select up to 100 plugins and generate a personal `repo.json` URL. Add that catalog to CloudStream, then install the plugins you want. |
+| **I want to research plugins first** | **[Extension Explorer](https://admknight.github.io/CloudstreamExtensions/explore.html)** | Search, filter and bookmark names in your browser. The Explorer neither creates repository URLs nor installs anything. |
 
-**Adding a repository does not install its extensions automatically.** Choose and install individual plugins inside CloudStream.
+**Important: adding a repository is not the same as installing a plugin.** Full MegaRepo and the Personal Repository Builder create two different catalog choices; in either case, install individual extensions inside CloudStream. Explorer bookmarks are not transferred into the Builder.
 
-Together, these tools connect a monitored multi-source catalog to three practical choices: install the full repository, create a selected-only repository, or explore first.
+**How they connect:** upstream plugin indexes feed the guarded MegaRepo catalog. The Full MegaRepo exposes that entire catalog; the independent Personal Repository Builder generates a selected-only view; the Explorer is for browser-based research. The Builder follows published metadata for chosen plugin identities, but changing your selection requires a new link. Package reachability does not guarantee a working provider website.
 
 ### Why use this CloudStream repository?
 
