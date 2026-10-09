@@ -106,8 +106,12 @@ def compare_catalog(published, provenance, source_defs, upstream_catalogs):
         if original is None:
             issues.append({'plugin': key, 'problem': 'missing_upstream', 'sourceId': source_id})
             continue
-        differences = {field: {'published': published_entry.get(field), 'upstream': original.get(field)}
-                       for field in KEY_FIELDS if published_entry.get(field) != original.get(field)}
+        # Mirror merge_upstreams.normalize_package_url: URL-encoded spaces are not drift.
+        normalized = dict(original)
+        if isinstance(normalized.get('url'), str):
+            normalized['url'] = normalized['url'].replace(' ', '%20')
+        differences = {field: {'published': published_entry.get(field), 'upstream': normalized.get(field)}
+                       for field in KEY_FIELDS if published_entry.get(field) != normalized.get(field)}
         if differences:
             issues.append({'plugin': key, 'problem': 'stale_metadata', 'sourceId': source_id,
                            'differences': differences})
