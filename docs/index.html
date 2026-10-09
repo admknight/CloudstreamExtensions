@@ -70,14 +70,17 @@
     .route-card .btn{align-self:flex-start;font-size:.84rem;padding:9px 12px}
     .route-output{font-size:.78rem;color:#c6dcf2;padding:10px 0 13px;font-weight:650;line-height:1.4}
     .route-output code{font-size:.9em;color:#9ce7ff}
+    .companion-panel{display:flex;gap:24px;justify-content:space-between;align-items:center;border:1px solid #325875;border-radius:16px;padding:23px;background:linear-gradient(140deg,#12283a,#0c1726)}
+    .companion-main{max-width:760px}.companion-main h3{font-size:1.35rem;letter-spacing:-.025em;margin:0 0 9px}.companion-main p{color:#b0c5d8;font-size:.9rem;line-height:1.6;margin:0 0 11px}.companion-main .companion-fine{font-size:.81rem;color:#90a9c0;margin-bottom:0}
+    .companion-actions{display:flex;flex-direction:column;gap:10px;align-items:stretch;min-width:240px}.companion-actions .btn{text-align:center;font-size:.81rem;white-space:normal}
     .route-note{font-size:.82rem!important;color:#8ea6c0!important;margin:15px auto 0!important;max-width:850px!important;text-align:center}
     .install-heading{font-size:1.1rem;letter-spacing:-.015em;margin:0 0 5px}
     .install-help{font-size:.86rem!important;line-height:1.5;color:#a6bbd0!important;margin:0 0 17px!important;max-width:none!important}
     .secondary-actions{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:9px 19px;margin:25px 0 0;font-size:.84rem}
     .secondary-actions a,.secondary-actions button{font:700 .84rem system-ui,sans-serif;color:#9db6d1;background:none;border:0;padding:3px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
     .secondary-actions a:hover,.secondary-actions button:hover{color:#edf4fb}
-    @media(max-width:900px){.route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.route-card:last-child{grid-column:1/-1}.stats{grid-template-columns:repeat(2,1fr)}.health-grid{grid-template-columns:1fr}.trend-grid{grid-template-columns:1fr 1fr}.trend-grid .trend-card:last-child{grid-column:1/-1}.pipeline{grid-template-columns:repeat(3,1fr)}.pipe:nth-child(3):after{display:none}.providers{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
-    @media(max-width:620px){.route-grid{grid-template-columns:1fr}.route-card:last-child{grid-column:auto}.route-card{padding:18px}.hero{padding-top:42px}.route-card h2{font-size:1.12rem}.navlinks a:not(.home-link):not(.route-link){display:none}.hero{padding-top:58px}.hero img{width:94px;height:94px}.copyrow{flex-direction:column}.copybtn{height:40px}.trend-grid{grid-template-columns:1fr}.trend-grid .trend-card:last-child{grid-column:auto}.provider-trends{grid-template-columns:1fr}.pipeline{grid-template-columns:1fr 1fr}.pipe:nth-child(2n):after{display:none}.providers,.categories,.features{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats .stat{padding:17px}footer{flex-direction:column}}
+    @media(max-width:900px){.companion-panel{flex-direction:column;align-items:stretch}.companion-actions{flex-direction:row;flex-wrap:wrap}.route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.route-card:last-child{grid-column:1/-1}.stats{grid-template-columns:repeat(2,1fr)}.health-grid{grid-template-columns:1fr}.trend-grid{grid-template-columns:1fr 1fr}.trend-grid .trend-card:last-child{grid-column:1/-1}.pipeline{grid-template-columns:repeat(3,1fr)}.pipe:nth-child(3):after{display:none}.providers{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.companion-panel{padding:17px}.companion-actions{flex-direction:column}.route-grid{grid-template-columns:1fr}.route-card:last-child{grid-column:auto}.route-card{padding:18px}.hero{padding-top:42px}.route-card h2{font-size:1.12rem}.navlinks a:not(.home-link):not(.route-link){display:none}.hero{padding-top:58px}.hero img{width:94px;height:94px}.copyrow{flex-direction:column}.copybtn{height:40px}.trend-grid{grid-template-columns:1fr}.trend-grid .trend-card:last-child{grid-column:auto}.provider-trends{grid-template-columns:1fr}.pipeline{grid-template-columns:1fr 1fr}.pipe:nth-child(2n):after{display:none}.providers,.categories,.features{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats .stat{padding:17px}footer{flex-direction:column}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   </style>
 </head>
@@ -192,6 +195,23 @@
   <section>
     <div class="section-head"><div><p class="eyebrow">CATALOG MIX</p><h2>Categories</h2><p>Current plugin distribution across the production catalog.</p></div></div>
     <div id="categories" class="categories"></div>
+  </section>
+
+  <section id="personal-bundles">
+    <div class="section-head">
+      <div><p class="eyebrow">OFFICIAL COMPANION · SEPARATE SERVICE</p><h2>Personal Bundles</h2><p>Build a smaller repository without changing the full MegaRepo.</p></div>
+    </div>
+    <div class="companion-panel">
+      <div class="companion-main">
+        <h3>Your plugins, one personal repository link.</h3>
+        <p>Choose up to <strong>100</strong> published extensions and generate a selected-only <code>repo.json</code> link. The separate Cloudflare Worker uses MegaRepo's current published metadata for those plugin identities: no account, no repackaged plugin binaries, and no changes to the full catalog.</p>
+        <p class="companion-fine">Each link represents a fixed selection. Make a new link to change that selection; then add the repository in CloudStream and install individual plugins yourself.</p>
+      </div>
+      <div class="companion-actions">
+        <a class="btn primary" href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Launch Personal Repository Builder ↗</a>
+        <a class="btn" href="https://github.com/admknight/cloudstream-personal-bundles" target="_blank" rel="noopener noreferrer">Read independent source ↗</a>
+      </div>
+    </div>
   </section>
 
   <section id="providers">
