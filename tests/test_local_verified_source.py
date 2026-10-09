@@ -190,7 +190,7 @@ class LocalVerifiedSourceTests(unittest.TestCase):
     def test_final_16_original_source_byte_identical_pins(self):
         sources = {
             "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/"
-              "c73809693bc8406a6f8cffd98039e8278e92a95a/": 13,
+              "c73809693bc8406a6f8cffd98039e8278e92a95a/": 14,  # Includes earlier Sarangfilm
             "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/"
               "0143d69ce3ec9b7cf09f6d6216212694dc5890a0/": 1,
             "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/"
