@@ -33,16 +33,27 @@ The catalog is rebuilt from multiple published CloudStream repositories, dedupli
 
 > 🎉 **Stable milestone:** [Adam Knight Mega Repo v1.0.0](https://github.com/admknight/CloudstreamExtensions/releases/tag/v1.0.0) establishes the first production-ready baseline for the automated Mega Repo.
 
+## Three ways to use MegaRepo
+
+| Your goal | Where to go | What happens |
+| --- | --- | --- |
+| **Browse the full catalog in CloudStream** | **Full MegaRepo** — shortcode `admknight` | Add the full repository, then install whichever extensions you want individually. |
+| **Use only selected extensions** | **[Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/)** | Select up to 100 extensions and get a personal installable `repo.json` URL. Add it to CloudStream, then install the listed plugins. |
+| **Research extensions first** | **[Extension Explorer](https://admknight.github.io/CloudstreamExtensions/explore.html)** | Search, filter and bookmark extension names locally. Bookmarks do not install extensions or automatically transfer to the builder. |
+
+**Adding a repository does not install its extensions automatically.** Choose and install individual plugins inside CloudStream.
+
+This project combines multi-source aggregation, a separate personal repository builder and read-only package-integrity monitoring. It does not claim to have invented personalized CloudStream repositories.
 ### Why use this CloudStream repository?
 
 - One repository URL for hundreds of CloudStream extensions.
-- Daily automated updates from configured upstream repositories.
+- Guarded upstream metadata refresh every three hours, plus a separate hourly read-only integrity audit.
 - Duplicate/version resolution so the best reachable package is selected.
 - Package reachability checks and publication safety gates.
 - Custom provider builds with separate health monitoring.
 
 
-## 🌐 Quick installation
+## 🌐 Full MegaRepo installation
 
 ### Preferred: shortcode
 
@@ -53,6 +64,8 @@ In CloudStream go to **Settings → Extensions → Add Repository** and enter:
 ### Raw URL fallback
 
     https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/repo.json
+
+This shortcode and manifest load the **entire published catalog**, not a personal subset. For a selected-only repository, use the [Personal Repository Builder](https://adam-cloudstream-bundles.badass-insane.workers.dev/).
 
 ## 📊 Current dashboard
 
@@ -798,7 +811,8 @@ When the same plugin is published by more than one source, the highest version i
 
 ## 🤖 Automation & monitoring
 
-- Production aggregation runs every day at **00:00 UTC** and on relevant configuration changes.
+- Guarded production aggregation runs every three hours at minute **17 UTC** and on relevant configuration changes.
+- A separate read-only package integrity audit runs hourly; it compares upstream metadata and rotates direct package SHA-256 checks without modifying published manifests.
 - Custom-provider website health runs every day at **01:30 UTC** and on custom provider source changes.
 - Publication pushes retry automatically up to **3 times** before a workflow is marked failed.
 - Runtime health is advisory: a temporary provider-site outage is reported but does not remove or overwrite the last known-good production catalog.

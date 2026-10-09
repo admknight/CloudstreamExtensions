@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Extension Explorer | Adam Knight Mega Repo</title>
-  <meta name="description" content="Browse, search and bookmark entries from the published Adam Knight CloudStream Mega Repo catalog without changing the production repository.">
+  <meta name="description" content="Explore and bookmark CloudStream extensions by name, language or content type. To install only chosen plugins, build a personal repository; for everything, install MegaRepo.">
   <link rel="canonical" href="https://admknight.github.io/CloudstreamExtensions/explore.html">
   <meta name="theme-color" content="#090e17">
   <style>
@@ -56,23 +56,33 @@
     .pager span{font-size:.86rem;color:var(--muted)}
     .empty{border:1px dashed #405371;border-radius:13px;padding:28px;text-align:center;color:var(--muted);grid-column:1/-1}
     footer{border-top:1px solid var(--line);padding:26px 0 35px;color:var(--muted);font-size:.85rem}
+    .install-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0 25px}
+    .install-path{display:flex;flex-direction:column;gap:9px;padding:19px 21px;border-radius:13px;border:1px solid #2c4c6b;background:linear-gradient(140deg,#152940,#0c1b2d);text-decoration:none;color:var(--text)}
+    .install-path:hover,.install-path:focus-visible{border-color:var(--cyan);background:#1b3148}
+    .install-path strong{font-size:1.05rem;line-height:1.3}
+    .install-path span{font-size:.86rem;color:#b2c6da;line-height:1.45}
+    .install-path em{font-style:normal;font-weight:800;color:#79def4;font-size:.84rem;margin-top:auto}
     @media(max-width:870px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:1fr 1fr}.filters label:first-child{grid-column:1/-1}}
-    @media(max-width:570px){.topbar{align-items:flex-start;flex-direction:column;gap:8px;padding-top:15px;padding-bottom:15px}.navlinks{gap:12px}.cards,.filters{grid-template-columns:1fr}.filters label:first-child{grid-column:auto}.panel{padding:14px}.intro{padding-top:36px!important}.tools{align-items:flex-start;flex-direction:column}}
+    @media(max-width:570px){.install-paths{grid-template-columns:1fr}.topbar{align-items:flex-start;flex-direction:column;gap:8px;padding-top:15px;padding-bottom:15px}.navlinks{gap:12px}.cards,.filters{grid-template-columns:1fr}.filters label:first-child{grid-column:auto}.panel{padding:14px}.intro{padding-top:36px!important}.tools{align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
   <nav class="shell topbar" aria-label="Primary navigation">
     <a class="brand" href="./" aria-label="Mega Repo dashboard"><img src="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/master/assets/icon.png" alt="">Adam Knight Mega Repo</a>
-    <div class="navlinks"><a href="./">Dashboard</a><a href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Build a personal bundle ↗</a><a href="https://github.com/admknight/CloudstreamExtensions" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://admknight.github.io/">Portfolio</a></div>
+    <div class="navlinks"><a href="./">Dashboard</a><a href="./#install-full">Install full MegaRepo</a><a href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Create a personal repo ↗</a><a href="https://github.com/admknight/CloudstreamExtensions" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://admknight.github.io/">Portfolio</a></div>
   </nav>
   <main class="shell">
     <header class="intro">
       <div class="eyebrow">Browse the published catalog</div>
       <h1>Extension Explorer</h1>
-      <p>Find extensions by name, content type and language. Bookmark entries on this device to keep track of what interests you; the actual MegaRepo feed stays unchanged.</p>
+      <p><strong>Discovery only—this page does not install plugins.</strong> Search by name, language or content type, then bookmark extension names on this device. For a repository you can add to CloudStream, choose an option below.</p>
     </header>
-    <div class="notice" role="note">This is a <strong>read-only catalog viewer</strong>. Listed packages are checked by the publishing pipeline; listing does <strong>not</strong> confirm that an extension can play a particular title. Bookmarks do not install extensions or generate a personal repository. For an installable selection, use the <a href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer">Personal Bundle Builder</a>.</div>
+    <div class="notice" role="note"><strong>Bookmarks are for reference only.</strong> They stay in this browser, do not install extensions, and do not automatically transfer to the Personal Bundle Builder. Package reachability does not guarantee playback.</div>
+    <div class="install-paths" role="group" aria-label="Ways to install extensions">
+      <a class="install-path" href="https://adam-cloudstream-bundles.badass-insane.workers.dev/" target="_blank" rel="noopener noreferrer"><strong>Install only the extensions I choose</strong><span>Select up to 100 extensions and generate a CloudStream-compatible personal repository URL. Add that link in CloudStream, then install the plugins you want.</span><em>Build my personal repository ↗</em></a>
+      <a class="install-path" href="./#install-full"><strong>Access the full MegaRepo catalog</strong><span>Use the main MegaRepo shortcode in CloudStream to browse all published extensions. You still choose which plugins to install.</span><em>Get full repository shortcode →</em></a>
+    </div>
     <section class="panel" aria-label="Catalog filters">
       <div class="filters">
         <label class="field">Search extensions<input id="search" type="search" placeholder="Search name or description" autocomplete="off"></label>
@@ -100,7 +110,7 @@
     <section id="cards" class="cards" aria-label="Extension results" aria-live="polite"></section>
     <div class="pager"><button id="prev" type="button" disabled>Previous</button><span id="page-label">Page 1</span><button id="next" type="button" disabled>Next</button></div>
   </main>
-  <footer class="shell">Data: <a href="https://github.com/admknight/CloudstreamExtensions/tree/builds">published MegaRepo catalog</a> &middot; Search, filters and bookmarks work locally &middot; <a href="./">Return to the main dashboard</a></footer>
+  <footer class="shell">Data: <a href="https://github.com/admknight/CloudstreamExtensions/tree/builds">published MegaRepo catalog</a> &middot; Explorer bookmarks stay in this browser &middot; <a href="https://adam-cloudstream-bundles.badass-insane.workers.dev/">Build a personal repository</a> &middot; <a href="./#install-full">Get full MegaRepo shortcode</a></footer>
   <script>
   (() => {
     'use strict';
