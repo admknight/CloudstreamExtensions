@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Upsert managed GitHub issues for audit problems; close only on a full pass."""
+"""Upsert managed issues for audit problems; never close candidate incidents here.
+
+Only the independent guarded post-publication resolver may close individual
+verified integrity incidents. A full published audit cannot prove that an
+unpublished candidate binary has become trustworthy.
+"""
 import argparse
 import json
 import subprocess
@@ -90,12 +95,9 @@ def sync(report, runner=run):
                           "--title", title, "--body", body])
             changes.append({"key": item["key"], "action": "created", "url": url})
             managed[title] = {"title": title, "body": body, "state": "OPEN"}
-    if overview["fullVerifiedPass"]:
-        for entry in managed.values():
-            if entry.get("state") == "OPEN" and entry.get("number") is not None:
-                runner(["gh", "issue", "close", str(entry["number"]), "--repo", REPO,
-                        "--reason", "completed"])
-                changes.append({"key": entry.get("title"), "action": "closed"})
+    # Never close issues based solely on a published audit. That could
+    # incorrectly close candidate-only incidents for never-published plugins.
+    # The independently gated post-publication resolver handles closure.
     return changes
 
 
