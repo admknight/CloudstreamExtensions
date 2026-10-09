@@ -37,12 +37,37 @@ jobs:
       - uses: actions/checkout@v5
         with:
           persist-credentials: false
+      - uses: actions/checkout@v5
+        with:
+          ref: builds
+          path: baseline-builds
+          persist-credentials: false
       - name: Regression-check advisory monitor and source scoring
         run: |
           set -euo pipefail
           python3 -m py_compile tools/custom_provider_health.py tools/source_quality.py
           python3 -m unittest discover -s tests -p test_custom_provider_health_drift.py -v
           python3 -m unittest discover -s tests -p test_source_quality.py -v
+      - name: Reconcile actual published sources in a read-only scratch directory
+        run: |
+          set -euo pipefail
+          mkdir -p quality-scratch
+          python3 tools/source_quality.py \
+            --report baseline-builds/merge-report.json \
+            --provenance baseline-builds/provenance.json \
+            --history-out quality-scratch/history.json \
+            --json quality-scratch/quality.json \
+            --markdown quality-scratch/SOURCE_QUALITY.md
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          source=json.loads(Path('baseline-builds/merge-report.json').read_text())
+          report=json.loads(Path('quality-scratch/quality.json').read_text())
+          assert report['sourceCount']==len(source['sourceStatus'])
+          assert sum(x['uniqueContributed'] for x in report['sources'])==source['uniquePlugins']
+          assert all(0<=x['score']<=100 for x in report['sources'])
+          assert report['scoring']['sourceSelectionAffected'] is False
+          PY
 
   health:
     needs: tests
