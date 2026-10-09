@@ -20,9 +20,9 @@ class LocalVerifiedSourceTests(unittest.TestCase):
         cls.pins = json.loads((ROOT / "local_verified_plugins.json").read_text())
         cls.approvals = json.loads((ROOT / "trusted_binary_approvals.json").read_text())
 
-    def test_source_is_fifteen_checked_in_immutable_packages(self):
+    def test_source_is_twentyfour_checked_in_immutable_packages(self):
         items = merge.fetch_source_plugins(self.source)
-        self.assertEqual(len(items), 15)
+        self.assertEqual(len(items), 24)
         self.assertEqual({p["internalName"] for p in items},
                          set(self.source["include"]))
         self.assertEqual(self.source["priority"], 0)
@@ -55,7 +55,7 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                     "actualFileSize":trusted["fileSize"]}
         report = gate(self.pins, [], provenance, [], self.approvals, checker=check, workers=1)
         self.assertEqual(report["blockedCount"], 0)
-        self.assertEqual(report["reviewApproved"], 15)
+        self.assertEqual(report["reviewApproved"], 24)
         altered = copy.deepcopy(self.pins)
         altered[0]["fileHash"] = "sha256-" + "0"*64
         bad = gate(altered, [], provenance, [], self.approvals, checker=check, workers=1)
@@ -136,6 +136,32 @@ class LocalVerifiedSourceTests(unittest.TestCase):
                 self.assertEqual(reviews[0]["sourceId"], "local-pinned-recovery")
                 self.assertEqual(reviews[0]["fileHash"], digest)
                 self.assertEqual(reviews[0]["fileSize"], size)
+
+    def test_nine_identical_legacy_binaries_now_have_exact_original_source_pins(self):
+        expected = {
+            "AltadefinizioneProvider": ("Gian-Fr/ItalianProvider", "e34c60c1139308f2265e57631abf2576addf73b0", 1, 10734),
+            "GuardaSerieProvider": ("Gian-Fr/ItalianProvider", "e34c60c1139308f2265e57631abf2576addf73b0", 1, 10898),
+            "BingedReview": ("rockhero1234/cinephile", "9aebfedfde585c7312edb1378ac287a6a847a59e", 3, 17968),
+            "SkymoviesHD": ("rockhero1234/cinephile", "9aebfedfde585c7312edb1378ac287a6a847a59e", 1, 23971),
+            "AniyomiProvider": ("CranberrySoup/AniyomiCompatExtension", "0a539fd454179399dd34b38ef5d4d3db49ce4971", 8, 36701),
+            "MegaProvider": ("self-similarity/MegaRepo", "d8b64bab636845a89503469f1c3cb13fdc750a8a", 2, 6929),
+            "DramaDrip": ("kim20598/cloudstream-extensions-test", "3e2792be0585090691a9d3421d902c29d7736c0f", 3, 43695),
+            "IndianTVProvider": ("kim20598/cloudstream-extensions-test", "3e2792be0585090691a9d3421d902c29d7736c0f", 6, 21427),
+            "UltimaBeta": ("kim20598/cloudstream-extensions-test", "3e2792be0585090691a9d3421d902c29d7736c0f", 7, 314672),
+        }
+        for name, (repo, revision, version, length) in expected.items():
+            with self.subTest(name=name):
+                item = next(p for p in self.pins if p["internalName"] == name)
+                reviews = [a for a in self.approvals if a["plugin"] == name]
+                self.assertEqual(len(reviews), 1)
+                self.assertEqual(item["version"], version)
+                self.assertEqual(item["fileSize"], length)
+                self.assertEqual(item["url"],
+                    f"https://raw.githubusercontent.com/{repo}/{revision}/{name}.cs3")
+                self.assertEqual(item["fileHash"], reviews[0]["fileHash"])
+                self.assertEqual(reviews[0]["fileSize"], length)
+                self.assertEqual(reviews[0]["sourceId"], "local-pinned-recovery")
+        self.assertEqual(next(p for p in self.pins if p["internalName"] == "UltimaBeta")["status"], 2)
 
     def test_rejects_mutable_package_url(self):
         copied = copy.deepcopy(self.pins)

@@ -1,0 +1,61 @@
+name: Verify nine legacy original-source packages (read only)
+
+on:
+  pull_request:
+    paths:
+      - 'tools/probe_legacy_small_cohort.py'
+      - 'tests/test_probe_legacy_small_cohort.py'
+      - '.github/workflows/probe-legacy-cohort.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v5
+        with:
+          ref: builds
+          path: published-catalog
+          persist-credentials: false
+      - name: Validate strict original-source verification tests
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/probe_legacy_small_cohort.py
+          python3 -m unittest discover -s tests -p test_probe_legacy_small_cohort.py -v
+      - name: Verify exact nine original binary ZIPs and published bytes
+        run: |
+          set -euo pipefail
+          python3 tools/probe_legacy_small_cohort.py \
+            --published published-catalog/plugins.json \
+            --output legacy-cohort-original-source-evidence.json > legacy-cohort-probe-summary.log
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('legacy-cohort-original-source-evidence.json').read_text())
+          assert d['cohortSize']==9
+          assert d['releaseAuthorized'] is False
+          assert all(not p['releaseAuthorized'] and
+                     p['immutableMatchesCurrentPublishedBytes'] and
+                     p['originCommitChecked'] and p['sha256'].startswith('sha256-')
+                     for p in d['packages'])
+          print('Nine immutable upstream packages match the current published bytes.')
+          for p in d['packages']:
+              print(p['plugin'],p['version'],p['size'],p['sha256'],p['revision'])
+          PY
+      - name: Retain immutable upstream evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nine-original-source-release-evidence
+          path: |
+            legacy-cohort-original-source-evidence.json
+            legacy-cohort-probe-summary.log
+          retention-days: 30
+          if-no-files-found: warn
