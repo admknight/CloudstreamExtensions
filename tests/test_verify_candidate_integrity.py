@@ -22,7 +22,7 @@ def outcome(row, data=b"good"):
 
 def run(old, new, *, old_source="demo", new_source="demo", approvals=None, actual=b"good"):
     return module.gate(
-        [old] if old else [], [new], [{"plugin": "Demo", "sourceId": new_source}],
+        [new], [old] if old else [], [{"plugin": "Demo", "sourceId": new_source}],
         [{"plugin": "Demo", "sourceId": old_source}] if old else [], approvals or [],
         checker=lambda row: outcome(row, actual), workers=1
     )
