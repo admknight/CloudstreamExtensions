@@ -1,0 +1,45 @@
+name: Validate Guarded Integrity Recovery
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/build.yml'
+      - '.github/workflows/integrity-incidents.yml'
+      - '.github/workflows/test-integrity-recovery.yml'
+      - 'tools/verify_candidate_integrity.py'
+      - 'tools/plan_integrity_recovery.py'
+      - 'tools/sync_integrity_issues.py'
+      - 'tools/audit_package_integrity.py'
+      - 'tests/test_verify_candidate_integrity.py'
+      - 'tests/test_audit_package_integrity.py'
+      - 'trusted_binary_approvals.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Original audit and publication gate unit tests (offline)
+        run: |
+          python3 -m unittest discover -s tests -p 'test_audit_package_integrity.py' -v
+          python3 -m unittest discover -s tests -p 'test_verify_candidate_integrity.py' -v
+      - name: Python syntax checks
+        run: |
+          python3 -m py_compile tools/audit_package_integrity.py tools/verify_candidate_integrity.py tools/plan_integrity_recovery.py tools/sync_integrity_issues.py
+      - name: Validate reviewed approvals schema
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('trusted_binary_approvals.json').read_text())
+          assert isinstance(x,list)
+          print('Approvals:',len(x))
+          PY
