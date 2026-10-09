@@ -9,6 +9,8 @@ from plan_integrity_recovery import plan
 REPO = "admknight/CloudstreamExtensions"
 MARKER = "<!-- megarepo-integrity:managed -->"
 TITLE_PREFIX = "[Integrity] "
+PUBLISHED_BEGIN = "<!-- megarepo-published-audit:start -->"
+PUBLISHED_END = "<!-- megarepo-published-audit:end -->"
 
 
 def run(command):
@@ -29,6 +31,26 @@ def issue_body(row):
         + "This is NOT approval to change binaries, checksums, or metadata. "
           "Confirm the intended release or review an explicit local override."
     )
+
+
+def _update_report_preserving_manual_notes(existing, generated):
+    """Never wipe previously authored issue evidence or candidate-scan notes."""
+    if existing == generated:
+        return existing
+    report_section = (
+        PUBLISHED_BEGIN + "\n"
+        + generated.removeprefix(MARKER).strip()
+        + "\n" + PUBLISHED_END
+    )
+    start = existing.find(PUBLISHED_BEGIN)
+    stop = existing.find(PUBLISHED_END)
+    if (start == -1) != (stop == -1):
+        raise ValueError("Malformed published-audit evidence boundaries")
+    if start >= 0:
+        if stop < start or existing.find(PUBLISHED_BEGIN, start+len(PUBLISHED_BEGIN)) >= 0:
+            raise ValueError("Duplicate/misordered published-audit evidence blocks")
+        return existing[:start] + report_section + existing[stop+len(PUBLISHED_END):]
+    return existing.rstrip() + "\n\n" + report_section
 
 
 def sync(report, runner=run):
@@ -53,9 +75,12 @@ def sync(report, runner=run):
             number = str(existing["number"])
             if existing.get("state") == "CLOSED":
                 runner(["gh", "issue", "reopen", number, "--repo", REPO])
-            if existing.get("body") != body:
+            merged = _update_report_preserving_manual_notes(
+                str(existing.get("body") or ""), body
+            )
+            if merged != existing.get("body"):
                 runner(["gh", "issue", "edit", number, "--repo", REPO,
-                        "--body", body])
+                        "--body", merged])
                 action = "updated"
             else:
                 action = "reopened" if existing.get("state") == "CLOSED" else "unchanged"
