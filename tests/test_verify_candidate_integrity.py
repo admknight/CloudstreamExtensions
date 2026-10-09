@@ -52,14 +52,14 @@ class GateTests(unittest.TestCase):
 
     def test_approved_change_allowed(self):
         old = plugin()
-        new = plugin(version=2)
+        new = plugin(version=2, fileHash=outcome(plugin())["actualFileHash"])
         approval = {"plugin": "Demo", "sourceId": "demo", "url":new["url"],
                     "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"]}
         self.assertTrue(run(old, new, approvals=[approval])["passed"])
 
     def test_approval_wrong_source_blocked(self):
         old = plugin()
-        new = plugin(version=2)
+        new = plugin(version=2, fileHash=outcome(plugin())["actualFileHash"])
         approval = {"plugin": "Demo", "sourceId": "attacker", "url":new["url"],
                     "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"]}
         self.assertFalse(run(old, new, approvals=[approval])["passed"])
@@ -69,6 +69,31 @@ class GateTests(unittest.TestCase):
         old = plugin(fileHash=digest)
         new = plugin(fileHash=digest, version=2)
         self.assertTrue(run(old, new)["passed"])
+
+    def test_approval_does_not_accept_missing_published_hash(self):
+        old = plugin()
+        new = plugin(version=2)
+        approval = {"plugin": "Demo", "sourceId": "demo", "url":new["url"],
+                    "version":2, "fileSize":4, "fileHash":outcome(new)["actualFileHash"]}
+        self.assertFalse(run(old, new, approvals=[approval])["passed"])
+
+    def test_trusted_digest_does_not_transfer_between_sources(self):
+        digest = outcome(plugin())["actualFileHash"]
+        old = plugin(fileHash=digest)
+        new = plugin(fileHash=digest, version=2)
+        self.assertFalse(run(old, new, new_source="other")["passed"])
+
+    def test_trusted_digest_does_not_transfer_to_new_url(self):
+        digest = outcome(plugin())["actualFileHash"]
+        old = plugin(fileHash=digest)
+        new = plugin(fileHash=digest, version=2,
+                     url="https://raw.githubusercontent.com/other/Demo.cs3")
+        self.assertFalse(run(old, new)["passed"])
+
+    def test_missing_file_size_is_not_verification(self):
+        old = plugin()
+        del old["fileSize"]
+        self.assertFalse(run(old, old)["passed"])
 
     def test_missing_provenance_fails(self):
         with self.assertRaises(ValueError):
