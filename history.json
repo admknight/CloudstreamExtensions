@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09 22:03:11 UTC",
+  "updatedAt": "2026-10-09 22:06:27 UTC",
   "snapshots": [
     {
       "generatedAt": "2026-10-06 02:39:46 UTC",
@@ -461,6 +461,104 @@
     },
     {
       "generatedAt": "2026-10-09 22:03:11 UTC",
+      "summary": {
+        "ok": 5,
+        "restricted": 0,
+        "failed": 1,
+        "redirected": 2,
+        "hostChanged": 2,
+        "dnsErrors": 1,
+        "timeouts": 0
+      },
+      "providers": [
+        {
+          "module": "Cinedoze",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://cinedoze.tv",
+          "finalUrl": "https://cinedoze.tv",
+          "attempts": 1,
+          "error": "",
+          "outcome": "ok",
+          "redirected": false,
+          "hostChanged": false,
+          "configuredHost": "cinedoze.tv",
+          "finalHost": "cinedoze.tv"
+        },
+        {
+          "module": "Cinemaluxe",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://cinemalux.baby",
+          "finalUrl": "https://cinemalux.beauty/",
+          "attempts": 1,
+          "error": "",
+          "outcome": "ok",
+          "redirected": true,
+          "hostChanged": true,
+          "configuredHost": "cinemalux.baby",
+          "finalHost": "cinemalux.beauty"
+        },
+        {
+          "module": "CinevezProvider",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://cinevez.buzz",
+          "finalUrl": "https://cinevez.buzz",
+          "attempts": 1,
+          "error": "",
+          "outcome": "ok",
+          "redirected": false,
+          "hostChanged": false,
+          "configuredHost": "cinevez.buzz",
+          "finalHost": "cinevez.buzz"
+        },
+        {
+          "module": "Full4Movies",
+          "state": "fail",
+          "httpStatus": null,
+          "configuredUrl": "https://fullmoviesmx.com",
+          "finalUrl": "https://fullmoviesmx.com",
+          "attempts": 3,
+          "error": "[Errno -2] Name or service not known",
+          "outcome": "dns_error",
+          "redirected": false,
+          "hostChanged": false,
+          "configuredHost": "fullmoviesmx.com",
+          "finalHost": "fullmoviesmx.com"
+        },
+        {
+          "module": "India4Movies",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://go3.india4movies.net",
+          "finalUrl": "https://go6.india4movies.net/",
+          "attempts": 1,
+          "error": "",
+          "outcome": "ok",
+          "redirected": true,
+          "hostChanged": true,
+          "configuredHost": "go3.india4movies.net",
+          "finalHost": "go6.india4movies.net"
+        },
+        {
+          "module": "World4uFree",
+          "state": "ok",
+          "httpStatus": 200,
+          "configuredUrl": "https://worldfree4u.blog",
+          "finalUrl": "https://worldfree4u.blog",
+          "attempts": 1,
+          "error": "",
+          "outcome": "ok",
+          "redirected": false,
+          "hostChanged": false,
+          "configuredHost": "worldfree4u.blog",
+          "finalHost": "worldfree4u.blog"
+        }
+      ]
+    },
+    {
+      "generatedAt": "2026-10-09 22:06:27 UTC",
       "summary": {
         "ok": 5,
         "restricted": 0,
