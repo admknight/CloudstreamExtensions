@@ -71,6 +71,35 @@ class PostPublishTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"not a complete"):
             validate_post_publish(*data)
 
+    def test_prior_pinned_source_drift_is_expected_but_not_declared_resolved(self):
+        audit,r,plugins,p=sample()
+        r["deferredUnverified"]=[]
+        r["integrityHealth"]["unverifiedPreviousCarried"]=0
+        r["quarantineIncidents"]=[{
+            "plugin":"One","disposition":"retained_immutable_previous",
+            "fallbackVerified":True,"fallbackPin":"https://raw.githubusercontent.com/x/y/"+("a"*40)+"/One.cs3",
+        }]
+        audit["metadataDrift"]=[{"plugin":"One","reason":"commit-pinned previous bytes"}]
+        audit["packageProblems"]=[]
+        audit["pass"]=False
+        result=validate_post_publish(audit,r,plugins,p)
+        self.assertEqual(result["knownAuditAnomalyCount"],1)
+        self.assertFalse(result["upstreamProblemsFullyResolved"])
+
+    def test_corrupt_prior_pinned_package_remains_unexpected(self):
+        audit,r,plugins,p=sample()
+        r["deferredUnverified"]=[]
+        r["integrityHealth"]["unverifiedPreviousCarried"]=0
+        r["quarantineIncidents"]=[{
+            "plugin":"One","disposition":"retained_immutable_previous",
+            "fallbackVerified":True
+        }]
+        audit["metadataDrift"]=[]
+        audit["packageProblems"]=[{"plugin":"One","status":"mismatch"}]
+        audit["pass"]=False
+        with self.assertRaisesRegex(ValueError,"Unexpected integrity"):
+            validate_post_publish(audit,r,plugins,p)
+
     def test_no_known_exceptions_with_full_pass(self):
         audit,r,plugins,p=sample()
         r["deferredUnverified"]=[]
