@@ -206,7 +206,9 @@
         <p class="observer-meta">Index uptime, package contribution and unique plugin signals. Scores never change selection priority.</p>
         <p id="source-quality-summary" class="health-meta">Loading source-quality evidence…</p>
         <div class="observer-list" id="source-quality-list"></div>
+        <p class="observer-meta" id="legacy-integrity-summary" style="margin-top:12px">Checking legacy checksum coverage…</p>
         <a class="observer-link" href="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/health-history/SOURCE_QUALITY.md" target="_blank" rel="noopener noreferrer">View all sources and scoring method ↗</a>
+        <a class="observer-link" href="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/health-history/LEGACY_CHECKSUM_INVENTORY.md" target="_blank" rel="noopener noreferrer" style="margin-left:12px">Legacy checksum remediation inventory ↗</a>
       </div>
     </div>
 </section>
@@ -273,6 +275,7 @@ const RELEASE="https://api.github.com/repos/admknight/CloudstreamExtensions/rele
 const HEALTH_TRENDS="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/health-history/trends.json";
 const HEALTH_LATEST="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/health-history/latest.json";
 const SOURCE_QUALITY="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/health-history/source-quality.json";
+const LEGACY_INVENTORY="https://raw.githubusercontent.com/admknight/CloudstreamExtensions/health-history/legacy-checksum-inventory.json";
 const $=id=>document.getElementById(id);
 
 function animateNumber(el,target){
@@ -360,6 +363,13 @@ async function loadDomainDrift(){
     if(!drift.length)addObservation("domain-drift-list","No hostname changes","Latest check");
   }catch(err){$("domain-drift-summary").textContent="Domain observations currently unavailable";}
 }
+async function loadLegacyIntegrity(){
+  try{
+    const response=await fetch(LEGACY_INVENTORY,{cache:"no-store"});if(!response.ok)throw Error(response.status);
+    const data=await response.json();if(data.readOnly!==true||data.releaseAuthorized!==false)throw Error("invalid integrity report");
+    $("legacy-integrity-summary").textContent=data.legacyWithoutSha256Count+" legacy entries awaiting authenticated SHA-256 · "+data.affectedSourceCount+" upstream sources. Existing plugins remain available.";
+  }catch(err){$("legacy-integrity-summary").textContent="Legacy checksum inventory not yet published."}
+}
 async function loadSourceQuality(){
   try{
     const response=await fetch(SOURCE_QUALITY,{cache:"no-store"});if(!response.ok)throw Error(response.status);
@@ -388,7 +398,7 @@ function setupBackToTop() {
 }
 
 setupBackToTop();
-reveal();loadReport();loadCustom();loadRelease();loadHealthTrends();loadDomainDrift();loadSourceQuality();
+reveal();loadReport();loadCustom();loadRelease();loadHealthTrends();loadDomainDrift();loadSourceQuality();loadLegacyIntegrity();
 </script>
 </body>
 </html>
