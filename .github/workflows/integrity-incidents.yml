@@ -1,0 +1,52 @@
+name: Track published integrity incidents
+
+on:
+  workflow_run:
+    workflows: ["Audit Published Plugin Integrity"]
+    types: [completed]
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Completed integrity audit workflow run ID"
+        required: true
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+
+concurrency:
+  group: integrity-incidents
+  cancel-in-progress: false
+
+jobs:
+  incidents:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.head_repository.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout trusted master scripts
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          persist-credentials: false
+      - name: Download original audit evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
+        run: |
+          set -euo pipefail
+          case "$RUN_ID" in *[!0-9]*|'') echo "Invalid run ID"; exit 1;; esac
+          gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" --pattern "plugin-integrity-audit-*" --dir evidence
+          test -s evidence/audit-report.json || test -s evidence/*/audit-report.json
+          find evidence -type f -name audit-report.json -print
+      - name: Record unresolved incidents without modifying manifests
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          report="$(find evidence -type f -name audit-report.json | head -n 1)"
+          test -n "$report"
+          python3 tools/sync_integrity_issues.py --audit "$report"
