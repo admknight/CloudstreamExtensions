@@ -174,7 +174,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Indian MultiLanguage Provider (Mostly Hindi)",
-    "fileSize": 93779,
+    "fileSize": 85656,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -184,7 +184,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/AllMovieLandProvider/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-6c00a5dd4e4ff5cdc145b02ddf14f653684cebd519c4da434f8239f0578fa73f"
+    "fileHash": "sha256-56c09291727013839766484daf75c98ad1b1ac0dcb5be051ab0e1072d93f7e7b"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/AllPornStream.cs3",
@@ -216,7 +216,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime from all-wish.me",
-    "fileSize": 81172,
+    "fileSize": 72022,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -224,7 +224,7 @@
     ],
     "iconUrl": "https://all-wish.me/assets/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-a4a2e19be8d968c1e92faa29a0415748b89c7f8cc2959e56f2697c2e2fe15a78"
+    "fileHash": "sha256-582665d1ba51e08b2892ade026d650c42eb5189f0b333d50146abda945a33a11"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Alooytv.cs3",
@@ -317,7 +317,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "AllManga/Mkissa Source",
-    "fileSize": 217752,
+    "fileSize": 209450,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -327,14 +327,14 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Allanime.png",
     "apiVersion": 1,
-    "fileHash": "sha256-9c78677c3c3db7b6054054f268208f5a85e3a1e95cd1b7c6a892db583a01f44f"
+    "fileHash": "sha256-cbfe4ab0f86ed7bf078d1d00239c7c427c14fa452d582305de2eb232e18a8ec2"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=https://anichin.cafe&sz=%size%",
-    "fileHash": "sha256-981e00e01ac0f40fe7e40802d289bdc889af285086b6f385db3e03b1c697eee0",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://anichin.moe&sz=%size%",
+    "fileHash": "sha256-0c8b647ffb002955cd8c25ff83b9bdcf205fa12abfc9e0d5935eeb4c88087eb8",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 22893,
+    "fileSize": 29302,
     "status": 1,
     "language": "id",
     "authors": [
@@ -380,7 +380,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 68079,
+    "fileSize": 59534,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -390,7 +390,7 @@
     ],
     "iconUrl": "https://a.favicon.im/anikage.cc?larger=true",
     "apiVersion": 1,
-    "fileHash": "sha256-2620e8e95a04fc88bf91fafe17620e8585c33e909000fc343e3c78707329d15b"
+    "fileHash": "sha256-315b7a930b459730e4472eb44317b432098bb790c18591a4d551ee3c8fe3ae8b"
   },
   {
     "iconUrl": "https://anikototv.to/AnikotoTheme/assets/images/favicon.png",
@@ -445,7 +445,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anilight Anime Provider",
-    "fileSize": 104600,
+    "fileSize": 95201,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -455,7 +455,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/anilight.png",
     "apiVersion": 1,
-    "fileHash": "sha256-4f0abfad4b0c199beced3e8fdec0904c222eea89fbd2a1587ec28cf3f696c498"
+    "fileHash": "sha256-9fb3e66795760dc6731816c9f65d5ba89ce56710b4422dfafbdde8556359778b"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Anim3rb.cs3",
@@ -570,7 +570,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "(Mexican) Anime Extension",
-    "fileSize": 55724,
+    "fileSize": 46544,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -580,7 +580,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/animeav1.png",
     "apiVersion": 1,
-    "fileHash": "sha256-e223fc7d5c9aaee41caba36b2960ddcb448d06c84edd9063b3ac4384b33ce8e9"
+    "fileHash": "sha256-65b413a5ea3e8fc38f2404bfdbd82279571b3e3d19220401fb00803763d9adc7"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AnimeAV1Provider.cs3",
@@ -631,7 +631,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "German (Lang) Anime",
-    "fileSize": 72516,
+    "fileSize": 63836,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
@@ -639,7 +639,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/AnimeCloud.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-7413acb3d0a9d0d1c6cf3d2a4d96af5e3f1152e9ebe5b1716e7e21ae3a94b075"
+    "fileHash": "sha256-6e786f60e2013d419a24340bba10f001fbbf7d003dc14e20e0384d828e0d923f"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/AnimeDekhoProvider.cs3",
@@ -651,7 +651,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Includes AnimeDekho,OnePace(DUB,SUB) and HindiSubAnime",
-    "fileSize": 124248,
+    "fileSize": 116521,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -661,7 +661,7 @@
     ],
     "iconUrl": "https://animedekho.app/wp-content/uploads/2023/07/AnimeDekho-Logo-300x-1.png",
     "apiVersion": 1,
-    "fileHash": "sha256-e49637fc986ead0a8d370600da41e659d6f602267c5f3d6b55db41f1015af7c3"
+    "fileHash": "sha256-d6951b87ae180bcb0ce5ab7a5459cc8f84c55a54fc23dcd332188cd34b4da3b3"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animedubhindi.cs3",
@@ -673,7 +673,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime in Multi Lang",
-    "fileSize": 94827,
+    "fileSize": 86532,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -683,7 +683,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=animedubhindi.cc&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-2ee81ff81396abd8a1eef58464ba5964e13dfe714fff9ee8bbc8a007c21fb2f5"
+    "fileHash": "sha256-6de8eba6875e3ed914c94d8acafe787c3a80bd7575724d10d664734736e9baab"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AnimeflvProvider.cs3",
@@ -837,7 +837,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime and Movies includes (Donghuaword)",
-    "fileSize": 59887,
+    "fileSize": 50973,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "zh",
     "tvTypes": [
@@ -846,7 +846,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=animekhor.org&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-55e5ca90efb1b9f971ab2fcbdbb009e62c532bf396fd320d22defdbc4c0cd111"
+    "fileHash": "sha256-d20d1c07572becbabf50c9878d2f7745cdbebd63428fc67c17fa0567767fb75d"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Animenosub.cs3",
@@ -858,7 +858,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime and Movies",
-    "fileSize": 55251,
+    "fileSize": 46247,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -868,7 +868,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=animenosub.to&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-58ec33d5c9bfa56dad12b425f5dfac8092939de0c6087e6f14c8c92d66f0708e"
+    "fileHash": "sha256-edc573cc978f8e444080f51e39df9809c486d50e73b60ddf2d5a844d03a2e33a"
   },
   {
     "iconUrl": "https://animeon.club/assets/images/short-logo.png",
@@ -902,7 +902,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Animes (SUB/DUB)",
-    "fileSize": 156365,
+    "fileSize": 147638,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -912,7 +912,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/animepahe.png",
     "apiVersion": 1,
-    "fileHash": "sha256-5fbe7e1e58d037489c4f3ae76b5357dd3ac23109014b8cbba73b8d11abb9379e"
+    "fileHash": "sha256-e75df679c76d2c3023999ffbe523029f19a4b85b6c22efafe88d1d44d7618d8f"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Animerco.cs3",
@@ -966,7 +966,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime/Cartoon in Hindi",
-    "fileSize": 85242,
+    "fileSize": 76625,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -976,7 +976,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=animesalt.ac&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-c12b78bb8285c24f0f7d49fcb6b0a7e375cf50bfe2589f88c7a40f282e2a3501"
+    "fileHash": "sha256-2afc2c603218948542b07abafa1181ec535aaae93def44c875e4d141e247bf48"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/AnimeSaturn.cs3",
@@ -1177,7 +1177,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime and Movies",
-    "fileSize": 90116,
+    "fileSize": 80680,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -1187,7 +1187,7 @@
     ],
     "iconUrl": "https://a.favicon.im/animexin.dev?larger=true",
     "apiVersion": 1,
-    "fileHash": "sha256-ba86ce27ed862ffa0c6d090c68c36dd2cbe9b50bb56e17d2dbca903268f2b047"
+    "fileHash": "sha256-9a20bf9934c5043c683ae33abc4362530ea97aaeb105eb9c5baa720c480aefbc"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeYTX.cs3",
@@ -1263,7 +1263,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "AniSnatch - Watch Anime Online Free",
-    "fileSize": 128726,
+    "fileSize": 119210,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -1273,7 +1273,7 @@
     ],
     "iconUrl": "https://a.favicon.im/anisnatch.to?larger=true",
     "apiVersion": 1,
-    "fileHash": "sha256-f8a1555830d14025d1daffccb3174fabeb53aab30ad71d049e0ea0cc2d384286"
+    "fileHash": "sha256-ef1de48edb6be0cdfa1d53cd1ece08b5280521cb13a93aa6a7a3ca9fc2d65e3e"
   },
   {
     "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/AniStream.cs3",
@@ -1349,7 +1349,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "AniVortex — Anime, movies & TV series streaming",
-    "fileSize": 147736,
+    "fileSize": 139411,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -1361,7 +1361,7 @@
     ],
     "iconUrl": "https://anivortex.in/images/anivortex_logo_transparent.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-550e53b0a03a52992a14138ff766c96f585bfb63caad3af81d12eb82cf053abe"
+    "fileHash": "sha256-84d82b36148b10edbd4db5f7996e324efa2f1edaa7ad3aebd383fa6d2bbe3e8e"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniWaves.cs3",
@@ -1395,7 +1395,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Include: Serienstream (Login Required under Extension Settings)",
-    "fileSize": 97626,
+    "fileSize": 88724,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
@@ -1405,7 +1405,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=aniworld.to&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-47cea9591d8cf0d579971cdc11bfea2b86f5ebf3e5d2cce41a37c6f45d4a2fed"
+    "fileHash": "sha256-7f98b5612723cc748742fbad182e49eab4d6eff342068856fbcb5efd061272e4"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=aniyomi.org&sz=%size%",
@@ -1435,7 +1435,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anizone.to streams latest anime content in multiple language.",
-    "fileSize": 67947,
+    "fileSize": 59462,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -1443,7 +1443,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/anizone.png",
     "apiVersion": 1,
-    "fileHash": "sha256-8367c7b9d1a1dce0afacdc2ac7c0bf49ec2a4173f9a861344a5cd34d3c1f9d17"
+    "fileHash": "sha256-2d7e4c5ab4bcbd25665d9eb2951ba8cb7352ebb985f6d9d047030fcd99dd9a09"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/AreaDocumentalProvider.cs3",
@@ -1574,7 +1574,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "BanglaPlex",
-    "fileSize": 58013,
+    "fileSize": 48944,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "bn",
     "tvTypes": [
@@ -1583,7 +1583,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=banglaplex.click&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-837ca8ef1a027022b96c20c3b90beaebfa80c7a6aa098a14ebdd1a4510b863a1"
+    "fileHash": "sha256-9689b64e27838b0d54322ad490f3bdc2d32b407a29365208ca9d8724b4f03096"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/BasketballReplays.cs3",
@@ -2215,7 +2215,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "English anime and donghua from chikianimation.com",
-    "fileSize": 88966,
+    "fileSize": 80935,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "zh",
     "tvTypes": [
@@ -2224,7 +2224,7 @@
     ],
     "iconUrl": "https://chikianimation.com/wp-content/uploads/2026/03/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-804cc9611625cecbbd1b6537ffc80c794b0d4e3d8cd20d58a88fa5ead712c9a6"
+    "fileHash": "sha256-5b4ebdf2f3c0e7555291ad0a97bc8c2b5fdf820494cb1f65d57e7cf28a0541b8"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cikava-ideya.top&sz=%size%",
@@ -2365,7 +2365,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Bangla/Hindi Movies/Series",
-    "fileSize": 137264,
+    "fileSize": 128468,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "bn",
     "tvTypes": [
@@ -2375,7 +2375,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/cinefreak.png",
     "apiVersion": 1,
-    "fileHash": "sha256-3891e7a9da9273805e4636f15479cb61db39450964951431cef8e1dd865fc074"
+    "fileHash": "sha256-139ace8b702d215dd6085ccb082f774ac3cf6d99fb0420c286998ab8431f8df3"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CineHdPlusProvider.cs3",
@@ -2407,7 +2407,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Watch Movies & TvSeries (Multi-Lang/Audio)",
-    "fileSize": 141574,
+    "fileSize": 132994,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -2416,7 +2416,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=cinemacity.cc&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-40960393f5116c1f904b560bb4f8d62ad69a4f09c3738d83b358844399431740"
+    "fileHash": "sha256-85eba82129c16aeff00946989bdb45f64fc4e66448fb74da33f2474494facf06"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cinemalux.baby&sz=%size%",
@@ -2623,7 +2623,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies,Series and Anime French Extension",
-    "fileSize": 64592,
+    "fileSize": 56050,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "fr",
     "tvTypes": [
@@ -2632,7 +2632,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Coflix.png",
     "apiVersion": 1,
-    "fileHash": "sha256-c71d9626146100b1e6285c5c3ae6f05634684f082fd677cb2d1cf0237ca07e28"
+    "fileHash": "sha256-1b42daab2b448e389abcfa83701e764da94fa4051970b54d811e8677906669aa"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Comix.cs3",
@@ -2644,7 +2644,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Comix — Read Manga, Manhwa, and Comics directly in CloudStream with custom reader.",
-    "fileSize": 73192,
+    "fileSize": 64269,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -2653,7 +2653,7 @@
     ],
     "iconUrl": "https://comix.to/assets/uploads/35595e3de3c99889c1bd2c56f3e3714fc0c457.png",
     "apiVersion": 1,
-    "fileHash": "sha256-fa93a53fafea1ce64801f26b8f22977d9028a39adee2291a9758a5d6d3138384"
+    "fileHash": "sha256-776aa9994e55a3d17f6ca552a4358d442ae8f3649ea38070e0237b3f18a1bc92"
   },
   {
     "name": "[Games] Contra",
@@ -2866,7 +2866,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Contains BollyZone",
-    "fileSize": 80437,
+    "fileSize": 71186,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -2875,7 +2875,7 @@
     ],
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://desicinemas.to&size=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-2f467c8ad7e8375c97b0b0a2db389fa6a030ceb70e8684c4b25a1f82b0cf82f3"
+    "fileHash": "sha256-af11ff05f1d3691b0a3271bd91041b47fab5bb36bec2ee961c10c7b4f88615d7"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=desi-serials.to&sz=%size%",
@@ -3164,7 +3164,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Contains SeaTV (Chinese)",
-    "fileSize": 77320,
+    "fileSize": 68351,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "zh",
     "tvTypes": [
@@ -3172,14 +3172,14 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Kohi-den/extensions-source/927f9c68fd64ce52f6212ae633d0f0585eca3545/src/en/donghuastream/res/mipmap-xxxhdpi/ic_launcher.png",
     "apiVersion": 1,
-    "fileHash": "sha256-e0b74a4fcb8f937f652c51792d788c0d25239dbd71818bcbc3a1ff97e3dd3fb9"
+    "fileHash": "sha256-f8b8bc3553bd6df303d20b332e196a70dadb6349614fd051ce419bbfb5960dfe"
   },
   {
-    "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghub.vip&sz=%size%",
-    "fileHash": "sha256-11f223106e969f5164c493d1a08e7687c04b2ee6ecd65d8232d5445d2585ae19",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://donghive.vip&sz=%size%",
+    "fileHash": "sha256-84df070e5262d84a4ff16c2b725f6c9eab5de8926abea41d9db6137df2b1fd89",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 23018,
+    "fileSize": 22452,
     "status": 1,
     "language": "id",
     "authors": [
@@ -3189,7 +3189,7 @@
       "Anime",
       "AnimeMovie"
     ],
-    "version": 1,
+    "version": 2,
     "internalName": "Donghub",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Donghub.cs3",
     "name": "[Asian] Donghub"
@@ -3223,7 +3223,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Doremon Show in Hindi",
-    "fileSize": 129417,
+    "fileSize": 121620,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -3233,7 +3233,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=dorabash.in&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-9dd66d1e2737bd584fd80e9f8559a4e64fcae533d57ca104132ad1741a48c82f"
+    "fileHash": "sha256-6e6531f49f915351d783105feff5022e61513524ca94362d556a1f622bbef86b"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DoramasFlixProvider.cs3",
@@ -3390,7 +3390,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Watch Movies & TvSeries (Multi-Lang)",
-    "fileSize": 111693,
+    "fileSize": 102719,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -3399,7 +3399,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/dudefilms.png",
     "apiVersion": 1,
-    "fileHash": "sha256-c94f021abfeaf9959c6ad52f6b67dce50b8eacce9940e4eedbf31c80f6c9490d"
+    "fileHash": "sha256-0faf7002c7be58a406a6d3d7d826389ee64d24e987bc8ae21496d15edae34019"
   },
   {
     "iconUrl": "https://i.ibb.co.com/SwTXWck9/dutamovie.png",
@@ -3661,7 +3661,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 81015,
+    "fileSize": 71649,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "bn",
     "tvTypes": [
@@ -3670,7 +3670,7 @@
     ],
     "iconUrl": "https://f.pondit.xyz/fibwatch-logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-b87e0b4de7d6de7a7369e0fe7608d0c9e047508479a7e8ff81d6030e02c4d1a0"
+    "fileHash": "sha256-8a1b15507948ddb31f8049a90331934596ddb0d7df5ae1f2d388c3e42fc9a242"
   },
   {
     "iconUrl": "https://filmapik.dev/wp-content/uploads/2026/06/cropped-apple-icon-180x180-1-1-270x270.webp",
@@ -3824,7 +3824,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies & Series",
-    "fileSize": 49407,
+    "fileSize": 40344,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -3833,7 +3833,7 @@
     ],
     "iconUrl": "https://i.ibb.co/SwQRhsn/20241016-074942.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-02be6c7fc460e28d870af47cc7b26ed85ce29a592593ccac4bd1d3dd1bf9820c"
+    "fileHash": "sha256-d7f2cd9f457e9446487fff9f876f5545925ded2997f25f1bdf6f302dfc2266d2"
   },
   {
     "name": "[Games] FlappyBird",
@@ -3924,7 +3924,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "4K Movies Extension by HDHUB4U",
-    "fileSize": 108246,
+    "fileSize": 99054,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -3933,7 +3933,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/4KHDHUB-Bright-Logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-290596eebcb937c73adcfdc71e8cbf041a6108fc36b4d0889a6544a41c968562"
+    "fileHash": "sha256-8b6b1189b27ef61b4d2e6ee87af446980ad0d43f386294dc9ecd44a360bab9ed"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/FreePornVideos.cs3",
@@ -4231,7 +4231,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "GoldenAudiobooks — Free online audiobooks streaming with chapter navigation.",
-    "fileSize": 51394,
+    "fileSize": 42325,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -4239,7 +4239,7 @@
     ],
     "iconUrl": "https://a.favicon.im/goldenaudiobooks.com?larger=true",
     "apiVersion": 1,
-    "fileHash": "sha256-4fce3ff7c0199a699128a6af25f9dc37b830a8f15d5f6860e7fbbf20d3205104"
+    "fileHash": "sha256-d96318a20371368b224e10ed09401e230a03e9a361304b564c8a2dac0c9687e4"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Goojara.cs3",
@@ -4251,7 +4251,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies and Series (Mostly 720p)",
-    "fileSize": 79774,
+    "fileSize": 70554,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -4260,7 +4260,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=goojara.to/&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-0ac9bb5824342a13e070a2181682b0574b3d00b7fe885255703605d35ab2c1cd"
+    "fileHash": "sha256-cd810bbcc18364bc64b76bb701ef60ccbbceb3c8272c241b4fa93270b454bbb6"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/GoTaku.cs3",
@@ -4472,7 +4472,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 123618,
+    "fileSize": 115559,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -4482,7 +4482,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/HDHUB.png",
     "apiVersion": 1,
-    "fileHash": "sha256-510a3e2abcb29f791ca53adfea38de37e2633747dc0181b2500e3587e0329ac5"
+    "fileHash": "sha256-a572744692fb558723f03f19229851171a29de67d2cc30523588d6697bd61d67"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hdmovie2.cs3",
@@ -4494,7 +4494,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Hdmovie2",
-    "fileSize": 81538,
+    "fileSize": 72366,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -4503,7 +4503,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/hdmovie2.png",
     "apiVersion": 1,
-    "fileHash": "sha256-733959f5291b703f8849bc5fcca7270640688cd94dac8e903da659f95bc6fdb7"
+    "fileHash": "sha256-70c68aad64607056d038c552ad030f773d85691b1b556969682578d5ca13a5e3"
   },
   {
     "iconUrl": "https://images.dwncdn.net/images/t_app-icon-l/p/b0c9663c-0d61-4941-b12f-91c58c06189f/1137087733/hdo-box-logo",
@@ -4672,7 +4672,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 95036,
+    "fileSize": 87170,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -4681,7 +4681,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=hianime.at&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-ad8b161b94a03ae2e23d96d5b3990e571cf192562f732ea2f0a06254f2343ccc"
+    "fileHash": "sha256-b730ca47c324e5f00cbb8e80b139265ccd09cc403001af9ad05b925590a71f20"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Hindmoviez.cs3",
@@ -4693,7 +4693,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Watch Movies & TvSeries (Multi-Lang)",
-    "fileSize": 94316,
+    "fileSize": 86337,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -4702,7 +4702,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/hindmoviez.png",
     "apiVersion": 1,
-    "fileHash": "sha256-3ad7643cf8aac1213afdd1b8344755e60bd2d0637a685b1cd1023840a66bc139"
+    "fileHash": "sha256-c0deea4628535dccc69bd76581a5964c4ce3e3722bfa3322f0962b9d956de374"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=hqporner.com&sz=%size%",
@@ -4764,10 +4764,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://sweetiepieparenting.com&sz=%size%",
-    "fileHash": "sha256-ecb22e19b3ab9f4ff093569eef3564d17022496ef26fd797466ae41898b17a7d",
+    "fileHash": "sha256-b7912591a5ca36c53c1dc6662994217af2fe40462df6e6151838f33657738a32",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 30725,
+    "fileSize": 33851,
     "status": 1,
     "language": "id",
     "authors": [
@@ -4777,7 +4777,7 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 2,
+    "version": 3,
     "internalName": "Idlix",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Idlix.cs3",
     "name": "[Asian] Idlix"
@@ -4791,7 +4791,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 100702,
+    "fileSize": 91833,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
@@ -4802,7 +4802,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/idlix.png",
     "apiVersion": 1,
-    "fileHash": "sha256-251b2d36d75eced50edab09e8fabaa683ed740a1ccf15de97ad8776e5a84f8fc"
+    "fileHash": "sha256-7be3bb7e314266799b5b2ae816331b9afc3874c43042f46de2237f9615cfeb13"
   },
   {
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ifsalog4.club/&size=128",
@@ -5042,7 +5042,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "IPTV Player",
-    "fileSize": 56200,
+    "fileSize": 46985,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -5050,7 +5050,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/IPTV.png",
     "apiVersion": 1,
-    "fileHash": "sha256-4280084e15d3beee2ffc8c7d41767b98a2cbac64cefb75c52e61d0b86b49f976"
+    "fileHash": "sha256-280fd2371c6cffc81677530d2a24106b1704a36eb693e6c51558502c14a46c87"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/IStreamFlare.cs3",
@@ -5062,7 +5062,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies/Series/Anime",
-    "fileSize": 94119,
+    "fileSize": 86405,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -5075,7 +5075,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/streamflare.png",
     "apiVersion": 1,
-    "fileHash": "sha256-3d4aab22419d6a6f18d5b64d1f197ebc95898c3923909cc8a08546e51e0c3d6d"
+    "fileHash": "sha256-e57d9ace081b9c34a2890c79fdb5c2a96169eabdc66350f8cd1d8a354eae9023"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Iwatchtheoffice.cs3",
@@ -5305,7 +5305,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media",
-    "fileSize": 107552,
+    "fileSize": 99016,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5318,7 +5318,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/jellyfin.png",
     "apiVersion": 1,
-    "fileHash": "sha256-34fe94f75d2e2570e16579b389d5def345ef9094fafc62a10c60afd3b2d9bce2"
+    "fileHash": "sha256-02ff79a5f4d6cbe21b0156883366243ebc13f2abc64b8ce28d3e1536d8213bd7"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://jetfilmizle.de&sz=%size%",
@@ -5429,7 +5429,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Kartoons (Cartoon & Animes)",
-    "fileSize": 123815,
+    "fileSize": 114376,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -5439,7 +5439,7 @@
     ],
     "iconUrl": "https://kartoons.me/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-c3295a0e990643db1050243cf8765ab4579fa9d5bc78b300a9029e55df0801b6"
+    "fileHash": "sha256-51fa46db14eeccb4713d461666c391c6498806ebd5d1d0bde199a45f73054d78"
   },
   {
     "iconUrl": "https://i.ibb.co.com/KjQdk4YC/kawanfilm.png",
@@ -5492,7 +5492,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 94897,
+    "fileSize": 87160,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5502,7 +5502,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/KAA.png",
     "apiVersion": 1,
-    "fileHash": "sha256-685b97225e5fcd7e540ea25ea84c8127169b3e9aac297d906a7f413ad7f70fc3"
+    "fileHash": "sha256-9363cbd0b28c6cd167e6a6d070fc6af04df38eeb45aea31d79c37e332e0b05ed"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kinostrain.com&sz=%size%",
@@ -5601,7 +5601,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 75658,
+    "fileSize": 66703,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5612,7 +5612,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=kisskh.co&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-9b5aa850ea4edec12f05a1352de584d4e0395dc6143497179aace3892a011024"
+    "fileHash": "sha256-b53a58d6ded3ef1212a7e5cdf51edf6d7b118549c6b245d744d6c4c376133a3f"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kkphim.vip&sz=%size%",
@@ -5931,7 +5931,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 88866,
+    "fileSize": 80706,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
@@ -5941,7 +5941,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=d21.team&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-ba1ffa0a67425b4e5dadafa68c417f4edbc38abd7c2686da498d788ed6058d6d"
+    "fileHash": "sha256-70ba09de80a560de8b19840a9feb2298119127b9a866420dc99f7814cebd4487"
   },
   {
     "iconUrl": "https://i.ibb.co.com/6RGz8QkY/layarwarna.png",
@@ -6066,6 +6066,25 @@
     "name": "[Live] LivXowProvider"
   },
   {
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://tv12.lk21official.cc&sz=%size%",
+    "fileHash": "sha256-76ccb45202cd9c7c91c97a6827a041272aee4a28aa5606ba86d4d2c00579a557",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 18810,
+    "status": 1,
+    "language": "id",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "tvTypes": [
+      "Movie"
+    ],
+    "version": 1,
+    "internalName": "LK21",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
+    "name": "[Asian] LK21"
+  },
+  {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Lodynet.cs3",
     "status": 1,
     "version": 2,
@@ -6154,7 +6173,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Indian Multi-language Music Provider",
-    "fileSize": 53696,
+    "fileSize": 44471,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ta",
     "tvTypes": [
@@ -6163,7 +6182,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/MassTamilanProvider/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-9974978bb00ae7f35c3d7128470b56c8bfbaba21b77656b61dc51e3452f17aae"
+    "fileHash": "sha256-4edcd68bd5ea2fdb905f97299e5b5944d82d28b6476e3cafb73a9f8abe6bd61e"
   },
   {
     "name": "[Games] MedalOfHonor",
@@ -6194,7 +6213,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies,Series and Anime German Extension",
-    "fileSize": 56271,
+    "fileSize": 47037,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
@@ -6202,7 +6221,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Megakino.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-c53434277b49099a920f9043e2715fa811d15c257a1aea75ee62e0e466f3313c"
+    "fileHash": "sha256-4f9d894818d6006ec87fdfd255613c2aa013c38586c14fce0fa86627cfc8ce43"
   },
   {
     "apiVersion": 1,
@@ -6248,7 +6267,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Watch short vertical dramas & reels from multiple Indian short platforms",
-    "fileSize": 74331,
+    "fileSize": 65378,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -6257,7 +6276,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/MicroTV.png",
     "apiVersion": 1,
-    "fileHash": "sha256-fb1336ff7dca9a23f002a4b2da650499aa487d146da44e137ab4ce0ab772431a"
+    "fileHash": "sha256-566d9d7ab87f62ddc944d6fbf52ed38410434dbf39446dca6a81a9ca5db2d0dd"
   },
   {
     "iconUrl": "https://midasxxi.com/wp-content/uploads/2024/01/cropped-favicon.png",
@@ -6499,7 +6518,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies4u",
-    "fileSize": 131808,
+    "fileSize": 122194,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -6508,7 +6527,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/movies4u.png",
     "apiVersion": 1,
-    "fileHash": "sha256-65b1df0012efe9ea841170ae7d0f514c5025b5615a4fd4a7b01b676df87f3d2d"
+    "fileHash": "sha256-2aed6bc10334c66fb69172cad84fa03443fcbf1d4ed0ceaca71ed90f66d3e72a"
   },
   {
     "url": "https://raw.githubusercontent.com/SaurabhKaperwan/CSX/builds/MoviesDrive.cs3",
@@ -6649,7 +6668,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Indian Movies/Series/Kdrama(Hindi Dubbed)",
-    "fileSize": 129646,
+    "fileSize": 121446,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -6659,7 +6678,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=www.mxplayer.in&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-3d2ec2f0b650130165d4e94a4182ac72fed77532dc99868f78e0d09388557455"
+    "fileHash": "sha256-e863e5d8d88ee0c76003a9907cc4e3f268f340f260debbfea943bc200b809ace"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Multimovies.cs3",
@@ -6693,7 +6712,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Indian Multi-language HD Provider",
-    "fileSize": 152207,
+    "fileSize": 143891,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -6703,7 +6722,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/MultiMoviesProvider/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-a7cec59f1d020377cb4fcf3e669ed605ff69b82d4536b8830a4480f9b16327d7"
+    "fileHash": "sha256-68f332737298797ae2df890baa481d2adb8163f8b44cc9530013bcc20cc2af97"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/MundoDonghuaProvider.cs3",
@@ -6817,7 +6836,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies,Series and Anime Portuguese Extension",
-    "fileSize": 52687,
+    "fileSize": 43518,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "pt-br",
     "tvTypes": [
@@ -6826,7 +6845,7 @@
     ],
     "iconUrl": "https://cdn.bcdn.zip/wp-content/uploads/2017/04/nc-header-responsive.png",
     "apiVersion": 1,
-    "fileHash": "sha256-25c0f54ee50ffeb81b0dab394ec781bd265340601e8c0d974dc8dd254931847f"
+    "fileHash": "sha256-f35c889db5e0b989bd0ad4391617ec0320472d058cbe986f3fd1f3091e89226e"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/NetflavProvider.cs3",
@@ -6976,10 +6995,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://nimegami.id&sz=%size%",
-    "fileHash": "sha256-bf0d7d3c455f21db0e75b19c9dd9edef3b80987608ab14133ed8041bf79390ce",
+    "fileHash": "sha256-26ab8c5cb5ed97d8565ff504d5244a163294891284d9d4f2f444f4e1b99a2d04",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 27349,
+    "fileSize": 23306,
     "status": 1,
     "language": "id",
     "authors": [
@@ -6990,7 +7009,7 @@
       "OVA",
       "Anime"
     ],
-    "version": 1,
+    "version": 2,
     "internalName": "Nimegami",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Nimegami.cs3",
     "name": "[Asian] Nimegami"
@@ -7067,7 +7086,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Obejrzyj.to - Polski serwis z darmowymi filmami i serialami online",
-    "fileSize": 148947,
+    "fileSize": 141178,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "pl",
     "tvTypes": [
@@ -7076,7 +7095,7 @@
     ],
     "iconUrl": "https://www.obejrzyj.to/favicon/icon-512x512.png",
     "apiVersion": 1,
-    "fileHash": "sha256-9802fd9ece67b6a34c08a15516907e6c055a6244b2cc8c740b112a66a5216cff"
+    "fileHash": "sha256-5443547a2f8a0640a51a44aacf582723ca20f3765ba4f59f6d20560980cefaae"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=ohitv.net&sz=%size%",
@@ -7107,7 +7126,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime and movies with Korean subtitles only (no Korean audio)",
-    "fileSize": 56013,
+    "fileSize": 46879,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ko",
     "tvTypes": [
@@ -7117,7 +7136,7 @@
     ],
     "iconUrl": "https://ani.ohli24.com/img/logo@2x.png",
     "apiVersion": 1,
-    "fileHash": "sha256-97cbd44144c35d68eb596bce09ce63c52b3e9b618b0abe5b5090c3c95012683d"
+    "fileHash": "sha256-290513f9d10fa09c3ab1588f4014548a7e415494a74dd19fdd34e2f80e3b97bb"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OK.cs3",
@@ -7150,7 +7169,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "One Pace",
-    "fileSize": 76732,
+    "fileSize": 67720,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -7158,7 +7177,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/onepace.png",
     "apiVersion": 1,
-    "fileHash": "sha256-296a0db29d76949fce7bb90943fc51d0983499a2303816aee4147b6ae1957211"
+    "fileHash": "sha256-6c15945c425b82ba2f678e6201f1535c8b5c651caadfbeb38d0a92f52ba38162"
   },
   {
     "name": "[Games] OnePiece",
@@ -7189,7 +7208,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Asian Dramas",
-    "fileSize": 98074,
+    "fileSize": 89878,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -7198,7 +7217,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=onetouchtv.xyz/&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-9db3baffd08546f0e11ea1867061e4ec32a8d2f027c69b9fa19d94a773505e7e"
+    "fileHash": "sha256-4dc3dda4487501cce1aa731def726f31ef1f7b2004efde1bfb2efb8d8cc3828b"
   },
   {
     "apiVersion": 1,
@@ -7323,10 +7342,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://oploverz.ch&sz=%size%",
-    "fileHash": "sha256-2ae1e94f8c1e3b17ca692124c7c52ac8c505850b2e3a61e60c711b75a94ded3d",
+    "fileHash": "sha256-f63b59e0ea6f73d076bb4343354fc71316160bf4d7103007f308721eed76fc32",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 22516,
+    "fileSize": 29777,
     "status": 1,
     "language": "id",
     "authors": [
@@ -7337,7 +7356,7 @@
       "OVA",
       "Anime"
     ],
-    "version": 1,
+    "version": 2,
     "internalName": "Oploverz",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Oploverz.cs3",
     "name": "[Asian] Oploverz"
@@ -7407,10 +7426,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://pahe.ink&sz=%size%",
-    "fileHash": "sha256-65abeaf10095a297f0893ae82aa366dd73f2771478d6d01ad9212743f127a733",
+    "fileHash": "sha256-8c11088961b8cbfcf6b67df19be26b0b15fd7eba85e966dd5ca6f42bb4f449ec",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 12679,
+    "fileSize": 15622,
     "status": 1,
     "language": "id",
     "authors": [
@@ -7420,7 +7439,7 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 1,
+    "version": 2,
     "internalName": "Pahe",
     "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Pahe.cs3",
     "name": "[Asian] Pahe"
@@ -7536,7 +7555,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Pencurimovie",
-    "fileSize": 51143,
+    "fileSize": 42026,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
@@ -7545,7 +7564,7 @@
     ],
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ww21.pencurimovie.sbs&size=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-8729e73dd21c428c1b52946a62c03549c2f4162f110543403e4abc28ecfe64f1"
+    "fileHash": "sha256-cb876a7dae8df4484a188b530660784b4caa73fd9d46b7a981d1149c85d4f816"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Perverzija.cs3",
@@ -7655,7 +7674,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Contains Bluray7",
-    "fileSize": 58300,
+    "fileSize": 49233,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "fil",
     "tvTypes": [
@@ -7664,7 +7683,7 @@
     ],
     "iconUrl": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://pinoymoviepedia.ru&size=16",
     "apiVersion": 1,
-    "fileHash": "sha256-a45e0ddb56793e195b3890f5a2c4de5df1586b293ef83a760a5fff121e3b0aab"
+    "fileHash": "sha256-4e8558f7fc94b37838033c0153f7e3bf358e78dc14eacaf4049fcd293fd4bd87"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Piratexplay.cs3",
@@ -7676,7 +7695,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime/Cartoon in Hindi",
-    "fileSize": 101274,
+    "fileSize": 92182,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -7686,7 +7705,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/piratexplay.png",
     "apiVersion": 1,
-    "fileHash": "sha256-e2c8e2200ab12e14a04a9cd1200d8ddff605f9f11301d9d20d26947ed05f24ea"
+    "fileHash": "sha256-7cbf806e7458dfb2af43b03ef2b5f20b972ac7ee11af590464d311dd1b032bd6"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/Logos/PlayFyTvProvider/playfy-tv-4.webp",
@@ -7738,7 +7757,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "PMSM (Pencuri Movie Sub Malay)",
-    "fileSize": 68872,
+    "fileSize": 60282,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
@@ -7747,7 +7766,7 @@
     ],
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ww192.pencurimoviesubmalay.motorcycles&size=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-c99099dccacf9132a0b8a18ba70a8f960a0c785e84113ad48f7230bb27a6ce53"
+    "fileHash": "sha256-574d402686faac0930cc069921c807c5c4d514d09236fcf36476299fcf6c6db2"
   },
   {
     "name": "[Games] Pokemon",
@@ -7996,7 +8015,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Sports Live Streams (FanCode)",
-    "fileSize": 60410,
+    "fileSize": 51340,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -8004,7 +8023,7 @@
     ],
     "iconUrl": "https://www.thestatesman.com/wp-content/uploads/2021/05/fancode.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-3eb7fd9e741668908622082b570e53b7958e48ceb161a1e701aa63a92ae909bf"
+    "fileHash": "sha256-f577a35306438dd80e6b3c271ec44e9317484707d7dec68a1e42609d44b5ed18"
   },
   {
     "iconUrl": "https://i.ibb.co.com/qFdDYpcD/pusatmovie.png",
@@ -8036,7 +8055,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Includes PirateIPTV,Sports IPTV,Japanese IPTV,Sony IPTV",
-    "fileSize": 60032,
+    "fileSize": 51065,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -8044,7 +8063,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-ed6f96b8daa6c29a46b50db45e348a61913bf77b1d9d884ce804f6f0e11bb1aa"
+    "fileHash": "sha256-af85d2719b347317c3f46500a4f46926e44f00e12465f88a592874c4335d4d7d"
   },
   {
     "iconUrl": "https://cdn.mytuner.mobi/static/ctr/icons/App_192x192/in.png",
@@ -8306,7 +8325,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Ringz App",
-    "fileSize": 65674,
+    "fileSize": 57158,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -8316,7 +8335,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Ringz.png",
     "apiVersion": 1,
-    "fileHash": "sha256-a072fa81ee471ee76ed2e3bf0492e17fdb96c93d008bfc9af833243311e5acf3"
+    "fileHash": "sha256-df5a581c924de3fa5ba04c4d5389f5d53b8831aee7ab1b9c5a2df090a29ea141"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/Rowdy-Avocado/Rowdycado-Extensions/master/logos/ultima.png",
@@ -8413,7 +8432,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Multi language Movies and Tv shows provider",
-    "fileSize": 35571,
+    "fileSize": 35574,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -8425,7 +8444,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/3a33c253fe5e25b4d61a6a8eb78da2a1.webp",
     "apiVersion": 1,
-    "fileHash": "sha256-cd791059c991cfa77ebaab86d581456a9ec3ae8855cc72768b3884f5534e310c"
+    "fileHash": "sha256-f7cc65a531b7eb1c51972d48acc546cdf7534f8f6ad1436df614985034dc1dfb"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/SectionOrganizer.cs3",
@@ -8676,7 +8695,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "ShowBox (Retrieve the cookie using Login with Google to properly utilize ShowBox.",
-    "fileSize": 157663,
+    "fileSize": 148755,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -8687,7 +8706,7 @@
     ],
     "iconUrl": "https://miro.medium.com/v2/1*DyU8bmnyyEiJbFROEXO2VA.png",
     "apiVersion": 1,
-    "fileHash": "sha256-66d62cd407f0c6d2d5fc3e69bd514da311a174cb1e15661bf14cea00496c7c20"
+    "fileHash": "sha256-6ee69b47ff9419a1745074ad345e237526241d52babb3cefbdda9d277c17ca88"
   },
   {
     "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/SimklProvider.cs3",
@@ -8797,25 +8816,25 @@
     "name": "[Movies] SkymoviesHD"
   },
   {
-    "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Sokuja.cs3",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=https://x6.sokuja.uk&sz=%size%",
+    "fileHash": "sha256-61b025aed7446405d8dd06edfbc88a3b949f93f095735f2b7b4c03df878af813",
+    "apiVersion": 1,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "fileSize": 25242,
     "status": 1,
-    "version": 3,
-    "name": "[Asian] Sokuja",
-    "internalName": "Sokuja",
+    "language": "id",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "description": "SOKUJA menyediakan koleksi anime subtitle Indonesia terlengkap. Nonton streaming dan download anime sub Indo HD gratis, update episode baru setiap hari.",
-    "fileSize": 20313,
-    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "language": "id",
     "tvTypes": [
-      "Anime",
-      "AnimeMovie"
+      "AnimeMovie",
+      "OVA",
+      "Anime"
     ],
-    "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://x6.sokuja.uk&size=128",
-    "apiVersion": 1,
-    "fileHash": "sha256-291a22db646e690d9e09ced51fb5061266156541f7466e1ba71b02d01cea934f"
+    "version": 4,
+    "internalName": "Sokuja",
+    "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Sokuja.cs3",
+    "name": "[Asian] Sokuja"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/SoloLatinoProvider.cs3",
@@ -8862,10 +8881,10 @@
   },
   {
     "iconUrl": "https://sportzxlive.com/wp-content/uploads/2026/04/cropped-logo-1-2048x1611-1-1024x806.png",
-    "fileHash": "sha256-d08b03154f010b3ec06d31fe9e418e48ce6e5a56c1b15886a396414a988d5199",
+    "fileHash": "sha256-fd8f3dc9d41912202a23a68106eca29e6ce68b4bbe99cbf60f17de77dcf4b7c2",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 121457,
+    "fileSize": 122953,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -8874,7 +8893,7 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 24,
+    "version": 25,
     "internalName": "SportzxProvider",
     "description": "Watch Live Sports Events via SportzX",
     "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SportzxProvider.cs3",
@@ -8989,6 +9008,30 @@
     "name": "[Indian] StreamFlixProvider"
   },
   {
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
+    "status": 1,
+    "version": 62,
+    "name": "[Indian] StreamHubOne",
+    "internalName": "StreamHubOne",
+    "authors": [
+      "Adam Knight (Maintainer)"
+    ],
+    "description": "StreamHub -  Multilingual provider Non-Stop Solution For Streaming Movies/Tv series & Anime",
+    "fileSize": 1059729,
+    "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
+    "language": "hi",
+    "tvTypes": [
+      "Movie",
+      "TvSeries",
+      "Anime",
+      "AnimeMovie",
+      "AsianDrama"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/main/Icons/images%20(1).jpeg",
+    "apiVersion": 1,
+    "fileHash": "sha256-b5012093375d284330714ee8794d208ce4ff0b6f4d2d5e1ab983cf3696397fd6"
+  },
+  {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3",
     "status": 1,
     "version": 53,
@@ -9021,7 +9064,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "#1 best extention based on MultiAPI",
-    "fileSize": 1965865,
+    "fileSize": 1957398,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9034,7 +9077,7 @@
     ],
     "iconUrl": "https://i3.wp.com/yt3.googleusercontent.com/ytc/AIdro_nCBArSmvOc6o-k2hTYpLtQMPrKqGtAw_nC20rxm70akA=s900-c-k-c0x00ffffff-no-rj?ssl=1",
     "apiVersion": 1,
-    "fileHash": "sha256-a701ddd9ff0499c7ee692d178f02be8656ee0ff4b4754628660be7b8e4cc00ea"
+    "fileHash": "sha256-fc779f9c8e07afba3cca8a9c63c58cd3c40b514cbb4369b6115ad466bf3eca00"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Stremio.cs3",
@@ -9067,7 +9110,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "[!] Requires Setup \n- Allows you to use any Stremio addon by pasting their manifest.json url",
-    "fileSize": 120612,
+    "fileSize": 111138,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9077,7 +9120,7 @@
     ],
     "iconUrl": "https://files.catbox.moe/ol63rm.png",
     "apiVersion": 1,
-    "fileHash": "sha256-6f2d48f894d68bda1f4c231c9542ebd848c5dd8c0d1fd84725c7fea480d938cc"
+    "fileHash": "sha256-c72cbb30eb6efbcf98fd64dc51079fdcb52e4f29cc420d98b8411bc2c9254528"
   },
   {
     "iconUrl": "https://www.stremio.com/website/favicon.ico",
@@ -9109,7 +9152,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "[!] Requires Setup \n- StremioX allows you to use stream addons \n- StremioC allows you to use catalog addons",
-    "fileSize": 217570,
+    "fileSize": 208904,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9118,7 +9161,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/StremioX/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-4f6947709d2fc20bdc70772b4a9026d361e8c169f72c754db933fd2397eb11b5"
+    "fileHash": "sha256-f661d1709f8344925cbff53fbf686552fb82a732f8ff74f441e0f3d565e18202"
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/CNC%20Verse/icon.png",
@@ -9248,7 +9291,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "SuperStream (Retrieve the cookie using Login with Google to properly utilize SuperStream.",
-    "fileSize": 183176,
+    "fileSize": 174618,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9261,7 +9304,7 @@
     ],
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.showbox.media/&size=256",
     "apiVersion": 1,
-    "fileHash": "sha256-6e35fb7ec5d4be218615e2ac1e4a6757f6b1b608262499f0eff853dd4adcb7fd"
+    "fileHash": "sha256-936c91460e4bb3125e069e3c61c48d03d3cf69cf1384d182f83c0c5371b167e9"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/SxyPrn.cs3",
@@ -9366,7 +9409,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Movies & Series",
-    "fileSize": 66458,
+    "fileSize": 57879,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ta",
     "tvTypes": [
@@ -9375,7 +9418,7 @@
     ],
     "iconUrl": "https://i.postimg.cc/FRwFFtyT/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-34cfae566a2e82e94b50250c4123bf4f80c903f609633d5fda39b460da97068e"
+    "fileHash": "sha256-37d901054fc5ce4c2e27873b8364b4e15885325a1e8a19eda81de2513b0293dd"
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/TamilDhoolProvider/icon.png",
@@ -9610,7 +9653,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "ToonHub4u Multi Language",
-    "fileSize": 62709,
+    "fileSize": 54108,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -9620,7 +9663,7 @@
     ],
     "iconUrl": "https://toonhub4u.co/wp-content/uploads/2024/02/Untitled.png",
     "apiVersion": 1,
-    "fileHash": "sha256-228630459cd3e99be5d7a9ea2079f12acb984109404051b215f7b4d95166057e"
+    "fileHash": "sha256-902e21305c01cd167f532a23f555dc5dbf006dd3ef67d151dda6567098e9c011"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Toonstream.cs3",
@@ -9632,7 +9675,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "ToonStream Multi Language",
-    "fileSize": 79485,
+    "fileSize": 70191,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -9642,7 +9685,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/toonstream.png",
     "apiVersion": 1,
-    "fileHash": "sha256-8b103108fd62c487895080795f9b52546596f71c2147abb193b2d449513f378a"
+    "fileHash": "sha256-a53f714b08f3fd364ce6e5af5e6ef230cd53ad9668e7d9d612b610dc501df6b5"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ToonTales.cs3",
@@ -9654,7 +9697,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "ToonTales",
-    "fileSize": 47373,
+    "fileSize": 38318,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -9662,7 +9705,7 @@
     ],
     "iconUrl": "https://www.toontales.net/wp-content/themes/toontales/images/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-a5a4167f5625aa4b256cb3405a2c4d7703dad3f4c24a907290a520b7f6d7e372"
+    "fileHash": "sha256-e5069bacbfed40c3810aa7411762e30df0c801da19b7990fef26ef5189336f01"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Topcartoons.cs3",
@@ -9674,7 +9717,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Top Cartoon",
-    "fileSize": 47514,
+    "fileSize": 38446,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -9682,7 +9725,7 @@
     ],
     "iconUrl": "https://www.topcartoons.tv/wp-content/uploads/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-ee0feb902ec4d77d2ead0bcb2e2224f3392d24539b4b0bace7289fbffc6dd0ed"
+    "fileHash": "sha256-f0764ff345cc118ab692ec06e251ad94b9e1beb17965be1320e7bfac607fbf30"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Topcinema.cs3",
@@ -9714,7 +9757,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Filme  and Serien (German)",
-    "fileSize": 54442,
+    "fileSize": 45303,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "de",
     "tvTypes": [
@@ -9723,7 +9766,7 @@
     ],
     "iconUrl": "https://www.topstreamfilm.live/templates/topstreamfilm/images/logo-1.png",
     "apiVersion": 1,
-    "fileHash": "sha256-fa5465ff3f2f95009636e49348edd539d704ff43dc7a437f5ac06f495b6f400f"
+    "fileHash": "sha256-0cda74fd653015c2ba149bc29a24d5805184d574204f32749088226682a5fb44"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/TorraStream.cs3",
@@ -9735,7 +9778,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "#1 Best Extension – MultiAPI-Based with 4K Torrent Support (Debian) Use Extension Settings",
-    "fileSize": 250897,
+    "fileSize": 242285,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9747,7 +9790,7 @@
     ],
     "iconUrl": "https://torrentio.strem.fun/images/logo_v1.png",
     "apiVersion": 1,
-    "fileHash": "sha256-f111d3abbe5d3b230eb19b88560f455481b7f2c552145ee6e4b93c2222e11a34"
+    "fileHash": "sha256-3c95aef0f71f6d86eb281cfd4e37712e5738df55eacd8692e3c97987a57f6abc"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Torrentio.cs3",
@@ -10162,7 +10205,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Indian Multi-language 4K Provider",
-    "fileSize": 93377,
+    "fileSize": 85336,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -10171,7 +10214,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/LikDev-256/likdev256-tamil-providers/master/UHDmoviesProvider/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-9bc99ec06ee1dcdd76f1d0180d4df9c93e4fef4cd76b9470416e798dc8b36c87"
+    "fileHash": "sha256-5e6b8c57720a397a827d95ef4ea57e7a00489a1023ba57766aa607197700adeb"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3",
@@ -10183,7 +10226,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "The ultimate All-in-One home screen to access all of your extensions at one place (You need to select/deselect sections in Ultima's settings to load other extensions on home screen)",
-    "fileSize": 229632,
+    "fileSize": 220369,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -10191,7 +10234,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/Ultima.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-6aac99f10df746583bf3335b23dc80eabe4dd3b4a5e6d56d3d73d24f6698c628"
+    "fileHash": "sha256-6aadef047bfd5de338a77b2a6a8fdb519ee460a50b6079038d808683d4ded7e9"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/UltimaBeta.png",
@@ -10693,7 +10736,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "Watch Latest Movies",
-    "fileSize": 179653,
+    "fileSize": 171074,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -10706,7 +10749,7 @@
     ],
     "iconUrl": "https://top.xdmovies.wtf/assets/logo1.png",
     "apiVersion": 1,
-    "fileHash": "sha256-37c70120114e19f7dda09a05b8bce02ee4a60b78dbe38a9b2d4e2af3705f89b9"
+    "fileHash": "sha256-166766f6243b4713f9ff65377c1631d08a4f3a77667a15e27af1916fc20beae5"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=https://vi.xhspot.com&sz=256",
@@ -11100,7 +11143,7 @@
       "Adam Knight (Maintainer)"
     ],
     "description": "YTS Movies 4K Support (Torrent)",
-    "fileSize": 53138,
+    "fileSize": 43959,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -11109,7 +11152,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/yts.png",
     "apiVersion": 1,
-    "fileHash": "sha256-2461941ec2e4ecc136bf16b26ee01e16f3154b0d5f2912dab24546c4777fa3ca"
+    "fileHash": "sha256-761b33c26eecd239df183944decbeffe05124321bf74476fc12a3e53e35a437a"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/ZDKSerials.cs3",
@@ -11120,7 +11163,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 58416,
+    "fileSize": 49896,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -11128,7 +11171,7 @@
     ],
     "iconUrl": "https://zdkserials.site/wp-content/uploads/2026/03/cropped-ZD-1-1-192x192.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-b460989084a44e8141b6e69af4502908ff5de719d9c2ae3c1d6fd6e07e5be414"
+    "fileHash": "sha256-3cc866c9f5793bbc818d5a06f2190c6732ff1bfa91fb8bea96419e47352193b1"
   },
   {
     "name": "[Games] Zelda",
@@ -11158,7 +11201,7 @@
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 150267,
+    "fileSize": 141761,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -11168,6 +11211,6 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/refs/heads/main/Icons/zing.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-0220b826cbc93251fa7ce504f92bffecca08aaa3124aa35f52259ebe1d1cf93f"
+    "fileHash": "sha256-332b93ea2883df4299e14de5579a4c39ce189896c3d52b2ca88e6fafbfa405d2"
   }
 ]

@@ -2607,7 +2607,7 @@
     "publishedName": "[Asian] Donghub",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 1,
+    "selectedVersion": 2,
     "sourceId": "nontonindo",
     "sourceName": "Nonton Indo",
     "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
@@ -3945,7 +3945,7 @@
     "publishedName": "[Asian] Idlix",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 2,
+    "selectedVersion": 3,
     "sourceId": "nontonindo",
     "sourceName": "Nonton Indo",
     "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
@@ -5019,6 +5019,23 @@
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LivXowProvider.cs3"
   },
   {
+    "plugin": "LK21",
+    "originalName": "LK21",
+    "publishedName": "[Asian] LK21",
+    "category": "Asian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 1,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
+    "originalAuthors": [
+      "ExtremeBoy"
+    ],
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3"
+  },
+  {
     "plugin": "Lodynet",
     "originalName": "LodyNet",
     "publishedName": "[Arabic] LodyNet",
@@ -5771,7 +5788,7 @@
     "publishedName": "[Asian] Nimegami",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 1,
+    "selectedVersion": 2,
     "sourceId": "nontonindo",
     "sourceName": "Nonton Indo",
     "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
@@ -6060,7 +6077,7 @@
     "publishedName": "[Asian] Oploverz",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 1,
+    "selectedVersion": 2,
     "sourceId": "nontonindo",
     "sourceName": "Nonton Indo",
     "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
@@ -6128,7 +6145,7 @@
     "publishedName": "[Asian] Pahe",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 1,
+    "selectedVersion": 2,
     "sourceId": "nontonindo",
     "sourceName": "Nonton Indo",
     "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
@@ -7289,16 +7306,16 @@
     "publishedName": "[Asian] Sokuja",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 3,
-    "sourceId": "cs-karma",
-    "sourceName": "cs-karma",
-    "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
-    "sourceIndex": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
+    "selectedVersion": 4,
+    "sourceId": "nontonindo",
+    "sourceName": "Nonton Indo",
+    "sourceRepository": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "sourceIndex": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
     "originalAuthors": [
-      "ByAyzen"
+      "ExtremeBoy"
     ],
-    "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Sokuja.cs3"
+    "originalRepositoryUrl": "https://github.com/ExtremeBoyGG/nonton-indo",
+    "packageUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/Sokuja.cs3"
   },
   {
     "plugin": "SoloLatinoProvider",
@@ -7340,7 +7357,7 @@
     "publishedName": "[Live] SportzxProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 24,
+    "selectedVersion": 25,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7435,6 +7452,23 @@
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
     "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/StreamFlixProvider.cs3"
+  },
+  {
+    "plugin": "StreamHubOne",
+    "originalName": "StreamHubOne",
+    "publishedName": "[Indian] StreamHubOne",
+    "category": "Indian",
+    "maintainer": "Adam Knight (Maintainer)",
+    "selectedVersion": 62,
+    "sourceId": "desi",
+    "sourceName": "Desi Extensions",
+    "sourceRepository": "https://github.com/Faisal0786/Desi",
+    "sourceIndex": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
+    "originalAuthors": [
+      "Faisal"
+    ],
+    "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3"
   },
   {
     "plugin": "StreamingCommunity",
