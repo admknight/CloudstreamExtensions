@@ -2829,16 +2829,16 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Hexated",
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Dutamovie.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Dutamovie.cs3"
   },
   {
     "plugin": "Egydead",
@@ -3102,15 +3102,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Filmkita.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmkita.cs3"
   },
   {
     "plugin": "Filmlokal",
@@ -3119,15 +3119,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Filmlokal.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Filmlokal.cs3"
   },
   {
     "plugin": "FilmMakinesi",
@@ -4117,15 +4117,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Indomax.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Indomax.cs3"
   },
   {
     "plugin": "InternetArchiveProvider",
@@ -4561,15 +4561,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Kawanfilm.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Kawanfilm.cs3"
   },
   {
     "plugin": "Kdesa",
@@ -4716,15 +4716,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/KlikXXi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/KlikXXi.cs3"
   },
   {
     "plugin": "KlonTVProvider",
@@ -4973,15 +4973,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/LayarWarna.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/LayarWarna.cs3"
   },
   {
     "plugin": "LibraryOfLadev",
@@ -5261,15 +5261,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/MidasXXi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/MidasXXi.cs3"
   },
   {
     "plugin": "MinishCap",
@@ -5363,15 +5363,15 @@
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 9,
-    "sourceId": "tearrs-vietnamese",
-    "sourceName": "Tearrs Vietnamese Extension",
-    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden"
     ],
     "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/MonPlayerProvider.cs3"
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/MonPlayerProvider.cs3"
   },
   {
     "plugin": "MovieBox",
@@ -5840,15 +5840,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Ngefilm.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Ngefilm.cs3"
   },
   {
     "plugin": "Nimegami",
@@ -5891,15 +5891,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Nomat.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Nomat.cs3"
   },
   {
     "plugin": "NoodleMagazineProvider",
@@ -6724,15 +6724,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Pusatmovie.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Pusatmovie.cs3"
   },
   {
     "plugin": "QuickIPTV",
@@ -6983,15 +6983,15 @@
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 21,
-    "sourceId": "rowdy-recovery",
-    "sourceName": "Rowdy Recovery Builds",
-    "sourceRepository": "https://github.com/RowdyRushya/rowdy-cs-extensions",
-    "sourceIndex": "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "RowdyRushya"
     ],
     "originalRepositoryUrl": "https://github.com/rushi-chavan/rowdy-cs-extensions",
-    "packageUrl": "https://raw.githubusercontent.com/rushi-chavan/rowdy-cs-extensions/builds/Rowdy.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/RowdyRushya/rowdy-cs-extensions/0143d69ce3ec9b7cf09f6d6216212694dc5890a0/Rowdy.cs3"
   },
   {
     "plugin": "Rtally",
@@ -7034,15 +7034,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/Savefilm.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/Savefilm.cs3"
   },
   {
     "plugin": "SDmovies",
@@ -7802,16 +7802,16 @@
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 9,
-    "sourceId": "tearrs-vietnamese",
-    "sourceName": "Tearrs Vietnamese Extension",
-    "sourceRepository": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "sourceIndex": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "anhdaden",
       "RowdyRushya"
     ],
     "originalRepositoryUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese",
-    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/SyncProvider.cs3"
+    "packageUrl": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/05b8e0b8c7b3aa43665fc57c477862cc0888f917/SyncProvider.cs3"
   },
   {
     "plugin": "SyncStream",
@@ -8860,15 +8860,15 @@
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
     "selectedVersion": 1,
-    "sourceId": "cloudx",
-    "sourceName": "CloudX-V2",
-    "sourceRepository": "https://github.com/Asm0d3usX/CloudX-V2",
-    "sourceIndex": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/builds/plugins.json",
+    "sourceId": "local-pinned-recovery",
+    "sourceName": "MegaRepo Verified Immutable Recovery",
+    "sourceRepository": "https://github.com/admknight/CloudstreamExtensions",
+    "sourceIndex": "https://raw.githubusercontent.com/admknight/CloudstreamExtensions/master/local_verified_plugins.json",
     "originalAuthors": [
       "Asm0d3usX"
     ],
     "originalRepositoryUrl": "https://github.com/Asm0d3usX/CloudX",
-    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX/builds/WGFilm21.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Asm0d3usX/CloudX-V2/c73809693bc8406a6f8cffd98039e8278e92a95a/WGFilm21.cs3"
   },
   {
     "plugin": "Whoreshub",
