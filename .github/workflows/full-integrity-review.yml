@@ -13,6 +13,7 @@ on:
       - 'tools/reconcile_integrity_review.py'
       - 'tools/verified_immutable_fallback.py'
       - 'tools/index_immutable_recovery.py'
+      - 'verified_historical_revisions.json'
       - 'tools/check_local_recovery_readiness.py'
       - 'tests/test_check_local_recovery_readiness.py'
       - 'trusted_binary_approvals.json'
