@@ -15,6 +15,7 @@ on:
       - 'sources.json'
       - 'recovery_plugins.json'
       - 'local_verified_plugins.json'
+      - 'verified_historical_revisions.json'
       - 'trusted_binary_approvals.json'
       - 'tools/merge_upstreams.py'
       - '.github/workflows/build.yml'
