@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10 17:21:53 UTC",
+  "generatedAt": "2026-10-10 21:47:17 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
@@ -1094,7 +1094,7 @@
     {
       "plugin": "JustPlay",
       "selectedSource": "raghav repo",
-      "selectedVersion": 14,
+      "selectedVersion": 16,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 12,
       "reason": "lower version"
@@ -2344,7 +2344,7 @@
     {
       "plugin": "JustPlay",
       "selectedSource": "raghav repo",
-      "selectedVersion": 14,
+      "selectedVersion": 16,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 12,
       "reason": "lower version"
@@ -3086,8 +3086,8 @@
       "previousUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 428325,
-      "observedActualSHA256": "sha256-bd00795360a8051378dc2ed555904260e75ec1d2c171264e962ad6dc17210587",
+      "observedActualSize": 432430,
+      "observedActualSHA256": "sha256-7640bfe6c02a90b6cd4c3d97ae2b190cb98ea86db237fd25d36c6232f2fc318b",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
@@ -3118,8 +3118,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 1099814,
-      "observedActualSHA256": "sha256-ec83a7551584400794db180bae2fd425c9a668fa3d792a6c56b2e0c50cfdf9e1",
+      "observedActualSize": 1152503,
+      "observedActualSHA256": "sha256-db5519372aaa8d54b2b52361856742c752e85124be4f562324216fb2bc193324",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
@@ -3166,19 +3166,19 @@
       "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 338701,
-      "observedActualSHA256": "sha256-fcd9e3e6f05690a0c57159dbffea4cb390cccaaa5b39fade8cc2b799ef517227",
+      "observedActualSize": 338354,
+      "observedActualSHA256": "sha256-fe550a429486958674319533b4d23e4067b49dc49aa3b7aa19bf4f8a96a1e083",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "d5a1e13ed50698ebf79b9cef26a459b1f73c83e3bfbea54dca0eaaf31545e3ca",
+  "originalSourceReportDigest": "e8301db42ae971e6c383b8a00c99151f13d5a721d9a56a6bda259e888023b975",
   "inputSnapshotDigests": {
-    "candidate": "4cb4579f6bc6f45ae6f238b0fa163c34bc3326a076107aa68d2d33832396f4e5",
+    "candidate": "ca98ce99491dc931d9c6b965ce59f14506bc055ac4cc310c696ad6708702ccdc",
     "previous": "701f0f0f90a3ef55de776f22089c12fa0a69aee48ea14e97f11a4ad20c746c5c",
-    "candidateProvenance": "03ecde77252168995ecfd8821f2251faee9effe2183c5feb6e98a6d5960880c4",
+    "candidateProvenance": "a1eb77f6809a6ff54be854c059ddedae716b2f229cad6509926db57f0dd4cf2e",
     "previousProvenance": "a183ab0294d66f8223ac59048b3771bbc232a8b5fc368e061bd48ab4cebbd7d7"
   },
   "releaseEligible": true,
