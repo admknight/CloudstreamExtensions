@@ -25,6 +25,7 @@ from plan_per_plugin_selection import canonical_sha256
 SHA256 = re.compile(r"^sha256-([a-f0-9]{64})$", re.I)
 GIT_SHA = re.compile(r"^[a-f0-9]{40}$", re.I)
 MAX_FILE_BYTES = 20 * 1024 * 1024
+HISTORICAL_REVISIONS_FILE = Path(__file__).resolve().parents[1] / "verified_historical_revisions.json"
 USER_AGENT = "MegaRepo-Published-Release-Fingerprint/1.0"
 
 
@@ -123,7 +124,15 @@ def compare_pinned_bytes(info, sha, expected_size, expected_hash, fetch_binary):
 
 
 def index_recovery(plugins, provenance, resolve_ref, list_history, fetch_binary,
-                   max_history=16, workers=6):
+                   max_history=16, workers=6, supplemental_revisions=None):
+    if supplemental_revisions is None:
+        supplemental_revisions = {}
+    if not isinstance(supplemental_revisions, dict) or any(
+        not isinstance(k, str) or not isinstance(v, list) or len(v) > 16
+        or any(not isinstance(x, str) or not GIT_SHA.fullmatch(x) for x in v)
+        for k, v in supplemental_revisions.items()
+    ):
+        raise ValueError("Historical revision hints must contain full Git commit SHAs")
     if not (isinstance(max_history, int) and 0 <= max_history <= 50):
         raise ValueError("history limit must be between 0 and 50")
     if not (isinstance(workers, int) and 1 <= workers <= 8):
@@ -220,6 +229,7 @@ def index_recovery(plugins, provenance, resolve_ref, list_history, fetch_binary,
                 history = list_history(info, max_history)
             except Exception:
                 history = []
+            history = list(supplemental_revisions.get(key, [])) + history
             for sha in history:
                 if not GIT_SHA.fullmatch(str(sha)) or sha.lower() in attempts:
                     continue
@@ -305,6 +315,7 @@ def main(argv=None):
     entries = json.loads(args.published.read_text(encoding="utf-8"))
     origin = json.loads(args.provenance.read_text(encoding="utf-8"))
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    hints = json.loads(HISTORICAL_REVISIONS_FILE.read_text(encoding="utf-8")) if HISTORICAL_REVISIONS_FILE.is_file() else {}
     result = index_recovery(
         entries, origin,
         lambda owner, repo, ref: github_resolve_ref(owner, repo, ref, token),
@@ -312,6 +323,7 @@ def main(argv=None):
         _http_bytes,
         max_history=args.max_history,
         workers=args.workers,
+        supplemental_revisions=hints,
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
