@@ -1,20 +1,19 @@
 # MegaRepo Legacy Package Integrity Inventory
 
-Published snapshot: **2026-10-09 22:25:33 UTC**
+Published snapshot: **2026-10-10 00:54:15 UTC**
 Packages without an authenticated SHA-256: **0**
 Affected original sources: **0**
 
-> All **547** published plugin entries contain a valid SHA-256 value. This result is derived from the current guarded published catalog. It proves byte-integrity coverage, not publisher signature or CloudStream runtime playback.
+> Advisory evidence only. No plugin was approved or published by this audit.
 
 | Source ID | Missing SHA-256 | Mutable URLs | Immutable URLs |
 | --- | ---: | ---: | ---: |
-| None | 0 | 0 | 0 |
 
-## Safe maintenance procedure
+## Safe upgrade procedure
 
-1. Pin any new or changed binary to its original upstream Git commit.
-2. Verify the original committed manifest and independently check package bytes, SHA-256 and size.
-3. Require exact reviewed local approval before accepting a new binary identity or replacing a package URL.
-4. Run guarded no-removal CI and the independent post-publication integrity audit.
+1. Pin the **original** upstream repository to an exact commit.
+2. Confirm the committed source manifest version and binary file size; independently SHA-256 hash the pinned binary.
+3. Require a reviewed, exact-match local approval before adding a trusted digest or changing the package URL.
+4. Validate a guarded no-removal release and independent post-publication audit.
 
-No package URL or approval was changed by synchronizing this health-history report.
+No manifest or package metadata was changed by this inventory.
