@@ -1,0 +1,60 @@
+name: Recover Missing Guarded Schedules
+
+on:
+  schedule:
+    - cron: '29 * * * *'
+  workflow_run:
+    workflows:
+      - Audit Published Plugin Integrity
+      - Full Catalog Integrity Review (Read Only)
+      - Check Custom Provider Health
+    types: [completed]
+    branches: [master]
+  pull_request:
+    paths:
+      - '.github/workflows/guarded-schedule-backstop.yml'
+      - 'tools/guarded_schedule_backstop.py'
+      - 'tests/test_guarded_schedule_backstop.py'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: guarded-schedule-backstop
+  cancel-in-progress: false
+
+jobs:
+  regression:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify backstop policy and idempotence (offline)
+        run: python3 -m unittest discover -s tests -p test_guarded_schedule_backstop.py -v
+
+  backstop:
+    if: >-
+      ${{ github.event_name == 'schedule' ||
+          (github.event_name == 'workflow_run' &&
+           github.event.workflow_run.head_repository.full_name == github.repository &&
+           github.event.workflow_run.head_branch == 'master') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          persist-credentials: false
+      - name: Fail-closed offline regression tests
+        run: python3 -m unittest discover -s tests -p test_guarded_schedule_backstop.py -v
+      - name: Recover only missing allowlisted workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/guarded_schedule_backstop.py --execute
