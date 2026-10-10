@@ -8,11 +8,13 @@ on:
     paths:
       - '.github/workflows/immutable-package-recovery.yml'
       - 'tools/index_immutable_recovery.py'
+      - 'verified_historical_revisions.json'
       - 'tests/test_immutable_recovery_index.py'
   pull_request:
     paths:
       - '.github/workflows/immutable-package-recovery.yml'
       - 'tools/index_immutable_recovery.py'
+      - 'verified_historical_revisions.json'
       - 'tests/test_immutable_recovery_index.py'
       - 'docs/IMMUTABLE_RECOVERY.md'
   workflow_dispatch:

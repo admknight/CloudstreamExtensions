@@ -88,6 +88,34 @@ class ParseTests(unittest.TestCase):
 
 
 class LockTests(unittest.TestCase):
+
+    def test_orphan_revision_matches_previous_bytes_only(self):
+        p = plugin("LK21", payload=b"old-published-bytes")
+        historic = "3" * 40
+        url = ORIGIN.replace("/builds/", "/" + historic + "/") + "LK21.cs3"
+        result = index_recovery([p], [src(p)], lambda *a: HEAD,
+            lambda info, limit: [], lambda u: b"old-published-bytes" if u == url else b"new-candidate",
+            max_history=1, workers=1, supplemental_revisions={"lk21": [historic]})
+        self.assertEqual(result["immutableMatches"], 1)
+        self.assertEqual(result["locks"][0]["commitSha"], historic)
+        self.assertFalse(result["autoPublicationAuthorized"])
+
+    def test_orphan_revision_cannot_approve_different_binary(self):
+        p = plugin("LK21", payload=b"old-published-bytes")
+        historic = "3" * 40
+        result = index_recovery([p], [src(p)], lambda *a: HEAD,
+            lambda info, limit: [], lambda u: b"new-candidate",
+            max_history=1, workers=1, supplemental_revisions={"lk21": [historic]})
+        self.assertEqual(result["immutableMatches"], 0)
+        self.assertEqual(result["unmatchedCount"], 1)
+
+    def test_malformed_orphan_revision_rejected(self):
+        p = plugin("LK21")
+        with self.assertRaisesRegex(ValueError, "full Git commit"):
+            index_recovery([p], [src(p)], lambda *a: HEAD,
+                lambda info, limit: [], lambda u: b"prior",
+                supplemental_revisions={"lk21": ["builds"]})
+
     def test_current_published_bytes_match_pinned_commit(self):
         p = plugin("P")
         url = ORIGIN.replace("/builds/", "/"+HEAD+"/") + "P.cs3"
