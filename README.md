@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-10 00:54:15 UTC**
+Last successful refresh: **2026-10-10 09:53:54 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **547 candidate packages** inspected for declared length and SHA-256 when present.
-- **545 candidates** accepted under the published trust rules.
-- **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **2 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **543 candidates** accepted under the published trust rules.
+- **1 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **3 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -546,7 +546,7 @@ CloudStream display prefix: `[Asian]`
 | 26 | **LayarKaca** | 15 | id | Movie, TvSeries | cs-karma | Unchanged |
 | 27 | **LayarKacaProvider** | 10 | id | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
 | 28 | **LayarWarna** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
-| 29 | **LK21** | 4 | id | Movie | Nonton Indo | Unchanged |
+| 29 | **LK21** | 4 | id | Movie | Nonton Indo | Deferred: previous metadata, unverified upstream bytes |
 | 30 | **MidasXXi** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 31 | **Nekokun** | 4 | id | Anime | cs-karma | Unchanged |
 | 32 | **Nekopoi** | 1 | id | NSFW | Nonton Indo | Unchanged |
@@ -775,7 +775,7 @@ CloudStream display prefix: `[Other]`
 | 35 | **SuperMario** | 14 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 36 | **TekkenAdvance** | 7 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 37 | **TombRaider** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 38 | **Ultima** | 65 | en | All | Phisher Repo | Unchanged |
+| 38 | **Ultima** | 65 | en | All | Phisher Repo | Updated (verified by candidate policy) |
 | 39 | **UltimaBeta** | 7 | en | All | MegaRepo Verified Immutable Recovery | Unchanged |
 | 40 | **YouTube** | 15 |  | Others | doGior's Had Enough | Unchanged |
 | 41 | **Zelda** | 8 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -857,7 +857,7 @@ When the same plugin is published by more than one source, the highest version i
 | IPTVProvider | MegaRepo Verified Immutable Recovery v9 | Tearrs Vietnamese Extension v9 (lower source priority) |
 | JackieChan | MegaRepo Verified Immutable Recovery v4 | Ayu CloudStream Games v4 (lower source priority) |
 | JetFilmizle | MegaRepo Verified Immutable Recovery v41 | Turkish Providers Repository \| @KekikAkademi v41 (lower source priority) |
-| JustPlay | raghav repo v13 | MegaRepo Verified Immutable Recovery v12 (lower version) |
+| JustPlay | raghav repo v14 | MegaRepo Verified Immutable Recovery v12 (lower version) |
 | Kalite18 | MegaRepo Verified Immutable Recovery v2 | Turkish Providers Repository \| @KekikAkademi v2 (lower source priority) |
 | Kawanfilm | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
 | KKPhimProvider | MegaRepo Verified Immutable Recovery v10 | Vietnamese CloudStream Index v10 (lower source priority) |
