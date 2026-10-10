@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-10 00:54:15 UTC",
+  "generatedAt": "2026-10-10 09:53:54 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
+  "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "releaseAuthorized": false,
   "previewPolicy": "compatibility",
   "previewOfCandidateStatus": "READY",
@@ -36,7 +36,7 @@
       "includedCount": 81,
       "packageFailed": 0,
       "duplicateSkipped": 4,
-      "integrityExceptions": 0,
+      "integrityExceptions": 1,
       "deferredUnverified": 0
     },
     {
@@ -134,8 +134,8 @@
       "includedCount": 15,
       "packageFailed": 0,
       "duplicateSkipped": 3,
-      "integrityExceptions": 0,
-      "deferredUnverified": 0
+      "integrityExceptions": 1,
+      "deferredUnverified": 1
     },
     {
       "id": "rearabi",
@@ -536,15 +536,15 @@
   },
   "integrityHealth": {
     "candidateChecked": 547,
-    "candidateAccepted": 545,
-    "immutableOldRetained": 2,
-    "pinnedPreviousRecovered": 2,
-    "unverifiedPreviousCarried": 0,
+    "candidateAccepted": 543,
+    "immutableOldRetained": 3,
+    "pinnedPreviousRecovered": 3,
+    "unverifiedPreviousCarried": 1,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 2,
+    "changedOrFailedCandidates": 4,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": false
+    "releaseEligibleWithWarnings": true
   },
   "duplicates": [
     {
@@ -1094,7 +1094,7 @@
     {
       "plugin": "JustPlay",
       "selectedSource": "raghav repo",
-      "selectedVersion": 13,
+      "selectedVersion": 14,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 12,
       "reason": "lower version"
@@ -2336,7 +2336,7 @@
     {
       "plugin": "JustPlay",
       "selectedSource": "raghav repo",
-      "selectedVersion": 13,
+      "selectedVersion": 14,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 12,
       "reason": "lower version"
@@ -3033,14 +3033,29 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "Ultima",
+        "name": "Ultima",
+        "version": 65,
+        "sourceId": "phisher",
+        "sourceName": "Phisher Repo",
+        "category": "Other",
+        "fromVersion": 65,
+        "toVersion": 65,
+        "fromSourceId": "phisher",
+        "fromSource": "Phisher Repo",
+        "toSourceId": "phisher",
+        "toSource": "Phisher Repo"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -3050,7 +3065,16 @@
   },
   "customProviderChanges": [],
   "removedPlugins": [],
-  "deferredUnverified": [],
+  "deferredUnverified": [
+    {
+      "plugin": "LK21",
+      "sourceId": "nontonindo",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    }
+  ],
   "quarantineIncidents": [
     {
       "plugin": "justplay",
@@ -3061,12 +3085,28 @@
       "previousUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 413801,
-      "observedActualSHA256": "sha256-1f59166071f6c9143505eb1db6e33ac1d68ec6eab2103d991c194deec87d5333",
+      "observedActualSize": 428325,
+      "observedActualSHA256": "sha256-bd00795360a8051378dc2ed555904260e75ec1d2c171264e962ad6dc17210587",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
       "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "lk21",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "nontonindo",
+      "previousSourceId": "nontonindo",
+      "candidateUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 29246,
+      "observedActualSHA256": "sha256-6dbde56b41b1c07664f0639beba5268c3f245074e6abb582da71fcd4c3f49f9d",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
     },
     {
       "plugin": "torrentsv1",
@@ -3083,13 +3123,29 @@
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/TorrentsV1.cs3",
       "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "ultima",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "phisher",
+      "previousSourceId": "phisher",
+      "candidateUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 243369,
+      "observedActualSHA256": "sha256-10cbe6a0e11960cc1370cb5b5cab40d137f7671075f694c5e1ee35208dbf6bc5",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
+      "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "21ded0458418546b219ac43ff064fc3fe8c28f09d50af8217a9a786bd2171f57",
+  "originalSourceReportDigest": "4d32f93fa9af214c4ef8d1bcdeab4d7230c309bdb93abf9f5d70f5decbaa9204",
   "inputSnapshotDigests": {
-    "candidate": "4994be649f8f85898634687ff5af65e7059c0bf3eb1a5a1d01a4b4f6c509b9bb",
+    "candidate": "9e652d6b88c3e9afb35af0041abb5292a300af12cc0742306f5b5482ca361385",
     "previous": "895776db0e8c28275e0b721e1f9b36df4d85d333119dc4ef883487b012e47b0c",
-    "candidateProvenance": "55da04819547a0302ce2780a50c59e8d65d059c0b7e208c8a6e6023e700ba67c",
+    "candidateProvenance": "fccc8629ef37d3214c2471655dba7ae6dc7f429c0c8e6f4429f6264f29e4de09",
     "previousProvenance": "8c45f532cbfc09f060f9587dba41a02f3d862454607f1f390682ba5807e83bd6"
   },
   "releaseEligible": true,
