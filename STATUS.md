@@ -1,19 +1,19 @@
 # Production Aggregation Status
 
-Generated: **2026-10-10 21:47:17 UTC**
+Generated: **2026-10-10 22:34:36 UTC**
 
-Candidate status: **READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW**
+Candidate status: **READY - GUARDED, NO DEFERRED UPDATES**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **548 candidate packages** inspected for declared length and SHA-256 when present.
 - **542 candidates** accepted under the published trust rules.
-- **1 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **4 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **5 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -364,7 +364,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 294 | **[Other] LittleMermaid** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 295 | **[Live] LIVETVProvider** | 37 | en | Live | raghav repo | Unchanged |
 | 296 | **[Live] LivXowProvider** | 20 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 297 | **[Asian] LK21** | 4 | id | Movie | Nonton Indo | Deferred: previous metadata, unverified upstream bytes |
+| 297 | **[Asian] LK21** | 4 | id | Movie | Nonton Indo | Updated (verified by candidate policy) |
 | 298 | **[Arabic] LodyNet** | 2 | ar | Movie, tvTypes | Re-3arabi | Unchanged |
 | 299 | **[Adult] Longvideos** | 3 | en | NSFW | CXXX | Unchanged |
 | 300 | **[Tools] M3UPlaylistPlayerProvider** | 18 | en | Live | CNC Repo (All Language) | Unchanged |

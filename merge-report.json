@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-10 21:47:17 UTC",
+  "generatedAt": "2026-10-10 22:34:36 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "releaseAuthorized": false,
   "previewPolicy": "compatibility",
   "previewOfCandidateStatus": "READY",
@@ -135,7 +135,7 @@
       "packageFailed": 0,
       "duplicateSkipped": 3,
       "integrityExceptions": 1,
-      "deferredUnverified": 1
+      "deferredUnverified": 0
     },
     {
       "id": "rearabi",
@@ -537,14 +537,14 @@
   "integrityHealth": {
     "candidateChecked": 548,
     "candidateAccepted": 542,
-    "immutableOldRetained": 4,
-    "pinnedPreviousRecovered": 4,
-    "unverifiedPreviousCarried": 1,
+    "immutableOldRetained": 5,
+    "pinnedPreviousRecovered": 5,
+    "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
     "changedOrFailedCandidates": 6,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": true
+    "releaseEligibleWithWarnings": false
   },
   "duplicates": [
     {
@@ -3049,14 +3049,29 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "LK21",
+        "name": "LK21",
+        "version": 4,
+        "sourceId": "nontonindo",
+        "sourceName": "Nonton Indo",
+        "category": "Asian",
+        "fromVersion": 4,
+        "toVersion": 4,
+        "fromSourceId": "nontonindo",
+        "fromSource": "Nonton Indo",
+        "toSourceId": "nontonindo",
+        "toSource": "Nonton Indo"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -3066,16 +3081,7 @@
   },
   "customProviderChanges": [],
   "removedPlugins": [],
-  "deferredUnverified": [
-    {
-      "plugin": "LK21",
-      "sourceId": "nontonindo",
-      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    }
-  ],
+  "deferredUnverified": [],
   "quarantineIncidents": [
     {
       "plugin": "justplay",
@@ -3095,7 +3101,7 @@
     },
     {
       "plugin": "lk21",
-      "disposition": "quarantined_existing",
+      "disposition": "retained_immutable_previous",
       "candidateSourceId": "nontonindo",
       "previousSourceId": "nontonindo",
       "candidateUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
@@ -3104,10 +3110,10 @@
       "observedVerification": "hash_verified",
       "observedActualSize": 29246,
       "observedActualSHA256": "sha256-6dbde56b41b1c07664f0639beba5268c3f245074e6abb582da71fcd4c3f49f9d",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/3621dccaf9604c2a8ed4d1b2ac3d4b2b0e3e838f/LK21.cs3",
+      "fallbackThroughRecoveryLock": true
     },
     {
       "plugin": "streamhubone",
@@ -3174,7 +3180,7 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "e8301db42ae971e6c383b8a00c99151f13d5a721d9a56a6bda259e888023b975",
+  "originalSourceReportDigest": "ba976eb44cc1d64515bc8f593b3081f723696a70966b017683c6596a4447726c",
   "inputSnapshotDigests": {
     "candidate": "ca98ce99491dc931d9c6b965ce59f14506bc055ac4cc310c696ad6708702ccdc",
     "previous": "701f0f0f90a3ef55de776f22089c12fa0a69aee48ea14e97f11a4ad20c746c5c",

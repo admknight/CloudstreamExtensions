@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-10 21:47:17 UTC",
-  "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "generatedAt": "2026-10-10 22:34:36 UTC",
+  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "catalog": {
     "plugins": 547,
     "healthySources": 36,
@@ -10,14 +10,29 @@
   },
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "LK21",
+        "name": "LK21",
+        "version": 4,
+        "sourceId": "nontonindo",
+        "sourceName": "Nonton Indo",
+        "category": "Asian",
+        "fromVersion": 4,
+        "toVersion": 4,
+        "fromSourceId": "nontonindo",
+        "fromSource": "Nonton Indo",
+        "toSourceId": "nontonindo",
+        "toSource": "Nonton Indo"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -29,14 +44,14 @@
   "integrityHealth": {
     "candidateChecked": 548,
     "candidateAccepted": 542,
-    "immutableOldRetained": 4,
-    "pinnedPreviousRecovered": 4,
-    "unverifiedPreviousCarried": 1,
+    "immutableOldRetained": 5,
+    "pinnedPreviousRecovered": 5,
+    "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
     "changedOrFailedCandidates": 6,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": true
+    "releaseEligibleWithWarnings": false
   },
   "releaseAuthorized": false,
   "releaseEligible": true
