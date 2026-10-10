@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10 09:53:54 UTC",
+  "generatedAt": "2026-10-10 17:21:53 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
@@ -21,7 +21,7 @@
       "rawCount": 119,
       "includedCount": 119,
       "packageFailed": 0,
-      "duplicateSkipped": 2,
+      "duplicateSkipped": 3,
       "integrityExceptions": 0,
       "deferredUnverified": 0
     },
@@ -32,10 +32,10 @@
       "index": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/plugins.json",
       "priority": 10,
       "ok": true,
-      "rawCount": 85,
+      "rawCount": 86,
       "includedCount": 81,
       "packageFailed": 0,
-      "duplicateSkipped": 4,
+      "duplicateSkipped": 5,
       "integrityExceptions": 1,
       "deferredUnverified": 0
     },
@@ -217,8 +217,8 @@
       "rawCount": 17,
       "includedCount": 11,
       "packageFailed": 0,
-      "duplicateSkipped": 6,
-      "integrityExceptions": 0,
+      "duplicateSkipped": 5,
+      "integrityExceptions": 1,
       "deferredUnverified": 0
     },
     {
@@ -256,11 +256,11 @@
       "index": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
       "priority": 20,
       "ok": true,
-      "rawCount": 31,
+      "rawCount": 32,
       "includedCount": 28,
       "packageFailed": 0,
       "duplicateSkipped": 1,
-      "integrityExceptions": 2,
+      "integrityExceptions": 3,
       "deferredUnverified": 0
     },
     {
@@ -531,17 +531,17 @@
   "previousPlugins": 547,
   "uniquePlugins": 547,
   "packageHealth": {
-    "reachable": 547,
+    "reachable": 548,
     "failed": 0
   },
   "integrityHealth": {
-    "candidateChecked": 547,
-    "candidateAccepted": 543,
-    "immutableOldRetained": 3,
-    "pinnedPreviousRecovered": 3,
+    "candidateChecked": 548,
+    "candidateAccepted": 542,
+    "immutableOldRetained": 4,
+    "pinnedPreviousRecovered": 4,
     "unverifiedPreviousCarried": 1,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 4,
+    "changedOrFailedCandidates": 6,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true
@@ -1517,11 +1517,11 @@
     },
     {
       "plugin": "StreamHubOne",
-      "selectedSource": "MegaRepo Verified Immutable Recovery",
-      "selectedVersion": 63,
-      "skippedSource": "Desi Extensions",
+      "selectedSource": "Desi Extensions",
+      "selectedVersion": 64,
+      "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
-      "reason": "lower source priority"
+      "reason": "lower version"
     },
     {
       "plugin": "StreamingCommunity",
@@ -1706,6 +1706,14 @@
       "skippedSource": "Turkish Providers Repository | @KekikAkademi",
       "skippedVersion": 5,
       "reason": "lower source priority"
+    },
+    {
+      "plugin": "WatchParty",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 5,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 1,
+      "reason": "lower version"
     },
     {
       "plugin": "WebteIzle",
@@ -2759,11 +2767,11 @@
     },
     {
       "plugin": "StreamHubOne",
-      "selectedSource": "MegaRepo Verified Immutable Recovery",
-      "selectedVersion": 63,
-      "skippedSource": "Desi Extensions",
+      "selectedSource": "Desi Extensions",
+      "selectedVersion": 64,
+      "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
-      "reason": "lower source priority"
+      "reason": "lower version"
     },
     {
       "plugin": "StreamingCommunity",
@@ -2950,6 +2958,14 @@
       "reason": "lower source priority"
     },
     {
+      "plugin": "WatchParty",
+      "selectedSource": "DieGon Repository",
+      "selectedVersion": 5,
+      "skippedSource": "Phisher Repo",
+      "skippedVersion": 1,
+      "reason": "lower version"
+    },
+    {
       "plugin": "WebteIzle",
       "selectedSource": "MegaRepo Verified Immutable Recovery",
       "selectedVersion": 15,
@@ -3033,29 +3049,14 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 546,
+    "updated": 0,
+    "unchanged": 547,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [
-      {
-        "plugin": "Ultima",
-        "name": "Ultima",
-        "version": 65,
-        "sourceId": "phisher",
-        "sourceName": "Phisher Repo",
-        "category": "Other",
-        "fromVersion": 65,
-        "toVersion": 65,
-        "fromSourceId": "phisher",
-        "fromSource": "Phisher Repo",
-        "toSourceId": "phisher",
-        "toSource": "Phisher Repo"
-      }
-    ],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
@@ -3109,6 +3110,38 @@
       "fallbackThroughRecoveryLock": false
     },
     {
+      "plugin": "streamhubone",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "desi",
+      "previousSourceId": "local-pinned-recovery",
+      "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/StreamHubOne.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 1099814,
+      "observedActualSHA256": "sha256-ec83a7551584400794db180bae2fd425c9a668fa3d792a6c56b2e0c50cfdf9e1",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
+      "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "toonix",
+      "disposition": "withheld_new",
+      "candidateSourceId": "raghav",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Toonix.cs3",
+      "previousUrl": null,
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 55214,
+      "observedActualSHA256": "sha256-dd240d7b51ba9dcb5d549f22b0998f9510bde6d0b8309259fbbcf8ce2666d0ad",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "torrentsv1",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "raghav",
@@ -3130,23 +3163,23 @@
       "candidateSourceId": "phisher",
       "previousSourceId": "phisher",
       "candidateUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/Ultima.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 243369,
-      "observedActualSHA256": "sha256-10cbe6a0e11960cc1370cb5b5cab40d137f7671075f694c5e1ee35208dbf6bc5",
+      "observedActualSize": 338701,
+      "observedActualSHA256": "sha256-fcd9e3e6f05690a0c57159dbffea4cb390cccaaa5b39fade8cc2b799ef517227",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "4d32f93fa9af214c4ef8d1bcdeab4d7230c309bdb93abf9f5d70f5decbaa9204",
+  "originalSourceReportDigest": "d5a1e13ed50698ebf79b9cef26a459b1f73c83e3bfbea54dca0eaaf31545e3ca",
   "inputSnapshotDigests": {
-    "candidate": "9e652d6b88c3e9afb35af0041abb5292a300af12cc0742306f5b5482ca361385",
-    "previous": "895776db0e8c28275e0b721e1f9b36df4d85d333119dc4ef883487b012e47b0c",
-    "candidateProvenance": "fccc8629ef37d3214c2471655dba7ae6dc7f429c0c8e6f4429f6264f29e4de09",
-    "previousProvenance": "8c45f532cbfc09f060f9587dba41a02f3d862454607f1f390682ba5807e83bd6"
+    "candidate": "4cb4579f6bc6f45ae6f238b0fa163c34bc3326a076107aa68d2d33832396f4e5",
+    "previous": "701f0f0f90a3ef55de776f22089c12fa0a69aee48ea14e97f11a4ad20c746c5c",
+    "candidateProvenance": "03ecde77252168995ecfd8821f2251faee9effe2183c5feb6e98a6d5960880c4",
+    "previousProvenance": "a183ab0294d66f8223ac59048b3771bbc232a8b5fc368e061bd48ab4cebbd7d7"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

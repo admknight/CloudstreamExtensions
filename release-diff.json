@@ -1,38 +1,23 @@
 {
-  "generatedAt": "2026-10-10 09:53:54 UTC",
+  "generatedAt": "2026-10-10 17:21:53 UTC",
   "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "catalog": {
     "plugins": 547,
     "healthySources": 36,
     "failedSources": 0,
-    "reachablePackages": 547,
+    "reachablePackages": 548,
     "packageFailures": 0
   },
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 546,
+    "updated": 0,
+    "unchanged": 547,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [
-      {
-        "plugin": "Ultima",
-        "name": "Ultima",
-        "version": 65,
-        "sourceId": "phisher",
-        "sourceName": "Phisher Repo",
-        "category": "Other",
-        "fromVersion": 65,
-        "toVersion": 65,
-        "fromSourceId": "phisher",
-        "fromSource": "Phisher Repo",
-        "toSourceId": "phisher",
-        "toSource": "Phisher Repo"
-      }
-    ],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
@@ -42,13 +27,13 @@
   },
   "customProviderChanges": [],
   "integrityHealth": {
-    "candidateChecked": 547,
-    "candidateAccepted": 543,
-    "immutableOldRetained": 3,
-    "pinnedPreviousRecovered": 3,
+    "candidateChecked": 548,
+    "candidateAccepted": 542,
+    "immutableOldRetained": 4,
+    "pinnedPreviousRecovered": 4,
     "unverifiedPreviousCarried": 1,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 4,
+    "changedOrFailedCandidates": 6,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true
