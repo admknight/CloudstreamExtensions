@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-10 09:53:54 UTC**
+Last successful refresh: **2026-10-10 17:21:53 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
-- **547 candidate packages** inspected for declared length and SHA-256 when present.
-- **543 candidates** accepted under the published trust rules.
+- **548 candidate packages** inspected for declared length and SHA-256 when present.
+- **542 candidates** accepted under the published trust rules.
 - **1 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **3 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **4 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -114,8 +114,8 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 
 | Source | Index | Raw | Published | Package failed | Duplicate-skipped |
 | --- | --- | ---: | ---: | ---: | ---: |
-| [MegaRepo Verified Immutable Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 119 | 119 | 0 | 2 |
-| [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | ✅ OK | 85 | 81 | 0 | 4 |
+| [MegaRepo Verified Immutable Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 119 | 119 | 0 | 3 |
+| [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | ✅ OK | 86 | 81 | 0 | 5 |
 | [Cinephile](https://github.com/rockhero1234/cinephile) | ✅ OK | 5 | 0 | 0 | 4 |
 | [CSX](https://github.com/SaurabhKaperwan/CSX) | ✅ OK | 5 | 5 | 0 | 0 |
 | [NetMirror Extension](https://github.com/Sushan64/NetMirror-Extension) | ✅ OK | 1 | 1 | 0 | 0 |
@@ -128,10 +128,10 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 21 | 21 | 0 | 0 |
 | [CloudX-V2](https://github.com/Asm0d3usX/CloudX-V2) | ✅ OK | 18 | 0 | 0 | 18 |
 | [Storm-ext Fork by redblacker8](https://github.com/redblacker8/storm-ext) | ✅ OK | 36 | 36 | 0 | 0 |
-| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 17 | 11 | 0 | 6 |
+| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 17 | 11 | 0 | 5 |
 | [FLUMMOX Repo](https://github.com/FlummoxGamer/FLUMMOX-Repo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Ayu CloudStream Games](https://github.com/errorcode26/Ayu-CloudStream-Games) | ✅ OK | 21 | 0 | 0 | 21 |
-| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 31 | 28 | 0 | 1 |
+| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 32 | 28 | 0 | 1 |
 | [DieGon Repository](https://github.com/DieGon7771/ItaliaInStreaming) | ✅ OK | 18 | 17 | 0 | 1 |
 | [Reflex Repo](https://github.com/Reflex755/ReflexRepo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [cs-karma](https://github.com/Kraptor123/cs-Karma) | ✅ OK | 33 | 30 | 0 | 3 |
@@ -775,7 +775,7 @@ CloudStream display prefix: `[Other]`
 | 35 | **SuperMario** | 14 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 36 | **TekkenAdvance** | 7 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 37 | **TombRaider** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 38 | **Ultima** | 65 | en | All | Phisher Repo | Updated (verified by candidate policy) |
+| 38 | **Ultima** | 65 | en | All | Phisher Repo | Unchanged |
 | 39 | **UltimaBeta** | 7 | en | All | MegaRepo Verified Immutable Recovery | Unchanged |
 | 40 | **YouTube** | 15 |  | Others | doGior's Had Enough | Unchanged |
 | 41 | **Zelda** | 8 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -910,7 +910,7 @@ When the same plugin is published by more than one source, the highest version i
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | MegaRepo Verified Immutable Recovery v63 | Desi Extensions v63 (lower source priority) |
+| StreamHubOne | Desi Extensions v64 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |
@@ -934,6 +934,7 @@ When the same plugin is published by more than one source, the highest version i
 | VipPhimProvider | MegaRepo Verified Immutable Recovery v9 | Vietnamese CloudStream Index v9 (lower source priority) |
 | ViStreamProvider | MegaRepo Verified Immutable Recovery v35 | Tearrs Vietnamese Extension v35 (lower source priority) |
 | Watch2Movies | MegaRepo Verified Immutable Recovery v5 | Turkish Providers Repository \| @KekikAkademi v5 (lower source priority) |
+| WatchParty | DieGon Repository v5 | Phisher Repo v1 (lower version) |
 | WebteIzle | MegaRepo Verified Immutable Recovery v15 | Turkish Providers Repository \| @KekikAkademi v15 (lower source priority) |
 | WGFilm21 | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
 | Xhamster | MegaRepo Verified Immutable Recovery v1 | Turkish Providers Repository \| @KekikAkademi v1 (lower source priority) |
