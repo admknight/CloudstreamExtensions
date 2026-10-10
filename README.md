@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-09 22:25:33 UTC**
+Last successful refresh: **2026-10-10 00:54:15 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 16 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **547 candidate packages** inspected for declared length and SHA-256 when present.
-- **546 candidates** accepted under the published trust rules.
+- **545 candidates** accepted under the published trust rules.
 - **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **1 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **2 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -114,7 +114,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 
 | Source | Index | Raw | Published | Package failed | Duplicate-skipped |
 | --- | --- | ---: | ---: | ---: | ---: |
-| [MegaRepo Verified Immutable Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 119 | 119 | 0 | 1 |
+| [MegaRepo Verified Immutable Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 119 | 119 | 0 | 2 |
 | [Phisher Repo](https://github.com/phisher98/cloudstream-extensions-phisher) | ✅ OK | 85 | 81 | 0 | 4 |
 | [Cinephile](https://github.com/rockhero1234/cinephile) | ✅ OK | 5 | 0 | 0 | 4 |
 | [CSX](https://github.com/SaurabhKaperwan/CSX) | ✅ OK | 5 | 5 | 0 | 0 |
@@ -131,7 +131,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 17 | 11 | 0 | 6 |
 | [FLUMMOX Repo](https://github.com/FlummoxGamer/FLUMMOX-Repo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Ayu CloudStream Games](https://github.com/errorcode26/Ayu-CloudStream-Games) | ✅ OK | 21 | 0 | 0 | 21 |
-| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 31 | 28 | 0 | 2 |
+| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 31 | 28 | 0 | 1 |
 | [DieGon Repository](https://github.com/DieGon7771/ItaliaInStreaming) | ✅ OK | 18 | 17 | 0 | 1 |
 | [Reflex Repo](https://github.com/Reflex755/ReflexRepo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [cs-karma](https://github.com/Kraptor123/cs-Karma) | ✅ OK | 33 | 30 | 0 | 3 |
@@ -263,7 +263,7 @@ CloudStream display prefix: `[Movies]`
 | 92 | **PhimMoiProvider** | 9 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 93 | **PhimTuoiThoProvider** | 5 |  | Anime, TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 94 | **RareFilmm** | 15 | en | Movie | CloudStreamHub Recovery Builds | Unchanged |
-| 95 | **Rowdy** | 21 | en | Movie, TvSeries, Anime | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 95 | **Rowdy** | 21 | en | Movie, TvSeries, Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 96 | **SerialnoProvider** | 13 | uk | Cartoon, TvSeries | CakesTwix UK/UA | Unchanged |
 | 97 | **SeriesflixProvider** | 4 | es | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
 | 98 | **SeriesMetroProvider** | 4 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
@@ -531,28 +531,28 @@ CloudStream display prefix: `[Asian]`
 | 11 | **DoramasLatinoX** | 7 | mx | AsianDrama | cs-karma | Unchanged |
 | 12 | **DoramasYTProvider** | 7 | mx | AsianDrama | Storm-ext Fork by redblacker8 | Unchanged |
 | 13 | **Dubbindo** | 2 | id | AsianDrama | cs-karma | Unchanged |
-| 14 | **Dutamovie** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 14 | **Dutamovie** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 15 | **FilmapikProvider** | 21 | id | Movie, TvSeries, AsianDrama, Anime | TheAlyss Repo | Unchanged |
-| 16 | **Filmkita** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
-| 17 | **Filmlokal** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 16 | **Filmkita** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
+| 17 | **Filmlokal** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 18 | **Idlix** | 3 | id | Movie, TvSeries | Nonton Indo | Unchanged |
 | 19 | **IdlixProvider** | 17 | id | TvSeries, Movie, Anime, AsianDrama | Phisher Repo | Unchanged |
-| 20 | **Indomax** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
-| 21 | **Kawanfilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
-| 22 | **KlikXXi** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 20 | **Indomax** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
+| 21 | **Kawanfilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
+| 22 | **KlikXXi** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 23 | **KoreanTurk** | 7 | tr | AsianDrama | MegaRepo Verified Immutable Recovery | Unchanged |
 | 24 | **Kuramanime** | 5 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
 | 25 | **Kuronime** | 2 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
 | 26 | **LayarKaca** | 15 | id | Movie, TvSeries | cs-karma | Unchanged |
 | 27 | **LayarKacaProvider** | 10 | id | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
-| 28 | **LayarWarna** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 28 | **LayarWarna** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 29 | **LK21** | 4 | id | Movie | Nonton Indo | Unchanged |
-| 30 | **MidasXXi** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 30 | **MidasXXi** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 31 | **Nekokun** | 4 | id | Anime | cs-karma | Unchanged |
 | 32 | **Nekopoi** | 1 | id | NSFW | Nonton Indo | Unchanged |
-| 33 | **Ngefilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 33 | **Ngefilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 34 | **Nimegami** | 2 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
-| 35 | **Nomat** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 35 | **Nomat** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 36 | **OHLI24** | 7 | ko | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
 | 37 | **Oploverz** | 2 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
 | 38 | **Otakudesu** | 1 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
@@ -560,13 +560,13 @@ CloudStream display prefix: `[Asian]`
 | 40 | **Pencurimovie** | 8 | id | Movie, TvSeries | Phisher Repo | Unchanged |
 | 41 | **Pinoymoviepedia** | 5 | fil | Movie, TvSeries | Phisher Repo | Unchanged |
 | 42 | **Pmsm** | 8 | id | Movie, TvSeries | Phisher Repo | Unchanged |
-| 43 | **Pusatmovie** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 43 | **Pusatmovie** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 44 | **Rebahin** | 1 | id | Movie, TvSeries | Nonton Indo | Unchanged |
 | 45 | **Sarangfilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
-| 46 | **Savefilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 46 | **Savefilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 47 | **SemiRebahin** | 1 | id | NSFW | Nonton Indo | Unchanged |
 | 48 | **Sokuja** | 4 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
-| 49 | **WGFilm21** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 49 | **WGFilm21** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 50 | **YlnimeProvider** | 6 | id | Anime, TvSeries, Movie | TheAlyss Repo | Unchanged |
 
 ### 📡 Live — 47 plugins
@@ -744,7 +744,7 @@ CloudStream display prefix: `[Other]`
 | 4 | **AvatarAirbender** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 5 | **Castlevania** | 8 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 6 | **Contra** | 10 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 7 | **Cross-Device Sync** | 9 |  |  | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 7 | **Cross-Device Sync** | 9 |  |  | MegaRepo Verified Immutable Recovery | Unchanged |
 | 8 | **DailymotionProvider** | 4 |  | Others | ReCloudStream Official Extensions | Unchanged |
 | 9 | **DesertStrike** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 10 | **Doom** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -765,7 +765,7 @@ CloudStream display prefix: `[Other]`
 | 25 | **MegaProvider** | 2 | en |  | MegaRepo Verified Immutable Recovery | Unchanged |
 | 26 | **MetalSlugAdvance** | 7 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 27 | **MinishCap** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 28 | **MonPlayerProvider** | 9 |  | Others | MegaRepo Verified Immutable Recovery | Updated (verified by candidate policy) |
+| 28 | **MonPlayerProvider** | 9 |  | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 29 | **Nebula** | 1 | en | Others | doGior's Had Enough | Unchanged |
 | 30 | **OnePiece** | 16 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 31 | **OnShort** | 3 | en | AsianDrama | cs-karma | Unchanged |
@@ -857,7 +857,7 @@ When the same plugin is published by more than one source, the highest version i
 | IPTVProvider | MegaRepo Verified Immutable Recovery v9 | Tearrs Vietnamese Extension v9 (lower source priority) |
 | JackieChan | MegaRepo Verified Immutable Recovery v4 | Ayu CloudStream Games v4 (lower source priority) |
 | JetFilmizle | MegaRepo Verified Immutable Recovery v41 | Turkish Providers Repository \| @KekikAkademi v41 (lower source priority) |
-| JustPlay | MegaRepo Verified Immutable Recovery v12 | raghav repo v12 (lower source priority) |
+| JustPlay | raghav repo v13 | MegaRepo Verified Immutable Recovery v12 (lower version) |
 | Kalite18 | MegaRepo Verified Immutable Recovery v2 | Turkish Providers Repository \| @KekikAkademi v2 (lower source priority) |
 | Kawanfilm | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
 | KKPhimProvider | MegaRepo Verified Immutable Recovery v10 | Vietnamese CloudStream Index v10 (lower source priority) |
