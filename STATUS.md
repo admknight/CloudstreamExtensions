@@ -1,8 +1,8 @@
 # Production Aggregation Status
 
-Generated: **2026-10-10 22:34:36 UTC**
+Generated: **2026-10-11 05:50:39 UTC**
 
-Candidate status: **READY - GUARDED, NO DEFERRED UPDATES**
+Candidate status: **READY - GUARDED, 13 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -10,10 +10,10 @@ Candidate status: **READY - GUARDED, NO DEFERRED UPDATES**
 
 ## Integrity status — separate from package reachability
 
-- **548 candidate packages** inspected for declared length and SHA-256 when present.
-- **542 candidates** accepted under the published trust rules.
-- **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **5 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **551 candidate packages** inspected for declared length and SHA-256 when present.
+- **528 candidates** accepted under the published trust rules.
+- **13 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **6 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -30,18 +30,18 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | [Redowan CloudStream](https://github.com/redowan99/Redowan-CloudStream) | ✅ OK | 18 | 16 | 0 | 2 |
 | [Vietnamese CloudStream Index](https://github.com/t23-02/cloudstream) | ✅ OK | 16 | 0 | 0 | 14 |
 | [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 18 | 15 | 0 | 3 |
-| [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 40 | 37 | 0 | 3 |
+| [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 41 | 37 | 0 | 3 |
 | [TheAlyss Repo](https://github.com/TheAlyss/cloudstream-AlyssRepo) | ✅ OK | 3 | 2 | 0 | 1 |
 | [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 21 | 21 | 0 | 0 |
 | [CloudX-V2](https://github.com/Asm0d3usX/CloudX-V2) | ✅ OK | 18 | 0 | 0 | 18 |
 | [Storm-ext Fork by redblacker8](https://github.com/redblacker8/storm-ext) | ✅ OK | 36 | 36 | 0 | 0 |
-| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 17 | 11 | 0 | 5 |
+| [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 18 | 11 | 0 | 5 |
 | [FLUMMOX Repo](https://github.com/FlummoxGamer/FLUMMOX-Repo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Ayu CloudStream Games](https://github.com/errorcode26/Ayu-CloudStream-Games) | ✅ OK | 21 | 0 | 0 | 21 |
 | [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 32 | 28 | 0 | 1 |
 | [DieGon Repository](https://github.com/DieGon7771/ItaliaInStreaming) | ✅ OK | 18 | 17 | 0 | 1 |
 | [Reflex Repo](https://github.com/Reflex755/ReflexRepo) | ✅ OK | 2 | 2 | 0 | 0 |
-| [cs-karma](https://github.com/Kraptor123/cs-Karma) | ✅ OK | 33 | 30 | 0 | 3 |
+| [cs-karma](https://github.com/Kraptor123/cs-Karma) | ✅ OK | 34 | 30 | 0 | 3 |
 | [CNC Repo (All Language)](https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension) | ✅ OK | 36 | 36 | 0 | 0 |
 | [Turkish Providers Repository \| @KekikAkademi](https://github.com/maarrem/cs-Kekik) | ✅ OK | 43 | 0 | 0 | 43 |
 | [CXXX](https://github.com/phisher98/CXXX) | ✅ OK | 70 | 66 | 0 | 4 |
@@ -94,7 +94,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 24 | **[Asian] Animasu** | 2 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
 | 25 | **[Arabic] Anime-Phoenix** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Unchanged |
 | 26 | **[Arabic] Anime4up** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | Unchanged |
-| 27 | **[Anime] AnimeAV** | 19 | mx | Anime | cs-karma | Unchanged |
+| 27 | **[Anime] AnimeAV** | 19 | mx | Anime | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 28 | **[Anime] Animeav1** | 9 | mx | Movie, Anime, AnimeMovie | Phisher Repo | Unchanged |
 | 29 | **[Anime] AnimeAV1Provider** | 1 | mx | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
 | 30 | **[Anime] AnimeciX** | 21 | tr | Anime | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -113,7 +113,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 43 | **[Anime] AnimeONProvider** | 41 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Unchanged |
 | 44 | **[Anime] AnimePahe** | 43 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
 | 45 | **[Arabic] Animerco** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
-| 46 | **[Arabic] AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Unchanged |
+| 46 | **[Arabic] AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Updated (verified by candidate policy) |
 | 47 | **[Indian] Animesalt** | 18 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 48 | **[Anime] AnimeSaturn** | 4 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
 | 49 | **[Anime] AnimeSuge** | 10 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | Unchanged |
@@ -126,7 +126,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 56 | **[Anime] AnimeWorld** | 20 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
 | 57 | **[Indian] AnimeWorldIndia** | 8 | hi | Anime, AnimeMovie, Cartoon | raghav repo | Unchanged |
 | 58 | **[Anime] Animexin** | 16 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
-| 59 | **[Anime] AnimeYTX** | 10 | mx | Anime | cs-karma | Unchanged |
+| 59 | **[Anime] AnimeYTX** | 10 | mx | Anime | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 60 | **[Anime] Animo** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 61 | **[Anime] AniPM** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 62 | **[Anime] AniSnatch** | 2 | en | Anime, AnimeMovie, OVA | Phisher Repo | Unchanged |
@@ -146,7 +146,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 76 | **[Other] AvatarAirbender** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 77 | **[Anime] BambooUAProvider** | 13 | uk | Anime, AsianDrama | CakesTwix UK/UA | Unchanged |
 | 78 | **[Indian] BanglaPlex** | 8 | bn | Movie, TvSeries | Phisher Repo | Unchanged |
-| 79 | **[Live] BasketballReplays** | 4 | en | Live | cs-karma | Unchanged |
+| 79 | **[Live] BasketballReplays** | 4 | en | Live | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 80 | **[Live] BdixBdipTV** | 10 | bn | Live | Redowan CloudStream | Unchanged |
 | 81 | **[Indian] BdixCircleftp** | 27 | bn | Movie, TvSeries, Anime, AnimeMovie, OVA, Cartoon, AsianDrama, Others, Documentary | Redowan CloudStream | Unchanged |
 | 82 | **[Live] BdixCloudTV** | 6 | bn | Live | Redowan CloudStream | Unchanged |
@@ -226,7 +226,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 156 | **[Other] Doom** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 157 | **[Indian] DoraBash** | 14 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 158 | **[Asian] DoramasFlixProvider** | 8 | mx | AsianDrama | Storm-ext Fork by redblacker8 | Unchanged |
-| 159 | **[Asian] DoramasLatinoX** | 7 | mx | AsianDrama | cs-karma | Unchanged |
+| 159 | **[Asian] DoramasLatinoX** | 7 | mx | AsianDrama | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 160 | **[Asian] DoramasYTProvider** | 7 | mx | AsianDrama | Storm-ext Fork by redblacker8 | Unchanged |
 | 161 | **[Movies] DoramyWorldProvider** | 2 | uk | AsianDrama, Movie | CakesTwix UK/UA | Unchanged |
 | 162 | **[Movies] DramaDrip** | 3 | en | Movie, TvSeries, AsianDrama | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -242,7 +242,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 172 | **[Movies] EntrepeliculasyseriesProvider** | 10 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
 | 173 | **[Adult] Eporner** | 13 | en | NSFW | CXXX | Unchanged |
 | 174 | **[Arabic] Eshek** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
-| 175 | **[Arabic] Esheaq** | 21 | ar | Movie, TvSeries | cs-karma | Unchanged |
+| 175 | **[Arabic] Esheaq** | 21 | ar | Movie, TvSeries | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 176 | **[Movies] Extractors** | 67 |  | TvSeries, Movie, AsianDrama, Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 177 | **[Arabic] Faselhd** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 178 | **[Indian] Fibwatch** | 12 | bn | Movie, TvSeries | Phisher Repo | Unchanged |
@@ -255,7 +255,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 185 | **[Movies] FilmModu** | 15 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 186 | **[Indian] Fivemovierulz** | 8 | hi | TvSeries, Movie | Phisher Repo | Unchanged |
 | 187 | **[Other] FlappyBird** | 8 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 188 | **[Movies] Flixlatam** | 8 | mx | Movie | cs-karma | Unchanged |
+| 188 | **[Movies] Flixlatam** | 8 | mx | Movie | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 189 | **[Live] Footballia** | 9 | en | Live | cs-karma | Unchanged |
 | 190 | **[Sports] FootReplays** | 6 | en | Others | Redowan CloudStream | Unchanged |
 | 191 | **[Movies] FourKHDHub** | 41 | en | Movie, TvSeries | Phisher Repo | Unchanged |
@@ -265,13 +265,13 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 195 | **[Movies] FullHDFilm** | 35 | tr | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 196 | **[Movies] FullHDFilmizlesene** | 27 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 197 | **[Adult] FullPorner** | 2 | en | NSFW | MegaRepo Verified Immutable Recovery | Unchanged |
-| 198 | **[Live] FullRaces** | 15 | en | Live, Others | cs-karma | Unchanged |
+| 198 | **[Live] FullRaces** | 15 | en | Live, Others | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 199 | **[Sports] FullReplays** | 6 | en | Others | Redowan CloudStream | Unchanged |
 | 200 | **[Movies] FullyMaza** | 7 | en | Movie, TvSeries, AnimeMovie, Cartoon | Redowan CloudStream | Unchanged |
 | 201 | **[Adult] FXPrnHD** | 3 | en | NSFW | CXXX | Unchanged |
 | 202 | **[Other] Game2048** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 203 | **[Movies] GDIndex** | 4 | en | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
-| 204 | **[Movies] Gnulahd** | 10 | mx | Movie, Anime, TvSeries | cs-karma | Unchanged |
+| 204 | **[Movies] Gnulahd** | 10 | mx | Movie, Anime, TvSeries | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 205 | **[Other] GoldenAudiobook** | 33 | en | Others | CNC Repo (All Language) | Unchanged |
 | 206 | **[Other] GoldenAudiobooks** | 1 | en | Others | Phisher Repo | Unchanged |
 | 207 | **[Movies] Goojara** | 5 | en | Movie, TvSeries | Phisher Repo | Unchanged |
@@ -356,7 +356,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 286 | **[Movies] LaMovieProvider** | 2 | mx | TvSeries, Movie, Anime | Storm-ext Fork by redblacker8 | Unchanged |
 | 287 | **[Movies] Latanime** | 9 | mx | Movie | cs-karma | Unchanged |
 | 288 | **[Anime] LatAnimeProvider** | 5 | mx | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
-| 289 | **[Asian] LayarKaca** | 15 | id | Movie, TvSeries | cs-karma | Unchanged |
+| 289 | **[Asian] LayarKaca** | 15 | id | Movie, TvSeries | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 290 | **[Asian] LayarKacaProvider** | 10 | id | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
 | 291 | **[Asian] LayarWarna** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 292 | **[Movies] LibraryOfLadev** | 3 | en | Movie | Reflex Repo | Unchanged |
@@ -364,7 +364,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 294 | **[Other] LittleMermaid** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 295 | **[Live] LIVETVProvider** | 37 | en | Live | raghav repo | Unchanged |
 | 296 | **[Live] LivXowProvider** | 20 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 297 | **[Asian] LK21** | 4 | id | Movie | Nonton Indo | Updated (verified by candidate policy) |
+| 297 | **[Asian] LK21** | 4 | id | Movie | Nonton Indo | Unchanged |
 | 298 | **[Arabic] LodyNet** | 2 | ar | Movie, tvTypes | Re-3arabi | Unchanged |
 | 299 | **[Adult] Longvideos** | 3 | en | NSFW | CXXX | Unchanged |
 | 300 | **[Tools] M3UPlaylistPlayerProvider** | 18 | en | Live | CNC Repo (All Language) | Unchanged |
@@ -391,7 +391,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 321 | **[Movies] Moviesmod** | 33 |  | TvSeries, Movie, AsianDrama, Anime | CSX | Unchanged |
 | 322 | **[Indian] MoviezwapProvider** | 32 | te | Movie | CNC Repo (All Language) | Unchanged |
 | 323 | **[Movies] MoviPK** | 4 | en | Movie, TvSeries | Redowan CloudStream | Unchanged |
-| 324 | **[Movies] Movix** | 32 | fr | Movie, TvSeries, Anime | cs-karma | Unchanged |
+| 324 | **[Movies] Movix** | 32 | fr | Movie, TvSeries, Anime | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 325 | **[Indian] Mp4Moviez** | 3 | hi | Movie, TvSeries, NSFW | Redowan CloudStream | Unchanged |
 | 326 | **[Indian] MPlayerProvider** | 9 | hi | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
 | 327 | **[Movies] Multimovies** | 8 | en | Movie, TvSeries, Anime | raghav repo | Unchanged |
@@ -399,7 +399,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 329 | **[Anime] MundoDonghuaProvider** | 4 | es | Anime, OVA, AnimeMovie | Storm-ext Fork by redblacker8 | Unchanged |
 | 330 | **[Arabic] Mycima** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | Unchanged |
 | 331 | **[Other] Nebula** | 1 | en | Others | doGior's Had Enough | Unchanged |
-| 332 | **[Asian] Nekokun** | 4 | id | Anime | cs-karma | Unchanged |
+| 332 | **[Asian] Nekokun** | 4 | id | Anime | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 333 | **[Asian] Nekopoi** | 1 | id | NSFW | Nonton Indo | Unchanged |
 | 334 | **[Movies] Netcinez** | 5 | pt-br | Movie, TvSeries | Phisher Repo | Unchanged |
 | 335 | **[Adult] NetflavProvider** | 3 |  | NSFW | CXXX | Unchanged |
@@ -417,7 +417,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 347 | **[Movies] ObejrzyjTo** | 3 | pl | Movie, TvSeries | Phisher Repo | Unchanged |
 | 348 | **[Movies] OHiTVProvider** | 2 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 349 | **[Asian] OHLI24** | 7 | ko | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
-| 350 | **[Movies] OK** | 8 | ru | Movie, TvSeries | cs-karma | Unchanged |
+| 350 | **[Movies] OK** | 8 | ru | Movie, TvSeries | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 351 | **[Anime] OnePace** | 23 | en | Anime | Phisher Repo | Unchanged |
 | 352 | **[Other] OnePiece** | 16 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 353 | **[Movies] OneTouchTV** | 5 | en | AsianDrama, TvSeries | Phisher Repo | Unchanged |
@@ -608,7 +608,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 538 | **[Adult] YesPornPlease** | 7 | en | NSFW | CXXX | Unchanged |
 | 539 | **[Asian] YlnimeProvider** | 6 | id | Anime, TvSeries, Movie | TheAlyss Repo | Unchanged |
 | 540 | **[Adult] YMaal** | 1 | hi | NSFW | CXXX | Unchanged |
-| 541 | **[Movies] YoTurkish** | 4 | en | TvSeries | cs-karma | Unchanged |
+| 541 | **[Movies] YoTurkish** | 4 | en | TvSeries | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 542 | **[Other] YouTube** | 15 |  | Others | doGior's Had Enough | Unchanged |
 | 543 | **[Live] YoutubeProvider** | 1 |  | Other, Live, TvSeries | ReCloudStream Official Extensions | Unchanged |
 | 544 | **[Movies] YTS** | 11 | en | Movie, Torrent | Phisher Repo | Unchanged |
@@ -665,7 +665,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | FilmMakinesi | MegaRepo Verified Immutable Recovery v40 | Turkish Providers Repository \| @KekikAkademi v40 (lower source priority) |
 | FilmModu | MegaRepo Verified Immutable Recovery v15 | Turkish Providers Repository \| @KekikAkademi v15 (lower source priority) |
 | FlappyBird | MegaRepo Verified Immutable Recovery v8 | Ayu CloudStream Games v8 (lower source priority) |
-| FootReplays | Redowan CloudStream v6 | cs-karma v1 (lower version) |
+| FootReplays | Redowan CloudStream v6 | cs-karma v2 (lower version) |
 | FullHDFilm | MegaRepo Verified Immutable Recovery v35 | Turkish Providers Repository \| @KekikAkademi v35 (lower source priority) |
 | FullHDFilmizlesene | MegaRepo Verified Immutable Recovery v27 | Turkish Providers Repository \| @KekikAkademi v27 (lower source priority) |
 | FullPorner | MegaRepo Verified Immutable Recovery v2 | Turkish Providers Repository \| @KekikAkademi v2 (lower source priority) |
@@ -697,7 +697,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | Krmzy | cs-karma v2 | Re-3arabi v1 (lower version) |
 | KultFilmler | MegaRepo Verified Immutable Recovery v14 | Turkish Providers Repository \| @KekikAkademi v14 (lower source priority) |
 | Latanime | cs-karma v9 | Phisher Repo v5 (lower version) |
-| LayarKaca | cs-karma v15 | CloudX-V2 v1 (lower version) |
+| LayarKaca | cs-karma v16 | CloudX-V2 v1 (lower version) |
 | LayarWarna | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
 | LittleMermaid | MegaRepo Verified Immutable Recovery v1 | Ayu CloudStream Games v1 (lower source priority) |
 | MedalOfHonor | MegaRepo Verified Immutable Recovery v1 | Ayu CloudStream Games v1 (lower source priority) |
@@ -741,7 +741,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | Desi Extensions v64 | MegaRepo Verified Immutable Recovery v63 (lower version) |
+| StreamHubOne | Desi Extensions v66 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |
@@ -765,7 +765,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | VipPhimProvider | MegaRepo Verified Immutable Recovery v9 | Vietnamese CloudStream Index v9 (lower source priority) |
 | ViStreamProvider | MegaRepo Verified Immutable Recovery v35 | Tearrs Vietnamese Extension v35 (lower source priority) |
 | Watch2Movies | MegaRepo Verified Immutable Recovery v5 | Turkish Providers Repository \| @KekikAkademi v5 (lower source priority) |
-| WatchParty | DieGon Repository v5 | Phisher Repo v1 (lower version) |
+| WatchParty | DieGon Repository v5 | Phisher Repo v2 (lower version) |
 | WebteIzle | MegaRepo Verified Immutable Recovery v15 | Turkish Providers Repository \| @KekikAkademi v15 (lower source priority) |
 | WGFilm21 | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
 | Xhamster | MegaRepo Verified Immutable Recovery v1 | Turkish Providers Repository \| @KekikAkademi v1 (lower source priority) |

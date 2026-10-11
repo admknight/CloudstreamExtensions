@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-10 22:34:36 UTC",
+  "generatedAt": "2026-10-11 05:50:39 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
+  "candidateStatus": "READY - GUARDED, 13 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "releaseAuthorized": false,
   "previewPolicy": "compatibility",
   "previewOfCandidateStatus": "READY",
@@ -144,11 +144,11 @@
       "index": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/plugins.json",
       "priority": 25,
       "ok": true,
-      "rawCount": 40,
+      "rawCount": 41,
       "includedCount": 37,
       "packageFailed": 0,
       "duplicateSkipped": 3,
-      "integrityExceptions": 0,
+      "integrityExceptions": 2,
       "deferredUnverified": 0
     },
     {
@@ -214,11 +214,11 @@
       "index": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/plugins.json",
       "priority": 25,
       "ok": true,
-      "rawCount": 17,
+      "rawCount": 18,
       "includedCount": 11,
       "packageFailed": 0,
       "duplicateSkipped": 5,
-      "integrityExceptions": 1,
+      "integrityExceptions": 2,
       "deferredUnverified": 0
     },
     {
@@ -298,12 +298,12 @@
       "index": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/refs/heads/builds/plugins.json",
       "priority": 20,
       "ok": true,
-      "rawCount": 33,
+      "rawCount": 34,
       "includedCount": 30,
       "packageFailed": 0,
       "duplicateSkipped": 3,
-      "integrityExceptions": 0,
-      "deferredUnverified": 0
+      "integrityExceptions": 14,
+      "deferredUnverified": 13
     },
     {
       "id": "cnc",
@@ -531,20 +531,20 @@
   "previousPlugins": 547,
   "uniquePlugins": 547,
   "packageHealth": {
-    "reachable": 548,
+    "reachable": 551,
     "failed": 0
   },
   "integrityHealth": {
-    "candidateChecked": 548,
-    "candidateAccepted": 542,
-    "immutableOldRetained": 5,
-    "pinnedPreviousRecovered": 5,
-    "unverifiedPreviousCarried": 0,
+    "candidateChecked": 551,
+    "candidateAccepted": 528,
+    "immutableOldRetained": 6,
+    "pinnedPreviousRecovered": 6,
+    "unverifiedPreviousCarried": 13,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 6,
+    "changedOrFailedCandidates": 23,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": false
+    "releaseEligibleWithWarnings": true
   },
   "duplicates": [
     {
@@ -912,7 +912,7 @@
       "selectedSource": "Redowan CloudStream",
       "selectedVersion": 6,
       "skippedSource": "cs-karma",
-      "skippedVersion": 1,
+      "skippedVersion": 2,
       "reason": "lower version"
     },
     {
@@ -1166,7 +1166,7 @@
     {
       "plugin": "LayarKaca",
       "selectedSource": "cs-karma",
-      "selectedVersion": 15,
+      "selectedVersion": 16,
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
@@ -1518,7 +1518,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 64,
+      "selectedVersion": 66,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -1712,7 +1712,7 @@
       "selectedSource": "DieGon Repository",
       "selectedVersion": 5,
       "skippedSource": "Phisher Repo",
-      "skippedVersion": 1,
+      "skippedVersion": 2,
       "reason": "lower version"
     },
     {
@@ -2162,7 +2162,7 @@
       "selectedSource": "Redowan CloudStream",
       "selectedVersion": 6,
       "skippedSource": "cs-karma",
-      "skippedVersion": 1,
+      "skippedVersion": 2,
       "reason": "lower version"
     },
     {
@@ -2416,7 +2416,7 @@
     {
       "plugin": "LayarKaca",
       "selectedSource": "cs-karma",
-      "selectedVersion": 15,
+      "selectedVersion": 16,
       "skippedSource": "CloudX-V2",
       "skippedVersion": 1,
       "reason": "lower version"
@@ -2768,7 +2768,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 64,
+      "selectedVersion": 66,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -2962,7 +2962,7 @@
       "selectedSource": "DieGon Repository",
       "selectedVersion": 5,
       "skippedSource": "Phisher Repo",
-      "skippedVersion": 1,
+      "skippedVersion": 2,
       "reason": "lower version"
     },
     {
@@ -3058,18 +3058,18 @@
     "recovered": [],
     "updated": [
       {
-        "plugin": "LK21",
-        "name": "LK21",
-        "version": 4,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 4,
-        "toVersion": 4,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
+        "plugin": "AnimeRift",
+        "name": "AnimeRift",
+        "version": 1,
+        "sourceId": "rearabi",
+        "sourceName": "Re-3arabi",
+        "category": "Arabic",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "rearabi",
+        "fromSource": "Re-3arabi",
+        "toSourceId": "rearabi",
+        "toSource": "Re-3arabi"
       }
     ],
     "removed": []
@@ -3081,8 +3081,289 @@
   },
   "customProviderChanges": [],
   "removedPlugins": [],
-  "deferredUnverified": [],
+  "deferredUnverified": [
+    {
+      "plugin": "AnimeAV",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeAV.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "AnimeYTX",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeYTX.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "BasketballReplays",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/BasketballReplays.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "DoramasLatinoX",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/DoramasLatinoX.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Esheaq",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Esheaq.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Flixlatam",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Flixlatam.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "FullRaces",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/FullRaces.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Gnulahd",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "LayarKaca",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/LayarKaca.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Movix",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Movix.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Nekokun",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Nekokun.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "OK",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OK.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "YoTurkish",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/YoTurkish.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    }
+  ],
   "quarantineIncidents": [
+    {
+      "plugin": "animeav",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeAV.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeAV.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 68843,
+      "observedActualSHA256": "sha256-e11e556c2eafb5b2aca005a5fe001a785ea40903acd4daba5b6125ab529e06ca",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "animerift",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "rearabi",
+      "previousSourceId": "rearabi",
+      "candidateUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/AnimeRift.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/AnimeRift.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 48567,
+      "observedActualSHA256": "sha256-67d0d55cf4984efbe1572f9c00d980a329796215874d72eaba5038aabca3d950",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/c30122a117f1c3571e63a484aaf80f35117ff3e7/AnimeRift.cs3",
+      "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "animeytx",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeYTX.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeYTX.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 82089,
+      "observedActualSHA256": "sha256-68b0e28fd1a94c8a557675dac4db7cb1a424a27f699618f5dfddc691ef6908e7",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "basketballreplays",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/BasketballReplays.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/BasketballReplays.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 55689,
+      "observedActualSHA256": "sha256-d7244d846adc02b44306c952dc0e01d3dcb460f57532a4b26fd3286c6bb61842",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "doramaslatinox",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/DoramasLatinoX.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/DoramasLatinoX.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 64006,
+      "observedActualSHA256": "sha256-612dd16c4ad5bd3b6be5359c162c96fa0298885ac14e84cfb6c2e1ad0cd83e6e",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "egy",
+      "disposition": "withheld_new",
+      "candidateSourceId": "rearabi",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Egy.cs3",
+      "previousUrl": null,
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 49650,
+      "observedActualSHA256": "sha256-d0215f3dbe2dfef244bb9174f9354e43bf7fdd7fbeb9eddac9118ca2347c6ed2",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "esheaq",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Esheaq.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Esheaq.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 17196,
+      "observedActualSHA256": "sha256-16bda1dbb502620efe1406708207c8f167f6e2cd95937858e51f6ba22fa40543",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "flixlatam",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Flixlatam.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Flixlatam.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 78003,
+      "observedActualSHA256": "sha256-00c99bdd57e1628924143a9010688e5e5e40b860b95e2947672b9d7f97e4cb79",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "fullraces",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/FullRaces.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/FullRaces.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 67885,
+      "observedActualSHA256": "sha256-9cbdc07955ac1327632cdc6136339e067cb1cf35ffdf5acfe64ecc23c3a2e107",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "gnulahd",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 73844,
+      "observedActualSHA256": "sha256-2a6b4ffe97ad3564273d717865de323f1a9478e6094181ec9cab303993415153",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "hackstore",
+      "disposition": "withheld_new",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Hackstore.cs3",
+      "previousUrl": null,
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 42915,
+      "observedActualSHA256": "sha256-d0ae64df7d3de29e9bdbf4e229a91c44ba2c1aa91926665f6e47229e191f52ad",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
     {
       "plugin": "justplay",
       "disposition": "retained_immutable_previous",
@@ -3100,12 +3381,28 @@
       "fallbackThroughRecoveryLock": true
     },
     {
+      "plugin": "layarkaca",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/LayarKaca.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/LayarKaca.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 69907,
+      "observedActualSHA256": "sha256-d0a3842a9fe05b428a9dbe41def7bd502e4b1ab5c1f8ea911f8ff48da3cc45c8",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "lk21",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "nontonindo",
       "previousSourceId": "nontonindo",
       "candidateUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/LK21.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/3621dccaf9604c2a8ed4d1b2ac3d4b2b0e3e838f/LK21.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
       "observedActualSize": 29246,
@@ -3116,6 +3413,70 @@
       "fallbackThroughRecoveryLock": true
     },
     {
+      "plugin": "movieshunt",
+      "disposition": "withheld_new",
+      "candidateSourceId": "desi",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/MoviesHunt.cs3",
+      "previousUrl": null,
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 32961,
+      "observedActualSHA256": "sha256-fb0fcf002e5322d1b6ce72256b3a420fac92db802d347b3573f1f10f3d81c95b",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "movix",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Movix.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Movix.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 219238,
+      "observedActualSHA256": "sha256-ced9099329347aa0cd994a5cacb1cad1283a265c27ccbbf947c849d6aa78f646",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "nekokun",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Nekokun.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Nekokun.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 25371,
+      "observedActualSHA256": "sha256-f8bc12bdb75f54b4b9039d44d74b23f54c7358f8aec353cf9c31e5a281a0f7e6",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "ok",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OK.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OK.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 68008,
+      "observedActualSHA256": "sha256-91b4686bd7c505b7a97ad3676add3c4c43114d166ba8caabebceaaeef9f81bcd",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "streamhubone",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "desi",
@@ -3124,8 +3485,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 1152503,
-      "observedActualSHA256": "sha256-db5519372aaa8d54b2b52361856742c752e85124be4f562324216fb2bc193324",
+      "observedActualSize": 1151762,
+      "observedActualSHA256": "sha256-8dd8fd09ba812b2d651672c76aa2519eb5bf72e1ef92dbcfca469c174b5d562f",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
@@ -3173,19 +3534,35 @@
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
       "observedActualSize": 338354,
-      "observedActualSHA256": "sha256-fe550a429486958674319533b4d23e4067b49dc49aa3b7aa19bf4f8a96a1e083",
+      "observedActualSHA256": "sha256-03e6fd9c2a0f739425dbafdca1e9b2e48adb5df5cce61677292203272b757b09",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "yoturkish",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/YoTurkish.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/YoTurkish.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 20051,
+      "observedActualSHA256": "sha256-04f17302b6995b4538477d2e9fd2783b920acec8e88882129960ce42d22ddc51",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
     }
   ],
-  "originalSourceReportDigest": "ba976eb44cc1d64515bc8f593b3081f723696a70966b017683c6596a4447726c",
+  "originalSourceReportDigest": "fb8d95f686851a135911c31e69bcf566e1f4dbc2aed5ce3fa369eeabb1af6061",
   "inputSnapshotDigests": {
-    "candidate": "ca98ce99491dc931d9c6b965ce59f14506bc055ac4cc310c696ad6708702ccdc",
-    "previous": "701f0f0f90a3ef55de776f22089c12fa0a69aee48ea14e97f11a4ad20c746c5c",
-    "candidateProvenance": "a1eb77f6809a6ff54be854c059ddedae716b2f229cad6509926db57f0dd4cf2e",
-    "previousProvenance": "a183ab0294d66f8223ac59048b3771bbc232a8b5fc368e061bd48ab4cebbd7d7"
+    "candidate": "8957d3ac8b19a0551d398fc9afe88dbceb4ab776c876dda76a60c54f9b6cefa9",
+    "previous": "84ed1f0164f499ad4751cb37d0962ce1483202a42369a7e2bd1945fbc79bcf0b",
+    "candidateProvenance": "76d7cbd0a9c616764eed81f732438902584297c0a6bfbd792e923c3a74b3ea7a",
+    "previousProvenance": "a511a2f7ca3de1e8592a25a32e9485639bef91268505ba727ffcb7583c88c189"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

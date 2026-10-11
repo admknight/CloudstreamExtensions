@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-10 22:34:36 UTC",
-  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
+  "generatedAt": "2026-10-11 05:50:39 UTC",
+  "candidateStatus": "READY - GUARDED, 13 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "catalog": {
     "plugins": 547,
     "healthySources": 36,
     "failedSources": 0,
-    "reachablePackages": 548,
+    "reachablePackages": 551,
     "packageFailures": 0
   },
   "changes": {
@@ -19,18 +19,18 @@
     "recovered": [],
     "updated": [
       {
-        "plugin": "LK21",
-        "name": "LK21",
-        "version": 4,
-        "sourceId": "nontonindo",
-        "sourceName": "Nonton Indo",
-        "category": "Asian",
-        "fromVersion": 4,
-        "toVersion": 4,
-        "fromSourceId": "nontonindo",
-        "fromSource": "Nonton Indo",
-        "toSourceId": "nontonindo",
-        "toSource": "Nonton Indo"
+        "plugin": "AnimeRift",
+        "name": "AnimeRift",
+        "version": 1,
+        "sourceId": "rearabi",
+        "sourceName": "Re-3arabi",
+        "category": "Arabic",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "rearabi",
+        "fromSource": "Re-3arabi",
+        "toSourceId": "rearabi",
+        "toSource": "Re-3arabi"
       }
     ],
     "removed": []
@@ -42,16 +42,16 @@
   },
   "customProviderChanges": [],
   "integrityHealth": {
-    "candidateChecked": 548,
-    "candidateAccepted": 542,
-    "immutableOldRetained": 5,
-    "pinnedPreviousRecovered": 5,
-    "unverifiedPreviousCarried": 0,
+    "candidateChecked": 551,
+    "candidateAccepted": 528,
+    "immutableOldRetained": 6,
+    "pinnedPreviousRecovered": 6,
+    "unverifiedPreviousCarried": 13,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 6,
+    "changedOrFailedCandidates": 23,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": false
+    "releaseEligibleWithWarnings": true
   },
   "releaseAuthorized": false,
   "releaseEligible": true
