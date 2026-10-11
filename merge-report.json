@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-11 05:50:39 UTC",
+  "generatedAt": "2026-10-11 12:54:20 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY - GUARDED, 13 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "candidateStatus": "READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "releaseAuthorized": false,
   "previewPolicy": "compatibility",
   "previewOfCandidateStatus": "READY",
@@ -130,11 +130,11 @@
       "index": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/plugins.json",
       "priority": 25,
       "ok": true,
-      "rawCount": 18,
+      "rawCount": 19,
       "includedCount": 15,
       "packageFailed": 0,
       "duplicateSkipped": 3,
-      "integrityExceptions": 1,
+      "integrityExceptions": 2,
       "deferredUnverified": 0
     },
     {
@@ -260,8 +260,8 @@
       "includedCount": 28,
       "packageFailed": 0,
       "duplicateSkipped": 1,
-      "integrityExceptions": 3,
-      "deferredUnverified": 0
+      "integrityExceptions": 4,
+      "deferredUnverified": 1
     },
     {
       "id": "diegon",
@@ -344,8 +344,8 @@
       "includedCount": 66,
       "packageFailed": 0,
       "duplicateSkipped": 4,
-      "integrityExceptions": 0,
-      "deferredUnverified": 0
+      "integrityExceptions": 1,
+      "deferredUnverified": 1
     },
     {
       "id": "kim-recovery",
@@ -531,17 +531,17 @@
   "previousPlugins": 547,
   "uniquePlugins": 547,
   "packageHealth": {
-    "reachable": 551,
+    "reachable": 552,
     "failed": 0
   },
   "integrityHealth": {
-    "candidateChecked": 551,
-    "candidateAccepted": 528,
+    "candidateChecked": 552,
+    "candidateAccepted": 526,
     "immutableOldRetained": 6,
     "pinnedPreviousRecovered": 6,
-    "unverifiedPreviousCarried": 13,
+    "unverifiedPreviousCarried": 15,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 23,
+    "changedOrFailedCandidates": 26,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true
@@ -3049,29 +3049,14 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 546,
+    "updated": 0,
+    "unchanged": 547,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [
-      {
-        "plugin": "AnimeRift",
-        "name": "AnimeRift",
-        "version": 1,
-        "sourceId": "rearabi",
-        "sourceName": "Re-3arabi",
-        "category": "Arabic",
-        "fromVersion": 1,
-        "toVersion": 1,
-        "fromSourceId": "rearabi",
-        "fromSource": "Re-3arabi",
-        "toSourceId": "rearabi",
-        "toSource": "Re-3arabi"
-      }
-    ],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
@@ -3179,6 +3164,22 @@
       "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
     },
     {
+      "plugin": "RareAnimesIndia",
+      "sourceId": "raghav",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RareAnimesIndia.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "XPrimeHub",
+      "sourceId": "cxxx",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/XPrimeHub.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
       "plugin": "YoTurkish",
       "sourceId": "cs-karma",
       "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
@@ -3210,7 +3211,7 @@
       "candidateSourceId": "rearabi",
       "previousSourceId": "rearabi",
       "candidateUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/AnimeRift.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/AnimeRift.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/c30122a117f1c3571e63a484aaf80f35117ff3e7/AnimeRift.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
       "observedActualSize": 48567,
@@ -3253,6 +3254,22 @@
       "fallbackThroughRecoveryLock": false
     },
     {
+      "plugin": "blurayufr",
+      "disposition": "withheld_new",
+      "candidateSourceId": "nontonindo",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/ExtremeBoyGG/nonton-indo/builds/BlurayUFR.cs3",
+      "previousUrl": null,
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 27993,
+      "observedActualSHA256": "sha256-7dfb532eaec5cd7ee0ad6d41292c55587a1724aa24ab1031c5312c886a536cf6",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "doramaslatinox",
       "disposition": "quarantined_existing",
       "candidateSourceId": "cs-karma",
@@ -3277,8 +3294,8 @@
       "previousUrl": null,
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 49650,
-      "observedActualSHA256": "sha256-d0215f3dbe2dfef244bb9174f9354e43bf7fdd7fbeb9eddac9118ca2347c6ed2",
+      "observedActualSize": 51510,
+      "observedActualSHA256": "sha256-14f4fe50d78a6ee9433b8e4958d4c5bfd578d66b8598522cb5de4f3e8d55c582",
       "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
       "fallbackVerified": false,
       "fallbackPin": null,
@@ -3477,6 +3494,22 @@
       "fallbackThroughRecoveryLock": false
     },
     {
+      "plugin": "rareanimesindia",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "raghav",
+      "previousSourceId": "raghav",
+      "candidateUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RareAnimesIndia.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RareAnimesIndia.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 159136,
+      "observedActualSHA256": "sha256-4c97ef01a8626f4d95c23881e4e8bf322adbcf00643b5de772d6ec41fddee02c",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "streamhubone",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "desi",
@@ -3533,12 +3566,28 @@
       "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 338354,
-      "observedActualSHA256": "sha256-03e6fd9c2a0f739425dbafdca1e9b2e48adb5df5cce61677292203272b757b09",
+      "observedActualSize": 342415,
+      "observedActualSHA256": "sha256-73c153a0e091af95ef1301c308e20b3dd774ceb66662142000a7a999c1d428ce",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "xprimehub",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cxxx",
+      "previousSourceId": "cxxx",
+      "candidateUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/XPrimeHub.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/XPrimeHub.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 42260,
+      "observedActualSHA256": "sha256-f742bf8bda6d0d6f015791eb7660c2956d37377563fb978e07d9b402cb884dec",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
     },
     {
       "plugin": "yoturkish",
@@ -3557,12 +3606,12 @@
       "fallbackThroughRecoveryLock": false
     }
   ],
-  "originalSourceReportDigest": "fb8d95f686851a135911c31e69bcf566e1f4dbc2aed5ce3fa369eeabb1af6061",
+  "originalSourceReportDigest": "2d2bf5e74647adad5128c9e9b3119e1af463ae6604b0461c08d46937774f8376",
   "inputSnapshotDigests": {
-    "candidate": "8957d3ac8b19a0551d398fc9afe88dbceb4ab776c876dda76a60c54f9b6cefa9",
-    "previous": "84ed1f0164f499ad4751cb37d0962ce1483202a42369a7e2bd1945fbc79bcf0b",
-    "candidateProvenance": "76d7cbd0a9c616764eed81f732438902584297c0a6bfbd792e923c3a74b3ea7a",
-    "previousProvenance": "a511a2f7ca3de1e8592a25a32e9485639bef91268505ba727ffcb7583c88c189"
+    "candidate": "7ff343d49b53facb7403fb34b9ab0671e955191c8a7ac313709ca5fc29c845fd",
+    "previous": "560463f39cd618c2a5e65e22f0b8f2188f2098bce0c08ae9566d0ba5ccecb0da",
+    "candidateProvenance": "b8d1b1e02d0623308588b73448def76c53f5deff967afbd28fb3987c80e41190",
+    "previousProvenance": "b98fc3a4cb202448691cf4514c44d787bd3cc7c84be2d0106d4c51adf4e977e0"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

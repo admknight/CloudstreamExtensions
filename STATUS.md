@@ -1,18 +1,18 @@
 # Production Aggregation Status
 
-Generated: **2026-10-11 05:50:39 UTC**
+Generated: **2026-10-11 12:54:20 UTC**
 
-Candidate status: **READY - GUARDED, 13 UPSTREAM UPDATES DEFERRED FOR REVIEW**
+Candidate status: **READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
-- **551 candidate packages** inspected for declared length and SHA-256 when present.
-- **528 candidates** accepted under the published trust rules.
-- **13 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **552 candidate packages** inspected for declared length and SHA-256 when present.
+- **526 candidates** accepted under the published trust rules.
+- **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
 - **6 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
@@ -29,7 +29,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | [ReCloudStream Official Extensions](https://github.com/recloudstream/extensions) | ✅ OK | 5 | 5 | 0 | 0 |
 | [Redowan CloudStream](https://github.com/redowan99/Redowan-CloudStream) | ✅ OK | 18 | 16 | 0 | 2 |
 | [Vietnamese CloudStream Index](https://github.com/t23-02/cloudstream) | ✅ OK | 16 | 0 | 0 | 14 |
-| [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 18 | 15 | 0 | 3 |
+| [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 19 | 15 | 0 | 3 |
 | [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 41 | 37 | 0 | 3 |
 | [TheAlyss Repo](https://github.com/TheAlyss/cloudstream-AlyssRepo) | ✅ OK | 3 | 2 | 0 | 1 |
 | [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 21 | 21 | 0 | 0 |
@@ -113,7 +113,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 43 | **[Anime] AnimeONProvider** | 41 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Unchanged |
 | 44 | **[Anime] AnimePahe** | 43 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
 | 45 | **[Arabic] Animerco** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
-| 46 | **[Arabic] AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Updated (verified by candidate policy) |
+| 46 | **[Arabic] AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Unchanged |
 | 47 | **[Indian] Animesalt** | 18 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 48 | **[Anime] AnimeSaturn** | 4 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
 | 49 | **[Anime] AnimeSuge** | 10 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | Unchanged |
@@ -466,7 +466,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 396 | **[Live] RadioIndiaProvider** | 33 | ta | Live | CNC Repo (All Language) | Unchanged |
 | 397 | **[Anime] RaghavAnime** | 76 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 398 | **[Anime] RaghavAnimeKitsu** | 28 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 399 | **[Indian] RareAnimesIndia** | 3 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | Unchanged |
+| 399 | **[Indian] RareAnimesIndia** | 3 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | Deferred: previous metadata, unverified upstream bytes |
 | 400 | **[Movies] RareFilmm** | 15 | en | Movie | CloudStreamHub Recovery Builds | Unchanged |
 | 401 | **[Arabic] .Extension Rating تقييم الاضافات** | 1 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 402 | **[Anime] ReAnime** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
@@ -598,7 +598,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 528 | **[Adult] Xnhau** | 1 | vi | NSFW | CXXX | Unchanged |
 | 529 | **[Adult] XNXX** | 2 | en | NSFW | MegaRepo Verified Immutable Recovery | Unchanged |
 | 530 | **[Indian] XonProvider** | 35 | ta | TvSeries, Movie, Anime | CNC Repo (All Language) | Unchanged |
-| 531 | **[Adult] XPrimeHub** | 5 | hi | NSFW | CXXX | Unchanged |
+| 531 | **[Adult] XPrimeHub** | 5 | hi | NSFW | CXXX | Deferred: previous metadata, unverified upstream bytes |
 | 532 | **[Adult] Xtapes** | 7 | en | NSFW | CXXX | Unchanged |
 | 533 | **[Live] XtreamIPTVProvider** | 1 |  | Live | MegaRepo Verified Immutable Recovery | Unchanged |
 | 534 | **[Adult] Xvideos** | 2 | en | NSFW | CXXX | Unchanged |

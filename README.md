@@ -78,17 +78,17 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-11 05:50:39 UTC**
+Last successful refresh: **2026-10-11 12:54:20 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
-- **551 candidate packages** inspected for declared length and SHA-256 when present.
-- **528 candidates** accepted under the published trust rules.
-- **13 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **552 candidate packages** inspected for declared length and SHA-256 when present.
+- **526 candidates** accepted under the published trust rules.
+- **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
 - **6 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
@@ -122,7 +122,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [ReCloudStream Official Extensions](https://github.com/recloudstream/extensions) | ✅ OK | 5 | 5 | 0 | 0 |
 | [Redowan CloudStream](https://github.com/redowan99/Redowan-CloudStream) | ✅ OK | 18 | 16 | 0 | 2 |
 | [Vietnamese CloudStream Index](https://github.com/t23-02/cloudstream) | ✅ OK | 16 | 0 | 0 | 14 |
-| [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 18 | 15 | 0 | 3 |
+| [Nonton Indo](https://github.com/ExtremeBoyGG/nonton-indo) | ✅ OK | 19 | 15 | 0 | 3 |
 | [Re-3arabi](https://github.com/Abodabodd/re-3arabi) | ✅ OK | 41 | 37 | 0 | 3 |
 | [TheAlyss Repo](https://github.com/TheAlyss/cloudstream-AlyssRepo) | ✅ OK | 3 | 2 | 0 | 1 |
 | [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 21 | 21 | 0 | 0 |
@@ -447,7 +447,7 @@ CloudStream display prefix: `[Indian]`
 | 61 | **OttSource** | 7 | hi | Movie, TvSeries | Desi Extensions | Unchanged |
 | 62 | **PikashowProvider** | 32 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
 | 63 | **Piratexplay** | 5 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
-| 64 | **RareAnimesIndia** | 3 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | Unchanged |
+| 64 | **RareAnimesIndia** | 3 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | Deferred: previous metadata, unverified upstream bytes |
 | 65 | **RingZ** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 66 | **Rtally** | 50 | ta | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | CNC Repo (All Language) | Unchanged |
 | 67 | **SDmovies** | 4 | hi | TvSeries, Movie, AsianDrama, Anime, Torrent | Desi Extensions | Unchanged |
@@ -484,7 +484,7 @@ CloudStream display prefix: `[Arabic]`
 | 7 | **Anime3rb** | 1 | ar | TvSeries, Anime | Re-3arabi | Unchanged |
 | 8 | **Anime4up** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | Unchanged |
 | 9 | **Animerco** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
-| 10 | **AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Updated (verified by candidate policy) |
+| 10 | **AnimeRift** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Unchanged |
 | 11 | **AnimeWitcher** | 3 | ar | Anime | Re-3arabi | Unchanged |
 | 12 | **Asia2tv 2** | 3 | ar | Movie, TvSeries, AsianDrama | Re-3arabi | Unchanged |
 | 13 | **Brstej** | 1 | ar | Anime | Re-3arabi | Unchanged |
@@ -726,7 +726,7 @@ CloudStream display prefix: `[Adult]`
 | 67 | **Xmovies4u** | 2 | en | NSFW | CXXX | Unchanged |
 | 68 | **Xnhau** | 1 | vi | NSFW | CXXX | Unchanged |
 | 69 | **XNXX** | 2 | en | NSFW | MegaRepo Verified Immutable Recovery | Unchanged |
-| 70 | **XPrimeHub** | 5 | hi | NSFW | CXXX | Unchanged |
+| 70 | **XPrimeHub** | 5 | hi | NSFW | CXXX | Deferred: previous metadata, unverified upstream bytes |
 | 71 | **Xtapes** | 7 | en | NSFW | CXXX | Unchanged |
 | 72 | **Xvideos** | 2 | en | NSFW | CXXX | Unchanged |
 | 73 | **YesPornPlease** | 7 | en | NSFW | CXXX | Unchanged |
