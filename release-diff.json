@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11 12:54:20 UTC",
+  "generatedAt": "2026-10-11 19:34:54 UTC",
   "candidateStatus": "READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "catalog": {
     "plugins": 547,
@@ -10,14 +10,43 @@
   },
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 2,
+    "unchanged": 545,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "StreamPlay",
+        "name": "StreamPlay",
+        "version": 687,
+        "sourceId": "phisher",
+        "sourceName": "Phisher Repo",
+        "category": "Movies",
+        "fromVersion": 687,
+        "toVersion": 687,
+        "fromSourceId": "phisher",
+        "fromSource": "Phisher Repo",
+        "toSourceId": "phisher",
+        "toSource": "Phisher Repo"
+      },
+      {
+        "plugin": "Topcinema",
+        "name": "TopCinema",
+        "version": 1,
+        "sourceId": "rearabi",
+        "sourceName": "Re-3arabi",
+        "category": "Arabic",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "rearabi",
+        "fromSource": "Re-3arabi",
+        "toSourceId": "rearabi",
+        "toSource": "Re-3arabi"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -28,12 +57,12 @@
   "customProviderChanges": [],
   "integrityHealth": {
     "candidateChecked": 552,
-    "candidateAccepted": 526,
-    "immutableOldRetained": 6,
-    "pinnedPreviousRecovered": 6,
+    "candidateAccepted": 524,
+    "immutableOldRetained": 8,
+    "pinnedPreviousRecovered": 8,
     "unverifiedPreviousCarried": 15,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 26,
+    "changedOrFailedCandidates": 28,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true

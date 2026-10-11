@@ -7572,7 +7572,7 @@
       "Hexated"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/cloudstream-extensions-phisher",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StreamPlay.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/StreamPlay.cs3"
   },
   {
     "plugin": "Stremio",
@@ -8134,7 +8134,7 @@
       "Abodabodd"
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
-    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Topcinema.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/df85fbb2cf5327588b6d9164a665eeb94ecbc6bc/Topcinema.cs3"
   },
   {
     "plugin": "Topstreamfilm",

@@ -9228,7 +9228,7 @@
     "fileHash": "sha256-2e486e3958b9ab50ee7c0951b142dea870bcbf69db059cef3af0ea7bc109d5f0"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StreamPlay.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/StreamPlay.cs3",
     "status": 1,
     "version": 687,
     "name": "[Movies] StreamPlay",
@@ -9908,7 +9908,7 @@
     "fileHash": "sha256-f0764ff345cc118ab692ec06e251ad94b9e1beb17965be1320e7bfac607fbf30"
   },
   {
-    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Topcinema.cs3",
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/df85fbb2cf5327588b6d9164a665eeb94ecbc6bc/Topcinema.cs3",
     "status": 1,
     "version": 1,
     "name": "[Arabic] TopCinema",

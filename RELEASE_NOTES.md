@@ -1,19 +1,20 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-11 12:54:20 UTC**
+Generated: **2026-10-11 19:34:54 UTC**
 
 Production catalog: **547 reachable plugins** · **36 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **0**
-- Updated: **0**
+- Updated: **2**
 - Removed: **0**
-- Unchanged: **547**
+- Unchanged: **545**
 
-## Catalog changes
+## Updated plugins
 
-No plugin or source changes were detected in this production refresh.
+- **StreamPlay** v687 → v687 — Phisher Repo
+- **Topcinema** v1 → v1 — Re-3arabi
 
 ## Production health
 
@@ -28,9 +29,9 @@ No plugin or source changes were detected in this production refresh.
 ## Integrity status — separate from package reachability
 
 - **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **526 candidates** accepted under the published trust rules.
+- **524 candidates** accepted under the published trust rules.
 - **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **6 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **8 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.

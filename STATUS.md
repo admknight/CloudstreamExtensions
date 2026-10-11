@@ -1,19 +1,19 @@
 # Production Aggregation Status
 
-Generated: **2026-10-11 12:54:20 UTC**
+Generated: **2026-10-11 19:34:54 UTC**
 
 Candidate status: **READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 2 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **526 candidates** accepted under the published trust rules.
+- **524 candidates** accepted under the published trust rules.
 - **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **6 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **8 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -510,7 +510,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 440 | **[Indian] StreamFlixProvider** | 34 | ta | Movie, TvSeries, Anime | CNC Repo (All Language) | Unchanged |
 | 441 | **[Indian] StreamHubOne** | 63 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | MegaRepo Verified Immutable Recovery | Unchanged |
 | 442 | **[Movies] StreamingCommunity** | 53 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | Unchanged |
-| 443 | **[Movies] StreamPlay** | 687 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
+| 443 | **[Movies] StreamPlay** | 687 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Updated (verified by candidate policy) |
 | 444 | **[Tools] Stremio** | 14 | it | TvSeries, Movie | DieGon Repository | Unchanged |
 | 445 | **[Tools] StremioAddon** | 16 | en | TvSeries, Movie, Torrent | Phisher Repo | Unchanged |
 | 446 | **[Tools] StremioProvider** | 7 |  | TvSeries, Anime, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -543,7 +543,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 473 | **[Indian] Toonstream** | 10 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 474 | **[Indian] ToonTales** | 5 | hi | Cartoon | Phisher Repo | Unchanged |
 | 475 | **[Indian] Topcartoons** | 5 | hi | Cartoon | Phisher Repo | Unchanged |
-| 476 | **[Arabic] TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | Unchanged |
+| 476 | **[Arabic] TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | Updated (verified by candidate policy) |
 | 477 | **[Movies] Topstreamfilm** | 9 | de | Movie, TvSeries | Phisher Repo | Unchanged |
 | 478 | **[Movies] TorraStream** | 97 | en | Movie, Torrent, AsianDrama, TvSeries, Anime | Phisher Repo | Unchanged |
 | 479 | **[Tools] Torrentio** | 9 | it | Movie, TvSeries, Torrent, Documentary | DieGon Repository | Unchanged |

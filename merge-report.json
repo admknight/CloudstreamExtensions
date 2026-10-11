@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11 12:54:20 UTC",
+  "generatedAt": "2026-10-11 19:34:54 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW",
@@ -36,7 +36,7 @@
       "includedCount": 81,
       "packageFailed": 0,
       "duplicateSkipped": 5,
-      "integrityExceptions": 1,
+      "integrityExceptions": 2,
       "deferredUnverified": 0
     },
     {
@@ -148,7 +148,7 @@
       "includedCount": 37,
       "packageFailed": 0,
       "duplicateSkipped": 3,
-      "integrityExceptions": 2,
+      "integrityExceptions": 3,
       "deferredUnverified": 0
     },
     {
@@ -536,12 +536,12 @@
   },
   "integrityHealth": {
     "candidateChecked": 552,
-    "candidateAccepted": 526,
-    "immutableOldRetained": 6,
-    "pinnedPreviousRecovered": 6,
+    "candidateAccepted": 524,
+    "immutableOldRetained": 8,
+    "pinnedPreviousRecovered": 8,
     "unverifiedPreviousCarried": 15,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 26,
+    "changedOrFailedCandidates": 28,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true
@@ -3049,14 +3049,43 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 2,
+    "unchanged": 545,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "StreamPlay",
+        "name": "StreamPlay",
+        "version": 687,
+        "sourceId": "phisher",
+        "sourceName": "Phisher Repo",
+        "category": "Movies",
+        "fromVersion": 687,
+        "toVersion": 687,
+        "fromSourceId": "phisher",
+        "fromSource": "Phisher Repo",
+        "toSourceId": "phisher",
+        "toSource": "Phisher Repo"
+      },
+      {
+        "plugin": "Topcinema",
+        "name": "TopCinema",
+        "version": 1,
+        "sourceId": "rearabi",
+        "sourceName": "Re-3arabi",
+        "category": "Arabic",
+        "fromVersion": 1,
+        "toVersion": 1,
+        "fromSourceId": "rearabi",
+        "fromSource": "Re-3arabi",
+        "toSourceId": "rearabi",
+        "toSource": "Re-3arabi"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -3518,11 +3547,27 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 1151762,
-      "observedActualSHA256": "sha256-8dd8fd09ba812b2d651672c76aa2519eb5bf72e1ef92dbcfca469c174b5d562f",
+      "observedActualSize": 1153862,
+      "observedActualSHA256": "sha256-4581d69b77d25f95c4c863386cfb60d8468de88561dcbe01a10da340e3a14a1d",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
+      "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "streamplay",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "phisher",
+      "previousSourceId": "phisher",
+      "candidateUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StreamPlay.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/StreamPlay.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 1959576,
+      "observedActualSHA256": "sha256-8767734564493632854088fd4292250d17abbfe793e817bb9c2a5dbf47e9ddde",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/StreamPlay.cs3",
       "fallbackThroughRecoveryLock": true
     },
     {
@@ -3540,6 +3585,22 @@
       "fallbackVerified": false,
       "fallbackPin": null,
       "fallbackThroughRecoveryLock": false
+    },
+    {
+      "plugin": "topcinema",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "rearabi",
+      "previousSourceId": "rearabi",
+      "candidateUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Topcinema.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Topcinema.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 30279,
+      "observedActualSHA256": "sha256-13467ab2b8e20372b12939fe4fdfad83741ecc43a6451af54089b185d509fe12",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/df85fbb2cf5327588b6d9164a665eeb94ecbc6bc/Topcinema.cs3",
+      "fallbackThroughRecoveryLock": true
     },
     {
       "plugin": "torrentsv1",
@@ -3606,11 +3667,11 @@
       "fallbackThroughRecoveryLock": false
     }
   ],
-  "originalSourceReportDigest": "2d2bf5e74647adad5128c9e9b3119e1af463ae6604b0461c08d46937774f8376",
+  "originalSourceReportDigest": "de343e0d88ce82a4b52e1288841f7961f42e8603e3bdaace94d51ac296c48bc3",
   "inputSnapshotDigests": {
-    "candidate": "7ff343d49b53facb7403fb34b9ab0671e955191c8a7ac313709ca5fc29c845fd",
+    "candidate": "43a6c1b2e7993f8d2d6d836bbcd581906cde1c79e1f775a8f98ed00f1bcc86f0",
     "previous": "560463f39cd618c2a5e65e22f0b8f2188f2098bce0c08ae9566d0ba5ccecb0da",
-    "candidateProvenance": "b8d1b1e02d0623308588b73448def76c53f5deff967afbd28fb3987c80e41190",
+    "candidateProvenance": "dd68d944d7a60f23ade5a8a08daf8502ab0a81b69c86bb5227d8a06e2c9e568e",
     "previousProvenance": "b98fc3a4cb202448691cf4514c44d787bd3cc7c84be2d0106d4c51adf4e977e0"
   },
   "releaseEligible": true,
