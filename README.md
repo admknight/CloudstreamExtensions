@@ -78,11 +78,11 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-11 19:34:54 UTC**
+Last successful refresh: **2026-10-12 00:35:12 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 2 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
@@ -276,7 +276,7 @@ CloudStream display prefix: `[Movies]`
 | 105 | **SkymoviesHD** | 1 | en | Movie, TvSeries, NSFW | MegaRepo Verified Immutable Recovery | Unchanged |
 | 106 | **SoloLatinoProvider** | 9 | mx | Movie, TvSeries, Anime, Cartoon | Storm-ext Fork by redblacker8 | Unchanged |
 | 107 | **StreamingCommunity** | 53 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | Unchanged |
-| 108 | **StreamPlay** | 687 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Updated (verified by candidate policy) |
+| 108 | **StreamPlay** | 687 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
 | 109 | **Supercartoons** | 2 | en | Cartoon | cs-karma | Unchanged |
 | 110 | **SuperFilmGeldi** | 22 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 111 | **SuperStream** | 38 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
@@ -504,7 +504,7 @@ CloudStream display prefix: `[Arabic]`
 | 27 | **Shabakaty Cinemana (🇮🇶)** | 4 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 28 | **Shahid4u** | 2 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 29 | **Shahidwbas** | 1 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
-| 30 | **TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | Updated (verified by candidate policy) |
+| 30 | **TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | Unchanged |
 | 31 | **Tuktukcima** | 1 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 32 | **TuniflexBlog** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Unchanged |
 | 33 | **Tuniflix** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | Unchanged |
@@ -910,7 +910,7 @@ When the same plugin is published by more than one source, the highest version i
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | Desi Extensions v66 | MegaRepo Verified Immutable Recovery v63 (lower version) |
+| StreamHubOne | Desi Extensions v67 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |
