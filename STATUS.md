@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-11 19:34:54 UTC**
+Generated: **2026-10-12 00:35:12 UTC**
 
 Candidate status: **READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 2 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
@@ -510,7 +510,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 440 | **[Indian] StreamFlixProvider** | 34 | ta | Movie, TvSeries, Anime | CNC Repo (All Language) | Unchanged |
 | 441 | **[Indian] StreamHubOne** | 63 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | MegaRepo Verified Immutable Recovery | Unchanged |
 | 442 | **[Movies] StreamingCommunity** | 53 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | Unchanged |
-| 443 | **[Movies] StreamPlay** | 687 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Updated (verified by candidate policy) |
+| 443 | **[Movies] StreamPlay** | 687 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
 | 444 | **[Tools] Stremio** | 14 | it | TvSeries, Movie | DieGon Repository | Unchanged |
 | 445 | **[Tools] StremioAddon** | 16 | en | TvSeries, Movie, Torrent | Phisher Repo | Unchanged |
 | 446 | **[Tools] StremioProvider** | 7 |  | TvSeries, Anime, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -543,7 +543,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 473 | **[Indian] Toonstream** | 10 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 474 | **[Indian] ToonTales** | 5 | hi | Cartoon | Phisher Repo | Unchanged |
 | 475 | **[Indian] Topcartoons** | 5 | hi | Cartoon | Phisher Repo | Unchanged |
-| 476 | **[Arabic] TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | Updated (verified by candidate policy) |
+| 476 | **[Arabic] TopCinema** | 1 | ar | Movie, tvTypes | Re-3arabi | Unchanged |
 | 477 | **[Movies] Topstreamfilm** | 9 | de | Movie, TvSeries | Phisher Repo | Unchanged |
 | 478 | **[Movies] TorraStream** | 97 | en | Movie, Torrent, AsianDrama, TvSeries, Anime | Phisher Repo | Unchanged |
 | 479 | **[Tools] Torrentio** | 9 | it | Movie, TvSeries, Torrent, Documentary | DieGon Repository | Unchanged |
@@ -741,7 +741,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | Desi Extensions v66 | MegaRepo Verified Immutable Recovery v63 (lower version) |
+| StreamHubOne | Desi Extensions v67 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |
