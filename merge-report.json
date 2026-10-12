@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-12 07:45:50 UTC",
+  "generatedAt": "2026-10-12 10:54:41 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "candidateStatus": "READY - GUARDED, 17 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "releaseAuthorized": false,
   "previewPolicy": "compatibility",
   "previewOfCandidateStatus": "READY",
@@ -218,8 +218,8 @@
       "includedCount": 11,
       "packageFailed": 0,
       "duplicateSkipped": 5,
-      "integrityExceptions": 2,
-      "deferredUnverified": 0
+      "integrityExceptions": 3,
+      "deferredUnverified": 1
     },
     {
       "id": "flummox",
@@ -302,8 +302,8 @@
       "includedCount": 30,
       "packageFailed": 0,
       "duplicateSkipped": 3,
-      "integrityExceptions": 14,
-      "deferredUnverified": 13
+      "integrityExceptions": 15,
+      "deferredUnverified": 14
     },
     {
       "id": "cnc",
@@ -536,12 +536,12 @@
   },
   "integrityHealth": {
     "candidateChecked": 552,
-    "candidateAccepted": 523,
+    "candidateAccepted": 521,
     "immutableOldRetained": 9,
     "pinnedPreviousRecovered": 9,
-    "unverifiedPreviousCarried": 15,
+    "unverifiedPreviousCarried": 17,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 29,
+    "changedOrFailedCandidates": 31,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true
@@ -1518,7 +1518,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 67,
+      "selectedVersion": 68,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -2768,7 +2768,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 67,
+      "selectedVersion": 68,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -3049,29 +3049,14 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 546,
+    "updated": 0,
+    "unchanged": 547,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [
-      {
-        "plugin": "UHDmoviesProvider",
-        "name": "UHDmoviesProvider",
-        "version": 41,
-        "sourceId": "phisher",
-        "sourceName": "Phisher Repo",
-        "category": "Movies",
-        "fromVersion": 41,
-        "toVersion": 41,
-        "fromSourceId": "phisher",
-        "fromSource": "Phisher Repo",
-        "toSourceId": "phisher",
-        "toSource": "Phisher Repo"
-      }
-    ],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
@@ -3187,11 +3172,27 @@
       "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
     },
     {
+      "plugin": "The Movie Flix",
+      "sourceId": "desi",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The%20Movie%20Flix.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
       "plugin": "XPrimeHub",
       "sourceId": "cxxx",
       "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
       "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/XPrimeHub.cs3",
+      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
+    },
+    {
+      "plugin": "Yablom",
+      "sourceId": "cs-karma",
+      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Yablom.cs3",
       "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
     },
     {
@@ -3533,8 +3534,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 1145475,
-      "observedActualSHA256": "sha256-57aa39a3da639122e598b20047c90579ce6e971d76042954fecf1f8cca240c7e",
+      "observedActualSize": 1145458,
+      "observedActualSHA256": "sha256-939b15145dd3943e1644bbf2f7126ad8525c14c4de808d53cac1027fc7a2d213",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
@@ -3555,6 +3556,22 @@
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/StreamPlay.cs3",
       "fallbackThroughRecoveryLock": true
+    },
+    {
+      "plugin": "the movie flix",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "desi",
+      "previousSourceId": "desi",
+      "candidateUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The%20Movie%20Flix.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The%20Movie%20Flix.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 56989,
+      "observedActualSHA256": "sha256-68d5907b3667ed1a061dc503ef55537caf0a36a98a16f2f62456df8592e1c025",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
     },
     {
       "plugin": "toonix",
@@ -3610,7 +3627,7 @@
       "candidateSourceId": "phisher",
       "previousSourceId": "phisher",
       "candidateUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/UHDmoviesProvider.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/UHDmoviesProvider.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/UHDmoviesProvider.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
       "observedActualSize": 86232,
@@ -3653,6 +3670,22 @@
       "fallbackThroughRecoveryLock": false
     },
     {
+      "plugin": "yablom",
+      "disposition": "quarantined_existing",
+      "candidateSourceId": "cs-karma",
+      "previousSourceId": "cs-karma",
+      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Yablom.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Yablom.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 17046,
+      "observedActualSHA256": "sha256-006b2f19719b16393adafcf5f9a76deeb1c1d50ae5b5b9fbcbec91d7a52c0dd6",
+      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "yoturkish",
       "disposition": "quarantined_existing",
       "candidateSourceId": "cs-karma",
@@ -3669,12 +3702,12 @@
       "fallbackThroughRecoveryLock": false
     }
   ],
-  "originalSourceReportDigest": "16eeba34b307baad119b3526d2aea2a13cad7b1df4940d2684bf4960a88b493a",
+  "originalSourceReportDigest": "016aceb25937ec2981ccfcc878e5e2ee89a4fcd87296dec06eb67bc09b4ceb95",
   "inputSnapshotDigests": {
-    "candidate": "8ef9c6d2fa72a2174464ff75f41717d4193076e267d3bcf18b14c7fc73a6e1fc",
-    "previous": "c0197b8518301b0c8373a3a6c3113128636beb64859fe4a0927b4a87ba2a2146",
-    "candidateProvenance": "4187cdee1845efa499c3cf5370eb7d9d678dd0ef39fe0f9fd3e17e6a44522ed9",
-    "previousProvenance": "573343fafbc8014a99ed376fb37b6392e01b6bcfb8908fbb75fc112b1d4df6a3"
+    "candidate": "d53316cf27016bce2930493ba326945dbd6d6dec6209f53b6ee378b567ef16e2",
+    "previous": "1aad81d8e1e7aa0b37d2bfcc925bc3584099bb0649d272047c2e33e3d4732b87",
+    "candidateProvenance": "bfcc0124cdac7a007b61e4ecaef2ed42177bf2f9b05942a606cd10d5f2243670",
+    "previousProvenance": "b6895249ebf7cc25f792912cad7e58837c1e058adee46fd8c159127e6fad7b91"
   },
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",

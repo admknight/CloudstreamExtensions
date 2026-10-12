@@ -78,17 +78,17 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-12 07:45:50 UTC**
+Last successful refresh: **2026-10-12 10:54:41 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **523 candidates** accepted under the published trust rules.
-- **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **521 candidates** accepted under the published trust rules.
+- **17 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
 - **9 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
@@ -292,7 +292,7 @@ CloudStream display prefix: `[Movies]`
 | 121 | **UASerialsProProvider** | 27 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 122 | **UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
 | 123 | **UgurFilm** | 13 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 124 | **UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Updated (verified by candidate policy) |
+| 124 | **UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Unchanged |
 | 125 | **VipPhimProvider** | 9 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 126 | **ViStreamProvider** | 35 |  | TvSeries, Anime, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 127 | **Watch2Movies** | 5 | en | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -301,7 +301,7 @@ CloudStream display prefix: `[Movies]`
 | 130 | **Wcoflix** | 10 | en | Anime, Cartoon | cs-karma | Unchanged |
 | 131 | **WebteIzle** | 15 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 132 | **XDMovies** | 26 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
-| 133 | **Yablom** | 4 | fr | Movie | cs-karma | Unchanged |
+| 133 | **Yablom** | 4 | fr | Movie | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 134 | **YoTurkish** | 4 | en | TvSeries | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 135 | **YTS** | 11 | en | Movie, Torrent | Phisher Repo | Unchanged |
 
@@ -457,7 +457,7 @@ CloudStream display prefix: `[Indian]`
 | 71 | **TamilDhoolProvider** | 40 | ta | TvSeries | CNC Repo (All Language) | Unchanged |
 | 72 | **Tamilian** | 32 | ta | Movies | CNC Repo (All Language) | Unchanged |
 | 73 | **TamilToon** | 8 | hi | Movie, TvSeries, Anime, AsianDrama | Desi Extensions | Unchanged |
-| 74 | **The Movie Flix** | 27 | hi | TvSeries, Movie, Anime | Desi Extensions | Unchanged |
+| 74 | **The Movie Flix** | 27 | hi | TvSeries, Movie, Anime | Desi Extensions | Deferred: previous metadata, unverified upstream bytes |
 | 75 | **ToonHub** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 76 | **Toonstream** | 10 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 77 | **ToonTales** | 5 | hi | Cartoon | Phisher Repo | Unchanged |
@@ -910,7 +910,7 @@ When the same plugin is published by more than one source, the highest version i
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | Desi Extensions v67 | MegaRepo Verified Immutable Recovery v63 (lower version) |
+| StreamHubOne | Desi Extensions v68 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |

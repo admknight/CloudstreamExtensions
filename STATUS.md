@@ -1,18 +1,18 @@
 # Production Aggregation Status
 
-Generated: **2026-10-12 07:45:50 UTC**
+Generated: **2026-10-12 10:54:41 UTC**
 
-Candidate status: **READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW**
+Candidate status: **READY - GUARDED, 17 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **523 candidates** accepted under the published trust rules.
-- **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **521 candidates** accepted under the published trust rules.
+- **17 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
 - **9 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
@@ -533,7 +533,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 463 | **[Indian] TamilToon** | 8 | hi | Movie, TvSeries, Anime, AsianDrama | Desi Extensions | Unchanged |
 | 464 | **[Live] TamilUltraProvider** | 40 | ta | Live | CNC Repo (All Language) | Unchanged |
 | 465 | **[Other] TekkenAdvance** | 7 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 466 | **[Indian] The Movie Flix** | 27 | hi | TvSeries, Movie, Anime | Desi Extensions | Unchanged |
+| 466 | **[Indian] The Movie Flix** | 27 | hi | TvSeries, Movie, Anime | Desi Extensions | Deferred: previous metadata, unverified upstream bytes |
 | 467 | **[Movies] TheMoviesFlix** | 22 | en | Movie, TvSeries | raghav repo | Unchanged |
 | 468 | **[Anime] TioAnimeProvider** | 4 | es | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
 | 469 | **[Movies] TLCtr** | 19 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -565,7 +565,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 495 | **[Movies] UASerialsProProvider** | 27 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 496 | **[Movies] UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
 | 497 | **[Movies] UgurFilm** | 13 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 498 | **[Movies] UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Updated (verified by candidate policy) |
+| 498 | **[Movies] UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Unchanged |
 | 499 | **[Other] Ultima** | 65 | en | All | Phisher Repo | Unchanged |
 | 500 | **[Other] UltimaBeta** | 7 | en | All | MegaRepo Verified Immutable Recovery | Unchanged |
 | 501 | **[Adult] Uncut99** | 2 | hi | NSFW | CXXX | Unchanged |
@@ -602,7 +602,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 532 | **[Adult] Xtapes** | 7 | en | NSFW | CXXX | Unchanged |
 | 533 | **[Live] XtreamIPTVProvider** | 1 |  | Live | MegaRepo Verified Immutable Recovery | Unchanged |
 | 534 | **[Adult] Xvideos** | 2 | en | NSFW | CXXX | Unchanged |
-| 535 | **[Movies] Yablom** | 4 | fr | Movie | cs-karma | Unchanged |
+| 535 | **[Movies] Yablom** | 4 | fr | Movie | cs-karma | Deferred: previous metadata, unverified upstream bytes |
 | 536 | **[Live] Yacintv** | 1 | ar | TvSeries, Live, Movie | Re-3arabi | Unchanged |
 | 537 | **[Anime] YanHH3DProvider** | 16 |  | Anime, AnimeMovie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 538 | **[Adult] YesPornPlease** | 7 | en | NSFW | CXXX | Unchanged |
@@ -741,7 +741,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | Desi Extensions v67 | MegaRepo Verified Immutable Recovery v63 (lower version) |
+| StreamHubOne | Desi Extensions v68 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |

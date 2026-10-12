@@ -1,19 +1,19 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-12 07:45:50 UTC**
+Generated: **2026-10-12 10:54:41 UTC**
 
 Production catalog: **547 reachable plugins** · **36 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **0**
-- Updated: **1**
+- Updated: **0**
 - Removed: **0**
-- Unchanged: **546**
+- Unchanged: **547**
 
-## Updated plugins
+## Catalog changes
 
-- **UHDmoviesProvider** v41 → v41 — Phisher Repo
+No plugin or source changes were detected in this production refresh.
 
 ## Production health
 
@@ -28,8 +28,8 @@ Production catalog: **547 reachable plugins** · **36 healthy sources** · **0 p
 ## Integrity status — separate from package reachability
 
 - **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **523 candidates** accepted under the published trust rules.
-- **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **521 candidates** accepted under the published trust rules.
+- **17 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
 - **9 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
