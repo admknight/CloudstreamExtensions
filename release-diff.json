@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12 00:35:12 UTC",
+  "generatedAt": "2026-10-12 07:45:50 UTC",
   "candidateStatus": "READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "catalog": {
     "plugins": 547,
@@ -10,14 +10,29 @@
   },
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "UHDmoviesProvider",
+        "name": "UHDmoviesProvider",
+        "version": 41,
+        "sourceId": "phisher",
+        "sourceName": "Phisher Repo",
+        "category": "Movies",
+        "fromVersion": 41,
+        "toVersion": 41,
+        "fromSourceId": "phisher",
+        "fromSource": "Phisher Repo",
+        "toSourceId": "phisher",
+        "toSource": "Phisher Repo"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -28,12 +43,12 @@
   "customProviderChanges": [],
   "integrityHealth": {
     "candidateChecked": 552,
-    "candidateAccepted": 524,
-    "immutableOldRetained": 8,
-    "pinnedPreviousRecovered": 8,
+    "candidateAccepted": 523,
+    "immutableOldRetained": 9,
+    "pinnedPreviousRecovered": 9,
     "unverifiedPreviousCarried": 15,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 28,
+    "changedOrFailedCandidates": 29,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true

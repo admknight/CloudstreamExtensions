@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-12 00:35:12 UTC**
+Last successful refresh: **2026-10-12 07:45:50 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **524 candidates** accepted under the published trust rules.
+- **523 candidates** accepted under the published trust rules.
 - **15 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **8 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **9 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -292,7 +292,7 @@ CloudStream display prefix: `[Movies]`
 | 121 | **UASerialsProProvider** | 27 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 122 | **UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
 | 123 | **UgurFilm** | 13 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 124 | **UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Unchanged |
+| 124 | **UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Updated (verified by candidate policy) |
 | 125 | **VipPhimProvider** | 9 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 126 | **ViStreamProvider** | 35 |  | TvSeries, Anime, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 127 | **Watch2Movies** | 5 | en | Movie | MegaRepo Verified Immutable Recovery | Unchanged |

@@ -10381,7 +10381,7 @@
     "fileHash": "sha256-606e1c37ec8bffafb49ef7a4c7a635c5417a8112ab716786cb2e111a7d055cb0"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/UHDmoviesProvider.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/UHDmoviesProvider.cs3",
     "status": 1,
     "version": 41,
     "name": "[Movies] UHDmoviesProvider",

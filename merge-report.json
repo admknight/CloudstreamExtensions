@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12 00:35:12 UTC",
+  "generatedAt": "2026-10-12 07:45:50 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, 15 UPSTREAM UPDATES DEFERRED FOR REVIEW",
@@ -36,7 +36,7 @@
       "includedCount": 81,
       "packageFailed": 0,
       "duplicateSkipped": 5,
-      "integrityExceptions": 2,
+      "integrityExceptions": 3,
       "deferredUnverified": 0
     },
     {
@@ -536,12 +536,12 @@
   },
   "integrityHealth": {
     "candidateChecked": 552,
-    "candidateAccepted": 524,
-    "immutableOldRetained": 8,
-    "pinnedPreviousRecovered": 8,
+    "candidateAccepted": 523,
+    "immutableOldRetained": 9,
+    "pinnedPreviousRecovered": 9,
     "unverifiedPreviousCarried": 15,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 28,
+    "changedOrFailedCandidates": 29,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true
@@ -3049,14 +3049,29 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "UHDmoviesProvider",
+        "name": "UHDmoviesProvider",
+        "version": 41,
+        "sourceId": "phisher",
+        "sourceName": "Phisher Repo",
+        "category": "Movies",
+        "fromVersion": 41,
+        "toVersion": 41,
+        "fromSourceId": "phisher",
+        "fromSource": "Phisher Repo",
+        "toSourceId": "phisher",
+        "toSource": "Phisher Repo"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -3590,6 +3605,22 @@
       "fallbackThroughRecoveryLock": true
     },
     {
+      "plugin": "uhdmoviesprovider",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "phisher",
+      "previousSourceId": "phisher",
+      "candidateUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/UHDmoviesProvider.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/builds/UHDmoviesProvider.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 86232,
+      "observedActualSHA256": "sha256-697104b40985e69d6ad849ca917a0dc0d90a589693a9d13b7b46d9c870e4179d",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/UHDmoviesProvider.cs3",
+      "fallbackThroughRecoveryLock": true
+    },
+    {
       "plugin": "ultima",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "phisher",
@@ -3638,11 +3669,11 @@
       "fallbackThroughRecoveryLock": false
     }
   ],
-  "originalSourceReportDigest": "9b0344f0a811a87194d9b4cc50424ea0ff2b7f3db8da1b92cce2c14dc9c69a23",
+  "originalSourceReportDigest": "16eeba34b307baad119b3526d2aea2a13cad7b1df4940d2684bf4960a88b493a",
   "inputSnapshotDigests": {
-    "candidate": "5bce9e14104ea52196697063146936e0ed469e7d38f25e36da23a3d4701287d7",
+    "candidate": "8ef9c6d2fa72a2174464ff75f41717d4193076e267d3bcf18b14c7fc73a6e1fc",
     "previous": "c0197b8518301b0c8373a3a6c3113128636beb64859fe4a0927b4a87ba2a2146",
-    "candidateProvenance": "b24007eadf760e25fd778a9d6dc8b74e5ec5885b71832fef5367ea94e865eb4e",
+    "candidateProvenance": "4187cdee1845efa499c3cf5370eb7d9d678dd0ef39fe0f9fd3e17e6a44522ed9",
     "previousProvenance": "573343fafbc8014a99ed376fb37b6392e01b6bcfb8908fbb75fc112b1d4df6a3"
   },
   "releaseEligible": true,
