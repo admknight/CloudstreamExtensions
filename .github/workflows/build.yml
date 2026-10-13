@@ -191,6 +191,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 source/tools/verify_prepublication_packages.py \
+            --previous-dir builds \
             --release-dir source/merged \
             --report prepublication-package-verdict.json \
             --max-deferred 1
