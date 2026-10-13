@@ -1,23 +1,23 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-13 06:49:41 UTC**
+Generated: **2026-10-13 16:58:19 UTC**
 
 Production catalog: **547 reachable plugins** · **36 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **0**
-- Updated: **0**
+- Updated: **1**
 - Removed: **0**
-- Unchanged: **547**
+- Unchanged: **546**
 
-## Catalog changes
+## Updated plugins
 
-No plugin or source changes were detected in this production refresh.
+- **Netmirror** v46 → v46 — NetMirror Extension
 
 ## Production health
 
-- Reachable packages: **552**
+- Reachable packages: **554**
 - Package failures: **0**
 - Healthy sources: **36**
 - Failed sources: **0**
@@ -27,10 +27,10 @@ No plugin or source changes were detected in this production refresh.
 
 ## Integrity status — separate from package reachability
 
-- **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **433 candidates** accepted under the published trust rules.
+- **554 candidate packages** inspected for declared length and SHA-256 when present.
+- **432 candidates** accepted under the published trust rules.
 - **24 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **90 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **91 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.

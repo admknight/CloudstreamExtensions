@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13 06:49:41 UTC",
+  "generatedAt": "2026-10-13 16:58:19 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, 24 UPSTREAM UPDATES DEFERRED FOR REVIEW",
@@ -78,7 +78,7 @@
       "includedCount": 1,
       "packageFailed": 0,
       "duplicateSkipped": 0,
-      "integrityExceptions": 0,
+      "integrityExceptions": 1,
       "deferredUnverified": 0
     },
     {
@@ -256,11 +256,11 @@
       "index": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/plugins.json",
       "priority": 20,
       "ok": true,
-      "rawCount": 32,
+      "rawCount": 34,
       "includedCount": 28,
       "packageFailed": 0,
       "duplicateSkipped": 1,
-      "integrityExceptions": 8,
+      "integrityExceptions": 10,
       "deferredUnverified": 5
     },
     {
@@ -531,17 +531,17 @@
   "previousPlugins": 547,
   "uniquePlugins": 547,
   "packageHealth": {
-    "reachable": 552,
+    "reachable": 554,
     "failed": 0
   },
   "integrityHealth": {
-    "candidateChecked": 552,
-    "candidateAccepted": 433,
-    "immutableOldRetained": 90,
-    "pinnedPreviousRecovered": 90,
+    "candidateChecked": 554,
+    "candidateAccepted": 432,
+    "immutableOldRetained": 91,
+    "pinnedPreviousRecovered": 91,
     "unverifiedPreviousCarried": 24,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 119,
+    "changedOrFailedCandidates": 122,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true
@@ -1094,7 +1094,7 @@
     {
       "plugin": "JustPlay",
       "selectedSource": "raghav repo",
-      "selectedVersion": 18,
+      "selectedVersion": 19,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 12,
       "reason": "lower version"
@@ -2344,7 +2344,7 @@
     {
       "plugin": "JustPlay",
       "selectedSource": "raghav repo",
-      "selectedVersion": 18,
+      "selectedVersion": 19,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 12,
       "reason": "lower version"
@@ -3049,14 +3049,29 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "Netmirror",
+        "name": "Netmirror",
+        "version": 46,
+        "sourceId": "netmirror",
+        "sourceName": "NetMirror Extension",
+        "category": "Indian",
+        "fromVersion": 46,
+        "toVersion": 46,
+        "fromSourceId": "netmirror",
+        "fromSource": "NetMirror Extension",
+        "toSourceId": "netmirror",
+        "toSource": "NetMirror Extension"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -3854,6 +3869,22 @@
       "fallbackThroughRecoveryLock": false
     },
     {
+      "plugin": "elitestreams",
+      "disposition": "withheld_new",
+      "candidateSourceId": "raghav",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/EliteStreams.cs3",
+      "previousUrl": null,
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 73959,
+      "observedActualSHA256": "sha256-e6316c8a1760dab152e60b0a46ca4e3021378ef4829c02250e584ab9a514ae56",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "esheaq",
       "disposition": "quarantined_existing",
       "candidateSourceId": "cs-karma",
@@ -4078,6 +4109,22 @@
       "fallbackThroughRecoveryLock": true
     },
     {
+      "plugin": "hicine",
+      "disposition": "withheld_new",
+      "candidateSourceId": "raghav",
+      "previousSourceId": null,
+      "candidateUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/HiCine.cs3",
+      "previousUrl": null,
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 53285,
+      "observedActualSHA256": "sha256-ed490c56684a7269edbbdf74e56d62454912244b39bbf1c1becb35edc2d04a36",
+      "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
+      "fallbackVerified": false,
+      "fallbackPin": null,
+      "fallbackThroughRecoveryLock": false
+    },
+    {
       "plugin": "hindmoviez",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "phisher",
@@ -4166,8 +4213,8 @@
       "previousUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 465333,
-      "observedActualSHA256": "sha256-4a24013471ac7bde4bd35ce9861d833abda04f3771719fb9aedee3efcdc96e31",
+      "observedActualSize": 488279,
+      "observedActualSHA256": "sha256-0ef0c59a51955448a14749df4ab2b3818f74e9cc8afee542568170dd07a71e31",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/JustPlay.cs3",
@@ -4478,6 +4525,22 @@
       "fallbackThroughRecoveryLock": true
     },
     {
+      "plugin": "netmirror",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "netmirror",
+      "previousSourceId": "netmirror",
+      "candidateUrl": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/Netmirror.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/builds/Netmirror.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 74587,
+      "observedActualSHA256": "sha256-26ea2b1d7c7b3f5ccc2e5bdb7a5dc01376fc767d72d8b62345fe2c6600531079",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/Sushan64/NetMirror-Extension/3e97aa84c80083aed0153870a715d4f67eceae6d/Netmirror.cs3",
+      "fallbackThroughRecoveryLock": true
+    },
+    {
       "plugin": "netnaija",
       "disposition": "quarantined_existing",
       "candidateSourceId": "raghav",
@@ -4678,8 +4741,8 @@
       "previousUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RaghavAnime.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 650786,
-      "observedActualSHA256": "sha256-3a41e855d6a950d15810272b2342d3df7c4a5e96e20767e8b541f1261e509e4b",
+      "observedActualSize": 666666,
+      "observedActualSHA256": "sha256-7b8bf2f3ff732f3b9d11bbd1426e54a4ea66af39dc7529ee2195743ebc180233",
       "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
       "fallbackVerified": false,
       "fallbackPin": null,
@@ -4694,8 +4757,8 @@
       "previousUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RaghavAnimeKitsu.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 662237,
-      "observedActualSHA256": "sha256-e39d60a111a6885cf94df90eead1d54f693db24e8bf45c9ecb13c1a1c0cf4efb",
+      "observedActualSize": 678485,
+      "observedActualSHA256": "sha256-318f45e35443cc1959d325e3dc765d2de50e3e13ff477332394dd4967bba98d0",
       "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
       "fallbackVerified": false,
       "fallbackPin": null,
@@ -4886,8 +4949,8 @@
       "previousUrl": null,
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 55214,
-      "observedActualSHA256": "sha256-dd240d7b51ba9dcb5d549f22b0998f9510bde6d0b8309259fbbcf8ce2666d0ad",
+      "observedActualSize": 66643,
+      "observedActualSHA256": "sha256-3284b0b89e49d2f85bd59cd2794c914d506a9004324c2094a1e87ac9b406a71b",
       "fallbackAssessment": "no independently verified immutable previous artifact; no previous entry or provenance",
       "fallbackVerified": false,
       "fallbackPin": null,
@@ -5046,8 +5109,8 @@
       "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 365379,
-      "observedActualSHA256": "sha256-8e031f32fe438049db0291f4cbafd7ccd7cfa0a262e49dee54c32204f1dbd594",
+      "observedActualSize": 354833,
+      "observedActualSHA256": "sha256-b14e5249d08bee7d6946090149603a20171c820a331127a925c50d96086a6509",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Ultima.cs3",
@@ -5166,11 +5229,11 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "6ef9910a64f3c4eea3fb21425c4a10b3ab05b9e9cffc648b8f78ae75b70a58f9",
+  "originalSourceReportDigest": "fd18bb694daa94270655ea49cba3693d446231f91a6d85aed0df0ed0a6be8d29",
   "inputSnapshotDigests": {
-    "candidate": "292acd41e43b3bd0bf08b7840e0a114922bc6f233ab63e58de3cb58f67681985",
+    "candidate": "725331f176e71a99251b0a236952b654a57bdaf65c3c28d2c4c46fce12c2a201",
     "previous": "63548c7f84f6a27df8b1d8414b92d1ae9de97f0c0e0020b740e779cde58893ec",
-    "candidateProvenance": "919ef46a39d5343d1f1fcc664897327e14ce31086b2c97a216c679f67aa10563",
+    "candidateProvenance": "69f27093c3a5b93de9c9342c89a9064eb7aeac236509e4a8b52af69a80c18093",
     "previousProvenance": "be5b8a8b97d1de7d1e6ef6c943b6284211c78d4895c29f5a52de1b861e60edd2"
   },
   "releaseEligible": true,

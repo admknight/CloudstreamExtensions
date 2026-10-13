@@ -1,23 +1,38 @@
 {
-  "generatedAt": "2026-10-13 06:49:41 UTC",
+  "generatedAt": "2026-10-13 16:58:19 UTC",
   "candidateStatus": "READY - GUARDED, 24 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "catalog": {
     "plugins": 547,
     "healthySources": 36,
     "failedSources": 0,
-    "reachablePackages": 552,
+    "reachablePackages": 554,
     "packageFailures": 0
   },
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "Netmirror",
+        "name": "Netmirror",
+        "version": 46,
+        "sourceId": "netmirror",
+        "sourceName": "NetMirror Extension",
+        "category": "Indian",
+        "fromVersion": 46,
+        "toVersion": 46,
+        "fromSourceId": "netmirror",
+        "fromSource": "NetMirror Extension",
+        "toSourceId": "netmirror",
+        "toSource": "NetMirror Extension"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -27,13 +42,13 @@
   },
   "customProviderChanges": [],
   "integrityHealth": {
-    "candidateChecked": 552,
-    "candidateAccepted": 433,
-    "immutableOldRetained": 90,
-    "pinnedPreviousRecovered": 90,
+    "candidateChecked": 554,
+    "candidateAccepted": 432,
+    "immutableOldRetained": 91,
+    "pinnedPreviousRecovered": 91,
     "unverifiedPreviousCarried": 24,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 119,
+    "changedOrFailedCandidates": 122,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": true

@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-13 06:49:41 UTC**
+Last successful refresh: **2026-10-13 16:58:19 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
 
 ## Integrity status — separate from package reachability
 
-- **552 candidate packages** inspected for declared length and SHA-256 when present.
-- **433 candidates** accepted under the published trust rules.
+- **554 candidate packages** inspected for declared length and SHA-256 when present.
+- **432 candidates** accepted under the published trust rules.
 - **24 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **90 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **91 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -131,7 +131,7 @@ Plugins are grouped with a display-name prefix in CloudStream. The prefix change
 | [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 18 | 11 | 0 | 5 |
 | [FLUMMOX Repo](https://github.com/FlummoxGamer/FLUMMOX-Repo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Ayu CloudStream Games](https://github.com/errorcode26/Ayu-CloudStream-Games) | ✅ OK | 21 | 0 | 0 | 21 |
-| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 32 | 28 | 0 | 1 |
+| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 34 | 28 | 0 | 1 |
 | [DieGon Repository](https://github.com/DieGon7771/ItaliaInStreaming) | ✅ OK | 18 | 17 | 0 | 1 |
 | [Reflex Repo](https://github.com/Reflex755/ReflexRepo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [cs-karma](https://github.com/Kraptor123/cs-Karma) | ✅ OK | 34 | 30 | 0 | 3 |
@@ -441,7 +441,7 @@ CloudStream display prefix: `[Indian]`
 | 55 | **MPlayerProvider** | 9 | hi | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
 | 56 | **MultiMoviesProvider** | 55 | hi | Movie, TvSeries, Anime | Phisher Repo | Unchanged |
 | 57 | **NetflixMirror** | 32 | hi | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
-| 58 | **Netmirror** | 46 | hi | Movie, TvSeries | NetMirror Extension | Unchanged |
+| 58 | **Netmirror** | 46 | hi | Movie, TvSeries | NetMirror Extension | Updated (verified by candidate policy) |
 | 59 | **NetMovie** | 1 | hi | Movie, TvSeries, Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 60 | **OnlineMoviesHinditProvider** | 6 | hi | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 61 | **OttSource** | 7 | hi | Movie, TvSeries | Desi Extensions | Unchanged |
@@ -857,7 +857,7 @@ When the same plugin is published by more than one source, the highest version i
 | IPTVProvider | MegaRepo Verified Immutable Recovery v9 | Tearrs Vietnamese Extension v9 (lower source priority) |
 | JackieChan | MegaRepo Verified Immutable Recovery v4 | Ayu CloudStream Games v4 (lower source priority) |
 | JetFilmizle | MegaRepo Verified Immutable Recovery v41 | Turkish Providers Repository \| @KekikAkademi v41 (lower source priority) |
-| JustPlay | raghav repo v18 | MegaRepo Verified Immutable Recovery v12 (lower version) |
+| JustPlay | raghav repo v19 | MegaRepo Verified Immutable Recovery v12 (lower version) |
 | Kalite18 | MegaRepo Verified Immutable Recovery v2 | Turkish Providers Repository \| @KekikAkademi v2 (lower source priority) |
 | Kawanfilm | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
 | KKPhimProvider | MegaRepo Verified Immutable Recovery v10 | Vietnamese CloudStream Index v10 (lower source priority) |
