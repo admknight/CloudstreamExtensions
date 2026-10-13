@@ -9701,16 +9701,16 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions"
   },
   {
-    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The%20Movie%20Flix.cs3",
+    "url": "https://raw.githubusercontent.com/Faisal0786/Desi/8c6579fd1b029a2b4f80e2ca035efdfa279458d3/The%20Movie%20Flix.cs3",
     "status": 1,
-    "version": 27,
+    "version": 28,
     "name": "[Indian] The Movie Flix",
     "internalName": "The Movie Flix",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "TheMoviesFlix provider for Dual Audio, Bollywood and Hollywood Movies and TV Shows",
-    "fileSize": 56995,
+    "fileSize": 56994,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -9720,7 +9720,7 @@
     ],
     "iconUrl": "https://moviesflixi.com/favicon.ico",
     "apiVersion": 1,
-    "fileHash": "sha256-4fb71304fff2f9a84dfc00fe9037b276726130b22d3009f7a01e53112526af03"
+    "fileHash": "sha256-e96ea27fff94a77eb05b2fbc2f2f31f262556d68e3b1c8e2462c8ec1c3a1a454"
   },
   {
     "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TheMoviesFlix.cs3",

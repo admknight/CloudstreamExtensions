@@ -7955,7 +7955,7 @@
     "publishedName": "[Indian] The Movie Flix",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 27,
+    "selectedVersion": 28,
     "sourceId": "desi",
     "sourceName": "Desi Extensions",
     "sourceRepository": "https://github.com/Faisal0786/Desi",
@@ -7964,7 +7964,7 @@
       "Faisal"
     ],
     "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
-    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/builds/The Movie Flix.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/8c6579fd1b029a2b4f80e2ca035efdfa279458d3/The%20Movie%20Flix.cs3"
   },
   {
     "plugin": "TheMoviesFlix",
