@@ -16,7 +16,8 @@ from audit_package_integrity import plugin_identity, verify_package
 
 
 def check_release(plugins, provenance, report, *, checker=verify_package,
-                  max_deferred=1, workers=8):
+                  max_deferred=1, workers=8,
+                  previous_plugins=None, previous_provenance=None):
     if type(max_deferred) is not int or not 0 <= max_deferred <= 24:
         raise ValueError("Invalid bounded legacy exception limit")
     if type(workers) is not int or not 1 <= workers <= 12:
@@ -59,10 +60,30 @@ def check_release(plugins, provenance, report, *, checker=verify_package,
     }
     if set(exceptions) & (upgraded | pinned):
         raise ValueError("Exception attempted to mask verified upgraded or pinned plugin")
+    if (previous_plugins is None) != (previous_provenance is None):
+        raise ValueError("Previous catalog/provenance must be supplied together")
+    previous_by_key = {}
+    previous_src = {}
+    if previous_plugins is not None:
+        previous_by_key = {plugin_identity(p):p for p in previous_plugins}
+        previous_src = {
+            str(s.get("plugin") or s.get("originalName") or "").strip().casefold():s
+            for s in previous_provenance
+        }
+        if (len(previous_by_key) != len(previous_plugins)
+                or len(previous_src) != len(previous_provenance)
+                or set(previous_by_key) != set(previous_src)):
+            raise ValueError("Previous catalog/provenance identity mismatch")
+    preexisting_url_mismatches = []
     for item in plugins:
         key = plugin_identity(item)
         if origins[key].get("packageUrl") != item.get("url"):
-            raise ValueError("Catalog/provenance package URL mismatch for " + key)
+            prior = previous_by_key.get(key)
+            old_src = previous_src.get(key)
+            if (not prior or not old_src
+                    or prior != item or old_src != origins[key]):
+                raise ValueError("New catalog/provenance package URL mismatch for " + key)
+            preexisting_url_mismatches.append(key)
     checks = {}
     with ThreadPoolExecutor(max_workers=workers) as pool:
         jobs = {pool.submit(checker, p):plugin_identity(p) for p in plugins}
@@ -97,6 +118,7 @@ def check_release(plugins, provenance, report, *, checker=verify_package,
         "fullByteIntegrityPassed":not bool(known),
         "releaseAllowedWithDocumentedLegacyException":True,
         "exceptionLimit":max_deferred,
+        "unchangedPreviousUrlProvenanceDiscrepancies": preexisting_url_mismatches,
     }
 
 
@@ -105,11 +127,18 @@ def main():
     parser.add_argument("--release-dir",required=True,type=Path)
     parser.add_argument("--report",required=True,type=Path)
     parser.add_argument("--max-deferred",type=int,default=1)
+    parser.add_argument("--previous-dir",type=Path)
     args=parser.parse_args()
     root=args.release_dir
     read=lambda name:json.loads((root/name).read_text(encoding="utf-8"))
+    previous_plugins = previous_provenance = None
+    if args.previous_dir:
+        previous_plugins=json.loads((args.previous_dir/"plugins.json").read_text())
+        previous_provenance=json.loads((args.previous_dir/"provenance.json").read_text())
     verdict=check_release(read("plugins.json"),read("provenance.json"),
-                          read("merge-report.json"),max_deferred=args.max_deferred)
+                          read("merge-report.json"),max_deferred=args.max_deferred,
+                          previous_plugins=previous_plugins,
+                          previous_provenance=previous_provenance)
     args.report.write_text(json.dumps(verdict,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({k:v for k,v in verdict.items()
                       if k!="knownLegacyFailures"},indent=2))
