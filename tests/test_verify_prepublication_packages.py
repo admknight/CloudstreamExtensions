@@ -75,6 +75,25 @@ class PrepublicationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"provenance"):
             check_release(a,b,r,checker=good,workers=2)
 
+    def test_unchanged_previous_provenance_url_inconsistency_is_reported(self):
+        a,b,r=fixture()
+        b[2]["packageUrl"]+="?legacy=1"
+        from copy import deepcopy
+        out=check_release(a,b,r,checker=good,workers=2,
+                          previous_plugins=deepcopy(a),
+                          previous_provenance=deepcopy(b))
+        self.assertEqual(out["unchangedPreviousUrlProvenanceDiscrepancies"],["provider2"])
+        self.assertTrue(out["fullByteIntegrityPassed"])
+
+    def test_new_provenance_url_mismatch_cannot_be_grandfathered(self):
+        a,b,r=fixture()
+        from copy import deepcopy
+        old_plugins,old_sources=deepcopy(a),deepcopy(b)
+        b[2]["packageUrl"]+="?new=1"
+        with self.assertRaisesRegex(ValueError,"New catalog/provenance"):
+            check_release(a,b,r,checker=good,workers=2,
+                          previous_plugins=old_plugins,previous_provenance=old_sources)
+
     def test_missing_catalog_member_blocks(self):
         a,b,r=fixture()
         a.pop()
