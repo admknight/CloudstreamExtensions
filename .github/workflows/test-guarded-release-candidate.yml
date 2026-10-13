@@ -124,6 +124,7 @@ jobs:
             --previous-dir published \
             --selection-dir integrity-selection \
             --output-dir release-candidate \
+            --policy-approvals staged-candidate/policy-approvals.json \
             --max-deferred 24 \
             --verify-deferred-urls
       - name: Assert real 543-entry release candidates remain complete
