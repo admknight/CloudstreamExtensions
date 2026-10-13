@@ -112,11 +112,32 @@ class GuardedClassificationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "only for rotating hourly"):
             offline_audit(full=True)
 
-    def test_changed_candidate_digest_since_release_is_new_regression(self):
+    def test_new_candidate_digest_is_untrusted_advisory_not_published_failure(self):
         result = offline_audit(mutate=lambda old, new, src, release:
                                new.update(fileHash=DIGEST(b"unknown")))
+        self.assertTrue(result["pass"])
+        self.assertFalse(result["strictUnclassifiedAuditPass"])
+        self.assertEqual(result["guardedHourlyClassification"]["knownCount"], 0)
+        self.assertEqual(result["guardedHourlyClassification"]["pendingUntrustedUpstreamCount"], 1)
+        self.assertEqual(result["guardedHourlyClassification"]["unexpectedCount"], 0)
+        self.assertEqual(result["scan"]["hashVerified"], 1)
+        self.assertIn("UNTRUSTED_UPSTREAM_PENDING", result["verdict"])
+
+    def test_upstream_binary_redirected_to_unrecognized_path_is_unexpected(self):
+        result = offline_audit(mutate=lambda old, new, src, release:
+                               new.update(url="https://raw.githubusercontent.com/other/repo/builds/Demo.cs3"))
         self.assertFalse(result["pass"])
         self.assertEqual(result["guardedHourlyClassification"]["unexpectedCount"], 1)
+
+    def test_checksum_failure_even_with_changed_candidate_always_red(self):
+        result = offline_audit(
+            mutate=lambda old, new, src, release:
+                new.update(fileHash=DIGEST(b"unknown")),
+            hash_error=True
+        )
+        self.assertFalse(result["pass"])
+        self.assertEqual(result["guardedHourlyClassification"]["pendingUntrustedUpstreamCount"], 1)
+        self.assertEqual(result["scan"]["failed"], 1)
 
     def test_forged_fallback_verified_flag_is_not_accepted(self):
         result = offline_audit(mutate=lambda old, new, src, r:
