@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13 18:19:45 UTC",
+  "generatedAt": "2026-10-13 22:47:38 UTC",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "catalog": {
     "plugins": 547,
@@ -10,29 +10,14 @@
   },
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 546,
+    "updated": 0,
+    "unchanged": 547,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [
-      {
-        "plugin": "The Movie Flix",
-        "name": "The Movie Flix",
-        "version": 28,
-        "sourceId": "desi",
-        "sourceName": "Desi Extensions",
-        "category": "Indian",
-        "fromVersion": 27,
-        "toVersion": 28,
-        "fromSourceId": "desi",
-        "fromSource": "Desi Extensions",
-        "toSourceId": "desi",
-        "toSource": "Desi Extensions"
-      }
-    ],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
@@ -43,12 +28,12 @@
   "customProviderChanges": [],
   "integrityHealth": {
     "candidateChecked": 554,
-    "candidateAccepted": 433,
-    "immutableOldRetained": 114,
-    "pinnedPreviousRecovered": 114,
+    "candidateAccepted": 432,
+    "immutableOldRetained": 115,
+    "pinnedPreviousRecovered": 115,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 121,
+    "changedOrFailedCandidates": 122,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false

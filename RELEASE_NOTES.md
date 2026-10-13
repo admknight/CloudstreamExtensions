@@ -1,19 +1,19 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-13 18:19:45 UTC**
+Generated: **2026-10-13 22:47:38 UTC**
 
 Production catalog: **547 reachable plugins** · **36 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **0**
-- Updated: **1**
+- Updated: **0**
 - Removed: **0**
-- Unchanged: **546**
+- Unchanged: **547**
 
-## Updated plugins
+## Catalog changes
 
-- **The Movie Flix** v27 → v28 — Desi Extensions
+No plugin or source changes were detected in this production refresh.
 
 ## Production health
 
@@ -28,9 +28,9 @@ Production catalog: **547 reachable plugins** · **36 healthy sources** · **0 p
 ## Integrity status — separate from package reachability
 
 - **554 candidate packages** inspected for declared length and SHA-256 when present.
-- **433 candidates** accepted under the published trust rules.
+- **432 candidates** accepted under the published trust rules.
 - **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **114 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **115 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.

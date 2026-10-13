@@ -1,19 +1,19 @@
 # Production Aggregation Status
 
-Generated: **2026-10-13 18:19:45 UTC**
+Generated: **2026-10-13 22:47:38 UTC**
 
 Candidate status: **READY - GUARDED, NO DEFERRED UPDATES**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **554 candidate packages** inspected for declared length and SHA-256 when present.
-- **433 candidates** accepted under the published trust rules.
+- **432 candidates** accepted under the published trust rules.
 - **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **114 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **115 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -533,7 +533,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 463 | **[Indian] TamilToon** | 8 | hi | Movie, TvSeries, Anime, AsianDrama | Desi Extensions | Unchanged |
 | 464 | **[Live] TamilUltraProvider** | 40 | ta | Live | CNC Repo (All Language) | Unchanged |
 | 465 | **[Other] TekkenAdvance** | 7 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 466 | **[Indian] The Movie Flix** | 28 | hi | TvSeries, Movie, Anime | Desi Extensions | Updated (verified by candidate policy) |
+| 466 | **[Indian] The Movie Flix** | 28 | hi | TvSeries, Movie, Anime | Desi Extensions | Unchanged |
 | 467 | **[Movies] TheMoviesFlix** | 22 | en | Movie, TvSeries | raghav repo | Unchanged |
 | 468 | **[Anime] TioAnimeProvider** | 4 | es | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
 | 469 | **[Movies] TLCtr** | 19 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
