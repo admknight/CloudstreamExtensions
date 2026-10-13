@@ -123,6 +123,7 @@ class ResolutionTests(unittest.TestCase):
     def test_new_unaccounted_binary_mismatch_blocks_every_close(self):
         data=fixture()
         data[0]["packageProblems"].append({"plugin":"P1","status":"mismatch"})
+        data[0]["scan"].update({"failed":2,"hashVerified":47})
         with self.assertRaisesRegex(ValueError,"Unexpected unapproved"):
             validate_proven_resolution(*data)
 
@@ -251,12 +252,14 @@ class ResolutionTests(unittest.TestCase):
 
     def test_existing_quarantined_candidate_remains_ineligible_even_without_drift(self):
         data=fixture()
-        data[0]["metadataDrift"]=[]
-        data[0]["packageProblems"]=[]
-        data[0]["scan"].update({"failed":0,"hashVerified":49})
-        data[0]["pass"]=True
-        data[1].update({"knownAuditAnomalyCount":0,"fullAuditPassed":True})
-        self.assertNotIn("p0",validate_proven_resolution(*data))
+        # P1 has zero audit findings but its candidate is still preserved as
+        # an unapproved immutable previous release, so issue closure is unsafe.
+        data[2]["quarantineIncidents"].append({
+            "plugin":"P1","disposition":"retained_immutable_previous",
+            "fallbackVerified":True,"fallbackThroughRecoveryLock":True,
+        })
+        data[2]["integrityHealth"]["pinnedPreviousRecovered"]=1
+        self.assertNotIn("p1",validate_proven_resolution(*data))
 
     def test_missing_independent_sha_coverage_fails_closed(self):
         data=fixture()
