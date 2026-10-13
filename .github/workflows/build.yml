@@ -20,6 +20,7 @@ on:
       - 'trusted_upstream_policy.json'
       - 'tools/trusted_upstream_candidates.py'
       - 'tools/verify_candidate_integrity.py'
+      - 'tools/verify_prepublication_packages.py'
       - 'tools/merge_upstreams.py'
       - '.github/workflows/build.yml'
       - 'repo.json'
@@ -179,12 +180,21 @@ jobs:
           name: guarded-catalog-verification-${{ github.run_id }}
           path: |
             pinned-published-recovery.json
+            prepublication-package-verdict.json
             source/verified-selection/integrity-selection.json
             source/verified-selection/verification-report.json
             source/guarded-release/guarded-release-assurance.json
           retention-days: 21
           if-no-files-found: warn
 
+      - name: Independently verify installer-facing package hashes before publication
+        run: |
+          set -euo pipefail
+          python3 source/tools/verify_prepublication_packages.py \
+            --release-dir source/merged \
+            --report prepublication-package-verdict.json \
+            --max-deferred 1
+          cat prepublication-package-verdict.json >> "$GITHUB_STEP_SUMMARY"
       - name: Safety Gate
         run: |
           python3 - << 'PY'
