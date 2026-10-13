@@ -69,6 +69,24 @@ class TrustedUpdateTests(unittest.TestCase):
         self.assertTrue(out["passed"], out["blocked"])
         self.assertEqual(out["trustedChanges"], 1)
 
+    def test_github_repository_spelling_case_does_not_block_verified_pin(self):
+        # GitHub owner/repo paths are case-insensitive, package filename is not.
+        alias_repo = "https://github.com/Example/extension"
+        alias_index = "https://raw.githubusercontent.com/Example/extension/builds/plugins.json"
+        sources = {"sources":[{"id":"example","repo":alias_repo,"index":alias_index}]}
+        policy = {"schemaVersion":1,"rules":[{"sourceId":"example",
+                  "repository":alias_repo,"mode":"existing_upgrade_only"}]}
+        old_src = provenance(sourceRepository=alias_repo,sourceIndex=alias_index)
+        new_src = provenance(sourceRepository=alias_repo,sourceIndex=alias_index)
+        pins, origins, approvals, _ = stage(sources=sources,policy=policy,
+             old_provenance=old_src,new_provenance=new_src)
+        self.assertEqual(len(approvals),1)
+        self.assertIn("/Example/extension/",approvals[0]["pinnedIndexUrl"])
+        self.assertIn("/Example/Extension/",pins[0]["url"])
+        result=gate(pins,[package(version=1)],origins,[old_src],
+                    approvals,checker=verify,workers=1)
+        self.assertTrue(result["passed"],result["blocked"])
+
     def test_no_automatic_trust_for_new_identity(self):
         plugins, origins, approvals, _ = promote(
             [package()], [], [provenance()], [], SOURCES, POLICY,
