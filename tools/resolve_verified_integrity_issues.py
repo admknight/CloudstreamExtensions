@@ -15,6 +15,7 @@ from pathlib import Path
 
 from audit_package_integrity import DIGEST_RE, plugin_identity
 from plan_integrity_recovery import issue_key
+from guarded_candidate_issue_evidence import issue_candidate_resolution
 
 REPO = "admknight/CloudstreamExtensions"
 MANAGED = "<!-- megarepo-integrity:managed -->"
@@ -59,6 +60,37 @@ def validate_proven_resolution(audit, guarded_verdict, report, plugins, provenan
         or audit.get("sourceErrors")
     ):
         raise ValueError("Incomplete, failed or unguarded publication audit")
+    # Reconcile independent byte-scan coverage, not just a green workflow name.
+    scan = audit["scan"]
+    problems = audit.get("packageProblems")
+    if (not isinstance(problems, list)
+            or type(scan.get("hashVerified")) is not int
+            or type(scan.get("withoutHashes")) is not int
+            or type(scan.get("failed")) is not int
+            or min(scan["hashVerified"], scan["withoutHashes"], scan["failed"]) < 0
+            or scan["failed"] != len(problems)
+            or scan["hashVerified"] + scan["withoutHashes"] + scan["failed"] != len(entries)):
+        raise ValueError("Independent full-audit byte coverage does not reconcile")
+
+    # An intact older published release does not resolve its still-rejected
+    # upstream candidate. All disallowed candidates remain ineligible.
+    quarantine = report.get("quarantineIncidents")
+    if not isinstance(quarantine, list):
+        raise ValueError("Complete candidate quarantine ledger is required")
+    candidate_holds = set()
+    dispositions = {
+        "retained_immutable_previous", "withheld_new",
+        "quarantined_existing", "previous_absent_from_candidate",
+    }
+    for row in quarantine:
+        if not isinstance(row, dict):
+            raise ValueError("Malformed quarantined candidate")
+        key = str(row.get("plugin") or "").strip().casefold()
+        if (not key or key in candidate_holds
+                or row.get("disposition") not in dispositions):
+            raise ValueError("Duplicate, missing or unknown quarantined candidate")
+        candidate_holds.add(key)
+
     held = report.get("deferredUnverified")
     if not isinstance(held, list):
         raise ValueError("No complete deferred-source list")
@@ -152,7 +184,7 @@ def validate_proven_resolution(audit, guarded_verdict, report, plugins, provenan
 
     eligible = []
     for key, entry in entries.items():
-        if key in anomalies or key in deferred:
+        if key in anomalies or key in deferred or key in candidate_holds:
             continue
         digest = entry.get("fileHash")
         length = entry.get("fileSize")
