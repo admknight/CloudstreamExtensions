@@ -252,7 +252,9 @@ def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader
         'strictUnclassifiedAuditPass': strict_pass,
         'guardedHourlyClassification': classification,
         'verdict': (
-            'HOURLY_VERIFIED_WITH_DOCUMENTED_PINNED_DRIFT'
+            'HOURLY_VALID_PUBLISHED_PACKAGES_UNTRUSTED_UPSTREAM_PENDING'
+            if classification and verdict and classification['pendingUntrustedUpstreamCount']
+            else 'HOURLY_VERIFIED_WITH_DOCUMENTED_PINNED_DRIFT'
             if classification and verdict and classification['knownCount']
             else 'HOURLY_VERIFIED_NO_DRIFT' if classification and verdict
             else 'HOURLY_UNEXPECTED_INTEGRITY_FAILURE' if classification
@@ -273,7 +275,9 @@ def summary(report):
     classification = report.get('guardedHourlyClassification')
     if classification is not None:
         label = (
-            'PASS WITH DOCUMENTED IMMUTABLE HOLDS - not a clean full audit'
+            'PASS WITH DOCUMENTED IMMUTABLE HOLDS AND UNTRUSTED UPSTREAM UPDATES - not a clean full audit'
+            if report['pass'] and classification['pendingUntrustedUpstreamCount']
+            else 'PASS WITH DOCUMENTED IMMUTABLE HOLDS - not a clean full audit'
             if report['pass'] and classification['knownCount']
             else 'PASS - no unexpected changes in rotating scan'
             if report['pass'] else 'FAIL - unexpected integrity or source failure'
@@ -296,6 +300,7 @@ def summary(report):
     if classification is not None:
         lines += [
             f"- Known immutable/version-pinned source differences: {classification['knownCount']}",
+            f"- New upstream candidates still UNTRUSTED and withheld: {classification['pendingUntrustedUpstreamCount']}",
             f"- Unexpected metadata changes: {classification['unexpectedCount']}",
             f"- Unverified mutable fallbacks: {classification['unverifiedMutableHeldCount']}",
             f"- Strict raw metadata+package audit pass: {report['strictUnclassifiedAuditPass']}",
@@ -304,6 +309,15 @@ def summary(report):
             "- All original metadata drift remains in this report and the JSON artifact.",
             ''
         ]
+        if classification['pendingUntrustedUpstream']:
+            lines += [
+                '## New untrusted upstream changes kept behind verified immutable pins', '',
+                'These are NOT approved updates or verified upstream releases. No new binary is adopted.',
+                'The historical published plugin remains pinned; independent upstream checks remain necessary.',
+                '', '```json',
+                json.dumps(classification['pendingUntrustedUpstream'][:30], indent=2, sort_keys=True),
+                '```', ''
+            ]
         if classification['unexpected']:
             lines += [
                 '## Unexpected metadata drift requiring investigation', '',
