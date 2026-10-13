@@ -8,6 +8,10 @@ on:
       - 'tests/test_integrity_recovery.py'
       - 'tests/test_validate_audit_origin.py'
       - 'tools/validate_audit_origin.py'
+      - 'tools/resolve_verified_integrity_issues.py'
+      - 'tools/guarded_candidate_issue_evidence.py'
+      - 'tests/test_resolve_verified_integrity_issues.py'
+      - '.github/workflows/verify-guarded-post-publication.yml'
       - '.github/workflows/integrity-incidents.yml'
       - '.github/workflows/test-integrity-recovery.yml'
   workflow_dispatch:
@@ -28,7 +32,8 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_integrity_recovery.py' -v
           python3 -m unittest discover -s tests -p 'test_validate_audit_origin.py' -v
-          python3 -m py_compile tools/plan_integrity_recovery.py tools/sync_integrity_issues.py tools/validate_audit_origin.py
+          python3 -m unittest discover -s tests -p 'test_resolve_verified_integrity_issues.py' -v
+          python3 -m py_compile tools/plan_integrity_recovery.py tools/sync_integrity_issues.py tools/validate_audit_origin.py tools/resolve_verified_integrity_issues.py tools/guarded_candidate_issue_evidence.py
       - name: Check all workflow YAML syntax
         run: |
           ruby -e 'require "yaml"; Dir[".github/workflows/*.yml"].each { |p| YAML.load_file(p) }; puts "YAML parsed"'
