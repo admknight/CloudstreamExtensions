@@ -78,7 +78,7 @@ class PrepublicationTests(unittest.TestCase):
     def test_missing_catalog_member_blocks(self):
         a,b,r=fixture()
         a.pop()
-        with self.assertRaisesRegex(ValueError,"incomplete or inconsistent"):
+        with self.assertRaisesRegex(ValueError,"[Ii]ncomplete or inconsistent"):
             check_release(a,b,r,checker=good,workers=2)
 
 
