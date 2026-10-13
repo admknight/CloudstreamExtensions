@@ -17,6 +17,9 @@ on:
       - 'local_verified_plugins.json'
       - 'verified_historical_revisions.json'
       - 'trusted_binary_approvals.json'
+      - 'trusted_upstream_policy.json'
+      - 'tools/trusted_upstream_candidates.py'
+      - 'tools/verify_candidate_integrity.py'
       - 'tools/merge_upstreams.py'
       - '.github/workflows/build.yml'
       - 'repo.json'
@@ -80,12 +83,33 @@ jobs:
             exit 1
           fi
 
+      - name: Stage approved existing upstream upgrades at immutable commits
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 source/tools/trusted_upstream_candidates.py \
+            --candidate-dir source/merged \
+            --previous-dir builds \
+            --sources source/sources.json \
+            --policy source/trusted_upstream_policy.json \
+            --output-dir source/upstream-candidate
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          original=json.loads(Path("source/trusted_binary_approvals.json").read_text())
+          staged=json.loads(Path("source/upstream-candidate/policy-approvals.json").read_text())
+          assert isinstance(original,list) and isinstance(staged,list)
+          assert len(staged)==len({a["plugin"] for a in staged})
+          Path("source/active-approvals.json").write_text(json.dumps(original+staged,indent=2)+"\n")
+          print("Staged, immutable publisher-policy upgrades:",len(staged))
+          PY
+
       - name: Verify individual candidates and freeze exact previous bytes
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          cp -a source/merged source/upstream-candidate
           python3 source/tools/index_immutable_recovery.py \
             --published builds/plugins.json \
             --provenance builds/provenance.json \
@@ -97,7 +121,7 @@ jobs:
             --previous builds/plugins.json \
             --candidate-provenance source/upstream-candidate/provenance.json \
             --previous-provenance builds/provenance.json \
-            --approvals source/trusted_binary_approvals.json \
+            --approvals source/active-approvals.json \
             --recovery-index pinned-published-recovery.json \
             --output-dir source/verified-selection \
             --workers 8
