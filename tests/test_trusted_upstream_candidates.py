@@ -87,6 +87,23 @@ class TrustedUpdateTests(unittest.TestCase):
                     approvals,checker=verify,workers=1)
         self.assertTrue(result["passed"],result["blocked"])
 
+    def test_url_encoded_spaces_match_original_source_provenance(self):
+        encoded="https://raw.githubusercontent.com/Example/Extension/builds/Demo%20Movie.cs3"
+        raw="https://raw.githubusercontent.com/Example/Extension/builds/Demo Movie.cs3"
+        next_plugin=package(url=encoded)
+        upstream=package(url=raw)
+        current_origin=provenance(url=raw)
+        prior_origin=provenance(url=raw)
+        staged, origins, approvals, result=stage(
+            new=next_plugin,new_provenance=current_origin,
+            old_provenance=prior_origin,upstream=upstream)
+        self.assertEqual(result["promotedCount"],1)
+        self.assertEqual(len(approvals),1)
+        self.assertTrue(staged[0]["url"].endswith("/Demo%20Movie.cs3"))
+        self.assertEqual(origins[0]["packageUrl"],staged[0]["url"])
+        self.assertTrue(gate(staged,[package(version=1)],origins,[prior_origin],
+                         approvals,checker=verify,workers=1)["passed"])
+
     def test_no_automatic_trust_for_new_identity(self):
         plugins, origins, approvals, _ = promote(
             [package()], [], [provenance()], [], SOURCES, POLICY,
