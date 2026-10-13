@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-13 18:13:00 UTC**
+Last successful refresh: **2026-10-13 18:19:45 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 25 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **554 candidate packages** inspected for declared length and SHA-256 when present.
-- **457 candidates** accepted under the published trust rules.
-- **1 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **89 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **433 candidates** accepted under the published trust rules.
+- **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **114 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -211,14 +211,14 @@ CloudStream display prefix: `[Movies]`
 | 40 | **FilmBip** | 11 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 41 | **FilmMakinesi** | 40 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 42 | **FilmModu** | 15 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 43 | **Flixlatam** | 9 | mx | Movie | cs-karma | Updated (verified by candidate policy) |
+| 43 | **Flixlatam** | 9 | mx | Movie | cs-karma | Unchanged |
 | 44 | **FourKHDHub** | 41 | en | Movie, TvSeries | Phisher Repo | Unchanged |
 | 45 | **FshareProvider** | 35 |  | Anime, TvSeries, Movie | Tearrs Vietnamese Extension | Unchanged |
 | 46 | **FullHDFilm** | 35 | tr | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 47 | **FullHDFilmizlesene** | 27 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 48 | **FullyMaza** | 7 | en | Movie, TvSeries, AnimeMovie, Cartoon | Redowan CloudStream | Unchanged |
 | 49 | **GDIndex** | 4 | en | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
-| 50 | **Gnulahd** | 11 | mx | Movie, Anime, TvSeries | cs-karma | Updated (verified by candidate policy) |
+| 50 | **Gnulahd** | 11 | mx | Movie, Anime, TvSeries | cs-karma | Unchanged |
 | 51 | **Goojara** | 5 | en | Movie, TvSeries | Phisher Repo | Unchanged |
 | 52 | **GuardaPlay** | 1 | it | Movie, Cartoon, Documentary | DieGon Repository | Unchanged |
 | 53 | **GuardaSerie** | 7 | it | TvSeries, Cartoon | DieGon Repository | Unchanged |
@@ -244,14 +244,14 @@ CloudStream display prefix: `[Movies]`
 | 73 | **LibraryOfLadev** | 3 | en | Movie | Reflex Repo | Unchanged |
 | 74 | **Moviesmod** | 33 |  | TvSeries, Movie, AsianDrama, Anime | CSX | Unchanged |
 | 75 | **MoviPK** | 4 | en | Movie, TvSeries | Redowan CloudStream | Unchanged |
-| 76 | **Movix** | 33 | fr | Movie, TvSeries, Anime | cs-karma | Updated (verified by candidate policy) |
+| 76 | **Movix** | 33 | fr | Movie, TvSeries, Anime | cs-karma | Unchanged |
 | 77 | **Multimovies** | 8 | en | Movie, TvSeries, Anime | raghav repo | Unchanged |
 | 78 | **Netcinez** | 5 | pt-br | Movie, TvSeries | Phisher Repo | Unchanged |
 | 79 | **NetflixMirrorProvider** | 44 |  | Movie, TvSeries, AsianDrama, Anime | MegaRepo Verified Immutable Recovery | Unchanged |
-| 80 | **NetNaija** | 18 | en | Movie, TvSeries, Anime, AnimeMovie, OVA | raghav repo | Updated (verified by candidate policy) |
+| 80 | **NetNaija** | 18 | en | Movie, TvSeries, Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 81 | **ObejrzyjTo** | 3 | pl | Movie, TvSeries | Phisher Repo | Unchanged |
 | 82 | **OHiTVProvider** | 2 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 83 | **OK** | 9 | ru | Movie, TvSeries | cs-karma | Updated (verified by candidate policy) |
+| 83 | **OK** | 9 | ru | Movie, TvSeries | cs-karma | Unchanged |
 | 84 | **OneTouchTV** | 5 | en | AsianDrama, TvSeries | Phisher Repo | Unchanged |
 | 85 | **OnlineSerieTV** | 4 | it | Movie, TvSeries, Cartoon, Anime, Documentary | DieGon Repository | Unchanged |
 | 86 | **OPhimProvider** | 10 |  | Anime, TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -287,7 +287,7 @@ CloudStream display prefix: `[Movies]`
 | 116 | **TorrentsV1** | 22 | en | Anime, AnimeMovie, OVA, Movie, TvSeries, Torrent | MegaRepo Verified Immutable Recovery | Unchanged |
 | 117 | **TRasyalog** | 52 | tr | TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 118 | **TvPhimProvider** | 11 |  | Anime, TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 119 | **UAFlixProvider** | 21 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Updated (verified by candidate policy) |
+| 119 | **UAFlixProvider** | 21 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 120 | **UakinoProvider** | 32 | uk | Anime, TvSeries, Movie, AsianDrama | CakesTwix UK/UA | Unchanged |
 | 121 | **UASerialsProProvider** | 27 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 122 | **UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
@@ -301,8 +301,8 @@ CloudStream display prefix: `[Movies]`
 | 130 | **Wcoflix** | 10 | en | Anime, Cartoon | cs-karma | Unchanged |
 | 131 | **WebteIzle** | 15 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 132 | **XDMovies** | 26 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
-| 133 | **Yablom** | 5 | fr | Movie, TvSeries, Documentary | cs-karma | Updated (verified by candidate policy) |
-| 134 | **YoTurkish** | 5 | en | TvSeries | cs-karma | Updated (verified by candidate policy) |
+| 133 | **Yablom** | 5 | fr | Movie, TvSeries, Documentary | cs-karma | Unchanged |
+| 134 | **YoTurkish** | 5 | en | TvSeries | cs-karma | Unchanged |
 | 135 | **YTS** | 11 | en | Movie, Torrent | Phisher Repo | Unchanged |
 
 ### 🎌 Anime — 66 plugins
@@ -318,7 +318,7 @@ CloudStream display prefix: `[Anime]`
 | 5 | **AniKoto** | 10 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | Unchanged |
 | 6 | **AniKotoAnime** | 17 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 7 | **Anilight** | 4 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
-| 8 | **AnimeAV** | 20 | mx | Anime | cs-karma | Updated (verified by candidate policy) |
+| 8 | **AnimeAV** | 20 | mx | Anime | cs-karma | Unchanged |
 | 9 | **Animeav1** | 9 | mx | Movie, Anime, AnimeMovie | Phisher Repo | Unchanged |
 | 10 | **AnimeAV1Provider** | 1 | mx | Anime, OVA | Storm-ext Fork by redblacker8 | Unchanged |
 | 11 | **AnimeciX** | 21 | tr | Anime | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -328,7 +328,7 @@ CloudStream display prefix: `[Anime]`
 | 15 | **Animejara** | 4 | mx | Anime, AnimeMovie | cs-karma | Unchanged |
 | 16 | **AnimeJlProvider** | 5 | mx | Anime | Storm-ext Fork by redblacker8 | Unchanged |
 | 17 | **Animenosub** | 11 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
-| 18 | **AnimeONProvider** | 42 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Updated (verified by candidate policy) |
+| 18 | **AnimeONProvider** | 42 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Unchanged |
 | 19 | **AnimePahe** | 43 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
 | 20 | **AnimeSaturn** | 4 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
 | 21 | **AnimeSuge** | 10 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | Unchanged |
@@ -338,7 +338,7 @@ CloudStream display prefix: `[Anime]`
 | 25 | **AnimeVietsubProvider** | 14 |  | Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 26 | **AnimeWorld** | 20 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
 | 27 | **Animexin** | 16 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
-| 28 | **AnimeYTX** | 11 | mx | Anime | cs-karma | Updated (verified by candidate policy) |
+| 28 | **AnimeYTX** | 11 | mx | Anime | cs-karma | Unchanged |
 | 29 | **Animo** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 30 | **AniPM** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 31 | **AniSnatch** | 2 | en | Anime, AnimeMovie, OVA | Phisher Repo | Unchanged |
@@ -364,8 +364,8 @@ CloudStream display prefix: `[Anime]`
 | 51 | **NineAnime** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 52 | **OnePace** | 23 | en | Anime | Phisher Repo | Unchanged |
 | 53 | **Otakutsu** | 4 | en | Anime, AnimeMovie | FLUMMOX Repo | Unchanged |
-| 54 | **RaghavAnime** | 79 | en | Anime, AnimeMovie, OVA | raghav repo | Updated (verified by candidate policy) |
-| 55 | **RaghavAnimeKitsu** | 31 | en | Anime, AnimeMovie, OVA | raghav repo | Updated (verified by candidate policy) |
+| 54 | **RaghavAnime** | 79 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
+| 55 | **RaghavAnimeKitsu** | 31 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 56 | **ReAnime** | 4 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 57 | **ReyDonghuaProvider** | 2 | mx | Anime | Storm-ext Fork by redblacker8 | Unchanged |
 | 58 | **Senshi** | 8 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
@@ -416,7 +416,7 @@ CloudStream display prefix: `[Indian]`
 | 30 | **EinthusanProvider** | 37 | ta | Movie | CNC Repo (All Language) | Unchanged |
 | 31 | **EmwBD** | 16 | bn | Movie, TvSeries, AnimeMovie, AsianDrama, NSFW | Redowan CloudStream | Unchanged |
 | 32 | **Fibwatch** | 12 | bn | Movie, TvSeries | Phisher Repo | Unchanged |
-| 33 | **FilmFly** | 27 | hi | Movie, TvSeries, Anime | Desi Extensions | Updated (verified by candidate policy) |
+| 33 | **FilmFly** | 27 | hi | Movie, TvSeries, Anime | Desi Extensions | Unchanged |
 | 34 | **Fivemovierulz** | 8 | hi | TvSeries, Movie | Phisher Repo | Unchanged |
 | 35 | **Full4Movies** | 17 | hi | Movie, TvSeries | Adam Knight Custom Providers | Unchanged |
 | 36 | **HDhub4u** | 57 | hi | Movie, TvSeries, Anime | Phisher Repo | Unchanged |
@@ -430,10 +430,10 @@ CloudStream display prefix: `[Indian]`
 | 44 | **MassTamilanProvider** | 9 | ta | Music, Movie | Phisher Repo | Unchanged |
 | 45 | **Microtv** | 3 | hi | Movie, TvSeries | Phisher Repo | Unchanged |
 | 46 | **MLSBDProvider** | 34 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | Unchanged |
-| 47 | **MovieBox** | 13 | hi | Movie, TvSeries, Anime | Desi Extensions | Updated (verified by candidate policy) |
+| 47 | **MovieBox** | 13 | hi | Movie, TvSeries, Anime | Desi Extensions | Unchanged |
 | 48 | **MovieBoxProvider** | 52 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
 | 49 | **MovieBoxProviderIN** | 54 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
-| 50 | **MovieLinkBDProvider** | 25 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | Updated (verified by candidate policy) |
+| 50 | **MovieLinkBDProvider** | 25 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | Unchanged |
 | 51 | **Movies4u** | 18 | hi | Movie, TvSeries | Phisher Repo | Unchanged |
 | 52 | **MoviesDrive** | 33 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | Unchanged |
 | 53 | **MoviezwapProvider** | 32 | te | Movie | CNC Repo (All Language) | Unchanged |
@@ -447,7 +447,7 @@ CloudStream display prefix: `[Indian]`
 | 61 | **OttSource** | 7 | hi | Movie, TvSeries | Desi Extensions | Unchanged |
 | 62 | **PikashowProvider** | 32 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
 | 63 | **Piratexplay** | 5 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
-| 64 | **RareAnimesIndia** | 4 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | Updated (verified by candidate policy) |
+| 64 | **RareAnimesIndia** | 4 | hi | Anime, Cartoon, TvSeries, Movie | raghav repo | Unchanged |
 | 65 | **RingZ** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 66 | **Rtally** | 50 | ta | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | CNC Repo (All Language) | Unchanged |
 | 67 | **SDmovies** | 4 | hi | TvSeries, Movie, AsianDrama, Anime, Torrent | Desi Extensions | Unchanged |
@@ -457,7 +457,7 @@ CloudStream display prefix: `[Indian]`
 | 71 | **TamilDhoolProvider** | 40 | ta | TvSeries | CNC Repo (All Language) | Unchanged |
 | 72 | **Tamilian** | 32 | ta | Movies | CNC Repo (All Language) | Unchanged |
 | 73 | **TamilToon** | 8 | hi | Movie, TvSeries, Anime, AsianDrama | Desi Extensions | Unchanged |
-| 74 | **The Movie Flix** | 27 | hi | TvSeries, Movie, Anime | Desi Extensions | Deferred: previous metadata, unverified upstream bytes |
+| 74 | **The Movie Flix** | 28 | hi | TvSeries, Movie, Anime | Desi Extensions | Updated (verified by candidate policy) |
 | 75 | **ToonHub** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 76 | **Toonstream** | 10 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 77 | **ToonTales** | 5 | hi | Cartoon | Phisher Repo | Unchanged |
@@ -495,7 +495,7 @@ CloudStream display prefix: `[Arabic]`
 | 18 | **Dima toon** | 1 | ar | TvSeries, Anime | Re-3arabi | Unchanged |
 | 19 | **Egydead** | 1 | ar | Movie, TvSeries, Anime, AsianDrama | Re-3arabi | Unchanged |
 | 20 | **Elif** | 1 | ar | TvSeries, Anime, Movie | Re-3arabi | Unchanged |
-| 21 | **Esheaq** | 22 | ar | Movie, TvSeries | cs-karma | Updated (verified by candidate policy) |
+| 21 | **Esheaq** | 22 | ar | Movie, TvSeries | cs-karma | Unchanged |
 | 22 | **Eshek** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 23 | **Faselhd** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 24 | **Krmzy** | 2 | ar | TvSeries | cs-karma | Unchanged |
@@ -528,7 +528,7 @@ CloudStream display prefix: `[Asian]`
 | 8 | **Donghuastream** | 22 | zh | Anime | Phisher Repo | Unchanged |
 | 9 | **Donghub** | 4 | id | Anime, AnimeMovie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 10 | **DoramasFlixProvider** | 8 | mx | AsianDrama | Storm-ext Fork by redblacker8 | Unchanged |
-| 11 | **DoramasLatinoX** | 8 | mx | AsianDrama | cs-karma | Updated (verified by candidate policy) |
+| 11 | **DoramasLatinoX** | 8 | mx | AsianDrama | cs-karma | Unchanged |
 | 12 | **DoramasYTProvider** | 7 | mx | AsianDrama | Storm-ext Fork by redblacker8 | Unchanged |
 | 13 | **Dubbindo** | 2 | id | AsianDrama | cs-karma | Unchanged |
 | 14 | **Dutamovie** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -543,12 +543,12 @@ CloudStream display prefix: `[Asian]`
 | 23 | **KoreanTurk** | 7 | tr | AsianDrama | MegaRepo Verified Immutable Recovery | Unchanged |
 | 24 | **Kuramanime** | 5 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
 | 25 | **Kuronime** | 2 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
-| 26 | **LayarKaca** | 16 | id | Movie, TvSeries | cs-karma | Updated (verified by candidate policy) |
+| 26 | **LayarKaca** | 16 | id | Movie, TvSeries | cs-karma | Unchanged |
 | 27 | **LayarKacaProvider** | 10 | id | AsianDrama, TvSeries, Movie | Phisher Repo | Unchanged |
 | 28 | **LayarWarna** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 29 | **LK21** | 4 | id | Movie | Nonton Indo | Unchanged |
 | 30 | **MidasXXi** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
-| 31 | **Nekokun** | 5 | id | Anime | cs-karma | Updated (verified by candidate policy) |
+| 31 | **Nekokun** | 5 | id | Anime | cs-karma | Unchanged |
 | 32 | **Nekopoi** | 1 | id | NSFW | Nonton Indo | Unchanged |
 | 33 | **Ngefilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 34 | **Nimegami** | 2 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
@@ -575,7 +575,7 @@ CloudStream display prefix: `[Live]`
 
 | # | Plugin | Ver. | Lang | Types | Source | Change |
 | ---: | --- | ---: | --- | --- | --- | --- |
-| 1 | **BasketballReplays** | 5 | en | Live | cs-karma | Updated (verified by candidate policy) |
+| 1 | **BasketballReplays** | 5 | en | Live | cs-karma | Unchanged |
 | 2 | **BdixBdipTV** | 10 | bn | Live | Redowan CloudStream | Unchanged |
 | 3 | **BdixCloudTV** | 6 | bn | Live | Redowan CloudStream | Unchanged |
 | 4 | **BdixMyMovieBazarTV** | 6 | bn | Live | Redowan CloudStream | Unchanged |
@@ -588,7 +588,7 @@ CloudStream display prefix: `[Live]`
 | 11 | **DeporTVProvider** | 31 | mx | Live | Storm-ext Fork by redblacker8 | Unchanged |
 | 12 | **Footballia** | 9 | en | Live | cs-karma | Unchanged |
 | 13 | **FullMatchShows** | 2 | en | Movie, Others, live | Re-3arabi | Unchanged |
-| 14 | **FullRaces** | 16 | en | Live, Others | cs-karma | Updated (verified by candidate policy) |
+| 14 | **FullRaces** | 16 | en | Live, Others | cs-karma | Unchanged |
 | 15 | **Huhu** | 7 |  | Live | DieGon Repository | Unchanged |
 | 16 | **InatBox** | 24 | tr | Movie, TvSeries, Live | MegaRepo Verified Immutable Recovery | Unchanged |
 | 17 | **IndianTVProvider** | 6 |  | Live | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -596,7 +596,7 @@ CloudStream display prefix: `[Live]`
 | 19 | **IPTVPlayer** | 9 | hi | Live | Phisher Repo | Unchanged |
 | 20 | **IPTVProvider** | 9 |  | Live | MegaRepo Verified Immutable Recovery | Unchanged |
 | 21 | **IzziGoProvider** | 16 | mx | Movie, TvSeries, Live | Storm-ext Fork by redblacker8 | Unchanged |
-| 22 | **LIVETVProvider** | 40 | en | Live | raghav repo | Updated (verified by candidate policy) |
+| 22 | **LIVETVProvider** | 40 | en | Live | raghav repo | Unchanged |
 | 23 | **LivXowProvider** | 20 | ta | Live | CNC Repo (All Language) | Unchanged |
 | 24 | **NetNaija-box** | 2 | en | Movie, TvSeries, Live | raghav repo | Unchanged |
 | 25 | **PlayFyProvider** | 14 | ta | Live | CNC Repo (All Language) | Unchanged |
@@ -726,7 +726,7 @@ CloudStream display prefix: `[Adult]`
 | 67 | **Xmovies4u** | 2 | en | NSFW | CXXX | Unchanged |
 | 68 | **Xnhau** | 1 | vi | NSFW | CXXX | Unchanged |
 | 69 | **XNXX** | 2 | en | NSFW | MegaRepo Verified Immutable Recovery | Unchanged |
-| 70 | **XPrimeHub** | 6 | hi | NSFW | CXXX | Updated (verified by candidate policy) |
+| 70 | **XPrimeHub** | 6 | hi | NSFW | CXXX | Unchanged |
 | 71 | **Xtapes** | 7 | en | NSFW | CXXX | Unchanged |
 | 72 | **Xvideos** | 2 | en | NSFW | CXXX | Unchanged |
 | 73 | **YesPornPlease** | 7 | en | NSFW | CXXX | Unchanged |
