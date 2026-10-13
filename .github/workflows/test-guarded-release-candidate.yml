@@ -12,6 +12,8 @@ on:
       - 'tools/trusted_upstream_candidates.py'
       - 'tools/verify_candidate_integrity.py'
       - 'tests/test_trusted_upstream_candidates.py'
+      - 'tools/verify_prepublication_packages.py'
+      - 'tests/test_verify_prepublication_packages.py'
       - 'tools/merge_upstreams.py'
       - 'tests/test_local_verified_source.py'
       - '.github/workflows/verify-guarded-post-publication.yml'
@@ -35,6 +37,7 @@ jobs:
       - name: Run guarded publication reconciliation regressions
         run: |
           set -euo pipefail
+          python3 -m unittest discover -s tests -p 'test_verify_prepublication_packages.py' -v
           python3 -m unittest discover -s tests -p 'test_trusted_upstream_candidates.py' -v
           python3 -m unittest discover -s tests -p 'test_verify_candidate_integrity.py' -v
           python3 -m unittest discover -s tests -p 'test_finalize_guarded_release.py' -v
@@ -127,6 +130,13 @@ jobs:
             --policy-approvals staged-candidate/policy-approvals.json \
             --max-deferred 24 \
             --verify-deferred-urls
+      - name: Independently verify all final candidate package bytes before release
+        run: |
+          set -euo pipefail
+          python3 source/tools/verify_prepublication_packages.py \
+            --release-dir release-candidate \
+            --report prepublication-verdict.json \
+            --max-deferred 1
       - name: Assert real 543-entry release candidates remain complete
         run: |
           python3 - <<'PY'
@@ -183,6 +193,7 @@ jobs:
             integrity-selection/integrity-selection.json
             integrity-selection/verification-report.json
             immutable-recovery.json
+            prepublication-verdict.json
             staged-candidate/trusted-update-report.json
             staged-candidate/policy-approvals.json
           if-no-files-found: warn
