@@ -10,12 +10,14 @@ on:
       - 'tools/audit_package_integrity.py'
       - 'tools/guarded_audit_classification.py'
       - 'tests/test_audit_package_integrity.py'
+      - 'tests/test_guarded_audit_classification.py'
       - '.github/workflows/audit-package-integrity.yml'
   pull_request:
     paths:
       - 'tools/audit_package_integrity.py'
       - 'tools/guarded_audit_classification.py'
       - 'tests/test_audit_package_integrity.py'
+      - 'tests/test_guarded_audit_classification.py'
       - '.github/workflows/audit-package-integrity.yml'
 
 permissions:
@@ -40,7 +42,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Unit tests (no network)
-        run: python3 -m unittest discover -s tests -p test_audit_package_integrity.py -v
+        run: |
+          python3 -m unittest discover -s tests -p test_audit_package_integrity.py -v
+          python3 -m unittest discover -s tests -p test_guarded_audit_classification.py -v
       - name: Verify rotating package hashes and distinguish documented holds from new failures
         continue-on-error: ${{ github.event_name == 'pull_request' }}
         run: |
