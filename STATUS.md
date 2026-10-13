@@ -1,6 +1,6 @@
 # Production Aggregation Status
 
-Generated: **2026-10-12 21:18:02 UTC**
+Generated: **2026-10-13 06:49:41 UTC**
 
 Candidate status: **READY - GUARDED, 24 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
@@ -741,7 +741,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | Desi Extensions v68 | MegaRepo Verified Immutable Recovery v63 (lower version) |
+| StreamHubOne | Desi Extensions v69 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |

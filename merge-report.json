@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12 21:18:02 UTC",
+  "generatedAt": "2026-10-13 06:49:41 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, 24 UPSTREAM UPDATES DEFERRED FOR REVIEW",
@@ -1518,7 +1518,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 68,
+      "selectedVersion": 69,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -2768,7 +2768,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 68,
+      "selectedVersion": 69,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -3526,8 +3526,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/33c4ea7b44d1a92185f7c921099bf86301d993d7/AnimeVilla.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 33615,
-      "observedActualSHA256": "sha256-743fcd313520c06c56b5c609c97c6f40ed62b7ce04afecf5c037a7a48ca9bf3a",
+      "observedActualSize": 35495,
+      "observedActualSHA256": "sha256-c6e09e9102d0bf2f7fb8e8dcbf620ad4692f878c7c0fe73ac267ceab3a4daa5e",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/33c4ea7b44d1a92185f7c921099bf86301d993d7/AnimeVilla.cs3",
@@ -3894,8 +3894,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/9a30b800934eaf75834abd84fd1d0b56ea5dfa0b/FilmFly.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 25116,
-      "observedActualSHA256": "sha256-47b15e9fac08d9fec54df3be5448da50260d962668333c433598e0ba1942d7ff",
+      "observedActualSize": 29910,
+      "observedActualSHA256": "sha256-a759b50f8270fd5ac8e7915d6f849e2191427679c3d3d776a0333c143951775b",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/9a30b800934eaf75834abd84fd1d0b56ea5dfa0b/FilmFly.cs3",
@@ -4758,8 +4758,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 1145057,
-      "observedActualSHA256": "sha256-245321c44b555a551f942cafb07165bf4729e3b502372b5d090cd902f43406ee",
+      "observedActualSize": 1143840,
+      "observedActualSHA256": "sha256-7b23514be50fdae27102758173cfee1d0f13d79f1429e173ed61c53cc2476e68",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
@@ -5166,11 +5166,11 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "b58f11c47fb0e920b36e47aab8f42fceaa52908941260649fe64ae2184acc33b",
+  "originalSourceReportDigest": "6ef9910a64f3c4eea3fb21425c4a10b3ab05b9e9cffc648b8f78ae75b70a58f9",
   "inputSnapshotDigests": {
-    "candidate": "9790a383c47cebac19881c71cc11687b75d8b34885855d802afba858e1c15a6d",
+    "candidate": "292acd41e43b3bd0bf08b7840e0a114922bc6f233ab63e58de3cb58f67681985",
     "previous": "63548c7f84f6a27df8b1d8414b92d1ae9de97f0c0e0020b740e779cde58893ec",
-    "candidateProvenance": "3c5900e77614e2c01b5d8409f211a22a7dce66545e0392122d6f1b2e4010d11c",
+    "candidateProvenance": "919ef46a39d5343d1f1fcc664897327e14ce31086b2c97a216c679f67aa10563",
     "previousProvenance": "be5b8a8b97d1de7d1e6ef6c943b6284211c78d4895c29f5a52de1b861e60edd2"
   },
   "releaseEligible": true,
