@@ -120,7 +120,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 source/tools/finalize_guarded_release.py \
-            --candidate-dir source/merged \
+            --candidate-dir staged-candidate \
             --previous-dir published \
             --selection-dir integrity-selection \
             --output-dir release-candidate \
