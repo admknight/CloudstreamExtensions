@@ -304,6 +304,15 @@ def summary(report):
             "- All original metadata drift remains in this report and the JSON artifact.",
             ''
         ]
+        if classification['unexpected']:
+            lines += [
+                '## Unexpected metadata drift requiring investigation', '',
+                'These entries DO NOT qualify as previously verified immutable holds.',
+                'The hourly workflow must remain failed until independently resolved.',
+                '', '```json',
+                json.dumps(classification['unexpected'][:30], indent=2, sort_keys=True),
+                '```', ''
+            ]
     for title, data in [('Upstream metadata drift', report['metadataDrift']),
                         ('Package failures', report['packageProblems']),
                         ('Upstream index fetch failures', report['sourceErrors'])]:
