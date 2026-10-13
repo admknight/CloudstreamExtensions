@@ -208,7 +208,7 @@ def run(command):
 
 
 def resolve(audit, guarded_verdict, report, plugins, provenance, *,
-            verifier_run_id, runner=run):
+            verifier_run_id, runner=run, dry_run=False):
     if type(verifier_run_id) is not int or verifier_run_id <= 0:
         raise ValueError("A genuine completed audit workflow run ID is required")
     eligible = validate_proven_resolution(
@@ -216,14 +216,18 @@ def resolve(audit, guarded_verdict, report, plugins, provenance, *,
     )
     allowed = set(eligible)
     raw = runner([
-        "gh", "issue", "list", "--repo", REPO, "--state", "all",
-        "--limit", "500", "--json", "number,title,body,state"
+        "gh", "issue", "list", "--repo", REPO, "--state", "open",
+        "--limit", "1000", "--json", "number,title,body,state"
     ])
     issues = json.loads(raw)
-    if not isinstance(issues, list):
-        raise ValueError("Issue API response was not a list")
+    if not isinstance(issues, list) or len(issues) >= 1000:
+        raise ValueError("Issue inventory is not a complete list")
     actions = []
+    skipped = []
     seen = set()
+    managed_seen = 0
+    catalogue = _identity_index(plugins)
+    sources = _identity_index(provenance, provenance=True)
     for row in issues:
         if not isinstance(row, dict):
             continue
@@ -232,12 +236,19 @@ def resolve(audit, guarded_verdict, report, plugins, provenance, *,
         body = str(row.get("body") or "")
         if MANAGED not in body or row.get("state") != "OPEN":
             continue
+        managed_seen += 1
+        if type(number) is not int or number <= 0 or number in seen:
+            raise ValueError("Duplicate/malformed managed issue ID")
+        seen.add(number)
         for key in allowed:
             if title != "[Integrity] " + issue_key(key):
                 continue
-            if type(number) is not int or number <= 0 or number in seen:
-                raise ValueError("Duplicate/malformed managed issue ID")
-            seen.add(number)
+            verified, reason = issue_candidate_resolution(
+                body, catalogue[key], sources[key]
+            )
+            if not verified:
+                skipped.append({"issue": number, "plugin": key, "reason": reason})
+                break
             note = (
                 "**Automated static integrity-resolution evidence:** "
                 f"The complete post-publication audit [run {verifier_run_id}]"
@@ -245,23 +256,35 @@ def resolve(audit, guarded_verdict, report, plugins, provenance, *,
                 "checked every published package and source index. This plugin "
                 "is no longer on the guarded deferred list, no metadata or "
                 "binary discrepancy is reported for it, and its published "
-                "SHA-256 and file size were independently verified. The "
-                "original investigation and release evidence remain intact. "
+                "SHA-256 and file size were independently verified. "
+                "Published version: " + str(catalogue[key].get("version")) + "; "
+                "published size: " + str(catalogue[key]["fileSize"]) + " bytes; "
+                "published digest: " + catalogue[key]["fileHash"] + ". "
+                "Candidate evidence: " + reason + ". "
+                "The original investigation and release evidence remain intact. "
                 "**This closes only this static catalog-integrity incident; "
                 "runtime playback and third-party release authorship are "
                 "not certified.**"
             )
-            runner([
-                "gh", "issue", "comment", str(number), "--repo", REPO,
-                "--body", note
-            ])
-            runner([
-                "gh", "issue", "close", str(number), "--repo", REPO,
-                "--reason", "completed"
-            ])
-            actions.append({"issue": number, "plugin": key, "action": "closed_verified"})
-    return {"eligibleVerifiedPlugins": len(eligible), "closedIssues": actions,
-            "openIncidentsNotClosed": True, "runId": verifier_run_id}
+            if not dry_run:
+                runner([
+                    "gh", "issue", "comment", str(number), "--repo", REPO,
+                    "--body", note
+                ])
+                runner([
+                    "gh", "issue", "close", str(number), "--repo", REPO,
+                    "--reason", "completed"
+                ])
+            actions.append({"issue": number, "plugin": key,
+                            "action": "would_close_verified" if dry_run else "closed_verified"})
+            break
+    return {"eligibleVerifiedPlugins": len(eligible),
+            "managedOpenIssuesInspected": managed_seen,
+            "closedIssues": [] if dry_run else actions,
+            "dryRunEligibleIssueClosures": actions if dry_run else [],
+            "heldByUnmatchedCandidateEvidence": skipped,
+            "openIncidentsNotClosed": True, "runId": verifier_run_id,
+            "mode": "READ_ONLY_PLAN" if dry_run else "VERIFIED_AUTOMATIC_CLOSURE"}
 
 
 def main():
@@ -269,14 +292,18 @@ def main():
     for arg in ("audit", "guarded-verdict", "report", "plugins", "provenance"):
         parser.add_argument("--" + arg, type=Path, required=True)
     parser.add_argument("--run-id", type=int, required=True)
+    parser.add_argument("--dry-run", action="store_true", help="Plan issue closures without any writes")
+    parser.add_argument("--output", type=Path, help="Optional JSON reconciliation evidence file")
     args = parser.parse_args()
     def read(path):
         return json.loads(path.read_text(encoding="utf-8"))
     result = resolve(
         read(args.audit), read(args.guarded_verdict), read(args.report),
         read(args.plugins), read(args.provenance),
-        verifier_run_id=args.run_id
+        verifier_run_id=args.run_id, dry_run=args.dry_run
     )
+    if args.output is not None:
+        args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2))
 
 
