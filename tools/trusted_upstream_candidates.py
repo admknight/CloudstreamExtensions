@@ -119,7 +119,8 @@ def promote(candidate, previous, candidate_provenance, previous_provenance,
                 or source.get("sourceRepository", "").lower()
                    != repo_definition["repo"].lower()
                 or source.get("sourceIndex") != repo_definition["index"]
-                or source.get("packageUrl") != item.get("url")):
+                or str(source.get("packageUrl") or "").replace(" ", "%20")
+                   != str(item.get("url") or "").replace(" ", "%20")):
             # New plugin or source migration: deliberately no automatic approval.
             continue
         fields = ("version", "fileHash", "fileSize", "status", "url")

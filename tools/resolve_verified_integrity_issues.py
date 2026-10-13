@@ -89,6 +89,32 @@ def validate_proven_resolution(audit, guarded_verdict, report, plugins, provenan
         if isinstance(item, dict) and item.get("fallbackThroughRecoveryLock") is True
     ):
         raise ValueError("Pinned previous release count does not reconcile")
+    # The independent post-publication verifier has already checked exact
+    # publisher-policy immutable pins. Recheck their published/underlying URLs
+    # before treating only their URL drift as documented (never a binary error).
+    trusted = report.get("trustedPolicyUpgrades", [])
+    if not isinstance(trusted, list):
+        raise ValueError("Invalid trusted publisher policy evidence")
+    policy = {}
+    for row in trusted:
+        if not isinstance(row, dict):
+            raise ValueError("Malformed policy evidence")
+        key = str(row.get("plugin") or "").strip().casefold()
+        if (not key or key in policy or key not in entries
+                or key in deferred or row.get("authorizationKind") != "trusted_upstream_policy_v1"
+                or row.get("pinnedIndexVerified") is not True
+                or row.get("separateBytesVerified") is not True
+                or row.get("url") != entries[key].get("url")
+                or row.get("url") != origins[key].get("packageUrl")
+                or row.get("sourceId") != origins[key].get("sourceId")
+                or row.get("version") != entries[key].get("version")
+                or row.get("fileSize") != entries[key].get("fileSize")
+                or str(row.get("fileHash") or "").lower()
+                   != str(entries[key].get("fileHash") or "").lower()):
+            raise ValueError("Policy pin failed independent resolution corroboration")
+        policy[key] = row
+    if guarded_verdict.get("trustedPolicyUpgrades", []) != sorted(policy):
+        raise ValueError("Guarded verdict and publisher-policy upgrade identities differ")
     anomalies = set()
     all_problems = []
     for field in ("metadataDrift", "packageProblems"):
@@ -101,8 +127,17 @@ def validate_proven_resolution(audit, guarded_verdict, report, plugins, provenan
             key = str(row.get("plugin") or "").strip().casefold()
             if not key or key not in entries:
                 raise ValueError("Audit contains unknown/ambiguous plugin")
+            documented_policy_url_drift = (
+                field == "metadataDrift" and key in policy
+                and row.get("problem") == "stale_metadata"
+                and isinstance(row.get("differences"), dict)
+                and set(row["differences"]) == {"url"}
+                and row["differences"]["url"].get("published") == policy[key]["url"]
+                and row["differences"]["url"].get("upstream") == policy[key]["originalUrl"]
+            )
             if not (key in deferred or
-                    (field == "metadataDrift" and key in prior_pinned)):
+                    (field == "metadataDrift" and key in prior_pinned)
+                    or documented_policy_url_drift):
                 raise ValueError("Unexpected unapproved post-publication discrepancy")
             anomalies.add(key)
             all_problems.append((field,key))
