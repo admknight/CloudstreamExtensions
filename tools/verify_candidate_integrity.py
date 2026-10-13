@@ -122,9 +122,9 @@ def policy_approved(old, plugin, old_source, new_source, actual, approvals):
                 and row.get("fileSize") == actual.get("actualFileSize")
                 and row.get("pinnedIndexVerified") is True
                 and row.get("separateBytesVerified") is True
-                and row.get("pinnedIndexUrl") == (
+                and str(row.get("pinnedIndexUrl") or "").casefold() == (
                     f"https://raw.githubusercontent.com/{parts[0]}/{parts[1]}/{parts[2]}/plugins.json"
-                )):
+                ).casefold()):
             return True
     return False
 
