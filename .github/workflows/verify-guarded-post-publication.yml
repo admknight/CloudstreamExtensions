@@ -5,12 +5,19 @@ on:
     workflows: ["Update Aggregated Repository"]
     types: [completed]
     branches: [master]
+  # Reconcile even if no new catalog was published; the verifier downloads all
+  # published bytes again before any issue-writing job can execute.
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
   push:
     branches: [master]
     paths:
       - '.github/workflows/verify-guarded-post-publication.yml'
       - 'tools/validate_guarded_post_publish.py'
       - 'tools/resolve_verified_integrity_issues.py'
+      - 'tools/guarded_candidate_issue_evidence.py'
+      - 'tests/test_resolve_verified_integrity_issues.py'
 
 permissions:
   contents: read
@@ -21,7 +28,7 @@ concurrency:
 
 jobs:
   verify:
-    if: ${{ github.event_name == 'push' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository) }}
+    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'master') }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -94,7 +101,7 @@ jobs:
         with:
           name: guarded-published-catalog-audit-${{ github.run_id }}
           path: evidence
-      - name: Resolve only individually proven fixed static integrity incidents
+      - name: Independently plan individual issue closures without writes
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -105,4 +112,28 @@ jobs:
             --report evidence/published/merge-report.json \
             --plugins evidence/published/plugins.json \
             --provenance evidence/published/provenance.json \
-            --run-id "$GITHUB_RUN_ID"
+            --run-id "$GITHUB_RUN_ID" --dry-run --output issue-resolution-plan.json
+          test -s issue-resolution-plan.json
+      - name: Close only independently proven, exact candidate-matching incidents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 tools/resolve_verified_integrity_issues.py \
+            --audit evidence/full-published-audit.json \
+            --guarded-verdict evidence/guarded-post-publish-result.json \
+            --report evidence/published/merge-report.json \
+            --plugins evidence/published/plugins.json \
+            --provenance evidence/published/provenance.json \
+            --run-id "$GITHUB_RUN_ID" --output issue-resolution-result.json
+          cat issue-resolution-result.json >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain reconciliation plan and exact closure outcomes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-issue-reconciliation-${{ github.run_id }}
+          path: |
+            issue-resolution-plan.json
+            issue-resolution-result.json
+          retention-days: 21
+          if-no-files-found: warn
