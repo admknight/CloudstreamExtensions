@@ -449,7 +449,7 @@
     "publishedName": "[Anime] AnimeAV",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 19,
+    "selectedVersion": 20,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -459,7 +459,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeAV.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/AnimeAV.cs3"
   },
   {
     "plugin": "Animeav1",
@@ -724,7 +724,7 @@
     "publishedName": "[Anime] AnimeONProvider",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 41,
+    "selectedVersion": 42,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -734,7 +734,7 @@
       "deleteBlack666"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeONProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/d44ed4e332e16e567d2b2f38c44b96b1b1a4a144/AnimeONProvider.cs3"
   },
   {
     "plugin": "AnimePahe",
@@ -998,7 +998,7 @@
     "publishedName": "[Anime] AnimeYTX",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 11,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -1007,7 +1007,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/AnimeYTX.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/AnimeYTX.cs3"
   },
   {
     "plugin": "Animo",
@@ -1338,7 +1338,7 @@
     "publishedName": "[Live] BasketballReplays",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 5,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -1347,7 +1347,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/BasketballReplays.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/BasketballReplays.cs3"
   },
   {
     "plugin": "BdixBdipTV",
@@ -2709,7 +2709,7 @@
     "publishedName": "[Asian] DoramasLatinoX",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 7,
+    "selectedVersion": 8,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -2718,7 +2718,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/DoramasLatinoX.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/DoramasLatinoX.cs3"
   },
   {
     "plugin": "DoramasYTProvider",
@@ -2982,7 +2982,7 @@
     "publishedName": "[Arabic] Esheaq",
     "category": "Arabic",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 21,
+    "selectedVersion": 22,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -2991,7 +2991,7 @@
       "kraptor"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Esheaq.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Esheaq.cs3"
   },
   {
     "plugin": "Extractors",
@@ -3084,7 +3084,7 @@
     "publishedName": "[Indian] FilmFly",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 22,
+    "selectedVersion": 27,
     "sourceId": "desi",
     "sourceName": "Desi Extensions",
     "sourceRepository": "https://github.com/Faisal0786/Desi",
@@ -3093,7 +3093,7 @@
       "Faisal"
     ],
     "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
-    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/9a30b800934eaf75834abd84fd1d0b56ea5dfa0b/FilmFly.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/8c6579fd1b029a2b4f80e2ca035efdfa279458d3/FilmFly.cs3"
   },
   {
     "plugin": "Filmkita",
@@ -3205,7 +3205,7 @@
     "publishedName": "[Movies] Flixlatam",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 8,
+    "selectedVersion": 9,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -3214,7 +3214,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Flixlatam.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Flixlatam.cs3"
   },
   {
     "plugin": "Footballia",
@@ -3376,7 +3376,7 @@
     "publishedName": "[Live] FullRaces",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 15,
+    "selectedVersion": 16,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -3386,7 +3386,7 @@
       "kerimmkirac"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/FullRaces.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/FullRaces.cs3"
   },
   {
     "plugin": "FullReplays",
@@ -3482,7 +3482,7 @@
     "publishedName": "[Movies] Gnulahd",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 11,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -3491,7 +3491,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Gnulahd.cs3"
   },
   {
     "plugin": "GoldenAudiobook",
@@ -4936,7 +4936,7 @@
     "publishedName": "[Asian] LayarKaca",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 15,
+    "selectedVersion": 16,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -4947,7 +4947,7 @@
       "Hexated"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/LayarKaca.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/LayarKaca.cs3"
   },
   {
     "plugin": "LayarKacaProvider",
@@ -5041,7 +5041,7 @@
     "publishedName": "[Live] LIVETVProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 37,
+    "selectedVersion": 40,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -5050,7 +5050,7 @@
       "raghav,cnc"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/LIVETVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/de2c9a6fbf3731e8d856071e62bb1284302c4c31/LIVETVProvider.cs3"
   },
   {
     "plugin": "LivXowProvider",
@@ -5379,7 +5379,7 @@
     "publishedName": "[Indian] MovieBox",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 12,
+    "selectedVersion": 13,
     "sourceId": "desi",
     "sourceName": "Desi Extensions",
     "sourceRepository": "https://github.com/Faisal0786/Desi",
@@ -5388,7 +5388,7 @@
       "Faisal"
     ],
     "originalRepositoryUrl": "https://github.com/Faisal0786/Desi",
-    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/a49c7ae62db35e9eec20f07d00760571d07657a1/MovieBox.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/8c6579fd1b029a2b4f80e2ca035efdfa279458d3/MovieBox.cs3"
   },
   {
     "plugin": "MovieBoxProvider",
@@ -5430,7 +5430,7 @@
     "publishedName": "[Indian] MovieLinkBDProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 24,
+    "selectedVersion": 25,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5439,7 +5439,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieLinkBDProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/bc9b9aa050f0f9b1b7b0034d354994003e516214/MovieLinkBDProvider.cs3"
   },
   {
     "plugin": "Movies4u",
@@ -5532,7 +5532,7 @@
     "publishedName": "[Movies] Movix",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 32,
+    "selectedVersion": 33,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -5541,7 +5541,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Movix.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Movix.cs3"
   },
   {
     "plugin": "Mp4Moviez",
@@ -5668,7 +5668,7 @@
     "publishedName": "[Asian] Nekokun",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 5,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -5677,7 +5677,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Nekokun.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Nekokun.cs3"
   },
   {
     "plugin": "Nekopoi",
@@ -5805,7 +5805,7 @@
     "publishedName": "[Movies] NetNaija",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 17,
+    "selectedVersion": 18,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -5814,7 +5814,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NetNaija.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/de2c9a6fbf3731e8d856071e62bb1284302c4c31/NetNaija.cs3"
   },
   {
     "plugin": "NetNaija-box",
@@ -5975,7 +5975,7 @@
     "publishedName": "[Movies] OK",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 8,
+    "selectedVersion": 9,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -5984,7 +5984,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/OK.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/OK.cs3"
   },
   {
     "plugin": "OnePace",
@@ -6774,7 +6774,7 @@
     "publishedName": "[Anime] RaghavAnime",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 76,
+    "selectedVersion": 79,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -6783,7 +6783,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RaghavAnime.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/de2c9a6fbf3731e8d856071e62bb1284302c4c31/RaghavAnime.cs3"
   },
   {
     "plugin": "RaghavAnimeKitsu",
@@ -6791,7 +6791,7 @@
     "publishedName": "[Anime] RaghavAnimeKitsu",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 28,
+    "selectedVersion": 31,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -6800,7 +6800,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RaghavAnimeKitsu.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/de2c9a6fbf3731e8d856071e62bb1284302c4c31/RaghavAnimeKitsu.cs3"
   },
   {
     "plugin": "RareAnimesIndia",
@@ -6808,7 +6808,7 @@
     "publishedName": "[Indian] RareAnimesIndia",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 3,
+    "selectedVersion": 4,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -6817,7 +6817,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/RareAnimesIndia.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/de2c9a6fbf3731e8d856071e62bb1284302c4c31/RareAnimesIndia.cs3"
   },
   {
     "plugin": "RareFilmm",
@@ -8415,7 +8415,7 @@
     "publishedName": "[Movies] UAFlixProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 20,
+    "selectedVersion": 21,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -8424,7 +8424,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UAFlixProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/d44ed4e332e16e567d2b2f38c44b96b1b1a4a144/UAFlixProvider.cs3"
   },
   {
     "plugin": "UakinoProvider",
@@ -9063,7 +9063,7 @@
     "publishedName": "[Adult] XPrimeHub",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 5,
+    "selectedVersion": 6,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -9072,7 +9072,7 @@
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/XPrimeHub.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/c79f6ceaa02fda7ef9c81acad2753fe8394e8563/XPrimeHub.cs3"
   },
   {
     "plugin": "Xtapes",
@@ -9131,7 +9131,7 @@
     "publishedName": "[Movies] Yablom",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 5,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -9140,7 +9140,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Yablom.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Yablom.cs3"
   },
   {
     "plugin": "Yacintv",
@@ -9233,7 +9233,7 @@
     "publishedName": "[Movies] YoTurkish",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 5,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -9242,7 +9242,7 @@
       "kraptor"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/YoTurkish.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/YoTurkish.cs3"
   },
   {
     "plugin": "YouTube",
