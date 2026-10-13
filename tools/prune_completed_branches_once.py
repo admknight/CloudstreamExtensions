@@ -37,12 +37,24 @@ COMPLETED = {
     58: ("automation/prevent-premature-integrity-closure-20261010", "dfc33b39d59a46de2c1f3415b45cf4a861e0ba7a"),
     59: ("fix/verified-immutable-local-recovery-20261010", "b95f66941f42fbf92736deac56fd84ba65806609"),
     60: ("fix/netmovie-verified-immutable-onboarding-20261010", "8aa61ad0cce8f52570c2bf078b217b187166a794"),
+    # Second cleanup wave: exact heads rechecked against merged PRs on 2026-10-13.
+    62: ("fix/streamhub-iptv-verified-recovery-20261010", "dcf18c1f30013e75fac1759da33691c1a9d29eb0"),
+    63: ("feature/source-quality-domain-drift-20261010", "cdd9674f1f9f06f6595d5c1bee4555996a152c81"),
+    64: ("feature/legacy-checksum-evidence-inventory-20261010", "72103136b94c8ff866e9cecdf4535781baaef80a"),
+    65: ("fix/legacy-small-cohort-immutable-sha-20261010", "bc9225df4fad05f55fb17ccdf0545a955fcc64fa"),
+    67: ("fix/legacy-major-cohort-immutable-sha-20261010", "6456a70f2a7cd6d1336a0b9f04ad49ac6fa65298"),
+    68: ("fix/legacy-final-16-immutable-verification-20261010", "5c71a94dbfacc6b9a35944ce3a0ec07ac6815633"),
+    71: ("automation/guarded-schedule-backstop-20261010", "7c8b2ef3ba4a9c84e7d65a9df438d76c74cf4c9e"),
+    72: ("fix/lk21-immutable-orphan-recovery-20261011", "228ef6b1324e4bc7a728feb404e161205b00261b"),
+    188: ("feature/trusted-upstream-auto-update", "9876273c5d1818d981d31275886ddb4f609c6011"),
+    191: ("fix/trusted-upstream-encoded-package-url", "79c335c71562209a7ce558ebf0cb4e02459e5d2e"),
+    192: ("fix/hourly-audit-known-drift-profile-status-20261013", "b67313321a99f0aa077b4b1f4fa2d59edff715fb"),
 }
 # The cleanup PR's own branch may be deleted after that PR is merged.
 # This one is constrained by its exact merged-PR head rather than a
 # hardcoded SHA, since creating this file changes that SHA.
-SELF_PR = 61
-SELF_BRANCH = "maintenance/verified-one-time-branch-cleanup-20261010"
+SELF_PR = 193
+SELF_BRANCH = "maintenance/prune-verified-merged-heads-20261013"
 PRESERVE = {
     "master", "builds", "custom-builds", "health-history",
     "audit/provider-runtime-contract", "fix/provider-link-contract",
@@ -51,6 +63,7 @@ PRESERVE = {
     "feature/per-plugin-integrity-selection-20261009",
     "feature/guarded-recovery-stage2-20261009",
     "feature/guarded-self-repair-20261009",
+    "maintenance/verified-merged-head-prune-20261010",  # advanced after PR #61 merged
 }
 
 

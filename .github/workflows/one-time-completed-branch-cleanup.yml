@@ -11,6 +11,8 @@ on:
       - master
     paths:
       - '.github/workflows/one-time-completed-branch-cleanup.yml'
+      - 'tools/prune_completed_branches_once.py'
+      - 'tests/test_prune_completed_branches_once.py'
   workflow_dispatch:
 
 concurrency:
