@@ -51,6 +51,43 @@ def validate_post_publish(audit, report, plugins, provenance):
     }
     if not prior_pinned.issubset(names) or "" in prior_pinned:
         raise ValueError("Invalid pinned prior binary disposition")
+    # A trusted policy pin may differ from the mutable index only in URL.
+    # Never classify a package failure, a version/hash/size/status drift,
+    # or an unmatched pinned/original URL as an expected policy change.
+    policy_pins = {}
+    catalog_by_key = {plugin_identity(p): p for p in plugins}
+    origin_by_key = {
+        str(r.get("plugin") or r.get("originalName") or "").strip().casefold(): r
+        for r in provenance
+    }
+    from urllib.parse import urlparse
+    import re
+    for entry in report.get("trustedPolicyUpgrades", []):
+        if not isinstance(entry, dict):
+            raise ValueError("Invalid trusted publisher release evidence")
+        key = str(entry.get("plugin") or "").casefold()
+        package = catalog_by_key.get(key, {})
+        source = origin_by_key.get(key, {})
+        url = str(entry.get("url") or "")
+        path = urlparse(url).path.split("/")
+        if (not key or key in policy_pins or key in allowed
+                or entry.get("authorizationKind") != "trusted_upstream_policy_v1"
+                or entry.get("pinnedIndexVerified") is not True
+                or entry.get("separateBytesVerified") is not True
+                or urlparse(url).scheme != "https"
+                or urlparse(url).netloc != "raw.githubusercontent.com"
+                or len(path) < 5
+                or re.fullmatch(r"[a-fA-F0-9]{40}", path[3]) is None
+                or path[3].lower() != str(entry.get("immutableCommit") or "").lower()
+                or package.get("url") != url
+                or package.get("version") != entry.get("version")
+                or package.get("fileSize") != entry.get("fileSize")
+                or str(package.get("fileHash") or "").lower()
+                   != str(entry.get("fileHash") or "").lower()
+                or source.get("sourceId") != entry.get("sourceId")
+                or source.get("packageUrl") != url):
+            raise ValueError("Invalid trusted policy pin in production: " + key)
+        policy_pins[key] = entry
     integrity = report.get("integrityHealth", {})
     if integrity.get("unverifiedPreviousCarried") != len(allowed):
         raise ValueError("Deferred upstream exception accounting mismatch")
@@ -82,7 +119,17 @@ def validate_post_publish(audit, report, plugins, provenance):
             if not isinstance(entry, dict):
                 raise ValueError("Invalid audit entry")
             key = str(entry.get("plugin") or "").casefold()
-            if key in allowed or (field == "metadataDrift" and key in prior_pinned):
+            approved_pin = policy_pins.get(key)
+            exact_url_only = (
+                field == "metadataDrift"
+                and approved_pin is not None
+                and entry.get("problem") == "stale_metadata"
+                and isinstance(entry.get("differences"), dict)
+                and set(entry["differences"]) == {"url"}
+                and entry["differences"]["url"].get("published") == approved_pin["url"]
+                and entry["differences"]["url"].get("upstream") == approved_pin["originalUrl"]
+            )
+            if key in allowed or (field == "metadataDrift" and key in prior_pinned) or exact_url_only:
                 known.append({"plugin": key, "category": field})
             else:
                 unexpected.append({"plugin": key, "category": field})
@@ -97,6 +144,7 @@ def validate_post_publish(audit, report, plugins, provenance):
                   if allowed else "GUARDED_PUBLICATION_VERIFIED_NO_DEFERRED_EXCEPTIONS",
         "publishedCount": len(plugins),
         "heldUpstreamExceptions": sorted(allowed),
+        "trustedPolicyUpgrades": sorted(policy_pins),
         "knownAuditAnomalyCount": len(known),
         "unexpectedAuditAnomalyCount": 0,
         "upstreamProblemsFullyResolved": not bool(allowed or prior_pinned),

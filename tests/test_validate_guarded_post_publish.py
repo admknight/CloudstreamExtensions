@@ -158,5 +158,54 @@ class PostPublishTests(unittest.TestCase):
             validate_post_publish(audit,report,plugins,provenance)
 
 
+    def _policy_fixture(self):
+        audit, report, plugins, provenance = sample()
+        sha = "a" * 40
+        url = "https://raw.githubusercontent.com/Example/Repo/" + sha + "/One.cs3"
+        original = "https://raw.githubusercontent.com/Example/Repo/builds/One.cs3"
+        plugins[0].update({"url":url,"version":3,"fileSize":123,"fileHash":"sha256-"+"e"*64})
+        provenance[0].update({"sourceId":"trusted","packageUrl":url})
+        report["trustedPolicyUpgrades"]=[{
+            "authorizationKind":"trusted_upstream_policy_v1", "plugin":"one",
+            "sourceId":"trusted","url":url,"originalUrl":original,
+            "version":3,"fileSize":123,"fileHash":"sha256-"+"e"*64,
+            "immutableCommit":sha,"pinnedIndexVerified":True,
+            "separateBytesVerified":True
+        }]
+        audit["metadataDrift"].append({
+            "plugin":"One","problem":"stale_metadata",
+            "differences":{"url":{"published":url,"upstream":original}}
+        })
+        return audit,report,plugins,provenance
+
+    def test_commit_pinned_policy_url_only_drift_is_expected(self):
+        audit, report, plugins, provenance = self._policy_fixture()
+        result=validate_post_publish(audit,report,plugins,provenance)
+        self.assertEqual(result["trustedPolicyUpgrades"],["one"])
+        self.assertEqual(result["knownAuditAnomalyCount"],3)
+        self.assertFalse(result["fullAuditPassed"])
+
+    def test_policy_cannot_excuse_new_package_checksum_mismatch(self):
+        audit, report, plugins, provenance = self._policy_fixture()
+        audit["packageProblems"].append({"plugin":"One","status":"mismatch"})
+        audit["scan"]["failed"]=2
+        with self.assertRaisesRegex(ValueError,"Unexpected integrity anomalies"):
+            validate_post_publish(audit,report,plugins,provenance)
+
+    def test_policy_cannot_excuse_version_drift(self):
+        audit, report, plugins, provenance = self._policy_fixture()
+        audit["metadataDrift"][-1]["differences"]["version"]={
+            "published":3,"upstream":4
+        }
+        with self.assertRaisesRegex(ValueError,"Unexpected integrity anomalies"):
+            validate_post_publish(audit,report,plugins,provenance)
+
+    def test_policy_cannot_excuse_wrong_original_link(self):
+        audit, report, plugins, provenance = self._policy_fixture()
+        audit["metadataDrift"][-1]["differences"]["url"]["upstream"]="https://attacker/test"
+        with self.assertRaisesRegex(ValueError,"Unexpected integrity anomalies"):
+            validate_post_publish(audit,report,plugins,provenance)
+
+
 if __name__=="__main__":
     unittest.main()

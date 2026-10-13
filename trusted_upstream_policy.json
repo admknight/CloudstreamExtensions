@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "description": "Explicitly authorized standing publisher policy. Only existing identities, same source and strictly newer versions may auto-update after independent commit-pinned index and downloaded-byte verification. No publisher-safety or playback guarantees.",
+  "rules": [
+    {
+      "sourceId": "cs-karma",
+      "repository": "https://github.com/Kraptor123/cs-Karma",
+      "mode": "existing_upgrade_only"
+    },
+    {
+      "sourceId": "raghav",
+      "repository": "https://github.com/KSHITIJ8473/raghav",
+      "mode": "existing_upgrade_only"
+    },
+    {
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "mode": "existing_upgrade_only"
+    },
+    {
+      "sourceId": "desi",
+      "repository": "https://github.com/Faisal0786/Desi",
+      "mode": "existing_upgrade_only"
+    },
+    {
+      "sourceId": "cnc",
+      "repository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
+      "mode": "existing_upgrade_only"
+    },
+    {
+      "sourceId": "cxxx",
+      "repository": "https://github.com/phisher98/CXXX",
+      "mode": "existing_upgrade_only"
+    },
+    {
+      "sourceId": "netmirror",
+      "repository": "https://github.com/Sushan64/NetMirror-Extension",
+      "mode": "existing_upgrade_only"
+    }
+  ]
+}

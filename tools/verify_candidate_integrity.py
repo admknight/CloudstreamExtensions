@@ -86,6 +86,49 @@ def approved(plugin, source_id, actual, approvals):
     return False
 
 
+
+def policy_approved(old, plugin, old_source, new_source, actual, approvals):
+    """Validate the exact immutable staged record, never an arbitrary hash."""
+    if old is None or old_source != new_source or not old_source:
+        return False
+    if (type(old.get("version")) is not int
+            or type(plugin.get("version")) is not int
+            or plugin["version"] <= old["version"]
+            or plugin.get("status") != old.get("status")
+            or actual.get("status") != "hash_verified"):
+        return False
+    from urllib.parse import urlparse
+    from trusted_upstream_candidates import POLICY_KIND, COMMIT
+    expected_url = plugin.get("url")
+    parsed = urlparse(str(expected_url or ""))
+    parts = parsed.path.strip("/").split("/")
+    if (parsed.scheme != "https" or parsed.netloc != "raw.githubusercontent.com"
+            or parsed.query or parsed.fragment or len(parts) < 4
+            or COMMIT.fullmatch(parts[2]) is None):
+        return False
+    for row in approvals:
+        if not isinstance(row, dict) or row.get("authorizationKind") != POLICY_KIND:
+            continue
+        if (row.get("plugin") == plugin_identity(plugin)
+                and row.get("sourceId") == new_source
+                and row.get("sourceId") == old_source
+                and row.get("url") == expected_url
+                and row.get("immutableCommit") == parts[2].lower()
+                and row.get("version") == plugin.get("version")
+                and row.get("fileSize") == plugin.get("fileSize")
+                and str(row.get("fileHash") or "").lower()
+                    == str(plugin.get("fileHash") or "").lower()
+                    == str(actual.get("actualFileHash") or "").lower()
+                and row.get("fileSize") == actual.get("actualFileSize")
+                and row.get("pinnedIndexVerified") is True
+                and row.get("separateBytesVerified") is True
+                and str(row.get("pinnedIndexUrl") or "").casefold() == (
+                    f"https://raw.githubusercontent.com/{parts[0]}/{parts[1]}/{parts[2]}/plugins.json"
+                ).casefold()):
+            return True
+    return False
+
+
 def evaluate(old, new, old_source, new_source, approvals, check_result):
     """Assess a single candidate using observable result, never HEAD alone."""
     if not isinstance(new.get("fileSize"), int) or isinstance(new.get("fileSize"), bool) or new["fileSize"] <= 0:
@@ -109,6 +152,8 @@ def evaluate(old, new, old_source, new_source, approvals, check_result):
         and check_result.get("status") == "hash_verified"
     ):
         return "trusted_existing_digest", "binary matches previously published digest"
+    if policy_approved(old, new, old_source, new_source, check_result, approvals):
+        return "policy_verified_immutable_update", "publisher-policy staged commit pin and separately verified bytes"
     if approved(new, new_source, check_result, approvals):
         return "review_approved_digest", "matches exact reviewed approval"
     return "blocked", "new or changed binary metadata has no previously trusted digest or exact reviewed approval"
@@ -156,6 +201,8 @@ def gate(candidate, previous, candidate_provenance, previous_provenance,
             output["legacyUnpinned"] += 1
         elif classification == "review_approved_digest":
             output["reviewApproved"] += 1
+        elif classification == "policy_verified_immutable_update":
+            output["trustedChanges"] += 1
         elif classification == "trusted_existing_digest":
             output["trustedChanges"] += 1
         if check.get("status") == "hash_verified":

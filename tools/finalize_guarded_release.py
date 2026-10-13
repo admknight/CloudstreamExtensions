@@ -35,7 +35,8 @@ def make_guarded_candidate(candidate, previous, candidate_provenance,
                            selection, verification,
                            candidate_report, previous_report,
                            candidate_repo, previous_repo,
-                           *, max_deferred=24, deferred_url_checker=None):
+                           *, max_deferred=24, deferred_url_checker=None,
+                           policy_approvals=None):
     if not isinstance(max_deferred, int) or not (0 <= max_deferred <= 100):
         raise ValueError("Deferred exception ceiling must be 0 to 100")
     bundle = reconcile(
@@ -89,6 +90,42 @@ def make_guarded_candidate(candidate, previous, candidate_provenance,
             result = deferred_url_checker(url)
             if not isinstance(result, dict) or result.get("ok") is not True:
                 raise ValueError("Previously published deferred URL is no longer reachable: " + key)
+    # Retain exact attested immutable updates in the published source report.
+    # An audit may classify their URL-only upstream drift as intentional, but
+    # never excuse a version, size, hash, or download mismatch.
+    policy_approvals = policy_approvals or []
+    if not isinstance(policy_approvals, list):
+        raise ValueError("Trusted publisher evidence must be an array")
+    trusted_upgrades = []
+    provenance_by_key = {
+        str(row.get("plugin") or row.get("originalName") or "").casefold(): row
+        for row in provenance
+    }
+    for approved in policy_approvals:
+        if not isinstance(approved, dict):
+            raise ValueError("Malformed trusted publisher evidence")
+        key = str(approved.get("plugin") or "").casefold()
+        entry = final.get(key)
+        src = provenance_by_key.get(key)
+        if (not entry or not src or key in deferred_keys
+                or key not in original
+                or approved.get("authorizationKind") != "trusted_upstream_policy_v1"
+                or approved.get("url") != entry.get("url")
+                or approved.get("version") != entry.get("version")
+                or approved.get("fileSize") != entry.get("fileSize")
+                or str(approved.get("fileHash") or "").lower()
+                   != str(entry.get("fileHash") or "").lower()
+                or approved.get("sourceId") != src.get("sourceId")
+                or approved.get("pinnedIndexVerified") is not True
+                or approved.get("separateBytesVerified") is not True
+                or approved.get("immutableCommit") not in str(entry.get("url") or "")
+                or approved.get("originalUrl") == approved.get("url")
+                or src.get("packageUrl") != entry.get("url")):
+            raise ValueError("Trusted policy release evidence mismatches selected plugin: " + key)
+        trusted_upgrades.append(copy.deepcopy(approved))
+    if len(trusted_upgrades) != len({r["plugin"] for r in trusted_upgrades}):
+        raise ValueError("Duplicate trusted policy upgrade")
+    report["trustedPolicyUpgrades"] = trusted_upgrades
     if candidate_repo != previous_repo or bundle["repo.json"] != previous_repo:
         raise ValueError("CloudStream repo manifest must not change implicitly")
 
@@ -227,6 +264,8 @@ def main(argv=None):
     for name in ("candidate-dir","previous-dir","selection-dir","output-dir"):
         parser.add_argument("--"+name,required=True,type=Path)
     parser.add_argument("--max-deferred",type=int,default=24)
+    parser.add_argument("--policy-approvals",type=Path,
+                        help="Exact authenticated staged policy decisions")
     parser.add_argument("--verify-deferred-urls",action="store_true",
                         help="Fail publication if any existing deferred package URL is unreachable")
     args=parser.parse_args(argv)
@@ -250,6 +289,8 @@ def main(argv=None):
         _load(args.candidate_dir,"repo.json",dict),
         _load(args.previous_dir,"repo.json",dict),
         max_deferred=args.max_deferred,
+        policy_approvals=(_load(args.policy_approvals.parent, args.policy_approvals.name, list)
+                          if args.policy_approvals else None),
         deferred_url_checker=(template.check_package_url
                               if args.verify_deferred_urls else None)
     )

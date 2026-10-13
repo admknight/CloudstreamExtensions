@@ -8,6 +8,12 @@ on:
       - 'sources.json'
       - 'local_verified_plugins.json'
       - 'trusted_binary_approvals.json'
+      - 'trusted_upstream_policy.json'
+      - 'tools/trusted_upstream_candidates.py'
+      - 'tools/verify_candidate_integrity.py'
+      - 'tests/test_trusted_upstream_candidates.py'
+      - 'tools/verify_prepublication_packages.py'
+      - 'tests/test_verify_prepublication_packages.py'
       - 'tools/merge_upstreams.py'
       - 'tests/test_local_verified_source.py'
       - '.github/workflows/verify-guarded-post-publication.yml'
@@ -31,6 +37,9 @@ jobs:
       - name: Run guarded publication reconciliation regressions
         run: |
           set -euo pipefail
+          python3 -m unittest discover -s tests -p 'test_verify_prepublication_packages.py' -v
+          python3 -m unittest discover -s tests -p 'test_trusted_upstream_candidates.py' -v
+          python3 -m unittest discover -s tests -p 'test_verify_candidate_integrity.py' -v
           python3 -m unittest discover -s tests -p 'test_finalize_guarded_release.py' -v
           python3 -m unittest discover -s tests -p 'test_local_verified_source.py' -v
           python3 -m unittest discover -s tests -p 'test_validate_guarded_post_publish.py' -v
@@ -68,6 +77,25 @@ jobs:
             --previous published/plugins.json \
             --previous-report published/merge-report.json \
             --previous-provenance published/provenance.json
+      - name: Stage immutable trusted publisher upgrades without publishing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 source/tools/trusted_upstream_candidates.py \
+            --candidate-dir source/merged \
+            --previous-dir published \
+            --sources source/sources.json \
+            --policy source/trusted_upstream_policy.json \
+            --output-dir staged-candidate
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          original=json.loads(Path("source/trusted_binary_approvals.json").read_text())
+          staged=json.loads(Path("staged-candidate/policy-approvals.json").read_text())
+          assert len(staged)==len({x["plugin"] for x in staged})
+          Path("approved.json").write_text(json.dumps(original+staged)+"\n")
+          PY
       - name: Recover previous immutable byte fingerprints
         env:
           GH_TOKEN: ${{ github.token }}
@@ -83,11 +111,11 @@ jobs:
         run: |
           set -euo pipefail
           python3 source/tools/plan_per_plugin_selection.py \
-            --candidate source/merged/plugins.json \
+            --candidate staged-candidate/plugins.json \
             --previous published/plugins.json \
-            --candidate-provenance source/merged/provenance.json \
+            --candidate-provenance staged-candidate/provenance.json \
             --previous-provenance published/provenance.json \
-            --approvals source/trusted_binary_approvals.json \
+            --approvals approved.json \
             --recovery-index immutable-recovery.json \
             --output-dir integrity-selection \
             --workers 8
@@ -95,12 +123,21 @@ jobs:
         run: |
           set -euo pipefail
           python3 source/tools/finalize_guarded_release.py \
-            --candidate-dir source/merged \
+            --candidate-dir staged-candidate \
             --previous-dir published \
             --selection-dir integrity-selection \
             --output-dir release-candidate \
+            --policy-approvals staged-candidate/policy-approvals.json \
             --max-deferred 24 \
             --verify-deferred-urls
+      - name: Independently verify all final candidate package bytes before release
+        run: |
+          set -euo pipefail
+          python3 source/tools/verify_prepublication_packages.py \
+            --previous-dir published \
+            --release-dir release-candidate \
+            --report prepublication-verdict.json \
+            --max-deferred 1
       - name: Assert real 543-entry release candidates remain complete
         run: |
           python3 - <<'PY'
@@ -157,5 +194,8 @@ jobs:
             integrity-selection/integrity-selection.json
             integrity-selection/verification-report.json
             immutable-recovery.json
+            prepublication-verdict.json
+            staged-candidate/trusted-update-report.json
+            staged-candidate/policy-approvals.json
           if-no-files-found: warn
           retention-days: 21
