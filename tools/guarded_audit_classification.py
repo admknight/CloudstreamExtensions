@@ -72,7 +72,7 @@ def _exact_published_differences(drift, published):
     return True
 
 
-def _known_verified_hold(drift, current, origin, incident):
+def _known_verified_hold(drift, current, origin, incident, *, exact_candidate_bytes=True):
     if not isinstance(incident, dict) or not _exact_published_differences(drift, current):
         return False
     fields = drift["differences"]
@@ -98,16 +98,17 @@ def _known_verified_hold(drift, current, origin, incident):
             or incident["observedActualSize"] <= 0
             or DIGEST_RE.fullmatch(str(incident.get("observedActualSHA256") or "")) is None):
         return False
-    for field, recorded in (("fileSize", "observedActualSize"),
-                            ("fileHash", "observedActualSHA256")):
-        if field in fields:
-            from_upstream = fields[field]["upstream"]
-            expected = incident[recorded]
-            if field == "fileHash":
-                if str(from_upstream).lower() != str(expected).lower():
+    if exact_candidate_bytes:
+        for field, recorded in (("fileSize", "observedActualSize"),
+                                ("fileHash", "observedActualSHA256")):
+            if field in fields:
+                from_upstream = fields[field]["upstream"]
+                expected = incident[recorded]
+                if field == "fileHash":
+                    if str(from_upstream).lower() != str(expected).lower():
+                        return False
+                elif from_upstream != expected:
                     return False
-            elif from_upstream != expected:
-                return False
     return True
 
 
@@ -175,7 +176,7 @@ def classify_drift(published, provenance, report, drift):
         if row.get("disposition") == "retained_immutable_previous"
     ):
         raise ValueError("Pinned previous release evidence count differs from production report")
-    known, unexpected = [], []
+    known, pending_new_upstream, unexpected = [], [], []
     seen = set()
     for row in drift:
         if not isinstance(row, dict):
@@ -190,22 +191,35 @@ def classify_drift(published, provenance, report, drift):
                 and row.get("sourceId") == origin.get("sourceId")):
             if _known_verified_hold(row, current, origin, incidents.get(key)):
                 kind = "immutable_sha256_verified_previous_held"
+            elif _known_verified_hold(row, current, origin, incidents.get(key),
+                                      exact_candidate_bytes=False):
+                # Candidate bytes changed AFTER the last guarded build.
+                # The installer still points to the OLD commit-pinned release,
+                # independently byte-verified by the guarded release evidence.
+                # This is pending UNTRUSTED upstream metadata, not an approval.
+                kind = "new_upstream_candidate_untrusted_prior_immutable_pin_held"
             elif _known_policy_url_only(row, current, origin, approvals.get(key)):
                 kind = "trusted_upstream_commit_pinned_url_only"
-        if kind and not holds:
-            known.append({"plugin": key, "classification": kind,
-                          "originalFinding": row})
+        item = {"plugin": key, "classification": kind, "originalFinding": row}
+        if kind == "new_upstream_candidate_untrusted_prior_immutable_pin_held" and not holds:
+            pending_new_upstream.append(item)
+        elif kind and not holds:
+            known.append(item)
         else:
             unexpected.append(row)
     return {
         "known": known,
+        "pendingUntrustedUpstream": pending_new_upstream,
         "unexpected": unexpected,
         "knownCount": len(known),
+        "pendingUntrustedUpstreamCount": len(pending_new_upstream),
         "unexpectedCount": len(unexpected),
         "unverifiedMutableHeldCount": len(holds),
         "independentFullAuditPerformed": False,
         "warning": (
-            "Known older versions remain pinned rather than promoted from upstream; "
+            "A changed upstream digest is UNTRUSTED, has NOT been adopted, and " 
+            "requires normal independent provenance plus byte verification. "
+            "Previously verified immutable versions remain pinned rather than promoted. "
             "this rotating monitor does not certify upstream code, provider playback "
             "or a clean full post-publication audit."
         ),
