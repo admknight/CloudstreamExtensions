@@ -164,7 +164,7 @@ def _source_index(entries):
 
 
 def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader=None,
-          published_file=None, provenance_file=None):
+          published_file=None, provenance_file=None, guarded_release_report=None):
     fetcher = fetcher or fetch_json
     ts = datetime.now(timezone.utc)
     chosen_slot = ts.hour % buckets if slot is None else slot
@@ -172,6 +172,16 @@ def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader
     # Separate raw URLs may be cached at different revisions after publication.
     if (published_file is None) != (provenance_file is None):
         raise ValueError('Published catalog and provenance files must be supplied together')
+    if guarded_release_report is not None:
+        if full or only:
+            raise ValueError("Guarded known-drift classification is only for rotating hourly audit")
+        if published_file is None or provenance_file is None:
+            raise ValueError("Guarded release classification requires one checkout snapshot")
+        if (Path(guarded_release_report).resolve().parent
+                != Path(published_file).resolve().parent
+                or Path(provenance_file).resolve().parent
+                   != Path(published_file).resolve().parent):
+            raise ValueError("Guarded release evidence must share the published snapshot directory")
     if published_file is not None:
         published = json.loads(Path(published_file).read_text(encoding='utf-8'))
         provenance = json.loads(Path(provenance_file).read_text(encoding='utf-8'))
@@ -218,25 +228,65 @@ def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader
         for future in as_completed(futures):
             packages.append(future.result())
     packages.sort(key=lambda p: p['plugin'])
+    package_problems = [p for p in packages if p['status'] in ('error', 'mismatch')]
+    unsigned = [p for p in packages if p['status'] == 'size_only_no_checksum']
+    strict_pass = not (source_errors or diffs or package_problems)
+    classification = None
+    if guarded_release_report is not None:
+        from guarded_audit_classification import classify_drift
+        release_report = json.loads(Path(guarded_release_report).read_text(encoding='utf-8'))
+        classification = classify_drift(published, provenance, release_report, diffs)
+        # Never forgive a missing source, unsigned package, failed download or
+        # unexpected change. Known immutable holds remain visible as WARNINGS.
+        verdict = not (
+            source_errors or package_problems or unsigned
+            or classification['unexpectedCount']
+            or classification['unverifiedMutableHeldCount']
+        )
+    else:
+        verdict = strict_pass
     return {
         'checkedAtUTC': ts.isoformat(), 'readOnly': True, 'publishedCount': len(published),
         'upstreamSourceIndexesChecked': len(upstream_catalogs),
         'sourceErrors': source_errors, 'metadataDrift': diffs,
+        'strictUnclassifiedAuditPass': strict_pass,
+        'guardedHourlyClassification': classification,
+        'verdict': (
+            'HOURLY_VALID_PUBLISHED_PACKAGES_UNTRUSTED_UPSTREAM_PENDING'
+            if classification and verdict and classification['pendingUntrustedUpstreamCount']
+            else 'HOURLY_VERIFIED_WITH_DOCUMENTED_PINNED_DRIFT'
+            if classification and verdict and classification['knownCount']
+            else 'HOURLY_VERIFIED_NO_DRIFT' if classification and verdict
+            else 'HOURLY_UNEXPECTED_INTEGRITY_FAILURE' if classification
+            else 'STRICT_AUDIT_PASS' if verdict else 'STRICT_AUDIT_FAILURE'
+        ),
         'scan': {'mode': 'all' if full or only else 'rotation', 'slot': chosen_slot,
                  'buckets': buckets, 'checked': len(packages),
                  'hashVerified': sum(p['status'] == 'hash_verified' for p in packages),
                  'withoutHashes': sum(p['status'] == 'size_only_no_checksum' for p in packages),
                  'failed': sum(p['status'] in ('error', 'mismatch') for p in packages)},
-        'packageProblems': [p for p in packages if p['status'] in ('error', 'mismatch')],
-        'pass': not (source_errors or diffs or any(p['status'] in ('error', 'mismatch') for p in packages)),
+        'packageProblems': package_problems,
+        'pass': verdict,
     }
 
 
 def summary(report):
     scan = report['scan']
+    classification = report.get('guardedHourlyClassification')
+    if classification is not None:
+        label = (
+            'PASS WITH DOCUMENTED IMMUTABLE HOLDS AND UNTRUSTED UPSTREAM UPDATES - not a clean full audit'
+            if report['pass'] and classification['pendingUntrustedUpstreamCount']
+            else 'PASS WITH DOCUMENTED IMMUTABLE HOLDS - not a clean full audit'
+            if report['pass'] and classification['knownCount']
+            else 'PASS - no unexpected changes in rotating scan'
+            if report['pass'] else 'FAIL - unexpected integrity or source failure'
+        )
+    else:
+        label = 'PASS' if report['pass'] else 'FAIL - investigation needed'
     lines = ['# MegaRepo package-integrity audit', '',
              f"- Checked: {report['checkedAtUTC']}",
-             f"- Result: {'PASS' if report['pass'] else 'FAIL - investigation needed'}",
+             f"- Result: {label}",
              f"- Published plugins evaluated for metadata: {report['publishedCount']}",
              f"- Upstream source indexes fetched: {report['upstreamSourceIndexesChecked']}",
              f"- Rotation: {scan['slot'] + 1} / {scan['buckets']} ({scan['mode']})",
@@ -247,6 +297,36 @@ def summary(report):
              f"- Upstream metadata drift: {len(report['metadataDrift'])}",
              f"- Source fetch failures: {len(report['sourceErrors'])}",
              '', 'This audit is read-only. Source availability and checksum checks do not prove playback.', '']
+    if classification is not None:
+        lines += [
+            f"- Known immutable/version-pinned source differences: {classification['knownCount']}",
+            f"- New upstream candidates still UNTRUSTED and withheld: {classification['pendingUntrustedUpstreamCount']}",
+            f"- Unexpected metadata changes: {classification['unexpectedCount']}",
+            f"- Unverified mutable fallbacks: {classification['unverifiedMutableHeldCount']}",
+            f"- Strict raw metadata+package audit pass: {report['strictUnclassifiedAuditPass']}",
+            "- This rotates package checks across six partitions. A successful hourly gate "
+            "does NOT establish full published-catalog integrity or provider playback.",
+            "- All original metadata drift remains in this report and the JSON artifact.",
+            ''
+        ]
+        if classification['pendingUntrustedUpstream']:
+            lines += [
+                '## New untrusted upstream changes kept behind verified immutable pins', '',
+                'These are NOT approved updates or verified upstream releases. No new binary is adopted.',
+                'The historical published plugin remains pinned; independent upstream checks remain necessary.',
+                '', '```json',
+                json.dumps(classification['pendingUntrustedUpstream'][:30], indent=2, sort_keys=True),
+                '```', ''
+            ]
+        if classification['unexpected']:
+            lines += [
+                '## Unexpected metadata drift requiring investigation', '',
+                'These entries DO NOT qualify as previously verified immutable holds.',
+                'The hourly workflow must remain failed until independently resolved.',
+                '', '```json',
+                json.dumps(classification['unexpected'][:30], indent=2, sort_keys=True),
+                '```', ''
+            ]
     for title, data in [('Upstream metadata drift', report['metadataDrift']),
                         ('Package failures', report['packageProblems']),
                         ('Upstream index fetch failures', report['sourceErrors'])]:
@@ -264,12 +344,15 @@ def main(argv=None):
     parser.add_argument('--slot', type=int, help='Rotation index 0-5; default is current UTC hour modulo 6')
     parser.add_argument('--published-file', type=Path, help='Published catalog from a pinned builds-branch checkout')
     parser.add_argument('--provenance-file', type=Path, help='Matching provenance from that same checkout')
+    parser.add_argument('--guarded-release-report', type=Path,
+                        help='For rotating hourly CI only: report from the same builds checkout')
     parser.add_argument('--json-report', default='audit-report.json')
     parser.add_argument('--markdown-report', default='audit-summary.md')
     args = parser.parse_args(argv)
     try:
         data = audit(only=args.only, full=args.full, slot=args.slot,
-                     published_file=args.published_file, provenance_file=args.provenance_file)
+                     published_file=args.published_file, provenance_file=args.provenance_file,
+                     guarded_release_report=args.guarded_release_report)
     except Exception as exc:
         data = {'checkedAtUTC': datetime.now(timezone.utc).isoformat(), 'pass': False,
                 'fatalError': f'{type(exc).__name__}: {exc}'}
