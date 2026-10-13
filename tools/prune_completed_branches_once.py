@@ -53,8 +53,8 @@ COMPLETED = {
 # The cleanup PR's own branch may be deleted after that PR is merged.
 # This one is constrained by its exact merged-PR head rather than a
 # hardcoded SHA, since creating this file changes that SHA.
-SELF_PR = 61
-SELF_BRANCH = "maintenance/verified-one-time-branch-cleanup-20261010"
+SELF_PR = 193
+SELF_BRANCH = "maintenance/prune-verified-merged-heads-20261013"
 PRESERVE = {
     "master", "builds", "custom-builds", "health-history",
     "audit/provider-runtime-contract", "fix/provider-link-contract",
