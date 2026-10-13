@@ -24,8 +24,11 @@ def data(name, sha="a" * 40):
 class CleanupTests(unittest.TestCase):
     def test_exact_allowlist_and_preserved_branches_do_not_overlap(self):
         values = cleanup.targets()
-        self.assertEqual(len(cleanup.COMPLETED), 23)
-        self.assertEqual(len(values), 24)
+        # The first 23 completed PRs plus 11 additionally reviewed heads.
+        self.assertEqual(len(cleanup.COMPLETED), 34)
+        self.assertEqual(len(values), 35)
+        self.assertTrue({62, 63, 64, 65, 67, 68, 71, 72, 188, 191, 192}
+                        .issubset(set(cleanup.COMPLETED)))
         self.assertEqual(len({x[1] for x in values}), len(values))
         self.assertFalse({x[1] for x in values}.intersection(cleanup.PRESERVE))
         self.assertEqual(values[-1][0], cleanup.SELF_PR)
