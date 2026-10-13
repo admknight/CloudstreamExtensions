@@ -36,7 +36,8 @@ def fixture():
     }
     audit = {
         "publishedCount": 50, "pass": False,
-        "scan": {"mode":"all", "checked":50},
+        "scan": {"mode":"all", "checked":50, "hashVerified":48,
+                 "withoutHashes":1, "failed":1},
         "sourceErrors": [],
         "metadataDrift": [{"plugin":"P0", "sourceId":"demo","reason":"upstream changed"}],
         "packageProblems": [{"plugin":"P0", "status":"mismatch","sourceId":"demo"}],
@@ -122,6 +123,7 @@ class ResolutionTests(unittest.TestCase):
     def test_new_unaccounted_binary_mismatch_blocks_every_close(self):
         data=fixture()
         data[0]["packageProblems"].append({"plugin":"P1","status":"mismatch"})
+        data[0]["scan"].update({"failed":2,"hashVerified":47})
         with self.assertRaisesRegex(ValueError,"Unexpected unapproved"):
             validate_proven_resolution(*data)
 
@@ -161,6 +163,8 @@ class ResolutionTests(unittest.TestCase):
             "fallbackVerified":True,"fallbackThroughRecoveryLock":True,
         }]
         data[0]["packageProblems"]=[]
+        data[0]["scan"]["failed"]=0
+        data[0]["scan"]["hashVerified"]=49
         data[1]["knownAuditAnomalyCount"]=1
         data[1]["heldUpstreamExceptions"]=[]
         self.assertIn("p1",validate_proven_resolution(*data))
@@ -221,6 +225,8 @@ class ResolutionTests(unittest.TestCase):
         }]
         verdict["trustedPolicyUpgrades"]=["p1"]
         audit["packageProblems"].append({"plugin":"P1","status":"mismatch"})
+        audit["scan"]["failed"]=2
+        audit["scan"]["hashVerified"]=47
         with self.assertRaisesRegex(ValueError,"Unexpected unapproved"):
             validate_proven_resolution(audit,verdict,report,plugins,provenance)
 
@@ -228,6 +234,7 @@ class ResolutionTests(unittest.TestCase):
         data=fixture()
         data[0]["metadataDrift"]=[]
         data[0]["packageProblems"]=[]
+        data[0]["scan"].update({"failed":0,"hashVerified":49})
         data[0]["pass"]=True
         data[1].clear()
         data[1].update({
@@ -240,7 +247,79 @@ class ResolutionTests(unittest.TestCase):
         })
         data[2]["deferredUnverified"]=[]
         data[2]["integrityHealth"]["unverifiedPreviousCarried"]=0
+        data[2]["quarantineIncidents"]=[]
         self.assertEqual(len(validate_proven_resolution(*data)),49)
+
+    def test_existing_quarantined_candidate_remains_ineligible_even_without_drift(self):
+        data=fixture()
+        # P1 has zero audit findings but its candidate is still preserved as
+        # an unapproved immutable previous release, so issue closure is unsafe.
+        data[2]["quarantineIncidents"].append({
+            "plugin":"P1","disposition":"retained_immutable_previous",
+            "fallbackVerified":True,"fallbackThroughRecoveryLock":True,
+        })
+        data[2]["integrityHealth"]["pinnedPreviousRecovered"]=1
+        self.assertNotIn("p1",validate_proven_resolution(*data))
+
+    def test_missing_independent_sha_coverage_fails_closed(self):
+        data=fixture()
+        data[0]["scan"]["hashVerified"]=47
+        with self.assertRaisesRegex(ValueError,"byte coverage"):
+            validate_proven_resolution(*data)
+
+    def test_read_only_reconciliation_reports_without_mutation(self):
+        data=fixture()
+        calls=[]
+        def runner(command):
+            calls.append(command)
+            return json.dumps([issue("P1",19)]) if command[2]=="list" else ""
+        out=resolve(*data,verifier_run_id=38445871539,runner=runner,dry_run=True)
+        self.assertEqual(len(out["dryRunEligibleIssueClosures"]),1)
+        self.assertEqual(out["closedIssues"],[])
+        self.assertEqual([x[2] for x in calls],["list"])
+
+    def test_rejected_candidate_needs_exact_published_version_and_bytes(self):
+        from guarded_candidate_issue_evidence import BEGIN, END
+        data=fixture()
+        data[3][1]["url"]="https://raw.githubusercontent.com/demo/repo/"+"b"*40+"/P1.cs3"
+        data[4][1]["packageUrl"]=data[3][1]["url"]
+        observation={"plugin":"p1","sourceId":"demo","candidateVersion":2,
+                     "actualFileSize":10,"declaredFileSize":10,
+                     "observedActualSHA256":"sha256-"+"a"*64,
+                     "candidateUrl":"https://raw.githubusercontent.com/demo/repo/builds/P1.cs3",
+                     "verificationStatus":"hash_verified"}
+        body=MANAGED+"\n"+BEGIN+"\n"+chr(96)*3+"json\n"+json.dumps(observation)+"\n"+chr(96)*3+"\n"+END
+        observed_issue=issue("P1",19)
+        observed_issue["body"]=body
+        calls=[]
+        def runner(command):
+            calls.append(command)
+            return json.dumps([observed_issue]) if command[2]=="list" else ""
+        out=resolve(*data,verifier_run_id=38445871539,runner=runner,dry_run=False)
+        self.assertEqual(out["closedIssues"],[])
+        self.assertEqual(out["heldByUnmatchedCandidateEvidence"][0]["plugin"],"p1")
+        self.assertEqual([x[2] for x in calls],["list"])
+
+    def test_candidate_exact_pinned_bytes_can_be_auto_closed(self):
+        from guarded_candidate_issue_evidence import BEGIN, END
+        data=fixture()
+        data[3][1]["url"]="https://raw.githubusercontent.com/demo/repo/"+"b"*40+"/P1.cs3"
+        data[4][1]["packageUrl"]=data[3][1]["url"]
+        observation={"plugin":"p1","sourceId":"demo","candidateVersion":1,
+                     "actualFileSize":10,"declaredFileSize":10,
+                     "observedActualSHA256":"sha256-"+"a"*64,
+                     "candidateUrl":"https://raw.githubusercontent.com/demo/repo/builds/P1.cs3",
+                     "verificationStatus":"hash_verified"}
+        body=MANAGED+"\n"+BEGIN+"\n"+chr(96)*3+"json\n"+json.dumps(observation)+"\n"+chr(96)*3+"\n"+END
+        observed_issue=issue("P1",19)
+        observed_issue["body"]=body
+        calls=[]
+        def runner(command):
+            calls.append(command)
+            return json.dumps([observed_issue]) if command[2]=="list" else ""
+        out=resolve(*data,verifier_run_id=38445871539,runner=runner)
+        self.assertEqual(len(out["closedIssues"]),1)
+        self.assertEqual([x[2] for x in calls],["list","comment","close"])
 
     def test_bad_issue_run_id_rejected(self):
         with self.assertRaisesRegex(ValueError,"run ID"):
