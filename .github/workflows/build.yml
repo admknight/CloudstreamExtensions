@@ -134,6 +134,7 @@ jobs:
             --previous-dir builds \
             --selection-dir source/verified-selection \
             --output-dir source/guarded-release \
+            --policy-approvals source/upstream-candidate/policy-approvals.json \
             --max-deferred 24 \
             --verify-deferred-urls
           python3 - <<'PY'
