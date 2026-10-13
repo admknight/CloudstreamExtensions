@@ -181,6 +181,49 @@ class ResolutionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"Unexpected unapproved"):
             validate_proven_resolution(*data)
 
+    def test_trusted_policy_pin_url_only_drift_is_documented_not_resolved(self):
+        audit, verdict, report, plugins, provenance = fixture()
+        sha="b"*40
+        url="https://raw.githubusercontent.com/demo/repo/"+sha+"/P1.cs3"
+        original=plugins[1]["url"]
+        plugins[1]["url"]=url
+        provenance[1]["packageUrl"]=url
+        report["trustedPolicyUpgrades"]=[{
+            "authorizationKind":"trusted_upstream_policy_v1",
+            "plugin":"p1","sourceId":"demo","url":url,
+            "originalUrl":original,"version":1,
+            "fileSize":10,"fileHash":"sha256-"+"a"*64,
+            "pinnedIndexVerified":True,"separateBytesVerified":True,
+            "immutableCommit":sha
+        }]
+        verdict["trustedPolicyUpgrades"]=["p1"]
+        audit["metadataDrift"].append({
+            "plugin":"P1","problem":"stale_metadata",
+            "differences":{"url":{"published":url,"upstream":original}}
+        })
+        verdict["knownAuditAnomalyCount"]=3
+        self.assertNotIn("p1",validate_proven_resolution(
+            audit,verdict,report,plugins,provenance))
+
+    def test_trusted_policy_pin_never_masks_binary_failure(self):
+        audit, verdict, report, plugins, provenance = fixture()
+        sha="b"*40
+        url="https://raw.githubusercontent.com/demo/repo/"+sha+"/P1.cs3"
+        old=plugins[1]["url"]
+        plugins[1]["url"]=url
+        provenance[1]["packageUrl"]=url
+        report["trustedPolicyUpgrades"]=[{
+            "authorizationKind":"trusted_upstream_policy_v1",
+            "plugin":"p1","sourceId":"demo","url":url,
+            "originalUrl":old,"version":1,"fileSize":10,
+            "fileHash":"sha256-"+"a"*64,
+            "pinnedIndexVerified":True,"separateBytesVerified":True
+        }]
+        verdict["trustedPolicyUpgrades"]=["p1"]
+        audit["packageProblems"].append({"plugin":"P1","status":"mismatch"})
+        with self.assertRaisesRegex(ValueError,"Unexpected unapproved"):
+            validate_proven_resolution(audit,verdict,report,plugins,provenance)
+
     def test_completed_clean_report_resolves_all_hashed_plugins(self):
         data=fixture()
         data[0]["metadataDrift"]=[]
