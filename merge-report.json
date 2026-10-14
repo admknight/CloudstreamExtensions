@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14 11:57:36 UTC",
+  "generatedAt": "2026-10-14 17:14:23 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
@@ -3049,14 +3049,29 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "UASerialsProProvider",
+        "name": "UASerialsProProvider",
+        "version": 28,
+        "sourceId": "cakestwix",
+        "sourceName": "CakesTwix UK/UA",
+        "category": "Movies",
+        "fromVersion": 27,
+        "toVersion": 28,
+        "fromSourceId": "cakestwix",
+        "fromSource": "CakesTwix UK/UA",
+        "toSourceId": "cakestwix",
+        "toSource": "CakesTwix UK/UA"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -4206,8 +4221,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/8c6579fd1b029a2b4f80e2ca035efdfa279458d3/MovieBox.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 74423,
-      "observedActualSHA256": "sha256-c8502344581433e7103e18e48545645bc1a5f1ee1cc0b00b7b372a66f782e6bb",
+      "observedActualSize": 82166,
+      "observedActualSHA256": "sha256-5b2e5a220696c64ae6aa5f69f7559ff983be4c1db77434eaadbcd30067ff5b86",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/8c6579fd1b029a2b4f80e2ca035efdfa279458d3/MovieBox.cs3",
@@ -5046,14 +5061,30 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "8da5a38f04badd1cfb4b1cd4e21d3cbcf5c9db849d551f517318318184dba5c6",
+  "originalSourceReportDigest": "1c5b0d003ceca0ac947e2c17245ddabc5efe063f41acd61eb4efbb01aabe824f",
   "inputSnapshotDigests": {
-    "candidate": "0f301ae760f2415106d700264c44df91ed33a6d6bb8f8dd38d4f6280d0709521",
+    "candidate": "df8b4e70e4493261447999eb564803bdf848fbd27d7626acca9aa85694c064c7",
     "previous": "19042dc17e8ab30a4c79445422590d0ddb01d3a91051bce3e25db91ee723cc54",
-    "candidateProvenance": "d622dc6615496e40d2a2c78e87c1416a37c7e06eb1aafcd0700465834e1a2c87",
+    "candidateProvenance": "b209fe1aedcd68e615ed335b83c0c44162f81539974f420eeb6ed63759b7c1d5",
     "previousProvenance": "329e493ce9fec02493d3ab22ff4415081d926413bf6efb247742d397f47b2b6a"
   },
-  "trustedPolicyUpgrades": [],
+  "trustedPolicyUpgrades": [
+    {
+      "authorizationKind": "trusted_upstream_policy_v1",
+      "plugin": "uaserialsproprovider",
+      "sourceId": "cakestwix",
+      "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "originalUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UASerialsProProvider.cs3",
+      "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/UASerialsProProvider.cs3",
+      "version": 28,
+      "fileSize": 42261,
+      "fileHash": "sha256-1ec74cd598a8bb30adbf09047b3eb79f18a8ccbce92f651542341cc79e7f97ee",
+      "immutableCommit": "03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c",
+      "pinnedIndexUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/plugins.json",
+      "pinnedIndexVerified": true,
+      "separateBytesVerified": true
+    }
+  ],
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",
   "candidateStatusDisclaimer": "A deferred mutable URL does NOT guarantee the old bytes remain available. Unverified metadata is held from the previous release only. Publication never approves a different binary on this basis."

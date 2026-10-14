@@ -8449,7 +8449,7 @@
     "publishedName": "[Movies] UASerialsProProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 27,
+    "selectedVersion": 28,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -8458,7 +8458,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UASerialsProProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/UASerialsProProvider.cs3"
   },
   {
     "plugin": "UFDubProvider",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14 11:57:36 UTC",
+  "generatedAt": "2026-10-14 17:14:23 UTC",
   "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "catalog": {
     "plugins": 547,
@@ -10,14 +10,29 @@
   },
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "UASerialsProProvider",
+        "name": "UASerialsProProvider",
+        "version": 28,
+        "sourceId": "cakestwix",
+        "sourceName": "CakesTwix UK/UA",
+        "category": "Movies",
+        "fromVersion": 27,
+        "toVersion": 28,
+        "fromSourceId": "cakestwix",
+        "fromSource": "CakesTwix UK/UA",
+        "toSourceId": "cakestwix",
+        "toSource": "CakesTwix UK/UA"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {

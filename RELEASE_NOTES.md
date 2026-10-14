@@ -1,19 +1,19 @@
 # Adam Knight Mega Repo — Production Change Notes
 
-Generated: **2026-10-14 11:57:36 UTC**
+Generated: **2026-10-14 17:14:23 UTC**
 
 Production catalog: **547 reachable plugins** · **36 healthy sources** · **0 package failures**
 
 ## Summary
 
 - Added: **0**
-- Updated: **0**
+- Updated: **1**
 - Removed: **0**
-- Unchanged: **547**
+- Unchanged: **546**
 
-## Catalog changes
+## Updated plugins
 
-No plugin or source changes were detected in this production refresh.
+- **UASerialsProProvider** v27 → v28 — CakesTwix UK/UA
 
 ## Production health
 

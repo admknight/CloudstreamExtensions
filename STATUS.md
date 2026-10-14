@@ -1,12 +1,12 @@
 # Production Aggregation Status
 
-Generated: **2026-10-14 11:57:36 UTC**
+Generated: **2026-10-14 17:14:23 UTC**
 
 Candidate status: **READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 0 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
 
 ## Integrity status — separate from package reachability
 
@@ -562,7 +562,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 492 | **[Anime] TwoDHive** | 17 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 493 | **[Movies] UAFlixProvider** | 21 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 494 | **[Movies] UakinoProvider** | 32 | uk | Anime, TvSeries, Movie, AsianDrama | CakesTwix UK/UA | Unchanged |
-| 495 | **[Movies] UASerialsProProvider** | 27 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
+| 495 | **[Movies] UASerialsProProvider** | 28 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Updated (verified by candidate policy) |
 | 496 | **[Movies] UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
 | 497 | **[Movies] UgurFilm** | 13 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 498 | **[Movies] UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Unchanged |

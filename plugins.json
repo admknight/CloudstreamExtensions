@@ -10314,10 +10314,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=uaserials.pro&sz=%size%",
-    "fileHash": "sha256-a06c33d55d3c097a2640bc978a919c57671e56d40c9338638d97877c907ab79e",
+    "fileHash": "sha256-1ec74cd598a8bb30adbf09047b3eb79f18a8ccbce92f651542341cc79e7f97ee",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 40014,
+    "fileSize": 42261,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -10329,10 +10329,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 27,
+    "version": 28,
     "internalName": "UASerialsProProvider",
     "description": "UASerials.pro — твої улюблені серіали українською мовою онлайн.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UASerialsProProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/UASerialsProProvider.cs3",
     "name": "[Movies] UASerialsProProvider"
   },
   {
