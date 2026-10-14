@@ -1,8 +1,8 @@
 # Production Aggregation Status
 
-Generated: **2026-10-13 22:47:38 UTC**
+Generated: **2026-10-14 04:57:52 UTC**
 
-Candidate status: **READY - GUARDED, NO DEFERRED UPDATES**
+Candidate status: **READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -11,8 +11,8 @@ Candidate status: **READY - GUARDED, NO DEFERRED UPDATES**
 ## Integrity status — separate from package reachability
 
 - **554 candidate packages** inspected for declared length and SHA-256 when present.
-- **432 candidates** accepted under the published trust rules.
-- **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **431 candidates** accepted under the published trust rules.
+- **1 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
 - **115 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
@@ -180,7 +180,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | 110 | **[Arabic] CimaClub** | 1 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 111 | **[Arabic] Cimalight** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | Unchanged |
 | 112 | **[Arabic] Cimatn** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | Unchanged |
-| 113 | **[Movies] CinecalidadProvider** | 7 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
+| 113 | **[Movies] CinecalidadProvider** | 7 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Deferred: previous metadata, unverified upstream bytes |
 | 114 | **[Indian] Cinedoze** | 1 | hi | Movie, TvSeries | Adam Knight Custom Providers | Unchanged |
 | 115 | **[Indian] Cinefreak** | 18 | bn | Movie, TvSeries, Anime | Phisher Repo | Unchanged |
 | 116 | **[Movies] CineHdPlusProvider** | 4 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |

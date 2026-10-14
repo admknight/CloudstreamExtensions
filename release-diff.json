@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-13 22:47:38 UTC",
-  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
+  "generatedAt": "2026-10-14 04:57:52 UTC",
+  "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
   "catalog": {
     "plugins": 547,
     "healthySources": 36,
@@ -28,15 +28,15 @@
   "customProviderChanges": [],
   "integrityHealth": {
     "candidateChecked": 554,
-    "candidateAccepted": 432,
+    "candidateAccepted": 431,
     "immutableOldRetained": 115,
     "pinnedPreviousRecovered": 115,
-    "unverifiedPreviousCarried": 0,
+    "unverifiedPreviousCarried": 1,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 122,
+    "changedOrFailedCandidates": 123,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": false
+    "releaseEligibleWithWarnings": true
   },
   "releaseAuthorized": false,
   "releaseEligible": true
