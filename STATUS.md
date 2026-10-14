@@ -1,6 +1,6 @@
 # Production Aggregation Status
 
-Generated: **2026-10-14 04:57:52 UTC**
+Generated: **2026-10-14 11:57:36 UTC**
 
 Candidate status: **READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW**
 
@@ -50,7 +50,7 @@ Unverified deferred plugin URLs are still mutable upstream links. Keeping an old
 | [Shakzz Recovery Builds](https://github.com/Shakzz890/ShakzzCutie) | ✅ OK | 13 | 0 | 0 | 2 |
 | [Mega Repository](https://github.com/self-similarity/MegaRepo) | ✅ OK | 1 | 0 | 0 | 1 |
 | [Rowdy Recovery Builds](https://github.com/RowdyRushya/rowdy-cs-extensions) | ✅ OK | 1 | 0 | 0 | 1 |
-| [CloudStreamHub Recovery Builds](https://github.com/Emre-Kahveci/CloudStreamHub) | ✅ OK | 23 | 1 | 0 | 0 |
+| [CloudStreamHub Recovery Builds](https://github.com/Emre-Kahveci/CloudStreamHub) | ✅ OK | 25 | 1 | 0 | 0 |
 | [Adam Knight Curated Recovery](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 1 | 0 | 0 | 1 |
 | [Adam Knight Custom Providers](https://github.com/admknight/CloudstreamExtensions) | ✅ OK | 6 | 6 | 0 | 0 |
 | [doGior's Had Enough](https://github.com/doGior/doGiorsHadEnough) | ✅ OK | 15 | 9 | 0 | 6 |
