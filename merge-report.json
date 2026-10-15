@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15 11:33:45 UTC",
+  "generatedAt": "2026-10-15 17:04:17 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
@@ -204,7 +204,7 @@
       "includedCount": 36,
       "packageFailed": 0,
       "duplicateSkipped": 0,
-      "integrityExceptions": 2,
+      "integrityExceptions": 1,
       "deferredUnverified": 0
     },
     {
@@ -536,12 +536,12 @@
   },
   "integrityHealth": {
     "candidateChecked": 554,
-    "candidateAccepted": 428,
-    "immutableOldRetained": 119,
-    "pinnedPreviousRecovered": 119,
+    "candidateAccepted": 429,
+    "immutableOldRetained": 118,
+    "pinnedPreviousRecovered": 118,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 126,
+    "changedOrFailedCandidates": 125,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
@@ -1422,7 +1422,7 @@
     {
       "plugin": "RareFilmm",
       "selectedSource": "CloudStreamHub Recovery Builds",
-      "selectedVersion": 16,
+      "selectedVersion": 17,
       "skippedSource": "Turkish Providers Repository | @KekikAkademi",
       "skippedVersion": 3,
       "reason": "lower version"
@@ -2672,7 +2672,7 @@
     {
       "plugin": "RareFilmm",
       "selectedSource": "CloudStreamHub Recovery Builds",
-      "selectedVersion": 16,
+      "selectedVersion": 17,
       "skippedSource": "Turkish Providers Repository | @KekikAkademi",
       "skippedVersion": 3,
       "reason": "lower version"
@@ -3049,14 +3049,29 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "DeporTVProvider",
+        "name": "DeporTVProvider",
+        "version": 33,
+        "sourceId": "storm-redblacker8",
+        "sourceName": "Storm-ext Fork by redblacker8",
+        "category": "Live",
+        "fromVersion": 32,
+        "toVersion": 33,
+        "fromSourceId": "storm-redblacker8",
+        "fromSource": "Storm-ext Fork by redblacker8",
+        "toSourceId": "storm-redblacker8",
+        "toSource": "Storm-ext Fork by redblacker8"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -3253,8 +3268,8 @@
       "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Animenosub.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 46137,
-      "observedActualSHA256": "sha256-7207eb0b174306ff19fbe63ff6af7c88901e68cecfe358ac73f1ade07584f977",
+      "observedActualSize": 82499,
+      "observedActualSHA256": "sha256-fcca81982b66c5bfdc3b29d373ba9c835ccdac013b39b767242e9ea7248bb804",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Animenosub.cs3",
@@ -3578,22 +3593,6 @@
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Comix.cs3",
-      "fallbackThroughRecoveryLock": true
-    },
-    {
-      "plugin": "deportvprovider",
-      "disposition": "retained_immutable_previous",
-      "candidateSourceId": "storm-redblacker8",
-      "previousSourceId": "storm-redblacker8",
-      "candidateUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DeporTVProvider.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/DeporTVProvider.cs3",
-      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "observedVerification": "hash_verified",
-      "observedActualSize": 99594,
-      "observedActualSHA256": "sha256-b701603cf0d830afcc30550d7e291fa2bde9c1719f06e680706528b0dea94f50",
-      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
-      "fallbackVerified": true,
-      "fallbackPin": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/DeporTVProvider.cs3",
       "fallbackThroughRecoveryLock": true
     },
     {
@@ -4613,8 +4612,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/65a0c3e0d59a4037779939a0823a6066926e63e2/RareFilmm.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 129381,
-      "observedActualSHA256": "sha256-a521363c111fb963b3dcfbc7cab975d9083e976b88c5417d2d2d6b2d2f32a499",
+      "observedActualSize": 130150,
+      "observedActualSHA256": "sha256-73ef41239530608c11a9d84c701e9df7e2bc4d0c2fa66fd4c250db0e3b989dda",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/65a0c3e0d59a4037779939a0823a6066926e63e2/RareFilmm.cs3",
@@ -5085,14 +5084,30 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "d3300c4899ca5520d9f3ab12bda8b64c53c10ea386fe7371a8bc3cb0437aabef",
+  "originalSourceReportDigest": "b9ed24b69fface9206146b14da7d3ed8c78253a9994b6702d31f7244971c9ccd",
   "inputSnapshotDigests": {
-    "candidate": "ee66d594657e52345e7bb457fb73cd14326e3dd8028669c2f2fa5cb2ff572758",
+    "candidate": "579cc87afc9d907672dfded400fa73815f95430f41aa1ab03a2e590d02240aa3",
     "previous": "8f98fd42ffb00cda88c1e2a347ac7f83f20213b8c67f4412c000ddb07783ae56",
-    "candidateProvenance": "cc1f3d05c945b543863a4e26bee5867568e1ae23211b3cdecb6dfd6f6ace695c",
+    "candidateProvenance": "7d8903384d24590049ddc1671b1da038050eb09afa91d519f1ac3434cc6860ce",
     "previousProvenance": "c20ef03dc08215237965aa06c397e6bd3b517b82fb52a230d206f4bc78ead06d"
   },
-  "trustedPolicyUpgrades": [],
+  "trustedPolicyUpgrades": [
+    {
+      "authorizationKind": "trusted_upstream_policy_v1",
+      "plugin": "deportvprovider",
+      "sourceId": "storm-redblacker8",
+      "sourceRepository": "https://github.com/redblacker8/storm-ext",
+      "originalUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DeporTVProvider.cs3",
+      "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41/DeporTVProvider.cs3",
+      "version": 33,
+      "fileSize": 118099,
+      "fileHash": "sha256-032a4871294de9ec1fcf21187d7dd7fb934eaa5e233c54b5ab71a666a2accc5c",
+      "immutableCommit": "7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41",
+      "pinnedIndexUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41/plugins.json",
+      "pinnedIndexVerified": true,
+      "separateBytesVerified": true
+    }
+  ],
   "releaseEligible": true,
   "publicationMethod": "guarded_per_plugin_compatibility",
   "candidateStatusDisclaimer": "A deferred mutable URL does NOT guarantee the old bytes remain available. Unverified metadata is held from the previous release only. Publication never approves a different binary on this basis."

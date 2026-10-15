@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15 11:33:45 UTC",
+  "generatedAt": "2026-10-15 17:04:17 UTC",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "catalog": {
     "plugins": 547,
@@ -10,14 +10,29 @@
   },
   "changes": {
     "added": 0,
-    "updated": 0,
-    "unchanged": 547,
+    "updated": 1,
+    "unchanged": 546,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [],
+    "updated": [
+      {
+        "plugin": "DeporTVProvider",
+        "name": "DeporTVProvider",
+        "version": 33,
+        "sourceId": "storm-redblacker8",
+        "sourceName": "Storm-ext Fork by redblacker8",
+        "category": "Live",
+        "fromVersion": 32,
+        "toVersion": 33,
+        "fromSourceId": "storm-redblacker8",
+        "fromSource": "Storm-ext Fork by redblacker8",
+        "toSourceId": "storm-redblacker8",
+        "toSource": "Storm-ext Fork by redblacker8"
+      }
+    ],
     "removed": []
   },
   "sourceChanges": {
@@ -28,12 +43,12 @@
   "customProviderChanges": [],
   "integrityHealth": {
     "candidateChecked": 554,
-    "candidateAccepted": 428,
-    "immutableOldRetained": 119,
-    "pinnedPreviousRecovered": 119,
+    "candidateAccepted": 429,
+    "immutableOldRetained": 118,
+    "pinnedPreviousRecovered": 118,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 126,
+    "changedOrFailedCandidates": 125,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false

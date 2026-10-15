@@ -2876,16 +2876,16 @@
     "fileHash": "sha256-6bccedfdf8d45d209a8f452d76058815b1d5ee5fee502371754b69b749b84876"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/DeporTVProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41/DeporTVProvider.cs3",
     "status": 1,
-    "version": 32,
+    "version": 33,
     "name": "[Live] DeporTVProvider",
     "internalName": "DeporTVProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Deportes eventos en vivo. Sports live events. Futbol. Soccer.",
-    "fileSize": 99594,
+    "fileSize": 118099,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -2893,7 +2893,7 @@
     ],
     "iconUrl": "https://yt3.googleusercontent.com/T_d2j2xZMjAxPCehiFR6hAv7jE3swcUzfgV8wCXzv1IL7rCEDv3cgQtIxjdmLVyP6ZrSgIu0nw=s900-c-k-c0x00ffffff-no-rj",
     "apiVersion": 1,
-    "fileHash": "sha256-b701603cf0d830afcc30550d7e291fa2bde9c1719f06e680706528b0dea94f50"
+    "fileHash": "sha256-032a4871294de9ec1fcf21187d7dd7fb934eaa5e233c54b5ab71a666a2accc5c"
   },
   {
     "name": "[Other] DesertStrike",

@@ -2333,7 +2333,7 @@
     "publishedName": "[Live] DeporTVProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 32,
+    "selectedVersion": 33,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -2342,7 +2342,7 @@
       "redblacker8"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/DeporTVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41/DeporTVProvider.cs3"
   },
   {
     "plugin": "DesertStrike",
