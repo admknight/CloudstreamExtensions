@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-14 06:29:33 UTC",
+  "generatedAt": "2026-10-15 06:12:50 UTC",
   "providerCount": 6,
   "summary": {
-    "ok": 4,
-    "restricted": 1,
+    "ok": 5,
+    "restricted": 0,
     "failed": 1,
-    "redirected": 2,
-    "hostChanged": 2,
+    "redirected": 3,
+    "hostChanged": 3,
     "dnsErrors": 1,
     "timeouts": 0
   },
@@ -45,12 +45,12 @@
       "module": "CinevezProvider",
       "source": "CinevezProvider/src/main/kotlin/recloudstream/CinevezProvider.kt",
       "url": "https://cinevez.buzz",
-      "state": "restricted",
-      "httpStatus": 403,
+      "state": "ok",
+      "httpStatus": 200,
       "finalUrl": "https://cinevez.buzz",
-      "error": "HTTP 403: Forbidden",
+      "error": "",
       "attempts": 1,
-      "outcome": "http_restricted",
+      "outcome": "ok",
       "redirected": false,
       "hostChanged": false,
       "configuredHost": "cinevez.buzz",
@@ -92,14 +92,14 @@
       "url": "https://worldfree4u.blog",
       "state": "ok",
       "httpStatus": 200,
-      "finalUrl": "https://worldfree4u.blog",
+      "finalUrl": "https://worldfree4u.forum/",
       "error": "",
       "attempts": 1,
       "outcome": "ok",
-      "redirected": false,
-      "hostChanged": false,
+      "redirected": true,
+      "hostChanged": true,
       "configuredHost": "worldfree4u.blog",
-      "finalHost": "worldfree4u.blog"
+      "finalHost": "worldfree4u.forum"
     }
   ]
 }
