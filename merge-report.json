@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-14 17:14:23 UTC",
+  "generatedAt": "2026-10-15 09:19:51 UTC",
   "maintainer": "Adam Knight",
   "shortcode": "admknight",
-  "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "releaseAuthorized": false,
   "previewPolicy": "compatibility",
   "previewOfCandidateStatus": "READY",
@@ -176,7 +176,7 @@
       "includedCount": 21,
       "packageFailed": 0,
       "duplicateSkipped": 0,
-      "integrityExceptions": 2,
+      "integrityExceptions": 3,
       "deferredUnverified": 0
     },
     {
@@ -204,8 +204,8 @@
       "includedCount": 36,
       "packageFailed": 0,
       "duplicateSkipped": 0,
-      "integrityExceptions": 1,
-      "deferredUnverified": 1
+      "integrityExceptions": 0,
+      "deferredUnverified": 0
     },
     {
       "id": "desi",
@@ -302,7 +302,7 @@
       "includedCount": 30,
       "packageFailed": 0,
       "duplicateSkipped": 3,
-      "integrityExceptions": 15,
+      "integrityExceptions": 14,
       "deferredUnverified": 0
     },
     {
@@ -428,7 +428,7 @@
       "includedCount": 1,
       "packageFailed": 0,
       "duplicateSkipped": 0,
-      "integrityExceptions": 0,
+      "integrityExceptions": 1,
       "deferredUnverified": 0
     },
     {
@@ -537,14 +537,14 @@
   "integrityHealth": {
     "candidateChecked": 554,
     "candidateAccepted": 431,
-    "immutableOldRetained": 115,
-    "pinnedPreviousRecovered": 115,
-    "unverifiedPreviousCarried": 1,
+    "immutableOldRetained": 116,
+    "pinnedPreviousRecovered": 116,
+    "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
     "changedOrFailedCandidates": 123,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": true
+    "releaseEligibleWithWarnings": false
   },
   "duplicates": [
     {
@@ -1422,7 +1422,7 @@
     {
       "plugin": "RareFilmm",
       "selectedSource": "CloudStreamHub Recovery Builds",
-      "selectedVersion": 15,
+      "selectedVersion": 16,
       "skippedSource": "Turkish Providers Repository | @KekikAkademi",
       "skippedVersion": 3,
       "reason": "lower version"
@@ -1518,7 +1518,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 69,
+      "selectedVersion": 70,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -2672,7 +2672,7 @@
     {
       "plugin": "RareFilmm",
       "selectedSource": "CloudStreamHub Recovery Builds",
-      "selectedVersion": 15,
+      "selectedVersion": 16,
       "skippedSource": "Turkish Providers Repository | @KekikAkademi",
       "skippedVersion": 3,
       "reason": "lower version"
@@ -2768,7 +2768,7 @@
     {
       "plugin": "StreamHubOne",
       "selectedSource": "Desi Extensions",
-      "selectedVersion": 69,
+      "selectedVersion": 70,
       "skippedSource": "MegaRepo Verified Immutable Recovery",
       "skippedVersion": 63,
       "reason": "lower version"
@@ -3049,8 +3049,8 @@
   "failedPlugins": [],
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 546,
+    "updated": 4,
+    "unchanged": 543,
     "removed": 0
   },
   "changeDetails": {
@@ -3058,18 +3058,60 @@
     "recovered": [],
     "updated": [
       {
-        "plugin": "UASerialsProProvider",
-        "name": "UASerialsProProvider",
-        "version": 28,
-        "sourceId": "cakestwix",
-        "sourceName": "CakesTwix UK/UA",
+        "plugin": "CinecalidadProvider",
+        "name": "CinecalidadProvider",
+        "version": 8,
+        "sourceId": "storm-redblacker8",
+        "sourceName": "Storm-ext Fork by redblacker8",
         "category": "Movies",
-        "fromVersion": 27,
-        "toVersion": 28,
-        "fromSourceId": "cakestwix",
-        "fromSource": "CakesTwix UK/UA",
-        "toSourceId": "cakestwix",
-        "toSource": "CakesTwix UK/UA"
+        "fromVersion": 7,
+        "toVersion": 8,
+        "fromSourceId": "storm-redblacker8",
+        "fromSource": "Storm-ext Fork by redblacker8",
+        "toSourceId": "storm-redblacker8",
+        "toSource": "Storm-ext Fork by redblacker8"
+      },
+      {
+        "plugin": "DeporTVProvider",
+        "name": "DeporTVProvider",
+        "version": 32,
+        "sourceId": "storm-redblacker8",
+        "sourceName": "Storm-ext Fork by redblacker8",
+        "category": "Live",
+        "fromVersion": 31,
+        "toVersion": 32,
+        "fromSourceId": "storm-redblacker8",
+        "fromSource": "Storm-ext Fork by redblacker8",
+        "toSourceId": "storm-redblacker8",
+        "toSource": "Storm-ext Fork by redblacker8"
+      },
+      {
+        "plugin": "Gnulahd",
+        "name": "Gnulahd",
+        "version": 12,
+        "sourceId": "cs-karma",
+        "sourceName": "cs-karma",
+        "category": "Movies",
+        "fromVersion": 11,
+        "toVersion": 12,
+        "fromSourceId": "cs-karma",
+        "fromSource": "cs-karma",
+        "toSourceId": "cs-karma",
+        "toSource": "cs-karma"
+      },
+      {
+        "plugin": "RareFilmm",
+        "name": "RareFilmm",
+        "version": 15,
+        "sourceId": "cloudstreamhub-recovery",
+        "sourceName": "CloudStreamHub Recovery Builds",
+        "category": "Movies",
+        "fromVersion": 15,
+        "toVersion": 15,
+        "fromSourceId": "cloudstreamhub-recovery",
+        "fromSource": "CloudStreamHub Recovery Builds",
+        "toSourceId": "cloudstreamhub-recovery",
+        "toSource": "CloudStreamHub Recovery Builds"
       }
     ],
     "removed": []
@@ -3081,16 +3123,7 @@
   },
   "customProviderChanges": [],
   "removedPlugins": [],
-  "deferredUnverified": [
-    {
-      "plugin": "CinecalidadProvider",
-      "sourceId": "storm-redblacker8",
-      "reason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "disposition": "carried_forward_unverified_mutable_or_missing_candidate",
-      "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CinecalidadProvider.cs3",
-      "warning": "Previous metadata preserved verbatim, NOT cryptographically verified as an immutable available binary."
-    }
-  ],
+  "deferredUnverified": [],
   "quarantineIncidents": [
     {
       "plugin": "allmovielandprovider",
@@ -3229,8 +3262,8 @@
       "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/AnimeDekhoProvider.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 116521,
-      "observedActualSHA256": "sha256-d6951b87ae180bcb0ce5ab7a5459cc8f84c55a54fc23dcd332188cd34b4da3b3",
+      "observedActualSize": 147443,
+      "observedActualSHA256": "sha256-3ec790001bac4f7a34603aab4aa8b123df1e3980bfaaaf59e11f8a1e2da7a63d",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/AnimeDekhoProvider.cs3",
@@ -3325,8 +3358,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/c30122a117f1c3571e63a484aaf80f35117ff3e7/AnimeRift.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 48567,
-      "observedActualSHA256": "sha256-67d0d55cf4984efbe1572f9c00d980a329796215874d72eaba5038aabca3d950",
+      "observedActualSize": 49247,
+      "observedActualSHA256": "sha256-2937fff2aeef821217fde511f156113f9832df7f2f2e99408aa432354623c394",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/c30122a117f1c3571e63a484aaf80f35117ff3e7/AnimeRift.cs3",
@@ -3523,22 +3556,6 @@
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Chikianimation.cs3",
       "fallbackThroughRecoveryLock": true
-    },
-    {
-      "plugin": "cinecalidadprovider",
-      "disposition": "quarantined_existing",
-      "candidateSourceId": "storm-redblacker8",
-      "previousSourceId": "storm-redblacker8",
-      "candidateUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CinecalidadProvider.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CinecalidadProvider.cs3",
-      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "observedVerification": "hash_verified",
-      "observedActualSize": 17259,
-      "observedActualSHA256": "sha256-a1cd918cd7387b89eb4657617e505ffedc61f7059303caae04cd87c50632f286",
-      "fallbackAssessment": "no independently verified immutable previous artifact; previous package URL is not immutable and commit-pinned",
-      "fallbackVerified": false,
-      "fallbackPin": null,
-      "fallbackThroughRecoveryLock": false
     },
     {
       "plugin": "cinefreak",
@@ -3826,22 +3843,6 @@
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/FullRaces.cs3",
-      "fallbackThroughRecoveryLock": true
-    },
-    {
-      "plugin": "gnulahd",
-      "disposition": "retained_immutable_previous",
-      "candidateSourceId": "cs-karma",
-      "previousSourceId": "cs-karma",
-      "candidateUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3",
-      "previousUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Gnulahd.cs3",
-      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
-      "observedVerification": "hash_verified",
-      "observedActualSize": 73844,
-      "observedActualSHA256": "sha256-2a6b4ffe97ad3564273d717865de323f1a9478e6094181ec9cab303993415153",
-      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
-      "fallbackVerified": true,
-      "fallbackPin": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Gnulahd.cs3",
       "fallbackThroughRecoveryLock": true
     },
     {
@@ -4613,6 +4614,22 @@
       "fallbackThroughRecoveryLock": true
     },
     {
+      "plugin": "rarefilmm",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "cloudstreamhub-recovery",
+      "previousSourceId": "cloudstreamhub-recovery",
+      "candidateUrl": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/RareFilmm.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/RareFilmm.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 129381,
+      "observedActualSHA256": "sha256-a521363c111fb963b3dcfbc7cab975d9083e976b88c5417d2d2d6b2d2f32a499",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/65a0c3e0d59a4037779939a0823a6066926e63e2/RareFilmm.cs3",
+      "fallbackThroughRecoveryLock": true
+    },
+    {
       "plugin": "ringz",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "phisher",
@@ -4653,8 +4670,8 @@
       "previousUrl": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 1146321,
-      "observedActualSHA256": "sha256-8ea68fc32cad85d51155ddc950b87d6b33c252e05eed21c7d39f37316d7fd329",
+      "observedActualSize": 1148017,
+      "observedActualSHA256": "sha256-68c5d750b3afb7834119595f787251119d8568d6a629a27d65447d54a01f18c4",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/Faisal0786/Desi/0af83282ff9d36e0cc7447582b7152cc948fd1cc/StreamHubOne.cs3",
@@ -4669,8 +4686,8 @@
       "previousUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/StreamPlay.cs3",
       "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
       "observedVerification": "hash_verified",
-      "observedActualSize": 2014334,
-      "observedActualSHA256": "sha256-b2a348f154133d4df704258faa53317e09ba7647f9ee82c7e36661d0177b323f",
+      "observedActualSize": 2017446,
+      "observedActualSHA256": "sha256-ca97e8c6c4652774bb2fb2fea76a3a3008c2005fe4592a34e3434ca69eb82819",
       "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
       "fallbackVerified": true,
       "fallbackPin": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/StreamPlay.cs3",
@@ -4917,6 +4934,22 @@
       "fallbackThroughRecoveryLock": true
     },
     {
+      "plugin": "uaserialsproprovider",
+      "disposition": "retained_immutable_previous",
+      "candidateSourceId": "cakestwix",
+      "previousSourceId": "cakestwix",
+      "candidateUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UASerialsProProvider.cs3",
+      "previousUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/UASerialsProProvider.cs3",
+      "candidateReason": "new or changed binary metadata has no previously trusted digest or exact reviewed approval",
+      "observedVerification": "hash_verified",
+      "observedActualSize": 42261,
+      "observedActualSHA256": "sha256-1ec74cd598a8bb30adbf09047b3eb79f18a8ccbce92f651542341cc79e7f97ee",
+      "fallbackAssessment": "byte-identical previous release reverified at immutable commit",
+      "fallbackVerified": true,
+      "fallbackPin": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/UASerialsProProvider.cs3",
+      "fallbackThroughRecoveryLock": true
+    },
+    {
       "plugin": "uhdmoviesprovider",
       "disposition": "retained_immutable_previous",
       "candidateSourceId": "phisher",
@@ -5061,26 +5094,56 @@
       "fallbackThroughRecoveryLock": true
     }
   ],
-  "originalSourceReportDigest": "1c5b0d003ceca0ac947e2c17245ddabc5efe063f41acd61eb4efbb01aabe824f",
+  "originalSourceReportDigest": "54c1239fac16b4e74510f3811e70b219999e9c5114b68028a8cc78f4c4e0ed7b",
   "inputSnapshotDigests": {
-    "candidate": "df8b4e70e4493261447999eb564803bdf848fbd27d7626acca9aa85694c064c7",
-    "previous": "19042dc17e8ab30a4c79445422590d0ddb01d3a91051bce3e25db91ee723cc54",
-    "candidateProvenance": "b209fe1aedcd68e615ed335b83c0c44162f81539974f420eeb6ed63759b7c1d5",
-    "previousProvenance": "329e493ce9fec02493d3ab22ff4415081d926413bf6efb247742d397f47b2b6a"
+    "candidate": "3e4fec1e7b26f1a23ce12be8576ee2122269c558542de11ffe653486cbd45af0",
+    "previous": "0e86d4b44612bd24d6f084bbf64982a4fcbf1937c37004462c3b783e06c2de1a",
+    "candidateProvenance": "da3189f374d3600c63974a9a28f9dbce7bbc0e7064255f69f039871ad40c77a9",
+    "previousProvenance": "3d07a900cbd2f74449d40e95e7a0bed2977a50972814034f5afb564772faffe6"
   },
   "trustedPolicyUpgrades": [
     {
       "authorizationKind": "trusted_upstream_policy_v1",
-      "plugin": "uaserialsproprovider",
-      "sourceId": "cakestwix",
-      "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-      "originalUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UASerialsProProvider.cs3",
-      "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/UASerialsProProvider.cs3",
-      "version": 28,
-      "fileSize": 42261,
-      "fileHash": "sha256-1ec74cd598a8bb30adbf09047b3eb79f18a8ccbce92f651542341cc79e7f97ee",
-      "immutableCommit": "03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c",
-      "pinnedIndexUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/03cbd5756c5b11b07ec5e397d65b99f9bfa6cb9c/plugins.json",
+      "plugin": "cinecalidadprovider",
+      "sourceId": "storm-redblacker8",
+      "sourceRepository": "https://github.com/redblacker8/storm-ext",
+      "originalUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CinecalidadProvider.cs3",
+      "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/CinecalidadProvider.cs3",
+      "version": 8,
+      "fileSize": 17259,
+      "fileHash": "sha256-a1cd918cd7387b89eb4657617e505ffedc61f7059303caae04cd87c50632f286",
+      "immutableCommit": "12466dbc1cbb0a908b642cf8676d1d02d498ded1",
+      "pinnedIndexUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/plugins.json",
+      "pinnedIndexVerified": true,
+      "separateBytesVerified": true
+    },
+    {
+      "authorizationKind": "trusted_upstream_policy_v1",
+      "plugin": "deportvprovider",
+      "sourceId": "storm-redblacker8",
+      "sourceRepository": "https://github.com/redblacker8/storm-ext",
+      "originalUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DeporTVProvider.cs3",
+      "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/DeporTVProvider.cs3",
+      "version": 32,
+      "fileSize": 99594,
+      "fileHash": "sha256-b701603cf0d830afcc30550d7e291fa2bde9c1719f06e680706528b0dea94f50",
+      "immutableCommit": "12466dbc1cbb0a908b642cf8676d1d02d498ded1",
+      "pinnedIndexUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/plugins.json",
+      "pinnedIndexVerified": true,
+      "separateBytesVerified": true
+    },
+    {
+      "authorizationKind": "trusted_upstream_policy_v1",
+      "plugin": "gnulahd",
+      "sourceId": "cs-karma",
+      "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
+      "originalUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/builds/Gnulahd.cs3",
+      "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/13d40b34446a2b81f24e830f1ce8a76374e21b78/Gnulahd.cs3",
+      "version": 12,
+      "fileSize": 74331,
+      "fileHash": "sha256-e2a9afff330c850bbcdd4bdfaaa40ef9558edee563006816115e2802e91f6798",
+      "immutableCommit": "13d40b34446a2b81f24e830f1ce8a76374e21b78",
+      "pinnedIndexUrl": "https://raw.githubusercontent.com/Kraptor123/cs-Karma/13d40b34446a2b81f24e830f1ce8a76374e21b78/plugins.json",
       "pinnedIndexVerified": true,
       "separateBytesVerified": true
     }

@@ -1920,7 +1920,7 @@
     "publishedName": "[Movies] CinecalidadProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 7,
+    "selectedVersion": 8,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -1929,7 +1929,7 @@
       "Stormunblessed"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/CinecalidadProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/CinecalidadProvider.cs3"
   },
   {
     "plugin": "Cinedoze",
@@ -2333,7 +2333,7 @@
     "publishedName": "[Live] DeporTVProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 31,
+    "selectedVersion": 32,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -2342,7 +2342,7 @@
       "redblacker8"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/DeporTVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/12466dbc1cbb0a908b642cf8676d1d02d498ded1/DeporTVProvider.cs3"
   },
   {
     "plugin": "DesertStrike",
@@ -3482,7 +3482,7 @@
     "publishedName": "[Movies] Gnulahd",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 11,
+    "selectedVersion": 12,
     "sourceId": "cs-karma",
     "sourceName": "cs-karma",
     "sourceRepository": "https://github.com/Kraptor123/cs-Karma",
@@ -3491,7 +3491,7 @@
       "ByAyzen"
     ],
     "originalRepositoryUrl": "https://github.com/Kraptor123/Cs-Karma",
-    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/1037ea80656effaf59a4d8df7e926dfe89cc5240/Gnulahd.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/13d40b34446a2b81f24e830f1ce8a76374e21b78/Gnulahd.cs3"
   },
   {
     "plugin": "GoldenAudiobook",
@@ -6835,7 +6835,7 @@
       "kraptor"
     ],
     "originalRepositoryUrl": "https://github.com/Emre-Kahveci/CloudStreamHub",
-    "packageUrl": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/builds/RareFilmm.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Emre-Kahveci/CloudStreamHub/65a0c3e0d59a4037779939a0823a6066926e63e2/RareFilmm.cs3"
   },
   {
     "plugin": "Rate",

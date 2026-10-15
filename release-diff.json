@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-14 17:14:23 UTC",
-  "candidateStatus": "READY - GUARDED, 1 UPSTREAM UPDATES DEFERRED FOR REVIEW",
+  "generatedAt": "2026-10-15 09:19:51 UTC",
+  "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "catalog": {
     "plugins": 547,
     "healthySources": 36,
@@ -10,8 +10,8 @@
   },
   "changes": {
     "added": 0,
-    "updated": 1,
-    "unchanged": 546,
+    "updated": 4,
+    "unchanged": 543,
     "removed": 0
   },
   "changeDetails": {
@@ -19,18 +19,60 @@
     "recovered": [],
     "updated": [
       {
-        "plugin": "UASerialsProProvider",
-        "name": "UASerialsProProvider",
-        "version": 28,
-        "sourceId": "cakestwix",
-        "sourceName": "CakesTwix UK/UA",
+        "plugin": "CinecalidadProvider",
+        "name": "CinecalidadProvider",
+        "version": 8,
+        "sourceId": "storm-redblacker8",
+        "sourceName": "Storm-ext Fork by redblacker8",
         "category": "Movies",
-        "fromVersion": 27,
-        "toVersion": 28,
-        "fromSourceId": "cakestwix",
-        "fromSource": "CakesTwix UK/UA",
-        "toSourceId": "cakestwix",
-        "toSource": "CakesTwix UK/UA"
+        "fromVersion": 7,
+        "toVersion": 8,
+        "fromSourceId": "storm-redblacker8",
+        "fromSource": "Storm-ext Fork by redblacker8",
+        "toSourceId": "storm-redblacker8",
+        "toSource": "Storm-ext Fork by redblacker8"
+      },
+      {
+        "plugin": "DeporTVProvider",
+        "name": "DeporTVProvider",
+        "version": 32,
+        "sourceId": "storm-redblacker8",
+        "sourceName": "Storm-ext Fork by redblacker8",
+        "category": "Live",
+        "fromVersion": 31,
+        "toVersion": 32,
+        "fromSourceId": "storm-redblacker8",
+        "fromSource": "Storm-ext Fork by redblacker8",
+        "toSourceId": "storm-redblacker8",
+        "toSource": "Storm-ext Fork by redblacker8"
+      },
+      {
+        "plugin": "Gnulahd",
+        "name": "Gnulahd",
+        "version": 12,
+        "sourceId": "cs-karma",
+        "sourceName": "cs-karma",
+        "category": "Movies",
+        "fromVersion": 11,
+        "toVersion": 12,
+        "fromSourceId": "cs-karma",
+        "fromSource": "cs-karma",
+        "toSourceId": "cs-karma",
+        "toSource": "cs-karma"
+      },
+      {
+        "plugin": "RareFilmm",
+        "name": "RareFilmm",
+        "version": 15,
+        "sourceId": "cloudstreamhub-recovery",
+        "sourceName": "CloudStreamHub Recovery Builds",
+        "category": "Movies",
+        "fromVersion": 15,
+        "toVersion": 15,
+        "fromSourceId": "cloudstreamhub-recovery",
+        "fromSource": "CloudStreamHub Recovery Builds",
+        "toSourceId": "cloudstreamhub-recovery",
+        "toSource": "CloudStreamHub Recovery Builds"
       }
     ],
     "removed": []
@@ -44,14 +86,14 @@
   "integrityHealth": {
     "candidateChecked": 554,
     "candidateAccepted": 431,
-    "immutableOldRetained": 115,
-    "pinnedPreviousRecovered": 115,
-    "unverifiedPreviousCarried": 1,
+    "immutableOldRetained": 116,
+    "pinnedPreviousRecovered": 116,
+    "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
     "changedOrFailedCandidates": 123,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
-    "releaseEligibleWithWarnings": true
+    "releaseEligibleWithWarnings": false
   },
   "releaseAuthorized": false,
   "releaseEligible": true

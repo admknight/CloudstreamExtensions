@@ -78,18 +78,18 @@ This shortcode and manifest load the **entire published catalog**, not a persona
 
 ## 📊 Current dashboard
 
-Last successful refresh: **2026-10-14 17:14:23 UTC**
+Last successful refresh: **2026-10-15 09:19:51 UTC**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 0 | 36 | 0 | 0 | 1 | 0 |
+| 547 | 0 | 36 | 0 | 0 | 4 | 0 |
 
 ## Integrity status — separate from package reachability
 
 - **554 candidate packages** inspected for declared length and SHA-256 when present.
 - **431 candidates** accepted under the published trust rules.
-- **1 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
-- **115 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
+- **0 existing plugin entries** retained with old metadata because newer upstream candidates were rejected.
+- **116 older package URLs** pinned to freshly reverified immutable, byte-identical releases.
 - **0 unchanged legacy entries** have size-only checks without an authenticated SHA-256.
 
 Unverified deferred plugin URLs are still mutable upstream links. Keeping an old manifest entry does **not** freeze the bytes it serves, and does not approve a changed binary. Unresolved incidents remain open for upstream correction and independent release verification.
@@ -184,7 +184,7 @@ CloudStream display prefix: `[Movies]`
 | 13 | **CatalogoNetflix** | 5 | mx | Movie, TvSeries | Storm-ext Fork by redblacker8 | Unchanged |
 | 14 | **CB01** | 26 | it | Movie, TvSeries, Cartoon | DieGon Repository | Unchanged |
 | 15 | **CikavaIdeyaProvider** | 5 | uk | Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
-| 16 | **CinecalidadProvider** | 7 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Deferred: previous metadata, unverified upstream bytes |
+| 16 | **CinecalidadProvider** | 8 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Updated (verified by candidate policy) |
 | 17 | **CineHdPlusProvider** | 4 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
 | 18 | **Cinemacity** | 27 | en | Movie, TvSeries | Phisher Repo | Unchanged |
 | 19 | **CineStream** | 487 | en | TvSeries, Movie, AsianDrama, Anime, Torrent | CSX | Unchanged |
@@ -218,7 +218,7 @@ CloudStream display prefix: `[Movies]`
 | 47 | **FullHDFilmizlesene** | 27 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 48 | **FullyMaza** | 7 | en | Movie, TvSeries, AnimeMovie, Cartoon | Redowan CloudStream | Unchanged |
 | 49 | **GDIndex** | 4 | en | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
-| 50 | **Gnulahd** | 11 | mx | Movie, Anime, TvSeries | cs-karma | Unchanged |
+| 50 | **Gnulahd** | 12 | mx | Movie, Anime, TvSeries | cs-karma | Updated (verified by candidate policy) |
 | 51 | **Goojara** | 5 | en | Movie, TvSeries | Phisher Repo | Unchanged |
 | 52 | **GuardaPlay** | 1 | it | Movie, Cartoon, Documentary | DieGon Repository | Unchanged |
 | 53 | **GuardaSerie** | 7 | it | TvSeries, Cartoon | DieGon Repository | Unchanged |
@@ -262,7 +262,7 @@ CloudStream display prefix: `[Movies]`
 | 91 | **PhimLongTiengProvider** | 12 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 92 | **PhimMoiProvider** | 9 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 93 | **PhimTuoiThoProvider** | 5 |  | Anime, TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 94 | **RareFilmm** | 15 | en | Movie | CloudStreamHub Recovery Builds | Unchanged |
+| 94 | **RareFilmm** | 15 | en | Movie | CloudStreamHub Recovery Builds | Updated (verified by candidate policy) |
 | 95 | **Rowdy** | 21 | en | Movie, TvSeries, Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 96 | **SerialnoProvider** | 13 | uk | Cartoon, TvSeries | CakesTwix UK/UA | Unchanged |
 | 97 | **SeriesflixProvider** | 4 | es | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
@@ -289,7 +289,7 @@ CloudStream display prefix: `[Movies]`
 | 118 | **TvPhimProvider** | 11 |  | Anime, TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 119 | **UAFlixProvider** | 21 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 120 | **UakinoProvider** | 32 | uk | Anime, TvSeries, Movie, AsianDrama | CakesTwix UK/UA | Unchanged |
-| 121 | **UASerialsProProvider** | 28 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Updated (verified by candidate policy) |
+| 121 | **UASerialsProProvider** | 28 | uk | Anime, Cartoon, Movie, TvSeries | CakesTwix UK/UA | Unchanged |
 | 122 | **UFDubProvider** | 12 | uk | Anime, AnimeMovie, AsianDrama, Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
 | 123 | **UgurFilm** | 13 | tr | Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 124 | **UHDmoviesProvider** | 41 | en | Movie, TvSeries | Phisher Repo | Unchanged |
@@ -585,7 +585,7 @@ CloudStream display prefix: `[Live]`
 | 8 | **CanliTV** | 10 | tr | Live | MegaRepo Verified Immutable Recovery | Unchanged |
 | 9 | **CricifyProvider** | 71 | ta | Live | CNC Repo (All Language) | Unchanged |
 | 10 | **DamiTVProvider** | 25 | en | Live | raghav repo | Unchanged |
-| 11 | **DeporTVProvider** | 31 | mx | Live | Storm-ext Fork by redblacker8 | Unchanged |
+| 11 | **DeporTVProvider** | 32 | mx | Live | Storm-ext Fork by redblacker8 | Updated (verified by candidate policy) |
 | 12 | **Footballia** | 9 | en | Live | cs-karma | Unchanged |
 | 13 | **FullMatchShows** | 2 | en | Movie, Others, live | Re-3arabi | Unchanged |
 | 14 | **FullRaces** | 16 | en | Live, Others | cs-karma | Unchanged |
@@ -898,7 +898,7 @@ When the same plugin is published by more than one source, the highest version i
 | PornoAnne | MegaRepo Verified Immutable Recovery v3 | Turkish Providers Repository \| @KekikAkademi v3 (lower source priority) |
 | PrinceOfPersia | MegaRepo Verified Immutable Recovery v10 | Ayu CloudStream Games v10 (lower source priority) |
 | Pusatmovie | MegaRepo Verified Immutable Recovery v1 | CloudX-V2 v1 (lower source priority) |
-| RareFilmm | CloudStreamHub Recovery Builds v15 | Turkish Providers Repository \| @KekikAkademi v3 (lower version) |
+| RareFilmm | CloudStreamHub Recovery Builds v16 | Turkish Providers Repository \| @KekikAkademi v3 (lower version) |
 | ReAnime | raghav repo v4 | Phisher Repo v3 (lower version) |
 | RecTV | MegaRepo Verified Immutable Recovery v97 | Turkish Providers Repository \| @KekikAkademi v97 (lower source priority) |
 | Rowdy | MegaRepo Verified Immutable Recovery v21 | Rowdy Recovery Builds v21 (lower source priority) |
@@ -910,7 +910,7 @@ When the same plugin is published by more than one source, the highest version i
 | SinemaCX | MegaRepo Verified Immutable Recovery v18 | Turkish Providers Repository \| @KekikAkademi v18 (lower source priority) |
 | SkymoviesHD | MegaRepo Verified Immutable Recovery v1 | Cinephile v1 (lower source priority) |
 | Sokuja | Nonton Indo v4 | cs-karma v3 (lower version) |
-| StreamHubOne | Desi Extensions v69 | MegaRepo Verified Immutable Recovery v63 (lower version) |
+| StreamHubOne | Desi Extensions v70 | MegaRepo Verified Immutable Recovery v63 (lower version) |
 | StreamingCommunity | DieGon Repository v53 | doGior's Had Enough v34 (lower version) |
 | StremioProvider | MegaRepo Verified Immutable Recovery v7 | Tearrs Vietnamese Extension v7 (lower source priority) |
 | SuperFilmGeldi | MegaRepo Verified Immutable Recovery v22 | Turkish Providers Repository \| @KekikAkademi v22 (lower source priority) |
