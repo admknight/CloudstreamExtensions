@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15 09:19:51 UTC",
+  "generatedAt": "2026-10-15 11:33:45 UTC",
   "candidateStatus": "READY - GUARDED, NO DEFERRED UPDATES",
   "catalog": {
     "plugins": 547,
@@ -10,71 +10,14 @@
   },
   "changes": {
     "added": 0,
-    "updated": 4,
-    "unchanged": 543,
+    "updated": 0,
+    "unchanged": 547,
     "removed": 0
   },
   "changeDetails": {
     "added": [],
     "recovered": [],
-    "updated": [
-      {
-        "plugin": "CinecalidadProvider",
-        "name": "CinecalidadProvider",
-        "version": 8,
-        "sourceId": "storm-redblacker8",
-        "sourceName": "Storm-ext Fork by redblacker8",
-        "category": "Movies",
-        "fromVersion": 7,
-        "toVersion": 8,
-        "fromSourceId": "storm-redblacker8",
-        "fromSource": "Storm-ext Fork by redblacker8",
-        "toSourceId": "storm-redblacker8",
-        "toSource": "Storm-ext Fork by redblacker8"
-      },
-      {
-        "plugin": "DeporTVProvider",
-        "name": "DeporTVProvider",
-        "version": 32,
-        "sourceId": "storm-redblacker8",
-        "sourceName": "Storm-ext Fork by redblacker8",
-        "category": "Live",
-        "fromVersion": 31,
-        "toVersion": 32,
-        "fromSourceId": "storm-redblacker8",
-        "fromSource": "Storm-ext Fork by redblacker8",
-        "toSourceId": "storm-redblacker8",
-        "toSource": "Storm-ext Fork by redblacker8"
-      },
-      {
-        "plugin": "Gnulahd",
-        "name": "Gnulahd",
-        "version": 12,
-        "sourceId": "cs-karma",
-        "sourceName": "cs-karma",
-        "category": "Movies",
-        "fromVersion": 11,
-        "toVersion": 12,
-        "fromSourceId": "cs-karma",
-        "fromSource": "cs-karma",
-        "toSourceId": "cs-karma",
-        "toSource": "cs-karma"
-      },
-      {
-        "plugin": "RareFilmm",
-        "name": "RareFilmm",
-        "version": 15,
-        "sourceId": "cloudstreamhub-recovery",
-        "sourceName": "CloudStreamHub Recovery Builds",
-        "category": "Movies",
-        "fromVersion": 15,
-        "toVersion": 15,
-        "fromSourceId": "cloudstreamhub-recovery",
-        "fromSource": "CloudStreamHub Recovery Builds",
-        "toSourceId": "cloudstreamhub-recovery",
-        "toSource": "CloudStreamHub Recovery Builds"
-      }
-    ],
+    "updated": [],
     "removed": []
   },
   "sourceChanges": {
@@ -85,12 +28,12 @@
   "customProviderChanges": [],
   "integrityHealth": {
     "candidateChecked": 554,
-    "candidateAccepted": 431,
-    "immutableOldRetained": 116,
-    "pinnedPreviousRecovered": 116,
+    "candidateAccepted": 428,
+    "immutableOldRetained": 119,
+    "pinnedPreviousRecovered": 119,
     "unverifiedPreviousCarried": 0,
     "quarantinedNotInProposal": 0,
-    "changedOrFailedCandidates": 123,
+    "changedOrFailedCandidates": 126,
     "sizeOnlyLegacyCandidateAccepted": 0,
     "previewPolicy": "compatibility",
     "releaseEligibleWithWarnings": false
