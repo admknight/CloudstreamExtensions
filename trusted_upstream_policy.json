@@ -36,6 +36,11 @@
       "sourceId": "netmirror",
       "repository": "https://github.com/Sushan64/NetMirror-Extension",
       "mode": "existing_upgrade_only"
+    },
+    {
+      "sourceId": "storm-redblacker8",
+      "repository": "https://github.com/redblacker8/storm-ext",
+      "mode": "existing_upgrade_only"
     }
   ]
 }
