@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16 06:09:17 UTC",
+  "generatedAt": "2026-10-17 05:54:19 UTC",
   "providerCount": 6,
   "summary": {
     "ok": 5,
@@ -19,7 +19,7 @@
       "httpStatus": 200,
       "finalUrl": "https://cinedoze.tv",
       "error": "",
-      "attempts": 2,
+      "attempts": 1,
       "outcome": "ok",
       "redirected": false,
       "hostChanged": false,
