@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20 06:20:19 UTC",
+  "generatedAt": "2026-10-21 06:20:03 UTC",
   "providerCount": 6,
   "summary": {
     "ok": 5,
@@ -77,14 +77,14 @@
       "url": "https://go3.india4movies.net",
       "state": "ok",
       "httpStatus": 200,
-      "finalUrl": "https://go6.india4movies.net/",
+      "finalUrl": "https://go7.india4movies.net/",
       "error": "",
       "attempts": 1,
       "outcome": "ok",
       "redirected": true,
       "hostChanged": true,
       "configuredHost": "go3.india4movies.net",
-      "finalHost": "go6.india4movies.net"
+      "finalHost": "go7.india4movies.net"
     },
     {
       "module": "World4uFree",
