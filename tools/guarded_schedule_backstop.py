@@ -14,8 +14,8 @@ REPOSITORY = "admknight/CloudstreamExtensions"
 BRANCH = "master"
 # Never dispatch other workflows or change these IDs from untrusted event data.
 WORKFLOWS = (
-    ("build.yml", "Guarded aggregator", timedelta(hours=7), timedelta(hours=12)),
-    ("audit-package-integrity.yml", "Read-only package audit", timedelta(minutes=150), timedelta(hours=12)),
+    ("build.yml", "Guarded aggregator", timedelta(hours=30), timedelta(hours=48)),
+    ("audit-package-integrity.yml", "Read-only package audit", timedelta(hours=30), timedelta(hours=48)),
     ("immutable-package-recovery.yml", "Read-only recovery inventory", timedelta(hours=36), timedelta(hours=48)),
 )
 API = "https://api.github.com"
@@ -91,7 +91,7 @@ def main(argv: list[str] | None = None) -> int:
     token = os.environ.get("GH_TOKEN", "")
     if repo != REPOSITORY:
         raise SystemExit("Refusing execution outside explicitly allowlisted production repository")
-    if args.execute and event not in ("schedule", "workflow_run"):
+    if args.execute and event != "schedule":
         raise SystemExit("Dispatch is only allowed on trusted schedule/workflow_run events")
     if not token:
         raise SystemExit("Missing GitHub Actions token")

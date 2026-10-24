@@ -30,6 +30,17 @@ class BackstopTests(TestCase):
         self.assertTrue(backstop.decision([run(hours=13, conclusion="failure")], NOW,
                                           timedelta(hours=7), timedelta(hours=12))[0])
 
+    def test_daily_schedules_do_not_dispatch_on_normal_24_hour_gap(self):
+        for filename, label, stale_after, cooldown in backstop.WORKFLOWS:
+            self.assertGreaterEqual(stale_after, timedelta(hours=30), filename)
+            self.assertGreaterEqual(cooldown, timedelta(hours=48), filename)
+            self.assertFalse(backstop.decision([run(hours=24)], NOW, stale_after, cooldown)[0], filename)
+
+    def test_daily_schedules_recover_only_when_persistently_stale(self):
+        for filename, label, stale_after, cooldown in backstop.WORKFLOWS:
+            self.assertTrue(backstop.decision([run(hours=stale_after.total_seconds() / 3600 + 1)],
+                                              NOW, stale_after, cooldown)[0], filename)
+
     def test_pending_run_prevents_duplicate(self):
         self.assertFalse(backstop.decision([run(hours=9, status="in_progress")], NOW,
                                            timedelta(hours=7), timedelta(hours=12))[0])
@@ -56,6 +67,11 @@ class BackstopTests(TestCase):
 
     def test_cannot_dispatch_from_untrusted_pr(self):
         with patch.dict(os.environ, {"GITHUB_REPOSITORY": backstop.REPOSITORY, "GH_TOKEN": "token", "GITHUB_EVENT_NAME": "pull_request"}):
+            with self.assertRaises(SystemExit):
+                backstop.main(["--execute"])
+
+    def test_workflow_run_cannot_dispatch_under_daily_only_policy(self):
+        with patch.dict(os.environ, {"GITHUB_REPOSITORY": backstop.REPOSITORY, "GH_TOKEN": "token", "GITHUB_EVENT_NAME": "workflow_run"}):
             with self.assertRaises(SystemExit):
                 backstop.main(["--execute"])
 

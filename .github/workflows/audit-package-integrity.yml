@@ -2,7 +2,7 @@ name: Audit Published Plugin Integrity
 
 on:
   schedule:
-    - cron: '43 * * * *'
+    - cron: '43 3 * * *'
   workflow_dispatch:
   push:
     branches: [master]
