@@ -130,11 +130,17 @@ class CinevezProvider : MainAPI() {
             .filter { isAuthorizedEmbed(it) }
             .distinct()
 
-        links.forEach { link ->
-            loadExtractor(link, mainUrl, subtitleCallback, callback)
+        var emittedLinks = 0
+        val trackedCallback: (ExtractorLink) -> Unit = { extracted ->
+            emittedLinks += 1
+            callback(extracted)
         }
 
-        return links.isNotEmpty()
+        links.forEach { link ->
+            loadExtractor(link, data, subtitleCallback, trackedCallback)
+        }
+
+        return emittedLinks > 0
     }
 
     private fun pagedUrl(base: String, page: Int): String {
