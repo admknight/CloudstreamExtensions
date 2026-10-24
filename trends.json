@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-23 06:17:43 UTC",
+  "generatedAt": "2026-10-24 06:13:32 UTC",
   "windows": {
     "7d": {
       "days": 7,
       "snapshotCount": 7,
       "checks": 42,
-      "ok": 35,
+      "ok": 34,
       "restricted": 0,
-      "failed": 7,
-      "redirected": 21,
-      "hostChanged": 21,
-      "dnsErrors": 7,
+      "failed": 8,
+      "redirected": 20,
+      "hostChanged": 20,
+      "dnsErrors": 8,
       "timeouts": 0,
-      "healthyPct": 83.3,
-      "reachablePct": 83.3,
+      "healthyPct": 81.0,
+      "reachablePct": 81.0,
       "providers": [
         {
           "module": "Cinedoze",
@@ -70,15 +70,15 @@
         {
           "module": "India4Movies",
           "checks": 7,
-          "ok": 7,
+          "ok": 6,
           "restricted": 0,
-          "failed": 0,
-          "redirected": 7,
-          "hostChanged": 7,
-          "dnsErrors": 0,
+          "failed": 1,
+          "redirected": 6,
+          "hostChanged": 6,
+          "dnsErrors": 1,
           "timeouts": 0,
-          "healthyPct": 100.0,
-          "reachablePct": 100.0
+          "healthyPct": 85.7,
+          "reachablePct": 85.7
         },
         {
           "module": "World4uFree",
@@ -97,22 +97,22 @@
     },
     "30d": {
       "days": 30,
-      "snapshotCount": 23,
-      "checks": 139,
-      "ok": 114,
+      "snapshotCount": 24,
+      "checks": 145,
+      "ok": 118,
       "restricted": 2,
-      "failed": 23,
-      "redirected": 49,
-      "hostChanged": 49,
-      "dnsErrors": 16,
+      "failed": 25,
+      "redirected": 51,
+      "hostChanged": 51,
+      "dnsErrors": 18,
       "timeouts": 0,
-      "healthyPct": 82.0,
-      "reachablePct": 83.5,
+      "healthyPct": 81.4,
+      "reachablePct": 82.8,
       "providers": [
         {
           "module": "Cinedoze",
-          "checks": 23,
-          "ok": 23,
+          "checks": 24,
+          "ok": 24,
           "restricted": 0,
           "failed": 0,
           "redirected": 0,
@@ -124,12 +124,12 @@
         },
         {
           "module": "Cinemaluxe",
-          "checks": 23,
-          "ok": 23,
+          "checks": 24,
+          "ok": 24,
           "restricted": 0,
           "failed": 0,
-          "redirected": 17,
-          "hostChanged": 17,
+          "redirected": 18,
+          "hostChanged": 18,
           "dnsErrors": 0,
           "timeouts": 0,
           "healthyPct": 100.0,
@@ -137,15 +137,15 @@
         },
         {
           "module": "CinevezProvider",
-          "checks": 23,
-          "ok": 21,
+          "checks": 24,
+          "ok": 22,
           "restricted": 2,
           "failed": 0,
           "redirected": 0,
           "hostChanged": 0,
           "dnsErrors": 0,
           "timeouts": 0,
-          "healthyPct": 91.3,
+          "healthyPct": 91.7,
           "reachablePct": 100.0
         },
         {
@@ -163,38 +163,38 @@
         },
         {
           "module": "Full4Movies",
-          "checks": 23,
+          "checks": 24,
           "ok": 0,
           "restricted": 0,
-          "failed": 23,
+          "failed": 24,
           "redirected": 0,
           "hostChanged": 0,
-          "dnsErrors": 16,
+          "dnsErrors": 17,
           "timeouts": 0,
           "healthyPct": 0.0,
           "reachablePct": 0.0
         },
         {
           "module": "India4Movies",
-          "checks": 23,
+          "checks": 24,
           "ok": 23,
           "restricted": 0,
-          "failed": 0,
+          "failed": 1,
           "redirected": 23,
           "hostChanged": 23,
-          "dnsErrors": 0,
+          "dnsErrors": 1,
           "timeouts": 0,
-          "healthyPct": 100.0,
-          "reachablePct": 100.0
+          "healthyPct": 95.8,
+          "reachablePct": 95.8
         },
         {
           "module": "World4uFree",
-          "checks": 23,
-          "ok": 23,
+          "checks": 24,
+          "ok": 24,
           "restricted": 0,
           "failed": 0,
-          "redirected": 9,
-          "hostChanged": 9,
+          "redirected": 10,
+          "hostChanged": 10,
           "dnsErrors": 0,
           "timeouts": 0,
           "healthyPct": 100.0,
@@ -204,14 +204,6 @@
     }
   },
   "recent": [
-    {
-      "generatedAt": "2026-10-14 06:29:33 UTC",
-      "ok": 4,
-      "restricted": 1,
-      "failed": 1,
-      "hostChanged": 2,
-      "redirected": 2
-    },
     {
       "generatedAt": "2026-10-15 06:12:50 UTC",
       "ok": 5,
@@ -283,6 +275,14 @@
       "failed": 1,
       "hostChanged": 3,
       "redirected": 3
+    },
+    {
+      "generatedAt": "2026-10-24 06:13:32 UTC",
+      "ok": 4,
+      "restricted": 0,
+      "failed": 2,
+      "hostChanged": 2,
+      "redirected": 2
     }
   ]
 }

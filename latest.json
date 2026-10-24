@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-23 06:17:43 UTC",
+  "generatedAt": "2026-10-24 06:13:32 UTC",
   "providerCount": 6,
   "summary": {
-    "ok": 5,
+    "ok": 4,
     "restricted": 0,
-    "failed": 1,
-    "redirected": 3,
-    "hostChanged": 3,
-    "dnsErrors": 1,
+    "failed": 2,
+    "redirected": 2,
+    "hostChanged": 2,
+    "dnsErrors": 2,
     "timeouts": 0
   },
   "providers": [
@@ -75,16 +75,16 @@
       "module": "India4Movies",
       "source": "India4Movies/src/main/kotlin/recloudstream/India4MoviesProvider.kt",
       "url": "https://go3.india4movies.net",
-      "state": "ok",
-      "httpStatus": 200,
-      "finalUrl": "https://go8.india4movies.net/",
-      "error": "",
-      "attempts": 1,
-      "outcome": "ok",
-      "redirected": true,
-      "hostChanged": true,
+      "state": "fail",
+      "httpStatus": null,
+      "finalUrl": "https://go3.india4movies.net",
+      "error": "[Errno -2] Name or service not known",
+      "attempts": 3,
+      "outcome": "dns_error",
+      "redirected": false,
+      "hostChanged": false,
       "configuredHost": "go3.india4movies.net",
-      "finalHost": "go8.india4movies.net"
+      "finalHost": "go3.india4movies.net"
     },
     {
       "module": "World4uFree",
