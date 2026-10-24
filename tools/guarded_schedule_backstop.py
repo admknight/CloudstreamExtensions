@@ -92,7 +92,7 @@ def main(argv: list[str] | None = None) -> int:
     if repo != REPOSITORY:
         raise SystemExit("Refusing execution outside explicitly allowlisted production repository")
     if args.execute and event != "schedule":
-        raise SystemExit("Dispatch is only allowed on trusted schedule/workflow_run events")
+        raise SystemExit("Dispatch is only allowed on trusted scheduled events")
     if not token:
         raise SystemExit("Missing GitHub Actions token")
     now = datetime.now(timezone.utc)
