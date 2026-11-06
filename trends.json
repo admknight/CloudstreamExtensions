@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05 08:14:09 UTC",
+  "generatedAt": "2026-11-06 08:17:42 UTC",
   "windows": {
     "7d": {
       "days": 7,
@@ -102,9 +102,9 @@
       "ok": 154,
       "restricted": 2,
       "failed": 36,
-      "redirected": 71,
-      "hostChanged": 71,
-      "dnsErrors": 33,
+      "redirected": 72,
+      "hostChanged": 72,
+      "dnsErrors": 34,
       "timeouts": 0,
       "healthyPct": 80.2,
       "reachablePct": 81.2,
@@ -128,8 +128,8 @@
           "ok": 32,
           "restricted": 0,
           "failed": 0,
-          "redirected": 30,
-          "hostChanged": 30,
+          "redirected": 31,
+          "hostChanged": 31,
           "dnsErrors": 0,
           "timeouts": 0,
           "healthyPct": 100.0,
@@ -156,7 +156,7 @@
           "failed": 32,
           "redirected": 0,
           "hostChanged": 0,
-          "dnsErrors": 29,
+          "dnsErrors": 30,
           "timeouts": 0,
           "healthyPct": 0.0,
           "reachablePct": 0.0
@@ -167,8 +167,8 @@
           "ok": 28,
           "restricted": 0,
           "failed": 4,
-          "redirected": 19,
-          "hostChanged": 19,
+          "redirected": 18,
+          "hostChanged": 18,
           "dnsErrors": 4,
           "timeouts": 0,
           "healthyPct": 87.5,
@@ -180,8 +180,8 @@
           "ok": 32,
           "restricted": 0,
           "failed": 0,
-          "redirected": 22,
-          "hostChanged": 22,
+          "redirected": 23,
+          "hostChanged": 23,
           "dnsErrors": 0,
           "timeouts": 0,
           "healthyPct": 100.0,
@@ -191,14 +191,6 @@
     }
   },
   "recent": [
-    {
-      "generatedAt": "2026-10-27 06:36:58 UTC",
-      "ok": 4,
-      "restricted": 0,
-      "failed": 2,
-      "hostChanged": 2,
-      "redirected": 2
-    },
     {
       "generatedAt": "2026-10-28 07:07:36 UTC",
       "ok": 5,
@@ -265,6 +257,14 @@
     },
     {
       "generatedAt": "2026-11-05 08:14:09 UTC",
+      "ok": 5,
+      "restricted": 0,
+      "failed": 1,
+      "hostChanged": 2,
+      "redirected": 2
+    },
+    {
+      "generatedAt": "2026-11-06 08:17:42 UTC",
       "ok": 5,
       "restricted": 0,
       "failed": 1,
