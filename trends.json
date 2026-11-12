@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11 08:02:14 UTC",
+  "generatedAt": "2026-11-12 08:40:28 UTC",
   "windows": {
     "7d": {
       "days": 7,
@@ -99,14 +99,14 @@
       "days": 30,
       "snapshotCount": 30,
       "checks": 180,
-      "ok": 144,
-      "restricted": 2,
+      "ok": 145,
+      "restricted": 1,
       "failed": 34,
       "redirected": 69,
       "hostChanged": 69,
       "dnsErrors": 34,
       "timeouts": 0,
-      "healthyPct": 80.0,
+      "healthyPct": 80.6,
       "reachablePct": 81.1,
       "providers": [
         {
@@ -138,14 +138,14 @@
         {
           "module": "CinevezProvider",
           "checks": 30,
-          "ok": 28,
-          "restricted": 2,
+          "ok": 29,
+          "restricted": 1,
           "failed": 0,
           "redirected": 0,
           "hostChanged": 0,
           "dnsErrors": 0,
           "timeouts": 0,
-          "healthyPct": 93.3,
+          "healthyPct": 96.7,
           "reachablePct": 100.0
         },
         {
@@ -167,8 +167,8 @@
           "ok": 26,
           "restricted": 0,
           "failed": 4,
-          "redirected": 11,
-          "hostChanged": 11,
+          "redirected": 10,
+          "hostChanged": 10,
           "dnsErrors": 4,
           "timeouts": 0,
           "healthyPct": 86.7,
@@ -180,8 +180,8 @@
           "ok": 30,
           "restricted": 0,
           "failed": 0,
-          "redirected": 28,
-          "hostChanged": 28,
+          "redirected": 29,
+          "hostChanged": 29,
           "dnsErrors": 0,
           "timeouts": 0,
           "healthyPct": 100.0,
@@ -191,14 +191,6 @@
     }
   },
   "recent": [
-    {
-      "generatedAt": "2026-11-02 07:57:38 UTC",
-      "ok": 5,
-      "restricted": 0,
-      "failed": 1,
-      "hostChanged": 2,
-      "redirected": 2
-    },
     {
       "generatedAt": "2026-11-03 08:19:10 UTC",
       "ok": 5,
@@ -265,6 +257,14 @@
     },
     {
       "generatedAt": "2026-11-11 08:02:14 UTC",
+      "ok": 5,
+      "restricted": 0,
+      "failed": 1,
+      "hostChanged": 2,
+      "redirected": 2
+    },
+    {
+      "generatedAt": "2026-11-12 08:40:28 UTC",
       "ok": 5,
       "restricted": 0,
       "failed": 1,
