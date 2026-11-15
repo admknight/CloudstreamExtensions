@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14 07:51:18 UTC",
+  "generatedAt": "2026-11-15 08:11:29 UTC",
   "windows": {
     "7d": {
       "days": 7,
@@ -102,8 +102,8 @@
       "ok": 146,
       "restricted": 0,
       "failed": 34,
-      "redirected": 68,
-      "hostChanged": 68,
+      "redirected": 67,
+      "hostChanged": 67,
       "dnsErrors": 34,
       "timeouts": 0,
       "healthyPct": 81.1,
@@ -167,8 +167,8 @@
           "ok": 26,
           "restricted": 0,
           "failed": 4,
-          "redirected": 8,
-          "hostChanged": 8,
+          "redirected": 7,
+          "hostChanged": 7,
           "dnsErrors": 4,
           "timeouts": 0,
           "healthyPct": 86.7,
@@ -191,14 +191,6 @@
     }
   },
   "recent": [
-    {
-      "generatedAt": "2026-11-05 08:14:09 UTC",
-      "ok": 5,
-      "restricted": 0,
-      "failed": 1,
-      "hostChanged": 2,
-      "redirected": 2
-    },
     {
       "generatedAt": "2026-11-06 08:17:42 UTC",
       "ok": 5,
@@ -265,6 +257,14 @@
     },
     {
       "generatedAt": "2026-11-14 07:51:18 UTC",
+      "ok": 5,
+      "restricted": 0,
+      "failed": 1,
+      "hostChanged": 2,
+      "redirected": 2
+    },
+    {
+      "generatedAt": "2026-11-15 08:11:29 UTC",
       "ok": 5,
       "restricted": 0,
       "failed": 1,
