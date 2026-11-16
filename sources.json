@@ -416,6 +416,12 @@
       "name": "Tearrs Vietnamese Extension",
       "repo": "https://gitlab.com/tearrs/cloudstream-vietnamese",
       "index": "https://gitlab.com/tearrs/cloudstream-vietnamese/-/raw/main/plugins.json"
+    },
+    {
+      "id": "north-nordicbytes",
+      "name": "North (NordicBytes • Account API Key Required)",
+      "repo": "https://github.com/sealinwater/north",
+      "index": "https://raw.githubusercontent.com/sealinwater/north/builds/plugins.json"
     }
   ],
   "inactive": [
