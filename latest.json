@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16 08:19:47 UTC",
+  "generatedAt": "2026-11-17 09:33:14 UTC",
   "providerCount": 6,
   "summary": {
     "ok": 5,
@@ -32,14 +32,14 @@
       "url": "https://cinemalux.baby",
       "state": "ok",
       "httpStatus": 200,
-      "finalUrl": "https://cinemalux.top/",
+      "finalUrl": "https://cinemalux.christmas/",
       "error": "",
       "attempts": 1,
       "outcome": "ok",
       "redirected": true,
       "hostChanged": true,
       "configuredHost": "cinemalux.baby",
-      "finalHost": "cinemalux.top"
+      "finalHost": "cinemalux.christmas"
     },
     {
       "module": "CinevezProvider",
