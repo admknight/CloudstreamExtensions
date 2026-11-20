@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19 09:09:08 UTC",
+  "generatedAt": "2026-11-20 08:54:15 UTC",
   "providerCount": 6,
   "summary": {
     "ok": 5,
@@ -92,14 +92,14 @@
       "url": "https://worldfree4u.blog",
       "state": "ok",
       "httpStatus": 200,
-      "finalUrl": "https://worldfree4u.forum/",
+      "finalUrl": "https://worldfree4u.you/",
       "error": "",
       "attempts": 1,
       "outcome": "ok",
       "redirected": true,
       "hostChanged": true,
       "configuredHost": "worldfree4u.blog",
-      "finalHost": "worldfree4u.forum"
+      "finalHost": "worldfree4u.you"
     }
   ]
 }
