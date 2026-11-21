@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-20 08:54:15 UTC",
+  "generatedAt": "2026-11-21 08:36:18 UTC",
   "windows": {
     "7d": {
       "days": 7,
       "snapshotCount": 7,
       "checks": 42,
-      "ok": 35,
+      "ok": 34,
       "restricted": 0,
-      "failed": 7,
+      "failed": 8,
       "redirected": 14,
       "hostChanged": 14,
       "dnsErrors": 7,
-      "timeouts": 0,
-      "healthyPct": 83.3,
-      "reachablePct": 83.3,
+      "timeouts": 1,
+      "healthyPct": 81.0,
+      "reachablePct": 81.0,
       "providers": [
         {
           "module": "Cinedoze",
@@ -44,15 +44,15 @@
         {
           "module": "CinevezProvider",
           "checks": 7,
-          "ok": 7,
+          "ok": 6,
           "restricted": 0,
-          "failed": 0,
+          "failed": 1,
           "redirected": 0,
           "hostChanged": 0,
           "dnsErrors": 0,
-          "timeouts": 0,
-          "healthyPct": 100.0,
-          "reachablePct": 100.0
+          "timeouts": 1,
+          "healthyPct": 85.7,
+          "reachablePct": 85.7
         },
         {
           "module": "Full4Movies",
@@ -99,15 +99,15 @@
       "days": 30,
       "snapshotCount": 30,
       "checks": 180,
-      "ok": 146,
+      "ok": 145,
       "restricted": 0,
-      "failed": 34,
-      "redirected": 62,
-      "hostChanged": 62,
+      "failed": 35,
+      "redirected": 61,
+      "hostChanged": 61,
       "dnsErrors": 34,
-      "timeouts": 0,
-      "healthyPct": 81.1,
-      "reachablePct": 81.1,
+      "timeouts": 1,
+      "healthyPct": 80.6,
+      "reachablePct": 80.6,
       "providers": [
         {
           "module": "Cinedoze",
@@ -138,15 +138,15 @@
         {
           "module": "CinevezProvider",
           "checks": 30,
-          "ok": 30,
+          "ok": 29,
           "restricted": 0,
-          "failed": 0,
+          "failed": 1,
           "redirected": 0,
           "hostChanged": 0,
           "dnsErrors": 0,
-          "timeouts": 0,
-          "healthyPct": 100.0,
-          "reachablePct": 100.0
+          "timeouts": 1,
+          "healthyPct": 96.7,
+          "reachablePct": 96.7
         },
         {
           "module": "Full4Movies",
@@ -167,8 +167,8 @@
           "ok": 26,
           "restricted": 0,
           "failed": 4,
-          "redirected": 2,
-          "hostChanged": 2,
+          "redirected": 1,
+          "hostChanged": 1,
           "dnsErrors": 4,
           "timeouts": 0,
           "healthyPct": 86.7,
@@ -191,14 +191,6 @@
     }
   },
   "recent": [
-    {
-      "generatedAt": "2026-11-11 08:02:14 UTC",
-      "ok": 5,
-      "restricted": 0,
-      "failed": 1,
-      "hostChanged": 2,
-      "redirected": 2
-    },
     {
       "generatedAt": "2026-11-12 08:40:28 UTC",
       "ok": 5,
@@ -268,6 +260,14 @@
       "ok": 5,
       "restricted": 0,
       "failed": 1,
+      "hostChanged": 2,
+      "redirected": 2
+    },
+    {
+      "generatedAt": "2026-11-21 08:36:18 UTC",
+      "ok": 4,
+      "restricted": 0,
+      "failed": 2,
       "hostChanged": 2,
       "redirected": 2
     }
