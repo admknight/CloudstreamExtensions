@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-21 08:36:18 UTC",
+  "generatedAt": "2026-11-22 08:31:01 UTC",
   "providerCount": 6,
   "summary": {
-    "ok": 4,
+    "ok": 5,
     "restricted": 0,
-    "failed": 2,
+    "failed": 1,
     "redirected": 2,
     "hostChanged": 2,
     "dnsErrors": 1,
-    "timeouts": 1
+    "timeouts": 0
   },
   "providers": [
     {
@@ -45,12 +45,12 @@
       "module": "CinevezProvider",
       "source": "CinevezProvider/src/main/kotlin/recloudstream/CinevezProvider.kt",
       "url": "https://cinevez.buzz",
-      "state": "fail",
-      "httpStatus": null,
+      "state": "ok",
+      "httpStatus": 200,
       "finalUrl": "https://cinevez.buzz",
-      "error": "The read operation timed out",
-      "attempts": 3,
-      "outcome": "timeout",
+      "error": "",
+      "attempts": 1,
+      "outcome": "ok",
       "redirected": false,
       "hostChanged": false,
       "configuredHost": "cinevez.buzz",
