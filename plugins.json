@@ -1235,7 +1235,7 @@
     "fileHash": "sha256-68b0e28fd1a94c8a557675dac4db7cb1a424a27f699618f5dfddc691ef6908e7"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Animo.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Animo.cs3",
     "status": 1,
     "version": 6,
     "name": "[Anime] Animo",
@@ -3216,7 +3216,7 @@
     "version": 35,
     "internalName": "DoFlixProvider",
     "description": "DoFlix Provider for Movies and TV Series",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/DoFlixProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/bc9b9aa050f0f9b1b7b0034d354994003e516214/DoFlixProvider.cs3",
     "name": "[Indian] DoFlixProvider"
   },
   {
@@ -5270,7 +5270,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JavFreeProvider.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/c79f6ceaa02fda7ef9c81acad2753fe8394e8563/JavFreeProvider.cs3",
     "status": 1,
     "version": 9,
     "name": "[Adult] JavFreeProvider",
@@ -6443,7 +6443,7 @@
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Miruro.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/Miruro.cs3",
     "status": 1,
     "version": 7,
     "name": "[Anime] Miruro",
@@ -7478,7 +7478,7 @@
     "fileHash": "sha256-91a0a034a95efa2c447e4d1b7ffc10d016387d4d084ec7d1d902c943d778ec2e"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/OpJav.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/c79f6ceaa02fda7ef9c81acad2753fe8394e8563/OpJav.cs3",
     "status": 2,
     "version": 7,
     "name": "[Adult] OpJav",
@@ -8442,7 +8442,7 @@
     "fileHash": "sha256-9702287e1acdbc6556a5f43350aac49df0fc323c2bb50ecc55f0f9173851e147"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/ReplayZone.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/ReplayZone.cs3",
     "status": 1,
     "version": 4,
     "name": "[Live] ReplayZone",
@@ -9119,7 +9119,7 @@
     "fileHash": "sha256-3ac142f8ccfcc3be876418f9034e982c9753d29ee1fe411dfebcbd6048359164"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/StreamedPk.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/bbd6dcf1318d7c76bbf8c853ec120b857dd7df22/StreamedPk.cs3",
     "status": 1,
     "version": 12,
     "name": "[Live] StreamedPk",
@@ -9139,7 +9139,7 @@
     "fileHash": "sha256-a52a83c09e69df3f65e25791e202903982d532da3be41900b3c8024174112f29"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/StreamedProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41/StreamedProvider.cs3",
     "status": 1,
     "version": 2,
     "name": "[Live] StreamedProvider",
@@ -9253,7 +9253,7 @@
     "fileHash": "sha256-fc779f9c8e07afba3cca8a9c63c58cd3c40b514cbb4369b6115ad466bf3eca00"
   },
   {
-    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/Stremio.cs3",
+    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/96e785d74114510f7197853fdd1bae2071a88db5/Stremio.cs3",
     "status": 3,
     "version": 14,
     "name": "[Tools] Stremio",

@@ -1,14 +1,14 @@
 # Production Aggregation Status
 
-Generated: **2026-11-25 20:14:07 UTC**
+Generated: **2026-11-25 20:18:54 UTC**
 
 Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 
 | Available | Package failures | Active sources | Failed sources | Added | Updated | Removed |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 547 | 10 | 35 | 1 | 0 | 17 | 0 |
+| 547 | 3 | 35 | 1 | 0 | 9 | 0 |
 
-**Individually reviewed release recovery; not a full guarded catalog release.** 535/547 installer URLs matched the published SHA-256. 12 unresolved entries retained unchanged. Source indexes checked separately; duplicate decisions are historical. Only exact individually reviewed releases adopted; no standing trust expansion. Runtime playback is not verified.
+**URL-only recovery; not a full guarded catalog release.** 544/547 installer URLs matched the published SHA-256. 3 unresolved entries retained unchanged. Source indexes checked separately; duplicate decisions are historical. No new binary or provider approved. Runtime playback is not verified.
 
 ## Source health
 
@@ -27,17 +27,17 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | [TheAlyss Repo](https://github.com/TheAlyss/cloudstream-AlyssRepo) | ✅ OK | 3 | 2 | 0 | 1 |
 | [CakesTwix UK/UA](https://github.com/CakesTwix/cloudstream-extensions-uk) | ✅ OK | 22 | 21 | 0 | 0 |
 | [CloudX-V2](https://github.com/Asm0d3usX/CloudX-V2) | ✅ OK | 18 | 0 | 0 | 18 |
-| [Storm-ext Fork by redblacker8](https://github.com/redblacker8/storm-ext) | ✅ OK | 39 | 36 | 1 | 0 |
+| [Storm-ext Fork by redblacker8](https://github.com/redblacker8/storm-ext) | ✅ OK | 39 | 36 | 0 | 0 |
 | [Desi Extensions](https://github.com/Faisal0786/Desi) | ✅ OK | 29 | 11 | 0 | 5 |
 | [FLUMMOX Repo](https://github.com/FlummoxGamer/FLUMMOX-Repo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [Ayu CloudStream Games](https://github.com/errorcode26/Ayu-CloudStream-Games) | ✅ OK | 21 | 0 | 0 | 21 |
-| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 37 | 28 | 4 | 1 |
+| [raghav repo](https://github.com/KSHITIJ8473/raghav) | ✅ OK | 37 | 28 | 0 | 1 |
 | [DieGon Repository](https://github.com/DieGon7771/ItaliaInStreaming) | ✅ OK | 23 | 17 | 0 | 1 |
 | [Reflex Repo](https://github.com/Reflex755/ReflexRepo) | ✅ OK | 2 | 2 | 0 | 0 |
 | [cs-karma](https://github.com/Kraptor123/cs-Karma) | ✅ OK | 34 | 30 | 0 | 3 |
 | [CNC Repo (All Language)](https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension) | ✅ OK | 47 | 36 | 0 | 0 |
 | [Turkish Providers Repository \| @KekikAkademi](https://github.com/maarrem/cs-Kekik) | ✅ OK | 43 | 0 | 0 | 43 |
-| [CXXX](https://github.com/phisher98/CXXX) | ✅ OK | 86 | 66 | 2 | 4 |
+| [CXXX](https://github.com/phisher98/CXXX) | ✅ OK | 86 | 66 | 0 | 4 |
 | [Kim Recovery Builds](https://github.com/kim20598/cloudstream-extensions-test) | ✅ OK | 71 | 0 | 0 | 3 |
 | [StreamPlay Recovery Builds](https://github.com/nuyuls79/StreamPlay-movie) | ✅ OK | 46 | 0 | 0 | 2 |
 | [Shakzz Recovery Builds](https://github.com/Shakzz890/ShakzzCutie) | ❌ FAILED | - | 0 | 0 | 2 |
@@ -55,16 +55,9 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 
 | Plugin | Best source checked | Version | Result |
 | --- | --- | ---: | --- |
-| Animo | raghav repo | 6 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
 | Extractors | MegaRepo Verified Immutable Recovery | 67 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
 | GDIndex | MegaRepo Verified Immutable Recovery | 4 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
-| JavFreeProvider | CXXX | 9 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
-| Miruro | raghav repo | 7 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
 | OnlineMoviesHinditProvider | MegaRepo Verified Immutable Recovery | 6 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
-| OpJav | CXXX | 7 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
-| ReplayZone | raghav repo | 4 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
-| StreamedPk | raghav repo | 12 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
-| StreamedProvider | Storm-ext Fork by redblacker8 | 2 | ❌ RuntimeError: HTTPError: HTTP Error 404: Not Found |
 
 ## Published plugins
 
@@ -75,7 +68,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 3 | **[Indian] 9kMovies** | 11 | hi | Movie, TvSeries, NSFW | Redowan CloudStream | Unchanged |
 | 4 | **[Adult] actionviewphotography** | 12 | en | NSFW | CXXX | Unchanged |
 | 5 | **[Arabic] Aflaam** | 1 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
-| 6 | **[Arabic] Asia2tv 2** | 5 | ar | Movie, TvSeries, AsianDrama | Re-3arabi | Individually reviewed release repair |
+| 6 | **[Arabic] Asia2tv 2** | 5 | ar | Movie, TvSeries, AsianDrama | Re-3arabi | Unchanged |
 | 7 | **[Arabic] Akwam** | 3 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 8 | **[Movies] AllCalidadProvider** | 1 | mx | TvSeries, Movie, Anime | Storm-ext Fork by redblacker8 | Unchanged |
 | 9 | **[Indian] AllMovieLandProvider** | 25 | hi | Movie, TvSeries, Cartoon | Phisher Repo | Unchanged |
@@ -120,8 +113,8 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 48 | **[Anime] AnimeSaturn** | 4 | it | AnimeMovie, Anime, OVA | DieGon Repository | Unchanged |
 | 49 | **[Anime] AnimeSuge** | 12 | en | Anime, AnimeMovie, OVA | CNC Repo (All Language) | Unchanged |
 | 50 | **[Anime] AnimeTH** | 1 | th | Anime, AnimeMovie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 51 | **[Anime] AnimeUAProvider** | 10 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Individually reviewed release repair |
-| 52 | **[Anime] AnimeUnity** | 30 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | Individually reviewed release repair |
+| 51 | **[Anime] AnimeUAProvider** | 10 | uk | Anime, AnimeMovie, OVA | CakesTwix UK/UA | Unchanged |
+| 52 | **[Anime] AnimeUnity** | 30 | it | AnimeMovie, Anime, OVA | doGior's Had Enough | Unchanged |
 | 53 | **[Anime] AnimeVietsubProvider** | 14 |  | Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 54 | **[Indian] AnimeVilla** | 3 | hi | Movie, TvSeries, Anime | Desi Extensions | Unchanged |
 | 55 | **[Arabic] AnimeWitcher** | 3 | ar | Anime | Re-3arabi | Unchanged |
@@ -129,12 +122,12 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 57 | **[Indian] AnimeWorldIndia** | 14 | hi | Anime, AnimeMovie, Cartoon | raghav repo | Unchanged |
 | 58 | **[Anime] Animexin** | 16 | en | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 59 | **[Anime] AnimeYTX** | 11 | mx | Anime | cs-karma | Unchanged |
-| 60 | **[Anime] Animo** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Unresolved - unchanged |
+| 60 | **[Anime] Animo** | 6 | en | Anime, AnimeMovie, OVA | raghav repo | Byte-identical URL repair |
 | 61 | **[Anime] AniPM** | 11 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 62 | **[Anime] AniSnatch** | 2 | en | Anime, AnimeMovie, OVA | Phisher Repo | Unchanged |
 | 63 | **[Anime] AniStream** | 1 | en | Anime, AnimeMovie | Desi Extensions | Unchanged |
 | 64 | **[Anime] AniSuge** | 11 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 65 | **[Anime] AnitubeinuaProvider** | 22 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Individually reviewed release repair |
+| 65 | **[Anime] AnitubeinuaProvider** | 22 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Unchanged |
 | 66 | **[Indian] AniVortex** | 10 | hi | Anime, AnimeMovie, OVA, TvSeries, Movie | Phisher Repo | Unchanged |
 | 67 | **[Anime] AniWaves** | 12 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
 | 68 | **[Anime] Aniworld** | 15 | de | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
@@ -146,7 +139,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 74 | **[Movies] Arte** | 5 | en | Documentary | DieGon Repository | Unchanged |
 | 75 | **[Adult] Asianpinay** | 3 | en | NSFW | CXXX | Unchanged |
 | 76 | **[Other] AvatarAirbender** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 77 | **[Anime] BambooUAProvider** | 13 | uk | Anime, AsianDrama | CakesTwix UK/UA | Individually reviewed release repair |
+| 77 | **[Anime] BambooUAProvider** | 13 | uk | Anime, AsianDrama | CakesTwix UK/UA | Unchanged |
 | 78 | **[Indian] BanglaPlex** | 8 | bn | Movie, TvSeries | Phisher Repo | Unchanged |
 | 79 | **[Live] BasketballReplays** | 5 | en | Live | cs-karma | Unchanged |
 | 80 | **[Live] BdixBdipTV** | 10 | bn | Live | Redowan CloudStream | Unchanged |
@@ -165,7 +158,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 93 | **[Indian] Bollyflix** | 33 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | Unchanged |
 | 94 | **[Arabic] Brstej** | 1 | ar | Anime | Re-3arabi | Unchanged |
 | 95 | **[Live] CablevisionHdProvider** | 7 | mx | Live | Storm-ext Fork by redblacker8 | Unchanged |
-| 96 | **[Live] CalcioStreaming** | 22 | it | Live | DieGon Repository | Individually reviewed release repair |
+| 96 | **[Live] CalcioStreaming** | 22 | it | Live | DieGon Repository | Unchanged |
 | 97 | **[Adult] Cam4** | 1 | en | NSFW | CXXX | Unchanged |
 | 98 | **[Live] CanliTV** | 10 | tr | Live | MegaRepo Verified Immutable Recovery | Unchanged |
 | 99 | **[Indian] CastleTvProvider** | 48 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
@@ -178,7 +171,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 106 | **[Arabic] Cee (🇮🇶)** | 1 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 107 | **[Adult] Chatrubate** | 4 | en | NSFW | CXXX | Unchanged |
 | 108 | **[Asian] Chikianimation** | 2 | zh | AnimeMovie, Anime | Phisher Repo | Unchanged |
-| 109 | **[Movies] CikavaIdeyaProvider** | 5 | uk | Cartoon, TvSeries, Movie | CakesTwix UK/UA | Individually reviewed release repair |
+| 109 | **[Movies] CikavaIdeyaProvider** | 5 | uk | Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
 | 110 | **[Arabic] CimaClub** | 1 | ar | TvSeries, Movie | Re-3arabi | Unchanged |
 | 111 | **[Arabic] Cimalight** | 1 | ar | TvSeries, Movie, Anime | Re-3arabi | Unchanged |
 | 112 | **[Arabic] Cimatn** | 1 | ar | TvSeries, Movie, Drama | Re-3arabi | Unchanged |
@@ -195,7 +188,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 123 | **[Movies] CizgiMax** | 8 | tr | Cartoon | MegaRepo Verified Immutable Recovery | Unchanged |
 | 124 | **[Indian] CNC Verse** | 116 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
 | 125 | **[Indian] CNC Verse Mobile** | 14 | ta | Movie, TvSeries | CNC Repo (All Language) | Unchanged |
-| 126 | **[Movies] CoaninetProvider** | 2 | uk | TvSeries | CakesTwix UK/UA | Individually reviewed release repair |
+| 126 | **[Movies] CoaninetProvider** | 2 | uk | TvSeries | CakesTwix UK/UA | Unchanged |
 | 127 | **[Movies] Coflix** | 19 | fr | Movie, TvSeries | Phisher Repo | Unchanged |
 | 128 | **[Anime] Comix** | 2 | en | Others, Anime | Phisher Repo | Unchanged |
 | 129 | **[Other] Contra** | 10 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -222,7 +215,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 150 | **[Movies] DiziYou** | 23 | tr | TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 151 | **[Movies] DocumaniaTVProvider** | 2 | es | Documentary, Movie | Storm-ext Fork by redblacker8 | Unchanged |
 | 152 | **[Movies] DocumentaryArea** | 2 | en | Documentary | cs-karma | Unchanged |
-| 153 | **[Indian] DoFlixProvider** | 35 | ta | TvSeries, Movie | CNC Repo (All Language) | Unresolved - unchanged |
+| 153 | **[Indian] DoFlixProvider** | 35 | ta | TvSeries, Movie | CNC Repo (All Language) | Byte-identical URL repair |
 | 154 | **[Asian] Donghuastream** | 22 | zh | Anime | Phisher Repo | Unchanged |
 | 155 | **[Asian] Donghub** | 4 | id | Anime, AnimeMovie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 156 | **[Other] Doom** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -294,7 +287,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 222 | **[Adult] HentaiCity** | 1 | en | NSFW | CXXX | Unchanged |
 | 223 | **[Adult] HentaiHaven** | 7 | en | NSFW | CXXX | Unchanged |
 | 224 | **[Adult] HentaiPro** | 2 | en | NSFW | CXXX | Unchanged |
-| 225 | **[Adult] HentaiUkrProvider** | 6 | uk | NSFW | CakesTwix UK/UA | Individually reviewed release repair |
+| 225 | **[Adult] HentaiUkrProvider** | 6 | uk | NSFW | CakesTwix UK/UA | Unchanged |
 | 226 | **[Anime] HHkungfuProvider** | 5 |  | Anime, AnimeMovie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 227 | **[Anime] HHPandaProvider** | 12 |  | Anime | MegaRepo Verified Immutable Recovery | Unchanged |
 | 228 | **[Anime] HiAnime** | 2 | en | Anime, OVA | Phisher Repo | Unchanged |
@@ -322,7 +315,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 250 | **[Adult] ixiporn** | 17 | en | NSFW | CXXX | Unchanged |
 | 251 | **[Live] IzziGoProvider** | 17 | mx | Movie, TvSeries, Live | Storm-ext Fork by redblacker8 | Unchanged |
 | 252 | **[Other] JackieChan** | 4 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 253 | **[Adult] JavFreeProvider** | 9 | en | NSFW | CXXX | Unresolved - unchanged |
+| 253 | **[Adult] JavFreeProvider** | 9 | en | NSFW | CXXX | Byte-identical URL repair |
 | 254 | **[Adult] JavGuru** | 7 | en | NSFW | CXXX | Unchanged |
 | 255 | **[Adult] JAVHd** | 9 | en | NSFW | CXXX | Unchanged |
 | 256 | **[Adult] JavMost** | 6 | en | NSFW | CXXX | Unchanged |
@@ -339,9 +332,9 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 267 | **[Asian] Kawanfilm** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 268 | **[Movies] Kdesa** | 12 | en | Movie, TvSeries, Anime | raghav repo | Unchanged |
 | 269 | **[Anime] Kickassanime** | 27 | en | AnimeMovie, Anime, OVA | Phisher Repo | Unchanged |
-| 270 | **[Movies] KinostrainProvider** | 2 | uk | TvSeries, Cartoon, Movie, Anime | CakesTwix UK/UA | Individually reviewed release repair |
+| 270 | **[Movies] KinostrainProvider** | 2 | uk | TvSeries, Cartoon, Movie, Anime | CakesTwix UK/UA | Unchanged |
 | 271 | **[Movies] KinoTronProvider** | 19 | uk | Cartoon, TvSeries, Movie, Anime | CakesTwix UK/UA | Unchanged |
-| 272 | **[Movies] KinoVezhaProvider** | 14 | uk | Cartoon, TvSeries, Movie | CakesTwix UK/UA | Individually reviewed release repair |
+| 272 | **[Movies] KinoVezhaProvider** | 14 | uk | Cartoon, TvSeries, Movie | CakesTwix UK/UA | Unchanged |
 | 273 | **[Other] KissKH** | 5 | en | AsianDrama | cs-karma | Unchanged |
 | 274 | **[Movies] KisskhProvider** | 22 | en | AsianDrama, TvSeries, Anime, Movie | Phisher Repo | Unchanged |
 | 275 | **[Movies] KKPhimProvider** | 10 |  | Anime, TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -379,7 +372,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 307 | **[Indian] Microtv** | 3 | hi | Movie, TvSeries | Phisher Repo | Unchanged |
 | 308 | **[Asian] MidasXXi** | 1 | id | Movie, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 309 | **[Other] MinishCap** | 1 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
-| 310 | **[Anime] Miruro** | 7 | en | Anime, AnimeMovie, OVA | raghav repo | Unresolved - unchanged |
+| 310 | **[Anime] Miruro** | 7 | en | Anime, AnimeMovie, OVA | raghav repo | Byte-identical URL repair |
 | 311 | **[Adult] MissAV** | 9 | en | NSFW | CXXX | Unchanged |
 | 312 | **[Indian] MLSBDProvider** | 37 | bn | Movie, TvSeries, AnimeMovie, AsianDrama | CNC Repo (All Language) | Unchanged |
 | 313 | **[Anime] MonoschinosProvider** | 9 | mx | Anime, AnimeMovie, OVA | Storm-ext Fork by redblacker8 | Unchanged |
@@ -424,11 +417,11 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 352 | **[Other] OnePiece** | 16 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 353 | **[Movies] OneTouchTV** | 5 | en | AsianDrama, TvSeries | Phisher Repo | Unchanged |
 | 354 | **[Indian] OnlineMoviesHinditProvider** | 6 | hi | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unresolved - unchanged |
-| 355 | **[Movies] OnlineSerieTV** | 5 | it | Movie, TvSeries, Cartoon, Anime, Documentary | DieGon Repository | Individually reviewed release repair |
+| 355 | **[Movies] OnlineSerieTV** | 5 | it | Movie, TvSeries, Cartoon, Anime, Documentary | DieGon Repository | Unchanged |
 | 356 | **[Adult] Onlyjerk** | 10 | en | NSFW | CXXX | Unchanged |
 | 357 | **[Other] OnShort** | 3 | en | AsianDrama | cs-karma | Unchanged |
 | 358 | **[Movies] OPhimProvider** | 10 |  | Anime, TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
-| 359 | **[Adult] OpJav** | 7 | en | NSFW | CXXX | Unresolved - unchanged |
+| 359 | **[Adult] OpJav** | 7 | en | NSFW | CXXX | Byte-identical URL repair |
 | 360 | **[Asian] Oploverz** | 2 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
 | 361 | **[Asian] Otakudesu** | 1 | id | AnimeMovie, OVA, Anime | Nonton Indo | Unchanged |
 | 362 | **[Anime] Otakutsu** | 4 | en | Anime, AnimeMovie | FLUMMOX Repo | Unchanged |
@@ -475,7 +468,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 403 | **[Asian] Rebahin** | 1 | id | Movie, TvSeries | Nonton Indo | Unchanged |
 | 404 | **[Live] RecTV** | 97 | tr | Movie, Live, TvSeries | MegaRepo Verified Immutable Recovery | Unchanged |
 | 405 | **[Live] FullMatchShows** | 2 | en | Movie, Others, live | Re-3arabi | Unchanged |
-| 406 | **[Live] ReplayZone** | 4 | en | Live | raghav repo | Unresolved - unchanged |
+| 406 | **[Live] ReplayZone** | 4 | en | Live | raghav repo | Byte-identical URL repair |
 | 407 | **[Anime] ReyDonghuaProvider** | 2 | mx | Anime | Storm-ext Fork by redblacker8 | Unchanged |
 | 408 | **[Indian] RingZ** | 12 | hi | AnimeMovie, Anime, Cartoon | Phisher Repo | Unchanged |
 | 409 | **[Movies] Rowdy** | 21 | en | Movie, TvSeries, Anime | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -486,7 +479,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 414 | **[Tools] SectionOrganizer** | 4 |  | All | DieGon Repository | Unchanged |
 | 415 | **[Asian] SemiRebahin** | 1 | id | NSFW | Nonton Indo | Unchanged |
 | 416 | **[Anime] Senshi** | 15 | en | Anime, AnimeMovie, OVA | raghav repo | Unchanged |
-| 417 | **[Movies] SerialnoProvider** | 13 | uk | Cartoon, TvSeries | CakesTwix UK/UA | Individually reviewed release repair |
+| 417 | **[Movies] SerialnoProvider** | 13 | uk | Cartoon, TvSeries | CakesTwix UK/UA | Unchanged |
 | 418 | **[Movies] SeriesflixProvider** | 4 | es | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
 | 419 | **[Movies] SeriesMetroProvider** | 4 | mx | TvSeries, Movie | Storm-ext Fork by redblacker8 | Unchanged |
 | 420 | **[Other] SeriousSam** | 4 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
@@ -505,15 +498,15 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 433 | **[Movies] SoloLatinoProvider** | 12 | mx | Movie, TvSeries, Anime, Cartoon | Storm-ext Fork by redblacker8 | Unchanged |
 | 434 | **[Adult] spankbang** | 12 | en | NSFW | CXXX | Unchanged |
 | 435 | **[Live] SportzxProvider** | 33 | ta | Live | CNC Repo (All Language) | Unchanged |
-| 436 | **[Live] StreamCenter** | 14 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | Individually reviewed release repair |
+| 436 | **[Live] StreamCenter** | 14 | it | TvSeries, Movie, AsianDrama, Anime, Torrent, Live, Others | doGior's Had Enough | Unchanged |
 | 437 | **[Live] Streamed** | 29 | en | Live | cs-karma | Unchanged |
-| 438 | **[Live] StreamedPk** | 12 | en | Live | raghav repo | Unresolved - unchanged |
-| 439 | **[Live] StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | Unresolved - unchanged |
+| 438 | **[Live] StreamedPk** | 12 | en | Live | raghav repo | Byte-identical URL repair |
+| 439 | **[Live] StreamedProvider** | 2 | en | Live | Storm-ext Fork by redblacker8 | Byte-identical URL repair |
 | 440 | **[Indian] StreamFlixProvider** | 36 | ta | Movie, TvSeries, Anime | CNC Repo (All Language) | Unchanged |
 | 441 | **[Indian] StreamHubOne** | 63 | hi | Movie, TvSeries, Anime, AnimeMovie, AsianDrama | MegaRepo Verified Immutable Recovery | Unchanged |
-| 442 | **[Movies] StreamingCommunity** | 54 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | Individually reviewed release repair |
+| 442 | **[Movies] StreamingCommunity** | 54 | it | TvSeries, Movie, Documentary, Cartoon | DieGon Repository | Unchanged |
 | 443 | **[Movies] StreamPlay** | 687 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
-| 444 | **[Tools] Stremio** | 14 | it | TvSeries, Movie | DieGon Repository | Unresolved - unchanged |
+| 444 | **[Tools] Stremio** | 14 | it | TvSeries, Movie | DieGon Repository | Byte-identical URL repair |
 | 445 | **[Tools] StremioAddon** | 16 | en | TvSeries, Movie, Torrent | Phisher Repo | Unchanged |
 | 446 | **[Tools] StremioProvider** | 7 |  | TvSeries, Anime, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
 | 447 | **[Tools] StremioX** | 27 | en | TvSeries, Movie | Phisher Repo | Unchanged |
@@ -525,7 +518,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 453 | **[Other] SuperMario** | 14 | en | Others | MegaRepo Verified Immutable Recovery | Unchanged |
 | 454 | **[Movies] SuperStream** | 38 | en | AsianDrama, TvSeries, Anime, Movie, Cartoon, AnimeMovie | Phisher Repo | Unchanged |
 | 455 | **[Adult] SxyPrn** | 7 | en | NSFW | CXXX | Unchanged |
-| 456 | **[Tools] SyncPlugin** | 3 | uk | Others | CakesTwix UK/UA | Individually reviewed release repair |
+| 456 | **[Tools] SyncPlugin** | 3 | uk | Others | CakesTwix UK/UA | Unchanged |
 | 457 | **[Other] Cross-Device Sync** | 9 |  |  | MegaRepo Verified Immutable Recovery | Unchanged |
 | 458 | **[Tools] SyncStream** | 11 |  | Others | DieGon Repository | Unchanged |
 | 459 | **[Live] Syrialive** | 1 | ar | TvSeries, Live | Re-3arabi | Unchanged |
@@ -572,7 +565,7 @@ Candidate status: **REPAIR ONLY - NOT A FULL GUARDED RELEASE**
 | 500 | **[Other] UltimaBeta** | 7 | en | All | MegaRepo Verified Immutable Recovery | Unchanged |
 | 501 | **[Adult] Uncut99** | 2 | hi | NSFW | CXXX | Unchanged |
 | 502 | **[Adult] UncutMaza** | 8 | hi | NSFW | CXXX | Unchanged |
-| 503 | **[Anime] UnimayProvider** | 13 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Individually reviewed release repair |
+| 503 | **[Anime] UnimayProvider** | 13 | uk | Anime, AnimeMovie | CakesTwix UK/UA | Unchanged |
 | 504 | **[Live] Vavoo** | 7 |  | Live | doGior's Had Enough | Unchanged |
 | 505 | **[Indian] VegaMovies** | 82 | hi | TvSeries, Movie, AsianDrama, Anime | CSX | Unchanged |
 | 506 | **[Movies] VipPhimProvider** | 9 |  | TvSeries, Movie | MegaRepo Verified Immutable Recovery | Unchanged |
