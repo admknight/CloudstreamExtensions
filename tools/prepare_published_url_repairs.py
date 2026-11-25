@@ -166,9 +166,12 @@ def make_bundle(plugins, origins, previous_report, repo_manifest, history, proof
             or proof["outputProvenanceDigest"] != canonical_sha256(origins)):
         raise ValueError("Output snapshot differs from independent proof")
     trusted = proof.get("mode") == "TRUSTED_EXISTING_UPGRADE_REPAIR_ONLY"
-    if proof.get("mode") not in ("BYTE_IDENTICAL_URL_REPAIR_ONLY", "TRUSTED_EXISTING_UPGRADE_REPAIR_ONLY"):
+    reviewed = proof.get("mode") == "REVIEWED_EXISTING_PACKAGE_REPAIR_ONLY"
+    binary_repair = trusted or reviewed
+    if not binary_repair and proof.get("mode") != "BYTE_IDENTICAL_URL_REPAIR_ONLY":
         raise ValueError("Unrecognized repair proof")
-    method = "trusted_existing_upgrade_repair_only" if trusted else METHOD
+    method = ("reviewed_existing_package_repair_only" if reviewed else
+              "trusted_existing_upgrade_repair_only" if trusted else METHOD)
     by_key = {plugin_identity(p): p for p in plugins}
     origin_by_key = {str(o.get("plugin") or o.get("originalName")).casefold(): o for o in origins}
     checks = {r["plugin"]: r for r in proof["checks"]}
@@ -198,6 +201,8 @@ def make_bundle(plugins, origins, previous_report, repo_manifest, history, proof
     report["previewPolicy"] = method
     if trusted:
         report["trustedPolicyUpgrades"] = copy.deepcopy(proof["policyAttestations"])
+    if reviewed:
+        report["reviewedPackageRepairs"] = copy.deepcopy(proof["reviewAttestations"])
     report["previewOfCandidateStatus"] = "NOT_APPLICABLE_REPAIR_ONLY"
     report["sourceChanges"] = {"added": [], "removed": [], "healthChanged": []}
     old_status = {s["id"]: s for s in previous_report["sourceStatus"]}
@@ -214,9 +219,10 @@ def make_bundle(plugins, origins, previous_report, repo_manifest, history, proof
         for k in unreachable]
     report["integrityHealth"] = {
         "candidateChecked": len(plugins), "candidateAccepted": proof["afterHashMatches"],
-        "pinnedPreviousRecovered": 0 if trusted else len(changed),
-        "immutableOldRetained": 0 if trusted else len(changed),
+        "pinnedPreviousRecovered": 0 if binary_repair else len(changed),
+        "immutableOldRetained": 0 if binary_repair else len(changed),
         "trustedExistingUpgrades": len(changed) if trusted else 0,
+        "reviewedExistingRepairs": len(changed) if reviewed else 0,
         "unverifiedPreviousCarried": len(residual), "quarantinedNotInProposal": 0,
         "changedOrFailedCandidates": len(residual), "sizeOnlyLegacyCandidateAccepted": 0,
         "previewPolicy": method, "releaseEligibleWithWarnings": False,
@@ -239,23 +245,26 @@ def make_bundle(plugins, origins, previous_report, repo_manifest, history, proof
              "version": p["version"], "language": p.get("language") or "",
              "tvTypes": template.tv_types_text(p), "sourceId": origin_by_key[k]["sourceId"],
              "sourceName": origin_by_key[k]["sourceName"],
-             "change": ("Trusted existing version upgrade" if trusted else "Byte-identical URL repair") if k in changed else
+             "change": ("Individually reviewed release repair" if reviewed else "Trusted existing version upgrade" if trusted else "Byte-identical URL repair") if k in changed else
                        "Unresolved - unchanged" if k in residual else "Unchanged"}
             for k, p in by_key.items()]
-    label = "Trusted existing version recovery" if trusted else "URL-only recovery"
+    label = ("Individually reviewed release recovery" if reviewed else
+             "Trusted existing version recovery" if trusted else "URL-only recovery")
     banner = (f"**{label}; not a full guarded catalog release.** "
               f"{proof['afterHashMatches']}/{len(plugins)} installer URLs matched the published SHA-256. "
               f"{len(residual)} unresolved entries retained unchanged. "
               "Source indexes checked separately; duplicate decisions are historical. " +
-              ("Only independently verified, standing-policy existing upgrades adopted; no new provider approved. " if trusted else
+              ("Only exact individually reviewed releases adopted; no standing trust expansion. " if reviewed else
+               "Only independently verified, standing-policy existing upgrades adopted; no new provider approved. " if trusted else
                "No new binary or provider approved. ") + "Runtime playback is not verified.\n\n")
     status = template.build_status(report, rows).replace("## Source health", banner + "## Source health", 1)
     readme = template.build_readme(report, rows).replace(
-        "Last successful refresh:", "Last repair verification:" if trusted else "Last URL-repair verification:").replace(
+        "Last successful refresh:", "Last repair verification:" if binary_repair else "Last URL-repair verification:").replace(
         "plugins are currently published and package-reachable.", "plugin identities are currently published.")
     readme = readme.replace("## 📊 Current dashboard", banner + "## 📊 Current dashboard", 1)
     notes = "# " + label + "\n\n" + banner + "\n" + "\n".join(
-        (f"- {template.md(r['plugin'])}: v{r['oldVersion']} to v{r['version']}, publisher-policy SHA-256 verified at immutable revision"
+        (f"- {template.md(r['plugin'])}: v{r['oldVersion']} to v{r['version']}, status {r['oldStatus']} to {r['status']}, {r['reviewKind']}, exact SHA-256 verified at immutable revision"
+         if reviewed else f"- {template.md(r['plugin'])}: v{r['oldVersion']} to v{r['version']}, publisher-policy SHA-256 verified at immutable revision"
          if trusted else f"- {template.md(r['plugin'])}: unchanged v{r['version']}, SHA-256 verified at immutable revision")
         for r in proof["changed"]) + "\n"
     diff = {"generatedAt": generated_at, "candidateStatus": report["candidateStatus"],
@@ -277,7 +286,7 @@ def make_bundle(plugins, origins, previous_report, repo_manifest, history, proof
     return {"plugins.json": plugins, "provenance.json": origins, "repo.json": repo_manifest,
             "merge-report.json": report, "release-diff.json": diff, "STATUS.md": status,
             "README.md": readme, "RELEASE_NOTES.md": notes, "BUILD_HISTORY.md": history,
-            ("trusted-repair-proof.json" if trusted else "byte-repair-proof.json"): proof}
+            ("reviewed-repair-proof.json" if reviewed else "trusted-repair-proof.json" if trusted else "byte-repair-proof.json"): proof}
 
 
 def main(argv=None):

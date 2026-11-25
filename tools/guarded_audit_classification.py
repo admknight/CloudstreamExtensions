@@ -157,7 +157,8 @@ def classify_drift(published, provenance, report, drift):
     if not isinstance(report, dict) or not isinstance(drift, list):
         raise ValueError("Missing guarded release and drift records")
     repair_modes = {"byte_identical_repair_only": "BYTE_IDENTICAL_URL_REPAIR_ONLY",
-                    "trusted_existing_upgrade_repair_only": "TRUSTED_EXISTING_UPGRADE_REPAIR_ONLY"}
+                    "trusted_existing_upgrade_repair_only": "TRUSTED_EXISTING_UPGRADE_REPAIR_ONLY",
+                    "reviewed_existing_package_repair_only": "REVIEWED_EXISTING_PACKAGE_REPAIR_ONLY"}
     if report.get("publicationMethod") in repair_modes:
         # A narrow correction is NOT a clean guarded catalog release. Preserve
         # every observed finding and force the rotating audit to remain failed.
