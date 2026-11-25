@@ -14,7 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
-from urllib.request import Request, urlopen
+from urllib.request import Request, urlopen, build_opener, HTTPRedirectHandler
 
 PREFIX = 'https://raw.githubusercontent.com/admknight/CloudstreamExtensions/refs/heads/'
 PUBLISHED_URL = PREFIX + 'builds/plugins.json'
@@ -28,16 +28,48 @@ USER_AGENT = 'AdamKnight-ReadOnly-IntegrityAudit/1.0'
 # The currently published sources and packages use only these public hosts.
 ALLOWED_HOSTS = {'raw.githubusercontent.com', 'gitlab.com'}
 
+# Narrow transport support for the reviewed public replay publisher only.
+# Versioned release assets are NOT immutable commit pins or trusted approvals.
+REPLAY_RELEASE_PREFIX = 'https://github.com/aslafy-z/cloudstream-plugins/releases/download/'
+REPLAY_INDEX_URL = REPLAY_RELEASE_PREFIX + 'catalog-stable/plugins.json'
+REPLAY_PACKAGE_RE = re.compile(
+    re.escape(REPLAY_RELEASE_PREFIX)
+    + r'(?P<module>FranceTV|M6Plus|Novo19|RMCPlus|T18|TF1Plus|TV5MONDEPlus)'
+    + r'-v20[0-9]{2}\.[0-9]{1,2}\.[0-9]{1,2}\.[0-9]+/(?P=module)\.cs3\Z'
+)
+REPLAY_REDIRECT_HOSTS = {'release-assets.githubusercontent.com', 'objects.githubusercontent.com'}
+
+
+def replay_release_module(url):
+    if not isinstance(url, str):
+        return None
+    matched = REPLAY_PACKAGE_RE.fullmatch(url)
+    return matched.group('module') if matched else None
+
+
+class ReplayReleaseRedirect(HTTPRedirectHandler):
+    """Restrict publisher-release redirects; never authorize direct CDN inputs."""
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        parsed = urlparse(newurl)
+        if (parsed.scheme != 'https' or parsed.netloc not in REPLAY_REDIRECT_HOSTS
+                or parsed.username or parsed.password or parsed.fragment):
+            raise ValueError('Unsupported replay release redirect')
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
 
 def _get_response(url, limit, *, timeout=22):
     parsed = urlparse(url)
-    if parsed.scheme != 'https' or parsed.hostname not in ALLOWED_HOSTS or parsed.username or parsed.password:
+    replay = ((url == REPLAY_INDEX_URL and limit == MAX_INDEX_BYTES)
+              or (replay_release_module(url) is not None and limit == MAX_PACKAGE_BYTES))
+    if not replay and (parsed.scheme != 'https' or parsed.hostname not in ALLOWED_HOSTS
+                       or parsed.username or parsed.password):
         raise ValueError('Unsupported source host or non-HTTPS URL')
     error = None
     for attempt in range(2):
         try:
             request = Request(url, headers={'User-Agent': USER_AGENT, 'Accept': '*/*'})
-            with urlopen(request, timeout=timeout) as response:
+            opener = build_opener(ReplayReleaseRedirect()).open if replay else urlopen
+            with opener(request, timeout=timeout) as response:
                 if response.status != 200:
                     raise RuntimeError('Unexpected HTTP status ' + str(response.status))
                 size = 0
@@ -126,7 +158,14 @@ def verify_package(plugin, downloader=None):
     result = {'plugin': name, 'url': url, 'status': 'error'}
     try:
         parsed = urlparse(url)
-        if parsed.scheme != 'https' or parsed.hostname not in ALLOWED_HOSTS or not parsed.path.lower().endswith('.cs3'):
+        module = replay_release_module(url)
+        if module is not None:
+            size = plugin.get('fileSize')
+            digest = plugin.get('fileHash')
+            if (name != module.casefold() or type(size) is not int or size <= 0
+                    or not isinstance(digest, str) or not DIGEST_RE.fullmatch(digest)):
+                raise ValueError('Replay release package requires matching identity, positive size and declared SHA-256')
+        elif parsed.scheme != 'https' or parsed.hostname not in ALLOWED_HOSTS or not parsed.path.lower().endswith('.cs3'):
             raise ValueError('Invalid HTTPS .cs3 package URL')
         _, actual_size, actual_hash = downloader(url, MAX_PACKAGE_BYTES)
         if actual_size == 0:

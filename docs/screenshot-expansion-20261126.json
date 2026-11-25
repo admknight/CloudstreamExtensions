@@ -1,0 +1,203 @@
+{
+  "baseline": {
+    "repo": "admknight/CloudstreamExtensions",
+    "commit": "b71583bb72c6506a977e476add6e9db727fd7af6",
+    "path": "plugins.json",
+    "identities": 547
+  },
+  "sources": [
+    {
+      "name": "BigBullApp",
+      "repo": "F0Rextasy/bigbullapp-cs",
+      "branch": "builds",
+      "commit": "82e27e4ab1739dfae6636fe9f4961a56be718321",
+      "path": "plugins.json",
+      "license_metadata": "MIT",
+      "total": 113,
+      "overlap": 24
+    },
+    {
+      "name": "PlavioHD",
+      "repo": "kotlinsyd/plaviohd",
+      "branch": "builds",
+      "commit": "10c63ece7403da1f2de7e48bc7ce3f1603dc0608",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 46,
+      "overlap": 13
+    },
+    {
+      "name": "AllForU",
+      "repo": "RVRBEAST76/allforu-repo",
+      "branch": "builds",
+      "commit": "9a599943d436ab3ddb3d7358116bbe70482eb2b7",
+      "path": "plugins.json",
+      "license_metadata": "NOASSERTION",
+      "total": 44,
+      "overlap": 14
+    },
+    {
+      "name": "German providers",
+      "repo": "Bnyro/GermanProviders",
+      "branch": "builds",
+      "commit": "affea0e327036e80c3119ba9675ac9db892e41e1",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 25,
+      "overlap": 3
+    },
+    {
+      "name": "IndoStream",
+      "repo": "TeKuma25/IndoStream",
+      "branch": "builds",
+      "commit": "e0747775e81f0d79ca57b1dd997ddcb5e8ee191a",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 27,
+      "overlap": 15
+    },
+    {
+      "name": "Cartoony Repo",
+      "repo": "med1245/cartoonyrepo",
+      "branch": "builds",
+      "commit": "37073c62b0c6d7dffb1f8a1b78723894fb5da5b4",
+      "path": "plugins-6a71bb15.json",
+      "license_metadata": null,
+      "total": 12,
+      "overlap": 1
+    },
+    {
+      "name": "saimuel repo",
+      "repo": "saimuelbr/saimuelrepo",
+      "branch": "main",
+      "commit": "a78cd1502c9f996ff5b8fc4ae39d144e4a5bf68d",
+      "path": "builds/plugins.json",
+      "license_metadata": null,
+      "total": 10,
+      "overlap": 0
+    },
+    {
+      "name": "SM-ARB",
+      "repo": "sagemoon1996/cloudstream-repo",
+      "branch": "builds",
+      "commit": "b03238e15ef0c2678d1c7be1727a9a3180ab5217",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 7,
+      "overlap": 0
+    },
+    {
+      "name": "AMSC French",
+      "repo": "mouradchaouche/cloudstream-frenchrepo",
+      "branch": "main",
+      "commit": "0da82ea5ee1c36d00fd7bcca948315d3bc3b8bf3",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 7,
+      "overlap": 1
+    },
+    {
+      "name": "French providers repository",
+      "repo": "yorik100/Cloudstream",
+      "branch": "builds",
+      "commit": "e97002fa39df298d232ddcd3f11a8952be728713",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 4,
+      "overlap": 0
+    },
+    {
+      "name": "Mamun015 BDIX",
+      "repo": "Mamun015/mamun015-cloudstream-bdix",
+      "branch": "builds",
+      "commit": "9c89f75f5494c7376919d3fed8b166acd02d0a7d",
+      "path": "plugins.json",
+      "license_metadata": "GPL-3.0",
+      "total": 6,
+      "overlap": 4
+    },
+    {
+      "name": "SkillShare-Repo",
+      "repo": "techtanic/SkillShare-Repo",
+      "branch": "builds",
+      "commit": "5148c52c422f50741ff8f3d8d3ad1a11f4eda81c",
+      "path": "plugins.json",
+      "license_metadata": "GPL-3.0",
+      "total": 1,
+      "overlap": 0
+    },
+    {
+      "name": "Indflix",
+      "repo": "dipender98/Indflix",
+      "branch": "builds",
+      "commit": "beffd66324a6f5b1ac2fd276a0fe706665052caf",
+      "path": "plugins.json",
+      "license_metadata": "GPL-3.0",
+      "total": 3,
+      "overlap": 2
+    },
+    {
+      "name": "North",
+      "repo": "sealinwater/north",
+      "branch": "builds",
+      "commit": "adf6c369444091c70fb9d7b5946743b0d3b4efa4",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 1,
+      "overlap": 0
+    },
+    {
+      "name": "AnimesFHD",
+      "repo": "animesfhd/cloudstream-extensions",
+      "branch": "main",
+      "commit": "df7370450bbf9932341215336e85d5df60f9cf75",
+      "path": "builds/plugins.json",
+      "license_metadata": "MIT",
+      "total": 1,
+      "overlap": 0
+    },
+    {
+      "name": "Luna712",
+      "repo": "Luna712/Luna712-CloudStream-Extensions",
+      "branch": "builds",
+      "commit": "e6401f0e35d423ae91c9957d0bb367ab8ca06f7a",
+      "path": "plugins.json",
+      "license_metadata": null,
+      "total": 2,
+      "overlap": 2
+    }
+  ],
+  "excluded_from_byte_audit": [
+    {
+      "name": "aslafy-z Stable",
+      "status": "release asset listed; catalog bytes unavailable"
+    },
+    {
+      "name": "Eclipsia",
+      "status": "CloudStream catalog inaccessible"
+    },
+    {
+      "name": "FStream",
+      "status": "access denied by upstream protection"
+    },
+    {
+      "name": "CuxPlug",
+      "status": "manifest returned HTTP 404"
+    },
+    {
+      "name": "DiziPal & NeonSpor",
+      "status": "HTTP 451 legal block; no alternate retrieval attempted"
+    },
+    {
+      "name": "Kraptor's CloudStream repository",
+      "status": "manifest returned HTTP 404"
+    }
+  ],
+  "expected": {
+    "rows": 309,
+    "overlap": 79,
+    "candidates": 230,
+    "distinct": 227
+  },
+  "status": "READ_ONLY_CANDIDATES_NOT_APPROVED"
+}
