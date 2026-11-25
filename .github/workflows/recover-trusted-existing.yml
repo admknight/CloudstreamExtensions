@@ -1,0 +1,209 @@
+name: Recover Failing Existing Packages (Trusted Publisher Policy)
+
+on:
+  schedule:
+    - cron: '21 7 * * *'
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/recover-trusted-existing.yml'
+      - 'tools/prepare_trusted_package_repairs.py'
+      - 'trusted_upstream_policy.json'
+      - 'tools/trusted_upstream_candidates.py'
+      - 'tests/test_prepare_trusted_package_repairs.py'
+  pull_request:
+    paths:
+      - '.github/workflows/recover-trusted-existing.yml'
+      - 'tools/prepare_trusted_package_repairs.py'
+      - 'trusted_upstream_policy.json'
+      - 'tools/trusted_upstream_candidates.py'
+      - 'tests/test_prepare_trusted_package_repairs.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Serialize writes with the existing production aggregator; PR previews do not
+# block production jobs. The ordinary guarded release policy is unchanged.
+concurrency:
+  group: ${{ github.ref == 'refs/heads/master' && 'production-aggregator' || format('trusted-repair-preview-{0}', github.ref) }}
+  cancel-in-progress: false
+
+jobs:
+  regressions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify repair-only gate and existing safeguards offline
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests -p test_prepare_trusted_package_repairs.py -v
+          python3 -m unittest discover -s tests -p test_trusted_upstream_candidates.py -v
+          python3 -m unittest discover -s tests -p test_prepare_published_url_repairs.py -v
+          python3 -m unittest discover -s tests -p test_plan_published_repairs.py -v
+          python3 -m unittest discover -s tests -p test_immutable_recovery_index.py -v
+          python3 -m unittest discover -s tests -p test_guarded_audit_classification.py -v
+          python3 -m unittest discover -s tests -p test_audit_package_integrity.py -v
+          python3 -m py_compile tools/prepare_published_url_repairs.py tools/prepare_trusted_package_repairs.py
+          ruby -e 'require "yaml"; YAML.load_file(".github/workflows/recover-trusted-existing.yml")'
+
+  preview:
+    needs: regressions
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      snapshot: ${{ steps.snapshot.outputs.commit }}
+      eligible: ${{ steps.stage.outputs.eligible }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: builds
+          path: previous
+          persist-credentials: false
+      - name: Bind evidence to one production commit
+        id: snapshot
+        run: echo "commit=$(git -C previous rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Verify eligible newer versions from exact registered publisher and full catalog
+        id: stage
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 source/tools/prepare_trusted_package_repairs.py \
+            --previous-dir previous --sources source/sources.json \
+            --policy source/trusted_upstream_policy.json --output-dir staged
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=json.loads(Path("staged/trusted-repair-proof.json").read_text())
+          assert p["normalGuardedReleaseAuthorized"] is False
+          assert p["previouslyVerifiedLost"] == []
+          assert p["publishedCount"] == len(p["checks"])
+          with open(os.environ["GITHUB_OUTPUT"],"a") as out:
+              out.write("eligible="+str(p["repairEligible"]).lower()+"\n")
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a") as out:
+              out.write(f"Trusted-existing preview: {len(p['changed'])} edits; "
+                        f"{p['beforeHashMatches']} → {p['afterHashMatches']} verified; "
+                        f"{len(p['unresolved'])} unresolved. NOT A FULL RELEASE.\n")
+          PY
+      - name: Preserve snapshot-bound evidence and proposed files
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trusted-repair-preview-${{ github.run_id }}
+          path: |
+            staged/
+          retention-days: 30
+          if-no-files-found: warn
+
+  publish:
+    needs: [regressions, preview]
+    if: ${{ github.repository == 'admknight/CloudstreamExtensions' && github.ref == 'refs/heads/master' && (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_dispatch') && needs.preview.outputs.eligible == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    outputs:
+      commit: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.preview.outputs.snapshot }}
+          path: previous
+      - uses: actions/download-artifact@v4
+        with:
+          name: trusted-repair-preview-${{ github.run_id }}
+          path: evidence
+      - name: Recompute trusted policy and exact pinned candidate with fresh downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 source/tools/prepare_trusted_package_repairs.py \
+            --previous-dir previous --sources source/sources.json \
+            --policy source/trusted_upstream_policy.json --output-dir final-repair
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          read=lambda p: json.loads(Path(p).read_text())
+          before=read("evidence/trusted-repair-proof.json")
+          final=read("final-repair/trusted-repair-proof.json")
+          for k in ("sourceCatalogDigest","sourceProvenanceDigest","outputCatalogDigest","outputProvenanceDigest","policyDigest","sourceRegistryDigest","changed","policyAttestations"):
+              assert before[k]==final[k], k
+          assert final["repairEligible"] is True
+          assert final["normalGuardedReleaseAuthorized"] is False
+          assert final["previouslyVerifiedLost"] == []
+          assert final["afterHashMatches"] >= before["afterHashMatches"]
+          assert read("previous/repo.json")==read("final-repair/repo.json")
+          assert read("final-repair/merge-report.json")["releaseEligible"] is False
+          PY
+      - name: Atomically publish Trusted-existing delta if builds snapshot is still current
+        id: commit
+        env:
+          EXPECTED: ${{ needs.preview.outputs.snapshot }}
+        run: |
+          set -euo pipefail
+          test "$(git -C previous rev-parse HEAD)" = "$EXPECTED"
+          test "$(git -C previous ls-remote --heads origin refs/heads/builds | cut -f1)" = "$EXPECTED"
+          for name in plugins.json provenance.json merge-report.json release-diff.json STATUS.md README.md RELEASE_NOTES.md BUILD_HISTORY.md trusted-repair-proof.json; do
+            cp "final-repair/$name" "previous/$name"
+          done
+          cd previous
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add plugins.json provenance.json merge-report.json release-diff.json STATUS.md README.md RELEASE_NOTES.md BUILD_HISTORY.md trusted-repair-proof.json
+          git commit -m "Recover failing existing packages under standing verified publisher policy"
+          git push origin HEAD:refs/heads/builds
+          actual="$(git rev-parse HEAD)"
+          test "$(git ls-remote --heads origin refs/heads/builds | cut -f1)" = "$actual"
+          echo "sha=$actual" >> "$GITHUB_OUTPUT"
+      - name: Retain independent publication proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trusted-repair-publication-${{ github.run_id }}
+          path: final-repair/
+          if-no-files-found: warn
+          retention-days: 30
+
+  post-audit:
+    needs: publish
+    if: ${{ needs.publish.result == 'success' && needs.publish.outputs.commit != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.publish.outputs.commit }}
+          path: published
+          persist-credentials: false
+      - name: Independent strict full audit of actual published snapshot
+        run: |
+          python3 source/tools/audit_package_integrity.py --full \
+            --published-file published/plugins.json --provenance-file published/provenance.json \
+            --json-report full-trusted-repair-audit.json --markdown-report full-trusted-repair-audit.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-trusted-repair-audit-${{ github.run_id }}
+          path: |
+            full-trusted-repair-audit.json
+            full-trusted-repair-audit.md
+          retention-days: 30
+          if-no-files-found: warn
