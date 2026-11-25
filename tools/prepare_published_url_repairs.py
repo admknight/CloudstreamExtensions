@@ -246,7 +246,7 @@ def make_bundle(plugins, origins, previous_report, repo_manifest, history, proof
     banner = (f"**{label}; not a full guarded catalog release.** "
               f"{proof['afterHashMatches']}/{len(plugins)} installer URLs matched the published SHA-256. "
               f"{len(residual)} unresolved entries retained unchanged. "
-              "Source indexes checked separately; duplicate decisions are historical. "
+              "Source indexes checked separately; duplicate decisions are historical. " +
               ("Only independently verified, standing-policy existing upgrades adopted; no new provider approved. " if trusted else
                "No new binary or provider approved. ") + "Runtime playback is not verified.\n\n")
     status = template.build_status(report, rows).replace("## Source health", banner + "## Source health", 1)

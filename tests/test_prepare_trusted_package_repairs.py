@@ -49,6 +49,25 @@ class TrustedRepairTests(unittest.TestCase):
         self.assertGreaterEqual(self.calls.count(PIN),2)
         self.assertFalse(proof["normalGuardedReleaseAuthorized"])
 
+    def test_trusted_bundle_does_not_mislabel_changed_binary(self):
+        from prepare_published_url_repairs import make_bundle
+        from unittest.mock import patch
+        plugins, origins, proof = self.run_case()
+        origins[0].update(sourceName="Example", category="Other")
+        proof["outputProvenanceDigest"] = __import__("plan_per_plugin_selection").canonical_sha256(origins)
+        statuses = [{"id":"example","name":"Example","ok":True,"includedCount":1}]
+        prior = {"generatedAt":"2026-01-01", "candidateStatus":"READY",
+                 "sourceHealth":{"ok":1,"failed":0},"sourceStatus":statuses}
+        history = "# History\n\n| header |\n| --- |\n"
+        with patch("prepare_published_url_repairs.template.build_status",return_value="## Source health"), \
+             patch("prepare_published_url_repairs.template.build_readme",return_value="## 📊 Current dashboard"):
+            bundle = make_bundle(plugins, origins, prior, {}, history, proof, statuses, generated_at="2026-11-26")
+        self.assertIn("trusted-repair-proof.json",bundle)
+        self.assertEqual(bundle["merge-report.json"]["integrityHealth"]["trustedExistingUpgrades"],1)
+        self.assertEqual(bundle["merge-report.json"]["changeDetails"]["updated"][0]["fromVersion"],1)
+        self.assertIn("v1 to v2",bundle["RELEASE_NOTES.md"])
+        self.assertNotIn("No new binary or provider approved",bundle["STATUS.md"])
+
     def test_same_version_cannot_be_updated(self):
         self.candidate["version"]=1
         self.pinned["version"]=1

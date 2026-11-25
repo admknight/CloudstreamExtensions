@@ -136,13 +136,14 @@ jobs:
           import json
           from pathlib import Path
           read=lambda p: json.loads(Path(p).read_text())
-          before=read("evidence/staged/trusted-repair-proof.json")
+          before=read("evidence/trusted-repair-proof.json")
           final=read("final-repair/trusted-repair-proof.json")
           for k in ("sourceCatalogDigest","sourceProvenanceDigest","outputCatalogDigest","outputProvenanceDigest","policyDigest","sourceRegistryDigest","changed","policyAttestations"):
               assert before[k]==final[k], k
           assert final["repairEligible"] is True
           assert final["normalGuardedReleaseAuthorized"] is False
           assert final["previouslyVerifiedLost"] == []
+          assert final["afterHashMatches"] >= before["afterHashMatches"]
           assert read("previous/repo.json")==read("final-repair/repo.json")
           assert read("final-repair/merge-report.json")["releaseEligible"] is False
           PY
