@@ -183,7 +183,7 @@ def _plugin_display(plugin, origin):
 def reconcile(candidate, previous, candidate_provenance, previous_provenance,
               preview, preview_provenance, selection, verification,
               candidate_report, previous_report, candidate_repo, previous_repo,
-              *, mode="compatibility"):
+              *, mode="compatibility", allow_partial_source_review=False):
     if mode not in ("compatibility", "quarantine"):
         raise ValueError("Unrecognized reconciliation mode")
     if not isinstance(candidate_report, dict) or not isinstance(previous_report, dict):
@@ -192,9 +192,22 @@ def reconcile(candidate, previous, candidate_provenance, previous_provenance,
         raise ValueError("Repo manifest changed unexpectedly; review before reconciliation")
     if candidate_report.get("uniquePlugins") != len(candidate):
         raise ValueError("Source merger report doesn't match candidate")
-    if candidate_report.get("sourceHealth", {}).get("failed") != 0:
-        raise ValueError("Unhealthy source index; refuse derived publication plan")
-    if candidate_report.get("candidateStatus") != "READY":
+    health = candidate_report.get("sourceHealth", {})
+    state = candidate_report.get("candidateStatus")
+    if health.get("failed") != 0:
+        if not allow_partial_source_review:
+            raise ValueError("Unhealthy source index; refuse derived publication plan")
+        rows = candidate_report.get("sourceStatus", [])
+        if (not isinstance(rows, list) or not rows
+                or any(not isinstance(row, dict) or not row.get("id")
+                       or type(row.get("ok")) is not bool for row in rows)
+                or len({row["id"] for row in rows}) != len(rows)
+                or health != {"ok": sum(row["ok"] for row in rows),
+                              "failed": sum(not row["ok"] for row in rows)}
+                or state != "BLOCKED - upstream index failure"
+                or len(candidate) < 50):
+            raise ValueError("Partial-source diagnostic evidence is inconsistent")
+    elif state != "READY":
         raise ValueError("Candidate merger safety state is not READY")
 
     current, old, cur_src, old_src, chosen, chosen_src, incidents = validate_snapshots(
@@ -572,6 +585,8 @@ def main(argv=None):
         parser.add_argument("--" + name, required=True, type=Path)
     parser.add_argument("--mode", choices=("compatibility", "quarantine"),
                         default="compatibility")
+    parser.add_argument("--allow-partial-source-review", action="store_true",
+                        help="Reconcile a blocked source preview only; never authorize publication")
     args = parser.parse_args(argv)
     source_dir, previous_dir, selection_dir = [
         args.candidate_dir.resolve(), args.previous_dir.resolve(),
@@ -597,7 +612,7 @@ def main(argv=None):
         read(previous_dir, "merge-report.json", dict),
         read(source_dir, "repo.json", dict),
         read(previous_dir, "repo.json", dict),
-        mode=args.mode,
+        mode=args.mode, allow_partial_source_review=args.allow_partial_source_review,
     )
     write_bundle(destination, bundle)
     summary = bundle["merge-report.json"]

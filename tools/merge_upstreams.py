@@ -777,7 +777,12 @@ def main():
     parser.add_argument("--previous", default=None)
     parser.add_argument("--previous-report", default=None)
     parser.add_argument("--previous-provenance", default=None)
+    parser.add_argument("--diagnostic-partial-sources", action="store_true",
+                        help="Write a BLOCKED read-only preview despite source outages")
     args = parser.parse_args()
+    if args.diagnostic_partial_sources and Path(args.output_dir).name.lower() in (
+            "builds", "merged", "production", "source"):
+        parser.error("Partial source diagnostics require a separate preview directory")
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -1177,15 +1182,16 @@ def main():
 
     print(json.dumps(report, indent=2, ensure_ascii=False))
 
-    if failed_sources:
-        raise RuntimeError(
-            "Publication blocked because these source indexes could not be fetched: "
-            + ", ".join(failed_sources)
-        )
     if len(published_plugins) < 50:
         raise RuntimeError(
             f"Safety check failed: only {len(published_plugins)} reachable plugins remain"
         )
+    if failed_sources:
+        message = ("Publication blocked because these source indexes could not be fetched: "
+                   + ", ".join(failed_sources))
+        if not args.diagnostic_partial_sources:
+            raise RuntimeError(message)
+        print("READ-ONLY DIAGNOSTIC: " + message)
 
 
 if __name__ == "__main__":
