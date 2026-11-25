@@ -62,3 +62,9 @@ runtime install behavior and grants publication permissions.
 ## November 25 recovery evidence retention
 
 The November 14–25 immutable recovery artifacts were reconciled to the same 547-entry published snapshot at `b549af0a7a26c091bac2b0859f69dbfe499b7657`. Their union contains 435 distinct historical matching identities versus 420 in the latest inventory. The supplemental hint registry retains the 15 lost identities and 41 currently history-dependent identities, preserving the original LK21 hint. These are discovery hints only; actual fresh recovery coverage can be lower. Sources: [November 15 inventory](https://github.com/admknight/CloudstreamExtensions/actions/runs/43715932164), [November 19 inventory](https://github.com/admknight/CloudstreamExtensions/actions/runs/44544895326), and [November 25 inventory](https://github.com/admknight/CloudstreamExtensions/actions/runs/45648994160). No new binary approval or production release follows from retention alone.
+
+## Source-independent repair planning
+
+The immutable recovery workflow now independently downloads the originally published package URLs and re-verifies each proposed commit-pinned replacement. Its `published-url-repair-plan.json` covers every published identity, including entries absent from the current upstream candidate. It distinguishes byte-identical repairs, preventive immutable pins, unchanged verified entries, and unresolved exceptions. No manifest, trust policy, plugin version, source attribution, or incident is changed by this workflow. A plan is not permission to publish; all production safeguards still apply.
+
+The full-catalog review also continues through a recognized upstream-index outage in an explicitly diagnostic mode. It retains the failed source verdict and uploads any produced review artifacts before failing the source gate. Production aggregation continues to fail closed on unhealthy sources.

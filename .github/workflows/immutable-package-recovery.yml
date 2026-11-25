@@ -8,12 +8,16 @@ on:
     paths:
       - '.github/workflows/immutable-package-recovery.yml'
       - 'tools/index_immutable_recovery.py'
+      - 'tools/plan_published_repairs.py'
+      - 'tests/test_plan_published_repairs.py'
       - 'verified_historical_revisions.json'
       - 'tests/test_immutable_recovery_index.py'
   pull_request:
     paths:
       - '.github/workflows/immutable-package-recovery.yml'
       - 'tools/index_immutable_recovery.py'
+      - 'tools/plan_published_repairs.py'
+      - 'tests/test_plan_published_repairs.py'
       - 'verified_historical_revisions.json'
       - 'tests/test_immutable_recovery_index.py'
       - 'docs/IMMUTABLE_RECOVERY.md'
@@ -36,7 +40,8 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m unittest discover -s tests -p 'test_immutable_recovery_index.py' -v
-          python3 -m py_compile tools/index_immutable_recovery.py
+          python3 -m unittest discover -s tests -p 'test_plan_published_repairs.py' -v
+          python3 -m py_compile tools/index_immutable_recovery.py tools/plan_published_repairs.py
       - name: Validate workflow syntax and permission boundary
         run: |
           ruby -e 'require "yaml"; YAML.load_file(".github/workflows/immutable-package-recovery.yml"); puts "YAML parsed."'
@@ -104,11 +109,22 @@ jobs:
               output.write('- **No changed binary approved and no published manifest updated.**\n')
           print('Complete, consistent pin evidence.')
           PY
+      - name: Independently verify all published package repairs without fetching source indexes
+        run: |
+          set -euo pipefail
+          python3 source/tools/plan_published_repairs.py \
+            --published published/plugins.json \
+            --provenance published/provenance.json \
+            --inventory immutable-recovery.json \
+            --output published-url-repair-plan.json \
+            --workers 6
       - name: Retain immutable recovery lock evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: immutable-published-fingerprint-${{ github.run_id }}
-          path: immutable-recovery.json
+          path: |
+            immutable-recovery.json
+            published-url-repair-plan.json
           if-no-files-found: warn
           retention-days: 30
