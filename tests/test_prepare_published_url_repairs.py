@@ -33,6 +33,18 @@ class TransactionTests(unittest.TestCase):
         self.assertFalse(proof["normalGuardedReleaseAuthorized"])
         self.assertEqual([r["plugin"] for r in proof["unresolved"]], ["c"])
 
+    def test_repair_only_classification_does_not_hide_raw_drift(self):
+        from guarded_audit_classification import classify_drift
+        new, origins, proof = self.run_prepare()
+        report = {"publicationMethod": "byte_identical_repair_only",
+                  "releaseEligible": False, "uniquePlugins": len(new),
+                  "changes": {"removed": 0}, "repairOnly": proof}
+        drift = [{"plugin": "a", "problem": "stale_metadata"}]
+        result = classify_drift(new, origins, report, drift)
+        self.assertTrue(result["repairOnlyNotFullRelease"])
+        self.assertEqual(result["unexpected"], drift)
+        self.assertEqual(result["unverifiedMutableHeldCount"], 1)
+
     def test_wrong_pin_rejected(self):
         self.plan["rows"][0]["proposedUrl"] = ROOT + "b"*40 + "/A.cs3"
         with self.assertRaisesRegex(ValueError, "Invalid immutable"):

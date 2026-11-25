@@ -91,6 +91,9 @@ def prepare(plugins, origins, inventory, plan, *, checker=verify_package, worker
     order = [plugin_identity(p) for p in plugins]
     with ThreadPoolExecutor(max_workers=workers) as pool:
         checks = dict(zip(order, pool.map(lambda k: safe_check(checker, new[k]), order)))
+    for k, result in checks.items():
+        result["plugin"] = k
+        result["url"] = new[k]["url"]
     after = {k for k in order if exact_verified(new[k], checks[k])}
     if not changed.issubset(after) or not before.issubset(after):
         raise ValueError("Independent recheck failed a changed or previously verified package")
