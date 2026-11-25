@@ -2,6 +2,7 @@
 
 | UTC | Run | Commit | Plugins | Sources OK | Package failures | Added | Updated | Removed | Result |
 | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 2026-11-25 19:47:13 UTC | [45688407578](https://github.com/admknight/CloudstreamExtensions/actions/runs/45688407578) | 31f805e2 | 547 | 35 | 10 | 0 | 209 | 0 | URL-only repair; full release blocked |
 | 2026-10-15 17:04:17 UTC | [38774184239](https://github.com/admknight/CloudstreamExtensions/actions/runs/38774184239) | ba9834c5 | 547 | 36 | 0 | 0 | 1 | 0 | Published |
 | 2026-10-15 11:33:45 UTC | [38728126783](https://github.com/admknight/CloudstreamExtensions/actions/runs/38728126783) | cfbf0c05 | 547 | 36 | 0 | 0 | 0 | 0 | Published |
 | 2026-10-15 09:19:51 UTC | [38711986383](https://github.com/admknight/CloudstreamExtensions/actions/runs/38711986383) | 7427f4cf | 547 | 36 | 0 | 0 | 4 | 0 | Published |
@@ -82,3 +83,4 @@
 | 2026-10-04 00:32:50 UTC | [37165276022](https://github.com/admknight/CloudstreamExtensions/actions/runs/37165276022) | 2480b3e7 | 253 | 13 | 3 | 0 | 0 | 0 | Published |
 | 2026-10-04 00:11:04 UTC | [37164145748](https://github.com/admknight/CloudstreamExtensions/actions/runs/37164145748) | f42e70b7 | 253 | 13 | 3 | 0 | 0 | 0 | Published |
 | 2026-10-04 00:09:56 UTC | [37164080249](https://github.com/admknight/CloudstreamExtensions/actions/runs/37164080249) | ed31a4fb | 253 | 13 | 3 | 129 | 124 | 0 | Published |
+
