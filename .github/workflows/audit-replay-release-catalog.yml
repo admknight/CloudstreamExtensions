@@ -1,0 +1,28 @@
+name: Replay Release Catalog Read-Only Audit
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'tools/audit_replay_release_catalog.py'
+      - '.github/workflows/audit-replay-release-catalog.yml'
+permissions:
+  contents: read
+jobs:
+  collect-evidence:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'audit/screenshot-expansion-20261126'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Inspect public release catalog and verify package bytes
+        run: python3 tools/audit_replay_release_catalog.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: replay-release-catalog-evidence
+          path: replay-release-catalog-report.json
+          if-no-files-found: error
+          retention-days: 30
