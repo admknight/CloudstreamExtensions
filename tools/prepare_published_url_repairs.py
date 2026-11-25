@@ -19,7 +19,7 @@ import merge_upstreams as template
 from audit_package_integrity import plugin_identity, verify_package
 from plan_per_plugin_selection import canonical_sha256
 from plan_published_repairs import exact_verified, safe_check
-from verified_immutable_fallback import validated_recovery_locks
+from verified_immutable_fallback import validated_recovery_locks, same_package_url
 
 METHOD = "byte_identical_repair_only"
 EDITED = {"repair_verified", "protect_verified"}
@@ -61,7 +61,7 @@ def prepare(plugins, origins, inventory, plan, *, checker=verify_package, worker
                 or row.get("originalUrl") != p.get("url")
                 or row.get("sourceId") != origin.get("sourceId")
                 or any(row.get(f) != p.get(f) for f in ("version", "fileSize", "fileHash"))
-                or row.get("provenanceUrlMatches") is not (origin.get("packageUrl") == p.get("url"))):
+                or row.get("provenanceUrlMatches") is not same_package_url(origin.get("packageUrl"), p.get("url"))):
             raise ValueError("Repair row differs from original published metadata: " + key)
         if verified:
             before.add(key)
@@ -69,7 +69,7 @@ def prepare(plugins, origins, inventory, plan, *, checker=verify_package, worker
         if status in EDITED:
             lock = locks.get(key)
             if (not lock or proposed != lock["pinnedUrl"] or proposed == p.get("url")
-                    or origin.get("packageUrl") != p.get("url")
+                    or not same_package_url(origin.get("packageUrl"), p.get("url"))
                     or row.get("proposedBytesVerified") is not True
                     or row.get("commitSha") != lock["commitSha"]
                     or (status == "repair_verified") == verified):
@@ -108,8 +108,8 @@ def prepare(plugins, origins, inventory, plan, *, checker=verify_package, worker
             raise ValueError("Unresolved or unchanged entry modified")
     residual = [{"plugin": k, "sourceId": old_origins[k]["sourceId"],
                  "url": new[k]["url"], "check": checks[k],
-                 "provenanceUrlMatches": new_origins[k].get("packageUrl") == new[k]["url"]}
-                for k in order if k not in after or new_origins[k].get("packageUrl") != new[k]["url"]]
+                 "provenanceUrlMatches": same_package_url(new_origins[k].get("packageUrl"), new[k]["url"])}
+                for k in order if k not in after or not same_package_url(new_origins[k].get("packageUrl"), new[k]["url"])]
     proof = {
         "mode": "BYTE_IDENTICAL_URL_REPAIR_ONLY",
         "normalGuardedReleaseAuthorized": False,
