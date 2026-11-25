@@ -21,6 +21,7 @@ from pathlib import Path
 
 from verify_candidate_integrity import index_plugins, source_index
 from plan_per_plugin_selection import canonical_sha256
+from verified_immutable_fallback import same_package_url
 
 SHA256 = re.compile(r"^sha256-([a-f0-9]{64})$", re.I)
 GIT_SHA = re.compile(r"^[a-f0-9]{40}$", re.I)
@@ -158,7 +159,7 @@ def index_recovery(plugins, provenance, resolve_ref, list_history, fetch_binary,
         if not ref:
             errors[key] = "missing_source_id"
             continue
-        if str(record.get("packageUrl") or "") != str(entry.get("url") or ""):
+        if not same_package_url(record.get("packageUrl"), entry.get("url")):
             errors[key] = "previous_provenance_package_url_mismatch"
             continue
         digest = entry.get("fileHash")

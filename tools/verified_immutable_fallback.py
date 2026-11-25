@@ -18,6 +18,28 @@ from verify_candidate_integrity import index_plugins, source_index
 SHA = re.compile(r"^[a-f0-9]{40}$", re.I)
 
 
+def same_package_url(left, right):
+    """Allow only literal ASCII space vs %20 in the identical GitHub raw path.
+
+    Do not decode slashes, dots, percent escapes, queries, hosts or credentials.
+    Exact byte verification remains mandatory for any replacement.
+    """
+    if not isinstance(left, str) or not isinstance(right, str):
+        return False
+    if left == right:
+        return True
+    if left.replace(" ", "%20") != right.replace(" ", "%20"):
+        return False
+    for value in (left, right):
+        if any(ord(ch) < 32 or ord(ch) == 127 for ch in value):
+            return False
+        parsed = urlparse(value)
+        if (parsed.scheme != "https" or parsed.netloc != "raw.githubusercontent.com"
+                or parsed.query or parsed.fragment or not parsed.path.lower().endswith(".cs3")):
+            return False
+    return True
+
+
 def _digest(items):
     return hashlib.sha256(
         json.dumps(items, ensure_ascii=False, sort_keys=True,
@@ -103,7 +125,7 @@ def validated_recovery_locks(index, previous, previous_provenance):
             or entry.get("originalSourceRepository") != provenance.get("sourceRepository")
             or entry.get("trustBasis") != "matches_previously_published_sha256_and_size"
             or entry.get("releaseAuthorVerified") is not False
-            or provenance.get("packageUrl") != original
+            or not same_package_url(provenance.get("packageUrl"), original)
         ):
             raise ValueError("Immutable recovery lock does not match previous publication: " + key)
         locks[key] = entry

@@ -45,6 +45,26 @@ class TransactionTests(unittest.TestCase):
         self.assertEqual(result["unexpected"], drift)
         self.assertEqual(result["unverifiedMutableHeldCount"], 1)
 
+    def test_literal_space_and_percent20_preserve_exact_provenance_and_bytes(self):
+        from index_immutable_recovery import index_recovery
+        from verified_immutable_fallback import same_package_url
+        p, origin = self.plugins[0], self.origins[0]
+        p["url"] = ROOT + "builds/A%20B.cs3"
+        origin["packageUrl"] = ROOT + "builds/A B.cs3"
+        pinned = ROOT + SHA + "/A%20B.cs3"
+        self.store[pinned] = b"old-bytes"
+        inventory = index_recovery(self.plugins, self.origins, lambda *a: SHA,
+                    lambda *a: [], lambda u: self.store[u], workers=1)
+        plan = plan_repairs(self.plugins, self.origins, inventory, checker=self.checker, workers=1)
+        new, origins, proof = prepare(self.plugins, self.origins, inventory, plan,
+                                    checker=self.checker, workers=1)
+        self.assertEqual(new[0]["url"], pinned)
+        self.assertEqual(origins[0]["packageUrl"], pinned)
+        self.assertTrue(same_package_url(p["url"], origin["packageUrl"]))
+        self.assertFalse(same_package_url(ROOT+"builds/A%2FB.cs3", ROOT+"builds/A/B.cs3"))
+        self.assertFalse(same_package_url(p["url"]+"?a=1", origin["packageUrl"]+"?a=1"))
+        self.assertFalse(same_package_url(p["url"], "https://example.org/A B.cs3"))
+
     def test_wrong_pin_rejected(self):
         self.plan["rows"][0]["proposedUrl"] = ROOT + "b"*40 + "/A.cs3"
         with self.assertRaisesRegex(ValueError, "Invalid immutable"):

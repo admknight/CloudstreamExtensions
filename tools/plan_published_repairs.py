@@ -13,7 +13,7 @@ from pathlib import Path
 from audit_package_integrity import DIGEST_RE, plugin_identity, verify_package
 from plan_per_plugin_selection import canonical_sha256
 from verified_immutable_fallback import (
-    validated_recovery_locks, restore_previous_from_lock,
+    validated_recovery_locks, restore_previous_from_lock, same_package_url,
 )
 
 
@@ -49,7 +49,7 @@ def plan_repairs(plugins, provenance, inventory, *, checker=verify_package, work
         origin = origins[key]
         original = safe_check(checker, entry)
         old_ok = exact_verified(entry, original)
-        provenance_ok = origin.get("packageUrl") == entry.get("url")
+        provenance_ok = same_package_url(origin.get("packageUrl"), entry.get("url"))
         row = {"plugin": key, "sourceId": origin.get("sourceId"),
                "version": entry.get("version"), "fileSize": entry.get("fileSize"),
                "fileHash": entry.get("fileHash"), "originalUrl": entry.get("url"),
