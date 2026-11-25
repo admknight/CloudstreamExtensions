@@ -228,6 +228,28 @@ class ReconcileTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"Unhealthy source"):
             self.run_reconcile(modify=change)
 
+    def test_explicit_partial_source_review_preserves_failed_status_and_never_authorizes(self):
+        inputs = list(fixtures())
+        inputs[8]["sourceStatus"][1]["ok"] = False
+        inputs[8]["sourceHealth"] = {"ok": 1, "failed": 1}
+        inputs[8]["candidateStatus"] = "BLOCKED - upstream index failure"
+        for mode in ("compatibility", "quarantine"):
+            bundle = reconcile(*inputs, mode=mode, allow_partial_source_review=True)
+            report = bundle["merge-report.json"]
+            self.assertEqual(report["sourceHealth"], {"ok": 1, "failed": 1})
+            self.assertFalse(report["releaseAuthorized"])
+            self.assertFalse(bundle["reconciliation.json"]["releaseAuthorized"])
+            self.assertIn("NOT PUBLISHED", bundle["STATUS.md"])
+        self.assertGreaterEqual(len(reconcile(*inputs, allow_partial_source_review=True)["plugins.json"]),
+                                len(inputs[1]))
+
+    def test_partial_source_review_rejects_inconsistent_source_counts(self):
+        inputs = list(fixtures())
+        inputs[8]["sourceHealth"]["failed"] = 1
+        inputs[8]["candidateStatus"] = "BLOCKED - upstream index failure"
+        with self.assertRaisesRegex(ValueError, "Partial-source diagnostic evidence"):
+            reconcile(*inputs, allow_partial_source_review=True)
+
     def test_invalid_source_counts_fail_evidence(self):
         def change(args):
             args[6]["selection"]["quarantinedExisting"]=300

@@ -4,7 +4,7 @@
 
 The workflow [Full Catalog Integrity Review (Read Only)](../.github/workflows/full-integrity-review.yml)
 runs daily at **02:11 UTC**, on demand through GitHub Actions, and in relevant pull requests.
-The existing three-hour aggregation and hourly incident monitor remain independent.
+The aggregation and package integrity audit are independently scheduled daily at 00:17 and 03:43 UTC respectively; the incident monitor runs after the package audit.
 
 ## What it does
 

@@ -10,7 +10,7 @@ This is **not** an alternate package repository, an upstream auto-approval list,
 2. Use only the previously published checksum/length as a fingerprint. Do not manufacture hashes or accept a newly introduced upstream digest as a preapproved release.
 3. Resolve `raw.githubusercontent.com/OWNER/REPO/REF/path.cs3` to the full Git commit for `REF`.
 4. Fetch that specific commit-pinned file; independently compare its exact length and SHA-256 against the already published record.
-5. If the current ref points to different bytes, search a **bounded** portion of the same package's commit history and verify immutable prior revisions until one matches.
+5. If the current ref points to different bytes, independently recheck explicit historical commit hints from `verified_historical_revisions.json` and search a **bounded** portion of the same package's commit history. Hints remain eligible if the mutable branch is unavailable or history search is disabled. A previously published full commit can be tested directly when commit lookup fails. A hint is never evidence of a fresh match until the exact published SHA-256 and size are reverified.
 6. Retain one lock entry only upon an actual content match. Log all missing hashes, unsupported URLs, inaccessible source commits, network failures, and unmatched history separately. The complete index is retained as a GitHub Actions artifact.
 
 Each verified entry records the original URL, full commit SHA, immutable raw URL, original package source, version, size and published checksum. Its trust class is `matches_previously_published_sha256_and_size`, and `releaseAuthorVerified` is always `false`.
@@ -58,3 +58,13 @@ The outputs still say `releaseAuthorized: false`. **No update to published
 plugin URLs, manifests, source lists or CloudStream installers is made by this
 workflow.** A rollback is not deployed until a separate release gate confirms
 runtime install behavior and grants publication permissions.
+
+## November 25 recovery evidence retention
+
+The November 14–25 immutable recovery artifacts were reconciled to the same 547-entry published snapshot at `b549af0a7a26c091bac2b0859f69dbfe499b7657`. Their union contains 435 distinct historical matching identities versus 420 in the latest inventory. The supplemental hint registry retains the 15 lost identities and 41 currently history-dependent identities, preserving the original LK21 hint. These are discovery hints only; actual fresh recovery coverage can be lower. Sources: [November 15 inventory](https://github.com/admknight/CloudstreamExtensions/actions/runs/43715932164), [November 19 inventory](https://github.com/admknight/CloudstreamExtensions/actions/runs/44544895326), and [November 25 inventory](https://github.com/admknight/CloudstreamExtensions/actions/runs/45648994160). No new binary approval or production release follows from retention alone.
+
+## Source-independent repair planning
+
+The immutable recovery workflow now independently downloads the originally published package URLs and re-verifies each proposed commit-pinned replacement. Its `published-url-repair-plan.json` covers every published identity, including entries absent from the current upstream candidate. It distinguishes byte-identical repairs, preventive immutable pins, unchanged verified entries, and unresolved exceptions. No manifest, trust policy, plugin version, source attribution, or incident is changed by this workflow. A plan is not permission to publish; all production safeguards still apply.
+
+The full-catalog review also continues through a recognized upstream-index outage in an explicitly diagnostic mode. It retains the failed source verdict and uploads any produced review artifacts before failing the source gate. Production aggregation continues to fail closed on unhealthy sources.

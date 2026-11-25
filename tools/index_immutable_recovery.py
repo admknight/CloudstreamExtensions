@@ -199,13 +199,17 @@ def index_recovery(plugins, provenance, resolve_ref, list_history, fetch_binary,
         entry, origin, info = payload
         location = (info["owner"], info["repo"], info["ref"])
         head = sha_map.get(location)
-        if not head:
-            return None, "unresolvable_repository_commit"
+        # A full published commit can be checked directly even if the GitHub
+        # commit API is temporarily unavailable. A detached historical hint
+        # must likewise remain usable when the mutable branch disappears.
+        if GIT_SHA.fullmatch(info["ref"]):
+            head = info["ref"].lower()
         size = entry["fileSize"]
         digest = entry["fileHash"].lower()
-        attempts = [head]
+        attempts = [head] if head else []
         try:
-            same, detail = compare_pinned_bytes(info, head, size, digest, fetch_binary)
+            same, detail = (compare_pinned_bytes(info, head, size, digest, fetch_binary)
+                            if head else (False, None))
             if same:
                 return {
                     "plugin": entry.get("internalName") or entry.get("name"),
@@ -224,12 +228,13 @@ def index_recovery(plugins, provenance, resolve_ref, list_history, fetch_binary,
                 }, None
         except Exception:
             pass
-        if max_history:
+        hints = supplemental_revisions.get(key, [])
+        if max_history or hints:
             try:
-                history = list_history(info, max_history)
+                history = list_history(info, max_history) if max_history and head else []
             except Exception:
                 history = []
-            history = list(supplemental_revisions.get(key, [])) + history
+            history = list(hints) + list(history)
             for sha in history:
                 if not GIT_SHA.fullmatch(str(sha)) or sha.lower() in attempts:
                     continue
@@ -256,7 +261,8 @@ def index_recovery(plugins, provenance, resolve_ref, list_history, fetch_binary,
                         "releaseAuthorVerified": False,
                         "historyLookupUsed": True,
                     }, None
-        return None, "published_bytes_not_found_in_bounded_immutable_history"
+        return None, ("published_bytes_not_found_in_bounded_immutable_history"
+                      if head else "unresolvable_repository_commit")
 
     locks = {}
     with ThreadPoolExecutor(max_workers=workers) as pool:

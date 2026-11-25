@@ -102,7 +102,8 @@ jobs:
           python3 source/tools/merge_upstreams.py candidate \
             --previous production/plugins.json \
             --previous-report production/merge-report.json \
-            --previous-provenance production/provenance.json
+            --previous-provenance production/provenance.json \
+            --diagnostic-partial-sources
       - name: Verify published checksums against immutable source revisions
         env:
           GH_TOKEN: ${{ github.token }}
@@ -157,13 +158,13 @@ jobs:
             --previous-dir production \
             --selection-dir review-preview \
             --output-dir review-compatibility \
-            --mode compatibility
+            --mode compatibility --allow-partial-source-review
           python3 source/tools/reconcile_integrity_review.py \
             --candidate-dir candidate \
             --previous-dir production \
             --selection-dir review-preview \
             --output-dir review-quarantine \
-            --mode quarantine
+            --mode quarantine --allow-partial-source-review
       - name: Cross-check every candidate, decision and preserved provenance
         run: |
           python3 - <<'PY'
@@ -268,3 +269,12 @@ jobs:
             review-quarantine/
           if-no-files-found: warn
           retention-days: 14
+      - name: Retain failed source verdict after independent diagnostics
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path("candidate/merge-report.json").read_text())
+          if report["sourceHealth"]["failed"]:
+              raise SystemExit("Source index outage remains unresolved; diagnostic artifacts retained; no publication.")
+          PY

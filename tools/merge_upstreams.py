@@ -500,7 +500,7 @@ def build_readme(report, plugin_rows):
         "### Why use this CloudStream repository?",
         "",
         "- One repository URL for hundreds of CloudStream extensions.",
-        "- Guarded upstream metadata refresh every three hours, plus a separate hourly read-only integrity audit.",
+        "- Daily guarded upstream metadata refresh, plus a separate daily read-only integrity audit.",
         "- Duplicate/version resolution so the best reachable package is selected.",
         "- Package reachability checks and publication safety gates.",
         "- Custom provider builds with separate health monitoring.",
@@ -583,8 +583,8 @@ def build_readme(report, plugin_rows):
         "",
         "## 🤖 Automation & monitoring",
         "",
-        "- Guarded production aggregation runs every three hours at minute **17 UTC** and on relevant configuration changes.",
-        "- A separate read-only package integrity audit runs hourly; it compares upstream metadata and rotates direct package SHA-256 checks without modifying published manifests.",
+        "- Guarded production aggregation is scheduled daily at **00:17 UTC** and on relevant configuration changes; GitHub may delay scheduled runs.",
+        "- A separate read-only package integrity audit is scheduled daily at **03:43 UTC**; it compares upstream metadata and rotates direct package SHA-256 checks without modifying published manifests.",
         "- Custom-provider website health runs every day at **01:30 UTC** and on custom provider source changes.",
         "- Publication pushes retry automatically up to **3 times** before a workflow is marked failed.",
         "- Runtime health is advisory: a temporary provider-site outage is reported but does not remove or overwrite the last known-good production catalog.",
@@ -777,7 +777,12 @@ def main():
     parser.add_argument("--previous", default=None)
     parser.add_argument("--previous-report", default=None)
     parser.add_argument("--previous-provenance", default=None)
+    parser.add_argument("--diagnostic-partial-sources", action="store_true",
+                        help="Write a BLOCKED read-only preview despite source outages")
     args = parser.parse_args()
+    if args.diagnostic_partial_sources and Path(args.output_dir).name.lower() in (
+            "builds", "merged", "production", "source"):
+        parser.error("Partial source diagnostics require a separate preview directory")
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -1177,15 +1182,16 @@ def main():
 
     print(json.dumps(report, indent=2, ensure_ascii=False))
 
-    if failed_sources:
-        raise RuntimeError(
-            "Publication blocked because these source indexes could not be fetched: "
-            + ", ".join(failed_sources)
-        )
     if len(published_plugins) < 50:
         raise RuntimeError(
             f"Safety check failed: only {len(published_plugins)} reachable plugins remain"
         )
+    if failed_sources:
+        message = ("Publication blocked because these source indexes could not be fetched: "
+                   + ", ".join(failed_sources))
+        if not args.diagnostic_partial_sources:
+            raise RuntimeError(message)
+        print("READ-ONLY DIAGNOSTIC: " + message)
 
 
 if __name__ == "__main__":
