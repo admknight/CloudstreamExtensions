@@ -242,6 +242,7 @@ def audit(*, only='', full=False, buckets=6, slot=None, fetcher=None, downloader
             source_errors or package_problems or unsigned
             or classification['unexpectedCount']
             or classification['unverifiedMutableHeldCount']
+            or classification.get('repairOnlyNotFullRelease', False)
         )
     else:
         verdict = strict_pass

@@ -156,6 +156,28 @@ def classify_drift(published, provenance, report, drift):
         raise ValueError("Published plugins and provenance are incomplete")
     if not isinstance(report, dict) or not isinstance(drift, list):
         raise ValueError("Missing guarded release and drift records")
+    if report.get("publicationMethod") == "byte_identical_repair_only":
+        # A narrow correction is NOT a clean guarded catalog release. Preserve
+        # every observed finding and force the rotating audit to remain failed.
+        proof = report.get("repairOnly", {})
+        residual = proof.get("unresolved")
+        if (report.get("releaseEligible") is not False
+                or proof.get("mode") != "BYTE_IDENTICAL_URL_REPAIR_ONLY"
+                or proof.get("normalGuardedReleaseAuthorized") is not False
+                or proof.get("publishedCount") != len(plugins)
+                or report.get("uniquePlugins") != len(plugins)
+                or report.get("changes", {}).get("removed") != 0
+                or not isinstance(residual, list)
+                or any(not isinstance(x, dict) or x.get("plugin") not in plugins for x in residual)
+                or len({x["plugin"] for x in residual}) != len(residual)):
+            raise ValueError("Incomplete repair-only report")
+        return {"known": [], "pendingUntrustedUpstream": [], "unexpected": drift,
+                "knownCount": 0, "pendingUntrustedUpstreamCount": 0,
+                "unexpectedCount": len(drift),
+                "unverifiedMutableHeldCount": len(residual),
+                "repairOnlyNotFullRelease": True,
+                "independentFullAuditPerformed": False,
+                "warning": "Repair-only transaction. All original audit findings remain visible; no full guarded release authorized."}
     if (report.get("releaseEligible") is not True
             or report.get("publicationMethod") != RELEASE_METHOD
             or report.get("uniquePlugins") != len(plugins)
