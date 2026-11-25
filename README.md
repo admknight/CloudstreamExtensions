@@ -56,7 +56,7 @@ The catalog is rebuilt from multiple published CloudStream repositories, dedupli
 ### Why use this CloudStream repository?
 
 - One repository URL for hundreds of CloudStream extensions.
-- Guarded upstream metadata refresh every three hours, plus a separate hourly read-only integrity audit.
+- Daily guarded upstream metadata refresh, plus a separate daily read-only integrity audit.
 - Duplicate/version resolution so the best reachable package is selected.
 - Package reachability checks and publication safety gates.
 - Custom provider builds with separate health monitoring.
@@ -948,8 +948,8 @@ When the same plugin is published by more than one source, the highest version i
 
 ## 🤖 Automation & monitoring
 
-- Guarded production aggregation runs every three hours at minute **17 UTC** and on relevant configuration changes.
-- A separate read-only package integrity audit runs hourly; it compares upstream metadata and rotates direct package SHA-256 checks without modifying published manifests.
+- Guarded production aggregation is scheduled daily at **00:17 UTC** and on relevant configuration changes; GitHub may delay scheduled runs.
+- A separate read-only package integrity audit is scheduled daily at **03:43 UTC**; it compares upstream metadata and rotates direct package SHA-256 checks without modifying published manifests.
 - Custom-provider website health runs every day at **01:30 UTC** and on custom provider source changes.
 - Publication pushes retry automatically up to **3 times** before a workflow is marked failed.
 - Runtime health is advisory: a temporary provider-site outage is reported but does not remove or overwrite the last known-good production catalog.
