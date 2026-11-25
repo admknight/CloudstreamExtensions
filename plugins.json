@@ -102,15 +102,15 @@
     "fileHash": "sha256-c8cbba4f4f36d76907d2b366baa480d9201b16079cef9c3bd85f20cc3049e183"
   },
   {
-    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv%202.cs3",
+    "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/4d75897a2581939d67db5ceebed1f99bddf08d34/Aia2tv%202.cs3",
     "status": 1,
-    "version": 3,
+    "version": 5,
     "name": "[Arabic] Asia2tv 2",
     "internalName": "Aia2tv 2",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 14286,
+    "fileSize": 25322,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "ar",
     "tvTypes": [
@@ -120,7 +120,7 @@
     ],
     "iconUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQEhyYSi351HRw/company-logo_200_200/company-logo_200_200/0/1630489719119?e=2147483647&v=beta&t=Br69OJ2AwT5vdJHgl-DTvliEqOmp6VQLYwUWcFqG4u4",
     "apiVersion": 1,
-    "fileHash": "sha256-1de87a498012cf7252b83f54eeb637a8b4cb482fe7114a1bd66b3adfbae1154e"
+    "fileHash": "sha256-ad0a5830db004c19eaa71775c25eba00eeb743564121ff19d677017c8051c499"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/df85fbb2cf5327588b6d9164a665eeb94ecbc6bc/Akwam.cs3",
@@ -1047,10 +1047,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animeua.club&sz=%size%",
-    "fileHash": "sha256-0b21a92476a98a26ae209ad7c7477ebc47f498a088b463f13a283de7c4b27c1f",
+    "fileHash": "sha256-e2a6a4d776208a6cc11854a5bdf433f13647f84d0f9c56bdded1b9540ba2c41f",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 28337,
+    "fileSize": 31607,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -1064,20 +1064,20 @@
     "version": 10,
     "internalName": "AnimeUAProvider",
     "description": "Тут на вас чекають різноманітні жанри, в яких ви зможете переживати разом із героями все їхнє життя від моментів радості та закоханості з жанру романтики до неймовірних пригод фентазійних серіалів.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeUAProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/AnimeUAProvider.cs3",
     "name": "[Anime] AnimeUAProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/AnimeUnity.cs3",
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/31c79e490597bffe98c2fd2fd250be1ca67d62a8/AnimeUnity.cs3",
     "status": 1,
-    "version": 26,
+    "version": 30,
     "name": "[Anime] AnimeUnity",
     "internalName": "AnimeUnity",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime from AnimeUnity",
-    "fileSize": 134699,
+    "fileSize": 151019,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "it",
     "tvTypes": [
@@ -1087,7 +1087,7 @@
     ],
     "iconUrl": "https://www.animeunity.so/apple-touch-icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-ce83baae5fbbe0f04d17c46a528fceaf134694cb4189fcda32d198d14afcee93"
+    "fileHash": "sha256-30ec1c65396a8629258a3761adee7a2f9397ff11bf2add5a84e322c5271a3704"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=animevietsub.app&sz=%size%",
@@ -1345,10 +1345,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=anitube.in.ua&sz=%size%",
-    "fileHash": "sha256-52ab9a80b39e9522fceb18b61e7f4f4174221581de96765dff1d12f346ddff2d",
+    "fileHash": "sha256-0151709a66775fce683573e8bd0f798b853271ebee602a14d1d35d2c63172032",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 75434,
+    "fileSize": 78725,
     "status": 3,
     "language": "uk",
     "authors": [
@@ -1361,7 +1361,7 @@
     "version": 22,
     "internalName": "AnitubeinuaProvider",
     "description": "На нашому сайті ви можете подивитися аніме онлайн українською безкоштовно. Великий список аніме онлайн тільки у нас.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnitubeinuaProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/AnitubeinuaProvider.cs3",
     "name": "[Anime] AnitubeinuaProvider"
   },
   {
@@ -1595,10 +1595,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=bambooua.com&sz=%size%",
-    "fileHash": "sha256-2064b87ba4aec1a1750728ec2ce4c3ca11109040d0d44d99d78738196e0027ca",
+    "fileHash": "sha256-40b4009a086d6eb4e6bee1086d7693b1c0ee429d8e08da2c4c4d1e60091e2290",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 25354,
+    "fileSize": 28796,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -1611,7 +1611,7 @@
     "version": 13,
     "internalName": "BambooUAProvider",
     "description": "BambooUA - Ми команда, що дарує переклади азійських фільмів / шоу / кліпів / дорам українською мовою. Приєднуйтеся до нас! З нами ти завжди будеш першим!",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/BambooUAProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/BambooUAProvider.cs3",
     "name": "[Anime] BambooUAProvider"
   },
   {
@@ -2013,16 +2013,16 @@
     "fileHash": "sha256-ae542c02c9b45c1e057dac197deb1e774291d4288f2dd01bffb9a4960def05e3"
   },
   {
-    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/CalcioStreaming.cs3",
+    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/543c33667352605244e0d419cc09bd9e5b88660c/CalcioStreaming.cs3",
     "status": 1,
-    "version": 20,
+    "version": 22,
     "name": "[Live] CalcioStreaming",
     "internalName": "CalcioStreaming",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Live streams da CalcioStreaming",
-    "fileSize": 31880,
+    "fileSize": 31881,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "it",
     "tvTypes": [
@@ -2030,7 +2030,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/master/CalcioStreaming/calcio_icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-b2bbc32bc209c53e9d04740f712a6efbf2ec1aa782fb3cbffa9180ca82b9518b"
+    "fileHash": "sha256-639f88d8fdbbcb489827d505a2717edc3bc10af6c8aa34f94ac38d5b6f2c856e"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Cam4.cs3",
@@ -2283,10 +2283,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=cikava-ideya.top&sz=%size%",
-    "fileHash": "sha256-962b89e58f398be2c72ab742bf95ffe5dcdbc107c023f48d631f4ffda5e7d1ba",
+    "fileHash": "sha256-ea6b4b466fa40d48a3230e6bd4d12a901ac2c0dfc3afc1f5878e6234c9d33a4e",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 18077,
+    "fileSize": 21636,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -2300,7 +2300,7 @@
     "version": 5,
     "internalName": "CikavaIdeyaProvider",
     "description": "А це ідея)",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CikavaIdeyaProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/CikavaIdeyaProvider.cs3",
     "name": "[Movies] CikavaIdeyaProvider"
   },
   {
@@ -2651,10 +2651,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=coani.net&sz=%size%",
-    "fileHash": "sha256-d3b8b1fdb43b0737c713a3c763885ba3cba62cfa97595f1b3b7d275269154e93",
+    "fileHash": "sha256-a3429bc4ecac16a4d211744e68ab6127b7ac95ff81edd15105cc86f33175bc9e",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 30065,
+    "fileSize": 33547,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -2666,7 +2666,7 @@
     "version": 2,
     "internalName": "CoaninetProvider",
     "description": "COANI — це платформа для перегляду аніме та дунхуа, створена фанатами для фанатів. Ми поєднуємо зручний перегляд, розумні інструменти та живу спільноту в одному місці.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CoaninetProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/CoaninetProvider.cs3",
     "name": "[Movies] CoaninetProvider"
   },
   {
@@ -4692,10 +4692,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=hentaiukr.com&sz=%size%",
-    "fileHash": "sha256-9d3f670d5ac65fc41e281c7ae57c84186e9d258fff72c1f664de6a90c7c1a568",
+    "fileHash": "sha256-9b4bbc67f398dd1f49abac18a0f685051e3a7ac976a25bc9dea4b90b0fb276f4",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 19378,
+    "fileSize": 23093,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -4707,7 +4707,7 @@
     "version": 6,
     "internalName": "HentaiUkrProvider",
     "description": "Сайт виконаний на некомерційній основі з вірою у Українську спільноту.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/HentaiUkrProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/HentaiUkrProvider.cs3",
     "name": "[Adult] HentaiUkrProvider"
   },
   {
@@ -5620,10 +5620,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kinostrain.com&sz=%size%",
-    "fileHash": "sha256-4485c2a3c747e76be9dbf3edbf3557cba5b1ed74759bb59415e25861e464ec6c",
+    "fileHash": "sha256-24620e20935384ebc9680ea12a934f3797570945402535ea0c9a21aad33ef252",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 34530,
+    "fileSize": 38006,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -5638,7 +5638,7 @@
     "version": 2,
     "internalName": "KinostrainProvider",
     "description": "kinostrain — Дивись фільми і серіали онлайн українською безкоштовно та у HD якості. Новинки 2025–2026, бойовики, комедії, мелодрами та аніме.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinostrainProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KinostrainProvider.cs3",
     "name": "[Movies] KinostrainProvider"
   },
   {
@@ -5666,10 +5666,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kinovezha.com&sz=%size%",
-    "fileHash": "sha256-187b37733d72eaf8a14a97329a981466c213567e724892a4f94509c55e9021d1",
+    "fileHash": "sha256-d3d32cb496f62a8422c99658f608a725590b79cd5dbf64e950e9d8c3b9b9470e",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 25990,
+    "fileSize": 29187,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -5683,7 +5683,7 @@
     "version": 14,
     "internalName": "KinoVezhaProvider",
     "description": "Наша мета — популяризація нашої рідної мови, шляхом збору в одному місці величезної колекції найкращих і найпопулярніших фільмів, серіалів, мультфільмів та мультсеріалів українською мовою, які ви можете дивитися онлайн в HD якості безкоштовно. Приємного перегляду!",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoVezhaProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KinoVezhaProvider.cs3",
     "name": "[Movies] KinoVezhaProvider"
   },
   {
@@ -7394,16 +7394,16 @@
     "fileHash": "sha256-5f8a774e0cd991f885642ce72459d856c6ca122d6298fe337a2fea816b08f93e"
   },
   {
-    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/OnlineSerieTV.cs3",
-    "status": 0,
-    "version": 4,
+    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/543c33667352605244e0d419cc09bd9e5b88660c/OnlineSerieTV.cs3",
+    "status": 1,
+    "version": 5,
     "name": "[Movies] OnlineSerieTV",
     "internalName": "OnlineSerieTV",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Film e SerieTV da OnlineSerieTV",
-    "fileSize": 35994,
+    "fileSize": 43878,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "it",
     "tvTypes": [
@@ -7415,7 +7415,7 @@
     ],
     "iconUrl": "https://lingering-truth-455c.diegon7771.workers.dev/wp-content/uploads/2023/01/cropped-tv-1.png",
     "apiVersion": 1,
-    "fileHash": "sha256-579d48952d5d0f253a21bc96deddd4166f6f8c72ecb20eab07e7f2ab0b528276"
+    "fileHash": "sha256-38a83982f5307ff95b4e3678d01a51b73a86d5cb33d52df59a5faf611a23435f"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Onlyjerk.cs3",
@@ -8676,10 +8676,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=serialno.tv&sz=%size%",
-    "fileHash": "sha256-4ef555409081ea839b9fc9b68f389ca88496b7cc257287a77e2f1657a23600f7",
+    "fileHash": "sha256-62576c1e8d18a095f8eb41bb792a50c4a95f5f038114de3625022290d58c1784",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 24080,
+    "fileSize": 27385,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -8692,7 +8692,7 @@
     "version": 13,
     "internalName": "SerialnoProvider",
     "description": "Відкриваємо світ серіалів, фентезі, містики, екшну, драми та ще безлічі інших жанрів українською мовою - все це Серіально.ТВ. Можна багато чого писати, але сенсу особливо немає. Ви тут, а значить прийшли дивитися серіали. То ж, вперед!:)",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SerialnoProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/SerialnoProvider.cs3",
     "name": "[Movies] SerialnoProvider"
   },
   {
@@ -9073,16 +9073,16 @@
     "name": "[Live] SportzxProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/StreamCenter.cs3",
+    "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/31c79e490597bffe98c2fd2fd250be1ca67d62a8/StreamCenter.cs3",
     "status": 1,
-    "version": 11,
+    "version": 14,
     "name": "[Live] StreamCenter",
     "internalName": "StreamCenter",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Film, Serie TV, Anime e TV in un unico posto.",
-    "fileSize": 1715315,
+    "fileSize": 5905939,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "it",
     "tvTypes": [
@@ -9096,7 +9096,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/master/StreamCenter/icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-7d78567bf15b0b7da5720bcdce60648da3aaaba6389be6dda09d2fa8dcd4d3ed"
+    "fileHash": "sha256-76081259eddf1dae9a59149374c94484f55dac1175a2d225325163e54808f592"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/13d40b34446a2b81f24e830f1ce8a76374e21b78/Streamed.cs3",
@@ -9205,16 +9205,16 @@
     "fileHash": "sha256-d099a75fe33a918eea0500b08bdbeff34566b10664b9c84cb7c2e53e472b9a57"
   },
   {
-    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3",
+    "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/543c33667352605244e0d419cc09bd9e5b88660c/StreamingCommunity.cs3",
     "status": 1,
-    "version": 53,
+    "version": 54,
     "name": "[Movies] StreamingCommunity",
     "internalName": "StreamingCommunity",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Film e SerieTV da StreamingCommunity",
-    "fileSize": 64629,
+    "fileSize": 64621,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "it",
     "tvTypes": [
@@ -9225,7 +9225,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/master/StreamingCommunity/streamingunity_icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-2e486e3958b9ab50ee7c0951b142dea870bcbf69db059cef3af0ea7bc109d5f0"
+    "fileHash": "sha256-d4fe36878fdab17cfc621443fe89166b445ed4e6b62c382a64df0e8c3c0822e7"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/StreamPlay.cs3",
@@ -9503,10 +9503,10 @@
     "fileHash": "sha256-3b159edcb0017fbafa2cd922d386c7520d27505b326cfb5625106b6e2dddfb79"
   },
   {
-    "fileHash": "sha256-016f946d7bcf8ee65dbc952f62f173eb5af9e1151478f4dcd3aa66de337aed82",
+    "fileHash": "sha256-d09744d27a6ec25404fd09618da9e9436b77a163db382ff4d2f30a3d0c4e8c51",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 95301,
+    "fileSize": 110283,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -9518,7 +9518,7 @@
     "version": 3,
     "internalName": "SyncPlugin",
     "description": "Синхронізація CloudStream між пристроями (закладки, продовження перегляду, налаштування, пошук, розширення). Працює з власним сервером CloudStream Sync Server.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/SyncPlugin.cs3",
     "name": "[Tools] SyncPlugin"
   },
   {
@@ -10483,10 +10483,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=unimay.media&sz=%size%",
-    "fileHash": "sha256-4b5acaddd25334606ca232c761374340842f2cfb03adbd3d616195246c3c1f10",
+    "fileHash": "sha256-e3ab433d976abd8f187d67759d92e8091f62f74db08200b168b7205e244f93b1",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 29225,
+    "fileSize": 32741,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -10499,7 +10499,7 @@
     "version": 13,
     "internalName": "UnimayProvider",
     "description": "Unimay Media є однією з провідних команд, що спеціалізується на локалізації та озвученні аніме для україномовної аудиторії.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UnimayProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/UnimayProvider.cs3",
     "name": "[Anime] UnimayProvider"
   },
   {

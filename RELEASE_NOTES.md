@@ -1,82 +1,23 @@
-# Trusted existing version recovery
+# Individually reviewed release recovery
 
-**Trusted existing version recovery; not a full guarded catalog release.** 518/547 installer URLs matched the published SHA-256. 29 unresolved entries retained unchanged. Source indexes checked separately; duplicate decisions are historical. Only independently verified, standing-policy existing upgrades adopted; no new provider approved. Runtime playback is not verified.
+**Individually reviewed release recovery; not a full guarded catalog release.** 535/547 installer URLs matched the published SHA-256. 12 unresolved entries retained unchanged. Source indexes checked separately; duplicate decisions are historical. Only exact individually reviewed releases adopted; no standing trust expansion. Runtime playback is not verified.
 
 
-- anichan: v14 to v19, publisher-policy SHA-256 verified at immutable revision
-- anidap: v17 to v22, publisher-policy SHA-256 verified at immutable revision
-- anikoto: v10 to v12, publisher-policy SHA-256 verified at immutable revision
-- anikotoanime: v17 to v22, publisher-policy SHA-256 verified at immutable revision
-- animeinweb: v4 to v9, publisher-policy SHA-256 verified at immutable revision
-- animesuge: v10 to v12, publisher-policy SHA-256 verified at immutable revision
-- animeworldindia: v8 to v14, publisher-policy SHA-256 verified at immutable revision
-- anipm: v4 to v11, publisher-policy SHA-256 verified at immutable revision
-- anisuge: v6 to v11, publisher-policy SHA-256 verified at immutable revision
-- aniwaves: v7 to v12, publisher-policy SHA-256 verified at immutable revision
-- bilibiliprovider: v36 to v38, publisher-policy SHA-256 verified at immutable revision
-- castletvprovider: v40 to v48, publisher-policy SHA-256 verified at immutable revision
-- cinetvprovider: v35 to v37, publisher-policy SHA-256 verified at immutable revision
-- cnc verse: v114 to v116, publisher-policy SHA-256 verified at immutable revision
-- cnc verse mobile: v10 to v14, publisher-policy SHA-256 verified at immutable revision
-- cricifyprovider: v71 to v78, publisher-policy SHA-256 verified at immutable revision
-- damitvprovider: v25 to v32, publisher-policy SHA-256 verified at immutable revision
-- desiserialsprovider: v33 to v35, publisher-policy SHA-256 verified at immutable revision
-- doramyworldprovider: v2 to v3, publisher-policy SHA-256 verified at immutable revision
-- einthusanprovider: v37 to v39, publisher-policy SHA-256 verified at immutable revision
-- eneyidaprovider: v19 to v20, publisher-policy SHA-256 verified at immutable revision
-- entrepeliculasyseriesprovider: v10 to v12, publisher-policy SHA-256 verified at immutable revision
-- eporner: v13 to v14, publisher-policy SHA-256 verified at immutable revision
-- goldenaudiobook: v33 to v36, publisher-policy SHA-256 verified at immutable revision
-- gotaku: v4 to v14, publisher-policy SHA-256 verified at immutable revision
-- hdoprovider: v35 to v37, publisher-policy SHA-256 verified at immutable revision
-- hdrezkaprovider: v35 to v39, publisher-policy SHA-256 verified at immutable revision
-- ixiporn: v16 to v17, publisher-policy SHA-256 verified at immutable revision
-- izzigoprovider: v16 to v17, publisher-policy SHA-256 verified at immutable revision
-- javguru: v6 to v7, publisher-policy SHA-256 verified at immutable revision
-- javhd: v8 to v9, publisher-policy SHA-256 verified at immutable revision
-- javpoint: v13 to v14, publisher-policy SHA-256 verified at immutable revision
-- javtiful: v2 to v3, publisher-policy SHA-256 verified at immutable revision
-- javx: v1 to v3, publisher-policy SHA-256 verified at immutable revision
-- kdesa: v3 to v12, publisher-policy SHA-256 verified at immutable revision
-- kinotronprovider: v17 to v19, publisher-policy SHA-256 verified at immutable revision
-- klontvprovider: v22 to v25, publisher-policy SHA-256 verified at immutable revision
-- lacartoonsprovider: v5 to v6, publisher-policy SHA-256 verified at immutable revision
-- librivoxaudiobook: v33 to v36, publisher-policy SHA-256 verified at immutable revision
-- livxowprovider: v20 to v27, publisher-policy SHA-256 verified at immutable revision
-- m3uplaylistplayerprovider: v18 to v22, publisher-policy SHA-256 verified at immutable revision
-- mlsbdprovider: v34 to v37, publisher-policy SHA-256 verified at immutable revision
-- monoschinosprovider: v8 to v9, publisher-policy SHA-256 verified at immutable revision
-- movieboxprovider: v52 to v55, publisher-policy SHA-256 verified at immutable revision
-- movieboxproviderin: v54 to v57, publisher-policy SHA-256 verified at immutable revision
-- moviezwapprovider: v32 to v34, publisher-policy SHA-256 verified at immutable revision
-- multimovies: v8 to v15, publisher-policy SHA-256 verified at immutable revision
-- netnaija-box: v2 to v8, publisher-policy SHA-256 verified at immutable revision
-- nineanime: v6 to v11, publisher-policy SHA-256 verified at immutable revision
-- peliculasflixprovider: v2 to v3, publisher-policy SHA-256 verified at immutable revision
-- pelisplushdprovider: v11 to v14, publisher-policy SHA-256 verified at immutable revision
-- pikashowprovider: v32 to v34, publisher-policy SHA-256 verified at immutable revision
-- playfyprovider: v14 to v21, publisher-policy SHA-256 verified at immutable revision
-- playztvprovider: v42 to v49, publisher-policy SHA-256 verified at immutable revision
-- radioindiaprovider: v33 to v35, publisher-policy SHA-256 verified at immutable revision
-- reanime: v4 to v10, publisher-policy SHA-256 verified at immutable revision
-- rtally: v50 to v54, publisher-policy SHA-256 verified at immutable revision
-- senshi: v8 to v15, publisher-policy SHA-256 verified at immutable revision
-- simpsonsuatvprovider: v5 to v8, publisher-policy SHA-256 verified at immutable revision
-- sktechprovider: v58 to v65, publisher-policy SHA-256 verified at immutable revision
-- sololatinoprovider: v9 to v12, publisher-policy SHA-256 verified at immutable revision
-- spankbang: v10 to v12, publisher-policy SHA-256 verified at immutable revision
-- sportzxprovider: v26 to v33, publisher-policy SHA-256 verified at immutable revision
-- streamflixprovider: v34 to v36, publisher-policy SHA-256 verified at immutable revision
-- subscriptionmanager: v16 to v18, publisher-policy SHA-256 verified at immutable revision
-- superjav: v5 to v7, publisher-policy SHA-256 verified at immutable revision
-- tamildhoolprovider: v40 to v42, publisher-policy SHA-256 verified at immutable revision
-- tamilian: v32 to v34, publisher-policy SHA-256 verified at immutable revision
-- tamilultraprovider: v40 to v42, publisher-policy SHA-256 verified at immutable revision
-- themoviesflix: v22 to v28, publisher-policy SHA-256 verified at immutable revision
-- twodhive: v17 to v22, publisher-policy SHA-256 verified at immutable revision
-- uakinoprovider: v32 to v37, publisher-policy SHA-256 verified at immutable revision
-- ufdubprovider: v12 to v14, publisher-policy SHA-256 verified at immutable revision
-- watch32: v34 to v37, publisher-policy SHA-256 verified at immutable revision
-- xanime: v1 to v6, publisher-policy SHA-256 verified at immutable revision
-- xonprovider: v35 to v37, publisher-policy SHA-256 verified at immutable revision
+- aia2tv 2: v3 to v5, status 1 to 1, publisher_version_upgrade, exact SHA-256 verified at immutable revision
+- animeuaprovider: v10 to v10, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- animeunity: v26 to v30, status 1 to 1, publisher_version_upgrade, exact SHA-256 verified at immutable revision
+- anitubeinuaprovider: v22 to v22, status 3 to 3, publisher_rebuild, exact SHA-256 verified at immutable revision
+- bamboouaprovider: v13 to v13, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- calciostreaming: v20 to v22, status 1 to 1, publisher_version_upgrade, exact SHA-256 verified at immutable revision
+- cikavaideyaprovider: v5 to v5, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- coaninetprovider: v2 to v2, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- hentaiukrprovider: v6 to v6, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- kinostrainprovider: v2 to v2, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- kinovezhaprovider: v14 to v14, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- onlineserietv: v4 to v5, status 0 to 1, publisher_status_upgrade, exact SHA-256 verified at immutable revision
+- serialnoprovider: v13 to v13, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- streamcenter: v11 to v14, status 1 to 1, publisher_version_upgrade, exact SHA-256 verified at immutable revision
+- streamingcommunity: v53 to v54, status 1 to 1, publisher_version_upgrade, exact SHA-256 verified at immutable revision
+- syncplugin: v3 to v3, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
+- unimayprovider: v13 to v13, status 1 to 1, publisher_rebuild, exact SHA-256 verified at immutable revision
 

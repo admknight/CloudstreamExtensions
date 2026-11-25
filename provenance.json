@@ -90,7 +90,7 @@
     "publishedName": "[Arabic] Asia2tv 2",
     "category": "Arabic",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 3,
+    "selectedVersion": 5,
     "sourceId": "rearabi",
     "sourceName": "Re-3arabi",
     "sourceRepository": "https://github.com/Abodabodd/re-3arabi",
@@ -99,7 +99,7 @@
       "Abodabodd"
     ],
     "originalRepositoryUrl": "https://github.com/Abodabodd/re-3arabi",
-    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/4d75897a2581939d67db5ceebed1f99bddf08d34/Aia2tv%202.cs3"
   },
   {
     "plugin": "Akwam",
@@ -870,7 +870,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeUAProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/AnimeUAProvider.cs3"
   },
   {
     "plugin": "AnimeUnity",
@@ -878,7 +878,7 @@
     "publishedName": "[Anime] AnimeUnity",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 26,
+    "selectedVersion": 30,
     "sourceId": "dogior",
     "sourceName": "doGior's Had Enough",
     "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
@@ -887,7 +887,7 @@
       "doGior"
     ],
     "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
-    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/AnimeUnity.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/31c79e490597bffe98c2fd2fd250be1ca67d62a8/AnimeUnity.cs3"
   },
   {
     "plugin": "AnimeVietsubProvider",
@@ -1109,7 +1109,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnitubeinuaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/AnitubeinuaProvider.cs3"
   },
   {
     "plugin": "AniVortex",
@@ -1313,7 +1313,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/BambooUAProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/BambooUAProvider.cs3"
   },
   {
     "plugin": "BanglaPlex",
@@ -1628,7 +1628,7 @@
     "publishedName": "[Live] CalcioStreaming",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 20,
+    "selectedVersion": 22,
     "sourceId": "diegon",
     "sourceName": "DieGon Repository",
     "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
@@ -1637,7 +1637,7 @@
       "DieGon"
     ],
     "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
-    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/CalcioStreaming.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/543c33667352605244e0d419cc09bd9e5b88660c/CalcioStreaming.cs3"
   },
   {
     "plugin": "Cam4",
@@ -1861,7 +1861,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CikavaIdeyaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/CikavaIdeyaProvider.cs3"
   },
   {
     "plugin": "CimaClub",
@@ -2151,7 +2151,7 @@
       "Partizanin"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CoaninetProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/CoaninetProvider.cs3"
   },
   {
     "plugin": "Coflix",
@@ -3852,7 +3852,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/HentaiUkrProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/HentaiUkrProvider.cs3"
   },
   {
     "plugin": "HHkungfuProvider",
@@ -4621,7 +4621,7 @@
       "Partizanin"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinostrainProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KinostrainProvider.cs3"
   },
   {
     "plugin": "KinoTronProvider",
@@ -4655,7 +4655,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoVezhaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KinoVezhaProvider.cs3"
   },
   {
     "plugin": "KissKH",
@@ -6060,7 +6060,7 @@
     "publishedName": "[Movies] OnlineSerieTV",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 5,
     "sourceId": "diegon",
     "sourceName": "DieGon Repository",
     "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
@@ -6069,7 +6069,7 @@
       "DieGon"
     ],
     "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
-    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/OnlineSerieTV.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/543c33667352605244e0d419cc09bd9e5b88660c/OnlineSerieTV.cs3"
   },
   {
     "plugin": "Onlyjerk",
@@ -7127,7 +7127,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SerialnoProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/SerialnoProvider.cs3"
   },
   {
     "plugin": "SeriesflixProvider",
@@ -7442,7 +7442,7 @@
     "publishedName": "[Live] StreamCenter",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 11,
+    "selectedVersion": 14,
     "sourceId": "dogior",
     "sourceName": "doGior's Had Enough",
     "sourceRepository": "https://github.com/doGior/doGiorsHadEnough",
@@ -7451,7 +7451,7 @@
       "Italiani"
     ],
     "originalRepositoryUrl": "https://github.com/doGior/doGiorsHadEnough",
-    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/StreamCenter.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/31c79e490597bffe98c2fd2fd250be1ca67d62a8/StreamCenter.cs3"
   },
   {
     "plugin": "Streamed",
@@ -7544,7 +7544,7 @@
     "publishedName": "[Movies] StreamingCommunity",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 53,
+    "selectedVersion": 54,
     "sourceId": "diegon",
     "sourceName": "DieGon Repository",
     "sourceRepository": "https://github.com/DieGon7771/ItaliaInStreaming",
@@ -7554,7 +7554,7 @@
       "DieGon"
     ],
     "originalRepositoryUrl": "https://github.com/DieGon7771/ItaliaInStreaming",
-    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/543c33667352605244e0d419cc09bd9e5b88660c/StreamingCommunity.cs3"
   },
   {
     "plugin": "StreamPlay",
@@ -7793,7 +7793,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/SyncPlugin.cs3"
   },
   {
     "plugin": "SyncProvider",
@@ -8594,7 +8594,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UnimayProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/UnimayProvider.cs3"
   },
   {
     "plugin": "Vavoo",
