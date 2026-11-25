@@ -100,6 +100,41 @@ class LockTests(unittest.TestCase):
         self.assertEqual(result["locks"][0]["commitSha"], historic)
         self.assertFalse(result["autoPublicationAuthorized"])
 
+    def test_hint_survives_missing_branch_and_zero_history(self):
+        p = plugin("P")
+        url = ORIGIN.replace("/builds/", "/" + EARLIER + "/") + "P.cs3"
+        def missing(*args):
+            raise OSError("source branch missing")
+        result = index_recovery([p], [src(p)], missing, missing,
+            lambda u: b"prior" if u == url else b"wrong",
+            max_history=0, workers=1, supplemental_revisions={"p": [EARLIER]})
+        self.assertEqual(result["immutableMatches"], 1)
+        self.assertEqual(result["locks"][0]["commitSha"], EARLIER)
+        self.assertTrue(result["locks"][0]["historyLookupUsed"])
+        self.assertFalse(result["autoPublicationAuthorized"])
+
+    def test_missing_branch_hint_rejects_wrong_bytes(self):
+        p = plugin("P")
+        def missing(*args):
+            raise OSError("source branch missing")
+        result = index_recovery([p], [src(p)], missing, missing,
+            lambda u: b"wrong", max_history=0, workers=1,
+            supplemental_revisions={"p": [EARLIER]})
+        self.assertEqual(result["immutableMatches"], 0)
+        self.assertEqual(result["unmatchedCount"], 1)
+
+    def test_published_commit_can_be_verified_when_commit_api_fails(self):
+        url = ORIGIN.replace("/builds/", "/" + HEAD + "/") + "P.cs3"
+        p = plugin("P", url=url)
+        def missing(*args):
+            raise OSError("commit API unavailable")
+        result = index_recovery([p], [src(p)], missing, missing,
+            lambda u: b"prior" if u == url else b"wrong",
+            max_history=0, workers=1)
+        self.assertEqual(result["immutableMatches"], 1)
+        self.assertEqual(result["locks"][0]["commitSha"], HEAD)
+        self.assertFalse(result["locks"][0]["historyLookupUsed"])
+
     def test_orphan_revision_cannot_approve_different_binary(self):
         p = plugin("LK21", payload=b"old-published-bytes")
         historic = "3" * 40
