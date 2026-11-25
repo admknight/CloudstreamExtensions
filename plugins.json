@@ -288,16 +288,16 @@
     "fileHash": "sha256-905b0b1ef8b722a1599ecfee3f65d37954dd6a87e8c13e0624d36f74776441ba"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniChan.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniChan.cs3",
     "status": 1,
-    "version": 14,
+    "version": 19,
     "name": "[Anime] AniChan",
     "internalName": "AniChan",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Watch Anime in HD with Sub, Dub and Hardsub",
-    "fileSize": 76097,
+    "fileSize": 82509,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -306,7 +306,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=anichan.net&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-35b2164269b1f2b2afaa0437bdca2167c40ba9f7b671e1dab933a77055080b43"
+    "fileHash": "sha256-20ac66c0d1934ab8fe37aa794d42e8272cb970c37ae14b7162c572c9803f59ec"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Anichi.cs3",
@@ -351,16 +351,16 @@
     "name": "[Asian] Anichin"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Anidap.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Anidap.cs3",
     "status": 1,
-    "version": 17,
+    "version": 22,
     "name": "[Anime] Anidap",
     "internalName": "Anidap",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime with Sub, Dub & Hardsub from Anidap",
-    "fileSize": 79693,
+    "fileSize": 85659,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -370,7 +370,7 @@
     ],
     "iconUrl": "https://anikuro.ru/static/favicon/favicon-96x96.png",
     "apiVersion": 1,
-    "fileHash": "sha256-9efaa55e071e66bcafda161d52e85aafe8139ab383c3b739c676b79fbeec1e25"
+    "fileHash": "sha256-505a7f2d1a4eb9e3078ed4ad88249471d60dd111a14a3392751fea0c55a49b52"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Anikage.cs3",
@@ -395,10 +395,10 @@
   },
   {
     "iconUrl": "https://anikototv.to/AnikotoTheme/assets/images/favicon.png",
-    "fileHash": "sha256-19459acd32422bce4f72ab830d902f063afa4f1a90766a6a9d6559ee54b5e312",
+    "fileHash": "sha256-5ce4df1afde0bff6ebb41926c9ef1b70293117d1b50e9045315ef23d2cfebc03",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 66350,
+    "fileSize": 66384,
     "status": 1,
     "language": "en",
     "authors": [
@@ -409,22 +409,22 @@
       "AnimeMovie",
       "OVA"
     ],
-    "version": 10,
+    "version": 12,
     "internalName": "AniKoto",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/AniKoto.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/AniKoto.cs3",
     "name": "[Anime] AniKoto"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniKotoAnime.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniKotoAnime.cs3",
     "status": 1,
-    "version": 17,
+    "version": 22,
     "name": "[Anime] AniKotoAnime",
     "internalName": "AniKotoAnime",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "AniKoto Anime - Watch Anime Sub & Dub in HD",
-    "fileSize": 57631,
+    "fileSize": 65043,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -434,7 +434,7 @@
     ],
     "iconUrl": "https://anikototv.to/AnikotoTheme/assets/images/favicon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-6a5d5bf3eb490a27e1c65737389f3e3a2542abbea1f2f65877e3630ddf67521d"
+    "fileHash": "sha256-bc2ef8826a19cfcf88571adc84a3e00156e1bac6abc33906fbabae4013630c0c"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Anilight.cs3",
@@ -768,16 +768,16 @@
     "name": "[Asian] AnimeIndo"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AnimeInWeb.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AnimeInWeb.cs3",
     "status": 1,
-    "version": 4,
+    "version": 9,
     "name": "[Asian] AnimeInWeb",
     "internalName": "AnimeInWeb",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime sub indo from AnimeInWeb with multiple qualities",
-    "fileSize": 65969,
+    "fileSize": 72093,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "id",
     "tvTypes": [
@@ -788,7 +788,7 @@
     ],
     "iconUrl": "https://animeinweb.com/favicon.ico",
     "apiVersion": 1,
-    "fileHash": "sha256-9004f282854506daf658a23ddd367707f05eaee1f3b67f529300778d8726a287"
+    "fileHash": "sha256-20bdcc44de0329d11dfc90a75bddd2b38506806e44d70b38a0c7952fd1b2081c"
   },
   {
     "url": "https://raw.githubusercontent.com/Kraptor123/Cs-Karma/025e2bbe489fd125f476786a1c4e9e5c23002473/Animejara.cs3",
@@ -1005,10 +1005,10 @@
   },
   {
     "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://animesuge.cz&size=64",
-    "fileHash": "sha256-1b2333c6b01909f8d3dc71678289e4f35a1fcab0dd690779eb62656cf7992a1d",
+    "fileHash": "sha256-acfe5a662986414530adf3f4c03e69f5a83598a1bbfde7370c2821f4bf785ba9",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 61577,
+    "fileSize": 61602,
     "status": 1,
     "language": "en",
     "authors": [
@@ -1019,9 +1019,9 @@
       "AnimeMovie",
       "OVA"
     ],
-    "version": 10,
+    "version": 12,
     "internalName": "AnimeSuge",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/AnimeSuge.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/AnimeSuge.cs3",
     "name": "[Anime] AnimeSuge"
   },
   {
@@ -1171,16 +1171,16 @@
     "fileHash": "sha256-7bbe26af2a1727efd52fb773532ee48102190f16ee7020c3671cd31afbb1c85d"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AnimeWorldIndia.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AnimeWorldIndia.cs3",
     "status": 1,
-    "version": 8,
+    "version": 14,
     "name": "[Indian] AnimeWorldIndia",
     "internalName": "AnimeWorldIndia",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime World India - Hindi, Tamil, Telugu Anime & Cartoons with multi-audio",
-    "fileSize": 61528,
+    "fileSize": 70313,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "hi",
     "tvTypes": [
@@ -1190,7 +1190,7 @@
     ],
     "iconUrl": "https://watchanimeworld.top/wp-content/uploads/AW_Smiley.png",
     "apiVersion": 1,
-    "fileHash": "sha256-27b76b19c38ff38cd74c0d6f34430cfcc7756e9db2d2322c4891658a409f6b2a"
+    "fileHash": "sha256-c8f520adee3ea285177c5f07a0303103d5abcea20105454b30b2ff8684386b02"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Animexin.cs3",
@@ -1257,16 +1257,16 @@
     "fileHash": "sha256-7ab91b533fdcb50761f1bd8bd31a315965eba00da830d51d2ffec94775f915a7"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniPM.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniPM.cs3",
     "status": 1,
-    "version": 4,
+    "version": 11,
     "name": "[Anime] AniPM",
     "internalName": "AniPM",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime with Sub & Dub from ani.pm",
-    "fileSize": 77495,
+    "fileSize": 91174,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -1276,7 +1276,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=ani.pm&sz=64",
     "apiVersion": 1,
-    "fileHash": "sha256-086584257908d19c49c212cad427c51a06a5c901b9255787ad278873030e46aa"
+    "fileHash": "sha256-b3e2bb19feb80eb01679d1484f92f3b65e612f72ce2d2a735e2f885f81f561dc"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/AniSnatch.cs3",
@@ -1322,16 +1322,16 @@
     "fileHash": "sha256-1dfb001393e7b3de29622ce9b05131eaa50cfe6878cb9ae211a357b74a3a3631"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniSuge.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniSuge.cs3",
     "status": 1,
-    "version": 6,
+    "version": 11,
     "name": "[Anime] AniSuge",
     "internalName": "AniSuge",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime from AniSuge with Sub and Dub support",
-    "fileSize": 71543,
+    "fileSize": 78873,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -1341,7 +1341,7 @@
     ],
     "iconUrl": "https://anisuge.tv/assets/images/favicon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-53b5f96901ab08afefb3340f3278bbfad0989ecc4162b054ea7b449fbdff7df4"
+    "fileHash": "sha256-e9547cd5779c43ff29e88aadc2ea627436230c40c2ee0629352093d4abacb02a"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=anitube.in.ua&sz=%size%",
@@ -1389,16 +1389,16 @@
     "fileHash": "sha256-84d82b36148b10edbd4db5f7996e324efa2f1edaa7ad3aebd383fa6d2bbe3e8e"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniWaves.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniWaves.cs3",
     "status": 1,
-    "version": 7,
+    "version": 12,
     "name": "[Anime] AniWaves",
     "internalName": "AniWaves",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "720p sub and dub anime",
-    "fileSize": 64493,
+    "fileSize": 70628,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -1408,7 +1408,7 @@
     ],
     "iconUrl": "https://aniwaves.ru/assets/images/aniwave.png",
     "apiVersion": 1,
-    "fileHash": "sha256-3915561a3afb9a0cecc600d440bb23fa2b190acac954c23c2de9dfde77a13d68"
+    "fileHash": "sha256-1bf405b4012ce4b556f6b52dfe91c582354e6dd3fa1f3d6269da83d3a3c74e70"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Aniworld.cs3",
@@ -1869,10 +1869,10 @@
   },
   {
     "iconUrl": "https://play-lh.googleusercontent.com/G9s84Cm1TDnKDX2P8nipS_s60cuCnYtjBRRLespF8nivjXmbV9tF1fY37clZhXMLaA",
-    "fileHash": "sha256-7a3f1868e58bc4cb1afdb4574db78411d73c2b158029f84950427b0c85206c3c",
+    "fileHash": "sha256-68a1ff86a4f4343ec8dd73f37f4c4edf5d6569573cfb39a9ee0c2e592fe89896",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 104387,
+    "fileSize": 104466,
     "status": 3,
     "language": "ta",
     "authors": [
@@ -1884,10 +1884,10 @@
       "TvSeries",
       "Documentary"
     ],
-    "version": 36,
+    "version": 38,
     "internalName": "BilibiliProvider",
     "description": "Bilibili TV - International streaming platform for anime, movies, and variety shows (bilibili.tv)",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/BilibiliProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/BilibiliProvider.cs3",
     "name": "[Indian] BilibiliProvider"
   },
   {
@@ -2074,10 +2074,10 @@
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/CastleTvProvider/icon.png",
-    "fileHash": "sha256-8119ab679c65053dabc671afddcc3460fdd5f3b5fed3a9d8388a1e112de5e26c",
+    "fileHash": "sha256-c73c67b7443f3264cf9ee4bce79091e25e222362bbe15fe42ec6aed9f388fdf7",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 88009,
+    "fileSize": 88396,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -2087,10 +2087,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 40,
+    "version": 48,
     "internalName": "CastleTvProvider",
     "description": "Castle TV Movies and Series Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CastleTvProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CastleTvProvider.cs3",
     "name": "[Indian] CastleTvProvider"
   },
   {
@@ -2544,10 +2544,10 @@
   },
   {
     "iconUrl": "https://modapk.world/wp-content/uploads/2025/11/Et-90x90.png",
-    "fileHash": "sha256-883bc02309c6da77f18f214202f9aa9353913cb36faa20ec642ccedcc692abaf",
+    "fileHash": "sha256-13780c3526a4805a7e28eb8aa219f0baf3d12fca47ddb0d5c2d5e94a5b36e741",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 60002,
+    "fileSize": 60105,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -2557,10 +2557,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 35,
+    "version": 37,
     "internalName": "CineTvProvider",
     "description": "Clone of Cinema, Memesapp , FilmTV etc",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CineTvProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CineTvProvider.cs3",
     "name": "[Indian] CineTvProvider"
   },
   {
@@ -2609,10 +2609,10 @@
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/CNC%20Verse/icon.png",
-    "fileHash": "sha256-61dce8378f02424fb50a214f4b7b5fd62ab62c36736432627ff808b245043507",
+    "fileHash": "sha256-66278a65fac657e57c11d37121ac448f0276f850d80dd4dabf471eb4e0f330cd",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 92713,
+    "fileSize": 92749,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -2622,18 +2622,18 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 114,
+    "version": 116,
     "internalName": "CNC Verse",
     "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC%20Verse.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CNC%20Verse.cs3",
     "name": "[Indian] CNC Verse"
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/CNC%20Verse%20Mobile/logo.jpeg",
-    "fileHash": "sha256-91a6206f1ed1fb852a9ac2d54fd1cc9dde0cee0ac59223950aeba5ac9744e4a7",
+    "fileHash": "sha256-92757725aea5ea0c38ff6df7b0122ec407a1cbc7a2d31eee71c6eadadd62b5f5",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 97001,
+    "fileSize": 98282,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -2643,10 +2643,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 10,
+    "version": 14,
     "internalName": "CNC Verse Mobile",
     "description": "NetMirror Mobile API",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC%20Verse%20Mobile.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CNC%20Verse%20Mobile.cs3",
     "name": "[Indian] CNC Verse Mobile"
   },
   {
@@ -2774,10 +2774,10 @@
   },
   {
     "iconUrl": "https://cricfy.pro/wp-content/uploads/2024/11/cropped-cricfytv-2.png",
-    "fileHash": "sha256-c36b78630420569a3fdeb912963c9de47f5df1fe2b99a5a2bd7db51e8822d6ec",
+    "fileHash": "sha256-422c6458a196043b6816496b7bb30da90ffc3f7f3b7ed1d8d087cc91d48b336d",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 117026,
+    "fileSize": 117801,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -2786,10 +2786,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 71,
+    "version": 78,
     "internalName": "CricifyProvider",
     "description": "Watch Live sports and TV channels",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CricifyProvider.cs3",
     "name": "[Live] CricifyProvider"
   },
   {
@@ -2836,16 +2836,16 @@
     "jarHash": "sha256-542c325f2e1e1f61db60952d161325b62ff58712b1b2020e6df50727fdd03bf2"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/DamiTVProvider.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/DamiTVProvider.cs3",
     "status": 1,
-    "version": 25,
+    "version": 32,
     "name": "[Live] DamiTVProvider",
     "internalName": "DamiTVProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Live sports HIGH QAULITY",
-    "fileSize": 62025,
+    "fileSize": 73153,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -2853,7 +2853,7 @@
     ],
     "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvvc01IqbjrBZ-AhXwvyrIblnaJBA04IUNKmJNRbqEh46fWVItaGuoRsj&s=10",
     "apiVersion": 1,
-    "fileHash": "sha256-bcbd165dd27e764cfd382a4c84379e47e7d83744b498bbe342eb4cca0ca520d5"
+    "fileHash": "sha256-6a8f8c635043a9b2a2b0b8ce9786eb0f7642b064208fe59767ee58a3eeff70d3"
   },
   {
     "iconUrl": "https://www.ddizi.im/favicon.ico",
@@ -2938,10 +2938,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=desi-serials.to&sz=%size%",
-    "fileHash": "sha256-12772e3aa0afd2b16f3c3b6467a93551b817c811aeadf09e7c368661457b4dce",
+    "fileHash": "sha256-c4fac416454e861ede1c55ff0900b2bbaf56b8e3e9f0f351fa7986d8e6cc23cc",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 59470,
+    "fileSize": 59458,
     "status": 1,
     "language": "hi",
     "authors": [
@@ -2950,10 +2950,10 @@
     "tvTypes": [
       "TvSeries"
     ],
-    "version": 33,
+    "version": 35,
     "internalName": "DesiSerialsProvider",
     "description": "Desi Serials Tv Shows Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/DesiSerialsProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/DesiSerialsProvider.cs3",
     "name": "[Indian] DesiSerialsProvider"
   },
   {
@@ -3361,10 +3361,10 @@
   },
   {
     "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrZAw8JCRhrw1pDMb5_nYDPYQOPVC4T1JDH3PpLB5Bf35ts32ohXNFsRic&s=10",
-    "fileHash": "sha256-27e86014f09c4d29febc2d753d6cbb1af1ec39a49d7b41da09ff429afbf99f09",
+    "fileHash": "sha256-cfd1b3fac2b50c93e8e1b10f523d9ac96e5f5a05d58b8669a6294add630dc0dd",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 20965,
+    "fileSize": 24291,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -3374,10 +3374,10 @@
       "AsianDrama",
       "Movie"
     ],
-    "version": 2,
+    "version": 3,
     "internalName": "DoramyWorldProvider",
     "description": "СВІТ ДОРАМ – платформа для українського шанувальника азійської культури, яка відкрилася 22 лютого 2021.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/DoramyWorldProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/DoramyWorldProvider.cs3",
     "name": "[Movies] DoramyWorldProvider"
   },
   {
@@ -3514,10 +3514,10 @@
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/heads/master/Logos/EinthusanProvider/icon.png",
-    "fileHash": "sha256-61beb2c31a559cbc10192b145856b180108c4b99f077577b2b6bd8ecdfa09748",
+    "fileHash": "sha256-39a69881966cbb1fdd2e0a9cbc2bde9769f299a1bf911216fc5cfd8f0e8e2add",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 40139,
+    "fileSize": 40185,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -3526,10 +3526,10 @@
     "tvTypes": [
       "Movie"
     ],
-    "version": 37,
+    "version": 39,
     "internalName": "EinthusanProvider",
     "description": "Indian Multi-language HD Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/EinthusanProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/EinthusanProvider.cs3",
     "name": "[Indian] EinthusanProvider"
   },
   {
@@ -3579,10 +3579,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=eneyida.tv&sz=%size%",
-    "fileHash": "sha256-94a6c0bfc948a7291afd0f7895710af097c43bcc18016031f4b924b2d405a37d",
+    "fileHash": "sha256-2947d81d3b8aeace00ad5efe95bd753a08fb65853e1fbdd5e495a86026f1079c",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 36775,
+    "fileSize": 40189,
     "status": 3,
     "language": "uk",
     "authors": [
@@ -3593,22 +3593,22 @@
       "TvSeries",
       "Movie"
     ],
-    "version": 19,
+    "version": 20,
     "internalName": "EneyidaProvider",
     "description": "Мета проекту «Енеїда» - популяризація української мови, демонстрація її різнобарвності та сучасності. Ми плануємо робити це через ретрансляцію якісного кіно, мультфільмів, телесеріалів та різноманітних телешоу в якісному українському перекладі. Тож, у добрий шлях дорогі конфіденти!.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/EneyidaProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/EneyidaProvider.cs3",
     "name": "[Movies] EneyidaProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/EntrepeliculasyseriesProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/EntrepeliculasyseriesProvider.cs3",
     "status": 1,
-    "version": 10,
+    "version": 12,
     "name": "[Movies] EntrepeliculasyseriesProvider",
     "internalName": "EntrepeliculasyseriesProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 39046,
+    "fileSize": 47814,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -3617,19 +3617,19 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=entrepeliculasyseries.nz&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-30629339802ac0a49b08cfd7e4f2e64883fba92e0d618510997ce9838dd023ca"
+    "fileHash": "sha256-efb67f3386115729599e7f02eff22be6ffce35f7549bd063b7e1b3c464008b3a"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Eporner.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Eporner.cs3",
     "status": 1,
-    "version": 13,
+    "version": 14,
     "name": "[Adult] Eporner",
     "internalName": "Eporner",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Eporner",
-    "fileSize": 16279,
+    "fileSize": 19126,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -3637,7 +3637,7 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/phisher98/TVVVV/main/eporner.ico",
     "apiVersion": 1,
-    "fileHash": "sha256-bd0b67ea81a97705e169d82a2d25891c04b17f40b50edfeeaf64b9e2f8befa95"
+    "fileHash": "sha256-713f66508d123a771edc246a607e947004c9b14e14891610613b82337ccfa669"
   },
   {
     "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/c30122a117f1c3571e63a484aaf80f35117ff3e7/eseek.cs3",
@@ -4284,10 +4284,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=goldenaudiobook.com/&sz=%size%",
-    "fileHash": "sha256-c3d0a5fd6e39ee64e0a497abd57047efd939278ccf840ef924f3e7ce2229031d",
+    "fileHash": "sha256-c50fb21075caec65763ace2fd6f1c03865d233d369449ad944c0253a10b3b2c2",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 37983,
+    "fileSize": 38105,
     "status": 1,
     "language": "en",
     "authors": [
@@ -4296,10 +4296,10 @@
     "tvTypes": [
       "Others"
     ],
-    "version": 33,
+    "version": 36,
     "internalName": "GoldenAudiobook",
     "description": "Audiobooks - Use Picture in Picture or VLC as external player",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/GoldenAudiobook.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/GoldenAudiobook.cs3",
     "name": "[Other] GoldenAudiobook"
   },
   {
@@ -4344,16 +4344,16 @@
     "fileHash": "sha256-cd810bbcc18364bc64b76bb701ef60ccbbceb3c8272c241b4fa93270b454bbb6"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/GoTaku.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/GoTaku.cs3",
     "status": 1,
-    "version": 4,
+    "version": 14,
     "name": "[Anime] GoTaku",
     "internalName": "GoTaku",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Hardsub and dub from Gotaku",
-    "fileSize": 64360,
+    "fileSize": 72452,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -4363,7 +4363,7 @@
     ],
     "iconUrl": "https://gotaku.to/images/icons/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-e9ca8cc26c114d0bf827e212c722d564e24d8b34fe0bb764b27b51296a4a6dcb"
+    "fileHash": "sha256-790da407529867811a456e561ae722b6603d776b6bad20c8ae5e6d744dbb6899"
   },
   {
     "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/a733e8d476bb690388a0c2ad8e99ad35d322b9fd/GuardaPlay.cs3",
@@ -4591,10 +4591,10 @@
   },
   {
     "iconUrl": "https://images.dwncdn.net/images/t_app-icon-l/p/b0c9663c-0d61-4941-b12f-91c58c06189f/1137087733/hdo-box-logo",
-    "fileHash": "sha256-fe629aceb38d5404cdbeffaefe551b4058e6dc76fdf9400aa547ec6c2e573ce0",
+    "fileHash": "sha256-3648083780c3c8bc6e1099fdddd702b429296e7845bf714e26ab36a8e1e82936",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 48310,
+    "fileSize": 48351,
     "status": 0,
     "language": "ta",
     "authors": [
@@ -4604,18 +4604,18 @@
       "Movies",
       "TvSeries"
     ],
-    "version": 35,
+    "version": 37,
     "internalName": "HDOProvider",
     "description": "HDO provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/HDOProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/HDOProvider.cs3",
     "name": "[Indian] HDOProvider"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=rezka.ag&sz=%size%",
-    "fileHash": "sha256-c041bc3c5f50ef029261885831258ef09f75cabc09f54ae3fbd251a86e082e32",
+    "fileHash": "sha256-be713d0cee8feac0332d430c615ef6c73d113e076f9fb08ee8c44cb74df8ac57",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 59357,
+    "fileSize": 67029,
     "status": 1,
     "language": "ru",
     "authors": [
@@ -4627,9 +4627,9 @@
       "TvSeries",
       "Movie"
     ],
-    "version": 35,
+    "version": 39,
     "internalName": "HDrezkaProvider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/HDrezkaProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/HDrezkaProvider.cs3",
     "name": "[Movies] HDrezkaProvider"
   },
   {
@@ -5208,16 +5208,16 @@
     "fileHash": "sha256-6fbc42b219603b51079c568ce4289e593598bf5f638ab73f01e51bbae1d26ea7"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/ixiporn.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/ixiporn.cs3",
     "status": 1,
-    "version": 16,
+    "version": 17,
     "name": "[Adult] ixiporn",
     "internalName": "ixiporn",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "IXI Porn",
-    "fileSize": 11029,
+    "fileSize": 12135,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5225,19 +5225,19 @@
     ],
     "iconUrl": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ixiporn.org&size=16",
     "apiVersion": 1,
-    "fileHash": "sha256-1f0bec8bad0e43b78500533cf6731076afe56f27a903c875144ebb3e3dfdcdc1"
+    "fileHash": "sha256-dcb2bb90cffbbd9a95c889463d25b1b02f6c913a7d0aa07c365c8c86594a4b6d"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/IzziGoProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/IzziGoProvider.cs3",
     "status": 3,
-    "version": 16,
+    "version": 17,
     "name": "[Live] IzziGoProvider",
     "internalName": "IzziGoProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "izzi go (izzi telecom, México). REQUIERE una cuenta izzi go con suscripción activa. Inicia sesión en: Ajustes del proveedor (icono de engranaje) -> izzi go Login.",
-    "fileSize": 62594,
+    "fileSize": 62716,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -5247,7 +5247,7 @@
     ],
     "iconUrl": "https://www.izzigo.tv/webclient/img/favicon/apple-touch-icon.png",
     "apiVersion": 1,
-    "fileHash": "sha256-8a60c0367f352514f5a7ade833cf31ea68ff99f1365ea5b2f014ab281a6754f6"
+    "fileHash": "sha256-48827a22bf6a211d93957c5712a6bdf6f880c753e59643937bb68c3fa0b730ea"
   },
   {
     "name": "[Other] JackieChan",
@@ -5290,15 +5290,15 @@
     "fileHash": "sha256-f9347875a4bdaeb5f4e1ddd00e80ec87200c48a805afbb5b371ff2860adf86ab"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JavGuru.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/JavGuru.cs3",
     "status": 3,
-    "version": 6,
+    "version": 7,
     "name": "[Adult] JavGuru",
     "internalName": "JavGuru",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 15903,
+    "fileSize": 21835,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5306,19 +5306,19 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=jav.guru&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-bd294518630f46b764201db7a35f07ea4d0aec689e61ae064252f8eebeb599a6"
+    "fileHash": "sha256-f00dfd237918bd537fdd8055883e0c5294dd427c2fab13839d5e8ce450aff24a"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JAVHd.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/JAVHd.cs3",
     "status": 1,
-    "version": 8,
+    "version": 9,
     "name": "[Adult] JAVHd",
     "internalName": "JAVHd",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "The Best Free JAV online, Free Download and Watching jav porn videos. Tons of hot jav censored,Japanese tube,Japanese sex online. Update everyday, javhd.today are waiting for you. Enjoy!",
-    "fileSize": 22725,
+    "fileSize": 22794,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5326,7 +5326,7 @@
     ],
     "iconUrl": "https://javhd.today/logo/javhd1.png",
     "apiVersion": 1,
-    "fileHash": "sha256-e6f2b229eeda90366819c7a2a8b4cca005795ba245c220cef631d3291eb4a0f4"
+    "fileHash": "sha256-0d1e196e9135b6699667adf25614b70406639a5951efc1c1630831c597c49e5f"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/JavMost.cs3",
@@ -5348,16 +5348,16 @@
     "fileHash": "sha256-156ad929b8c8e16a71b3166108b08843ac5f864fd3914cc50f5bbcdbce84961d"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JAVPoint.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/JAVPoint.cs3",
     "status": 1,
-    "version": 13,
+    "version": 14,
     "name": "[Adult] JAVPoint",
     "internalName": "JAVPoint",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "JavGuru,Javgg,Javdoe,Javangel,JavEnglish",
-    "fileSize": 44520,
+    "fileSize": 45518,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5365,19 +5365,19 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=jav.guru&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-b0bd7174e1c25da6f0306a5bc709d5eb1d6a922bc873cd4436365f1ed5cf8892"
+    "fileHash": "sha256-3849b81abd851074df4aac5b5bb912452549cfeaecdc901a25524e3ef897ef2d"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Javtiful.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Javtiful.cs3",
     "status": 1,
-    "version": 2,
+    "version": 3,
     "name": "[Adult] Javtiful",
     "internalName": "Javtiful",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Jav Porn",
-    "fileSize": 18514,
+    "fileSize": 17764,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5385,18 +5385,18 @@
     ],
     "iconUrl": "https://javtiful.com/images/logo/new_jt_logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-526b9b180b511cf718228ae18ccd490e958d9ba2eec81061b75863bede49e342"
+    "fileHash": "sha256-ba93824a9d391a50b81fce532d36503ea83116eb23a0a2ae43c5bde5cd9f9c59"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Javx.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Javx.cs3",
     "status": 3,
-    "version": 1,
+    "version": 3,
     "name": "[Adult] Javx",
     "internalName": "Javx",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 14990,
+    "fileSize": 15816,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5404,7 +5404,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=jav.guru&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-6e468552473fb2ac8d7724210742a4a68143c0e0b1ab23ac1b21c2bc87883186"
+    "fileHash": "sha256-576a9cf075f254840e0d9496dbe5bfdbd799d11a6ddd6e247f5d7c9501d5a624"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Jellyfin.cs3",
@@ -5576,16 +5576,16 @@
     "fileHash": "sha256-271cf55372a3cb5ec1dc83ccc7718e45280b145e10cfe7c3bc6ec766d62201d4"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Kdesa.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Kdesa.cs3",
     "status": 1,
-    "version": 3,
+    "version": 12,
     "name": "[Movies] Kdesa",
     "internalName": "Kdesa",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "KDesa - Movies, TV Shows & Anime Multi-source,Multi-audio",
-    "fileSize": 152591,
+    "fileSize": 81702,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -5595,7 +5595,7 @@
     ],
     "iconUrl": "https://kdesa.stream/android-chrome-192x192.png?v=6",
     "apiVersion": 1,
-    "fileHash": "sha256-af0c32c46f27c1e72b2c964929ee99fcca18efefecbf66a393dc11dc1441ae1e"
+    "fileHash": "sha256-cf0ecc9df56dc8aed74b5d168016c4b25f68691f6417a52b1f55423828d901b3"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Kickassanime.cs3",
@@ -5643,10 +5643,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=kinotron.top&sz=%size%",
-    "fileHash": "sha256-3a099e9ae79f040f6594a6a693f988d5e3131761c76a6685f0a4bad2c7512ab2",
+    "fileHash": "sha256-543933599ead4f2f656d7b9e448f1b4cce8e613563e24160204f93d178e95d9c",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 22204,
+    "fileSize": 27109,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -5658,10 +5658,10 @@
       "Movie",
       "Anime"
     ],
-    "version": 17,
+    "version": 19,
     "internalName": "KinoTronProvider",
     "description": "Твій KinoTron, де фільми завжди українською.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoTronProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KinoTronProvider.cs3",
     "name": "[Movies] KinoTronProvider"
   },
   {
@@ -5771,10 +5771,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=klon.tv&sz=%size%",
-    "fileHash": "sha256-11b498fedd70dd94b0bdc125be8eadbc968dfc55d01f85572532a8734a1ee2f7",
+    "fileHash": "sha256-a32c9f51be0d5f3f6bdd10d3882b2af5acfffc27aca92fb06f6e764f7c54aff8",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 36863,
+    "fileSize": 40345,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -5786,10 +5786,10 @@
       "Cartoon",
       "Movie"
     ],
-    "version": 22,
+    "version": 25,
     "internalName": "KlonTVProvider",
     "description": "Команда Klon.TV створила безкоштовний онлайн-сервіс, щоб кожен наш глядач з легкістю та без зайвих суперечок вибрав цікавий фільм, або одразу продовжив дивитися улюблений серіал. Минула та пора, коли треба стежити за афішами твого міста, і вгадувати якість майбутньої стрічки. Також вже можна забути про трату часу на довгу дорогу в кінотеатр, півгодинного перегляду трейлерів перед показом, сусідами, що чавкають, яким не зрозуміти, що фільм треба іноді й слухати, а не тільки дивитися. Вибравши наш сервіс для перегляду фільмів онлайн безкоштовно, ви будете приємно здивовані: українське озвучення, перегляд без реєстрації, ніякої реклами на весь екран, і багато інших цікавих можливостей. Klon.TV - цінує кожного глядача, і зробить все можливе, щоб Ви до нас повернулися:).",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KlonTVProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KlonTVProvider.cs3",
     "name": "[Movies] KlonTVProvider"
   },
   {
@@ -5938,15 +5938,15 @@
     "name": "[Asian] Kuronime"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/LACartoonsProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/LACartoonsProvider.cs3",
     "status": 1,
-    "version": 5,
+    "version": 6,
     "name": "[Movies] LACartoonsProvider",
     "internalName": "LACartoonsProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 15241,
+    "fileSize": 20647,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "es",
     "tvTypes": [
@@ -5955,7 +5955,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=lacartoons.com&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-2bbdd43461dd4a11cd949649004e945fd6009ff519c0470ca653ff099e60a2a6"
+    "fileHash": "sha256-8ba9f23e1d2d34685fdc59e10dd318e8e5baf91d74b66a2311a4e0bec7fd3410"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/LaMovieProvider.cs3",
@@ -6107,10 +6107,10 @@
   },
   {
     "iconUrl": "https://librivox.org/wp-content/themes/librivox/images/librivox-logo.png",
-    "fileHash": "sha256-d8bfa6f610ac84155e2c2f1f7ddb3f639c0741247ea963f17306885e3e89592c",
+    "fileHash": "sha256-3e249f8af9a558b80549295bceabc4c7e7494414a520702bd1949b81d18c6031",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 35526,
+    "fileSize": 36251,
     "status": 1,
     "language": "en",
     "authors": [
@@ -6119,10 +6119,10 @@
     "tvTypes": [
       "Others"
     ],
-    "version": 33,
+    "version": 36,
     "internalName": "LibriVoxAudiobook",
     "description": "Audiobooks in public domain",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LibriVoxAudiobook.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/LibriVoxAudiobook.cs3",
     "name": "[Other] LibriVoxAudiobook"
   },
   {
@@ -6167,10 +6167,10 @@
   },
   {
     "iconUrl": "https://www.livxow.site/logo.jpg",
-    "fileHash": "sha256-1c078966138490b7da7f48f7eb36d4c20b538c311016a5b7341ef1fbf91d0086",
+    "fileHash": "sha256-f2055853524260c5a8679b7091486a2ab435beefb9cf0cfbaa5405e2d82cdc53",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 127205,
+    "fileSize": 127885,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -6179,10 +6179,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 20,
+    "version": 27,
     "internalName": "LivXowProvider",
     "description": "Watch Live Sports and TV Channels via LivXow",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LivXowProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/LivXowProvider.cs3",
     "name": "[Live] LivXowProvider"
   },
   {
@@ -6245,10 +6245,10 @@
   },
   {
     "iconUrl": "https://play-lh.googleusercontent.com/V4t4JeQV2Cu9u72hKuqOW5c0IfwcZuuVS1d9PF2uJsW3rlIq-aOMTrT5bABVGaAFTcM=w480-h960-rw",
-    "fileHash": "sha256-72cffdaecaf9ae08f24a312b035c5ac4fc8915ef7ffc955ac45446b5e260f558",
+    "fileHash": "sha256-514ebc2e96c3ef7ba22db1088f19e70a42b0eb65313096ecd38427256fc6c74e",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 65129,
+    "fileSize": 65759,
     "status": 1,
     "language": "en",
     "authors": [
@@ -6257,10 +6257,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 18,
+    "version": 22,
     "internalName": "M3UPlaylistPlayerProvider",
     "description": "Add your own m3u playlists",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/M3UPlaylistPlayerProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/M3UPlaylistPlayerProvider.cs3",
     "name": "[Tools] M3UPlaylistPlayerProvider"
   },
   {
@@ -6486,10 +6486,10 @@
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/Logos/MLSBD-Logo.png",
-    "fileHash": "sha256-56fd9198b2564731a63840fb28d181ba87819b9982a06ffb6783ec6c2727f1b0",
+    "fileHash": "sha256-7a0fe52dedd546eb0b2df5c16c2e0cd08dd8bcd791ec083df6c62b26236de5a4",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 117689,
+    "fileSize": 118796,
     "status": 1,
     "language": "bn",
     "authors": [
@@ -6501,22 +6501,22 @@
       "AnimeMovie",
       "AsianDrama"
     ],
-    "version": 34,
+    "version": 37,
     "internalName": "MLSBDProvider",
     "description": "The largest movie link store in Bangladesh",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MLSBDProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MLSBDProvider.cs3",
     "name": "[Indian] MLSBDProvider"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/MonoschinosProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/MonoschinosProvider.cs3",
     "status": 1,
-    "version": 8,
+    "version": 9,
     "name": "[Anime] MonoschinosProvider",
     "internalName": "MonoschinosProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 15771,
+    "fileSize": 15633,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -6526,7 +6526,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=monoschinos.st&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-c74a4d3fd87fc546aab0cfa10011226b50645b344ac8fc10b646ecf9067fa78c"
+    "fileHash": "sha256-ea0037523c46a7f738e55495344eeaca1e4aa000b04b35f5409586e64f9085d3"
   },
   {
     "iconUrl": "https://monplayer.org/images/favicon.ico",
@@ -6571,10 +6571,10 @@
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/MovieBoxProvider/icon.png",
-    "fileHash": "sha256-989c727434876e6e58634fac0a57249a8210c6f81c137120c9c72cdc5005ad00",
+    "fileHash": "sha256-1c72d18e3d5cb85a5aec422096cc7511ea4767636c3ece1870ac68ae4f13846a",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 94749,
+    "fileSize": 94906,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -6584,18 +6584,18 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 52,
+    "version": 55,
     "internalName": "MovieBoxProvider",
     "description": "Multi Language Movies and Series Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MovieBoxProvider.cs3",
     "name": "[Indian] MovieBoxProvider"
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/MovieBoxProviderIN/icon.png",
-    "fileHash": "sha256-366dfcd24732a1ab0751c6c824bd33dd562ff6ad845a1c7912c397bdf30201aa",
+    "fileHash": "sha256-4e620c234f7df0d2da70629c82dfad9353a374e65f54dd4357e457b8decf9a7e",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 92281,
+    "fileSize": 92436,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -6605,10 +6605,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 54,
+    "version": 57,
     "internalName": "MovieBoxProviderIN",
     "description": "Multi Language Movies and Series Provider (Local homepage based on region)",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProviderIN.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MovieBoxProviderIN.cs3",
     "name": "[Indian] MovieBoxProviderIN"
   },
   {
@@ -6702,10 +6702,10 @@
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/heads/master/Logos/MoviezwapProvider/icon.png",
-    "fileHash": "sha256-029dcce347a05f2a41becb90fd7b658393d6d89100ace2e97b52b01cfc8349ae",
+    "fileHash": "sha256-5d8fae1c94925bff9dadc1bc7a060f41f6b20d44373bf073dfb70beb4680f4f3",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 40219,
+    "fileSize": 40232,
     "status": 1,
     "language": "te",
     "authors": [
@@ -6714,10 +6714,10 @@
     "tvTypes": [
       "Movie"
     ],
-    "version": 32,
+    "version": 34,
     "internalName": "MoviezwapProvider",
     "description": "Telugu Movies Provider - Moviezwap",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MoviezwapProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MoviezwapProvider.cs3",
     "name": "[Indian] MoviezwapProvider"
   },
   {
@@ -6807,16 +6807,16 @@
     "fileHash": "sha256-e863e5d8d88ee0c76003a9907cc4e3f268f340f260debbfea943bc200b809ace"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Multimovies.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Multimovies.cs3",
     "status": 1,
-    "version": 8,
+    "version": 15,
     "name": "[Movies] Multimovies",
     "internalName": "Multimovies",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Multimovies - Movies, TV Shows & Anime. Sources: Cineverse (multi-server), GD Mirror, Vidout, Vidsync, Bingr, Filmu, VidBolt",
-    "fileSize": 132396,
+    "fileSize": 150596,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -6826,7 +6826,7 @@
     ],
     "iconUrl": "https://multimovies.garden/assets/img/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-6a596472416e58ee417a1ef001249da0d922b31fe9ab7da1572f030f8749ed84"
+    "fileHash": "sha256-1a293e6064938d4258727fd4bfddf24a22741b11e34c228063db6b8c2d89ad05"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/MultiMoviesProvider.cs3",
@@ -7102,16 +7102,16 @@
     "fileHash": "sha256-96fe54617fad09e0eb90a85892c1819e85ed7cd2bb9189be411d5ffa794a4fe7"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NetNaija-box.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/NetNaija-box.cs3",
     "status": 1,
-    "version": 2,
+    "version": 8,
     "name": "[Live] NetNaija-box",
     "internalName": "NetNaija-box",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "NetNaija-box - Multi Language Movies, Series and Live Sports. HD streaming with multiple dubs and subtitles.",
-    "fileSize": 147758,
+    "fileSize": 157459,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -7121,7 +7121,7 @@
     ],
     "iconUrl": "https://netnaija.film/favicon.ico",
     "apiVersion": 1,
-    "fileHash": "sha256-8485f0b2b67ab43df290304d9e95f068cad911056b192749a56f82388e051e19"
+    "fileHash": "sha256-b489cdcfbd52a9fa0fcf440d3d44e3d3fdb38ccab9766f95b8118fb4e1b2e822"
   },
   {
     "iconUrl": "https://i.ibb.co.com/3yVG0DbY/ngefilm.png",
@@ -7166,16 +7166,16 @@
     "name": "[Asian] Nimegami"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NineAnime.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/NineAnime.cs3",
     "status": 1,
-    "version": 6,
+    "version": 11,
     "name": "[Anime] NineAnime",
     "internalName": "NineAnime",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "anime from 9anime clone with sub and dub",
-    "fileSize": 49893,
+    "fileSize": 56433,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -7185,7 +7185,7 @@
     ],
     "iconUrl": "https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9pLmF1ZGlvbWFjay5jb20vOWFuaW1lcy8zODE4MDE3MGZmLndlYnA%2FbWluPXRydWUmaGVpZ2h0PTE0MDAmd2lkdGg9MTQwMA%3D%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D",
     "apiVersion": 1,
-    "fileHash": "sha256-857ff2998810c1a34a50087db15b23840655d86a57606474de62e58672252c6d"
+    "fileHash": "sha256-f47f20dd87d25af0231633ef71e393fb0f007d321efa527991a3309b06fc53c0"
   },
   {
     "iconUrl": "https://i.ibb.co.com/Z1YVFHNS/nomat.png",
@@ -7622,15 +7622,15 @@
     "fileHash": "sha256-27696fb0b150ddea16036c0a53dd759ec60a89077bc1abfcc1cb5338256f6c9b"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/PeliculasFlixProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/PeliculasFlixProvider.cs3",
     "status": 1,
-    "version": 2,
+    "version": 3,
     "name": "[Movies] PeliculasFlixProvider",
     "internalName": "PeliculasFlixProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 34430,
+    "fileSize": 31798,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "es",
     "tvTypes": [
@@ -7638,7 +7638,7 @@
     ],
     "iconUrl": "https://peliculasflix.co/img/logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-bf598a75b9a6acbe9859b565c575456a5b47bef03cf3ca8b25d5cd18290f4623"
+    "fileHash": "sha256-725c49cf82dd80040b0d0781b69197ebd1ac26863a7eb6d8f0174e7da0fcad72"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/PelispediaProvider.cs3",
@@ -7683,15 +7683,15 @@
     "fileHash": "sha256-265d435328d26d83fef3c374ea1e4c08b216586a170f2356084a3909c149852e"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/PelisplusHDProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/PelisplusHDProvider.cs3",
     "status": 1,
-    "version": 11,
+    "version": 14,
     "name": "[Movies] PelisplusHDProvider",
     "internalName": "PelisplusHDProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
-    "fileSize": 38519,
+    "fileSize": 46271,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -7700,7 +7700,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=pelisplushd.nu&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-e71c24f03079e50a938bef0bba3649b4e698f5236ebdaeda53977fcde90e4c7d"
+    "fileHash": "sha256-18a05edae96a0c371168f6110c5886eed8a8e6a708fd2ee7193b393957a5f227"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/Pencurimovie.cs3",
@@ -7805,10 +7805,10 @@
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/Logos/PikashowProvider/logo.png",
-    "fileHash": "sha256-1375d18dfc913d2e03036c1aeeccfb46ee266108a6e2e467b7d6f3f4b2ff6d2d",
+    "fileHash": "sha256-d66b55f33700d2ca203e81a216b8af2652f69f8ce1925afb1656ec63d5173806",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 82128,
+    "fileSize": 82155,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -7818,10 +7818,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 32,
+    "version": 34,
     "internalName": "PikashowProvider",
     "description": "Stream movies and series from Pikashow",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PikashowProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/PikashowProvider.cs3",
     "name": "[Indian] PikashowProvider"
   },
   {
@@ -7869,10 +7869,10 @@
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/Logos/PlayFyTvProvider/playfy-tv-4.webp",
-    "fileHash": "sha256-365edb434209a559a3a7dfd7b6744b28831c137f2ef098fa418b08bfc1390250",
+    "fileHash": "sha256-3035053ba05a11b65e2a6473adff668513f26f12daacceb28e283eb708564d1d",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 106982,
+    "fileSize": 107980,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -7881,18 +7881,18 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 14,
+    "version": 21,
     "internalName": "PlayFyProvider",
     "description": "Watch Live sports and TV channels via PlayFy",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayFyProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/PlayFyProvider.cs3",
     "name": "[Live] PlayFyProvider"
   },
   {
     "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/Logos/PlayZTVProvider/logo.jpg",
-    "fileHash": "sha256-e6411013cca732e3f597f60493798b2c3841ed7d5d8ecdffa84a3248fae75b4c",
+    "fileHash": "sha256-8541a6dbf0c8fdd6dbf698548e85a856cdd11be27d99db0ee3a1ccda5f4226b5",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 117275,
+    "fileSize": 118993,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -7901,10 +7901,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 42,
+    "version": 49,
     "internalName": "PlayZTVProvider",
     "description": "Watch Live TV channels & sports via PlayZTV",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayZTVProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/PlayZTVProvider.cs3",
     "name": "[Live] PlayZTVProvider"
   },
   {
@@ -8231,10 +8231,10 @@
   },
   {
     "iconUrl": "https://cdn.mytuner.mobi/static/ctr/icons/App_192x192/in.png",
-    "fileHash": "sha256-f2d13edbc8f8b131c1e9cfefd67afd11cc9149538590e3fbe967eddd18cb23bc",
+    "fileHash": "sha256-682268c0e0864c2dda9d8660e1265f3d794cb244b5ca4c930d634aaebef55f03",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 36329,
+    "fileSize": 36367,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -8243,10 +8243,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 33,
+    "version": 35,
     "internalName": "RadioIndiaProvider",
     "description": "Radio India Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/RadioIndiaProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/RadioIndiaProvider.cs3",
     "name": "[Live] RadioIndiaProvider"
   },
   {
@@ -8357,16 +8357,16 @@
     "fileHash": "sha256-3c81c2479bca04347271c3e13dc7b32965633f7d1aeb659f1aa7202b81dc9f14"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/ReAnime.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/ReAnime.cs3",
     "status": 1,
-    "version": 4,
+    "version": 10,
     "name": "[Anime] ReAnime",
     "internalName": "ReAnime",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Re:ANIME - Anime with Sub & Dub",
-    "fileSize": 81265,
+    "fileSize": 61466,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -8376,7 +8376,7 @@
     ],
     "iconUrl": "https://reanime.to/favicon-32x32.png",
     "apiVersion": 1,
-    "fileHash": "sha256-c1c59e7ca641568725017be10d591d37fb1f48484d89cf27074bd256f1fbcab3"
+    "fileHash": "sha256-ec072c5b9cae8c04cc58b429074b4b55f7a51c5440fcf36f41f19b5897d228a1"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=http://159.89.250.250&sz=%size%",
@@ -8526,10 +8526,10 @@
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/Rtally/icon.png",
-    "fileHash": "sha256-f5df5457cef0b1847c05bad9f6b575e207714f02517a5ab74416ac0fa324c90a",
+    "fileHash": "sha256-8615e9594354d9d68bfd7fe588279552f50f78ce2974f565091aee4fea0c3f73",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 46067,
+    "fileSize": 111339,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -8542,10 +8542,10 @@
       "AnimeMovie",
       "AsianDrama"
     ],
-    "version": 50,
+    "version": 54,
     "internalName": "Rtally",
     "description": "Movie and TV Series provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Rtally.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/Rtally.cs3",
     "name": "[Indian] Rtally"
   },
   {
@@ -8653,16 +8653,16 @@
     "name": "[Asian] SemiRebahin"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Senshi.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Senshi.cs3",
     "status": 1,
-    "version": 8,
+    "version": 15,
     "name": "[Anime] Senshi",
     "internalName": "Senshi",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime with sub & dub, multi-language subtitles",
-    "fileSize": 108271,
+    "fileSize": 114378,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -8672,7 +8672,7 @@
     ],
     "iconUrl": "https://senshi.to/assets/Senshi_Logo-D4bDbCzd.png",
     "apiVersion": 1,
-    "fileHash": "sha256-39edb5db69e4e0f28c786f6d5da703aedb25a1cb6ddc770e6d9ffc8780596652"
+    "fileHash": "sha256-c7015a11f1f6dd8afd9bbe086271807ee517e3fc928e7896c87203b3a57c7a13"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=serialno.tv&sz=%size%",
@@ -8907,10 +8907,10 @@
   },
   {
     "iconUrl": "https://simpsonsua.tv/templates/simpsonsua/images/favicon.ico",
-    "fileHash": "sha256-615e75b2fcda1af0c950aa70991573c427e3acfbee0b4642374d63ef127eae7d",
+    "fileHash": "sha256-8e38411e90501476bcfbffbc8858b9ee5f047af8a4cbf31946ab08bfd557336c",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 41170,
+    "fileSize": 46517,
     "status": 3,
     "language": "uk",
     "authors": [
@@ -8920,10 +8920,10 @@
       "Cartoon",
       "TvSeries"
     ],
-    "version": 5,
+    "version": 8,
     "internalName": "SimpsonsUATvProvider",
     "description": "Сайт СІМПСОНИ UA - на якому можна дивитися Сімпсони всі сезони  українською мовою онлайн",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SimpsonsUATvProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/SimpsonsUATvProvider.cs3",
     "name": "[Movies] SimpsonsUATvProvider"
   },
   {
@@ -8948,10 +8948,10 @@
   },
   {
     "iconUrl": "https://sktechtv.org/wp-content/uploads/2026/05/sktechtv.webp",
-    "fileHash": "sha256-f7605368aff29d108c0975d23bddf4f98b3d6dae0662c5db3f5be0c76ab9150d",
+    "fileHash": "sha256-28cbd8c39151920fff25c745d3dfde13a214e431872ce53b39a36defb048563a",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 125231,
+    "fileSize": 125972,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -8960,10 +8960,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 58,
+    "version": 65,
     "internalName": "SKTechProvider",
     "description": "Watch Live sports and TV channels via SK Tech",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SKTechProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/SKTechProvider.cs3",
     "name": "[Live] SKTechProvider"
   },
   {
@@ -9010,16 +9010,16 @@
     "name": "[Asian] Sokuja"
   },
   {
-    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/SoloLatinoProvider.cs3",
+    "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/SoloLatinoProvider.cs3",
     "status": 1,
-    "version": 9,
+    "version": 12,
     "name": "[Movies] SoloLatinoProvider",
     "internalName": "SoloLatinoProvider",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Peliculas, series, animes y cartoons en Español y Español Latio",
-    "fileSize": 43584,
+    "fileSize": 58778,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "mx",
     "tvTypes": [
@@ -9030,19 +9030,19 @@
     ],
     "iconUrl": "https://sololatino.net/wp-content/uploads/2020/10/cropped-logo-final-192x192.png",
     "apiVersion": 1,
-    "fileHash": "sha256-f382319fef79c70a243bd634e08d6f9cc10fe8d7d5534b257238e8e05443dba7"
+    "fileHash": "sha256-5569ad9f5b81d6587cb0e4d00fe034a3ebf9e541d080b3efc2cba5166190082b"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/spankbang.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/spankbang.cs3",
     "status": 1,
-    "version": 10,
+    "version": 12,
     "name": "[Adult] spankbang",
     "internalName": "spankbang",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Spankbang",
-    "fileSize": 22585,
+    "fileSize": 23716,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9050,14 +9050,14 @@
     ],
     "iconUrl": "https://logos-world.net/wp-content/uploads/2023/01/SpankBang-Logo.png",
     "apiVersion": 1,
-    "fileHash": "sha256-f9e2d6fd4125fa74f03b8c22c89da9a839fb7f14780ed235e4b0ac0c1c262e42"
+    "fileHash": "sha256-8739383e57e5ee962122967b1b1d30dff2c1fc1c89b8b4dfc9a3f5c6140e4907"
   },
   {
     "iconUrl": "https://sportzxlive.com/wp-content/uploads/2026/04/cropped-logo-1-2048x1611-1-1024x806.png",
-    "fileHash": "sha256-62d24fa711dd5a9c0dec3e60b67ae5eaf2e3f7d71e6b5687039b65e70367b451",
+    "fileHash": "sha256-814950e65834e929d8d3eb66fa4c50223bbd9c3c786188a3ba934d4e185d6ab4",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 123166,
+    "fileSize": 123794,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -9066,10 +9066,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 26,
+    "version": 33,
     "internalName": "SportzxProvider",
     "description": "Watch Live Sports Events via SportzX",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SportzxProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/SportzxProvider.cs3",
     "name": "[Live] SportzxProvider"
   },
   {
@@ -9160,10 +9160,10 @@
   },
   {
     "iconUrl": "https://play-lh.googleusercontent.com/7geBQBtW_yN70BU81Oi2SoZvYsj5VoYrI4FmUNdqWQlchtExJb7XE_1BQysGzgJ6mBU",
-    "fileHash": "sha256-088656562420b65e6b5395235659ec16a87251a58762d3063b90331051780529",
+    "fileHash": "sha256-db03d09c0ad9035dd2ff0a174e15afde88eeca3f0984854fbcb13537d170ec44",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 65089,
+    "fileSize": 65097,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -9174,10 +9174,10 @@
       "TvSeries",
       "Anime"
     ],
-    "version": 34,
+    "version": 36,
     "internalName": "StreamFlixProvider",
     "description": "StreamFlix Multi Language Movies and Series Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/StreamFlixProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/StreamFlixProvider.cs3",
     "name": "[Indian] StreamFlixProvider"
   },
   {
@@ -9339,10 +9339,10 @@
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/CNC%20Verse/icon.png",
-    "fileHash": "sha256-58acb879f321174d067d01e80c4300455de6f3d8c82edabe4bacbbf5c21a4b90",
+    "fileHash": "sha256-8704088ea468c56d8c9b3211fd12c7b3d8bf4b20db0423be07d7bacf49572ade",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 38794,
+    "fileSize": 38834,
     "status": 1,
     "authors": [
       "Adam Knight (Maintainer)"
@@ -9351,10 +9351,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 16,
+    "version": 18,
     "internalName": "SubscriptionManager",
     "description": "Manage your CNCVerse subscription — remove ads with a premium plan",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SubscriptionManager.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/SubscriptionManager.cs3",
     "name": "[Tools] SubscriptionManager"
   },
   {
@@ -9418,16 +9418,16 @@
     "fileHash": "sha256-66bbf0715687224699d9aa78a1b767fd91649c6bdb4f61456acdedc81a795ad2"
   },
   {
-    "url": "https://raw.githubusercontent.com/phisher98/CXXX/builds/SuperJav.cs3",
+    "url": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/SuperJav.cs3",
     "status": 1,
-    "version": 5,
+    "version": 7,
     "name": "[Adult] SuperJav",
     "internalName": "SuperJav",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "JAV SuperJav",
-    "fileSize": 20194,
+    "fileSize": 20906,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9435,7 +9435,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=supjav.com&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-f6217e8b8f00e01febc1741f18a2347cdc2a72fe4e4247b18929ce9feab6947b"
+    "fileHash": "sha256-66585aa07d58e61b371e4206232cf82bd321df60fa3941657c87548bd7f698e9"
   },
   {
     "name": "[Other] SuperMario",
@@ -9599,10 +9599,10 @@
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/TamilDhoolProvider/icon.png",
-    "fileHash": "sha256-f3d4a0c6f2a7f80f483844b58302da1d24ff151cbdd3aef0b63f043203db88d5",
+    "fileHash": "sha256-c7208632f75868e5adc5b0dc1bcf2357e9fe5826dc22eb1e35a9073d75ccd435",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 53361,
+    "fileSize": 53393,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -9611,18 +9611,18 @@
     "tvTypes": [
       "TvSeries"
     ],
-    "version": 40,
+    "version": 42,
     "internalName": "TamilDhoolProvider",
     "description": "Tamil Tv Serial/Shows Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/TamilDhoolProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/TamilDhoolProvider.cs3",
     "name": "[Indian] TamilDhoolProvider"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=tamilian.io&sz=%size%",
-    "fileHash": "sha256-1e5cdce0eb999a67d58151508a85098fdb75acdbbbac954256833c63bfe0334d",
+    "fileHash": "sha256-693426348095c8b59ab1b52717f6407961989972b432ad8e4706405f7ee87897",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 38280,
+    "fileSize": 38316,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -9631,10 +9631,10 @@
     "tvTypes": [
       "Movies"
     ],
-    "version": 32,
+    "version": 34,
     "internalName": "Tamilian",
     "description": "Movies (Tamil)",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Tamilian.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/Tamilian.cs3",
     "name": "[Indian] Tamilian"
   },
   {
@@ -9662,10 +9662,10 @@
   },
   {
     "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Logos/TamilUltraProvider/icon.png",
-    "fileHash": "sha256-2f8ff86feb4c181e7a405bb7981d9173dd358794777cbc9ec83b805496b80270",
+    "fileHash": "sha256-9a5d959417b1877695b8507a662f074c9cac501ce1efe98a3cc5545bccad1c8a",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 35478,
+    "fileSize": 35499,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -9674,10 +9674,10 @@
     "tvTypes": [
       "Live"
     ],
-    "version": 40,
+    "version": 42,
     "internalName": "TamilUltraProvider",
     "description": "Indian Live TV Provider",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/TamilUltraProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/TamilUltraProvider.cs3",
     "name": "[Live] TamilUltraProvider"
   },
   {
@@ -9723,16 +9723,16 @@
     "fileHash": "sha256-e96ea27fff94a77eb05b2fbc2f2f31f262556d68e3b1c8e2462c8ec1c3a1a454"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TheMoviesFlix.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/TheMoviesFlix.cs3",
     "status": 1,
-    "version": 22,
+    "version": 28,
     "name": "[Movies] TheMoviesFlix",
     "internalName": "TheMoviesFlix",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "stream movies & TV series HINDI,ENGLISH - TheMoviesFlix Provider",
-    "fileSize": 76049,
+    "fileSize": 83418,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -9741,7 +9741,7 @@
     ],
     "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_C9WX4AwepepLyw_cF-EIJeRpqgI4wDiquYSoP9xDFFAKFtTVM-P_zo&s=10",
     "apiVersion": 1,
-    "fileHash": "sha256-409d490bf3b039b5cd80ef5f02ddfe6b20c548101519c5996f20ff433c20e6e9"
+    "fileHash": "sha256-95501d0fcafbf528d8089decf17d9a1535812998619d84efd067c79dd275cca2"
   },
   {
     "url": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/TioAnimeProvider.cs3",
@@ -10245,16 +10245,16 @@
     "jarHash": "sha256-88086809ed6ccc21cca611ce2ba4f2563b1082486ffda3daa6350da9126b548b"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TwoDHive.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/TwoDHive.cs3",
     "status": 1,
-    "version": 17,
+    "version": 22,
     "name": "[Anime] TwoDHive",
     "internalName": "TwoDHive",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "Anime and movies from 2Dhive with Sub and Dub support",
-    "fileSize": 54581,
+    "fileSize": 60769,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -10264,7 +10264,7 @@
     ],
     "iconUrl": "https://wallpapers.com/images/hd/anime-symbols-full-metal-alchemist-homunculi-black-and-red-59twpz44gslsiv1o.jpg",
     "apiVersion": 1,
-    "fileHash": "sha256-85c3f1bca63d6e6c892417439a7a525cc266897263adeac55ec2ebbf4a5836c2"
+    "fileHash": "sha256-13f9636077114d0c42a5d0b78272393f82456c76e89e107328f46af1b5c6ce09"
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=uafix.net&sz=%size%",
@@ -10291,10 +10291,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=uakino.club&sz=%size%",
-    "fileHash": "sha256-bed2490e90a24b564ac19efd457e1d107bd7806343cd74f9f98348acaa65c13c",
+    "fileHash": "sha256-b86689af701a73fff2a744ef19b79f960a38da52327e6e7cf8233fc33043be08",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 47325,
+    "fileSize": 56393,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -10306,10 +10306,10 @@
       "Movie",
       "AsianDrama"
     ],
-    "version": 32,
+    "version": 37,
     "internalName": "UakinoProvider",
     "description": "Дивіться фільми та серіали онлайн в HD якості. У нас можна дивитися кіно онлайн безкоштовно, у високій якості та з якісним українським дубляжем.",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UakinoProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/UakinoProvider.cs3",
     "name": "[Movies] UakinoProvider"
   },
   {
@@ -10337,10 +10337,10 @@
   },
   {
     "iconUrl": "https://www.google.com/s2/favicons?domain=ufdub.com&sz=%size%",
-    "fileHash": "sha256-2d946f34add283b744a2d22a2e34c9e588ef090e845c3a1e139db7c203ddb64e",
+    "fileHash": "sha256-b057e9ca41acb208e2bc315ffc868a5e2dcba11b8f1f4a3fff057dbb0392695f",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 12978,
+    "fileSize": 17365,
     "status": 1,
     "language": "uk",
     "authors": [
@@ -10354,10 +10354,10 @@
       "TvSeries",
       "Movie"
     ],
-    "version": 12,
+    "version": 14,
     "internalName": "UFDubProvider",
     "description": "UFDUB.com - Це команда любителів, що озвучують з душею те, що бажають глядачі й учасники проєкту! 🧡",
-    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UFDubProvider.cs3",
+    "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/UFDubProvider.cs3",
     "name": "[Movies] UFDubProvider"
   },
   {
@@ -10648,10 +10648,10 @@
   },
   {
     "iconUrl": "https://editorialge.com/wp-content/uploads/2023/07/Watch32..jpg",
-    "fileHash": "sha256-6458eca31cd714259fb543e708c85db91424d838becb54d207965a923ecc0e5a",
+    "fileHash": "sha256-370ff58df1d1b1aad25d50d748a59eb1b54e399d8b12b28289925e0049d7b76f",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 51046,
+    "fileSize": 48276,
     "status": 1,
     "language": "en",
     "authors": [
@@ -10661,10 +10661,10 @@
       "Movie",
       "TvSeries"
     ],
-    "version": 34,
+    "version": 37,
     "internalName": "Watch32",
     "description": "Watch32 is a Free Movies streaming site with over 10000 movies and TV-Series.",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Watch32.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/Watch32.cs3",
     "name": "[Movies] Watch32"
   },
   {
@@ -10896,16 +10896,16 @@
     "jarHash": "sha256-b785a154a8682048c27cba3159ea3502f9d918ce951f49dc521695e892b5e56d"
   },
   {
-    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Xanime.cs3",
+    "url": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Xanime.cs3",
     "status": 1,
-    "version": 1,
+    "version": 6,
     "name": "[Anime] Xanime",
     "internalName": "Xanime",
     "authors": [
       "Adam Knight (Maintainer)"
     ],
     "description": "anime with sub and dub",
-    "fileSize": 51339,
+    "fileSize": 57660,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
     "language": "en",
     "tvTypes": [
@@ -10915,7 +10915,7 @@
     ],
     "iconUrl": "https://www.google.com/s2/favicons?domain=xanime.me&sz=%size%",
     "apiVersion": 1,
-    "fileHash": "sha256-6e59602e2707e14d8b756d1a31fd5fe29e73a3ce9ab5a789bc48da4e82887f33"
+    "fileHash": "sha256-48facdbf628acb6832dbdb43ba93490cfcb0b742d870f462d81ae499b1680a3e"
   },
   {
     "url": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/3b67c552158a9dc0f898069974a3a9838743bd64/XDMovies.cs3",
@@ -11044,10 +11044,10 @@
   },
   {
     "iconUrl": "https://play-lh.googleusercontent.com/zVq_wAus2snoO-ggyI6IomlsCzfybAozQOGYpBrv71r1--rOYOYWsr_N7DWwVp9t7ro=s248-rw",
-    "fileHash": "sha256-5535c16b48180971065fdace2fec226f2d7e9b8433349dc594a52de41f0adc96",
+    "fileHash": "sha256-4a1474b52b790646d88626856feb1f34aa7f549b0f3e7ded19887b338cf12c20",
     "apiVersion": 1,
     "repositoryUrl": "https://github.com/admknight/CloudstreamExtensions",
-    "fileSize": 63340,
+    "fileSize": 63369,
     "status": 1,
     "language": "ta",
     "authors": [
@@ -11058,10 +11058,10 @@
       "Movie",
       "Anime"
     ],
-    "version": 35,
+    "version": 37,
     "internalName": "XonProvider",
     "description": "Xon Provider for Anime and Cartoons - Tamil, Hindi, Telugu, English, Japanese",
-    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/XonProvider.cs3",
+    "url": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/XonProvider.cs3",
     "name": "[Indian] XonProvider"
   },
   {

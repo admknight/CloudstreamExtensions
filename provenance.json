@@ -245,7 +245,7 @@
     "publishedName": "[Anime] AniChan",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 14,
+    "selectedVersion": 19,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -254,7 +254,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniChan.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniChan.cs3"
   },
   {
     "plugin": "Anichi",
@@ -296,7 +296,7 @@
     "publishedName": "[Anime] Anidap",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 17,
+    "selectedVersion": 22,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -305,7 +305,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Anidap.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Anidap.cs3"
   },
   {
     "plugin": "Anikage",
@@ -330,7 +330,7 @@
     "publishedName": "[Anime] AniKoto",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 12,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -339,7 +339,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/AniKoto.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/AniKoto.cs3"
   },
   {
     "plugin": "AniKotoAnime",
@@ -347,7 +347,7 @@
     "publishedName": "[Anime] AniKotoAnime",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 17,
+    "selectedVersion": 22,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -356,7 +356,7 @@
       "KSHITIJ8473"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniKotoAnime.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniKotoAnime.cs3"
   },
   {
     "plugin": "Anilight",
@@ -639,7 +639,7 @@
     "publishedName": "[Asian] AnimeInWeb",
     "category": "Asian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 9,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -648,7 +648,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AnimeInWeb.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AnimeInWeb.cs3"
   },
   {
     "plugin": "Animejara",
@@ -827,7 +827,7 @@
     "publishedName": "[Anime] AnimeSuge",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 12,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -836,7 +836,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/AnimeSuge.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/AnimeSuge.cs3"
   },
   {
     "plugin": "AnimeTH",
@@ -964,7 +964,7 @@
     "publishedName": "[Indian] AnimeWorldIndia",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 8,
+    "selectedVersion": 14,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -973,7 +973,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AnimeWorldIndia.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AnimeWorldIndia.cs3"
   },
   {
     "plugin": "Animexin",
@@ -1032,7 +1032,7 @@
     "publishedName": "[Anime] AniPM",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 11,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -1041,7 +1041,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniPM.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniPM.cs3"
   },
   {
     "plugin": "AniSnatch",
@@ -1083,7 +1083,7 @@
     "publishedName": "[Anime] AniSuge",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 6,
+    "selectedVersion": 11,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -1092,7 +1092,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniSuge.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniSuge.cs3"
   },
   {
     "plugin": "AnitubeinuaProvider",
@@ -1134,7 +1134,7 @@
     "publishedName": "[Anime] AniWaves",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 7,
+    "selectedVersion": 12,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -1143,7 +1143,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/AniWaves.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/AniWaves.cs3"
   },
   {
     "plugin": "Aniworld",
@@ -1509,7 +1509,7 @@
     "publishedName": "[Indian] BilibiliProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 36,
+    "selectedVersion": 38,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -1518,7 +1518,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/BilibiliProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/BilibiliProvider.cs3"
   },
   {
     "plugin": "BingeCloud",
@@ -1680,7 +1680,7 @@
     "publishedName": "[Indian] CastleTvProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 40,
+    "selectedVersion": 48,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -1689,7 +1689,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CastleTvProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CastleTvProvider.cs3"
   },
   {
     "plugin": "Castlevania",
@@ -2056,7 +2056,7 @@
     "publishedName": "[Indian] CineTvProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 35,
+    "selectedVersion": 37,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -2065,7 +2065,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CineTvProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CineTvProvider.cs3"
   },
   {
     "plugin": "CinevezProvider",
@@ -2107,7 +2107,7 @@
     "publishedName": "[Indian] CNC Verse",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 114,
+    "selectedVersion": 116,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -2116,7 +2116,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CNC%20Verse.cs3"
   },
   {
     "plugin": "CNC Verse Mobile",
@@ -2124,7 +2124,7 @@
     "publishedName": "[Indian] CNC Verse Mobile",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 14,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -2133,7 +2133,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse Mobile.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CNC%20Verse%20Mobile.cs3"
   },
   {
     "plugin": "CoaninetProvider",
@@ -2248,7 +2248,7 @@
     "publishedName": "[Live] CricifyProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 71,
+    "selectedVersion": 78,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -2257,7 +2257,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/CricifyProvider.cs3"
   },
   {
     "plugin": "CuevanaProvider",
@@ -2299,7 +2299,7 @@
     "publishedName": "[Live] DamiTVProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 25,
+    "selectedVersion": 32,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -2308,7 +2308,7 @@
       "KSHITIJ8473"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/DamiTVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/DamiTVProvider.cs3"
   },
   {
     "plugin": "Ddizi",
@@ -2384,7 +2384,7 @@
     "publishedName": "[Indian] DesiSerialsProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 33,
+    "selectedVersion": 35,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -2393,7 +2393,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/DesiSerialsProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/DesiSerialsProvider.cs3"
   },
   {
     "plugin": "Desisins",
@@ -2743,7 +2743,7 @@
     "publishedName": "[Movies] DoramyWorldProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 2,
+    "selectedVersion": 3,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -2752,7 +2752,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/DoramyWorldProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/DoramyWorldProvider.cs3"
   },
   {
     "plugin": "DramaDrip",
@@ -2863,7 +2863,7 @@
     "publishedName": "[Indian] EinthusanProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 37,
+    "selectedVersion": 39,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -2872,7 +2872,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/EinthusanProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/EinthusanProvider.cs3"
   },
   {
     "plugin": "Elif",
@@ -2914,7 +2914,7 @@
     "publishedName": "[Movies] EneyidaProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 19,
+    "selectedVersion": 20,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -2923,7 +2923,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/EneyidaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/EneyidaProvider.cs3"
   },
   {
     "plugin": "EntrepeliculasyseriesProvider",
@@ -2931,7 +2931,7 @@
     "publishedName": "[Movies] EntrepeliculasyseriesProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 12,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -2940,7 +2940,7 @@
       "Stormunblessed"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/EntrepeliculasyseriesProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/EntrepeliculasyseriesProvider.cs3"
   },
   {
     "plugin": "Eporner",
@@ -2948,7 +2948,7 @@
     "publishedName": "[Adult] Eporner",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 13,
+    "selectedVersion": 14,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -2957,7 +2957,7 @@
       "HindiProvider, megix"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Eporner.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Eporner.cs3"
   },
   {
     "plugin": "eseek",
@@ -3499,7 +3499,7 @@
     "publishedName": "[Other] GoldenAudiobook",
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 33,
+    "selectedVersion": 36,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -3508,7 +3508,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/GoldenAudiobook.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/GoldenAudiobook.cs3"
   },
   {
     "plugin": "GoldenAudiobooks",
@@ -3551,7 +3551,7 @@
     "publishedName": "[Anime] GoTaku",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 14,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -3560,7 +3560,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/GoTaku.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/GoTaku.cs3"
   },
   {
     "plugin": "GuardaPlay",
@@ -3758,7 +3758,7 @@
     "publishedName": "[Indian] HDOProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 35,
+    "selectedVersion": 37,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -3767,7 +3767,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/HDOProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/HDOProvider.cs3"
   },
   {
     "plugin": "HDrezkaProvider",
@@ -3775,7 +3775,7 @@
     "publishedName": "[Movies] HDrezkaProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 35,
+    "selectedVersion": 39,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -3784,7 +3784,7 @@
       "Hexated, NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/HDrezkaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/HDrezkaProvider.cs3"
   },
   {
     "plugin": "HentaiCity",
@@ -4270,7 +4270,7 @@
     "publishedName": "[Adult] ixiporn",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 16,
+    "selectedVersion": 17,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -4279,7 +4279,7 @@
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/ixiporn.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/ixiporn.cs3"
   },
   {
     "plugin": "IzziGoProvider",
@@ -4287,7 +4287,7 @@
     "publishedName": "[Live] IzziGoProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 16,
+    "selectedVersion": 17,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -4296,7 +4296,7 @@
       "redblacker8"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/IzziGoProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/IzziGoProvider.cs3"
   },
   {
     "plugin": "JackieChan",
@@ -4338,7 +4338,7 @@
     "publishedName": "[Adult] JavGuru",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 6,
+    "selectedVersion": 7,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -4347,7 +4347,7 @@
       "Jace"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JavGuru.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/JavGuru.cs3"
   },
   {
     "plugin": "JAVHd",
@@ -4355,7 +4355,7 @@
     "publishedName": "[Adult] JAVHd",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 8,
+    "selectedVersion": 9,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -4365,7 +4365,7 @@
       "megix"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JAVHd.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/JAVHd.cs3"
   },
   {
     "plugin": "JavMost",
@@ -4390,7 +4390,7 @@
     "publishedName": "[Adult] JAVPoint",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 13,
+    "selectedVersion": 14,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -4399,7 +4399,7 @@
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/JAVPoint.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/JAVPoint.cs3"
   },
   {
     "plugin": "Javtiful",
@@ -4407,7 +4407,7 @@
     "publishedName": "[Adult] Javtiful",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 2,
+    "selectedVersion": 3,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -4416,7 +4416,7 @@
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Javtiful.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Javtiful.cs3"
   },
   {
     "plugin": "Javx",
@@ -4424,7 +4424,7 @@
     "publishedName": "[Adult] Javx",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 1,
+    "selectedVersion": 3,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -4433,7 +4433,7 @@
       "Jav"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/Javx.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/Javx.cs3"
   },
   {
     "plugin": "Jellyfin",
@@ -4577,7 +4577,7 @@
     "publishedName": "[Movies] Kdesa",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 3,
+    "selectedVersion": 12,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -4586,7 +4586,7 @@
       "KSHITIJ8473"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Kdesa.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Kdesa.cs3"
   },
   {
     "plugin": "Kickassanime",
@@ -4629,7 +4629,7 @@
     "publishedName": "[Movies] KinoTronProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 17,
+    "selectedVersion": 19,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -4638,7 +4638,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoTronProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KinoTronProvider.cs3"
   },
   {
     "plugin": "KinoVezhaProvider",
@@ -4732,7 +4732,7 @@
     "publishedName": "[Movies] KlonTVProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 22,
+    "selectedVersion": 25,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -4741,7 +4741,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KlonTVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/KlonTVProvider.cs3"
   },
   {
     "plugin": "KmMovies",
@@ -4868,7 +4868,7 @@
     "publishedName": "[Movies] LACartoonsProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 5,
+    "selectedVersion": 6,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -4877,7 +4877,7 @@
       "Stormunblessed"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/LACartoonsProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/LACartoonsProvider.cs3"
   },
   {
     "plugin": "LaMovieProvider",
@@ -5007,7 +5007,7 @@
     "publishedName": "[Other] LibriVoxAudiobook",
     "category": "Other",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 33,
+    "selectedVersion": 36,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5016,7 +5016,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LibriVoxAudiobook.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/LibriVoxAudiobook.cs3"
   },
   {
     "plugin": "LittleMermaid",
@@ -5058,7 +5058,7 @@
     "publishedName": "[Live] LivXowProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 20,
+    "selectedVersion": 27,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5067,7 +5067,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/LivXowProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/LivXowProvider.cs3"
   },
   {
     "plugin": "LK21",
@@ -5126,7 +5126,7 @@
     "publishedName": "[Tools] M3UPlaylistPlayerProvider",
     "category": "Tools",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 18,
+    "selectedVersion": 22,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5135,7 +5135,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/M3UPlaylistPlayerProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/M3UPlaylistPlayerProvider.cs3"
   },
   {
     "plugin": "Mangoporn",
@@ -5328,7 +5328,7 @@
     "publishedName": "[Indian] MLSBDProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 34,
+    "selectedVersion": 37,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5337,7 +5337,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MLSBDProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MLSBDProvider.cs3"
   },
   {
     "plugin": "MonoschinosProvider",
@@ -5345,7 +5345,7 @@
     "publishedName": "[Anime] MonoschinosProvider",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 8,
+    "selectedVersion": 9,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -5354,7 +5354,7 @@
       "Stormunblessed"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/MonoschinosProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/MonoschinosProvider.cs3"
   },
   {
     "plugin": "MonPlayerProvider",
@@ -5396,7 +5396,7 @@
     "publishedName": "[Indian] MovieBoxProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 52,
+    "selectedVersion": 55,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5405,7 +5405,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MovieBoxProvider.cs3"
   },
   {
     "plugin": "MovieBoxProviderIN",
@@ -5413,7 +5413,7 @@
     "publishedName": "[Indian] MovieBoxProviderIN",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 54,
+    "selectedVersion": 57,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5422,7 +5422,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProviderIN.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MovieBoxProviderIN.cs3"
   },
   {
     "plugin": "MovieLinkBDProvider",
@@ -5498,7 +5498,7 @@
     "publishedName": "[Indian] MoviezwapProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 32,
+    "selectedVersion": 34,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -5507,7 +5507,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/MoviezwapProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/MoviezwapProvider.cs3"
   },
   {
     "plugin": "MoviPK",
@@ -5583,7 +5583,7 @@
     "publishedName": "[Movies] Multimovies",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 8,
+    "selectedVersion": 15,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -5592,7 +5592,7 @@
       "raghav,phisher,csksy"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Multimovies.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Multimovies.cs3"
   },
   {
     "plugin": "MultiMoviesProvider",
@@ -5822,7 +5822,7 @@
     "publishedName": "[Live] NetNaija-box",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 2,
+    "selectedVersion": 8,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -5831,7 +5831,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NetNaija-box.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/NetNaija-box.cs3"
   },
   {
     "plugin": "Ngefilm",
@@ -5873,7 +5873,7 @@
     "publishedName": "[Anime] NineAnime",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 6,
+    "selectedVersion": 11,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -5882,7 +5882,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/NineAnime.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/NineAnime.cs3"
   },
   {
     "plugin": "Nomat",
@@ -6247,7 +6247,7 @@
     "publishedName": "[Movies] PeliculasFlixProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 2,
+    "selectedVersion": 3,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -6256,7 +6256,7 @@
       "Stormunblessed"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/PeliculasFlixProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/PeliculasFlixProvider.cs3"
   },
   {
     "plugin": "PelispediaProvider",
@@ -6298,7 +6298,7 @@
     "publishedName": "[Movies] PelisplusHDProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 11,
+    "selectedVersion": 14,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -6307,7 +6307,7 @@
       "Stormunblessed"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/PelisplusHDProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/PelisplusHDProvider.cs3"
   },
   {
     "plugin": "Pencurimovie",
@@ -6400,7 +6400,7 @@
     "publishedName": "[Indian] PikashowProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 32,
+    "selectedVersion": 34,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -6409,7 +6409,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PikashowProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/PikashowProvider.cs3"
   },
   {
     "plugin": "Pinoymoviepedia",
@@ -6451,7 +6451,7 @@
     "publishedName": "[Live] PlayFyProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 14,
+    "selectedVersion": 21,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -6460,7 +6460,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayFyProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/PlayFyProvider.cs3"
   },
   {
     "plugin": "PlayZTVProvider",
@@ -6468,7 +6468,7 @@
     "publishedName": "[Live] PlayZTVProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 42,
+    "selectedVersion": 49,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -6477,7 +6477,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/PlayZTVProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/PlayZTVProvider.cs3"
   },
   {
     "plugin": "Pmsm",
@@ -6757,7 +6757,7 @@
     "publishedName": "[Live] RadioIndiaProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 33,
+    "selectedVersion": 35,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -6766,7 +6766,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/RadioIndiaProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/RadioIndiaProvider.cs3"
   },
   {
     "plugin": "RaghavAnime",
@@ -6860,7 +6860,7 @@
     "publishedName": "[Anime] ReAnime",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 4,
+    "selectedVersion": 10,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -6869,7 +6869,7 @@
       "KSHITIJ8473"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/ReAnime.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/ReAnime.cs3"
   },
   {
     "plugin": "Rebahin",
@@ -6999,7 +6999,7 @@
     "publishedName": "[Indian] Rtally",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 50,
+    "selectedVersion": 54,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7008,7 +7008,7 @@
       "Redowan, NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Rtally.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/Rtally.cs3"
   },
   {
     "plugin": "Sarangfilm",
@@ -7101,7 +7101,7 @@
     "publishedName": "[Anime] Senshi",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 8,
+    "selectedVersion": 15,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -7110,7 +7110,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Senshi.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Senshi.cs3"
   },
   {
     "plugin": "SerialnoProvider",
@@ -7306,7 +7306,7 @@
     "publishedName": "[Movies] SimpsonsUATvProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 5,
+    "selectedVersion": 8,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -7315,7 +7315,7 @@
       "deleteBlack666"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SimpsonsUATvProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/SimpsonsUATvProvider.cs3"
   },
   {
     "plugin": "SinemaCX",
@@ -7340,7 +7340,7 @@
     "publishedName": "[Live] SKTechProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 58,
+    "selectedVersion": 65,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7349,7 +7349,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SKTechProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/SKTechProvider.cs3"
   },
   {
     "plugin": "SkymoviesHD",
@@ -7391,7 +7391,7 @@
     "publishedName": "[Movies] SoloLatinoProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 9,
+    "selectedVersion": 12,
     "sourceId": "storm-redblacker8",
     "sourceName": "Storm-ext Fork by redblacker8",
     "sourceRepository": "https://github.com/redblacker8/storm-ext",
@@ -7400,7 +7400,7 @@
       "redblacker8"
     ],
     "originalRepositoryUrl": "https://github.com/redblacker8/storm-ext",
-    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/builds/SoloLatinoProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/redblacker8/storm-ext/e28f49ac130e11588aec9d7f8cc7aa0bfcf9e4c7/SoloLatinoProvider.cs3"
   },
   {
     "plugin": "spankbang",
@@ -7408,7 +7408,7 @@
     "publishedName": "[Adult] spankbang",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 10,
+    "selectedVersion": 12,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -7417,7 +7417,7 @@
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/spankbang.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/spankbang.cs3"
   },
   {
     "plugin": "SportzxProvider",
@@ -7425,7 +7425,7 @@
     "publishedName": "[Live] SportzxProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 26,
+    "selectedVersion": 33,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7434,7 +7434,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SportzxProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/SportzxProvider.cs3"
   },
   {
     "plugin": "StreamCenter",
@@ -7510,7 +7510,7 @@
     "publishedName": "[Indian] StreamFlixProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 34,
+    "selectedVersion": 36,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7519,7 +7519,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/StreamFlixProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/StreamFlixProvider.cs3"
   },
   {
     "plugin": "StreamHubOne",
@@ -7648,7 +7648,7 @@
     "publishedName": "[Tools] SubscriptionManager",
     "category": "Tools",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 16,
+    "selectedVersion": 18,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7657,7 +7657,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/SubscriptionManager.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/SubscriptionManager.cs3"
   },
   {
     "plugin": "Subsplease",
@@ -7716,7 +7716,7 @@
     "publishedName": "[Adult] SuperJav",
     "category": "Adult",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 5,
+    "selectedVersion": 7,
     "sourceId": "cxxx",
     "sourceName": "CXXX",
     "sourceRepository": "https://github.com/phisher98/CXXX",
@@ -7725,7 +7725,7 @@
       "Phisher98"
     ],
     "originalRepositoryUrl": "https://github.com/phisher98/CXXX",
-    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/builds/SuperJav.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/phisher98/CXXX/9ed02f794ba7a0981e5f9038fe308c70b156a232/SuperJav.cs3"
   },
   {
     "plugin": "SuperMario",
@@ -7870,7 +7870,7 @@
     "publishedName": "[Indian] TamilDhoolProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 40,
+    "selectedVersion": 42,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7879,7 +7879,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/TamilDhoolProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/TamilDhoolProvider.cs3"
   },
   {
     "plugin": "Tamilian",
@@ -7887,7 +7887,7 @@
     "publishedName": "[Indian] Tamilian",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 32,
+    "selectedVersion": 34,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7896,7 +7896,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Tamilian.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/Tamilian.cs3"
   },
   {
     "plugin": "TamilToon",
@@ -7921,7 +7921,7 @@
     "publishedName": "[Live] TamilUltraProvider",
     "category": "Live",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 40,
+    "selectedVersion": 42,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -7930,7 +7930,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/TamilUltraProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/TamilUltraProvider.cs3"
   },
   {
     "plugin": "TekkenAdvance",
@@ -7972,7 +7972,7 @@
     "publishedName": "[Movies] TheMoviesFlix",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 22,
+    "selectedVersion": 28,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -7981,7 +7981,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TheMoviesFlix.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/TheMoviesFlix.cs3"
   },
   {
     "plugin": "TioAnimeProvider",
@@ -8398,7 +8398,7 @@
     "publishedName": "[Anime] TwoDHive",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 17,
+    "selectedVersion": 22,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -8407,7 +8407,7 @@
       "raghav"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/TwoDHive.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/TwoDHive.cs3"
   },
   {
     "plugin": "UAFlixProvider",
@@ -8432,7 +8432,7 @@
     "publishedName": "[Movies] UakinoProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 32,
+    "selectedVersion": 37,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -8441,7 +8441,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UakinoProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/UakinoProvider.cs3"
   },
   {
     "plugin": "UASerialsProProvider",
@@ -8466,7 +8466,7 @@
     "publishedName": "[Movies] UFDubProvider",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 12,
+    "selectedVersion": 14,
     "sourceId": "cakestwix",
     "sourceName": "CakesTwix UK/UA",
     "sourceRepository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
@@ -8475,7 +8475,7 @@
       "CakesTwix"
     ],
     "originalRepositoryUrl": "https://github.com/CakesTwix/cloudstream-extensions-uk",
-    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UFDubProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/1cae5ea2406c178b413aaca5f7193f5fcb7ceb76/UFDubProvider.cs3"
   },
   {
     "plugin": "UgurFilm",
@@ -8722,7 +8722,7 @@
     "publishedName": "[Movies] Watch32",
     "category": "Movies",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 34,
+    "selectedVersion": 37,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -8731,7 +8731,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/Watch32.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/Watch32.cs3"
   },
   {
     "plugin": "WatchDrama",
@@ -8927,7 +8927,7 @@
     "publishedName": "[Anime] Xanime",
     "category": "Anime",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 1,
+    "selectedVersion": 6,
     "sourceId": "raghav",
     "sourceName": "raghav repo",
     "sourceRepository": "https://github.com/KSHITIJ8473/raghav",
@@ -8936,7 +8936,7 @@
       "KSHITIJ8473"
     ],
     "originalRepositoryUrl": "https://github.com/KSHITIJ8473/raghav",
-    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/builds/Xanime.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/KSHITIJ8473/raghav/ef62bbcc6dff8702551223f73c8f59439f49101f/Xanime.cs3"
   },
   {
     "plugin": "XDMovies",
@@ -9046,7 +9046,7 @@
     "publishedName": "[Indian] XonProvider",
     "category": "Indian",
     "maintainer": "Adam Knight (Maintainer)",
-    "selectedVersion": 35,
+    "selectedVersion": 37,
     "sourceId": "cnc",
     "sourceName": "CNC Repo (All Language)",
     "sourceRepository": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
@@ -9055,7 +9055,7 @@
       "NivinCNC"
     ],
     "originalRepositoryUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension",
-    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/builds/XonProvider.cs3"
+    "packageUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/f629c7ce2f09e1643ac4149a793c20c0901c6f91/XonProvider.cs3"
   },
   {
     "plugin": "XPrimeHub",
