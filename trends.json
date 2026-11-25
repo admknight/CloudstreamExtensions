@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24 11:25:12 UTC",
+  "generatedAt": "2026-11-25 10:10:26 UTC",
   "windows": {
     "7d": {
       "days": 7,
@@ -99,15 +99,15 @@
       "days": 30,
       "snapshotCount": 30,
       "checks": 180,
-      "ok": 147,
+      "ok": 148,
       "restricted": 0,
-      "failed": 33,
+      "failed": 32,
       "redirected": 60,
       "hostChanged": 60,
-      "dnsErrors": 32,
+      "dnsErrors": 31,
       "timeouts": 1,
-      "healthyPct": 81.7,
-      "reachablePct": 81.7,
+      "healthyPct": 82.2,
+      "reachablePct": 82.2,
       "providers": [
         {
           "module": "Cinedoze",
@@ -164,15 +164,15 @@
         {
           "module": "India4Movies",
           "checks": 30,
-          "ok": 28,
+          "ok": 29,
           "restricted": 0,
-          "failed": 2,
+          "failed": 1,
           "redirected": 0,
           "hostChanged": 0,
-          "dnsErrors": 2,
+          "dnsErrors": 1,
           "timeouts": 0,
-          "healthyPct": 93.3,
-          "reachablePct": 93.3
+          "healthyPct": 96.7,
+          "reachablePct": 96.7
         },
         {
           "module": "World4uFree",
@@ -191,14 +191,6 @@
     }
   },
   "recent": [
-    {
-      "generatedAt": "2026-11-15 08:11:29 UTC",
-      "ok": 5,
-      "restricted": 0,
-      "failed": 1,
-      "hostChanged": 2,
-      "redirected": 2
-    },
     {
       "generatedAt": "2026-11-16 08:19:47 UTC",
       "ok": 5,
@@ -265,6 +257,14 @@
     },
     {
       "generatedAt": "2026-11-24 11:25:12 UTC",
+      "ok": 5,
+      "restricted": 0,
+      "failed": 1,
+      "hostChanged": 2,
+      "redirected": 2
+    },
+    {
+      "generatedAt": "2026-11-25 10:10:26 UTC",
       "ok": 5,
       "restricted": 0,
       "failed": 1,
