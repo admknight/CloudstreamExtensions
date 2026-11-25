@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "6ae7db6a6df570fd58855095ea05766792fac159",
+  "reviewBasis": "Maintainer-authorized recovery of existing failed identities only. Each exact replacement is independently revalidated before publication; no continuing source-wide authorization.",
+  "targets": [
+    {
+      "plugin": "aia2tv 2",
+      "internalName": "Aia2tv 2",
+      "sourceId": "rearabi",
+      "repository": "https://github.com/Abodabodd/re-3arabi",
+      "buildCommit": "4d75897a2581939d67db5ceebed1f99bddf08d34",
+      "sourceCommit": "038c88349338a9a926f76e8999778b8c2018ffad",
+      "sourceConfigPath": "Aia2tv 2/build.gradle.kts",
+      "buildRunId": 45646500269,
+      "reviewKind": "publisher_version_upgrade",
+      "authors": [
+        "Abodabodd"
+      ],
+      "old": {
+        "version": 3,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 14286,
+        "fileHash": "sha256-1de87a498012cf7252b83f54eeb637a8b4cb482fe7114a1bd66b3adfbae1154e",
+        "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv%202.cs3"
+      },
+      "replacement": {
+        "version": 5,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 25322,
+        "fileHash": "sha256-ad0a5830db004c19eaa71775c25eba00eeb743564121ff19d677017c8051c499",
+        "url": "https://raw.githubusercontent.com/Abodabodd/re-3arabi/builds/Aia2tv 2.cs3"
+      },
+      "reason": "Existing publisher; build commit identifies source revision, matching successful upstream Build run and source Gradle metadata reviewed."
+    },
+    {
+      "plugin": "animeunity",
+      "internalName": "AnimeUnity",
+      "sourceId": "dogior",
+      "repository": "https://github.com/doGior/doGiorsHadEnough",
+      "buildCommit": "31c79e490597bffe98c2fd2fd250be1ca67d62a8",
+      "sourceCommit": "a520ccd437ad8a60e35bc405ef6315c7fdc2339a",
+      "sourceConfigPath": "AnimeUnity/build.gradle.kts",
+      "buildRunId": 44104450622,
+      "reviewKind": "publisher_version_upgrade",
+      "authors": [
+        "doGior"
+      ],
+      "old": {
+        "version": 26,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 134699,
+        "fileHash": "sha256-ce83baae5fbbe0f04d17c46a528fceaf134694cb4189fcda32d198d14afcee93",
+        "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/AnimeUnity.cs3"
+      },
+      "replacement": {
+        "version": 30,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 151019,
+        "fileHash": "sha256-30ec1c65396a8629258a3761adee7a2f9397ff11bf2add5a84e322c5271a3704",
+        "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/AnimeUnity.cs3"
+      },
+      "reason": "Existing publisher; build commit identifies source revision, matching successful upstream Build run and source Gradle metadata reviewed."
+    },
+    {
+      "plugin": "streamcenter",
+      "internalName": "StreamCenter",
+      "sourceId": "dogior",
+      "repository": "https://github.com/doGior/doGiorsHadEnough",
+      "buildCommit": "31c79e490597bffe98c2fd2fd250be1ca67d62a8",
+      "sourceCommit": "a520ccd437ad8a60e35bc405ef6315c7fdc2339a",
+      "sourceConfigPath": "StreamCenter/build.gradle.kts",
+      "buildRunId": 44104450622,
+      "reviewKind": "publisher_version_upgrade",
+      "authors": [
+        "Italiani"
+      ],
+      "old": {
+        "version": 11,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 1715315,
+        "fileHash": "sha256-7d78567bf15b0b7da5720bcdce60648da3aaaba6389be6dda09d2fa8dcd4d3ed",
+        "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/StreamCenter.cs3"
+      },
+      "replacement": {
+        "version": 14,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 5905939,
+        "fileHash": "sha256-76081259eddf1dae9a59149374c94484f55dac1175a2d225325163e54808f592",
+        "url": "https://raw.githubusercontent.com/doGior/doGiorsHadEnough/builds/StreamCenter.cs3"
+      },
+      "reason": "Existing publisher; build commit identifies source revision, matching successful upstream Build run and source Gradle metadata reviewed."
+    },
+    {
+      "plugin": "calciostreaming",
+      "internalName": "CalcioStreaming",
+      "sourceId": "diegon",
+      "repository": "https://github.com/DieGon7771/ItaliaInStreaming",
+      "buildCommit": "543c33667352605244e0d419cc09bd9e5b88660c",
+      "sourceCommit": "5a161fe1a4bb6ad055f4464700dc104185b015f3",
+      "sourceConfigPath": "CalcioStreaming/build.gradle.kts",
+      "buildRunId": 44786205422,
+      "reviewKind": "publisher_version_upgrade",
+      "authors": [
+        "DieGon"
+      ],
+      "old": {
+        "version": 20,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 31880,
+        "fileHash": "sha256-b2bbc32bc209c53e9d04740f712a6efbf2ec1aa782fb3cbffa9180ca82b9518b",
+        "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/CalcioStreaming.cs3"
+      },
+      "replacement": {
+        "version": 22,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 31881,
+        "fileHash": "sha256-639f88d8fdbbcb489827d505a2717edc3bc10af6c8aa34f94ac38d5b6f2c856e",
+        "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/CalcioStreaming.cs3"
+      },
+      "reason": "Existing publisher; build commit identifies source revision, matching successful upstream Build run and source Gradle metadata reviewed."
+    },
+    {
+      "plugin": "streamingcommunity",
+      "internalName": "StreamingCommunity",
+      "sourceId": "diegon",
+      "repository": "https://github.com/DieGon7771/ItaliaInStreaming",
+      "buildCommit": "543c33667352605244e0d419cc09bd9e5b88660c",
+      "sourceCommit": "5a161fe1a4bb6ad055f4464700dc104185b015f3",
+      "sourceConfigPath": "StreamingCommunity/build.gradle.kts",
+      "buildRunId": 44786205422,
+      "reviewKind": "publisher_version_upgrade",
+      "authors": [
+        "Nanduuu03",
+        "DieGon"
+      ],
+      "old": {
+        "version": 53,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 64629,
+        "fileHash": "sha256-2e486e3958b9ab50ee7c0951b142dea870bcbf69db059cef3af0ea7bc109d5f0",
+        "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3"
+      },
+      "replacement": {
+        "version": 54,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 64621,
+        "fileHash": "sha256-d4fe36878fdab17cfc621443fe89166b445ed4e6b62c382a64df0e8c3c0822e7",
+        "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/StreamingCommunity.cs3"
+      },
+      "reason": "Existing publisher; build commit identifies source revision, matching successful upstream Build run and source Gradle metadata reviewed."
+    },
+    {
+      "plugin": "onlineserietv",
+      "internalName": "OnlineSerieTV",
+      "sourceId": "diegon",
+      "repository": "https://github.com/DieGon7771/ItaliaInStreaming",
+      "buildCommit": "543c33667352605244e0d419cc09bd9e5b88660c",
+      "sourceCommit": "5a161fe1a4bb6ad055f4464700dc104185b015f3",
+      "sourceConfigPath": "OnlineSerieTV/build.gradle.kts",
+      "buildRunId": 44786205422,
+      "reviewKind": "publisher_status_upgrade",
+      "authors": [
+        "DieGon"
+      ],
+      "old": {
+        "version": 4,
+        "status": 0,
+        "apiVersion": 1,
+        "fileSize": 35994,
+        "fileHash": "sha256-579d48952d5d0f253a21bc96deddd4166f6f8c72ecb20eab07e7f2ab0b528276",
+        "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/OnlineSerieTV.cs3"
+      },
+      "replacement": {
+        "version": 5,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 43878,
+        "fileHash": "sha256-38a83982f5307ff95b4e3678d01a51b73a86d5cb33d52df59a5faf611a23435f",
+        "url": "https://raw.githubusercontent.com/DieGon7771/ItaliaInStreaming/builds/OnlineSerieTV.cs3"
+      },
+      "reason": "Existing publisher; build commit identifies source revision, matching successful upstream Build run and source Gradle metadata reviewed."
+    },
+    {
+      "plugin": "animeuaprovider",
+      "internalName": "AnimeUAProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "AnimeUAProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 10,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 28337,
+        "fileHash": "sha256-0b21a92476a98a26ae209ad7c7477ebc47f498a088b463f13a283de7c4b27c1f",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeUAProvider.cs3"
+      },
+      "replacement": {
+        "version": 10,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 31607,
+        "fileHash": "sha256-e2a6a4d776208a6cc11854a5bdf433f13647f84d0f9c56bdded1b9540ba2c41f",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnimeUAProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "anitubeinuaprovider",
+      "internalName": "AnitubeinuaProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "AnitubeinuaProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 22,
+        "status": 3,
+        "apiVersion": 1,
+        "fileSize": 75434,
+        "fileHash": "sha256-52ab9a80b39e9522fceb18b61e7f4f4174221581de96765dff1d12f346ddff2d",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnitubeinuaProvider.cs3"
+      },
+      "replacement": {
+        "version": 22,
+        "status": 3,
+        "apiVersion": 1,
+        "fileSize": 78725,
+        "fileHash": "sha256-0151709a66775fce683573e8bd0f798b853271ebee602a14d1d35d2c63172032",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/AnitubeinuaProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "bamboouaprovider",
+      "internalName": "BambooUAProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "BambooUAProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 13,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 25354,
+        "fileHash": "sha256-2064b87ba4aec1a1750728ec2ce4c3ca11109040d0d44d99d78738196e0027ca",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/BambooUAProvider.cs3"
+      },
+      "replacement": {
+        "version": 13,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 28796,
+        "fileHash": "sha256-40b4009a086d6eb4e6bee1086d7693b1c0ee429d8e08da2c4c4d1e60091e2290",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/BambooUAProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "cikavaideyaprovider",
+      "internalName": "CikavaIdeyaProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "CikavaIdeyaProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 5,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 18077,
+        "fileHash": "sha256-962b89e58f398be2c72ab742bf95ffe5dcdbc107c023f48d631f4ffda5e7d1ba",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CikavaIdeyaProvider.cs3"
+      },
+      "replacement": {
+        "version": 5,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 21636,
+        "fileHash": "sha256-ea6b4b466fa40d48a3230e6bd4d12a901ac2c0dfc3afc1f5878e6234c9d33a4e",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CikavaIdeyaProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "coaninetprovider",
+      "internalName": "CoaninetProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "CoaninetProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix",
+        "Partizanin"
+      ],
+      "old": {
+        "version": 2,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 30065,
+        "fileHash": "sha256-d3b8b1fdb43b0737c713a3c763885ba3cba62cfa97595f1b3b7d275269154e93",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CoaninetProvider.cs3"
+      },
+      "replacement": {
+        "version": 2,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 33547,
+        "fileHash": "sha256-a3429bc4ecac16a4d211744e68ab6127b7ac95ff81edd15105cc86f33175bc9e",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/CoaninetProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "hentaiukrprovider",
+      "internalName": "HentaiUkrProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "HentaiUkrProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 6,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 19378,
+        "fileHash": "sha256-9d3f670d5ac65fc41e281c7ae57c84186e9d258fff72c1f664de6a90c7c1a568",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/HentaiUkrProvider.cs3"
+      },
+      "replacement": {
+        "version": 6,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 23093,
+        "fileHash": "sha256-9b4bbc67f398dd1f49abac18a0f685051e3a7ac976a25bc9dea4b90b0fb276f4",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/HentaiUkrProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "kinostrainprovider",
+      "internalName": "KinostrainProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "KinostrainProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix",
+        "Partizanin"
+      ],
+      "old": {
+        "version": 2,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 34530,
+        "fileHash": "sha256-4485c2a3c747e76be9dbf3edbf3557cba5b1ed74759bb59415e25861e464ec6c",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinostrainProvider.cs3"
+      },
+      "replacement": {
+        "version": 2,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 38006,
+        "fileHash": "sha256-24620e20935384ebc9680ea12a934f3797570945402535ea0c9a21aad33ef252",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinostrainProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "kinovezhaprovider",
+      "internalName": "KinoVezhaProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "KinoVezhaProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 14,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 25990,
+        "fileHash": "sha256-187b37733d72eaf8a14a97329a981466c213567e724892a4f94509c55e9021d1",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoVezhaProvider.cs3"
+      },
+      "replacement": {
+        "version": 14,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 29187,
+        "fileHash": "sha256-d3d32cb496f62a8422c99658f608a725590b79cd5dbf64e950e9d8c3b9b9470e",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/KinoVezhaProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "serialnoprovider",
+      "internalName": "SerialnoProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "SerialnoProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 13,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 24080,
+        "fileHash": "sha256-4ef555409081ea839b9fc9b68f389ca88496b7cc257287a77e2f1657a23600f7",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SerialnoProvider.cs3"
+      },
+      "replacement": {
+        "version": 13,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 27385,
+        "fileHash": "sha256-62576c1e8d18a095f8eb41bb792a50c4a95f5f038114de3625022290d58c1784",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SerialnoProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "syncplugin",
+      "internalName": "SyncPlugin",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "SyncPlugin/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 3,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 95301,
+        "fileHash": "sha256-016f946d7bcf8ee65dbc952f62f173eb5af9e1151478f4dcd3aa66de337aed82",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3"
+      },
+      "replacement": {
+        "version": 3,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 110283,
+        "fileHash": "sha256-d09744d27a6ec25404fd09618da9e9436b77a163db382ff4d2f30a3d0c4e8c51",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/SyncPlugin.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    },
+    {
+      "plugin": "unimayprovider",
+      "internalName": "UnimayProvider",
+      "sourceId": "cakestwix",
+      "repository": "https://github.com/CakesTwix/cloudstream-extensions-uk",
+      "buildCommit": "1cae5ea2406c178b413aaca5f7193f5fcb7ceb76",
+      "sourceCommit": "46856b249bd084c7ff510cb6e9878b1280faae9e",
+      "sourceConfigPath": "UnimayProvider/build.gradle.kts",
+      "buildRunId": null,
+      "reviewKind": "publisher_rebuild",
+      "authors": [
+        "CakesTwix"
+      ],
+      "old": {
+        "version": 13,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 29225,
+        "fileHash": "sha256-4b5acaddd25334606ca232c761374340842f2cfb03adbd3d616195246c3c1f10",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UnimayProvider.cs3"
+      },
+      "replacement": {
+        "version": 13,
+        "status": 1,
+        "apiVersion": 1,
+        "fileSize": 32741,
+        "fileHash": "sha256-e3ab433d976abd8f187d67759d92e8091f62f74db08200b168b7205e244f93b1",
+        "url": "https://raw.githubusercontent.com/CakesTwix/cloudstream-extensions-uk/builds/UnimayProvider.cs3"
+      },
+      "reason": "Existing registered publisher GitHub mirror; build commit identifies source revision, Forgejo workflow rebuilds all plugins and force-replaces builds, matching source Gradle metadata reviewed. Primary Forgejo run unavailable; no reproducibility or playback claim."
+    }
+  ]
+}
