@@ -32,6 +32,10 @@
   "animewitcher": [
     "c30122a117f1c3571e63a484aaf80f35117ff3e7"
   ],
+  "animo": [
+    "bbd6dcf1318d7c76bbf8c853ec120b857dd7df22",
+    "de2c9a6fbf3731e8d856071e62bb1284302c4c31"
+  ],
   "anistream": [
     "620453be39a08a87fdb59b87100938f3415035d6"
   ],
@@ -56,6 +60,9 @@
   "dima-toon": [
     "c30122a117f1c3571e63a484aaf80f35117ff3e7"
   ],
+  "doflixprovider": [
+    "bc9b9aa050f0f9b1b7b0034d354994003e516214"
+  ],
   "egydead": [
     "c30122a117f1c3571e63a484aaf80f35117ff3e7"
   ],
@@ -77,6 +84,10 @@
   "idlix": [
     "e640c91d94956a3d79f90d4dbc76ba8aa98621d0"
   ],
+  "javfreeprovider": [
+    "c79f6ceaa02fda7ef9c81acad2753fe8394e8563",
+    "992412da8b077b3be0479cbc86c5fcbfb3b0b6e1"
+  ],
   "jpfilms": [
     "13d40b34446a2b81f24e830f1ce8a76374e21b78"
   ],
@@ -89,6 +100,10 @@
   "lodynet": [
     "c30122a117f1c3571e63a484aaf80f35117ff3e7"
   ],
+  "miruro": [
+    "bbd6dcf1318d7c76bbf8c853ec120b857dd7df22",
+    "de2c9a6fbf3731e8d856071e62bb1284302c4c31"
+  ],
   "missav": [
     "785f31ea395b45f673391142903739f4f74e192f"
   ],
@@ -100,6 +115,10 @@
   ],
   "onshort": [
     "13d40b34446a2b81f24e830f1ce8a76374e21b78"
+  ],
+  "opjav": [
+    "c79f6ceaa02fda7ef9c81acad2753fe8394e8563",
+    "992412da8b077b3be0479cbc86c5fcbfb3b0b6e1"
   ],
   "oploverz": [
     "ef9316f74f621e9c7037e83fd9d07ec72eea322b"
@@ -116,6 +135,10 @@
   "replaymatch": [
     "c30122a117f1c3571e63a484aaf80f35117ff3e7"
   ],
+  "replayzone": [
+    "bbd6dcf1318d7c76bbf8c853ec120b857dd7df22",
+    "de2c9a6fbf3731e8d856071e62bb1284302c4c31"
+  ],
   "sdmovies": [
     "521e6d0b4e683f1011a2f6bbb69dd7101f131567"
   ],
@@ -127,6 +150,20 @@
   ],
   "streamed": [
     "13d40b34446a2b81f24e830f1ce8a76374e21b78"
+  ],
+  "streamedpk": [
+    "bbd6dcf1318d7c76bbf8c853ec120b857dd7df22",
+    "de2c9a6fbf3731e8d856071e62bb1284302c4c31"
+  ],
+  "streamedprovider": [
+    "7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41",
+    "12466dbc1cbb0a908b642cf8676d1d02d498ded1"
+  ],
+  "stremio": [
+    "96e785d74114510f7197853fdd1bae2071a88db5",
+    "0a64203229e794c94476efc49844553466db0e03",
+    "3eb416be241d444c8d414cd34487f832d17b34b3",
+    "3f843669a0b600f4941f18f7be8ff411e94fb888"
   ],
   "syncstream": [
     "0be9fdeee479154bb92558cd095b877311554521"
