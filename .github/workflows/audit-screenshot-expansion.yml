@@ -1,0 +1,32 @@
+name: Screenshot Expansion Read-Only Audit
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'docs/screenshot-expansion-20261126.json'
+      - 'tools/audit_screenshot_expansion.py'
+      - 'tests/test_audit_screenshot_expansion.py'
+      - '.github/workflows/audit-screenshot-expansion.yml'
+permissions:
+  contents: read
+jobs:
+  collect-evidence:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'audit/screenshot-expansion-20261126'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Offline regression tests
+        run: PYTHONPATH=tools python3 -m unittest discover -s tests -p test_audit_screenshot_expansion.py -v
+      - name: Collect immutable package evidence (no execution or publication)
+        run: python3 tools/audit_screenshot_expansion.py --snapshot docs/screenshot-expansion-20261126.json --report screenshot-expansion-report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshot-expansion-evidence
+          path: screenshot-expansion-report.json
+          if-no-files-found: error
+          retention-days: 30
