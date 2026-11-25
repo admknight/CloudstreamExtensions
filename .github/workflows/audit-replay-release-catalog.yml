@@ -4,6 +4,8 @@ on:
     branches: [master]
     paths:
       - 'tools/audit_replay_release_catalog.py'
+      - 'tools/audit_package_integrity.py'
+      - 'tests/test_replay_release_transport.py'
       - '.github/workflows/audit-replay-release-catalog.yml'
 permissions:
   contents: read
@@ -19,10 +21,44 @@ jobs:
           persist-credentials: false
       - name: Inspect public release catalog and verify package bytes
         run: python3 tools/audit_replay_release_catalog.py
+      - name: Verify original audit and new transport regressions
+        run: |
+          PYTHONPATH=tools python3 -m unittest discover -s tests -p test_audit_package_integrity.py -v
+          PYTHONPATH=tools python3 -m unittest discover -s tests -p test_replay_release_transport.py -v
+          PYTHONPATH=tools python3 -m unittest discover -s tests -p test_verify_candidate_integrity.py -v
+      - name: Exercise the existing release verifier on the seven recovered candidates
+        run: |
+          PYTHONPATH=tools python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from audit_package_integrity import fetch_json, verify_package, REPLAY_INDEX_URL, plugin_identity
+          from verify_candidate_integrity import evaluate
+          evidence = json.loads(Path('replay-release-catalog-report.json').read_text())
+          expected = {p['identity']: p for p in evidence['packages']}
+          assert len(expected) == 7 and evidence['hashVerified'] == 7
+          selected = [p for p in fetch_json(REPLAY_INDEX_URL) if plugin_identity(p) in expected]
+          assert len(selected) == len(expected) and {plugin_identity(p) for p in selected} == set(expected)
+          rows = []
+          for plugin in selected:
+              identity = plugin_identity(plugin)
+              result = verify_package(plugin)
+              reference = expected[identity]
+              assert result['status'] == 'hash_verified', result
+              assert result['actualFileHash'] == reference['actualHash'] and result['actualFileSize'] == reference['actualSize']
+              assert plugin['version'] == reference['version'] and plugin['status'] == reference['upstreamStatus']
+              decision, reason = evaluate(None,plugin,'','replay-preview',[],result)
+              assert decision == 'blocked', decision
+              rows.append({'identity':identity,'checksumVerified':True,'status':plugin['status'],'newBinaryDecision':decision,'reason':reason})
+          result = {'verified':len(rows),'releaseApprovalsCreated':0,'sourceRegistryChanged':False,'rows':rows}
+          Path('replay-production-verifier-preview.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result))
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: replay-release-catalog-evidence
-          path: replay-release-catalog-report.json
+          path: |
+            replay-release-catalog-report.json
+            replay-production-verifier-preview.json
           if-no-files-found: error
           retention-days: 30
