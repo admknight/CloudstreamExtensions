@@ -60,6 +60,9 @@
   "dima-toon": [
     "c30122a117f1c3571e63a484aaf80f35117ff3e7"
   ],
+  "doflixprovider": [
+    "bc9b9aa050f0f9b1b7b0034d354994003e516214"
+  ],
   "egydead": [
     "c30122a117f1c3571e63a484aaf80f35117ff3e7"
   ],
@@ -155,6 +158,12 @@
   "streamedprovider": [
     "7e1ca485fc5b412a614d6fd9ba9b8ff7df45cb41",
     "12466dbc1cbb0a908b642cf8676d1d02d498ded1"
+  ],
+  "stremio": [
+    "96e785d74114510f7197853fdd1bae2071a88db5",
+    "0a64203229e794c94476efc49844553466db0e03",
+    "3eb416be241d444c8d414cd34487f832d17b34b3",
+    "3f843669a0b600f4941f18f7be8ff411e94fb888"
   ],
   "syncstream": [
     "0be9fdeee479154bb92558cd095b877311554521"
